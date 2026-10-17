@@ -1,0 +1,61 @@
+{
+  "_source": "Screenshot of Parashara's Light 9.0, Page 1 ('1. Birth chart I'), shared by the boss on 2026-10-17. Transcribed by hand; uncertain readings are listed in _uncertain.",
+  "_note": "Chart drawn North Indian in PL9; KAAST 2 draws East Indian. Values are PL9 display values (seconds rounded, see decisions log).",
+  "input": {
+    "name": "Amitabh Bachchan",
+    "date": "1942-10-11", "time": "16:00:00",
+    "place": "Allahabad, India", "latDeg": 25.45, "lonDeg": 81.85,
+    "tzHours": 6.5,
+    "_tz_note": "India war time (IST+1h) was in force from 1942-09-01; PL's atlas applies it. With tz 6.5 every planet matches to <=0.5 arcsec."
+  },
+  "header": "Amitabh Bachhan 11 Oct 1942 16:00:00  Allahabad, India",
+  "rasi_houses": {
+    "_format": "house: [sarvashtakavarga bindus, bhava bala]; the 12 bindus sum to 337",
+    "1": [31, 479.48], "2": [27, 554.78], "3": [26, 244.64], "4": [33, 274.64],
+    "5": [29, 493.49], "6": [42, 392.83], "7": [23, 507.36], "8": [20, 455.03],
+    "9": [21, 453.40], "10": [29, 374.60], "11": [32, 483.26], "12": [24, 434.20]
+  },
+  "rasi_chart_labels": {
+    "As": "01:56 Dha", "Ke": "10:25 Sat", "SaR": "19:13 Roh", "Ju": "00:32 Pun", "Ra": "10:25 Mag",
+    "Su": "24:22 Cht", "MeR": "23:39 Cht", "Ma": "22:36 Has", "Ve": "15:11 Has", "Mo": "10:19 Swa"
+  },
+  "navamsa_signs": { "As": 7, "Su": 5, "Me": 5, "Ma": 4, "Ra": 4, "Ju": 4, "Sa": 3, "Ve": 2, "Mo": 10, "Ke": 10 },
+  "vimshottari": [
+    ["Ve-Su-Ra", "Wed", "16-05-2018"], ["Ve-Su-Ju", "Tue", "10-07-2018"], ["Ve-Su-Sa", "Tue", "28-08-2018"],
+    ["Ve-Su-Me", "Thu", "25-10-2018"], ["Ve-Su-Ke", "Sat", "15-12-2018"], ["Ve-Su-Ve", "Sun", "06-01-2019"],
+    ["Ve-Mo-Mo", "Fri", "08-03-2019"], ["Ve-Mo-Ma", "Sat", "27-04-2019"], ["Ve-Mo-Ra", "Sun", "02-06-2019"],
+    ["Ve-Mo-Ju", "Sun", "01-09-2019"]
+  ],
+  "planet_table": {
+    "_columns": ["sign (1=Ar)", "longitude in sign", "flags (c=combust, R=retro)", "nakshatra", "pada syllable", "pada,star/sub/sub-sub"],
+    "As": [11, "01:56:48", "",   "Dhanish.",  "Goo",  "3,Ma/Ke/Ve"],
+    "Su": [6,  "24:22:53", "",   "Chitra",    "Pay",  "1,Ma/Ra/Ra"],
+    "Mo": [7,  "10:19:02", "",   "Swati",     "Ray",  "2,Ra/Ju/Ra"],
+    "Ma": [6,  "22:36:13", "c",  "Hasta",     "Tuh",  "4,Mo/Ve/Ke"],
+    "Me": [6,  "23:39:26", "Rc", "Chitra",    "Pay",  "1,Ma/Ma/Sa"],
+    "Ju": [4,  "00:32:15", "",   "Punarvasu", "Hee",  "4,Ju/Mo/Su"],
+    "Ve": [6,  "15:11:22", "c",  "Hasta",     "Shah", "2,Mo/Ju/Mo"],
+    "Sa": [2,  "19:13:53", "R",  "Rohini",    "Vee",  "3,Mo/Me/Ju"],
+    "Ra": [5,  "10:25:11", "",   "Magha",     "May",  "4,Ke/Sa/Ve"],
+    "Ke": [11, "10:25:11", "",   "Satabhi.",  "Sah",  "2,Ra/Ju/Ra"]
+  },
+  "strength_table": {
+    "_columns": ["Dignity", "SB%", "SB#", "VB.", "AV", "Av3", "Av5", "K7", "Func."],
+    "Su": ["Enemy",   1.22, 2, 11, 2, "Drm.", "Infant",  "AK",  "Neutral"],
+    "Mo": ["Frnd.",   0.83, 1, 11, 4, "Drm.", "Youth.",  "GK",  "Malefic"],
+    "Ma": ["Grt.En.", 0.94, 4,  9, 1, "Slp.", "Youth.",  "BK",  "Malefic"],
+    "Me": ["Own",     1.15, 4, 14, 4, "Alr.", "Youth.",  "AmK", "Neutral"],
+    "Ju": ["Exalt.",  1.23, 3, 18, 7, "Alr.", "Dead",    "DK",  "Malefic"],
+    "Ve": ["Debil.",  1.14, 2, 13, 4, "Slp.", "Adoles.", "PiK", "Benefic"],
+    "Sa": ["Neutr.",  1.30, 4, 10, 3, "Drm.", "Youth.",  "MK",  "Benefic"],
+    "Ra": ["Neutr.",  null, null, 13, 4, "Slp.", "Youth.", null, "Neutral"],
+    "Ke": ["Neutr.",  null, null, 14, null, "Slp.", "Youth.", null, "Benefic"]
+  },
+  "shadbala_bars": { "Su": 1.22, "Mo": 0.83, "Ma": 0.94, "Me": 1.15, "Ju": 1.23, "Ve": 1.14, "Sa": 1.30 },
+  "_uncertain": [
+    "Ra/Ke VB and AV columns: Ra shows '13 4', Ke shows '14' only; column alignment not certain.",
+    "Rotated edge labels of houses 3 and 4 (244.64 / 274.64) read from small rotated text.",
+    "Meaning of SB# is not yet known (values 1-4).",
+    "Sign numbers 12 (house 2) and 9 (house 11) are drawn in red in the Rasi chart; meaning unknown."
+  ]
+}

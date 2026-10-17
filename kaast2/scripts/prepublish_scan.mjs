@@ -1,0 +1,63 @@
+/**
+ * Pre-publish scan (PLAN.md §11): nothing personal or secret may leave in
+ * kaast2/. Scans every git-tracked file under kaast2/ for
+ *  - forbidden file types (workbooks, PL binaries/caches, GeoVision chart files);
+ *  - absolute local paths, private keys, tokens, e-mail addresses;
+ *  - names of people in the private GeoVision chart collection — the denylist
+ *    is derived at run time from ../Astro_Fork/GeoVision/GeoVisionCharts/*.xml
+ *    when that private folder exists, so no list of names is ever stored here.
+ * Exit 1 on any finding. Allow a line with the marker `prepublish-ok`.
+ */
+import { execSync } from 'node:child_process';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+
+const root = resolve(import.meta.dirname, '..');
+const SELF = 'scripts/prepublish_scan.mjs';
+const files = execSync('git ls-files -co --exclude-standard', { cwd: root }).toString().split('\n').filter(Boolean)
+  .filter((f) => f !== SELF && !f.startsWith('node_modules/') && !f.startsWith('dist') && !f.startsWith('vendor/') && !f.startsWith('parity/pl7_exports/'));
+
+const FORBIDDEN_EXT = /\.(xlsx|xls|e31|exe|dll|grp|enc|ndx)$/i;
+const RULES = [
+  [/\/Users\/[A-Za-z]|[A-Z]:\\Users\\|\/home\/user\/|\/tmp\/claude/, 'absolute local path'],
+  [/-----BEGIN [A-Z ]*PRIVATE KEY-----/, 'private key'],
+  [/\b(AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}|sk-[A-Za-z0-9]{20,})\b/, 'token'],
+  [/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/, 'e-mail address'],
+  [/<BirthData\b/i, 'GeoVision chart data'],
+];
+
+const STOP = new Set(('admission chart charts recovery question test phd stockholm singapore india wharton yale oxford ' +
+  'stanford princeton cornell columbia economics statistics finance crypto job jobs offer visa home new house marriage ' +
+  'with from about rule polygon fine west east north south court booth stern ucla govt joker clintonb ' + 'bsesn nifty sensex').split(' '));
+const charts = resolve(root, '../Astro_Fork/GeoVision/GeoVisionCharts');
+const names = new Set();
+if (existsSync(charts)) {
+  for (const f of readdirSync(charts).filter((f) => f.toLowerCase().endsWith('.xml'))) {
+    for (const w of f.replace(/\.xml$/i, '').split(/[^A-Za-z]+/)) if (w.length >= 4 && !STOP.has(w.toLowerCase())) names.add(w.toLowerCase());
+  }
+  console.log(`denylist: ${names.size} words from the private chart collection`);
+} else {
+  console.log('denylist: private chart collection not present (public checkout) — name check skipped');
+}
+const nameRe = names.size ? new RegExp(`\\b(${[...names].map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'i') : null;
+
+const findings = [];
+for (const f of files) {
+  if (FORBIDDEN_EXT.test(f)) { findings.push(`${f}: forbidden file type`); continue; }
+  const p = join(root, f);
+  if (!existsSync(p)) continue;
+  let text;
+  try { text = readFileSync(p, 'utf8'); } catch { continue; }
+  if (text.includes('\u0000')) continue; // binary
+  text.split('\n').forEach((line, i) => {
+    if (line.includes('prepublish-ok')) return;
+    for (const [re, what] of RULES) if (re.test(line)) findings.push(`${f}:${i + 1}: ${what}: ${line.trim().slice(0, 100)}`);
+    const m = nameRe && nameRe.exec(line);
+    if (m) findings.push(`${f}:${i + 1}: name from private charts ("${m[1]}"): ${line.trim().slice(0, 100)}`);
+  });
+}
+if (findings.length) {
+  console.error(`PRE-PUBLISH SCAN: ${findings.length} finding(s)\n${findings.join('\n')}`);
+  process.exit(1);
+}
+console.log(`pre-publish scan clean (${files.length} files)`);

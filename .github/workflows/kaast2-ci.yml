@@ -1,0 +1,43 @@
+# KAAST 2 CI (ARCHITECTURE.md §6). Lives at the private repo root because
+# GitHub only reads workflows there; moves into kaast2/.github/ when kaast2/
+# becomes its own public repository (PLAN.md §11).
+name: kaast2
+on:
+  push:
+    paths: ['kaast2/**', '.github/workflows/kaast2-ci.yml']
+  pull_request:
+    paths: ['kaast2/**', '.github/workflows/kaast2-ci.yml']
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: kaast2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: kaast2/package-lock.json
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Unit and engine tests (oracles: PL9 Page 1, PL7 cache, Solar Fire charts)
+        run: npm test
+      - name: Site build
+        run: npm run build
+      - name: Single-file build
+        run: npx vite build --mode single
+      - name: Build contract check
+        run: npm run contract
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: End-to-end (single file, file://, offline)
+        run: npm run test:e2e
+      - name: Pre-publish scan
+        run: npm run scan
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaast2-single-file
+          path: kaast2/dist-single/index.html

@@ -1,6 +1,6 @@
 # ARCHITECTURE — KAAST 2 (working name)
 
-Status: **v0.1, design only, no code yet.** Created 2026-10-17. Twin of PLAN.md.
+Status: **v0.2 — code exists for slices 0, 1, 2a** (2026-10-17, session 2). Twin of PLAN.md.
 Updated whenever a module boundary, data shape, build step or decision changes.
 
 ---
@@ -50,7 +50,9 @@ kaast2/
       jaimini/     karakas.ts, arudha.ts, drishti.ts, argala.ts, lagnas.ts
       transit/     transit.ts (instant), ingress.ts (sign/nakshatra change search)
       panchanga/   tithi.ts, vara.ts, yoga.ts, karana.ts
-      profiles.ts  PL7_DEFAULT, SOLAR_FIRE — the constant bundles
+      profiles.ts  pl9 (default), pl7, solarfire — the constant bundles
+      zodiac.ts    integer-arcsecond constants and helpers; names.ts (nakshatras, pada syllables); combust.ts
+      page1.ts     Page 1 view-model (pure)
       types.ts     ChartInput, ChartResult, Longitude (integer arcseconds), etc.
       index.ts     cast(input, profile) → ChartResult
     ui/
@@ -122,15 +124,21 @@ root of the public repository without edits (PLAN.md §11).
 
 ## 4. Profiles (engine/profiles.ts)
 
-| Constant | PL7_DEFAULT | SOLAR_FIRE (Kala Chakra 1.5) |
-|---|---|---|
-| Ayanamsa | PL7 Lahiri polynomial (report eq. 1); options 2–8 selectable | Swiss SIDM_LAHIRI + 1.251″ |
-| Equinox | mean (SEFLG_NONUT) | mean |
-| Node | true | true |
-| Houses | Placidus, geographic latitude | Topocentric, geocentric (WGS84) latitude |
-| ΔT | 83.0 s at 2020.0 + 0.89 s/yr (PL7 fit); "modern" switch | SF anchor curve; "modern" switch |
-| Dasha year | 365.2421875 d | 365.25 d |
-| Rounding | OPEN (from printouts) | truncate to arcsecond |
+As built (`src/engine/profiles.ts`; evidence in knowledge/06):
+
+| Constant | `pl9` (default) | `pl7` | `solarfire` (Kala Chakra 1.5) |
+|---|---|---|---|
+| Ayanamsa | PL Lahiri polynomial (report eq. 1) — NUM on PL 9 Page 1 | same | Swiss SIDM_LAHIRI + 1.251″ |
+| Equinox | mean (tropical with SEFLG_NONUT, minus ayanamsa) | mean | mean (Swiss sidereal mode) |
+| Node | true | true | true |
+| Houses | Placidus (assumed, BIN for PL 7), **geographic** latitude (NUM: Asc +4″ vs +198″) | Placidus, geographic | Topocentric, geocentric (WGS84) |
+| ΔT | Swiss 2.10.03 (1942: NUM; modern dates: export Test 5) | PL7 table 1800–1993 + fit 83.0 s @2020.0, +0.89 s/yr (NUM: cache) | SF anchor curve |
+| Dasha year | 365.2421875 d (NUM: 10/10) | 365.2421875 d (BIN) | 365.25 d |
+| Dasha Moon | exact float | exact float | integer arcsecond (KC parity) |
+| Rounding | **round** to the arcsecond (NUM) | round (assumed) | truncate |
+
+Houses for PL profiles use Swiss sidereal mode with `SIDM_USER` fixed to the PL
+ayanamsa at the chart moment, so planets and cusps share one ayanamsa.
 | Ephemeris range | warn outside 1800–2399 (ours); flag dates after 2048 as "PL7 would be approximate" | same files |
 
 Profiles are data, not code paths: one engine, one set of tests, two constant
@@ -160,11 +168,19 @@ bundles. Adding "PL9" or "JHora" later is a third bundle.
   files are never overwritten (invariant 11).
 - **Site build**: `npm run build` → `dist-site/` for Vercel (static, no functions).
 - **Desktop build**: `npm run build:desktop` → Tauri 2 wraps `dist-site/` in a native window (system WebView2 on Windows, WKWebView on macOS); outputs `KAAST 2 Setup.exe` (NSIS) / `.msi` and `KAAST 2.dmg`, plus `SHA256SUMS.txt`. Built in CI on `windows-latest` and `macos-latest` runners; no network access is needed by the app at install or run time. The WASM and data files ship inside the bundle via the FetchLoader reading from the app's own asset protocol (no Embedded base64 needed).
-- **Contract check** after every build: parse the dist, ensure every referenced
-  helper exists and the embedded blobs decode to the expected byte lengths.
-- **CI** (GitHub Actions): typecheck → lint → unit → engine (Node + WASM) →
-  both builds → contract check → Playwright e2e on the single file with network
-  disabled → upload dist as artefact. Green CI is required before a slice is shown to the boss.
+- **Contract check** after every build (`scripts/build_contract_check.mjs`): the
+  embedded blobs decode to the vendor files byte for byte (sha256), no external
+  src/href/fetch, the site build ships the same blobs, every literal `t('key')`
+  exists in `en.json`, the version stamp is present.
+- **Fonts** (Atkinson Hyperlegible, IBM Plex Mono, Marcellus) come from
+  `@fontsource/*` and are inlined by the single-file build; no web-font fetch.
+- **Glue**: the classic-script glue is evaluated from source (`src/boot/glue.ts`,
+  `new Function`) in both browser and Node, so one boot path serves app and tests.
+- **CI** (GitHub Actions, `.github/workflows/kaast2-ci.yml` at the private repo
+  root because GitHub reads workflows only there; it moves into `kaast2/.github/`
+  at publication): typecheck → unit + engine (Node + WASM) → both builds →
+  contract check → Playwright e2e on the single file with network disabled →
+  pre-publish scan → upload the single file. Lint (ESLint) not yet added.
 
 ---
 
@@ -173,8 +189,13 @@ bundles. Adding "PL9" or "JHora" later is a third bundle.
 - **Framework**: Preact + TypeScript + signals (small, React-like, fits a
   single file). Components are presentational; all numbers come from
   `ChartResult`. No business rules in components.
+- **Page 1 view-model**: `src/engine/page1.ts` assembles every Page 1 value
+  (rows, Rasi/D9 groupings, Maha timeline) as a pure function, so the whole page
+  is tested against the PL 9 fixture without a browser.
 - **Chart drawing**: one `EastIndianChart` SVG component that ports the
-  Kala Chakra 1.5 geometry exactly (`REGION` map, corner diagonals `xdTL/xdTR/xdBL/xdBR`, two-pass per-row font fit, right-side end-anchoring — see `app_shell_v15.html`). It takes `{ positions, cusps?, centreLines[] }` so the same component draws D1, every varga, bhava and transit charts. North/South Indian are later optional components behind the same props.
+  Kala Chakra 1.5 geometry exactly (2026-10-17 refinements: per-region font by
+  bisection instead of the two-pass estimate, which oscillates at large sizes;
+  rows checked at baseline and cap height; vertical budget per region) (`REGION` map, corner diagonals `xdTL/xdTR/xdBL/xdBR`, two-pass per-row font fit, right-side end-anchoring — see `app_shell_v15.html`). It takes `{ positions, cusps?, centreLines[] }` so the same component draws D1, every varga, bhava and transit charts. North/South Indian are later optional components behind the same props.
 - **Design system**: tokens in `tokens.css` (primitive → semantic → component,
   per the `design-system` skill); light and dark via `prefers-color-scheme` and
   `data-theme`; lord colours (star green #1c7a4b, sub crimson #b02748) and the
@@ -254,6 +275,12 @@ Consequences: visual continuity guaranteed; other styles are additive.
 Context: an acquaintance of the boss uses devices with no internet at all; a double-clickable installer on a USB stick is the only acceptable delivery. Options: Electron (bundles Chromium, ~150 MB, heavy), Tauri 2 (uses the OS WebView, ~10 MB, Rust toolchain only in CI), PWA (needs a first online visit — rejected), plain HTML file (already offered; some users want "a real app").
 Decision: Tauri 2, same `dist-site/` output, updater disabled, no permissions beyond file dialogs for import/export, installers built in CI for Windows x64 and macOS (Intel + Apple Silicon universal).
 Consequences: one more CI job and a Rust toolchain in CI; unsigned builds show a one-time OS warning (documented; signing is decision D10); the single HTML file stays the primary artefact for everyone else.
+
+**ADR-10 PL 9 is the default profile.**
+Context: the boss's Page 1 screenshot is Parashara's Light 9.0; the PL 7 study described a program the family no longer uses day to day.
+Options: keep PL 7 default (plan v0.1); make PL 9 default.
+Decision: three profiles — `pl9` (default), `pl7`, `solarfire`. PL 9 constants are pinned by its own output (Page 1 fixture); open PL 9 items (modern ΔT, Placidus) are settled by the export procedure.
+Consequences: parity target is PL 9; PL 7 remains testable against its transit cache; "PL7_DEFAULT" in older text means `pl7`.
 
 ## 10. Open architectural questions
 

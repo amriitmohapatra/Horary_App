@@ -253,3 +253,39 @@ architecture.
 - Addendum: the user also wants Windows (.exe) and macOS (.dmg) installers
   for devices that never connect to the internet → Tauri 2 wrapper around the
   same web build (ADR-9), slice 8b, decision D10 on code signing.
+
+## 2026-10-17 (session 2) — KAAST 2 slices 0, 1, 2a; the boss's program is PL 9
+- Boss: "start with default slices"; UI left to the team; Page 1 reference =
+  a **Parashara's Light 9.0** "Birth chart I" screenshot (Amitabh Bachchan,
+  11 Oct 1942 16:00, Allahabad). Defaults D1–D10 applied; D5 revised (below).
+- **PL 9 decoded from that one screen (NUM):** Swiss Ephemeris positions,
+  PL Lahiri polynomial, mean equinox, true node → all 9 planets equal to the
+  displayed second; residuals −0.5…+0.3″, so PL 9 **rounds** seconds (KC
+  truncates). PL's atlas applied **India war time UTC+6:30** (1942-09-01 –
+  1945-10-15); with +5:30 the Moon is off by 35′. Ascendant +4″ with
+  geographic latitude vs +198″ with geocentric → **geographic** latitude for
+  houses. Placidus is not testable from the ascendant (still BIN from PL 7).
+  Dasha: **365.2421875-day years 10/10** dates 76 years out; 365.25 gives 5/10.
+  No Moon-vector planet error in PL 9 (at least for 1942).
+- Open for PL 9: ΔT for modern dates (Swiss 69 s vs PL7 curve 87.5 s in
+  2025 → Moon 26″ vs 36″ in Sg 29°42′ on 2025-01-01 0h UT) — Test 5 of
+  `kaast2/parity/PL7_EXPORT_PROCEDURE.md`.
+- **PL 7 profile reproduces PL 7's own transit cache**: 1392 samples
+  2020–2048, Moon ≤0.06″, Rahu ≤0.76″, using DELTAT.ASC (1800–1993) then a
+  line to 83.0 s at 2020.0 and +0.89 s/yr. (Cache files from 2049 on hold the
+  approx.dat fallback and are excluded; JD cut-off 2469442.5.)
+- KAAST 2 profiles: `pl9` (default; ADR-10), `pl7`, `solarfire` (KC 1.5,
+  still 80 planets ≤1″ / 120 cusps ≤12″ on the 10 SF charts).
+- East Indian geometry ported from KC 1.5 with three refinements needed at
+  Page 1 font sizes: bisection font fit (KC's two-pass estimate oscillates),
+  baseline + cap-height row check, vertical budget per region.
+- Scope change: Shad Bala, Bhava Bala, Ashtakavarga, Vimshopaka, avasthas,
+  karakas and functional nature are IN Phase 1 because PL 9's Page 1 shows
+  them → slice 2b. The house-edge numbers on PL's Rasi chart are SAV bindus
+  (sum 337) and Bhava Bala.
+- Fixture hygiene: the Solar Fire reference fixture copied into kaast2 had
+  private chart titles → anonymised to SF01–SF10 (JDs kept). The pre-publish
+  scan derives its name denylist at run time from the private GeoVision
+  collection, so no list of names is stored in kaast2/.
+- Shipped `kaast2/dist/KAAST 2 v0.1.html` (4.0 MB, offline). Kala Chakra 1.5
+  and its engines are unchanged.

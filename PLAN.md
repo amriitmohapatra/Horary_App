@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.1, planning complete, no app code yet.** Created 2026-10-17.
+Status: **v0.2 — slices 0, 1 and 2a shipped (`kaast2/dist/KAAST 2 v0.1.html`).** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
@@ -41,9 +41,9 @@ becomes a public GitHub project and a Vercel deployment.
 the family's own customisations (KP horary pipeline from Kala Chakra 1.5, power
 calculation, Odia edition, etc.).
 
-**Non-goals for Phase 1:** reproducing PL7 defects (the Moon-vector planet error
+**Non-goals for Phase 1** (Ashtakavarga, Shad Bala, Bhava Bala and Vimshopaka moved INTO scope on 2026-10-17 because PL 9's Page 1 shows them): reproducing PL7 defects (the Moon-vector planet error
 of the analysed copy; the silent post-2048 fallback); interpretation text; guna
-matching; Varshaphala; Ashtakavarga; muhurta; the 1–249 horary-number ascendant;
+matching; Varshaphala; muhurta; the 1–249 horary-number ascendant;
 accounts, servers, databases; commercial anything.
 
 ---
@@ -75,7 +75,11 @@ accounts, servers, databases; commercial anything.
 | Avayogi, Duplicate Yogi | Not decoded; textbook rules exist | PL7 printout for 3 charts + Amrit's convention |
 | Arudha exception for lord in 7th | Two sources disagree | PL7 pada worksheet for 3 charts |
 | Display rounding (truncate vs round; seconds vs minutes) | Affects every "1:1" comparison | Read it off the printouts |
-| Exact content of "Page 1" | It is the first deliverable | Screenshot/PDF of Amrit's Page 1 |
+| ~~Exact content of "Page 1"~~ | Settled 2026-10-17: PL 9.0 screenshot (6 panels) | — |
+| ~~Display rounding~~ | Settled for PL 9: seconds are **rounded** (residuals −0.5…+0.3″ on the 1942 chart) | — |
+| Which PL the family uses day to day | The Page 1 screenshot is **PL 9.0**, not 7; PL 9 shows no Moon-vector error | Export procedure Step 0 (Help → About) |
+| PL 9 ΔT for modern dates (Swiss ≈69 s or PL7 curve ≈87 s in 2025) | Moon differs by ~10″ | Export procedure Test 5 |
+| Strength fields of Page 1 (SB%, SB#, VB, AV, Av3, Av5, K7, Func., house-edge SAV + Bhava Bala) | Needed for Page 1 parity | Domain researcher spec `kaast2/docs/spec/PAGE1_SPEC.md` + PL exports |
 
 ---
 
@@ -198,9 +202,10 @@ one slice ≈ one focused session.
 
 | # | Slice | Deliverable you can see | Evidence that closes it |
 |---|---|---|---|
-| 0 | Foundation | Repo folder `kaast2/` with toolchain, CI, design tokens, empty shell that boots WASM and shows "ready" | CI green; single-file build opens offline; Playwright smoke passes |
-| 1 | Engine core, PL7 profile | A dev page: enter date/time/place → sidereal planets, cusps, Asc/MC, ΔT and ayanamsa shown | Moon+Rahu vs 348 cache months < 1.5″; Solar Fire profile still 80/80 + 120 cusps; §13 test 1 answer recorded |
-| 2 | Page 1 | Real Page 1: East Indian chart (Kala Chakra layout), planetary table, cusps, Maha/Antar list, header | Field-by-field match with Amrit's Page 1 export for 16 charts; rounding rule documented |
+| 0 | Foundation | Repo folder `kaast2/` with toolchain, CI, design tokens, empty shell that boots WASM and shows "ready" | ✅ 2026-10-17: single file boots offline from `file://`, no requests, contract check, pre-publish scan |
+| 1 | Engine core, PL profiles | Profiles PL 9 / PL 7 / Solar Fire; "How was this computed?" panel | ✅ 2026-10-17: PL7 cache 1392 samples, Moon ≤0.06″, Rahu ≤0.76″; Solar Fire 80 planets ≤1″, 120 cusps ≤12″; 8 ayanamsas ±0.1″. §13 test 1 moot for PL 9 |
+| 2a | Page 1 (charts, tables, dasha) | East Indian Rasi + D9, planet table (flags, nakshatra, pada syllable, pada + star/sub/sub-sub), Vimshottari list with PL's controls, header, provenance | ✅ 2026-10-17: PL 9 screenshot reproduced (9/9 planets to the second, 10/10 lords, D9, flags, 10/10 dates); 16-chart export parity pending |
+| 2b | Page 1 strengths | Strength table (dignity, SB%, SB#, VB, AV, Av3, Av5, K7, functional nature), Shad Bala bars, house-edge SAV + Bhava Bala labels | PL 9 screenshot values; PL exports of Shad Bala / Bhava Bala / Ashtakavarga / Vimshopaka detail pages |
 | 3 | Vargas | Varga picker, all PL7 vargas incl. alternates and "Iyer" D11 | Unit fixtures from report; 16-chart printout parity; D11 §13 test 4 |
 | 4 | Dashas | Interactive six-level tree + PL7 Antar view; year-length switch | 40/40 legacy dates; PL7 Pratyantar exports; 365.2421875 vs 365.25 drift test |
 | 5 | Yogi points | Yogi/Avayogi/Duplicate Yogi card with derivation | Printout parity on 16 charts; convention decision recorded |
@@ -226,19 +231,25 @@ Parallel track (any time): import/export of GeoVision XML; places; themes; docs.
 | App works offline from one file | Vite single-file build, embedded WASM+data | Playwright opens `file://` with network disabled |
 | No build silently drops code | Contract check + functional smoke | CI step on every build (v1.02 lesson) |
 | UI usable without mouse, on a phone, in both themes | Semantic HTML, focus styles, tokens | Playwright a11y scan + manual walkthrough by Amrit |
-| Nothing personal ships | Fixtures anonymised; no GeoVision data in `kaast2/` | Pre-publish scan script (§10) |
+| Nothing personal ships | Fixtures anonymised; no GeoVision data in `kaast2/` | Pre-publish scan script (§10) — ✅ clean; denylist derived at run time from the private chart collection |
+| Page 1 matches PL 9 | PL 9 profile + Page 1 view-model | `tests/engine/pl9_page1.test.ts` (Amitabh Bachchan screenshot) ✅ |
+| Dasha year is 365.2421875 in PL 9 too | 76-year walk to 2018 | 10/10 dates; 365.25 gives 5/10 ✅ |
 
 ---
 
 ## 7. Decisions needed from the boss (defaults applied if you say "go")
 
+**Recorded 2026-10-17 (session 2):** the boss said "start with default slices", so every
+default below is now in force, except D2 (Page 1 arrived: a PL **9.0** screenshot) and D5
+(revised by evidence, see the D5 row). The Iyer D11 definition is still outstanding.
+
 | ID | Question | Default if silent |
 |---|---|---|
 | D1 | App and folder name. Proposal: **KAAST 2** ("Karar Ashram Astrology Software"), folder `kaast2/` | KAAST 2 |
-| D2 | Send a screenshot/PDF of your PL7 "Page 1" and the definition (or source) of the "Iyer Cure" D11 | Slice 2 waits for it; D11-Iyer implemented as placeholder = PL7 alternate until defined |
+| D2 | Send a screenshot/PDF of your PL7 "Page 1" and the definition (or source) of the "Iyer Cure" D11 | **Page 1 received** (PL 9.0 screenshot, transcribed in `kaast2/tests/fixtures/pl9_page1_amitabh.json`); Iyer D11 still open — placeholder = PL alternate until defined |
 | D3 | One TypeScript engine (tests use Python only as an oracle) instead of Python+JS twins | One TS engine (ADR-1) |
 | D4 | Chart style: **East Indian, exactly the Kala Chakra 1.5 layout** (decided by Amrit 2026-10-17); North/South Indian offered only as optional views | East Indian, Kala Chakra geometry |
-| D5 | ΔT default: PL7 curve for parity, "modern" switch visible | PL7 curve |
+| D5 | ΔT default: PL7 curve for parity, "modern" switch visible | **Revised:** the boss uses PL 9, so the default profile is *PL 9* (Swiss ΔT); the PL7 curve lives in the *PL 7* profile. PL 9's modern-date ΔT is settled by export-procedure Test 5 |
 | D6 | You run the PL7 export afternoon (§4.3) before slice 2 | Yes |
 | D7 | Replicate PL7's Krishnamurti ayanamsas as options | Yes (cheap, decoded) |
 | D8 | Avayogi / Duplicate Yogi conventions if PL7 printouts stay ambiguous | Textbook: 6th nakshatra lord / sign lord |
@@ -330,3 +341,4 @@ When parity is reached and Phase 2 customisation is agreed, we will:
 ## 12. Session log
 
 - **2026-10-17** — Boot from CLAUDE.md/knowledge; absorbed the PL7 report and open items; inventoried GeoVision (1 559 input-only charts; 436 cache months); read the guide's method chapters; wrote PLAN v0.1 and ARCHITECTURE v0.1. Boss decided: East Indian chart layout as in Kala Chakra; share the Iyer books later; Windows and macOS installers for fully offline devices; next session starts from the prompt in CLOUD_HANDOFF.md. No app code yet. Next: boss answers D1–D9; slice 0.
+- **2026-10-17 (session 2)** — Boss: "start with default slices", UI left to the team, Page 1 = PL 9.0 screenshot. Applied defaults D1–D10 (D5 revised). Found the boss's program is PL 9 and that PL 9 = Swiss Ephemeris + PL Lahiri polynomial + mean equinox + true node + geographic latitude for houses (Asc +4″ vs +198″ geocentric; Placidus still assumed from PL 7, needs a cusp printout), seconds rounded, dasha year 365.2421875, war-time zone honoured (Amitabh 1942 chart: 9/9 planets to the second). Shipped slices 0, 1, 2a as `kaast2/dist/KAAST 2 v0.1.html` (61 engine/unit tests, 5 e2e, contract check, scan). Specialists: domain researcher (Page 1 strengths spec), technical writer (`kaast2/parity/PL7_EXPORT_PROCEDURE.md`, 17 charts + Test 5 for ΔT). Next: slice 2b (strengths).
