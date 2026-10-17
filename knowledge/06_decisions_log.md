@@ -320,3 +320,23 @@ architecture.
   (body 12–15:1, no pure white/black), text size setting, SVG icons, 44 px
   touch targets; chart labels measured with the real font; an e2e geometry
   test guarantees no label crosses a chart line.
+
+## 2026-10-17 (session 2, end) — Astro-Amriit v0.2: every Phase 1 slice built
+- Shipped `kaast2/dist/Astro-Amriit v0.2.html`; 616 unit/engine tests, 24 e2e
+  on the shipped file (geometry, axe WCAG 2.1 AA in three themes, offline).
+- **Sunrise convention of PL = the Sun's centre with no refraction** (the
+  instant the Sun's sidereal longitude equals the ascendant; Swiss
+  BIT_HINDU_RISING). Established independently twice: the PL 9 strength
+  fixture (hora lord) and PL 7's own Pranapada export (manual p. 130). Used
+  for Shad Bala, special lagnas and the panchanga vara.
+- Transits: search proven complete (bounded motion + brute force); events
+  defined on the profile's integer arcsecond; stations follow the chart's R
+  flag (tropical speed) — the sidereal turning point differs by up to ~32 min
+  for Saturn (OPEN whether PL users expect the sidereal definition). Swiss
+  true node has joints every 27.55 d (handled). Range 1800-01-02 … 2400-01-01.
+- Yogi: Yogi point + 186°40′ lies in the 15th nakshatra from the Yogi's,
+  whose lord equals the 6th's — the "6th nakshatra" textbook rule gives the
+  same planet. Sripati: PyJHora's chart method 3 uses madhyas as house
+  beginnings; Astro-Amriit follows PL's tutorial (madhya = centre).
+- Desktop: the Swiss glue is an ES module; the Tauri CSP forbids eval.
+- ChartResult gained `mcDeg` (exact MC) for Sripati.

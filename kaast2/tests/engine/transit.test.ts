@@ -2,7 +2,7 @@
  * Slice 8 — transit search (src/engine/transit). Oracles:
  *  (a) every event is a real boundary crossing / speed sign change: the
  *      chart recipe (transitPositions = siderealFrame + bodiesIn) puts the
- *      body in `from` 1 s before and in `to` 1 s after;
+ *      body in `from` 1 s before and in `to` 1 s after (stations: speed sign 2 s either side);
  *  (b) completeness: a brute-force scan of the chart recipe at fine steps
  *      never sees a state the event list does not predict;
  *  (c) speed: a year of Moon nakshatra changes well under 100 ms;
@@ -17,6 +17,7 @@ import { bodiesIn, siderealFrame, PROFILES, PLANETS, type PlanetId, type Profile
 import type { SwissEph } from '../../src/engine/ephem/swisseph';
 import { julianDay } from '../../src/engine/time/julian';
 import { evaluator, motionOf } from '../../src/engine/transit/body';
+import { BodyScan } from '../../src/engine/transit/search';
 import {
   TRANSIT_JD_MAX, TRANSIT_JD_MIN, cellOf, findEvents, returns, sadeSati, transitPositions,
   type EventKind, type TransitEvent,
@@ -29,7 +30,7 @@ beforeAll(async () => { swe = await bootNode(); });
 const SEC = 1 / 86400;
 const jd = (y: number, m = 1, d = 1, h = 0) => julianDay(y, m, d, h);
 
-/** (a) — 1 s before / after each event (clusters closer than 2 s checked at their outer edges). */
+/** (a) — 1 s before / after each event (stations: 2 s; clusters closer than 2 s checked at their outer edges). */
 function verifyEvents(profile: ProfileId, events: TransitEvent[]): number {
   const groups = new Map<string, TransitEvent[]>();
   for (const e of events) {
@@ -45,6 +46,9 @@ function verifyEvents(profile: ProfileId, events: TransitEvent[]): number {
       const before = transitPositions(swe, profile, first.jdUT - SEC)[first.body];
       const after = transitPositions(swe, profile, last.jdUT + SEC)[last.body];
       if (first.kind === 'station') {
+        // ±2 s: outside the ≤ ±0.9 s band where Swiss speed noise makes the flag flicker.
+        const before = transitPositions(swe, profile, first.jdUT - 2 * SEC)[first.body];
+        const after = transitPositions(swe, profile, last.jdUT + 2 * SEC)[last.body];
         expect(before.speedDeg < 0, `${first.body} station ${first.jdUT}`).toBe(first.direction === 'direct');
         expect(after.speedDeg < 0, `${last.body} station ${last.jdUT}`).toBe(last.direction === 'retrograde');
       } else {
@@ -193,6 +197,25 @@ describe('(a) events are real crossings, (b) brute force finds nothing missed', 
       expect(new Set(ev.map((e) => e.body)).size).toBe(9);
       expect(verifyEvents(pid, ev)).toBeGreaterThan(0);
       bruteForce(pid, (['Su', 'Ma', 'Ve', 'Ju', 'Sa'] as const).flatMap((body) => [[body, 'pada'], [body, 'station']] as [PlanetId, EventKind][]), ev, a, b, 1 / 4);
+    }
+  });
+
+  it('results do not depend on the base step (h0 × ¼, ½, 1), 10 years', () => {
+    const p = PROFILES.pl9, a = jd(2015), b = jd(2025);
+    for (const body of ['Me', 'Ma', 'Sa', 'Ra'] as const) {
+      const runs = [0.25, 0.5, 1].map((x) => {
+        const m = motionOf(p, body), sc = new BodyScan(evaluator(swe, p, body), { ...m, h0: m.h0 * x }, a, b);
+        return { x: sc.crossings({ W: 12_000, off: -0.5 }), s: sc.stations() };
+      });
+      for (const r of runs.slice(1)) {
+        expect(r.x.length, body).toBe(runs[0]!.x.length);
+        expect(r.s.length, body).toBe(runs[0]!.s.length);
+        r.x.forEach((c, i) => { expect((((c.k - runs[0]!.x[i]!.k) % 108) + 108) % 108).toBe(0); expect(Math.abs(c.t - runs[0]!.x[i]!.t) * 86400).toBeLessThan(0.01); });
+        const st = [...r.s].sort((u, v) => u.t - v.t), s0 = [...runs[0]!.s].sort((u, v) => u.t - v.t);
+        // Stations agree to < 1 s, not 0.01 s: Swiss's speed carries ~1e-8 °/d of noise, so near a
+        // Saturn station the sign of the speed (the "R" flag) itself flickers for about ±0.9 s.
+        st.forEach((c, i) => expect(Math.abs(c.t - s0[i]!.t) * 86400).toBeLessThan(1));
+      }
     }
   });
 

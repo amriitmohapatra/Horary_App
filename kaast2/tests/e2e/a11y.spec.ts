@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const url = pathToFileURL(resolve(import.meta.dirname, '../..', process.env.KAAST2_HTML ?? 'dist-single/index.html')).href;
-const PAGES = ['Page 1', 'Strengths', 'Vargas', 'Dashas', 'Yogi & Bhava', 'Jaimini', 'Settings'];
+const PAGES = ['Page 1', 'Strengths', 'Vargas', 'Dashas', 'Yogi & Bhava', 'Jaimini', 'Transits', 'Settings'];
 
 for (const theme of ['light', 'dark', 'warm']) {
   test(`axe: no WCAG A/AA violations on any page (${theme})`, async ({ page }) => {
@@ -23,7 +23,8 @@ for (const theme of ['light', 'dark', 'warm']) {
       if (!(await link.count())) continue;
       await link.click();
       await page.waitForTimeout(150);
-      const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
+      // @axe-core/playwright is typed against another Playwright minor; the runtime API is the same.
+      const r = await new AxeBuilder({ page: page as unknown as ConstructorParameters<typeof AxeBuilder>[0]['page'] }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
       for (const v of r.violations) found.push(`${name}: ${v.id} (${v.nodes.length}) ${v.nodes.slice(0, 2).map((n) => n.target.join(' ')).join(' | ')}`);
     }
     expect(found).toEqual([]);

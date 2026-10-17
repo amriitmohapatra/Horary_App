@@ -107,13 +107,13 @@ const MOTION = {
   //             step       |speed| bound   no reversal      |v| < vz ⇒ |dv/dt| ≤ az   (measured: |v|max, az)
   Su: { h0: 4, vmax: 1.1, monotonic: true, vz: 0, az: 0, jump: 0, dv: 0 },                // 1.0199, speed ≥ 0.9528
   Mo: { h0: 1, vmax: 16, monotonic: true, vz: 0, az: 0, jump: 0, dv: 0 },                 // 15.401, speed ≥ 11.760
-  Me: { h0: 1, vmax: 2.6, monotonic: false, vz: 1.5, az: 0.3, jump: 0, dv: 0 },           // 2.2034, 0.1987
-  Ve: { h0: 2, vmax: 1.5, monotonic: false, vz: 0.9, az: 0.065, jump: 0, dv: 0 },         // 1.2625, 0.04245
-  Ma: { h0: 2, vmax: 1.0, monotonic: false, vz: 0.6, az: 0.023, jump: 0, dv: 0 },         // 0.7916, 0.01516
-  Ju: { h0: 4, vmax: 0.35, monotonic: false, vz: 0.2, az: 0.0055, jump: 0, dv: 0 },       // 0.2428, 0.003521
-  Sa: { h0: 4, vmax: 0.2, monotonic: false, vz: 0.08, az: 0.003, jump: 0, dv: 0 },        // 0.1341, 0.001910
+  Me: { h0: 2, vmax: 2.6, monotonic: false, vz: 1.5, az: 0.3, jump: 0, dv: 0 },           // 2.2034, 0.1987
+  Ve: { h0: 4, vmax: 1.5, monotonic: false, vz: 0.9, az: 0.065, jump: 0, dv: 0 },         // 1.2625, 0.04245
+  Ma: { h0: 8, vmax: 1.0, monotonic: false, vz: 0.6, az: 0.023, jump: 0, dv: 0 },         // 0.7916, 0.01516
+  Ju: { h0: 16, vmax: 0.35, monotonic: false, vz: 0.2, az: 0.0055, jump: 0, dv: 0 },       // 0.2428, 0.003521
+  Sa: { h0: 16, vmax: 0.2, monotonic: false, vz: 0.08, az: 0.003, jump: 0, dv: 0 },        // 0.1341, 0.001910
   meanNode: { h0: 16, vmax: 0.06, monotonic: true, vz: 0, az: 0, jump: 0, dv: 0 },        // −0.052954 … −0.052953
   // True node: smooth |v| ≤ 0.2593 (secant), smooth |dv/dt| ≤ 0.0789; at the lunar-file joints
   // (27.55 d apart) longitude steps ≤ 0.29″ and speed steps ≤ 5.9e-4 °/d (77 joints, 6 epochs).
-  trueNode: { h0: 1, vmax: 0.3, monotonic: false, vz: 0.31, az: 0.12, jump: 0.6, dv: 0.001, sep: 1 / 24 },
+  trueNode: { h0: 2, vmax: 0.3, monotonic: false, vz: 0.31, az: 0.12, jump: 0.6, dv: 0.001, sep: 1 / 24 },
 } satisfies Record<string, Motion>;

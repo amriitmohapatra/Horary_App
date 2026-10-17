@@ -218,3 +218,20 @@ test('Panchanga line and Yogi & Bhava page (Amitabh Bachchan worked values)', as
   await expect(page.getByTestId('bhava-moved')).toContainText('Sa 4→5');
   expect(errors).toEqual([]);
 });
+
+test('Transits: chart, positions, stepping, events, Sade Sati and returns', async ({ page }) => {
+  const errors = await castAmitabh(page);
+  await page.getByRole('link', { name: 'Transits' }).click();
+  await page.getByLabel('Zone for these times (hours east)').fill('5.5');
+  await page.getByLabel('Date', { exact: true }).fill('2025-01-01');
+  await page.getByLabel('Time', { exact: true }).fill('05:30:00');
+  // 2025-01-01 00:00 UT, PL9 profile (Swiss Delta-T): Moon Sg 29°42'26" (export procedure, Test 5)
+  await expect(page.getByTestId('transit-table').locator('tr[data-point="Mo"]')).toContainText('Sg 29:42:26');
+  await page.getByLabel('Step', { exact: true }).selectOption('d');
+  await page.getByRole('button', { name: 'Step forward' }).click();
+  await expect(page.getByLabel('Date', { exact: true })).toHaveValue('2025-01-02');
+  await expect(page.getByTestId('transit-events').locator('tbody tr').first()).not.toContainText('No changes');
+  await expect(page.getByTestId('sade-sati').locator('tbody tr')).not.toHaveCount(0);
+  await expect(page.getByTestId('returns').locator('tbody tr')).not.toHaveCount(0);
+  expect(errors).toEqual([]);
+});

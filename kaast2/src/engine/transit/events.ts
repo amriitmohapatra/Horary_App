@@ -11,9 +11,16 @@
  *  - A station is a sign change of Position.speedDeg — the speed that drives
  *    the chart's "R" flag. In PL profiles that speed is tropical (mean
  *    equinox of date); the sidereal turning point differs by
- *    3.8e-5 °/d ÷ acceleration (minutes for Mercury, ~1–2 h for Saturn).
- *  - Ketu mirrors Rahu: same instants, longitude + 180° (its integer
- *    arcsecond is Rahu's + 648 000″, as in bodiesIn()).
+ *    3.8e-5 °/d ÷ acceleration (NUM, 2025: Mercury ≤ 0.7 min, Venus 1.4,
+ *    Mars 4.4, Jupiter 16, Saturn 31–33 min). Swiss's speed carries ~1e-8
+ *    °/d of noise, so at a Saturn station the flag itself flickers for
+ *    about ±0.9 s; the reported instant lies inside that band.
+ *  - The true node also wobbles: ~54 stations a year, most of them pauses
+ *    of a few hours moving < 1″ (see body.ts for its lunar-file joints).
+ *  - Ketu mirrors Rahu: computed from Rahu's scan, longitude + 180° (its
+ *    integer arcsecond is Rahu's + 648 000″, as in bodiesIn()). 180° is 6
+ *    signs and 54 padas but 13½ nakshatras, so Ketu's nakshatra changes fall
+ *    at Rahu's pada 2→3 boundaries, not at Rahu's nakshatra changes.
  *  - Events are reported for fromJd < t ≤ toJd, sorted by time, so that the
  *    state at fromJd followed by the events gives the state at any instant.
  *  - A return is the instant the exact (float) sidereal longitude equals the
@@ -103,28 +110,40 @@ export function findEvents(swe: SwissEph, profile: Profile | ProfileId, opts: Fi
   const W = cellKinds.length === 1 ? CELL[cellKinds[0]!].W : PADA;
   const off = gridOff(p);
   const out: TransitEvent[] = [];
-  for (const body of new Set(opts.bodies)) {
-    const scan = new BodyScan(evaluator(swe, p, body), motionOf(p, body), fromJd, toJd);
+  const wanted = new Set(opts.bodies);
+  // Ketu is scanned through Rahu (one scan serves both): its integer
+  // longitude is Rahu's + 648 000″, so its boundaries are Rahu's shifted by
+  // that much — on a grid that divides 648 000″ (gcd; 24 000″ for nakshatras).
+  const sources = new Set([...wanted].map((b) => (b === 'Ke' ? 'Ra' : b)));
+  for (const src of sources) {
+    const targets = src === 'Ra' ? (['Ra', 'Ke'] as const).filter((b) => wanted.has(b)) : [src];
+    const node = src === 'Ra';
+    const w0 = node ? gcd(W, HALF) : W;
+    const scan = new BodyScan(evaluator(swe, p, src), motionOf(p, src), fromJd, toJd);
     if (cellKinds.length) {
-      for (const c of scan.crossings({ W, off })) {
+      for (const c of scan.crossings({ W: w0, off })) {
         if (!(c.t > fromJd && c.t <= toJd)) continue;
-        const B = c.k * W; // boundary, unwrapped integer arcseconds
-        for (const kind of cellKinds) {
-          const { W: w, n } = CELL[kind];
-          if (B % w !== 0) continue;
-          const j = B / w;
-          const to = c.dir > 0 ? j : j - 1, from = c.dir > 0 ? j - 1 : j;
-          out.push({ jdUT: c.t, body, kind, from: mod(from, n), to: mod(to, n),
-            direction: c.dir > 0 ? 'direct' : 'retrograde', lon: norm(c.dir > 0 ? B : B - 1) });
+        for (const body of targets) {
+          const B = c.k * w0 + (body === 'Ke' ? HALF : 0); // boundary, unwrapped integer arcseconds
+          for (const kind of cellKinds) {
+            const { W: w, n } = CELL[kind];
+            if (B % w !== 0) continue;
+            const j = B / w;
+            const to = c.dir > 0 ? j : j - 1, from = c.dir > 0 ? j - 1 : j;
+            out.push({ jdUT: c.t, body, kind, from: mod(from, n), to: mod(to, n),
+              direction: c.dir > 0 ? 'direct' : 'retrograde', lon: norm(c.dir > 0 ? B : B - 1) });
+          }
         }
       }
     }
     if (opts.kinds.includes('station')) {
       for (const s of scan.stations()) {
         if (!(s.t > fromJd && s.t <= toJd)) continue;
-        const lon = toArcsec(s.raw / 3600, p.rounding);
-        const sg = signIndex(lon);
-        out.push({ jdUT: s.t, body, kind: 'station', from: sg, to: sg, direction: s.dir > 0 ? 'direct' : 'retrograde', lon });
+        for (const body of targets) {
+          const lon = norm(toArcsec(s.raw / 3600, p.rounding) + (body === 'Ke' ? HALF : 0));
+          const sg = signIndex(lon);
+          out.push({ jdUT: s.t, body, kind: 'station', from: sg, to: sg, direction: s.dir > 0 ? 'direct' : 'retrograde', lon });
+        }
       }
     }
   }
@@ -147,6 +166,8 @@ export function returns(swe: SwissEph, profile: Profile | ProfileId, body: Plane
 }
 
 const mod = (a: number, n: number) => ((a % n) + n) % n;
+const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
+const HALF = ZODIAC / 2;
 
 function sortEvents(ev: TransitEvent[]): TransitEvent[] {
   return ev.sort((a, b) => a.jdUT - b.jdUT || PLANETS.indexOf(a.body) - PLANETS.indexOf(b.body) || KIND_ORDER[a.kind] - KIND_ORDER[b.kind]);

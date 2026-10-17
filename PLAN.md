@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.2 — slices 0, 1 and 2a shipped (`kaast2/dist/KAAST 2 v0.1.html`).** Created 2026-10-17, updated 2026-10-17 (session 2).
+Status: **v0.3 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.2.html`. Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
@@ -205,13 +205,13 @@ one slice ≈ one focused session.
 | 0 | Foundation | Repo folder `kaast2/` with toolchain, CI, design tokens, empty shell that boots WASM and shows "ready" | ✅ 2026-10-17: single file boots offline from `file://`, no requests, contract check, pre-publish scan |
 | 1 | Engine core, PL profiles | Profiles PL 9 / PL 7 / Solar Fire; "How was this computed?" panel | ✅ 2026-10-17: PL7 cache 1392 samples, Moon ≤0.06″, Rahu ≤0.76″; Solar Fire 80 planets ≤1″, 120 cusps ≤12″; 8 ayanamsas ±0.1″. §13 test 1 moot for PL 9 |
 | 2a | Page 1 (charts, tables, dasha) | East Indian Rasi + D9, planet table (flags, nakshatra, pada syllable, pada + star/sub/sub-sub), Vimshottari list with PL's controls, header, provenance | ✅ 2026-10-17: PL 9 screenshot reproduced (9/9 planets to the second, 10/10 lords, D9, flags, 10/10 dates); 16-chart export parity pending |
-| 2b | Page 1 strengths | Strength table (dignity, SB%, SB#, VB, AV, Av3, Av5, K7, functional nature), Shad Bala bars, house-edge SAV + Bhava Bala labels | PL 9 screenshot values; PL exports of Shad Bala / Bhava Bala / Ashtakavarga / Vimshopaka detail pages |
+| 2b ✅ | Page 1 strengths | Strength table (dignity, SB%, SB#, VB, AV, Av3, Av5, K7, functional nature), Shad Bala bars, house-edge SAV + Bhava Bala labels | PL 9 screenshot values; PL exports of Shad Bala / Bhava Bala / Ashtakavarga / Vimshopaka detail pages |
 | 3 | Vargas | Varga picker, all PL7 vargas incl. alternates and "Iyer" D11 | Unit fixtures from report; 16-chart printout parity; D11 §13 test 4 |
 | 4 | Dashas | Interactive six-level tree + PL7 Antar view; year-length switch | 40/40 legacy dates; PL7 Pratyantar exports; 365.2421875 vs 365.25 drift test |
-| 5 | Yogi points | Yogi/Avayogi/Duplicate Yogi card with derivation | Printout parity on 16 charts; convention decision recorded |
-| 6 | Bhava chalit | Sripati + equal bhava tables and charts | Printout parity |
-| 7 | Jaimini | Karakas, padas, upapada, karakamsha, drishti, argala, special lagnas | Printout parity + PyJHora cross-check |
-| 8 | Transits | Transit chart, scrubber, upcoming-transit list | Transit export parity at fixed instants; ingress dates vs Swiss |
+| 5 | Yogi points | Yogi/Avayogi/Duplicate Yogi card with derivation | ✅ built 2026-10-17 (Avayogi variants selectable); printout parity pending |
+| 6 | Bhava chalit | Sripati + equal bhava tables and charts | ✅ built 2026-10-17; printout parity pending |
+| 7 | Jaimini | Karakas, padas, upapada, karakamsha, drishti, argala, special lagnas | ✅ built 2026-10-17; K7 = PL 9; PyJHora cross-check on 34 charts; printout parity pending |
+| 8 | Transits | Transit chart, scrubber, upcoming-transit list | ✅ built 2026-10-17; completeness proven by brute force; PL 7 cache consistent; export parity pending |
 | 8b | Desktop installers | `Astro-Amriit Setup.exe` (Windows) and `Astro-Amriit.dmg` (macOS) built in CI from the same source; USB-stick install guide | ✅ config + CI + guide 2026-10-17; Linux build ran fully offline (`unshare -n`): boots, casts, saves. Pending: first CI run and offline Windows/macOS machines (checklist in reminders) |
 | 9 | Parity audit and 1.0 | `parity/REPORT.md`, user guide, release note | All rows green or explicitly waived by you |
 | 10 | Phase 2 kick-off | Your feature cull list; customisation backlog; Vercel; open-sourcing | — |

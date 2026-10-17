@@ -17,13 +17,18 @@
  *      [(Xa+Xb−P)/2, (Xa+Xb+P)/2], P a bound on the path length ∫|dX/dt|; or
  *  (3) split in half and re-examined.
  * "No reversal" is proven from the endpoint speeds and an acceleration
- * bound: a zero of the rate at c forces |v(a)| + |v(b)| ≤ 2E + az·(b−a).
+ * bound: a zero of the rate at c forces |v(a)| + |v(b)| ≤ 2E + az·(b−a)
+ * (valid because h ≤ vz/az keeps the whole step where |v| < vz). P is
+ * vmax·h, or h(|va|+|vb|)/2 + az·h²/2 (+E·h) when the step stays below vz.
  * Recursion stops at TAU (0.5 s): an excursion across a boundary lasting
- * less than that is reported as at most one crossing. Stations (sign
- * changes of the Swiss speed, i.e. of the chart's "R" flag) use the same
- * bound on the speed itself, down to STATION_SEP (60 s): a hidden pair of
- * stations closer together than that (a reversal lasting < 1 min) can be
- * missed — both together, so directions still alternate.
+ * less than that is reported as at most one crossing. Each step emits its
+ * net change of cell, so consecutive events always chain (from = previous
+ * to). Stations (sign changes of the Swiss speed, i.e. of the chart's "R"
+ * flag) use the same bound on the speed itself, down to STATION_SEP (60 s;
+ * 1 h for the true node): a hidden pair of stations closer together than
+ * that can be missed — both together, so directions still alternate.
+ * The true node adds allowances for its lunar-file joints (body.ts): a
+ * longitude step `jump` widens P, a speed step `dv` widens both tests.
  */
 import { RATE_SLACK as E, type BodySample, type Evaluator, type Motion } from './body';
 import { ZODIAC } from '../zodiac';

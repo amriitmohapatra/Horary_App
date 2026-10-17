@@ -4,7 +4,7 @@
 app that reproduces Parashara's Light (PL) at its default settings, drawn in
 the East Indian chart style.
 
-- **One file, no internet.** Download `dist/Astro-Amriit v0.1.html` and double-click
+- **One file, no internet.** Download `dist/Astro-Amriit v0.2.html` and double-click
   it. Nothing is uploaded and nothing is fetched; the Swiss Ephemeris runs
   inside the page.
 - **Checked against PL itself.** Every number is tested against PL's own output
@@ -32,7 +32,12 @@ the East Indian chart style.
 | PL 7 profile: Delta-T + ayanamsa | PL 7's own transit cache, 1392 samples 2020–2048 | Moon ≤0.06″, Rahu ≤0.76″ |
 | Solar Fire profile | 10 Solar Fire Gold reference charts | 80 planets ≤1″, 120 cusps ≤12″ |
 | Ayanamsa options | PL7 binary decoding (8 formulas) | 7/7 values ±0.1″ |
+| Strength fields (SB%, SB#, VB, AV, Av3, Av5, K7, Func., SAV, Bhava Bala) | PL 9 Page 1 screenshot | all except Ketu VB and Rahu AV (open); Bhava Bala ≤0.6 virupa |
+| Vargas | PL7.exe decoded (31 routines) + PyJHora | 124 tests |
+| Jaimini, Yogi, bhava, panchanga | PL docs/binary + PyJHora (34–181 charts) | all differences documented |
+| Transits | brute-force completeness + PL 7 cache (10 461 Moon nakshatra changes) | no event missed |
 | Offline single file | Playwright, `file://`, network disabled | boots, casts, no requests |
+| Accessibility | axe WCAG 2.1 AA, every page, 3 themes | 0 violations |
 
 ## For developers
 
