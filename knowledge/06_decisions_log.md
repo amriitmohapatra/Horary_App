@@ -289,3 +289,34 @@ architecture.
   collection, so no list of names is stored in kaast2/.
 - Shipped `kaast2/dist/KAAST 2 v0.1.html` (4.0 MB, offline). Kala Chakra 1.5
   and its engines are unchanged.
+
+## 2026-10-17 (session 2, later) — Astro-Amriit; vargas decoded; comfort design
+- **Name:** the boss renamed the app **Astro-Amriit**. The folder `kaast2/`
+  stays as the internal codename while slices are in flight (and becomes the
+  root of the public repository at publication anyway). Chart file format id
+  `astro-amriit-chart`; files saved as `kaast2-chart` still open.
+- **Vargas (slice 3):** all 31 PL varga positions decoded from PL7.exe
+  (dispatcher `fcn.0057d9cf`, jump table 0x57db65, divisors at 0x5f47b8).
+  Corrections to the PL7 report: D2 (Leo/Cancer hora) and D2-alt2 have their
+  own routines; seven alternates are plain cyclic; D150 is plain cyclic, not
+  the Chandra Kala Nadi rule. PL-only rules (no PyJHora equivalent): D2-alt2,
+  D16-alt, D11-alt. **Boundary convention (lead decision):** every amsa is
+  half-open [from, to) on the rasi longitude (invariant 1); PL's float code
+  differs only for points exactly on a boundary (D2 at 15°, D30 limits,
+  exact 360°, D45's 1.50000000015 factor) — not reproduced, documented.
+  Still to confirm on PL 9 printouts; the labels of positions 22–31 are
+  descriptive stand-ins.
+- **Page 1 strengths decoded** (docs/spec/PAGE1_SPEC.md): 145 PL 9 fields
+  reproduced by the Python oracle with 0 mismatches. PL-specific conventions
+  required by the fixture: shadbala sunrise = instant Asc = Sun (centre, no
+  refraction); PL's own cheshta rule; Raman's saptavargaja values and
+  required totals; Equal-house bhava centres for Bhava Bala; Av5 label order
+  Dead/Old/Adoles./Youth./Infant; Vimshopaka fits shadvarga. OPEN: Ketu VB
+  (9.1 vs 14), Rahu AV rule, nodes' functional nature rule.
+- **PL chart files:** BirthDate is the local-clock JD; west-positive
+  longitude and zone; war time stored as DST = 1; ASCII or UTF-16 BOM. All
+  1560 files of the private collection parse.
+- **Comfort design:** Light / Dark / Warm night themes, all pairs ≥4.5:1
+  (body 12–15:1, no pure white/black), text size setting, SVG icons, 44 px
+  touch targets; chart labels measured with the real font; an e2e geometry
+  test guarantees no label crosses a chart line.

@@ -245,7 +245,7 @@ default below is now in force, except D2 (Page 1 arrived: a PL **9.0** screensho
 
 | ID | Question | Default if silent |
 |---|---|---|
-| D1 | App and folder name. Proposal: **KAAST 2** ("Karar Ashram Astrology Software"), folder `kaast2/` | KAAST 2 |
+| D1 | App and folder name. Proposal: **KAAST 2** ("Karar Ashram Astrology Software"), folder `kaast2/` | **Decided 2026-10-17: the app is called "Astro-Amriit"** (boss). Folder `kaast2/` stays as the internal codename until publication |
 | D2 | Send a screenshot/PDF of your PL7 "Page 1" and the definition (or source) of the "Iyer Cure" D11 | **Page 1 received** (PL 9.0 screenshot, transcribed in `kaast2/tests/fixtures/pl9_page1_amitabh.json`); Iyer D11 still open — placeholder = PL alternate until defined |
 | D3 | One TypeScript engine (tests use Python only as an oracle) instead of Python+JS twins | One TS engine (ADR-1) |
 | D4 | Chart style: **East Indian, exactly the Kala Chakra 1.5 layout** (decided by Amrit 2026-10-17); North/South Indian offered only as optional views | East Indian, Kala Chakra geometry |
