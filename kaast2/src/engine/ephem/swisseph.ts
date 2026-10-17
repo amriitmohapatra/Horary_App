@@ -23,6 +23,8 @@ export const SE = {
   MEAN_NODE: 10, TRUE_NODE: 11,
   FLG_SWIEPH: 2, FLG_SPEED: 256, FLG_NONUT: 64, FLG_SIDEREAL: 65536,
   SIDM_LAHIRI: 1, SIDM_USER: 255,
+  CALC_RISE: 1, CALC_SET: 2, CALC_MTRANSIT: 4, CALC_ITRANSIT: 8,
+  BIT_DISC_CENTER: 256, BIT_NO_REFRACTION: 512, BIT_HINDU_RISING: 896,
 } as const;
 
 export interface BodyRaw { lon: number; lat: number; dist: number; lonSpeed: number }
@@ -33,6 +35,8 @@ export class SwissEph {
   private readonly serr: number;
   private readonly cuspBuf: number;
   private readonly ascmcBuf: number;
+  private readonly geoBuf: number;
+  private readonly tretBuf: number;
 
   constructor(private readonly m: SweModule) {
     m.ccall('swe_set_ephe_path', null, ['string'], ['/sweph']);
@@ -40,6 +44,8 @@ export class SwissEph {
     this.serr = m._malloc(256);
     this.cuspBuf = m._malloc(13 * 8);
     this.ascmcBuf = m._malloc(10 * 8);
+    this.geoBuf = m._malloc(3 * 8);
+    this.tretBuf = m._malloc(10 * 8);
   }
 
   version(): string {
@@ -77,6 +83,28 @@ export class SwissEph {
     const cusps: number[] = [];
     for (let i = 1; i <= 12; i++) cusps.push(h[c + i]!);
     return { cusps, asc: h[a]!, mc: h[a + 1]!, armc: h[a + 2]! };
+  }
+
+  /**
+   * Next rising/setting/transit of `body` after `jdUT` (Swiss swe_rise_trans).
+   * `rsmi` combines CALC_* with BIT_* flags (disc centre, no refraction).
+   * Returns the event JD (UT), or null when the body does not rise/set that day.
+   */
+  riseTrans(jdUT: number, body: number, rsmi: number, lonDeg: number, latDeg: number, heightM = 0,
+    pressureHpa = 1013.25, tempC = 15): number | null {
+    const h = this.m.HEAPF64, g = this.geoBuf / 8;
+    h[g] = lonDeg; h[g + 1] = latDeg; h[g + 2] = heightM;
+    const rc = this.m.ccall('swe_rise_trans', 'number',
+      ['number', 'number', 'number', 'number', 'number', 'number', 'number', 'number', 'number', 'number'],
+      [jdUT, body, 0, SE.FLG_SWIEPH, rsmi, this.geoBuf, pressureHpa, tempC, this.tretBuf, this.serr]);
+    if (rc === -2) return null; // circumpolar
+    if (rc < 0) throw new Error(`swe_rise_trans failed: ${this.errText()}`);
+    return this.m.HEAPF64[this.tretBuf / 8]!;
+  }
+
+  /** Swiss sidereal time at Greenwich, hours. */
+  sidTime(jdUT: number): number {
+    return this.m.ccall('swe_sidtime', 'number', ['number'], [jdUT]);
   }
 
   private errText(): string {

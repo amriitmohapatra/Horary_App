@@ -327,6 +327,21 @@ decoding, Playwright for build verification, a field-by-field parity script;
 3. **Chart layout is East Indian, exactly as Kala Chakra 1.5** — carried into D4 and §3.2.
 4. **Build Windows `.exe` and macOS `.dmg` installers** so the app can be installed on devices with no internet at all (an acquaintance uses no Wi-Fi and no mobile data). Carried into §3.10, slice 8b, D10 and ADR-9. Distribution: USB stick with the installer, a checksum file and a one-page install guide.
 
+5. **Deferred by the boss until the build is complete (2026-10-17):** run
+   `kaast2/parity/PL7_EXPORT_PROCEDURE.md` on Windows. Open items it settles,
+   in priority order:
+   - Step 0: exact PL version (Help → About); is PL 7 still used at all?
+   - Test 5: PL 9's Delta-T for modern dates (Swiss vs PL7 curve; Moon 10″ apart).
+   - Placidus for intermediate cusps in PL 9 (only the ascendant is confirmed).
+   - Tests 2–4: KP ayanamsa on the KP printout; Rahu true/mean option; D11 rule.
+   - Test 1 (Moon-vector planet error) only if PL 7 is still used.
+   - 17-chart parity set (5 public + 12 family) — confirm 17 vs 16 and Clinton at 33°40′N.
+   - Strength pages (Shad Bala, Bhava Bala, Ashtakavarga, Vimshopaka) for slice 2b parity.
+   - Avayogi / Duplicate Yogi convention; arudha exception for the lord in the 7th.
+   - PL's exact nakshatra spellings and pada syllables (unless decoded from the binary first).
+6. **Still owed by the boss:** the "Iyer Cure" D11 definition (or its source);
+   the "New Techniques of Prediction" books (reminder 1).
+
 ## 11. Reminder for the end of Phase 1: going public
 
 When parity is reached and Phase 2 customisation is agreed, we will:
