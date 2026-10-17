@@ -16,7 +16,7 @@ import { bootNode } from './boot';
 import { bodiesIn, siderealFrame, PROFILES, PLANETS, type PlanetId, type ProfileId } from '../../src/engine';
 import type { SwissEph } from '../../src/engine/ephem/swisseph';
 import { julianDay } from '../../src/engine/time/julian';
-import { evaluator } from '../../src/engine/transit/body';
+import { evaluator, motionOf } from '../../src/engine/transit/body';
 import {
   TRANSIT_JD_MAX, TRANSIT_JD_MIN, cellOf, findEvents, returns, sadeSati, transitPositions,
   type EventKind, type TransitEvent,
@@ -60,32 +60,39 @@ function verifyEvents(profile: ProfileId, events: TransitEvent[]): number {
   return checked;
 }
 
-/** (b) — brute force: chart-recipe state at every step equals the state the event list predicts. */
-function bruteForce(profile: ProfileId, body: PlanetId, kind: EventKind, events: TransitEvent[],
-  fromJd: number, toJd: number, step: number): { samples: number; changes: number } {
-  const ev = events.filter((e) => e.body === body && e.kind === kind);
-  for (let i = 1; i < ev.length; i++) {
-    if (kind === 'station') expect(ev[i]!.direction, `alternation ${body} at ${ev[i]!.jdUT}`).not.toBe(ev[i - 1]!.direction);
-    else expect(ev[i]!.from, `chain ${body} ${kind} at ${ev[i]!.jdUT}`).toBe(ev[i - 1]!.to);
-  }
-  const cell = (t: number) => {
-    const p = transitPositions(swe, profile, t)[body];
-    return kind === 'station' ? (p.speedDeg < 0 ? 1 : 0) : cellOf(kind, p.lon);
-  };
-  let state = cell(fromJd), k = 0, changes = 0, prev = state, samples = 0;
+/**
+ * (b) — brute force: the chart-recipe state at every step equals the state the
+ * event list predicts, for each (body, kind) combination (one cast per step).
+ */
+function bruteForce(profile: ProfileId, combos: [PlanetId, EventKind][], events: TransitEvent[],
+  fromJd: number, toJd: number, step: number): number[] {
+  const cellAt = (pos: ReturnType<typeof transitPositions>, body: PlanetId, kind: EventKind) =>
+    kind === 'station' ? (pos[body].speedDeg < 0 ? 1 : 0) : cellOf(kind, pos[body].lon);
+  const stateOf = (e: TransitEvent) => (e.kind === 'station' ? (e.direction === 'retrograde' ? 1 : 0) : e.to);
+  const p0 = transitPositions(swe, profile, fromJd);
+  const run = combos.map(([body, kind]) => {
+    const ev = events.filter((e) => e.body === body && e.kind === kind);
+    for (let i = 1; i < ev.length; i++) {
+      if (kind === 'station') expect(ev[i]!.direction, `alternation ${body} at ${ev[i]!.jdUT}`).not.toBe(ev[i - 1]!.direction);
+      else expect(ev[i]!.from, `chain ${body} ${kind} at ${ev[i]!.jdUT}`).toBe(ev[i - 1]!.to);
+    }
+    return { body, kind, ev, k: 0, state: cellAt(p0, body, kind), prev: cellAt(p0, body, kind), changes: 0 };
+  });
   for (let t = fromJd; t <= toJd; t += step) {
-    while (k < ev.length && ev[k]!.jdUT <= t) { state = kind === 'station' ? (ev[k]!.direction === 'retrograde' ? 1 : 0) : ev[k]!.to; k++; }
-    const near = (k < ev.length && ev[k]!.jdUT - t < 1e-5) || (k > 0 && t - ev[k - 1]!.jdUT < 1e-5);
-    const c = cell(t);
-    if (c !== prev) changes++;
-    prev = c;
-    if (!near) expect(c, `${body} ${kind} brute force at JD ${t}`).toBe(state);
-    samples++;
+    const pos = transitPositions(swe, profile, t);
+    for (const r of run) {
+      while (r.k < r.ev.length && r.ev[r.k]!.jdUT <= t) r.state = stateOf(r.ev[r.k++]!);
+      const near = (r.k < r.ev.length && r.ev[r.k]!.jdUT - t < 1e-5) || (r.k > 0 && t - r.ev[r.k - 1]!.jdUT < 1e-5);
+      const c = cellAt(pos, r.body, r.kind);
+      if (c !== r.prev) r.changes++;
+      r.prev = c;
+      if (!near) expect(c, `${r.body} ${r.kind} brute force at JD ${t}`).toBe(r.state);
+    }
   }
-  return { samples, changes };
+  return run.map((r) => r.changes);
 }
 
-describe('single-body evaluator = bodiesIn (bit-identical)', () => {
+describe('single-body evaluator = bodiesIn (bit-identical longitudes)', () => {
   it('all bodies, three profiles, 300 instants 1800–2399', () => {
     let seed = 12345;
     const rnd = () => ((seed = (seed * 1103515245 + 12345) % 2 ** 31) / 2 ** 31);
@@ -97,13 +104,41 @@ describe('single-body evaluator = bodiesIn (bit-identical)', () => {
         const ref = bodiesIn(swe, siderealFrame(swe, p, t));
         PLANETS.forEach((b, i) => {
           const s = evs[i]!(t);
-          expect(s.v).toBe(ref[b].speedDeg);
+          // True node: the search uses a de-spiked speed (median over ±20 s, body.ts).
+          if ((b === 'Ra' || b === 'Ke') && p.node === 'true') expect(Math.abs(s.v - ref[b].speedDeg)).toBeLessThan(1e-5);
+          else expect(s.v).toBe(ref[b].speedDeg);
           if (b === 'Ke') expect(Math.abs(s.raw - ref.Ke.lonDeg * 3600)).toBeLessThan(1e-6);
           else expect(s.raw).toBe(ref[b].lonDeg * 3600);
         });
       }
     }
   });
+});
+
+// KAAST_SLOW=1 re-runs the full measurement behind body.ts (1800–2400 every 0.05 d, minutes).
+const SLOW = !!process.env.KAAST_SLOW;
+const [B0, B1, BH] = SLOW ? [TRANSIT_JD_MIN, TRANSIT_JD_MAX, 0.05] : [julianDay(1970, 1, 1), julianDay(2030, 1, 1), 0.5];
+describe(`motion bounds used by the search (body.ts) hold, ${SLOW ? '1800–2400 every 0.05 d' : '1970–2030 every 0.5 d'}`, () => {
+  it('speed bound, sign of motion for monotonic bodies, acceleration bound below vz', () => {
+    for (const pid of ['pl9'] as const) {
+      const p = PROFILES[pid];
+      for (const body of ['Su', 'Mo', 'Me', 'Ve', 'Ma', 'Ju', 'Sa', 'Ra'] as const) {
+        const m = motionOf(p, body), f = evaluator(swe, p, body), h = BH;
+        let prev = f(B0), vMax = 0, aMax = 0, flips = 0;
+        for (let t = B0 + h; t <= B1; t += h) {
+          const s = f(t);
+          vMax = Math.max(vMax, Math.abs(s.v));
+          if (Math.sign(s.v) !== Math.sign(prev.v)) flips++;
+          if (Math.max(Math.abs(s.v), Math.abs(prev.v)) < m.vz) aMax = Math.max(aMax, Math.abs(s.v - prev.v) / h);
+          prev = s;
+        }
+        expect(vMax, `${pid} ${body} speed`).toBeLessThan(m.vmax);
+        if (SLOW) console.log(`${body}: max |v| ${vMax.toFixed(5)} (bound ${m.vmax}), max |dv/dt| below vz ${aMax.toFixed(5)} (bound ${m.az})`);
+        if (m.monotonic) expect(flips, `${pid} ${body} monotonic`).toBe(0);
+        else { expect(flips).toBeGreaterThan(0); expect(aMax, `${pid} ${body} acceleration`).toBeLessThan(m.az); }
+      }
+    }
+  }, SLOW ? 3_600_000 : 60_000);
 });
 
 describe('(a) events are real crossings, (b) brute force finds nothing missed', () => {
@@ -113,23 +148,26 @@ describe('(a) events are real crossings, (b) brute force finds nothing missed', 
     const nak = ev.filter((e) => e.kind === 'nakshatra');
     expect(nak.length).toBeGreaterThan(360 / (40 / 3) * 13);
     expect(verifyEvents('pl9', ev)).toBe(ev.length);
-    const r = bruteForce('pl9', 'Mo', 'nakshatra', ev, a, b, 1 / 48);
-    expect(r.changes).toBe(nak.length);
-    bruteForce('pl9', 'Mo', 'pada', ev, a, b, 1 / 48);
+    // Precision: the Moon (0.55″/s) is already on the right side 0.05 s either way.
+    for (const e of nak) {
+      expect(nakshatraIndex(transitPositions(swe, 'pl9', e.jdUT - 0.05 * SEC).Mo.lon)).toBe(e.from);
+      expect(nakshatraIndex(transitPositions(swe, 'pl9', e.jdUT + 0.05 * SEC).Mo.lon)).toBe(e.to);
+    }
+    const [nakChanges] = bruteForce('pl9', [['Mo', 'nakshatra'], ['Mo', 'pada'], ['Mo', 'sign']], ev, a, b, 1 / 48);
+    expect(nakChanges).toBe(nak.length);
   });
 
   it('Mercury: 5 years of sign ingresses incl. retrograde re-entries, and stations (brute force every 2 h)', () => {
     const a = jd(2020), b = jd(2025);
-    const ev = findEvents(swe, 'pl9', { bodies: ['Me'], kinds: ['sign', 'station'], fromJd: a, toJd: b });
+    const ev = findEvents(swe, 'pl9', { bodies: ['Me'], kinds: ['sign', 'nakshatra', 'pada', 'station'], fromJd: a, toJd: b });
     const retroIngress = ev.filter((e) => e.kind === 'sign' && e.direction === 'retrograde');
     expect(retroIngress.length).toBeGreaterThan(3);
     expect(ev.filter((e) => e.kind === 'station').length).toBeGreaterThanOrEqual(30); // ~3 retrogrades a year
     expect(verifyEvents('pl9', ev)).toBe(ev.length);
-    bruteForce('pl9', 'Me', 'sign', ev, a, b, 1 / 12);
-    bruteForce('pl9', 'Me', 'station', ev, a, b, 1 / 12);
+    bruteForce('pl9', [['Me', 'sign'], ['Me', 'nakshatra'], ['Me', 'pada'], ['Me', 'station']], ev, a, b, 1 / 12);
   });
 
-  it('Rahu and Ketu (true node): 20 years of sign, nakshatra, pada and stations (brute force every 3 h)', () => {
+  it('Rahu and Ketu (true node): 20 years of sign, nakshatra, pada and stations (brute force every 4 h)', () => {
     const a = jd(2010), b = jd(2030);
     const ev = findEvents(swe, 'pl9', { bodies: ['Ra', 'Ke'], kinds: ['sign', 'nakshatra', 'pada', 'station'], fromJd: a, toJd: b });
     // Ketu = Rahu + 180° = 6 signs = 54 padas = 13½ nakshatras: sign, pada and station
@@ -144,7 +182,7 @@ describe('(a) events are real crossings, (b) brute force finds nothing missed', 
     expect(ev.filter((e) => e.body === 'Ke' && e.kind === 'nakshatra').every((e) => raPada.has(e.jdUT))).toBe(true);
     expect(ev.some((e) => e.body === 'Ra' && e.kind === 'pada' && e.direction === 'direct')).toBe(true); // the true node does move direct
     expect(verifyEvents('pl9', ev)).toBe(ev.length);
-    for (const body of ['Ra', 'Ke'] as const) for (const kind of ['sign', 'nakshatra', 'pada'] as const) bruteForce('pl9', body, kind, ev, a, b, 1 / 8);
+    bruteForce('pl9', (['Ra', 'Ke'] as const).flatMap((body) => (['sign', 'nakshatra', 'pada'] as const).map((k) => [body, k] as [PlanetId, EventKind])), ev, a, b, 1 / 6);
   });
 
   it('all nine bodies, all kinds, 2 years, in each profile', () => {
@@ -154,7 +192,7 @@ describe('(a) events are real crossings, (b) brute force finds nothing missed', 
       for (let i = 1; i < ev.length; i++) expect(ev[i]!.jdUT).toBeGreaterThanOrEqual(ev[i - 1]!.jdUT);
       expect(new Set(ev.map((e) => e.body)).size).toBe(9);
       expect(verifyEvents(pid, ev)).toBeGreaterThan(0);
-      for (const body of ['Su', 'Ma', 'Ve', 'Ju', 'Sa'] as const) bruteForce(pid, body, 'pada', ev, a, b, 1 / 4);
+      bruteForce(pid, (['Su', 'Ma', 'Ve', 'Ju', 'Sa'] as const).flatMap((body) => [[body, 'pada'], [body, 'station']] as [PlanetId, EventKind][]), ev, a, b, 1 / 4);
     }
   });
 

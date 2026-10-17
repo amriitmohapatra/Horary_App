@@ -8,7 +8,7 @@
  *  - Definitions (DOC): PL7 manual p. 223 "Panchanga: Vaar, Nakshatra, Tithi,
  *    Yoga, and Karana"; p. 229 "Tithi: the lunar day"; p. 218 "Karana: Half a
  *    tithi"; p. 230 "Vaara: The day of the week, Sunday through Saturday";
- *    p. 102–103 "Yoga (a point based on the distance between the Sun and the Moon)".
+ *    p. 103 "Yoga (a point based on the distance between the Sun and the Moon)".
  *  - Tithi (STD): 1 + ⌊(Moon − Sun) / 12°⌋, 1…30; 1–15 Shukla, 16–30 Krishna;
  *    15 = Purnima, 30 = Amavasya. Ayanamsa-free.
  *  - Nakshatra and pada of the Moon (STD; same helpers as Page 1, NUM there).
@@ -17,10 +17,12 @@
  *  - Karana (STD): 1 + ⌊(Moon − Sun) / 6°⌋, 1…60. 1 = Kimstughna (fixed);
  *    2…57 = the seven movable karanas Bava…Vishti cycled eight times; 58 =
  *    Shakuni, 59 = Chatushpada, 60 = Naga (fixed).
- *  - Vara (STD): the Hindu day runs from sunrise to sunrise; a moment before
- *    that day's sunrise belongs to the previous weekday. The weekday is that
- *    of the local civil date (chart zone + DST) on which the governing
- *    sunrise falls.
+ *  - Vara (STD; that the day starts at sunrise is DOC: PL7 tutorial
+ *    Extras1/pib11715, "Every day starts with a particular hora at sunrise",
+ *    whose first hora is the weekday lord's): the Hindu day runs from sunrise
+ *    to sunrise; a moment before that day's sunrise belongs to the previous
+ *    weekday. The weekday is that of the local civil date (chart zone + DST)
+ *    on which the governing sunrise falls.
  *  - Sunrise convention — OPEN. PL7 manual p. 192: "Some people use the edge
  *    of the Sun for this calculation, and others use the exact, astronomical
  *    longitude of the Sun"; PL's default and its refraction handling are
@@ -30,6 +32,9 @@
  *      'hindu'       centre of the disc, no refraction, ecliptic latitude
  *                    ignored (SE_BIT_HINDU_RISING; PyJHora's default).
  *  - Names: STD transliterations (no PL spellings decoded yet).
+ *  - Cross-check: PyJHora 4.8.7 (oracle/bhava_yogi_panchanga_pyjhora.py) agrees
+ *    on tithi, yoga, karana, nakshatra, pada and Hindu-rising vara for every
+ *    fixture chart (tests/unit/panchanga.test.ts, tests/engine/panchanga.test.ts).
  */
 import type { SwissEph } from '../ephem/swisseph';
 import { SE } from '../ephem/swisseph';

@@ -24,6 +24,9 @@
  *    below is the common muhurta table (B. V. Raman, Muhurtha, ch. "Dagdha
  *    rasis"; Muhurta Chintamani), the same for both pakshas; Purnima and
  *    Amavasya have none. Not cross-checked: PyJHora has no Dagdha table.
+ *  - Cross-check: PyJHora 4.8.7 (oracle/bhava_yogi_panchanga_pyjhora.py) agrees
+ *    on Yogi point, Yogi, 'sixth-nakshatra' Avayogi (point and lord) and
+ *    'sign-lord' Duplicate Yogi for every fixture chart.
  */
 import type { Arcsec, PlanetId } from '../types';
 import { NAKSHATRA, SIGN_LORD, VIM_ORDER, ZODIAC, nakshatraIndex, norm, signIndex } from '../zodiac';

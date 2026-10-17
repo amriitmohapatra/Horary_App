@@ -53,6 +53,8 @@ export interface ChartResult {
   bodies: Record<PlanetId, Position>;
   asc: Position;
   mc: Arcsec;
+  /** MC, exact sidereal degrees (Sripati bhava needs it unrounded). */
+  mcDeg: number;
   /** House cusps 1…12 (index 0 = cusp 1), integer arcseconds. */
   cusps: Arcsec[];
   provenance: {

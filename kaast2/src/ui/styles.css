@@ -275,3 +275,11 @@ table.data .r { text-align: right; }
 .muted { color: var(--text-muted); font-size: var(--fs-xs); }
 .panel-body .controls-row { margin-bottom: var(--sp-3); }
 @media (max-width: 560px) { .karaka-pair { grid-template-columns: 1fr; } .aspect-list { columns: 1; } }
+
+/* ---- panchanga, yogi & bhava ---- */
+.panchanga-line { flex-basis: 100%; margin: 0; display: flex; flex-wrap: wrap; gap: 2px 0; font-size: var(--fs-sm); color: var(--text); }
+.panchanga-line span + span::before { content: '·'; margin: 0 8px; color: var(--accent); }
+.panchanga-line .pl-label { font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-right: 10px; }
+.panchanga-line .pl-label + span::before { content: none; }
+.yogi-bhava { display: flex; flex-direction: column; gap: var(--sp-4); }
+.inline-field { max-width: 460px; margin-top: var(--sp-3); }

@@ -200,3 +200,21 @@ test('Jaimini page: K7 equals the PL 9 column; padas, lagnas, argala render', as
   await expect(page.getByText(/UL, the upapada, is in Vi/)).toBeVisible();
   expect(errors).toEqual([]);
 });
+
+test('Panchanga line and Yogi & Bhava page (Amitabh Bachchan worked values)', async ({ page }) => {
+  const errors = await castAmitabh(page);
+  const pa = page.getByTestId('panchanga');
+  for (const s of ['Shukla Dwitiya', 'Swati 2', 'Vishkambha yoga', 'Balava karana', 'Sunday']) await expect(pa).toContainText(s);
+  await page.getByRole('link', { name: 'Yogi & Bhava' }).click();
+  await expect(page.getByTestId('yogi-row')).toContainText('Cn 08:01:55');
+  await expect(page.getByTestId('yogi-row')).toContainText('Saturn');
+  await expect(page.getByTestId('avayogi-row')).toContainText('Moon');
+  await page.getByLabel('Avayogi rule').selectOption('opposite-point');
+  await expect(page.getByTestId('avayogi-row')).toContainText('Sun');
+  await expect(page.getByTestId('duplicate-row')).toContainText('Moon');
+  await expect(page.getByTestId('bhava-table').locator('tbody tr').first()).toContainText('Aq 01:56:5');
+  await expect(page.getByTestId('bhava-moved')).toContainText('Su 8→9');
+  await page.getByRole('button', { name: 'Equal houses' }).click();
+  await expect(page.getByTestId('bhava-moved')).toContainText('Sa 4→5');
+  expect(errors).toEqual([]);
+});

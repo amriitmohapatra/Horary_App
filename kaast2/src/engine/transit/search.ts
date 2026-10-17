@@ -162,13 +162,14 @@ export class BodyScan {
     if (sgn(a.v) !== sgn(b.v)) {
       const { lo, hi, station } = this.solveStation(a, b);
       out.push(station);
-      const lt = station.t - STATION_SEP, rt = station.t + STATION_SEP;
+      const sep = m.sep ?? STATION_SEP;
+      const lt = station.t - sep, rt = station.t + sep;
       if (lt > a.t) { const l = this.at(lt); this.st(l, lo, out); this.st(a, l, out); } else this.st(a, lo, out);
       if (rt < b.t) { const r = this.at(rt); this.st(hi, r, out); this.st(r, b, out); } else this.st(hi, b, out);
       return;
     }
     if (h * m.az < m.vz - m.dv && Math.abs(a.v) + Math.abs(b.v) > m.az * h + 2 * m.dv) return;
-    if (h <= STATION_SEP) return;
+    if (h <= (m.sep ?? STATION_SEP)) return;
     const mid = this.at((a.t + b.t) / 2);
     this.st(a, mid, out);
     this.st(mid, b, out);

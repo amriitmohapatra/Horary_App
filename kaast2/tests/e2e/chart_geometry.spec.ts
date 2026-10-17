@@ -2,7 +2,7 @@
  * "Nothing may cross a line" (design contract): every label drawn in every
  * East Indian chart must lie inside its sign region. Checks the rendered
  * SVG text boxes (glyph area, ignoring the font's empty ascent/descent band)
- * against each region polygon, for Page 1 and all 32 vargas, on three charts
+ * against each region polygon, for Page 1, all 32 vargas, Jaimini and bhava charts, on three charts
  * at desktop and phone widths.
  */
 import { expect, test, type Page } from '@playwright/test';
@@ -63,6 +63,10 @@ for (const vw of [1440, 390]) {
       bad.push(...(await violations(page)));
       await page.getByRole('link', { name: 'Vargas' }).click();
       await page.getByRole('link', { name: 'Jaimini' }).click();
+      bad.push(...(await violations(page)));
+      await page.getByRole('link', { name: 'Yogi & Bhava' }).click();
+      bad.push(...(await violations(page)));
+      await page.getByRole('button', { name: 'Equal houses' }).click();
       bad.push(...(await violations(page)));
       await page.getByRole('link', { name: 'Vargas' }).click();
       for (const g of ['16 Parashari', 'Tajika and D150', 'PL alternates']) {

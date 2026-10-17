@@ -20,6 +20,11 @@
  *    display-rounded Asc/MC, and whether PL's MC for Sripati is the Placidus
  *    10th cusp (it is the same point: the MC). Floats here, rounding only at
  *    the arcsecond boundary via `bhavaToArcsec`.
+ *  - Cross-check: PyJHora 4.8.7 (oracle/bhava_yogi_panchanga_pyjhora.py)
+ *    computes identical Sripati madhyas (drik.bhaava_madhya_sripathi) and an
+ *    identical equal bhava, but its Sripati CHART (drik._bhaava_madhya_new,
+ *    method 3) uses the madhyas as house beginnings — a different convention
+ *    from PL7's tutorial; ~50 % of planets land one house apart.
  */
 import type { Arcsec, ChartResult, PlanetId, PointId } from '../types';
 import { PLANETS } from '../types';
@@ -114,7 +119,7 @@ export interface BhavaChart {
  */
 export function bhavaChart(chart: ChartResult, kind: BhavaKind): BhavaChart {
   const ascDeg = chart.asc.lonDeg;
-  const bhava = kind === 'sripati' ? sripati(ascDeg, chart.mc / 3600) : equalBhava(ascDeg);
+  const bhava = kind === 'sripati' ? sripati(ascDeg, chart.mcDeg) : equalBhava(ascDeg);
   const arcsec = bhavaToArcsec(bhava, chart.profile.rounding);
   const houses = { As: bhavaOfArcsec(chart.asc.lon, arcsec) } as Record<PointId, number>;
   for (const id of PLANETS) houses[id as PlanetId] = bhavaOfArcsec(chart.bodies[id].lon, arcsec);

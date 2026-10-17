@@ -7,18 +7,20 @@
  * code and the "+ offset, normalise" step are repeated, for ONE body, so a
  * search step costs one swe_calc (~7 µs) instead of nine (~67 µs). A parity
  * test (tests/engine/transit.test.ts) asserts bit-identical longitudes and
- * speeds against bodiesIn() for all bodies and profiles. Proposed shared
- * change: export a `bodyIn(swe, frame, id)` from engine/index.ts and let
- * bodiesIn() call it; this file would then import it.
+ * speeds against bodiesIn() for all bodies and three profiles (true node:
+ * the de-spiked speed, below). Proposed shared change: export a
+ * `bodyIn(swe, frame, id)` from engine/index.ts and let bodiesIn() call it;
+ * this file would then import it.
  *
- * Motion bounds (NUM, measured over 1800-01-02 … 2400-01-01 with the pl9
- * profile, solar-fire spot-checked; script in the slice-8 report): Swiss
- * speeds sampled every 0.05 d (Mercury…Mars), 0.02 d (Jupiter, Saturn, true
- * node) or 0.25 d (Sun, mean node); |dv/dt| from consecutive samples. The
- * tabulated values carry ≥ 25 % margin. `az` bounds the acceleration only
- * where |speed| < `vz`: near solar conjunction Swiss's light-deflection term
- * makes short speed spikes (Saturn ±0.03 °/d in a few hours, BIN: none in
- * PL), which happen only at high speed and are excluded by `vz`.
+ * Motion bounds (NUM): Swiss speeds over 1800-01-02 … 2400-01-01, pl9
+ * profile (solarfire spot-checked: same to 4e-5 °/d), sampled every 0.05 d
+ * (Moon…Mars), 0.02 d (Jupiter, Saturn, true node) or 0.25 d (Sun, mean
+ * node); |dv/dt| from consecutive samples. Table values carry ≥ 25 % margin;
+ * the transit test re-checks them (1970–2030 by default, the full range
+ * with KAAST_SLOW=1). `az` bounds the acceleration only where |speed| <
+ * `vz`: near solar conjunction Swiss's light-deflection term makes speed
+ * spikes lasting hours (Saturn 0.12 → 0.087 °/d, |dv/dt| to 0.6 °/d²), which
+ * happen only at high speed and so lie outside `vz`.
  */
 import { SE, type SwissEph } from '../ephem/swisseph';
 import { siderealFrame } from '../index';
@@ -55,7 +57,7 @@ export function evaluator(swe: SwissEph, profile: Profile, body: PlanetId): Eval
   if (!(node && profile.node === 'true')) return one;
   // True node: Swiss derives it from the Moon's osculating orbit, which is
   // discontinuous at the lunar-file segment joints (every 27.55 d): the
-  // longitude steps by ≤ TRUE_NODE_JUMP and the numerical speed spikes for
+  // longitude steps by ≤ 0.3″ and the numerical speed spikes for
   // ~17 s (to ±0.15 °/d). The search uses the median of the speeds at
   // t − 20 s, t, t + 20 s: equal to the speed at t wherever it is monotonic
   // over those 40 s, and never a spike.
@@ -71,10 +73,6 @@ export function evaluator(swe: SwissEph, profile: Profile, body: PlanetId): Eval
 const DESPIKE = 20 / 86400;
 
 export interface Motion {
-  /** Allowance for a longitude discontinuity inside one step, arcseconds (true node only). */
-  jump: number;
-  /** Allowance for a speed discontinuity inside one step, °/day (true node only). */
-  dv: number;
   /** Top-level sampling step, days. ≤ vz/az, and vmax·h0 ≪ 180°. */
   h0: number;
   /** Bound on |d lon/dt| (sidereal), °/day. */
@@ -84,6 +82,12 @@ export interface Motion {
   /** Where |speed| < vz, |d speed/dt| ≤ az (°/day²). Unused when monotonic. */
   vz: number;
   az: number;
+  /** Allowance for a longitude discontinuity inside one step, arcseconds (true node only). */
+  jump: number;
+  /** Allowance for a speed discontinuity inside one step, °/day (true node only). */
+  dv: number;
+  /** Station resolution, days (default search.ts STATION_SEP = 60 s). */
+  sep?: number;
 }
 
 /**
@@ -109,5 +113,7 @@ const MOTION = {
   Ju: { h0: 4, vmax: 0.35, monotonic: false, vz: 0.2, az: 0.0055, jump: 0, dv: 0 },       // 0.2428, 0.003521
   Sa: { h0: 4, vmax: 0.2, monotonic: false, vz: 0.08, az: 0.003, jump: 0, dv: 0 },        // 0.1341, 0.001910
   meanNode: { h0: 16, vmax: 0.06, monotonic: true, vz: 0, az: 0, jump: 0, dv: 0 },        // −0.052954 … −0.052953
-  trueNode: { h0: 1, vmax: 0.45, monotonic: false, vz: 0.45, az: 0.15, jump: 0.3, dv: 0.002 }, // TBD
+  // True node: smooth |v| ≤ 0.2593 (secant), smooth |dv/dt| ≤ 0.0789; at the lunar-file joints
+  // (27.55 d apart) longitude steps ≤ 0.29″ and speed steps ≤ 5.9e-4 °/d (77 joints, 6 epochs).
+  trueNode: { h0: 1, vmax: 0.3, monotonic: false, vz: 0.31, az: 0.12, jump: 0.6, dv: 0.001, sep: 1 / 24 },
 } satisfies Record<string, Motion>;

@@ -95,12 +95,13 @@ export function cast(swe: SwissEph, input: ChartInput, jdUTOverride?: number): C
   const h = swe.houses(jdUT, SE.FLG_SIDEREAL, houseLat, input.place.lonDeg, profile.houses.system);
   const cusps = h.cusps.map((c) => toArcsec(c + (sf ? offsetDeg : 0), profile.rounding));
   const asc = position('As', h.asc + (sf ? offsetDeg : 0), 0, 0, false);
-  const mc = toArcsec(h.mc + (sf ? offsetDeg : 0), profile.rounding);
+  const mcDeg = normDeg(h.mc + (sf ? offsetDeg : 0));
+  const mc = toArcsec(mcDeg, profile.rounding);
 
   return {
     input, profile,
     moment: { jdUT, jdTT, deltaTsec, ayanamsaDeg },
-    bodies, asc, mc, cusps,
+    bodies, asc, mc, mcDeg, cusps,
     provenance: {
       engineVersion: ENGINE_VERSION,
       swissephVersion: swe.version(),
