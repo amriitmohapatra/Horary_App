@@ -1,0 +1,91 @@
+% =============================================================================
+\section{Side by side: PL7 and Kala Chakra 1.5}
+\label{sec:compare}
+% =============================================================================
+
+Kala Chakra~1.5 here means the single-file app \texttt{Kala Chakra v1.5.html} (and its
+sibling \texttt{KAAST Caster v1.5.html}) in \texttt{Advanced\_Setup/web/dist/}. Its casting
+engine is \texttt{Advanced\_Setup/web/src/ephemeris.js}, \texttt{kp\_logic.js} and
+\texttt{dasha.js}; I checked that the dist files contain these sources byte for byte.
+\autoref{tab:compare} sets the two engines side by side.
+
+\begin{table}[htbp]
+  \centering
+  \footnotesize
+  \caption[PL7 versus Kala Chakra 1.5]{The two casting engines compared. Grades refer to the
+  PL7 column; the Kala Chakra column is from its source code.}
+  \label{tab:compare}
+  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+    \toprule
+    Item & Parashara's Light 7.0 & Kala Chakra 1.5 \\
+    \midrule
+    Ephemeris & Own files (\texttt{ephemdat.bin}, \texttt{topos*.dat}), J2000 equatorial; precise to end of 2048, coarse fallback after \tagNUM & Swiss Ephemeris 2.10.03 (WASM), files 1800--2399 \\
+    $\Delta T$ & 1993 table, extrapolated: 83~s (2020) to 109~s (2048) \tagNUM & Solar Fire anchors 76--88~s (\emph{sf}) or Swiss $\approx 69$~s (\emph{modern}) \\
+    Ayanamsa & 8 options; default Lahiri $=$ Swiss Lahiri $\pm 0.3''$; two KP variants \tagBIN & Lahiri only, Swiss $- 1.251''$ (Solar Fire clone) \\
+    Equinox & Mean equinox of date \tagNUM & Mean equinox of date (Swiss sidereal mode) \\
+    Node & True (in this installation; true/mean option exists) \tagNUM & True \\
+    Planet positions & Geocentric; in this copy displaced by $\approx 0.97\times$ the Moon vector (up to $\sim\!10'$) \tagNUM & Geocentric apparent, $\le 1''$ from Solar Fire \\
+    House cusps & Placidus, geographic latitude \tagBIN/\tagINF & Topocentric, geocentric (WGS84) latitude \\
+    Bhava chart & Sripati (centres, quadrant trisection) and equal \tagDOC & Not offered (houses are KP beginnings) \\
+    Rounding & Not determined & Truncated to whole arcseconds \\
+    Star/sub lords & Star and sub \tagDOC & Star plus five-level sub chain \\
+    KP extras & Significators, ruling planets, Fortuna, horary 1--249 \tagDOC/\tagINF & Cusp-number vectors, span rule, power calculation \\
+    Vargas & 16 Parashari $+$ 4 Tajika $+$ D150 $+$ 10 alternates \tagBIN & None \\
+    Yogi points & Yogi $=$ Sun $+$ Moon $+ 93^\circ 20'$ \tagBIN & None \\
+    Dashas & $\ge 20$ systems, 5 levels; ``365.25'' option actually 365.2421875~d \tagBIN & Vimshottari, 6 levels, 365.25~d \\
+    Jaimini \& padas & Karakas (7/8), rashi drishti, arudhas, upapada, special lagnas, argala \tagDOC & None \\
+    Transit viewer & Animated circle, steps 1~s to 10~yr, via a 12-hourly month cache \tagBIN/\tagNUM & None (one chart per cast) \\
+    Guna matching & Ashtakoota, Dashakoota, Manglik \tagDOC & None \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{What the differences do to star and sub lords}
+
+A KP sub is at least $40'$ wide (the Sun's sub, $13^\circ 20' \times 6/120$), so a difference
+matters only for points lying within that difference of a boundary. Using random longitudes and the cusp
+simulation of \autoref{tab:cusps} \tagNUM:
+
+\begin{itemize}[leftmargin=*]
+  \item PL7 Lahiri vs Kala Chakra Lahiri ($1.4''$): 0.02\,\% of points change star or sub
+  lord.
+  \item PL7 ``Krishnamurti'' vs Kala Chakra ($27''$): 0.5\,\%.
+  \item PL7 ``Krishnamurti New'' vs Kala Chakra ($5'59''$): 6.8\,\%.
+  \item Placidus with geographic latitude vs Topocentric with geocentric latitude: 0.1\,\%
+  of cusps at Singapore and 1.7\,\% at Lapanga.
+  \item The Moon-vector error ($\sim\!1'$--$10'$) in this PL7 copy: for an error of
+  about $8'$ against an average sub width of $89'$, roughly one Sun, Mercury or Venus position
+  in ten gets a different sub lord; the Moon and the nodes are unaffected.
+\end{itemize}
+
+\begin{keybox}\kidea For the family's KP horary work the casting engines differ in three
+choices, Lahiri versus KP ayanamsa, Placidus versus Topocentric, and the latitude
+convention, plus one defect specific to this PL7 copy. Kala Chakra's choices were made
+deliberately to replicate the Solar Fire profile the family uses, and they are validated
+against the family's own hand-calculated charts. That validation, not either program, is
+the authority for the method.\end{keybox}
+
+% =============================================================================
+\section{Tests you can run in PL7 yourself}
+\label{sec:tests}
+% =============================================================================
+
+These take a few minutes each and settle the points this report could only infer.
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Is this copy's Sun wrong?} Cast one chart in PL7 with Lahiri, say for
+  1~January~2020 at 0:00~UT (5:30~IST) at any place, and read the Sun to the second.
+  Cast the same moment in KAAST Caster in \emph{modern} mode, which gives about
+  $255^\circ 52' 40''$ (Sagittarius $15^\circ 52' 40''$). PL7's own transit cache holds
+  $256^\circ 01' 09''$ for that instant, $8'29''$ larger. If PL7's chart shows the larger value,
+  the Moon-vector error is present in natal charts too. The Moon should agree to about $10''$
+  (PL7's larger $\Delta T$ accounts for about $7''$).
+  \item \textbf{Which KP ayanamsa does the KP printout use?} Set the Calculation tab to
+  Lahiri, print the Krishnamurti chart, and read the ``KP Ayanamsha'' line. Compare with
+  \autoref{tab:ayanamsa}: about $24^\circ 11' 54''$ (Krishnamurti) or $24^\circ 06' 23''$
+  (Krishnamurti New) at 1~January~2025.
+  \item \textbf{Rahu true or mean.} In Options $\to$ Calculation $\to$ Miscellaneous, check
+  the ``Rahu \& Ketu'' item; the cache says \emph{true} in this installation.
+  \item \textbf{D11.} Display the Ekadashamsha and its alternate (II/III) version for a
+  planet at Taurus $1^\circ$: the main D11 should put it in Pisces, the alternate in Aries.
+\end{enumerate}

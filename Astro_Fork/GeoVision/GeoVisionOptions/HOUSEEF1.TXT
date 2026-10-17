@@ -1,0 +1,61 @@
+{fonttext}
+Arial
+{fontroman}
+Times New Roman
+{ausp}
+auspiciousness
+{title}
+Shad Phala predictions for
+{keywords}
+1st house: Health, Wellbeing!2nd house: Wealth, Family!3rd house: Travels, Neighbors!4th house: Domestic life!5th house: Children, Learning!6th house: Disease, Enemies!7th house: Spouse, Travel!8th House: Weaknesses!9th House: Fortune!10th House: Work, Status!11th House: Gains!12th House: Expenditure, Loss!
+{house1good}
+Your life is productive, well, and moves forward. Your health is robust, or if there has been illness or fatigue, you begin to feel better and  recover.
+{house1bad}
+You feel tired, fatigued, sick or there are aches and pains. Your life feels stagnate, constricted or frustrated.
+{house2good}
+You feel secure in managing your finances, and money will be on the increase. Relations with your family are pleasant or beneficial. You are happy with your meals, which are healthy and tasty.
+{house2bad}
+You feel insecure about making ends meet or there is some financial loss or loss of property. Your family members may be resistant to your desires or wellbeing, or they themselves may suffer. Your eating habits become poor, or your meals are unenjoyable, or disturbed for some reason.
+{house3good}
+You feel courageous and have initiative. Travels made meet with success or are enjoyable. Your hobbies or talents are productive, inspired or simply enjoyable. The relationship with your siblings or neighbors will be enjoyable.
+{house3bad}
+You feel a lack of strength, courage and initiative. Travels are unpleasant, unproductive or meet with delays. Your siblings may suffer, be unhappy, or unpleasant. Your neighbors or associates are unpleasant, complaining or hindering.
+{house4good}
+Your mood and attitude is good and happy.  Your domestic life is happy and secure. Your mother is well and pleasant. You may gain or improve a residence, property or vehicle.
+{house4bad}
+There is some depression or unhappiness. Domestic life is a struggle or there may be quarrelling at home. The mother may suffer or you may have some disagreement with her.  There may be  loss or troubles with residence, properties, or vehicles.
+{house5good}
+Your mind is sharp and clear. Your studies or education progress smoothly. Your writing and thinking are creative and intelligent. Your children are happy and productive. Your luck will improve and may bring financial gain.  Your spiritual practices will be focused and concentrated.
+{house5bad}
+Your  mind will be restless or confused. Your education or learning is difficult. Your children are troublesome, a source of unhappiness, or themselves suffering. There may be loss through gambling or speculations.
+{house6good}
+You overcome obstacles, enemies, debts and worries. You have the strength to beat your competition. Your health improves or is strong.
+{house6bad}
+You may be overwelmed by obstacles or debts, causing delays, frustrations, or worries Enemies, opposition or competitors gain the upper hand, causing worry or fear. Your health may suffer, there may be digestive complaints or accidents.
+{house7good}
+Social functions and public attention are enjoyable or beneficial. Your spouse or partner is happy, and well, and there is happiness and joy shared between you two.
+{house7bad}
+Social functions or public attention leads to unhappiness, trouble, or grief. Your spouse or partner is unhappy, unwell or there is 
+quarreling or unhappiness with them.
+{house8good}
+Your difficulties will diminish. Partnerships of all types prove profitable and productive. There may be unexpected gains or surprising events of a beneficial nature. The body's ability to recuperate is heightened.
+{house8bad}
+Difficulties or crisis appear or prove unmanageable. You may feel vulnerable or fearful. There may be sudden or extreme loss. Partnerships may suffer, break apart, or be unproductive. Chronic disease becomes more 
+difficult or severe. Ailments or injuries may manifest.
+{house9good}
+You follow you ideals and inspirations. Pilgrimages or journeys made prove fruitful and pleasant. Religious or spiritual activities  increase and bring happiness. The father is well or there is happiness through him. There is clear understanding and wisdom.
+{house9bad}
+Your ideals or inspirations meet with doubt, confusion or despair. Journeys or pilgrimages made meet with delays, are unpleasant, or unproductive. Religious or spiritual life becomes difficult, unpleasant, or lack devotion. The father suffers or there is disagreement or unhappiness with him.
+{house10good}
+Your professional life or career is productive  goes well, and brings happiness. There may be a promotion or acquirement of employment. There is happiness or benefit from your employer
+{house10bad}
+Your professional life or career suffers. There  may be demotion or loss of employment or position. There is trouble, quarreling or disrespect with your employer.
+{house11good}
+You enjoy the fulfillment of your desires. Your friends are welcoming, happy and beneficial. Your income comes in easily and in greater amounts.
+{house11bad}
+Your desires meet with difficulties, delays or lack of fulfillment. Your friends suffer, or become unhelpful or unavailable. Your income is delayed or less.
+{house12good}
+You suffer some losses but feel good, knowing it is for the best. Expenditure may increase, but will prove profitable in the long run. You may find yourself feeling charitable, relaxed or with a feeling of surrender. Your sleep is peaceful and dreams are enjoyable.
+{house12bad}
+You find yourself depressed or sorrowed by some loss or over-expense. Your sleep is restless or  worrisome, or your dreams are confused or scary.
+{end}

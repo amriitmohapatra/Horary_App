@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kala-chakra"
+version = "2.0.0"
+description = "Kala Chakra (କାଳ ଚକ୍ର) — KP horary chart automation: star/sub lords, cusp numbers, power calculation"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Amriit Mohapatra" }]
+dependencies = ["openpyxl>=3.1"]
+
+[project.optional-dependencies]
+excel = ["xlwings>=0.30"]        # live-Excel mode (xlwings_run)
+cast = ["pyswisseph>=2.10"]      # built-in ephemeris (kp-cast)
+
+[project.scripts]
+kp-build = "kala_chakra.excel_builder:main"
+kp-annotate = "kala_chakra.process:main"
+kp-validate = "kala_chakra.validate_batch:cli"
+kp-cast = "kala_chakra.ephemeris:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+kala_chakra = ["data/*.xlsx", "data/swefiles/*"]

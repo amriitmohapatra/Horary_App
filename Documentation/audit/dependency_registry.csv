@@ -1,0 +1,9 @@
+dependency_name,declared_version,resolved_version,source,license,dependency_type,purpose,import_or_usage_locations,configuration,important_transitive_behavior,compatibility_notes,evidence_status,notes
+openpyxl,>=3.1,3.1.x (env),PyPI,MIT,runtime,xlsx IO (non-surgical paths),process.py;sf_parser.py;tests,-,drops drawing shapes on save,never re-save templates,Verified,
+pyswisseph,>=2.10,2.10.03,PyPI,AGPL,optional (cast),Swiss Ephemeris bindings,ephemeris.py,SIDM_LAHIRI; ephe path,ships Moshier fallback,-,Verified,
+xlwings,>=0.30,optional,PyPI,BSD,optional (excel),live-Excel annotate,xlwings_run.py,-,needs desktop Excel,-,Verified,
+JSZip,vendored,3.x min,stuk/jszip,MIT/GPL,runtime (browser),zip in browser,xlsx_surgical.js,-,-,-,Verified,
+swisseph-wasm,0.0.5,0.0.5,npm,see repo,runtime (browser),WASM ephemeris,vendor/*,data trimmed; glue patched,emscripten FS preload,classic-script + node shims applied,Verified,
+node (dev),22.x,22.22.x,system,MIT,development,test harnesses,tests/*.mjs; gates,-,-,-,Verified,
+jsdom (dev),latest,26.x,npm,MIT,test,functional smoke tests of built apps,test gates,-,no WASM boot in tests (noise filtered),-,Verified,
+texlive/latexmk,system,2022+,apt,LPPL,build (docs),LaTeX PDF,docs/,-,biber unavailable in sandbox,-,Verified,

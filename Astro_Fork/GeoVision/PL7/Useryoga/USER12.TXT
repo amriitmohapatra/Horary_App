@@ -1,0 +1,1428 @@
+~2ISW3~
+The Moon is more often in the Shadvarga of Mars than of any other graha
+~2ISW4~
+The Moon is more often in the Shadvarga of Mercury than of any other graha
+~2ISW5~
+The Moon is more often in the Shadvarga of Jupiter than of any other graha
+~2ISW6~
+The Moon is more often in the Shadvarga of Venus than of any other graha
+~2ISW7~
+The Moon is more often in the Shadvarga of Saturn than of any other graha
+@SB0:2:s~
+The Moon is strong in Shadbala (six-fold strength).
+@SB0:2:v~
+The Moon is weak in Shadbala (six-fold strength).
+~@SB1:2:s~ 
+The Moon is strong in Sthanabala (positional strength).
+~@SB1:2:v~ 
+The Moon is weak in Sthanabala (positional strength).
+~@SB2:2:s~
+The Moon is strong in Digbala (directional strength).
+~@SB2:2:v~ 
+The Moon is weak in Digbala (directional strength).
+~@SB5:2:s~ 
+The Moon is strong in Kalabala (time strength).
+~@SB5:2:v~ 
+The Moon is weak in Kalabala (time strength).
+~@SB6:2:s~ 
+The Moon is strong in Chestabala (motional strength).
+~@SB6:2:v~
+The Moon is weak in Chestabala (motional strength).
+~@SB7:2:s~ 
+The Moon is strong in Ayanabala (motional strength).
+~@SB7:2:v~ 
+The Moon is weak in Ayanabala (motional strength).
+~@Kb2~
+The Moon is in a bird or feathered Drekkana.
+~@Ks2~
+The Moon is in a serpent Drekkana.
+~@Ka2~
+The Moon is in an armed Drekkana.
+~@Kq2~
+The Moon is in a quadruped Drekkana.
+~@K2~
+The Moon is in a male Drekkana.
+~@Kf2~
+The Moon is in a female Drekkana.
+~@N2:1:1~
+The Moon is in the first pada of Aswini.
+~@N2:1:2~
+The Moon is in the second pada of Aswini.
+~@N2:1:3~
+The Moon is in the third pada of Aswini.
+~@N2:1:4~
+The Moon is in the fourth pada of Aswini.
+~@N2:2:1~
+The Moon is in the first pada of Bharani.
+~@N2:2:2~
+The Moon is in the second pada of Bharani.
+~@N2:2:3~
+The Moon is in the third pada of Bharani.
+~@N2:2:4~
+The Moon is in the fourth pada of Bharani.
+~@N2:3:1~
+The Moon is in the first pada of Krittika.
+~@N2:3:2~
+The Moon is in the second pada of Krittika.
+~@N2:3:3~
+The Moon is in the third pada of Krittika.
+~@N2:3:4~
+The Moon is in the fourth pada of Krittika.
+~@N2:4:1~
+The Moon is in the first pada of Rohini.
+~@N2:4:2~
+The Moon is in the second pada of Rohini.
+~@N2:4:3~
+The Moon is in the third pada of Rohini.
+~@N2:4:4~
+The Moon is in the fourth pada of Rohini.
+~@N2:5:1~
+The Moon is in the first pada of Mrigashira.
+~@N2:5:2~
+The Moon is in the second pada of Mrigashira.
+~@N2:5:3~
+The Moon is in the third pada of Mrigashira.
+~@N2:5:4~
+The Moon is in the fourth pada of Mrigashira.
+~@N2:6:1~
+The Moon is in the first pada of Ardra.
+~@N2:6:2~
+The Moon is in the second pada of Ardra.
+~@N2:6:3~
+The Moon is in the third pada of Ardra.
+~@N2:6:4~
+The Moon is in the fourth pada of Ardra.
+~@N2:7:1~
+The Moon is in the first pada of Punarvasu.
+~@N2:7:2~
+The Moon is in the second pada of Punarvasu.
+~@N2:7:3~
+The Moon is in the third pada of Punarvasu.
+~@N2:7:4~
+The Moon is in the fourth pada of Punarvasu.
+~@N2:8:1~
+The Moon is in the first pada of Pushyami.
+~@N2:8:2~
+The Moon is in the second pada of Pushyami.
+~@N2:8:3~
+The Moon is in the third pada of Pushyami.
+~@N2:8:4~
+The Moon is in the fourth pada of Pushyami.
+~@N2:9:1~
+The Moon is in the first pada of Ashlesha.
+~@N2:9:2~
+The Moon is in the second pada of Ashlesha.
+~@N2:9:3~
+The Moon is in the third pada of Ashlesha.
+~@N2:9:4~
+The Moon is in the fourth pada of Ashlesha.
+~@N2:10:1~
+The Moon is in the first pada of Magha.
+~@N2:10:2~
+The Moon is in the second pada of Magha.
+~@N2:10:3~
+The Moon is in the third pada of Magha.
+~@N2:10:4~
+The Moon is in the fourth pada of Magha.
+~@N2:11:1~
+The Moon is in the first pada of P.Phalguni.
+~@N2:11:2~
+The Moon is in the second pada of P.Phalguni.
+~@N2:11:3~
+The Moon is in the third pada of P.Phalguni.
+~@N2:11:4~
+The Moon is in the fourth pada of P.Phalguni.
+~@N2:12:1~
+The Moon is in the first pada of U.Phalguni.
+~@N2:12:2~
+The Moon is in the second pada of U.Phalguni.
+~@N2:12:3~
+The Moon is in the third pada of U.Phalguni.
+~@N2:12:4~
+The Moon is in the fourth pada of U.Phalguni.
+~@N2:13:1~
+The Moon is in the first pada of Hasta.
+~@N2:13:2~
+The Moon is in the second pada of Hasta.
+~@N2:13:3~
+The Moon is in the third pada of Hasta.
+~@N2:13:4~
+The Moon is in the fourth pada of Hasta.
+~@N2:14:1~
+The Moon is in the first pada of Chitra.
+~@N2:14:2~
+The Moon is in the second pada of Chitra.
+~@N2:14:3~
+The Moon is in the third pada of Chitra.
+~@N2:14:4~
+The Moon is in the fourth pada of Chitra.
+~@N2:15:1~
+The Moon is in the first pada of Swati.
+~@N2:15:2~
+The Moon is in the second pada of Swati.
+~@N2:15:3~
+The Moon is in the third pada of Swati.
+~@N2:15:4~
+The Moon is in the fourth pada of Swati.
+~@N2:16:1~
+The Moon is in the first pada of Vishaka.
+~@N2:16:2~
+The Moon is in the second pada of Vishaka.
+~@N2:16:3~
+The Moon is in the third pada of Vishaka.
+~@N2:16:4~
+The Moon is in the fourth pada of Vishaka.
+~@N2:17:1~
+The Moon is in the first pada of Anuradha.
+~@N2:17:2~
+The Moon is in the second pada of Anuradha.
+~@N2:17:3~
+The Moon is in the third pada of Anuradha.
+~@N2:17:4~
+The Moon is in the fourth pada of Anuradha.
+~@N2:18:1~
+The Moon is in the first pada of Jyestha.
+~@N2:18:2~
+The Moon is in the second pada of Jyestha.
+~@N2:18:3~
+The Moon is in the third pada of Jyestha.
+~@N2:18:4~
+The Moon is in the fourth pada of Jyestha.
+~@N2:19:1~
+The Moon is in the first pada of Moola.
+~@N2:19:2~
+The Moon is in the second pada of Moola.
+~@N2:19:3~
+The Moon is in the third pada of Moola.
+~@N2:19:4~
+The Moon is in the fourth pada of Moola.
+~@N2:20:1~
+The Moon is in the first pada of P.Ashadha.
+~@N2:20:2~
+The Moon is in the second pada of P.Ashadha.
+~@N2:20:3~
+The Moon is in the third pada of P.Ashadha.
+~@N2:20:4~
+The Moon is in the fourth pada of P.Ashadha.
+~@N2:21:1~
+The Moon is in the first pada of U.Ashadha.
+~@N2:21:2~
+The Moon is in the second pada of U.Ashadha.
+~@N2:21:3~
+The Moon is in the third pada of U.Ashadha.
+~@N2:21:4~
+The Moon is in the fourth pada of U.Ashadha.
+~@N2:22:1~
+The Moon is in the first pada of Sravana.
+~@N2:22:2~
+The Moon is in the second pada of Sravana.
+~@N2:22:3~
+The Moon is in the third pada of Sravana.
+~@N2:22:4~
+The Moon is in the fourth pada of Sravana.
+~@N2:23:1~
+The Moon is in the first pada of Dhanishtha.
+~@N2:23:2~
+The Moon is in the second pada of Dhanishtha.
+~@N2:23:3~
+The Moon is in the third pada of Dhanishtha.
+~@N2:23:4~
+The Moon is in the fourth pada of Dhanishtha.
+~@N2:24:1~
+The Moon is in the first pada of Shatabhisha.
+~@N2:24:2~
+The Moon is in the second pada of Shatabhisha.
+~@N2:24:3~
+The Moon is in the third pada of Shatabhisha.
+~@N2:24:4~
+The Moon is in the fourth pada of Shatabhisha.
+~@N2:25:1~
+The Moon is in the first pada of P.Bhadra.
+~@N2:25:2~
+The Moon is in the second pada of P.Bhadra.
+~@N2:25:3~
+The Moon is in the third pada of P.Bhadra.
+~@N2:25:4~
+The Moon is in the fourth pada of P.Bhadra.
+~@N2:26:1~
+The Moon is in the first pada of Uttara Bhadra.
+~@N2:26:2~
+The Moon is in the second pada of Uttara Bhadra.
+~@N2:26:3~
+The Moon is in the third pada of Uttara Bhadra.
+~@N2:26:4~
+The Moon is in the fourth pada of Uttara Bhadra.
+~@N2:27:1~
+The Moon is in the first pada of Revati.
+~@N2:27:2~
+The Moon is in the second pada of Revati.
+~@N2:27:3~
+The Moon is in the third pada of Revati.
+~@N2:27:4~
+The Moon is in the fourth pada of Revati.
+~@G2~
+The Moon is in a Gandanta.
+~&i&~
+Considerations for Mars.
+~3Y1~
+Mars is conjunct the Sun.
+~3Y2~
+Mars is conjunct Moon.
+~3Y3~
+Mars is conjunct Mars.
+~3Y4~
+Mars is conjunct Mercury.
+~3Y5~
+Mars is conjunct Jupiter.
+~3Y6~
+Mars is conjunct Venus.
+~3Y7~
+Mars is conjunct Saturn.
+~3Y8~
+Mars is conjunct Rahu.
+~3Y9~
+Mars is conjunct Ketu.
+~3IR1~
+Mars is in Aries.
+~3IR2~
+Mars is in Taurus.
+~3IR3~
+Mars is in Gemini.
+~3IR4~
+Mars is in Cancer.
+~3IR5~
+Mars is in Leo.
+~3IR6~
+Mars is in Virgo.
+~3IR7~
+Mars is in Libra.
+~3IR8~
+Mars is in Scorpio.
+~3IR9~
+Mars is in Sagittarius.
+~3IR10~
+Mars is in Capricorn.
+~3IR11~
+Mars is in Aquarius.
+~3IR12~
+Mars is in Pisces.
+~3I!1~
+Mars is in the first house.
+~3I!2~
+Mars is in the second house.
+~3I!3~
+Mars is in the third house.
+~3I!4~
+Mars is in the fourth house.
+~3I!5~
+Mars is in the fifth house.
+~3I!6~
+Mars is in the sixth house.
+~3I!7~
+Mars is in the seventh house.
+~3I!8~
+Mars is in the eighth house.
+~3I!9~
+Mars is in the 9th house.
+~3I!10~
+Mars is in the 10th house.
+~3I!11~
+Mars is in the 11th house.
+~3I!12~
+Mars is in the 12th house.
+~3K~
+Mars is in Kendra.
+~3T~
+Mars is in Trikona.
+~3QJ~
+Mars is in a Kendra or Trikona.
+~3·~
+Mars is in a Kendra or Trikona or the 11th house.
+~$i3~
+Mars is the Atma karaka
+~°i3~
+Mars is the Amatya karaka.
+~§i3~
+Mars is the Bhratri karaka.
+~©i3~
+Mars is the Matri karaka.
+~.pi3~
+Mars is the Putra karaka.
+~¥i3~
+Mars is the Gnati (or Jnati) karaka.
+~®i3~
+Mars is the Dara karaka.
+~3iX~
+Mars is considered strong in Shad Bala.
+~3iXX~
+Mars is the strongest planet in this chart.
+~3v~
+Mars is weak in Shad Bala.
+~3P~
+Mars is strong in Shad Bala.
+~3iE~
+Mars is Exalted in the birth chart.
+~3i.E~
+Mars is exalted in the Navamsha chart.
+~3YO~
+Mars is conjunct a planet in its own sign.
+~3i ï~
+Mars is in a high dignity (own sign, Moola-Trikona or exalted).
+~3YF~
+Mars in conjunct a planet that is friendly to Mars.
+~3YB~
+Mars is conjunct a benefic.
+~3YBS~
+Mars is conjunct a strong benefic.
+~3YBU~
+Mars is conjunct a benefic is a good dignity (friends, great friends or better dignity).
+~3YBO~
+Mars is conjunct a benefic which is in its own sign.
+~3YBE~
+Mars is conjunct an exalted benefic.
+~3Y.BK~
+Mars in conjunct a benefic in a Kendra.
+~3Y.Br~
+Mars is conjunct a retrograde benefic planet.
+~3Yá~
+Mars is conjunct a eunuch planet.
+~3Y.F~
+Mars is conjunct a female planet.
+~3Y.M~
+Mars is conjunct a male planet.
+~3Y.r~
+Mars is conjunct a retrograde planet.
+~3i.y~
+Mars has lost a planetary war.
+~3i.Y~
+Mars has won a planetary war.
+~3Yb~
+Mars is conjunct a combust planet.
+~3ie~
+Mars is in enemy's sign or worse dignity.
+~3Yt~
+Mars is conjunct a debilitated planet.
+~3Yee~
+Mars is conjunct by a planet inimical to Mars.
+~3Y.t~
+Mars is conjunct a planet which is debilitated in the Navamsha.
+~3im~
+Mars is a natural malefic.
+~3imS~
+Mars is strong and malefic.
+~3i.mr~
+Mars is retrograde and malefic.
+~3i.mt~
+Mars is debilitated and malefic.
+~3i.L~
+Mars is the stronger of the two luminaries.
+~3Y.C~
+Mars is conjunct the stronger of one of Moon and Lagna.
+~3i.R~
+Mars is the stronger of the lord of the 1st and the lord of the 8th.
+~3Qh~
+Mars is in a human Rashi.
+~3Qq~
+Mars is in a quadruped rashis (4 legged) rashi.
+~3Qw~
+Mars is in a watery rashi.
+~3Qd~
+Mars is in a dry Rashi.
+~3Qr~
+Mars is retrograde.
+~3V~
+Mars is strong in Varga.
+~3w~
+Mars is moving towards conjunction with Surya ("waning").
+~3W~
+Mars is moving towards opposition with Surya ("waning").
+~3f~
+Mars is far away from the Sun ("full from 150 to 210 degrees from Surya).
+~3è~
+Mars is Vargottama.
+~3F~
+Mars is in a Friend's sign.
+~3G~
+Mars is in GreatFriend's sign.
+~3H~
+Mars is hemmed Hemmed between benefics.
+~3U~
+Mars is in a friendly sign or higher dignity.
+~3M~
+Mars is in Mool-trikona.
+~3O~
+Mars is in its own sign.
+~3ï~
+Mars is in own or exalted.
+~3E~
+Mars is exalted.
+~3EE~
+Mars is in deep is in exact or deep exaltation (paramocha).
+~3u~
+Mars is in low dignity.
+~3c~
+Mars is combust
+~3cm~
+Mars is combust and related to a malefic
+~3n~
+Mars is in a neutral sign.
+~3e~
+Mars is in enemy sign.
+~3g~
+Mars is in great enemy sign.
+~3ð~
+Mars is afflicted (in enemies sign, debilitated or combust).
+~3ë~
+Mars is in enemy sign or debilitated.
+~3h~
+Mars is hemmed in malefic planets.
+~3d~
+Mars is debilitated.
+~3dd~
+Mars is in deep debilitation.
+~3º293~
+Mars is in the 293rd degree of y.
+~3y3~
+Mars is in a planetary war with Mars (the later planet wins).
+~3y4~
+Mars is in a planetary war with Mercury (the later planet wins).
+~3y5~
+Mars is in a planetary war with Jupiter (the later planet wins).
+~3Y6~
+Mars is in a planetary war with Venus (the later planet wins).
+~3y7~
+Mars is in a planetary war with Saturn (the later planet wins).
+~3R1~
+Mars is aspected or conjunct the Sun.
+~3R2~
+Mars is aspected or conjunct Moon.
+~3R3~
+Mars is aspected or conjunct Mars.
+~3R4~
+Mars is aspected or conjunct Mercury.
+~3R5~
+Mars is aspected or conjunct Jupiter.
+~3R6~
+Mars is aspected or conjunct Venus.
+~3R7~
+Mars is aspected or conjunct Saturn.
+~3R8~
+Mars is aspected or conjunct Rahu.
+~3R9~
+Mars is aspected or conjunct Ketu.
+~3A1~
+Mars is associated with the Sun.
+~3A2~
+Mars is associated with Moon.
+~3A3~
+Mars is associated with Mars.
+~3A4~
+Mars is associated with Mercury.
+~3A5~
+Mars is associated with Jupiter.
+~3A6~
+Mars is associated with Venus.
+~3A7~
+Mars is associated with Saturn.
+~3A8~
+Mars is associated with Rahu.
+~3A9~
+Mars is associated with Ketu.
+~3D1~
+Mars is aspected by the Sun.
+~3D2~
+Mars is aspected by Moon.
+~3D3~
+Mars is aspected by Mars.
+~3D4~
+Mars is aspected by Mercury.
+~3D5~
+Mars is aspected by Jupiter.
+~3D6~
+Mars is aspected by Venus.
+~3D7~
+Mars is aspected by Saturn.
+~3D8~
+Mars is aspected by Rahu.
+~3D9~
+Mars is aspected by Ketu.
+~3l1~
+Mars exchanges house with the Sun.
+~3l2~
+Mars exchanges house with Moon.
+~3l3~
+Mars exchanges house with Mars.
+~3l4~
+Mars exchanges house with Mercury.
+~3l5~
+Mars exchanges house with Jupiter.
+~3l6~
+Mars exchanges house with Venus.
+~3l7~
+Mars exchanges house with Saturn.
+~3l8~
+Mars exchanges house with Rahu.
+~3l9~
+Mars exchanges house with Ketu.
+~3X1~
+Mars is associated or aspected by the Sun.
+~3X2~
+Mars is associated or aspected by Moon.
+~3X3~
+Mars is associated or aspected by Mars.
+~3X4~
+Mars is associated or aspected by Mercury.
+~3X5~
+Mars is associated or aspected by Jupiter.
+~3X6~
+Mars is associated or aspected by Venus.
+~3X7~
+Mars is associated or aspected by Saturn.
+~3X8~
+Mars is associated or aspected by Rahu.
+~3X9~
+Mars is associated or aspected by Ketu.
+~!1D3~
+Mars is aspecting the first house.
+~!2D3~
+Mars is aspecting the second house.
+~!3D3~
+Mars is aspecting the third house.
+~!4D3~
+Mars is aspecting the fourth house.
+ ~!5D3~
+Mars is aspecting the fifth house.
+~!6D3~
+Mars is aspecting the sixth house.
+~!7D3~
+Mars is aspecting the seventh house.
+~!8D3~
+Mars is aspecting the eighth house.
+~!9D3~
+Mars is aspecting the 9th house.
+~!10D3~
+Mars is aspecting the 10th house.
+~!11D3~
+Mars is aspecting the 11th house.
+~!12D3~
+Mars is aspecting the 12th house.
+~3I!K~
+Mars is in a Kendra.
+~3I!D~
+Mars is in a Panaphara house.
+~3I!A~
+Mars is in an Apoklima house.
+~3I!H~
+Mars is in a Dharma.
+~3I!R~
+Mars is in an Artha house.
+~3I!O~
+Mars is in a Kama house.
+~3I!M~
+Mars is in a Moksha house.
+~3I!T~
+Mars is in a Trikona house.
+~3I!U~
+Mars is in a Upachaya house.
+~3I!a~
+Mars is in a Dusthana or Trik house.
+~3I!C~
+Mars is in a Chaturasra house.
+~3ISB2~
+Mars is in Parijatamsha.
+~3ISB3~
+Mars is in Uttamamsha.
+~3ISB4~
+Mars is in Gopuramsha.
+~3ISB5~
+Mars is in Simhasanamsha.
+~3ISB6~
+Mars is in Paravatamsha.
+~3ISB7~
+Mars is in Devalokamsha.
+~3ISB8~
+Mars is in Brahmalokamsha (Suralokamsha).
+~3ISB9~
+Mars is in Iravatamsha.
+~3ISB10~
+Mars is in Vaishnavamsha.
+~3ISB11~
+Mars is in Saivamsha.
+~3ISB12~
+Mars is in Bhasvadamsha.
+~3ISB13~
+Mars is in Vaisheshikamsha.
+~3Isy~
+Mars is in Sayan Avastha.
+~3Isu~
+Mars is in Upavesan Avastha.
+~3Isn~
+Mars is in Netrapani Avastha.
+~3Isp~
+Mars is in Prakash Avastha.
+~3Isg~
+Mars is in Gaman Avastha.
+~3Isa~
+Mars is in Agaman Avastha.
+~3Isb~
+Mars is in Sabh Avastha.
+~3Isv~
+Mars is in Agam Avastha.
+~3Ish~
+Mars is in Bojan Avastha.
+~3Ist~
+Mars is in Nritya Lips Avastha.
+~3Isk~
+Mars is in Kautuk Avastha.
+~3Isi~
+Mars is in Nidr Avastha.
+~3ISL~
+Mars is in Lajit Avastha.
+~3ISG~
+Mars is in Garvit Avastha.
+~3ISU~
+Mars is in Kshudhit Avastha.
+~3IST~
+Mars is in Trushit Avastha.
+~3ISM~
+Mars is in Mudit Avastha.
+~3ISK~
+Mars is in Kshobit Avastha.
+~3ISC~
+Mars is in cruel Shastyamsha
+~3ISW1~
+Mars is more often in the Shadvarga of the Sun than of any other graha.
+~3ISW2~
+Mars is more often in the Shadvarga of the Moon than of any other graha
+~3ISW3~
+Mars is more often in the Shadvarga of Mars than of any other graha
+~3ISW4~
+Mars is more often in the Shadvarga of Mercury than of any other graha
+~3ISW5~
+Mars is more often in the Shadvarga of Jupiter than of any other graha
+~3ISW6~
+Mars is more often in the Shadvarga of Venus than of any other graha
+~3ISW7~
+Mars is more often in the Shadvarga of Saturn than of any other graha
+@SB0:3:s~
+Mars is strong in Shadbala (six-fold strength).
+@SB0:3:v~
+Mars is weak in Shadbala (six-fold strength).
+~@SB1:3:s~ 
+Mars is strong in Sthanabala (positional strength).
+~@SB1:3:v~ 
+Mars is weak in Sthanabala (positional strength).
+~@SB2:3:s~
+Mars is strong in Digbala (directional strength).
+~@SB2:3:v~ 
+Mars is weak in Digbala (directional strength).
+~@SB5:3:s~ 
+Mars is strong in Kalabala (time strength).
+~@SB5:3:v~ 
+Mars is weak in Kalabala (time strength).
+~@SB6:3:s~ 
+Mars is strong in Chestabala (motional strength).
+~@SB6:3:v~
+Mars is weak in Chestabala (motional strength).
+~@SB7:3:s~ 
+Mars is strong in Ayanabala (motional strength).
+~@SB7:3:v~ 
+Mars is weak in Ayanabala (motional strength).
+~@Kb3~
+Mars is in a bird or feathered Drekkana.
+~@Ks3~
+Mars is in a serpent Drekkana.
+~@Ka3~
+Mars is in an armed Drekkana.
+~@Kq3~
+Mars is in a quadruped Drekkana.
+~@K3~
+Mars is in a male Drekkana.
+~@Kf3~
+Mars is in a female Drekkana.
+~@N3:1:1~
+Mars is in the first pada of Aswini.
+~@N3:1:2~
+Mars is in the second pada of Aswini.
+~@N3:1:3~
+Mars is in the third pada of Aswini.
+~@N3:1:4~
+Mars is in the fourth pada of Aswini.
+~@N3:2:1~
+Mars is in the first pada of Bharani.
+~@N3:2:2~
+Mars is in the second pada of Bharani.
+~@N3:2:3~
+Mars is in the third pada of Bharani.
+~@N3:2:4~
+Mars is in the fourth pada of Bharani.
+~@N3:3:1~
+Mars is in the first pada of Krittika.
+~@N3:3:2~
+Mars is in the second pada of Krittika.
+~@N3:3:3~
+Mars is in the third pada of Krittika.
+~@N3:3:4~
+Mars is in the fourth pada of Krittika.
+~@N3:4:1~
+Mars is in the first pada of Rohini.
+~@N3:4:2~
+Mars is in the second pada of Rohini.
+~@N3:4:3~
+Mars is in the third pada of Rohini.
+~@N3:4:4~
+Mars is in the fourth pada of Rohini.
+~@N3:5:1~
+Mars is in the first pada of Mrigashira.
+~@N3:5:2~
+Mars is in the second pada of Mrigashira.
+~@N3:5:3~
+Mars is in the third pada of Mrigashira.
+~@N3:5:4~
+Mars is in the fourth pada of Mrigashira.
+~@N3:6:1~
+Mars is in the first pada of Ardra.
+~@N3:6:2~
+Mars is in the second pada of Ardra.
+~@N3:6:3~
+Mars is in the third pada of Ardra.
+~@N3:6:4~
+Mars is in the fourth pada of Ardra.
+~@N3:7:1~
+Mars is in the first pada of Punarvasu.
+~@N3:7:2~
+Mars is in the second pada of Punarvasu.
+~@N3:7:3~
+Mars is in the third pada of Punarvasu.
+~@N3:7:4~
+Mars is in the fourth pada of Punarvasu.
+~@N3:8:1~
+Mars is in the first pada of Pushyami.
+~@N3:8:2~
+Mars is in the second pada of Pushyami.
+~@N3:8:3~
+Mars is in the third pada of Pushyami.
+~@N3:8:4~
+Mars is in the fourth pada of Pushyami.
+~@N3:9:1~
+Mars is in the first pada of Ashlesha.
+~@N3:9:2~
+Mars is in the second pada of Ashlesha.
+~@N3:9:3~
+Mars is in the third pada of Ashlesha.
+~@N3:9:4~
+Mars is in the fourth pada of Ashlesha.
+~@N3:10:1~
+Mars is in the first pada of Magha.
+~@N3:10:2~
+Mars is in the second pada of Magha.
+~@N3:10:3~
+Mars is in the third pada of Magha.
+~@N3:10:4~
+Mars is in the fourth pada of Magha.
+~@N3:11:1~
+Mars is in the first pada of P.Phalguni.
+~@N3:11:2~
+Mars is in the second pada of P.Phalguni.
+~@N3:11:3~
+Mars is in the third pada of P.Phalguni.
+~@N3:11:4~
+Mars is in the fourth pada of P.Phalguni.
+~@N3:12:1~
+Mars is in the first pada of U.Phalguni.
+~@N3:12:2~
+Mars is in the second pada of U.Phalguni.
+~@N3:12:3~
+Mars is in the third pada of U.Phalguni.
+~@N3:12:4~
+Mars is in the fourth pada of U.Phalguni.
+~@N3:13:1~
+Mars is in the first pada of Hasta.
+~@N3:13:2~
+Mars is in the second pada of Hasta.
+~@N3:13:3~
+Mars is in the third pada of Hasta.
+~@N3:13:4~
+Mars is in the fourth pada of Hasta.
+~@N3:14:1~
+Mars is in the first pada of Chitra.
+~@N3:14:2~
+Mars is in the second pada of Chitra.
+~@N3:14:3~
+Mars is in the third pada of Chitra.
+~@N3:14:4~
+Mars is in the fourth pada of Chitra.
+~@N3:15:1~
+Mars is in the first pada of Swati.
+~@N3:15:2~
+Mars is in the second pada of Swati.
+~@N3:15:3~
+Mars is in the third pada of Swati.
+~@N3:15:4~
+Mars is in the fourth pada of Swati.
+~@N3:16:1~
+Mars is in the first pada of Vishaka.
+~@N3:16:2~
+Mars is in the second pada of Vishaka.
+~@N3:16:3~
+Mars is in the third pada of Vishaka.
+~@N3:16:4~
+Mars is in the fourth pada of Vishaka.
+~@N3:17:1~
+Mars is in the first pada of Anuradha.
+~@N3:17:2~
+Mars is in the second pada of Anuradha.
+~@N3:17:3~
+Mars is in the third pada of Anuradha.
+~@N3:17:4~
+Mars is in the fourth pada of Anuradha.
+~@N3:18:1~
+Mars is in the first pada of Jyestha.
+~@N3:18:2~
+Mars is in the second pada of Jyestha.
+~@N3:18:3~
+Mars is in the third pada of Jyestha.
+~@N3:18:4~
+Mars is in the fourth pada of Jyestha.
+~@N3:19:1~
+Mars is in the first pada of Moola.
+~@N3:19:2~
+Mars is in the second pada of Moola.
+~@N3:19:3~
+Mars is in the third pada of Moola.
+~@N3:19:4~
+Mars is in the fourth pada of Moola.
+~@N3:20:1~
+Mars is in the first pada of P.Ashadha.
+~@N3:20:2~
+Mars is in the second pada of P.Ashadha.
+~@N3:20:3~
+Mars is in the third pada of P.Ashadha.
+~@N3:20:4~
+Mars is in the fourth pada of P.Ashadha.
+~@N3:21:1~
+Mars is in the first pada of U.Ashadha.
+~@N3:21:2~
+Mars is in the second pada of U.Ashadha.
+~@N3:21:3~
+Mars is in the third pada of U.Ashadha.
+~@N3:21:4~
+Mars is in the fourth pada of U.Ashadha.
+~@N3:22:1~
+Mars is in the first pada of Sravana.
+~@N3:22:2~
+Mars is in the second pada of Sravana.
+~@N3:22:3~
+Mars is in the third pada of Sravana.
+~@N3:22:4~
+Mars is in the fourth pada of Sravana.
+~@N3:23:1~
+Mars is in the first pada of Dhanishtha.
+~@N3:23:2~
+Mars is in the second pada of Dhanishtha.
+~@N3:23:3~
+Mars is in the third pada of Dhanishtha.
+~@N3:23:4~
+Mars is in the fourth pada of Dhanishtha.
+~@N3:24:1~
+Mars is in the first pada of Shatabhisha.
+~@N3:24:2~
+Mars is in the second pada of Shatabhisha.
+~@N3:24:3~
+Mars is in the third pada of Shatabhisha.
+~@N3:24:4~
+Mars is in the fourth pada of Shatabhisha.
+~@N3:25:1~
+Mars is in the first pada of P.Bhadra.
+~@N3:25:2~
+Mars is in the second pada of P.Bhadra.
+~@N3:25:3~
+Mars is in the third pada of P.Bhadra.
+~@N3:25:4~
+Mars is in the fourth pada of P.Bhadra.
+~@N3:26:1~
+Mars is in the first pada of Uttara Bhadra.
+~@N3:26:2~
+Mars is in the second pada of Uttara Bhadra.
+~@N3:26:3~
+Mars is in the third pada of Uttara Bhadra.
+~@N3:26:4~
+Mars is in the fourth pada of Uttara Bhadra.
+~@N3:27:1~
+Mars is in the first pada of Revati.
+~@N3:27:2~
+Mars is in the second pada of Revati.
+~@N3:27:3~
+Mars is in the third pada of Revati.
+~@N3:27:4~
+Mars is in the fourth pada of Revati.
+~@G3~
+Mars is in a Gandanta.
+~&i&~
+Considerations for Mercury.
+~4Y1~
+Mercury is conjunct the Sun.
+~4Y2~
+Mercury is conjunct Moon.
+~4Y3~
+Mercury is conjunct Mars.
+~4Y4~
+Mercury is conjunct Mercury.
+~4Y5~
+Mercury is conjunct Jupiter.
+~4Y6~
+Mercury is conjunct Venus.
+~4Y7~
+Mercury is conjunct Saturn.
+~4Y8~
+Mercury is conjunct Rahu.
+~4Y9~
+Mercury is conjunct Ketu.
+~4IR1~
+Mercury is in Aries.
+~4IR2~
+Mercury is in Taurus.
+~4IR3~
+Mercury is in Gemini.
+~4IR4~
+Mercury is in Cancer.
+~4IR5~
+Mercury is in Leo.
+~4IR6~
+Mercury is in Virgo.
+~4IR7~
+Mercury is in Libra.
+~4IR8~
+Mercury is in Scorpio.
+~4IR9~
+Mercury is in Sagittarius.
+~4IR10~
+Mercury is in Capricorn.
+~4IR11~
+Mercury is in Aquarius.
+~4IR12~
+Mercury is in Pisces.
+~4I!1~
+Mercury is in the first house.
+~4I!2~
+Mercury is in the second house.
+~4I!3~
+Mercury is in the third house.
+~4I!4~
+Mercury is in the fourth house.
+~4I!5~
+Mercury is in the fifth house.
+~4I!6~
+Mercury is in the sixth house.
+~4I!7~
+Mercury is in the seventh house.
+~4I!8~
+Mercury is in the eighth house.
+~4I!9~
+Mercury is in the 9th house.
+~4I!10~
+Mercury is in the 10th house.
+~4I!11~
+Mercury is in the 11th house.
+~4I!12~
+Mercury is in the 12th house.
+~4K~
+Mercury is in Kendra.
+~4T~
+Mercury is in Trikona.
+~4QJ~
+Mercury is in a Kendra or Trikona.
+~4·~
+Mercury is in a Kendra or Trikona or the 11th house.
+~$i4~
+Mercury is the Atma karaka
+~°i4~
+Mercury is the Amatya karaka.
+~§i4~
+Mercury is the Bhratri karaka.
+~©i4~
+Mercury is the Matri karaka.
+~.pi4~
+Mercury is the Putra karaka.
+~¥i4~
+Mercury is the Gnati (or Jnati) karaka.
+~®i4~
+Mercury is the Dara karaka.
+~4iX~
+Mercury is considered strong in Shad Bala.
+~4iXX~
+Mercury is the strongest planet in this chart.
+~4v~
+Mercury is weak in Shad Bala.
+~4P~
+Mercury is strong in Shad Bala.
+~4iE~
+Mercury is Exalted in the birth chart.
+~4i.E~
+Mercury is exalted in the Navamsha chart.
+~4YO~
+Mercury is conjunct a planet in its own sign.
+~4i ï~
+Mercury is in a high dignity (own sign, Moola-Trikona or exalted).
+~4YF~
+Mercury in conjunct a planet that is friendly to Mercury.
+~4YB~
+Mercury is conjunct a benefic.
+~4YBS~
+Mercury is conjunct a strong benefic.
+~4YBU~
+Mercury is conjunct a benefic is a good dignity (friends, great friends or better dignity).
+~4YBO~
+Mercury is conjunct a benefic which is in its own sign.
+~4YBE~
+Mercury is conjunct an exalted benefic.
+~4Y.BK~
+Mercury in conjunct a benefic in a Kendra.
+~4Y.Br~
+Mercury is conjunct a retrograde benefic planet.
+~4Yá~
+Mercury is conjunct a eunuch planet.
+~4Y.F~
+Mercury is conjunct a female planet.
+~4Y.M~
+Mercury is conjunct a male planet.
+~4Y.r~
+Mercury is conjunct a retrograde planet.
+~4i.y~
+Mercury has lost a planetary war. 
+~4i.Y~
+Mercury has won a planetary war.
+~4Yb~
+Mercury is conjunct a combust planet.
+~4ie~
+Mercury is in enemy's sign or worse dignity.
+~4Yt~
+Mercury is conjunct a debilitated planet.
+~4Yee~
+Mercury is conjunct by a planet inimical to Mercury.
+~4Y.t~
+Mercury is conjunct a planet which is debilitated in the Navamsha.
+~4im~
+Mercury is a natural malefic.
+~4imS~
+Mercury is strong and malefic. 
+~4i.mr~
+Mercury is retrograde and malefic.
+~4i.mt~
+Mercury is debilitated and malefic.
+~4i.L~
+Mercury is the stronger of the two luminaries.
+~4Y.C~
+Mercury is conjunct the stronger of one of Moon and Lagna.
+~4i.R~
+Mercury is the stronger of the lord of the 1st and the lord of the 8th.
+~4Qh~
+Mercury is in a human Rashi.
+~4Qq~
+Mercury is in a quadruped rashis (4 legged) rashi.
+~4Qw~
+Mercury is in a watery rashi.  
+~4Qd~
+Mercury is in a dry Rashi.
+~4Qr~
+Mercury is retrograde.
+~4V~
+Mercury is strong in Varga.
+~4w~
+Mercury is moving towards conjunction with Surya ("waning").
+~4W~
+Mercury is moving towards opposition with Surya ("waning").
+~4f~
+Mercury is far away from the Sun ("full from 150 to 210 degrees from Surya).
+~4è~
+Mercury is Vargottama.
+~4F~
+Mercury is in a Friend's sign.
+~4G~
+Mercury is in GreatFriend's sign.
+~4H~
+Mercury is hemmed Hemmed between benefics.
+~4U~
+Mercury is in a friendly sign or higher dignity.
+~4M~
+Mercury is in Mool-trikona.
+~4O~
+Mercury is in its own sign.
+~4ï~
+Mercury is in own or exalted.
+~4E~
+Mercury is exalted.
+~4EE~
+Mercury is in deep is in exact or deep exaltation (paramocha).
+~4u~
+Mercury is in low dignity.
+~4c~
+Mercury is combust
+~4cm~
+Mercury is combust and related to a malefic
+~4n~
+Mercury is in a neutral sign.
+~4e~
+Mercury is in enemy sign.
+~4g~
+Mercury is in great enemy sign.
+~4ð~
+Mercury is afflicted (in enemies sign, debilitated or combust).
+~4ë~
+Mercury is in enemy sign or debilitated.
+~4h~
+Mercury is hemmed in malefic planets.
+~4d~
+Mercury is debilitated.
+~4dd~
+Mercury is in deep debilitation.
+~4º293~
+Mercury is in the 293rd degree of y.
+~4y3~
+Mercury is in a planetary war with Mars (the later planet wins).
+~4y4~
+Mercury is in a planetary war with Mercury (the later planet wins).
+~4y5~
+Mercury is in a planetary war with Jupiter (the later planet wins).
+~4Y6~
+Mercury is in a planetary war with Venus (the later planet wins).
+~4y7~
+Mercury is in a planetary war with Saturn (the later planet wins).
+~4R1~
+Mercury is aspected or conjunct the Sun.
+~4R2~
+Mercury is aspected or conjunct Moon.
+~4R3~
+Mercury is aspected or conjunct Mars.
+~4R4~
+Mercury is aspected or conjunct Mercury.
+~4R5~
+Mercury is aspected or conjunct Jupiter.
+~4R6~
+Mercury is aspected or conjunct Venus.
+~4R7~
+Mercury is aspected or conjunct Saturn.
+~4R8~
+Mercury is aspected or conjunct Rahu.
+~4R9~
+Mercury is aspected or conjunct Ketu.
+~4A1~
+Mercury is associated with the Sun.
+~4A2~
+Mercury is associated with Moon.
+~4A3~
+Mercury is associated with Mars.
+~4A4~
+Mercury is associated with Mercury.
+~4A5~
+Mercury is associated with Jupiter.
+~4A6~
+Mercury is associated with Venus.
+~4A7~
+Mercury is associated with Saturn.
+~4A8~
+Mercury is associated with Rahu.
+~4A9~
+Mercury is associated with Ketu.
+~4D1~
+Mercury is aspected by the Sun.
+~4D2~
+Mercury is aspected by Moon.
+~4D3~
+Mercury is aspected by Mars.
+~4D4~
+Mercury is aspected by Mercury.
+~4D5~
+Mercury is aspected by Jupiter.
+~4D6~
+Mercury is aspected by Venus.
+~4D7~
+Mercury is aspected by Saturn.
+~4D8~
+Mercury is aspected by Rahu.
+~4D9~
+Mercury is aspected by Ketu.
+~4l1~
+Mercury exchanges house with the Sun.
+~4l2~
+Mercury exchanges house with Moon.
+~4l3~
+Mercury exchanges house with Mars.
+~4l4~
+Mercury exchanges house with Mercury.
+~4l5~
+Mercury exchanges house with Jupiter.
+~4l6~
+Mercury exchanges house with Venus.
+~4l7~
+Mercury exchanges house with Saturn.
+~4l8~
+Mercury exchanges house with Rahu.
+~4l9~
+Mercury exchanges house with Ketu.
+~4X1~
+Mercury is associated or aspected by the Sun.
+~4X2~
+Mercury is associated or aspected by Moon.
+~4X3~
+Mercury is associated or aspected by Mars.
+~4X4~
+Mercury is associated or aspected by Mercury.
+~4X5~
+Mercury is associated or aspected by Jupiter.
+~4X6~
+Mercury is associated or aspected by Venus.
+~4X7~
+Mercury is associated or aspected by Saturn.
+~4X8~
+Mercury is associated or aspected by Rahu.
+~4X9~
+Mercury is associated or aspected by Ketu.
+~!1D4~
+Mercury is aspecting the first house.
+~!2D4~
+Mercury is aspecting the second house.
+~!3D4~
+Mercury is aspecting the third house.
+~!4D4~
+Mercury is aspecting the fourth house.
+ ~!5D4~
+Mercury is aspecting the fifth house.
+~!6D4~
+Mercury is aspecting the sixth house.
+~!7D4~
+Mercury is aspecting the seventh house.
+~!8D4~
+Mercury is aspecting the eighth house.
+~!9D4~
+Mercury is aspecting the 9th house.
+~!10D4~
+Mercury is aspecting the 10th house.
+~!11D4~
+Mercury is aspecting the 11th house.
+~!12D4~
+Mercury is aspecting the 12th house.
+~4I!K~
+Mercury is in a Kendra.
+~4I!D~
+Mercury is in a Panaphara house.
+~4I!A~
+Mercury is in an Apoklima house.
+~4I!H~
+Mercury is in a Dharma.
+~4I!R~
+Mercury is in an Artha house.
+~4I!O~
+Mercury is in a Kama house.
+~4I!M~
+Mercury is in a Moksha house.
+~4I!T~
+Mercury is in a Trikona house.
+~4I!U~
+Mercury is in a Upachaya house.
+~4I!a~
+Mercury is in a Dusthana or Trik house.
+~4I!C~
+Mercury is in a Chaturasra house.
+~4ISB2~
+Mercury is in Parijatamsha.
+~4ISB3~
+Mercury is in Uttamamsha.
+~4ISB4~
+Mercury is in Gopuramsha.
+~4ISB5~
+Mercury is in Simhasanamsha.
+~4ISB6~
+Mercury is in Paravatamsha.
+~4ISB7~
+Mercury is in Devalokamsha.
+~4ISB8~
+Mercury is in Brahmalokamsha (Suralokamsha).
+~4ISB9~
+Mercury is in Iravatamsha.
+~4ISB10~
+Mercury is in Vaishnavamsha.
+~4ISB11~
+Mercury is in Saivamsha.
+~4ISB12~
+Mercury is in Bhasvadamsha.
+~4ISB13~
+Mercury is in Vaisheshikamsha.
+~4Isy~
+Mercury is in Sayan Avastha.
+~4Isu~
+Mercury is in Upavesan Avastha.
+~4Isn~
+Mercury is in Netrapani Avastha.
+~4Isp~
+Mercury is in Prakash Avastha.
+~4Isg~
+Mercury is in Gaman Avastha.
+~4Isa~
+Mercury is in Agaman Avastha.
+~4Isb~
+Mercury is in Sabh Avastha.
+~4Isv~
+Mercury is in Agam Avastha.
+~4Ish~
+Mercury is in Bojan Avastha.
+~4Ist~
+Mercury is in Nritya Lips Avastha.
+~4Isk~
+Mercury is in Kautuk Avastha.
+~4Isi~
+Mercury is in Nidr Avastha.
+~4ISL~
+Mercury is in Lajit Avastha.
+~4ISG~
+Mercury is in Garvit Avastha.
+~4ISU~
+Mercury is in Kshudhit Avastha.
+~4IST~
+Mercury is in Trushit Avastha.
+~4ISM~
+Mercury is in Mudit Avastha.
+~4ISK~
+Mercury is in Kshobit Avastha.
+~4ISC~
+Mercury is in cruel Shastyamsha
+~4ISW1~
+Mercury is more often in the Shadvarga of the Sun than of any other graha.
+~4ISW2~
+Mercury is more often in the Shadvarga of the Moon than of any other graha
+~4ISW3~
+Mercury is more often in the Shadvarga of Mars than of any other graha
+~4ISW4~
+Mercury is more often in the Shadvarga of Mercury than of any other graha
+~4ISW5~
+Mercury is more often in the Shadvarga of Jupiter than of any other graha
+~4ISW6~
+Mercury is more often in the Shadvarga of Venus than of any other graha
+~4ISW7~
+Mercury is more often in the Shadvarga of Saturn than of any other graha
+@SB0:4:s~
+Mercury is strong in Shadbala (six-fold strength).
+@SB0:4:v~
+Mercury is weak in Shadbala (six-fold strength).
+~@SB1:4:s~ 
+Mercury is strong in Sthanabala (positional strength).
+~@SB1:4:v~ 
+Mercury is weak in Sthanabala (positional strength).
+~@SB2:4:s~
+Mercury is strong in Digbala (directional strength).
+~@SB2:4:v~ 
+Mercury is weak in Digbala (directional strength).
+~@SB5:4:s~ 
+Mercury is strong in Kalabala (time strength).
+~@SB5:4:v~
+Mercury is weak in Kalabala (time strength).
+~@SB6:4:s~ 
+Mercury is strong in Chestabala (motional strength).
+~@SB6:4:v~
+Mercury is weak in Chestabala (motional strength).
+~@SB7:4:s~ 
+Mercury is strong in Ayanabala (motional strength).
+~@SB7:4:v~ 
+Mercury is weak in Ayanabala (motional strength).
+
+

@@ -1,0 +1,254 @@
+% =============================================================================
+% Reverse engineering Parashara's Light 7 and comparison with Kala Chakra 1.5
+% Build: latexmk -pdf main.tex   (pdflatex + biber)
+% =============================================================================
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[margin=2.4cm, headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage{booktabs, tabularx, array, longtable}
+\usepackage{graphicx, caption, subcaption}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{pdflscape}
+\usepackage[htt]{hyphenat}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\DeclareUnicodeCharacter{00B0}{\textdegree}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+
+\usepackage[backend=biber, style=authoryear-comp, sorting=nyt, maxcitenames=2,
+            maxbibnames=99, giveninits=true, uniquename=false]{biblatex}
+\addbibresource{references.bib}
+
+\mdfsetup{skipabove=10pt, skipbelow=6pt}
+\input{midsea-preamble.tex}
+
+% Evidence grades
+\newcommand{\gradetag}[2]{{\color{#1}\textsf{\scriptsize\textbf{[#2]}}}}
+\newcommand{\tagBIN}{\gradetag{midseapurple}{BIN}}
+\newcommand{\tagNUM}{\gradetag{midseagreen}{NUM}}
+\newcommand{\tagDOC}{\gradetag{headerblue}{DOC}}
+\newcommand{\tagINF}{\gradetag{midseaorange!85!black}{INF}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small\color{midseapurple}PL7 reverse engineering}
+\lhead{\small\color{midseapurple}Kala Chakra project}
+\rfoot{\small Page \thepage}
+\lfoot{\small Astro\_Fork}
+
+\captionsetup{font=small, labelfont=bf, skip=6pt}
+\DeclareRobustCommand{\_}{\textunderscore\allowbreak}
+\emergencystretch=3em
+\appto{\bibsetup}{\raggedright}
+\setlist{itemsep=2pt, topsep=4pt}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=midseapurple, urlcolor=headerblue,
+  citecolor=midseagreen,
+  pdftitle={How Parashara's Light 7 Casts a Chart},
+  pdfauthor={Amrit Mohapatra}}
+
+\begin{document}
+
+% =============================================================================
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Large\bfseries\color{midseapurple} Kala Chakra project \textbullet\ Astro\_Fork}\\[1.5cm]
+  {\color{midseamagenta}\rule{\textwidth}{1.5pt}}\\[0.6em]
+  {\LARGE\bfseries How Parashara's Light 7 Casts a Chart}\\[0.4em]
+  {\large A reverse-engineering study of its calculation engine, and how it differs\\ from Kala Chakra 1.5}\\[0.3em]
+  {\color{midseamagenta}\rule{\textwidth}{1.5pt}}\\[1.5cm]
+  \begin{tabular}{ll}
+    \textbf{Prepared for:} & Amrit Mohapatra \\
+    \textbf{Date:} & 17 October 2026 \\
+    \textbf{Target:} & \texttt{PL7.exe} 7.0 (2006), SHA-256 \texttt{e530a346\ldots 35f9} \\
+    \textbf{Compared with:} & Kala Chakra v1.5 / KAAST Caster v1.5 \\
+  \end{tabular}
+  \vfill
+  {\small Every finding is graded by the kind of evidence behind it (\autoref{sec:grades}).}
+\end{titlepage}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+% =============================================================================
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+% =============================================================================
+
+Parashara's Light~7 (PL7) casts charts with its \emph{own} 2006 ephemeris, not the Swiss
+Ephemeris. Its default ayanamsa is a Lahiri polynomial that agrees with the Swiss Ephemeris
+Lahiri, and therefore with Kala Chakra, to about one arcsecond. Rahu is the true node, and
+longitudes are referred to the mean equinox, as in Kala Chakra.
+
+The main methodological difference is the houses. PL7 computes \textbf{Placidus} cusps (so
+your father was right) from the geographic latitude, whereas Kala Chakra computes
+\textbf{Topocentric} cusps from the geocentric latitude to match Solar Fire. At Singapore
+the two agree to about $10''$; at Lapanga the ascendant axis differs by up to about $4'$.
+PL7 also offers two KP ayanamsas that Kala Chakra does not. ``Krishnamurti New'' is
+Lahiri minus $6'05''$, which by itself changes the sub lord of about 7\,\% of positions.
+
+Two findings matter in practice:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{The transit viewer in this installation is inaccurate for the planets.} Its
+  cached positions of the Sun, Mercury, Venus, Mars, Jupiter and Saturn are displaced by
+  almost exactly one Moon-distance of parallax, up to about $10'$. The cause is a run-time
+  factor in the Earth--Moon reduction that most probably depends on the program's licence
+  state. The Moon, Rahu, cusps and dashas are unaffected, which is why the dasha dates still
+  matched Kala Chakra. The natal planets very probably carry the same error; a two-minute
+  test is given in \autoref{sec:tests}.
+  \item \textbf{The dasha ``365.25-day'' option actually uses 365.2421875-day years.} This
+  is invisible in horary work but shifts natal dasha boundaries by hours after a few decades.
+\end{enumerate}
+
+PL7 is far broader than Kala Chakra: 31 varga variants, at least 20 dasha systems, Jaimini
+padas and karakas, Yogi points, Guna matching and an animated transit viewer. For KP
+horary, Kala Chakra is deeper and, for this copy, more accurate. \autoref{tab:compare} sets
+the two side by side.
+
+% =============================================================================
+\section{What was examined, and how}
+\label{sec:method}
+% =============================================================================
+
+\subsection{Material}
+
+The analysis used the PL7 installation copied to \texttt{Astro\_Fork/GeoVision/PL7}
+(executable, data files, help and tutorial files, the 239-page manual \texttt{PL70.pdf} and
+\texttt{New features in PL7.pdf}), together with the saved charts
+(\texttt{GeoVisionCharts}) and option files (\texttt{GeoVisionOptions}). The saved charts
+turned out to hold only birth data (a Julian Day, longitude, latitude and time zone), not
+computed positions. The transit cache in \texttt{PL7/Temp} (436 monthly files) did hold
+computed positions, and it became the numerical ground truth for PL7's engine. Nothing was
+executed: there is no Windows runtime on this Mac, and the study is entirely static.
+
+\subsection{Tools}
+
+Static binary analysis used REA~6.5.0 \parencite{morluto2026rea} through its command-line
+interface (\texttt{npx rea-agents execute-rizin-command}), with Rizin as the analysis engine
+(installed with Homebrew; no decompiler plugin). REA was not registered as an MCP server,
+so no Claude configuration was changed. Each REA call returns an evidence record with the
+SHA-256 of the target and the exact Rizin command; the 25 records are archived in
+\texttt{evidence/rea\_rizin/} with an index. Numerical checks used the Swiss Ephemeris~2.10.03
+(\texttt{pyswisseph}) with the same \texttt{\_18} data files as Kala Chakra's Python engine.
+All scripts are in \texttt{scripts/}; the two figures are regenerated by
+\texttt{scripts/make\_figures.py}. A separate pass read the whole manual, the
+New-features PDF and the program's help and tutorial files. Those text files are lightly
+obfuscated with a byte-shift cipher and were decoded for reading.
+
+\subsection{Evidence grades}
+\label{sec:grades}
+
+\begin{tabularx}{\textwidth}{l X}
+  \tagBIN & Read directly from the machine code or data tables of \texttt{PL7.exe}
+  (function addresses given). \\
+  \tagNUM & Measured by comparing PL7's own computed output (the transit cache) with the
+  Swiss Ephemeris. \\
+  \tagDOC & Stated in PL7's documentation (manual page, help or tutorial file). Describes
+  intent, not necessarily the code. \\
+  \tagINF & Inference from the above; plausible but not proven. \\
+\end{tabularx}
+
+\begin{notebox}\ksimple About the word ``61'': PL7 stores English resources with the suffix
+1 (\texttt{Lang1}, \texttt{Extras1}, \texttt{Pic1}) and Hindi resources with the suffix 61
+(\texttt{Lang61}, \texttt{Extras61}, \texttt{Pic61}); the decoded \texttt{Lang61} text is
+Devanagari in a legacy 8-bit font encoding. The ``61'' you see is therefore the Hindi
+language set, not a separate calculation mode \tagINF.\end{notebox}
+
+\input{sections/engine.tex}
+\input{sections/transit.tex}
+\input{sections/features.tex}
+\input{sections/compare.tex}
+
+% =============================================================================
+\section{Limitations}
+\label{sec:limits}
+% =============================================================================
+
+PL7 was never run. Everything about its numerical behaviour comes from the transit cache,
+which covers 2020--2056 and holds planets and nodes but not cusps. The cusp comparison of
+\autoref{tab:cusps} is therefore a simulation of PL7's method with the Swiss Ephemeris house
+functions, not a measurement of PL7's own cusps. The claim that PL7 uses geographic
+latitude rests on the absence of the WGS84 constants. The statement that the Moon-vector
+error also affects natal charts rests on shared code paths, not on a measured natal chart.
+The link between that error and the licence state is an inference from the code structure
+and the installation notes; the licensing code itself was deliberately not analysed.
+
+Without a decompiler, routines were read from x87 disassembly. The short routines
+(ayanamsa, vargas, Yogi point, dasha year, Earth--Moon factor) were decoded in full; the
+Placidus routine was identified by its structure, its debug labels and its constants rather
+than traced instruction by instruction. The ephemeris data files were not decoded, so the
+underlying theory (VSOP, a JPL development or other) and the lower date limit are unknown.
+Where the manual and the code disagree (dasha year) or the manual is silent (D6, D8, D11,
+Yogi), this report follows the code. Where neither was conclusive (Avayogi, Duplicate Yogi,
+arudha exceptions, which KP ayanamsa the KP printout forces, chara-karaka default), the
+report says so instead of filling the gap from general astrological knowledge.
+
+% =============================================================================
+\section*{AI Tool Declaration}
+\addcontentsline{toc}{section}{AI Tool Declaration}
+% =============================================================================
+
+This report was prepared with Claude (Anthropic) running in Claude Code, which performed
+the binary analysis through REA and Rizin, wrote and ran the numerical scripts, and drafted
+the text. A sub-agent read the PL7 documentation; every page citation was checked against
+the extracted manual text. The conclusions should be read with the evidence grades in mind.
+
+\printbibliography[heading=bibintoc, title={References}]
+
+\appendix
+% =============================================================================
+\section{Key addresses in \texttt{PL7.exe}}
+\label{app:addresses}
+% =============================================================================
+
+\begin{longtable}{>{\raggedright\arraybackslash\ttfamily}p{4.3cm} >{\raggedright\arraybackslash}p{10.9cm}}
+  \toprule
+  \normalfont Address & Role \\
+  \midrule
+  \endhead
+  0x55d3ea & Ayanamsa: Lahiri polynomial plus 8-way selector (byte \texttt{+0x67e}), user offset (\texttt{+0x250}) \\
+  0x4c01b0 / 0x4c6ef0 & Calculation dialog: radio-button construction / OK handler writing the selector \\
+  0x5682d6 & Reset to defaults: selector $=1$ (Lahiri), offset $=0$, dasha year byte $=1$ \\
+  0x405cc3, 0x5822cb & Temporary switch to tropical (selector 2) for sayana quantities \\
+  0x55fefc & Chart method: calls the cusp routine unconditionally, copies Asc and MC \\
+  0x406c94 & Placidus cusps (``plac cusp'' labels, semi-arc trisection helper 0x40684a) \\
+  0x55de40 & Ephemeris reader (\texttt{EQU2000} frame, date-range check) \\
+  0x55e125 & Earth--Moon reduction; factor $\mu/(N+\mu)$ with run-time $N$ \\
+  0x55ec16 / 0x55e5a6 & All-planets / single-planet position routines \\
+  0x55fc12 & Dispatcher for planet calculation \\
+  0x55dc3f & \texttt{CalcMonthEphem} / \texttt{CalcYearEphem} (transit cache) \\
+  0x40841f & Yogi point: Sun $+$ Moon $+ 93^\circ 20'$ \\
+  0x464743 & Dasha year length: 360 / 327.85 / 365.2421875 days \\
+  0x460018 & Vimshottari start epoch from the balance \\
+  0x57d9cf & Varga dispatcher (31 cases); divisor table at 0x5f47b8 \\
+  0x57d1e1 & Cyclic varga $n\lambda \bmod 360$ \\
+  0x57d55c, 0x57d675, 0x57d4dc, 0x57d510, 0x57d5a6 & D10, D24, D6, D8, D11 respectively \\
+  0x57d5d6, 0x57d5fb & Alternate D11, alternate D16 \\
+  0x553f5a, 0x557a21 & Integer inputs bounded at 249 (KP horary number) \\
+  \bottomrule
+\end{longtable}
+
+% =============================================================================
+\section{Citation provenance}
+\label{app:provenance}
+% =============================================================================
+
+{\setlength{\tabcolsep}{4pt}\input{citations/provenance.tex}}
+
+\end{document}

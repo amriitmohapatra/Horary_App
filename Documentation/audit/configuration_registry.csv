@@ -1,0 +1,8 @@
+configuration_name,kind,purpose,default_behavior,valid_values_or_range,required,secret,environment_scope,consuming_locations,source_of_definition,evidence_status,notes
+mode (sf|modern),function argument,DeltaT + calibration profile,sf,sf|modern,no,no,all,cast_chart/castChart,ephemeris.py/js,Verified,sf=SF clone; modern=current DeltaT
+AYANAMSA_CAL_DEG,code constant,SF-vs-current-Lahiri offset,+1.251 arcsec,fitted,-,no,sf mode,ephemeris.*,calibration study,Verified,
+SF_DELTAT_ANCHORS,code constant,SF v9 DeltaT curve,8 anchors 2019-2026,piecewise-linear,-,no,sf mode,ephemeris.*,recovered from report headers,Verified,
+horizon_days,function argument,pratyantar outlook span,244,days>0,no,no,apps,upcoming_pratyantars_horizon,user requirement,Verified,
+kaast_places,localStorage key,user-saved places,empty,json list<=50,no,no,browser,places.js,-,Verified,per-browser persistence
+KAAST_QUOTES,code data,banner quotes,5 entries,list,no,no,apps,quotes.js,user-supplied,Verified,
+SE_EPHE_PATH-equivalent,embedded,sweph data location,bundled data/swefiles or embedded WASM FS,-,-,no,all,ephemeris.*,-,Verified,no env var needed

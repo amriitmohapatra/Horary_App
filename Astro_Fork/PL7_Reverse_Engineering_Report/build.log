@@ -1,0 +1,2700 @@
+| | key | status | DOI | problems |
+|---|---|---|---|---|
+| ðŸŸ¡ | geovision2006pl7 | MISSING_DOI |  | no DOI and no confident Crossref candidate |
+| ðŸŸ¡ | morluto2026rea | MISSING_DOI |  | no DOI and no confident Crossref candidate |
+
+ðŸŸ¡ MISSING_DOI: 2
+Citation gate: 2 keys cited across 5 file(s); 2 ledger rows; 2 bib entries
+RESULT: âœ… PASS
+rendered 20 rows -> citations/provenance.tex, citations/provenance.md
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  sections/features.tex
+  sections/transit.tex
+Category 'changed_user':
+  sections/features.tex
+  sections/transit.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/articl
+e.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/size11
+.clo))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/geometry/ge
+ometry.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ke
+yval.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/iftex/ifv
+tex.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/iftex/ift
+ex.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/fonten
+c.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/inpute
+nc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/lmodern.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/textco
+mp.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/etoolbox/et
+oolbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype-pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.cfg))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/parskip/par
+skip.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/kvoptions/k
+voptions.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/ltxcmds/l
+txcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/kvsetkeys/k
+vsetkeys.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+math.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+text.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+gen.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+bsy.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+opn.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/am
+ssymb.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/am
+sfonts.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mathtools/m
+athtools.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/calc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mathtools/m
+hsetup.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/booktabs/bo
+oktabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/tabul
+arx.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/array
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/longt
+able.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/gr
+aphicx.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/gr
+aphics.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/tr
+ig.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-de
+f/pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/cap
+tion.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/cap
+tion3.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/ltc
+aption.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/sub
+caption.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/enumitem/en
+umitem.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/li
+stings.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/ls
+tpatch.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/ls
+tmisc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/li
+stings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mdframed/md
+framed.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3packages/
+xparse/xparse.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3kernel/ex
+pl3.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3backend/l
+3backend-pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/zref/zref-a
+bspage.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/zref/zref-b
+ase.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/infwarerr
+/infwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/kvdefinek
+eys/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/pdftexcmd
+s/pdftexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/etexcmds/
+etexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/auxhook/aux
+hook.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/needspace/n
+eedspace.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/co
+lor.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mdframed/md
+-frame-0.mdf))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/xcolor/xcol
+or.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/titlesec/ti
+tlesec.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/fancyhdr/fa
+ncyhdr.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/pdflscape/p
+dflscape.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/pdflscape/p
+dflscape-nometadata.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ls
+cape.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyphenat/hy
+phenat.sty
+
+Package hyphenat Warning: *******************************
+(hyphenat)                * You have used the htt option.
+(hyphenat)                * You are likely to get many Font Warning messages.
+(hyphenat)                * These can usually be ignored.
+(hyphenat)                *******************************.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/logreq/logr
+eq.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/logreq/logr
+eq.def))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/ifthen
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/url/url.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-dm.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-compat.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/authoryear-comp.bbx
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/authoryear.bbx
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/standard.bbx)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/cb
+x/authoryear-comp.cbx)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-case-expl3.sty)) (./midsea-preamble.tex)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/hy
+perref.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/pdfescape
+/pdfescape.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hycolor/hyc
+olor.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/na
+meref.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/refcount/re
+fcount.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/gettitles
+tring/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/stringenc
+/stringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/pd
+1enc.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/intcalc/i
+ntcalc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/pu
+enc.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/bitset/bi
+tset.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/bigintcal
+c/bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/hp
+dftex.def
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/rerunfilech
+eck/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/uniquecou
+nter/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmr.fd
+) (./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-cmr.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/context/base/mkii
+/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/epstopdf-pk
+g/epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/latexconfig
+/epstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmtt.f
+d)
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/scsl' undefined
+(Font)              using `T1/lmtt/b/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/sc' undefined
+(Font)              using `T1/lmtt/b/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/sc' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/sc' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/n' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/it' undefined
+(Font)              using `T1/lmtt/bx/it' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/sl' undefined
+(Font)              using `T1/lmtt/bx/sl' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bc/sc' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/n' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/it' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sl' undefined
+(Font)              using `T1/lmtt/c/it' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/scit' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sc' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/lc/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/scsl' undefined
+(Font)              using `T1/lmtt/lc/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/sc' undefined
+(Font)              using `T1/lmtt/lc/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/ui' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/ui' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/In' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/lb
+x/english.lbx) (./main.bbl) (./main.out) (./main.out)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/ts1lmr.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/ot1lmr.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omllmm.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omslmsy.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omxlmex.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/um
+sa.fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-msa.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/um
+sb.fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-msb.cfg) [1{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/ma
+p/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf
+-dist/fonts/enc/dvips/lm/lm-ec.enc}{/opt/homebrew/Cellar/texlive/20260301_1/sha
+re/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./main.toc)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.86 \newpage
+              [1]
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmss.f
+d) [2{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/enc/dvips/
+lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/en
+c/dvips/lm/lm-mathsy.enc}] (./sections/engine.tex [3{/opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [4 <./figures
+/fig_deltat.pdf>] [5]) (./sections/transit.tex [6] [7 <./figures/fig_transit_mo
+on_vector.pdf>]) (./sections/features.tex
+Underfull \hbox (badness 1668) in paragraph at lines 17--23
+\T1/lmr/m/n/10.95 (+20) po-si-tion in the list. A byte ta-ble at \T1/lmtt/c/it/
+10.95 0x5f47b8 \T1/lmr/m/n/10.95 (+20) gives the di-vi-sor of each po-si-tion:
+
+Underfull \hbox (badness 1622) in paragraph at lines 17--23
+\OT1/lmr/m/n/10.95 (+20) 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 2\OML/
+lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 3\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/1
+0.95 (+20) 4\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 7\OML/lmm/m/it/10.95
+ ; \OT1/lmr/m/n/10.95 (+20) 9\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 10\
+OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 12\OML/lmm/m/it/10.95 ; \OT1/lmr/
+m/n/10.95 (+20) 16\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 20\OML/lmm/m/i
+t/10.95 ; \OT1/lmr/m/n/10.95 (+20) 24\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (
++20) 27\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 30\OML/lmm/m/it/10.95 ; \
+OT1/lmr/m/n/10.95 (+20) 40\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 45\OML
+/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 60$ \T1/lmr/m/n/10.95 (+20) (po-si-t
+ions 1--16), then $\OT1/lmr/m/n/10.95 (+20) 5\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n
+/10.95 (+20) 6\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 8\OML/lmm/m/it/10.
+95 ; \OT1/lmr/m/n/10.95 (+20) 11$ \T1/lmr/m/n/10.95 (+20) (the Tajika
+[8{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/enc/dvips/lm/
+lm-mathex.enc}] [9] [10] [11] [12]) (./sections/compare.tex [13]) [14] [15]
+(./citations/provenance.tex [16]
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+[]|\T1/lmr/bx/n/8 (+20) Cited
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+[]|\T1/lmr/bx/n/8 (+20) Accessed
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]|\T1/lmr/bx/n/8 (+20) Cited
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]|\T1/lmr/bx/n/8 (+20) Accessed
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 3260) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) ``vimshopaka bala gives the
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 21--21
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 22--22
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) Dashas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) Dashas Ÿ:
+
+Underfull \hbox (badness 6893) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) UI of-fers 360, 365.25,
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) KP Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) astrologer
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) ``Select the pref-ered
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) `Ayanamsha'. Also se-lect
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 27--27
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 1087) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) Circular KP chart with
+
+Underfull \hbox (badness 3579) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) ``The in-ner ring shows the
+
+Underfull \hbox (badness 5681) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Rashis, the next ring the
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 1460) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) ``Select Rahu too, to use 8
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 34--34
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) Engine
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Ÿ: Lahiri
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) Lahiri is the de-fault
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) ``By de-fault the Lahiri
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) Jaimini
+
+Underfull \hbox (badness 3291) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Ÿ: sun-rise
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/lmr/m/n/8 (+20) README
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\T1/lmr/m/n/8 (+20) (repos-i-tory
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/lmr/m/n/8 (+20) publisher-
+[17] [18] [19]) (./main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/
+Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></o
+pt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lm
+bx8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/p
+ublic/lm/lmcsc10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/
+fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share
+/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/2026
+0301_1/share/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></opt/homebrew/Cellar/t
+exlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebr
+ew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb><
+/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/
+lmr7.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/
+public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fo
+nts/type1/public/lm/lmr9.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/tex
+mf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20260301
+_1/share/texmf-dist/fonts/type1/public/lm/lmri8.pfb></opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmri9.pfb></opt/homebrew/C
+ellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></
+opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/l
+msy10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1
+/public/lm/lmsy6.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/
+fonts/type1/public/lm/lmsy7.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/
+texmf-dist/fonts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/202603
+01_1/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></opt/homebrew/Cellar/tex
+live/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></opt/homebre
+w/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><
+/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/
+lmtt8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1
+/public/lm/lmtt9.pfb>
+Output written on main.pdf (20 pages, 603852 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  references.bib
+Sources for biber
+  references.bib
+  main.bcf
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.run.xml
+  main.toc
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/articl
+e.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/size11
+.clo))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/geometry/ge
+ometry.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ke
+yval.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/iftex/ifv
+tex.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/iftex/ift
+ex.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/fonten
+c.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/inpute
+nc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/lmodern.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/textco
+mp.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/etoolbox/et
+oolbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype-pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.cfg))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/parskip/par
+skip.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/kvoptions/k
+voptions.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/ltxcmds/l
+txcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/kvsetkeys/k
+vsetkeys.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+math.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+text.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+gen.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+bsy.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+opn.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/am
+ssymb.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/am
+sfonts.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mathtools/m
+athtools.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/calc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mathtools/m
+hsetup.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/booktabs/bo
+oktabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/tabul
+arx.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/array
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/longt
+able.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/gr
+aphicx.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/gr
+aphics.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/tr
+ig.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-de
+f/pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/cap
+tion.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/cap
+tion3.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/ltc
+aption.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/sub
+caption.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/enumitem/en
+umitem.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/li
+stings.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/ls
+tpatch.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/ls
+tmisc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/li
+stings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mdframed/md
+framed.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3packages/
+xparse/xparse.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3kernel/ex
+pl3.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3backend/l
+3backend-pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/zref/zref-a
+bspage.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/zref/zref-b
+ase.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/infwarerr
+/infwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/kvdefinek
+eys/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/pdftexcmd
+s/pdftexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/etexcmds/
+etexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/auxhook/aux
+hook.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/needspace/n
+eedspace.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/co
+lor.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mdframed/md
+-frame-0.mdf))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/xcolor/xcol
+or.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/titlesec/ti
+tlesec.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/fancyhdr/fa
+ncyhdr.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/pdflscape/p
+dflscape.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/pdflscape/p
+dflscape-nometadata.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ls
+cape.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyphenat/hy
+phenat.sty
+
+Package hyphenat Warning: *******************************
+(hyphenat)                * You have used the htt option.
+(hyphenat)                * You are likely to get many Font Warning messages.
+(hyphenat)                * These can usually be ignored.
+(hyphenat)                *******************************.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/logreq/logr
+eq.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/logreq/logr
+eq.def))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/ifthen
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/url/url.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-dm.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-compat.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/authoryear-comp.bbx
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/authoryear.bbx
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/standard.bbx)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/cb
+x/authoryear-comp.cbx)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-case-expl3.sty)) (./midsea-preamble.tex)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/hy
+perref.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/pdfescape
+/pdfescape.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hycolor/hyc
+olor.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/na
+meref.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/refcount/re
+fcount.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/gettitles
+tring/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/stringenc
+/stringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/pd
+1enc.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/intcalc/i
+ntcalc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/pu
+enc.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/bitset/bi
+tset.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/bigintcal
+c/bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/hp
+dftex.def
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/rerunfilech
+eck/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/uniquecou
+nter/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmr.fd
+) (./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-cmr.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/context/base/mkii
+/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/epstopdf-pk
+g/epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/latexconfig
+/epstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmtt.f
+d)
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/scsl' undefined
+(Font)              using `T1/lmtt/b/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/sc' undefined
+(Font)              using `T1/lmtt/b/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/sc' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/sc' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/n' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/it' undefined
+(Font)              using `T1/lmtt/bx/it' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/sl' undefined
+(Font)              using `T1/lmtt/bx/sl' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bc/sc' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/n' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/it' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sl' undefined
+(Font)              using `T1/lmtt/c/it' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/scit' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sc' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/lc/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/scsl' undefined
+(Font)              using `T1/lmtt/lc/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/sc' undefined
+(Font)              using `T1/lmtt/lc/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/ui' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/ui' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/In' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/lb
+x/english.lbx) (./main.bbl) (./main.out) (./main.out)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/ts1lmr.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/ot1lmr.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omllmm.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omslmsy.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omxlmex.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/um
+sa.fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-msa.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/um
+sb.fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-msb.cfg) [1{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/ma
+p/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf
+-dist/fonts/enc/dvips/lm/lm-ec.enc}{/opt/homebrew/Cellar/texlive/20260301_1/sha
+re/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./main.toc)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.86 \newpage
+              [1]
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmss.f
+d) [2{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/enc/dvips/
+lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/en
+c/dvips/lm/lm-mathsy.enc}] (./sections/engine.tex [3{/opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [4 <./figures
+/fig_deltat.pdf>] [5]) (./sections/transit.tex [6] [7 <./figures/fig_transit_mo
+on_vector.pdf>]) (./sections/features.tex
+Underfull \hbox (badness 1668) in paragraph at lines 17--23
+\T1/lmr/m/n/10.95 (+20) po-si-tion in the list. A byte ta-ble at \T1/lmtt/c/it/
+10.95 0x5f47b8 \T1/lmr/m/n/10.95 (+20) gives the di-vi-sor of each po-si-tion:
+
+Underfull \hbox (badness 1622) in paragraph at lines 17--23
+\OT1/lmr/m/n/10.95 (+20) 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 2\OML/
+lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 3\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/1
+0.95 (+20) 4\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 7\OML/lmm/m/it/10.95
+ ; \OT1/lmr/m/n/10.95 (+20) 9\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 10\
+OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 12\OML/lmm/m/it/10.95 ; \OT1/lmr/
+m/n/10.95 (+20) 16\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 20\OML/lmm/m/i
+t/10.95 ; \OT1/lmr/m/n/10.95 (+20) 24\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (
++20) 27\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 30\OML/lmm/m/it/10.95 ; \
+OT1/lmr/m/n/10.95 (+20) 40\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 45\OML
+/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 60$ \T1/lmr/m/n/10.95 (+20) (po-si-t
+ions 1--16), then $\OT1/lmr/m/n/10.95 (+20) 5\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n
+/10.95 (+20) 6\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 8\OML/lmm/m/it/10.
+95 ; \OT1/lmr/m/n/10.95 (+20) 11$ \T1/lmr/m/n/10.95 (+20) (the Tajika
+[8{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/enc/dvips/lm/
+lm-mathex.enc}] [9] [10] [11] [12]) (./sections/compare.tex [13]) [14] [15]
+(./citations/provenance.tex [16]
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+[]|\T1/lmr/bx/n/8 (+20) Cited
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+[]|\T1/lmr/bx/n/8 (+20) Accessed
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]|\T1/lmr/bx/n/8 (+20) Cited
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]|\T1/lmr/bx/n/8 (+20) Accessed
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 3260) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) ``vimshopaka bala gives the
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 21--21
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 22--22
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) Dashas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) Dashas Ÿ:
+
+Underfull \hbox (badness 6893) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) UI of-fers 360, 365.25,
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) KP Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) astrologer
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) ``Select the pref-ered
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) `Ayanamsha'. Also se-lect
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 27--27
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 1087) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) Circular KP chart with
+
+Underfull \hbox (badness 3579) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) ``The in-ner ring shows the
+
+Underfull \hbox (badness 5681) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Rashis, the next ring the
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 1460) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) ``Select Rahu too, to use 8
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 34--34
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) Engine
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Ÿ: Lahiri
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) Lahiri is the de-fault
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) ``By de-fault the Lahiri
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) Jaimini
+
+Underfull \hbox (badness 3291) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Ÿ: sun-rise
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/lmr/m/n/8 (+20) README
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\T1/lmr/m/n/8 (+20) (repos-i-tory
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/lmr/m/n/8 (+20) publisher-
+[17] [18] [19]) (./main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/
+Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></o
+pt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lm
+bx8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/p
+ublic/lm/lmcsc10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/
+fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share
+/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/2026
+0301_1/share/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></opt/homebrew/Cellar/t
+exlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebr
+ew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb><
+/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/
+lmr7.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/
+public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fo
+nts/type1/public/lm/lmr9.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/tex
+mf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20260301
+_1/share/texmf-dist/fonts/type1/public/lm/lmri8.pfb></opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmri9.pfb></opt/homebrew/C
+ellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></
+opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/l
+msy10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1
+/public/lm/lmsy6.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/
+fonts/type1/public/lm/lmsy7.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/
+texmf-dist/fonts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/202603
+01_1/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></opt/homebrew/Cellar/tex
+live/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></opt/homebre
+w/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><
+/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/
+lmtt8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1
+/public/lm/lmtt9.pfb>
+Output written on main.pdf (20 pages, 603852 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  references.bib
+Sources for biber
+  references.bib
+  main.bcf
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.run.xml
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/articl
+e.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/size11
+.clo))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/geometry/ge
+ometry.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ke
+yval.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/iftex/ifv
+tex.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/iftex/ift
+ex.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/fonten
+c.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/inpute
+nc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/lmodern.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/textco
+mp.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/etoolbox/et
+oolbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype-pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.cfg))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/parskip/par
+skip.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/kvoptions/k
+voptions.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/ltxcmds/l
+txcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/kvsetkeys/k
+vsetkeys.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+math.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+text.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+gen.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+bsy.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsmath/ams
+opn.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/am
+ssymb.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/am
+sfonts.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mathtools/m
+athtools.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/calc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mathtools/m
+hsetup.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/booktabs/bo
+oktabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/tabul
+arx.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/array
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/tools/longt
+able.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/gr
+aphicx.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/gr
+aphics.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/tr
+ig.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-de
+f/pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/cap
+tion.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/cap
+tion3.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/ltc
+aption.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/caption/sub
+caption.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/enumitem/en
+umitem.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/li
+stings.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/ls
+tpatch.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/ls
+tmisc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/listings/li
+stings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mdframed/md
+framed.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3packages/
+xparse/xparse.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3kernel/ex
+pl3.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/l3backend/l
+3backend-pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/zref/zref-a
+bspage.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/zref/zref-b
+ase.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/infwarerr
+/infwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/kvdefinek
+eys/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/pdftexcmd
+s/pdftexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/etexcmds/
+etexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/auxhook/aux
+hook.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/needspace/n
+eedspace.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/co
+lor.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/mdframed/md
+-frame-0.mdf))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/xcolor/xcol
+or.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/titlesec/ti
+tlesec.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/fancyhdr/fa
+ncyhdr.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/pdflscape/p
+dflscape.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/pdflscape/p
+dflscape-nometadata.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/graphics/ls
+cape.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyphenat/hy
+phenat.sty
+
+Package hyphenat Warning: *******************************
+(hyphenat)                * You have used the htt option.
+(hyphenat)                * You are likely to get many Font Warning messages.
+(hyphenat)                * These can usually be ignored.
+(hyphenat)                *******************************.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/logreq/logr
+eq.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/logreq/logr
+eq.def))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/base/ifthen
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/url/url.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-dm.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-compat.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/authoryear-comp.bbx
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/authoryear.bbx
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bb
+x/standard.bbx)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/cb
+x/authoryear-comp.cbx)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bi
+blatex.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/bl
+x-case-expl3.sty)) (./midsea-preamble.tex)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/hy
+perref.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/pdfescape
+/pdfescape.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hycolor/hyc
+olor.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/na
+meref.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/refcount/re
+fcount.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/gettitles
+tring/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/stringenc
+/stringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/pd
+1enc.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/intcalc/i
+ntcalc.sty)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/pu
+enc.def)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/bitset/bi
+tset.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/bigintcal
+c/bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/hyperref/hp
+dftex.def
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/rerunfilech
+eck/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/generic/uniquecou
+nter/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmr.fd
+) (./main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-cmr.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/context/base/mkii
+/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/epstopdf-pk
+g/epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/latexconfig
+/epstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmtt.f
+d)
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/scsl' undefined
+(Font)              using `T1/lmtt/b/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/sc' undefined
+(Font)              using `T1/lmtt/b/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/sc' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/sc' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/n' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/it' undefined
+(Font)              using `T1/lmtt/bx/it' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/sl' undefined
+(Font)              using `T1/lmtt/bx/sl' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bc/sc' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/n' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/it' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sl' undefined
+(Font)              using `T1/lmtt/c/it' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/scit' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sc' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/lc/sl' tried instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/scsl' undefined
+(Font)              using `T1/lmtt/lc/sc' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/sc' undefined
+(Font)              using `T1/lmtt/lc/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/ui' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/ui' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 63.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/In' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 63.
+
+
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/biblatex/lb
+x/english.lbx) (./main.bbl) (./main.out) (./main.out)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/ts1lmr.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/ot1lmr.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omllmm.f
+d)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omslmsy.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/omxlmex.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/um
+sa.fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-msa.cfg)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/amsfonts/um
+sb.fd)
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/microtype/m
+t-msb.cfg) [1{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/ma
+p/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf
+-dist/fonts/enc/dvips/lm/lm-ec.enc}{/opt/homebrew/Cellar/texlive/20260301_1/sha
+re/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./main.toc)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.86 \newpage
+              [1]
+(/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/tex/latex/lm/t1lmss.f
+d) [2{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/enc/dvips/
+lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/en
+c/dvips/lm/lm-mathsy.enc}] (./sections/engine.tex [3{/opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [4 <./figures
+/fig_deltat.pdf>] [5]) (./sections/transit.tex [6] [7 <./figures/fig_transit_mo
+on_vector.pdf>]) (./sections/features.tex
+Underfull \hbox (badness 1668) in paragraph at lines 17--23
+\T1/lmr/m/n/10.95 (+20) po-si-tion in the list. A byte ta-ble at \T1/lmtt/c/it/
+10.95 0x5f47b8 \T1/lmr/m/n/10.95 (+20) gives the di-vi-sor of each po-si-tion:
+
+Underfull \hbox (badness 1622) in paragraph at lines 17--23
+\OT1/lmr/m/n/10.95 (+20) 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 2\OML/
+lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 3\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/1
+0.95 (+20) 4\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 7\OML/lmm/m/it/10.95
+ ; \OT1/lmr/m/n/10.95 (+20) 9\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 10\
+OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 12\OML/lmm/m/it/10.95 ; \OT1/lmr/
+m/n/10.95 (+20) 16\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 20\OML/lmm/m/i
+t/10.95 ; \OT1/lmr/m/n/10.95 (+20) 24\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (
++20) 27\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 30\OML/lmm/m/it/10.95 ; \
+OT1/lmr/m/n/10.95 (+20) 40\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 45\OML
+/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 60$ \T1/lmr/m/n/10.95 (+20) (po-si-t
+ions 1--16), then $\OT1/lmr/m/n/10.95 (+20) 5\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n
+/10.95 (+20) 6\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (+20) 8\OML/lmm/m/it/10.
+95 ; \OT1/lmr/m/n/10.95 (+20) 11$ \T1/lmr/m/n/10.95 (+20) (the Tajika
+[8{/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/enc/dvips/lm/
+lm-mathex.enc}] [9] [10] [11] [12]) (./sections/compare.tex [13]) [14] [15]
+(./citations/provenance.tex [16]
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+[]|\T1/lmr/bx/n/8 (+20) Cited
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+[]|\T1/lmr/bx/n/8 (+20) Accessed
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]|\T1/lmr/bx/n/8 (+20) Cited
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[]|\T1/lmr/bx/n/8 (+20) Accessed
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) Vargas Ÿ:
+
+Underfull \hbox (badness 3260) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) ``vimshopaka bala gives the
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 21--21
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 22--22
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) Dashas Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) Dashas Ÿ:
+
+Underfull \hbox (badness 6893) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) UI of-fers 360, 365.25,
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) KP Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) astrologer
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) ``Select the pref-ered
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) `Ayanamsha'. Also se-lect
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 27--27
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 1087) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) Circular KP chart with
+
+Underfull \hbox (badness 3579) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) ``The in-ner ring shows the
+
+Underfull \hbox (badness 5681) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) Rashis, the next ring the
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 1460) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) ``Select Rahu too, to use 8
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) Jaimini Ÿ:
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 34--34
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) Engine
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) Ÿ: Lahiri
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) Lahiri is the de-fault
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) ``By de-fault the Lahiri
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmtt/m/n/8 geovision2006pl
+
+Underfull \hbox (badness 5681) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) GeoVision / Parashara
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Soft-ware (2006).
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Parashara's Light 7.0
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) Jaimini
+
+Underfull \hbox (badness 3291) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) Ÿ: sun-rise
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/lmr/m/n/8 (+20) user-
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+\T1/lmr/m/n/8 (+20) supplied-
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/lmr/m/n/8 (+20) README
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\T1/lmr/m/n/8 (+20) (repos-i-tory
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/lmr/m/n/8 (+20) publisher-
+[17] [18] [19]) (./main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></opt/homebrew/
+Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></o
+pt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lm
+bx8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/p
+ublic/lm/lmcsc10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/
+fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share
+/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/2026
+0301_1/share/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></opt/homebrew/Cellar/t
+exlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></opt/homebr
+ew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb><
+/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/
+lmr7.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/
+public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fo
+nts/type1/public/lm/lmr9.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/tex
+mf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texlive/20260301
+_1/share/texmf-dist/fonts/type1/public/lm/lmri8.pfb></opt/homebrew/Cellar/texli
+ve/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmri9.pfb></opt/homebrew/C
+ellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></
+opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/l
+msy10.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1
+/public/lm/lmsy6.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/
+fonts/type1/public/lm/lmsy7.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/
+texmf-dist/fonts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/202603
+01_1/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></opt/homebrew/Cellar/tex
+live/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></opt/homebre
+w/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><
+/opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1/public/lm/
+lmtt8.pfb></opt/homebrew/Cellar/texlive/20260301_1/share/texmf-dist/fonts/type1
+/public/lm/lmtt9.pfb>
+Output written on main.pdf (20 pages, 603852 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  references.bib
+Sources for biber
+  references.bib
+  main.bcf
+Latexmk: All targets (main.pdf) are up-to-date
+

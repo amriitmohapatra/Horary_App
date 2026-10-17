@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KP Horary Chart Annotator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --ink:#2c2a26; --accent:#8a4b2d; --soft:#f5efe6; --ok:#2e7d32; --warn:#b26a00; }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; color: var(--ink);
+         background: var(--soft); margin: 0; padding: 24px; }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  .sub { color:#6b665e; margin: 0 0 20px; font-size: .95rem; }
+  #drop { border: 3px dashed var(--accent); border-radius: 16px; background: #fff;
+          padding: 56px 24px; text-align: center; cursor: pointer; transition: background .15s; }
+  #drop.hover { background: #fdf6ec; }
+  #drop .big { font-size: 1.25rem; margin-bottom: 8px; }
+  #drop .small { color:#6b665e; font-size: .9rem; }
+  #fileInput { display: none; }
+  #log { margin-top: 20px; }
+  .card { background:#fff; border-radius: 12px; padding: 14px 18px; margin-bottom: 12px;
+          box-shadow: 0 1px 3px rgba(0,0,0,.08); font-size: .95rem; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .ok { color: var(--ok); } .warn { color: var(--warn); } .err { color: #c62828; }
+  .steps { background:#fff; border-radius: 12px; padding: 14px 18px; margin-top: 24px;
+           font-size: .9rem; color:#555; }
+  .steps ol { margin: 6px 0 0 18px; padding: 0; }
+  code { background:#f0e9dd; padding: 1px 5px; border-radius: 4px; font-size: .85em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>KP Horary Chart Annotator</h1>
+  <p class="sub">Adds star lords, sub lords, house placements and cusp numbers to your exported chart — automatically.</p>
+
+  <div id="drop">
+    <div class="big">Drop your chart file here</div>
+    <div class="small">or click to choose a file (.xlsx) — you can drop several at once</div>
+  </div>
+  <input type="file" id="fileInput" accept=".xlsx" multiple>
+
+  <div id="log"></div>
+
+  <div class="steps">
+    <b>How to use (3 steps)</b>
+    <ol>
+      <li>Save your chart from the astrology software as an Excel file (.xlsx).</li>
+      <li>Drop it on the box above. A new file ending in <code>_KP.xlsx</code> downloads by itself.</li>
+      <li>Open that file in Excel — everything is filled in. The original file is never changed.</li>
+    </ol>
+    Works without internet. Nothing is uploaded anywhere — all work happens on this computer.
+  </div>
+</div>
+
+<!--LIBS-->
+
+<script>
+"use strict";
+const drop = document.getElementById("drop");
+const input = document.getElementById("fileInput");
+const log = document.getElementById("log");
+
+drop.addEventListener("click", () => input.click());
+drop.addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("hover"); });
+drop.addEventListener("dragleave", () => drop.classList.remove("hover"));
+drop.addEventListener("drop", e => {
+  e.preventDefault(); drop.classList.remove("hover");
+  handleFiles(e.dataTransfer.files);
+});
+input.addEventListener("change", () => handleFiles(input.files));
+
+function card(title, lines, cls) {
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = `<h3 class="${cls || ''}">${title}</h3>` +
+                  lines.map(l => `<div class="${l.cls || ''}">${l.text}</div>`).join("");
+  log.prepend(div);
+}
+
+async function handleFiles(files) {
+  for (const f of files) {
+    if (!/\.xlsx$/i.test(f.name)) {
+      card(f.name, [{ text: "This is not an .xlsx file — please save the chart as Excel first.", cls: "err" }], "err");
+      continue;
+    }
+    try { await processOne(f); }
+    catch (e) {
+      card(f.name, [{ text: "Something went wrong: " + e.message, cls: "err" },
+                    { text: "The original file was not touched. You can try again or do this one manually." }], "err");
+    }
+  }
+  input.value = "";
+}
+
+async function processOne(f) {
+  const buf = await f.arrayBuffer();
+  const wb = await XlsxSurgical.openWorkbook(buf);
+  const lines = [];
+  let any = false;
+  for (const sheet of wb.sheets) {
+    const grid = await XlsxSurgical.readGrid(wb, sheet.path);
+    const res = KP.parseGrid(grid);
+    if (!res.chart) continue;                      // not a chart sheet
+    any = true;
+    const { updates } = KP.computeUpdates(grid, res.chart);
+    XlsxSurgical.applyUpdates(grid.xmlDoc, updates);
+    await XlsxSurgical.saveSheet(wb, sheet.path, grid.xmlDoc);
+    lines.push({ text: `Sheet “${sheet.name}”: done — ${updates.length} cells filled in.`, cls: "ok" });
+    for (const w of res.chart.warnings)
+      lines.push({ text: "Note: " + w, cls: "warn" });
+  }
+  if (!any) {
+    card(f.name, [{ text: "No chart found in this file (need the usual HOUSE CUSPS and CHART POINTS layout with 12 cusps and 9 planets).", cls: "warn" }], "warn");
+    return;
+  }
+  const out = await XlsxSurgical.toArrayBuffer(wb);
+  const blob = new Blob([out], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = f.name.replace(/\.xlsx$/i, "_KP.xlsx");
+  a.click();
+  URL.revokeObjectURL(a.href);
+  lines.push({ text: `Saved as “${a.download}” (check your Downloads folder).` });
+  card(f.name, lines, "ok");
+}
+</script>
+</body>
+</html>

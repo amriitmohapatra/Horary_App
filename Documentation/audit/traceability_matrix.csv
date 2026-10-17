@@ -1,0 +1,11 @@
+item_id,item_type,item_name,source_location,purpose,inputs,outputs,dependencies,report_section,external_source_ids,calculation_ids,test_locations,evidence_status,coverage_status,unresolved_issue
+C-01,component,KP core engine (py),src/kala_chakra/kp_core.py,rules engine,longitudes,lords/vectors/powers,-,§7.1,SRC-001,CALC-01..07,run_tests;validate_batch,Verified,Covered,
+C-02,component,KP core engine (js),web/src/kp_logic.js,browser twin,grids/text,values/updates,JSZip(ind.),§7.2,SRC-001,CALC-01..07,parity harnesses,Verified,Covered,
+C-03,component,Ephemeris (py),src/kala_chakra/ephemeris.py,native casting,moment+place,chart,pyswisseph,§7.3,SRC-002/003/005,CALC-08/09,test_ephemeris.py,Verified,Covered,
+C-04,component,Ephemeris (wasm),Advanced_Setup/web/src/ephemeris.js,browser casting,moment+place,chart,SRC-004,§7.4,SRC-002/004/005,CALC-08/09,test_wasm_engine.mjs,Verified,Covered,
+C-05,component,Dasha engine (py+js),dasha.py; dasha.js,6-tier timing,Moon+moment,periods,-,§7.5,SRC-001/006,CALC-10/11,40/40 regression,Verified,Covered,
+C-06,component,Surgical xlsx writers,xlsx_surgical.py/.js,style-safe writes,updates,xlsx,zip libs,§7.6,-,-,byte-diff checks,Verified,Covered,
+C-07,component,Excel builder,excel_builder.py,raw->workbook,chart+meta,xlsx,"C-01,C-06,template",§7.7,SRC-001,CALC-01..07,gold rebuild,Verified,Covered,
+C-08,component,Apps v0.95..v1.5 (+Odia),web shells + builds,end-user UI,form/paste,results UI+downloads,"C-02,C-04,C-05",§8,SRC-001..010,all,syntax/contract/jsdom gates,Verified,Covered,
+C-09,component,Knowledge base,knowledge/;AGENTS.md,agent bootstrap,-,-,-,§4,-,-,link check,Verified,Covered,
+C-10,data,Ground-truth corpus,RA Job;Artifacts;SF Charts;Testing/,validation,-,-,-,§17,SRC-001/005/006,-,-,Verified,Covered,known label errors listed

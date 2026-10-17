@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KAAST Chart Caster v 1.02 — କାଳ ଚକ୍ର</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --ink:#26231e; --accent:#8a4b2d; --accent2:#3d5a80; --soft:#f6f1e7; }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; color: var(--ink);
+         background: var(--soft); margin: 0; }
+  header { background: var(--accent); color: #fff; padding: 18px 28px; }
+  header h1 { margin: 0; font-size: 1.4rem; font-weight: normal; }
+  header .tag { opacity: .9; font-size: .85rem; }
+  header .liner { opacity: .8; font-size: .8rem; font-style: italic; margin-top: 2px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 22px; }
+  .card { background: #fff; border-radius: 14px; padding: 20px 24px;
+          box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 18px; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .row > div { flex: 1 1 130px; }
+  label { display: block; font-size: .82rem; color: #6b665e; margin: 8px 0 3px; }
+  input, select { width: 100%; padding: 8px 10px; border: 1px solid #d8cfc0;
+                  border-radius: 8px; font-family: inherit; font-size: .95rem;
+                  background: #fffdf9; }
+  .btn { background: var(--accent); color: #fff; border: 0; padding: 11px 22px;
+         border-radius: 9px; font-family: inherit; font-size: 1rem;
+         cursor: pointer; margin-top: 14px; }
+  .btn.secondary { background: var(--accent2); }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .mini { font-size: .78rem; color: var(--accent2); cursor: pointer;
+          text-decoration: underline; background: none; border: none;
+          font-family: inherit; padding: 0; margin-top: 4px; }
+  #status { font-size: .85rem; color: #6b665e; margin-left: 12px; }
+  .err { color: #c62828; }
+  header .quote { margin-top: 10px; font-style: italic; opacity: .93;
+    max-width: 940px; line-height: 1.5; }
+  header .quote .qby { display: block; font-style: normal; font-size: .76rem;
+    opacity: .75; margin-top: 3px; }
+  .secbox { width: 74px !important; }
+  .timerow { display: flex; gap: 6px; align-items: center; }
+
+  /* lord highlighting: consistent across cusps and planets */
+  .sl-star { color: #1c7a4b; font-weight: bold; }
+  .sl-sub  { color: #b02748; font-weight: bold; }
+
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th, td { border: 1px solid #e4dccb; padding: 5px 9px; text-align: left; }
+  th { background: #f3ecdd; font-weight: normal; color: #5c5648; }
+  h2 { font-size: 1.1rem; border-bottom: 2px solid var(--accent);
+       padding-bottom: 4px; font-weight: normal; }
+  #results { display: none; }
+  .meta { color:#6b665e; font-size:.9rem; margin-bottom: 10px; }
+  footer { text-align: center; color: #9b937f; font-size: .8rem; padding: 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>କାଳ ଚକ୍ର · KAAST Chart Caster <span style='font-size:.7em;opacity:.8'>v 1.02</span></h1>
+  <div class="tag">KAAST — Karar Ashram Astrology Software · built-in Swiss Ephemeris, no astrology software needed</div>
+  <div class="liner">by Swami Yogeswarananda Giri</div>
+  <div class="quote" id="quote"></div>
+</header>
+<div class="wrap">
+
+  <div class="card">
+    <div class="row">
+      <div><label>Date</label><input type="date" id="date"></div>
+      <div><label>Time (local)</label><div class="timerow"><input type="time" id="time" step="1"><input type="number" class="secbox" id="sec" min="0" max="59" placeholder="ss" title="seconds (for iPhone/iPad, where the time picker has no seconds)"></div></div>
+      <div><label>UTC offset (hours)</label><input type="number" id="tz" step="0.25" value="8"></div>
+    </div>
+    <div class="row">
+      <div style="flex:2 1 220px">
+        <label>Place</label>
+        <input list="placelist" id="place" placeholder="start typing… e.g. Singapore">
+        <datalist id="placelist"></datalist>
+        <button class="mini" id="saveplace">save this place for future use</button>
+      </div>
+      <div><label>Latitude (+N)</label><input type="number" id="lat" step="0.00001"></div>
+      <div><label>Longitude (+E)</label><input type="number" id="lon" step="0.00001"></div>
+      <div><label>Mode</label>
+        <select id="mode">
+          <option value="sf">Solar Fire compatible</option>
+          <option value="modern">Modern (best accuracy)</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" id="cast" disabled>Cast chart</button>
+    <span id="status">loading ephemeris engine…</span>
+  </div>
+
+  <div id="results">
+    <div class="card">
+      <h2>Chart</h2>
+      <div class="meta" id="r_meta"></div>
+      <table id="t_cusps"></table>
+      <div style="height:12px"></div>
+      <table id="t_points"></table>
+      <button class="btn secondary" id="dl_report">Download Solar-Fire-style report (.txt)</button>
+    </div>
+
+    <div class="card" id="dashacard">
+      <h2>Dasha periods (Vimshottari, Parashara's Light convention)</h2>
+      <div class="meta" id="d_chain"></div>
+      <table id="t_prat"></table>
+      <div style="height:10px"></div>
+      <div class="meta">Upcoming pratyantar changes — next 8 months</div>
+      <table id="t_next"></table>
+      <div style="height:10px"></div>
+      <div class="meta">Upcoming prana periods (Maha-Antar-Pratyantar-Sookshma-Prana)</div>
+      <table id="t_prana"></table>
+    </div>
+
+    <div class="card" id="eventcard" style="display:none">
+      <h2>Event check — prana periods around a known event (optional)</h2>
+      <label>Notes about the horary question / event</label>
+      <textarea id="ev_notes" style="min-height:64px" placeholder="e.g. The offer letter actually arrived on this day…"></textarea>
+      <div class="timerow" style="margin-top:8px; flex-wrap:wrap">
+        <div><label>Event date</label><input type="date" id="ev_date"></div>
+        <div><label>Event time (local)</label>
+          <div class="timerow"><input type="time" id="ev_time" step="1">
+          <input type="number" class="secbox" id="ev_sec" min="0" max="59" placeholder="ss" title="seconds (for iPhone/iPad, where the time picker has no seconds)"></div>
+        </div>
+        <div style="align-self:flex-end"><button class="btn secondary" id="ev_show" type="button" style="margin-top:0">Show periods ±2 days</button></div>
+      </div>
+      <div class="meta" id="ev_meta" style="margin-top:10px"></div>
+      <table id="ev_table"></table>
+    </div>
+
+  </div>
+
+</div>
+<footer>Everything runs on this computer — nothing is uploaded. Validated against Solar Fire Gold reference charts (planets ≤1&Prime;).</footer>
+
+<!--LIBS-->
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+
+/* --- random banner quote (see quotes.js to add more) --- */
+(function () {
+  if (typeof KAAST_QUOTES === "undefined" || !KAAST_QUOTES.length) return;
+  const q = KAAST_QUOTES[Math.floor(Math.random() * KAAST_QUOTES.length)];
+  const el = document.getElementById("quote");
+  if (!el) return;
+  const size = q.text.length > 220 ? ".85rem" : q.text.length > 120 ? ".92rem" : "1rem";
+  el.style.fontSize = size;
+  el.innerHTML = "\u201C" + q.text.replace(/&/g, "&amp;").replace(/</g, "&lt;") + "\u201D" +
+    (q.by ? '<span class="qby">— ' + q.by + "</span>" : "");
+})();
+
+/* seconds helper: iOS time pickers omit seconds — merge with the ss box */
+function timeParts(timeVal, secEl) {
+  const tp = (timeVal || "").split(":").map(Number);
+  const box = parseInt(secEl && secEl.value, 10);
+  const ss = (tp.length >= 3 && !isNaN(tp[2])) ? tp[2]
+           : (isNaN(box) ? 0 : Math.min(59, Math.max(0, box)));
+  return [tp[0], tp[1], ss];
+}
+
+
+/* colored lord chains: star lord green, sub lord crimson, deeper subs plain */
+function slChainHtml(lon) {
+  return KP.subLords(lon, 5).map((l, i) =>
+    i === 0 ? `<span class="sl-star">${l}</span>` :
+    i === 1 ? `<span class="sl-sub">${l}</span>` : l).join("/");
+}
+
+
+/* places */
+function refreshPlaces() {
+  $("placelist").innerHTML = KPPlaces.all()
+    .map(p => `<option value="${p.name}">`).join("");
+}
+refreshPlaces();
+$("place").addEventListener("change", () => {
+  const p = KPPlaces.find($("place").value);
+  if (p) { $("lat").value = p.lat; $("lon").value = p.lon; $("tz").value = p.tz; }
+});
+$("saveplace").addEventListener("click", () => {
+  if (KPPlaces.save($("place").value, +$("lat").value, +$("lon").value, +$("tz").value)) {
+    refreshPlaces(); $("status").textContent = "place saved."; }
+});
+
+/* engine boot */
+(async () => {
+  try {
+    const wasmBinary = Uint8Array.from(atob(WASM_B64), c => c.charCodeAt(0)).buffer;
+    const dataBuffer = Uint8Array.from(atob(EPHE_B64), c => c.charCodeAt(0)).buffer;
+    await KPEph.init({ wasmBinary, dataBuffer });
+    $("cast").disabled = false;
+    $("status").textContent = "engine ready.";
+  } catch (e) { $("status").innerHTML = `<span class="err">engine failed: ${e.message}</span>`; }
+})();
+
+let lastReport = "";
+let lastCtx = null;
+$("cast").addEventListener("click", () => {
+  try {
+    const [y, m, d] = $("date").value.split("-").map(Number);
+    const tp = timeParts($("time").value, $("sec"));
+    if (!y || isNaN(tp[0]) || isNaN(tp[1])) throw new Error("enter date and time");
+    const lat = +$("lat").value, lon = +$("lon").value, tz = +$("tz").value;
+    if (!isFinite(lat) || !isFinite(lon)) throw new Error("enter latitude/longitude (or pick a saved place)");
+    const res = KPEph.castChart({ y, m, d, hh: tp[0], mi: tp[1], ss: tp[2] || 0,
+                                  tz, lat, lon, mode: $("mode").value });
+    render(res, { y, m, d, tp, tz, lat, lon });
+  } catch (e) { $("status").innerHTML = `<span class="err">${e.message}</span>`; }
+});
+
+function render(res, inp) {
+  const chart = new KP.Chart(res.cusps, res.planets);
+  chart.signToHouses();
+  $("r_meta").textContent =
+    `${inp.y}-${String(inp.m).padStart(2,"0")}-${String(inp.d).padStart(2,"0")} ` +
+    `${$("time").value} (UTC${inp.tz >= 0 ? "+" : ""}${inp.tz})  ·  ` +
+    `${$("place").value || "—"}  ·  ${KPPlaces.fmtCoord(inp.lat, inp.lon)}  ·  ` +
+    `${res.mode === "sf" ? "Solar Fire compatible" : "modern"} mode, ΔT ${res.deltat.toFixed(1)}s`;
+  let h = "<tr><th>Cusp</th><th>Longitude</th><th>Star / Sub / Sub² / Sub³ / Sub⁴</th></tr>";
+  for (let c = 1; c <= 12; c++)
+    h += `<tr><td>${c}</td><td>${KP.formatLongitude(chart.cusps[c])}</td><td>${slChainHtml(chart.cusps[c])}</td></tr>`;
+  $("t_cusps").innerHTML = h;
+  h = "<tr><th>Planet</th><th>Longitude</th><th>Star / Sub / Sub² / Sub³ / Sub⁴</th><th>Cusp</th><th>Cusp numbers</th></tr>";
+  for (const p of KP.PLANET_ORDER) {
+    const lon = chart.planets[p];
+    h += `<tr><td>${KP.PLANET_LABEL[p]}</td><td>${KP.formatLongitude(lon)}</td>` +
+         `<td>${slChainHtml(lon)}</td><td>${chart.houseOf(lon)}</td>` +
+         `<td>${chart.numbersString(p)}</td></tr>`;
+  }
+  $("t_points").innerHTML = h;
+  lastReport = sfReport(res, inp);
+  const chartMs = KPDasha.momentMs(inp.y, inp.m, inp.d, inp.tp[0], inp.tp[1], inp.tp[2] || 0);
+  lastCtx = { moon: res.planets.Mo, chartMs };
+  renderDasha(res.planets.Mo, chartMs);
+  $("eventcard").style.display = "block";
+  $("results").style.display = "block";
+}
+
+function renderDasha(moonArcsec, ms) {
+  const chain = KPDasha.currentChain(moonArcsec, ms, 5);
+  $("d_chain").innerHTML = "Running now: <b>" +
+    chain.map(p => p.lords[p.lords.length - 1]).join("-") + "</b> &nbsp;(" +
+    chain.map((p, i) => `${KPDasha.LEVEL_NAMES[i]} ${p.lords[p.lords.length - 1]}`).join(" · ") + ")";
+  const antar = chain[1];
+  let h = `<tr><th colspan="3">${antar.lords.join("-")} — pratyantar periods</th></tr>` +
+          "<tr><th>Pratyantar</th><th>Beginning</th><th>Ending</th></tr>";
+  for (const p of KPDasha.subperiods(antar)) {
+    const cur = p.start <= ms && ms < p.end;
+    h += `<tr${cur ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${p.lords[2]}</td><td>${KPDasha.fmtDate(p.start)}</td><td>${KPDasha.fmtDate(p.end)}</td></tr>`;
+  }
+  $("t_prat").innerHTML = h;
+  h = "<tr><th>Chain (Maha-Antar-Pratyantar)</th><th>From</th><th>To</th></tr>";
+  for (const u of KPDasha.upcomingPratyantarsHorizon(moonArcsec, ms, 244))
+    h += `<tr><td>${u.chain}</td><td>${KPDasha.fmtDate(u.start)}</td><td>${KPDasha.fmtDate(u.end)}</td></tr>`;
+  $("t_next").innerHTML = h;
+  h = "<tr><th>Chain</th><th>From</th><th>To</th></tr>";
+  KPDasha.upcomingPranas(moonArcsec, ms, 12).forEach((u, i) => {
+    h += `<tr${i === 0 ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${u.chain}</td><td>${KPDasha.fmtDateTime(u.start)}</td><td>${KPDasha.fmtDateTime(u.end)}</td></tr>`;
+  });
+  $("t_prana").innerHTML = h;
+}
+
+/* Solar-Fire-style report text — feedable into Kala Chakra's paste box */
+function sfReport(res, inp) {
+  const L = [];
+  L.push("*** CHART ANALYSIS REPORT ***", "");
+  L.push(` ${$("place").value || "KAAST"} - Horary Chart`, "");
+  L.push(` Cast by KAAST (Karar Ashram Astrology Software), mode: ${res.mode}`);
+  L.push(` DeltaT = +${res.deltat.toFixed(1)}s; JD(UT) = ${res.jdUt.toFixed(6)}`, "");
+  L.push("HOUSE CUSPS (Topocentric)");
+  const fmt = a => KP.formatLongitude(a);
+  for (let r = 0; r < 3; r++) {
+    const cs = [1+r, 4+r, 7+r, 10+r].map(hh => `${String(hh).padStart(2)} ${fmt(res.cusps[hh])}`);
+    L.push(" " + cs.join("   "));
+  }
+  L.push("", "CHART POINTS", " Point   Longitude");
+  const SFN = { Mo:"Mon", Su:"Sun", Me:"Mer", Ve:"Ven", Ma:"Mar", Ju:"Jup", Sa:"Sat", Ra:"Ra", Ke:"Ke" };
+  for (const p of ["Mo","Su","Me","Ve","Ma","Ju","Sa","Ra","Ke"])
+    L.push(` ${SFN[p].padEnd(4)}  ${fmt(res.planets[p])} `);
+  L.push("", "*** END REPORT ***");
+  return L.join("\n");
+}
+
+$("dl_report").addEventListener("click", () => {
+  const blob = new Blob([lastReport], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "kaast_chart_report.txt";
+  a.click(); URL.revokeObjectURL(a.href);
+});
+
+/* --- event check: prana periods ±2 days around a user-noted event.
+       Timeline is anchored at the HORARY CHART moment (never at the event). --- */
+$("ev_show").addEventListener("click", () => {
+  const info = lastCtx;
+  if (!info) { $("ev_meta").textContent = "Cast or calculate a chart first."; return; }
+  if (!$("ev_date").value || !$("ev_time").value) {
+    $("ev_meta").textContent = "Enter the event date and time."; return; }
+  const [y, m, d] = $("ev_date").value.split("-").map(Number);
+  const [hh, mi, ss] = timeParts($("ev_time").value, $("ev_sec"));
+  const evMs = KPDasha.momentMs(y, m, d, hh, mi, ss);
+  const rows = KPDasha.pranasInWindow(info.moon, info.chartMs,
+                                      evMs - 2 * 86400000, evMs + 2 * 86400000);
+  const notes = ($("ev_notes").value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const evChain = rows.find(r => r.start <= evMs && evMs < r.end);
+  $("ev_meta").innerHTML =
+    (notes ? "<i>" + notes + "</i><br>" : "") +
+    "Event: <b>" + KPDasha.fmtDateTime(evMs) + "</b> — running prana: <b>" +
+    (evChain ? evChain.chain : "—") + "</b> (timeline anchored at the chart moment)";
+  let h = "<tr><th>Chain (Maha-Antar-Pratyantar-Sookshma-Prana)</th><th>From</th><th>To</th></tr>";
+  for (const r of rows) {
+    const cur = r.start <= evMs && evMs < r.end;
+    h += `<tr${cur ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${r.chain}</td><td>${KPDasha.fmtDateTime(r.start)}</td><td>${KPDasha.fmtDateTime(r.end)}</td></tr>`;
+  }
+  $("ev_table").innerHTML = h;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1415 @@
+~@Kb4~
+Mercury is in a bird or feathered Drekkana.
+~@Ks4~
+Mercury is in a serpent Drekkana.
+~@Ka4~
+Mercury is in an armed Drekkana.
+~@Kq4~
+Mercury is in a quadruped Drekkana.
+~@K4~
+Mercury is in a male Drekkana.
+~@Kf4~
+Mercury is in a female Drekkana.
+~@N4:1:1~
+Mercury is in the first pada of Aswini.
+~@N4:1:2~
+Mercury is in the second pada of Aswini.
+~@N4:1:3~
+Mercury is in the third pada of Aswini.
+~@N4:1:4~
+Mercury is in the fourth pada of Aswini.
+~@N4:2:1~
+Mercury is in the first pada of Bharani.
+~@N4:2:2~
+Mercury is in the second pada of Bharani.
+~@N4:2:3~
+Mercury is in the third pada of Bharani.
+~@N4:2:4~
+Mercury is in the fourth pada of Bharani.
+~@N4:3:1~
+Mercury is in the first pada of Krittika.
+~@N4:3:2~
+Mercury is in the second pada of Krittika.
+~@N4:3:3~
+Mercury is in the third pada of Krittika.
+~@N4:3:4~
+Mercury is in the fourth pada of Krittika.
+~@N4:4:1~
+Mercury is in the first pada of Rohini.
+~@N4:4:2~
+Mercury is in the second pada of Rohini.
+~@N4:4:3~
+Mercury is in the third pada of Rohini.
+~@N4:4:4~
+Mercury is in the fourth pada of Rohini.
+~@N4:5:1~
+Mercury is in the first pada of Mrigashira.
+~@N4:5:2~
+Mercury is in the second pada of Mrigashira.
+~@N4:5:3~
+Mercury is in the third pada of Mrigashira.
+~@N4:5:4~
+Mercury is in the fourth pada of Mrigashira.
+~@N4:6:1~
+Mercury is in the first pada of Ardra.
+~@N4:6:2~
+Mercury is in the second pada of Ardra.
+~@N4:6:3~
+Mercury is in the third pada of Ardra.
+~@N4:6:4~
+Mercury is in the fourth pada of Ardra.
+~@N4:7:1~
+Mercury is in the first pada of Punarvasu.
+~@N4:7:2~
+Mercury is in the second pada of Punarvasu.
+~@N4:7:3~
+Mercury is in the third pada of Punarvasu.
+~@N4:7:4~
+Mercury is in the fourth pada of Punarvasu.
+~@N4:8:1~
+Mercury is in the first pada of Pushyami.
+~@N4:8:2~
+Mercury is in the second pada of Pushyami.
+~@N4:8:3~
+Mercury is in the third pada of Pushyami.
+~@N4:8:4~
+Mercury is in the fourth pada of Pushyami.
+~@N4:9:1~
+Mercury is in the first pada of Ashlesha.
+~@N4:9:2~
+Mercury is in the second pada of Ashlesha.
+~@N4:9:3~
+Mercury is in the third pada of Ashlesha.
+~@N4:9:4~
+Mercury is in the fourth pada of Ashlesha.
+~@N4:10:1~
+Mercury is in the first pada of Magha.
+~@N4:10:2~
+Mercury is in the second pada of Magha.
+~@N4:10:3~
+Mercury is in the third pada of Magha.
+~@N4:10:4~
+Mercury is in the fourth pada of Magha.
+~@N4:11:1~
+Mercury is in the first pada of P.Phalguni.
+~@N4:11:2~
+Mercury is in the second pada of P.Phalguni.
+~@N4:11:3~
+Mercury is in the third pada of P.Phalguni.
+~@N4:11:4~
+Mercury is in the fourth pada of P.Phalguni.
+~@N4:12:1~
+Mercury is in the first pada of U.Phalguni.
+~@N4:12:2~
+Mercury is in the second pada of U.Phalguni.
+~@N4:12:3~
+Mercury is in the third pada of U.Phalguni.
+~@N4:12:4~
+Mercury is in the fourth pada of U.Phalguni.
+~@N4:13:1~
+Mercury is in the first pada of Hasta.
+~@N4:13:2~
+Mercury is in the second pada of Hasta.
+~@N4:13:3~
+Mercury is in the third pada of Hasta.
+~@N4:13:4~
+Mercury is in the fourth pada of Hasta.
+~@N4:14:1~
+Mercury is in the first pada of Chitra.
+~@N4:14:2~
+Mercury is in the second pada of Chitra.
+~@N4:14:3~
+Mercury is in the third pada of Chitra.
+~@N4:14:4~
+Mercury is in the fourth pada of Chitra.
+~@N4:15:1~
+Mercury is in the first pada of Swati.
+~@N4:15:2~
+Mercury is in the second pada of Swati.
+~@N4:15:3~
+Mercury is in the third pada of Swati.
+~@N4:15:4~
+Mercury is in the fourth pada of Swati.
+~@N4:16:1~
+Mercury is in the first pada of Vishaka.
+~@N4:16:2~
+Mercury is in the second pada of Vishaka.
+~@N4:16:3~
+Mercury is in the third pada of Vishaka.
+~@N4:16:4~
+Mercury is in the fourth pada of Vishaka.
+~@N4:17:1~
+Mercury is in the first pada of Anuradha.
+~@N4:17:2~
+Mercury is in the second pada of Anuradha.
+~@N4:17:3~
+Mercury is in the third pada of Anuradha.
+~@N4:17:4~
+Mercury is in the fourth pada of Anuradha.
+~@N4:18:1~
+Mercury is in the first pada of Jyestha.
+~@N4:18:2~
+Mercury is in the second pada of Jyestha.
+~@N4:18:3~
+Mercury is in the third pada of Jyestha.
+~@N4:18:4~
+Mercury is in the fourth pada of Jyestha.
+~@N4:19:1~
+Mercury is in the first pada of Moola.
+~@N4:19:2~
+Mercury is in the second pada of Moola.
+~@N4:19:3~
+Mercury is in the third pada of Moola.
+~@N4:19:4~
+Mercury is in the fourth pada of Moola.
+~@N4:20:1~
+Mercury is in the first pada of P.Ashadha.
+~@N4:20:2~
+Mercury is in the second pada of P.Ashadha.
+~@N4:20:3~
+Mercury is in the third pada of P.Ashadha.
+~@N4:20:4~
+Mercury is in the fourth pada of P.Ashadha.
+~@N4:21:1~
+Mercury is in the first pada of U.Ashadha.
+~@N4:21:2~
+Mercury is in the second pada of U.Ashadha.
+~@N4:21:3~
+Mercury is in the third pada of U.Ashadha.
+~@N4:21:4~
+Mercury is in the fourth pada of U.Ashadha.
+~@N4:22:1~
+Mercury is in the first pada of Sravana.
+~@N4:22:2~
+Mercury is in the second pada of Sravana.
+~@N4:22:3~
+Mercury is in the third pada of Sravana.
+~@N4:22:4~
+Mercury is in the fourth pada of Sravana.
+~@N4:23:1~
+Mercury is in the first pada of Dhanishtha.
+~@N4:23:2~
+Mercury is in the second pada of Dhanishtha.
+~@N4:23:3~
+Mercury is in the third pada of Dhanishtha.
+~@N4:23:4~
+Mercury is in the fourth pada of Dhanishtha.
+~@N4:24:1~
+Mercury is in the first pada of Shatabhisha.
+~@N4:24:2~
+Mercury is in the second pada of Shatabhisha.
+~@N4:24:3~
+Mercury is in the third pada of Shatabhisha.
+~@N4:24:4~
+Mercury is in the fourth pada of Shatabhisha.
+~@N4:25:1~
+Mercury is in the first pada of P.Bhadra.
+~@N4:25:2~
+Mercury is in the second pada of P.Bhadra.
+~@N4:25:3~
+Mercury is in the third pada of P.Bhadra.
+~@N4:25:4~
+Mercury is in the fourth pada of P.Bhadra.
+~@N4:26:1~
+Mercury is in the first pada of Uttara Bhadra.
+~@N4:26:2~
+Mercury is in the second pada of Uttara Bhadra.
+~@N4:26:3~
+Mercury is in the third pada of Uttara Bhadra.
+~@N4:26:4~
+Mercury is in the fourth pada of Uttara Bhadra.
+~@N4:27:1~
+Mercury is in the first pada of Revati.
+~@N4:27:2~
+Mercury is in the second pada of Revati.
+~@N4:27:3~
+Mercury is in the third pada of Revati.
+~@N4:27:4~
+Mercury is in the fourth pada of Revati.
+~@G4~
+Mercury is in a Gandanta.
+~&i&~
+Considerations for Jupiter.
+~5Y1~
+Jupiter is conjunct the Sun.
+~5Y2~
+Jupiter is conjunct Moon.
+~5Y3~
+Jupiter is conjunct Mars.
+~5Y4~
+Jupiter is conjunct Mercury.
+~5Y5~
+Jupiter is conjunct Jupiter.
+~5Y6~
+Jupiter is conjunct Venus.
+~5Y7~
+Jupiter is conjunct Saturn.
+~5Y8~
+Jupiter is conjunct Rahu.
+~5Y9~
+Jupiter is conjunct Ketu.
+~5IR1~
+Jupiter is in Aries.
+~5IR2~
+Jupiter is in Taurus.
+~5IR3~
+Jupiter is in Gemini.
+~5IR4~
+Jupiter is in Cancer.
+~5IR5~
+Jupiter is in Leo.
+~5IR6~
+Jupiter is in Virgo.
+~5IR7~
+Jupiter is in Libra.
+~5IR8~
+Jupiter is in Scorpio.
+~5IR9~
+Jupiter is in Sagittarius.
+~5IR10~
+Jupiter is in Capricorn.
+~5IR11~
+Jupiter is in Aquarius.
+~5IR12~
+Jupiter is in Pisces.
+~5I!1~
+Jupiter is in the first house.
+~5I!2~
+Jupiter is in the second house.
+~5I!3~
+Jupiter is in the third house.
+~5I!4~
+Jupiter is in the fourth house.
+~5I!5~
+Jupiter is in the fifth house.
+~5I!6~
+Jupiter is in the sixth house.
+~5I!7~
+Jupiter is in the seventh house.
+~5I!8~
+Jupiter is in the eighth house.
+~5I!9~
+Jupiter is in the 9th house.
+~5I!10~
+Jupiter is in the 10th house.
+~5I!11~
+Jupiter is in the 11th house.
+~5I!12~
+Jupiter is in the 12th house.
+~5K~
+Jupiter is in Kendra.
+~5T~
+Jupiter is in Trikona.
+~5QJ~
+Jupiter is in a Kendra or Trikona.
+~5·~
+Jupiter is in a Kendra or Trikona or the 11th house.
+~$i5~
+Jupiter is the Atma karaka
+~°i5~
+Jupiter is the Amatya karaka.
+~§i5~
+Jupiter is the Bhratri karaka.
+~©i5~
+Jupiter is the Matri karaka.
+~.pi5~
+Jupiter is the Putra karaka.
+~¥i5~
+Jupiter is the Gnati (or Jnati) karaka.
+~®i5~
+Jupiter is the Dara karaka.
+~5iX~
+Jupiter is considered strong in Shad Bala.
+~5iXX~
+Jupiter is the strongest planet in this chart.
+~5v~
+Jupiter is weak in Shad Bala.
+~5P~
+Jupiter is strong in Shad Bala.
+~5iE~
+Jupiter is Exalted in the birth chart.
+~5i.E~
+Jupiter is exalted in the Navamsha chart.
+~5YO~
+Jupiter is conjunct a planet in its own sign.
+~5i ï~
+Jupiter is in a high dignity (own sign, Moola-Trikona or exalted).
+~5YF~
+Jupiter in conjunct a planet that is friendly to Jupiter.
+~5YB~
+Jupiter is conjunct a benefic.
+~5YBS~
+Jupiter is conjunct a strong benefic.
+~5YBU~
+Jupiter is conjunct a benefic is a good dignity (friends, great friends or better dignity).
+~5YBO~
+Jupiter is conjunct a benefic which is in its own sign.
+~5YBE~
+Jupiter is conjunct an exalted benefic.
+~5Y.BK~
+Jupiter in conjunct a benefic in a Kendra.
+~5Y.Br~
+Jupiter is conjunct a retrograde benefic planet.
+~5Yá~
+Jupiter is conjunct a eunuch planet.
+~5Y.F~
+Jupiter is conjunct a female planet.
+~5Y.M~
+Jupiter is conjunct a male planet.
+~5Y.r~
+Jupiter is conjunct a retrograde planet.
+~5i.y~
+Jupiter has lost a planetary war. 
+~5i.Y~
+Jupiter has won a planetary war.
+~5Yb~
+Jupiter is conjunct a combust planet.
+~5ie~
+Jupiter is in enemy's sign or worse dignity.
+~5Yt~
+Jupiter is conjunct a debilitated planet.
+~5Yee~
+Jupiter is conjunct by a planet inimical to Jupiter.
+~5Y.t~
+Jupiter is conjunct a planet which is debilitated in the Navamsha.
+~5im~
+Jupiter is a natural malefic.
+~5imS~
+Jupiter is strong and malefic. 
+~5i.mr~
+Jupiter is retrograde and malefic.
+~5i.mt~
+Jupiter is debilitated and malefic.
+~5i.L~
+Jupiter is the stronger of the two luminaries.
+~5Y.C~
+Jupiter is conjunct the stronger of one of Moon and Lagna.
+~5i.R~
+Jupiter is the stronger of the lord of the 1st and the lord of the 8th.
+~5Qh~
+Jupiter is in a human Rashi.
+~5Qq~
+Jupiter is in a quadruped rashis (4 legged) rashi.
+~5Qw~
+Jupiter is in a watery rashi.  
+~5Qd~
+Jupiter is in a dry Rashi.
+~5Qr~
+Jupiter is retrograde.
+~5V~
+Jupiter is strong in Varga.
+~5w~
+Jupiter is moving towards conjunction with Surya ("waning").
+~5W~
+Jupiter is moving towards opposition with Surya ("waning").
+~5f~
+Jupiter is far away from the Sun ("full from 150 to 210 degrees from Surya).
+~5è~
+Jupiter is Vargottama.
+~5F~
+Jupiter is in a Friend's sign.
+~5G~
+Jupiter is in GreatFriend's sign.
+~5H~
+Jupiter is hemmed Hemmed between benefics.
+~5U~
+Jupiter is in a friendly sign or higher dignity.
+~5M~
+Jupiter is in Mool-trikona.
+~5O~
+Jupiter is in its own sign.
+~5ï~
+Jupiter is in own or exalted.
+~5E~
+Jupiter is exalted.
+~5EE~
+Jupiter is in deep is in exact or deep exaltation (paramocha).
+~5u~
+Jupiter is in low dignity.
+~5c~
+Jupiter is combust
+~5cm~
+Jupiter is combust and related to a malefic
+~5n~
+Jupiter is in a neutral sign.
+~5e~
+Jupiter is in enemy sign.
+~5g~
+Jupiter is in great enemy sign.
+~5ð~
+Jupiter is afflicted (in enemies sign, debilitated or combust).
+~5ë~
+Jupiter is in enemy sign or debilitated.
+~5h~
+Jupiter is hemmed in malefic planets.
+~5d~
+Jupiter is debilitated.
+~5dd~
+Jupiter is in deep debilitation.
+~5º293~
+Jupiter is in the 293rd degree of y.
+~5y3~
+Jupiter is in a planetary war with Mars (the later planet wins).
+~5y4~
+Jupiter is in a planetary war with Mercury (the later planet wins).
+~5y5~
+Jupiter is in a planetary war with Jupiter (the later planet wins).
+~5Y6~
+Jupiter is in a planetary war with Venus (the later planet wins).
+~5y7~
+Jupiter is in a planetary war with Saturn (the later planet wins).
+~5R1~
+Jupiter is aspected or conjunct the Sun.
+~5R2~
+Jupiter is aspected or conjunct Moon.
+~5R3~
+Jupiter is aspected or conjunct Mars.
+~5R4~
+Jupiter is aspected or conjunct Mercury.
+~5R5~
+Jupiter is aspected or conjunct Jupiter.
+~5R6~
+Jupiter is aspected or conjunct Venus.
+~5R7~
+Jupiter is aspected or conjunct Saturn.
+~5R8~
+Jupiter is aspected or conjunct Rahu.
+~5R9~
+Jupiter is aspected or conjunct Ketu.
+~5A1~
+Jupiter is associated with the Sun.
+~5A2~
+Jupiter is associated with Moon.
+~5A3~
+Jupiter is associated with Mars.
+~5A4~
+Jupiter is associated with Mercury.
+~5A5~
+Jupiter is associated with Jupiter.
+~5A6~
+Jupiter is associated with Venus.
+~5A7~
+Jupiter is associated with Saturn.
+~5A8~
+Jupiter is associated with Rahu.
+~5A9~
+Jupiter is associated with Ketu.
+~5D1~
+Jupiter is aspected by the Sun.
+~5D2~
+Jupiter is aspected by Moon.
+~5D3~
+Jupiter is aspected by Mars.
+~5D4~
+Jupiter is aspected by Mercury.
+~5D5~
+Jupiter is aspected by Jupiter.
+~5D6~
+Jupiter is aspected by Venus.
+~5D7~
+Jupiter is aspected by Saturn.
+~5D8~
+Jupiter is aspected by Rahu.
+~5D9~
+Jupiter is aspected by Ketu.
+~5l1~
+Jupiter exchanges house with the Sun.
+~5l2~
+Jupiter exchanges house with Moon.
+~5l3~
+Jupiter exchanges house with Mars.
+~5l4~
+Jupiter exchanges house with Mercury.
+~5l5~
+Jupiter exchanges house with Jupiter.
+~5l6~
+Jupiter exchanges house with Venus.
+~5l7~
+Jupiter exchanges house with Saturn.
+~5l8~
+Jupiter exchanges house with Rahu.
+~5l9~
+Jupiter exchanges house with Ketu.
+~5X1~
+Jupiter is associated or aspected by the Sun.
+~5X2~
+Jupiter is associated or aspected by Moon.
+~5X3~
+Jupiter is associated or aspected by Mars.
+~5X4~
+Jupiter is associated or aspected by Mercury.
+~5X5~
+Jupiter is associated or aspected by Jupiter.
+~5X6~
+Jupiter is associated or aspected by Venus.
+~5X7~
+Jupiter is associated or aspected by Saturn.
+~5X8~
+Jupiter is associated or aspected by Rahu.
+~5X9~
+Jupiter is associated or aspected by Ketu.
+~!1D5~
+Jupiter is aspecting the first house.
+~!2D5~
+Jupiter is aspecting the second house.
+~!3D5~
+Jupiter is aspecting the third house.
+~!4D5~
+Jupiter is aspecting the fourth house.
+ ~!5D5~
+Jupiter is aspecting the fifth house.
+~!6D5~
+Jupiter is aspecting the sixth house.
+~!7D5~
+Jupiter is aspecting the seventh house.
+~!8D5~
+Jupiter is aspecting the eighth house.
+~!9D5~
+Jupiter is aspecting the 9th house.
+~!10D5~
+Jupiter is aspecting the 10th house.
+~!11D5~
+Jupiter is aspecting the 11th house.
+~!12D5~
+Jupiter is aspecting the 12th house.
+~5I!K~
+Jupiter is in a Kendra.
+~5I!D~
+Jupiter is in a Panaphara house.
+~5I!A~
+Jupiter is in an Apoklima house.
+~5I!H~
+Jupiter is in a Dharma.
+~5I!R~
+Jupiter is in an Artha house.
+~5I!O~
+Jupiter is in a Kama house.
+~5I!M~
+Jupiter is in a Moksha house.
+~5I!T~
+Jupiter is in a Trikona house.
+~5I!U~
+Jupiter is in a Upachaya house.
+~5I!a~
+Jupiter is in a Dusthana or Trik house.
+~5I!C~
+Jupiter is in a Chaturasra house.
+~5ISB2~
+Jupiter is in Parijatamsha.
+~5ISB3~
+Jupiter is in Uttamamsha.
+~5ISB4~
+Jupiter is in Gopuramsha.
+~5ISB5~
+Jupiter is in Simhasanamsha.
+~5ISB6~
+Jupiter is in Paravatamsha.
+~5ISB7~
+Jupiter is in Devalokamsha.
+~5ISB8~
+Jupiter is in Brahmalokamsha (Suralokamsha).
+~5ISB9~
+Jupiter is in Iravatamsha.
+~5ISB10~
+Jupiter is in Vaishnavamsha.
+~5ISB11~
+Jupiter is in Saivamsha.
+~5ISB12~
+Jupiter is in Bhasvadamsha.
+~5ISB13~
+Jupiter is in Vaisheshikamsha.
+~5Isy~
+Jupiter is in Sayan Avastha.
+~5Isu~
+Jupiter is in Upavesan Avastha.
+~5Isn~
+Jupiter is in Netrapani Avastha.
+~5Isp~
+Jupiter is in Prakash Avastha.
+~5Isg~
+Jupiter is in Gaman Avastha.
+~5Isa~
+Jupiter is in Agaman Avastha.
+~5Isb~
+Jupiter is in Sabh Avastha.
+~5Isv~
+Jupiter is in Agam Avastha.
+~5Ish~
+Jupiter is in Bojan Avastha.
+~5Ist~
+Jupiter is in Nritya Lips Avastha.
+~5Isk~
+Jupiter is in Kautuk Avastha.
+~5Isi~
+Jupiter is in Nidr Avastha.
+~5ISL~
+Jupiter is in Lajit Avastha.
+~5ISG~
+Jupiter is in Garvit Avastha.
+~5ISU~
+Jupiter is in Kshudhit Avastha.
+~5IST~
+Jupiter is in Trushit Avastha.
+~5ISM~
+Jupiter is in Mudit Avastha.
+~5ISK~
+Jupiter is in Kshobit Avastha.
+~5ISC~
+Jupiter is in cruel Shastyamsha
+~5ISW1~
+Jupiter is more often in the Shadvarga of the Sun than of any other graha.
+~5ISW2~
+Jupiter is more often in the Shadvarga of the Moon than of any other graha
+~5ISW3~
+Jupiter is more often in the Shadvarga of Mars than of any other graha
+~5ISW4~
+Jupiter is more often in the Shadvarga of Mercury than of any other graha
+~5ISW5~
+Jupiter is more often in the Shadvarga of Jupiter than of any other graha
+~5ISW6~
+Jupiter is more often in the Shadvarga of Venus than of any other graha
+~5ISW7~
+Jupiter is more often in the Shadvarga of Saturn than of any other graha
+@SB0:5:s~
+Jupiter is strong in Shadbala (six-fold strength).
+@SB0:5:v~
+Jupiter is weak in Shadbala (six-fold strength).
+~@SB1:5:s~ 
+Jupiter is strong in Sthanabala (positional strength).
+~@SB1:5:v~ 
+Jupiter is weak in Sthanabala (positional strength).
+~@SB2:5:s~
+Jupiter is strong in Digbala (directional strength).
+~@SB2:5:v~ 
+Jupiter is weak in Digbala (directional strength).
+~@SB5:5:s~
+Jupiter is strong in Kalabala (time strength).
+~@SB5:5:v~ 
+Jupiter is weak in Kalabala (time strength).
+~@SB6:5:s~ 
+Jupiter is strong in Chestabala (motional strength).
+~@SB6:5:v~
+Jupiter is weak in Chestabala (motional strength).
+~@SB7:5:s~ 
+Jupiter is strong in Ayanabala (motional strength).
+~@SB7:5:v~ 
+Jupiter is weak in Ayanabala (motional strength).
+~@Kb5~
+Jupiter is in a bird or feathered Drekkana.
+~@Ks5~
+Jupiter is in a serpent Drekkana.
+~@Ka5~
+Jupiter is in an armed Drekkana.
+~@Kq5~
+Jupiter is in a quadruped Drekkana.
+~@K5~
+Jupiter is in a male Drekkana.
+~@Kf5~
+Jupiter is in a female Drekkana.
+~@N5:1:1~
+Jupiter is in the first pada of Aswini.
+~@N5:1:2~
+Jupiter is in the second pada of Aswini.
+~@N5:1:3~
+Jupiter is in the third pada of Aswini.
+~@N5:1:4~
+Jupiter is in the fourth pada of Aswini.
+~@N5:2:1~
+Jupiter is in the first pada of Bharani.
+~@N5:2:2~
+Jupiter is in the second pada of Bharani.
+~@N5:2:3~
+Jupiter is in the third pada of Bharani.
+~@N5:2:4~
+Jupiter is in the fourth pada of Bharani.
+~@N5:3:1~
+Jupiter is in the first pada of Krittika.
+~@N5:3:2~
+Jupiter is in the second pada of Krittika.
+~@N5:3:3~
+Jupiter is in the third pada of Krittika.
+~@N5:3:4~
+Jupiter is in the fourth pada of Krittika.
+~@N5:4:1~
+Jupiter is in the first pada of Rohini.
+~@N5:4:2~
+Jupiter is in the second pada of Rohini.
+~@N5:4:3~
+Jupiter is in the third pada of Rohini.
+~@N5:4:4~
+Jupiter is in the fourth pada of Rohini.
+~@N5:5:1~
+Jupiter is in the first pada of Mrigashira.
+~@N5:5:2~
+Jupiter is in the second pada of Mrigashira.
+~@N5:5:3~
+Jupiter is in the third pada of Mrigashira.
+~@N5:5:4~
+Jupiter is in the fourth pada of Mrigashira.
+~@N5:6:1~
+Jupiter is in the first pada of Ardra.
+~@N5:6:2~
+Jupiter is in the second pada of Ardra.
+~@N5:6:3~
+Jupiter is in the third pada of Ardra.
+~@N5:6:4~
+Jupiter is in the fourth pada of Ardra.
+~@N5:7:1~
+Jupiter is in the first pada of Punarvasu.
+~@N5:7:2~
+Jupiter is in the second pada of Punarvasu.
+~@N5:7:3~
+Jupiter is in the third pada of Punarvasu.
+~@N5:7:4~
+Jupiter is in the fourth pada of Punarvasu.
+~@N5:8:1~
+Jupiter is in the first pada of Pushyami.
+~@N5:8:2~
+Jupiter is in the second pada of Pushyami.
+~@N5:8:3~
+Jupiter is in the third pada of Pushyami.
+~@N5:8:4~
+Jupiter is in the fourth pada of Pushyami.
+~@N5:9:1~
+Jupiter is in the first pada of Ashlesha.
+~@N5:9:2~
+Jupiter is in the second pada of Ashlesha.
+~@N5:9:3~
+Jupiter is in the third pada of Ashlesha.
+~@N5:9:4~
+Jupiter is in the fourth pada of Ashlesha.
+~@N5:10:1~
+Jupiter is in the first pada of Magha.
+~@N5:10:2~
+Jupiter is in the second pada of Magha.
+~@N5:10:3~
+Jupiter is in the third pada of Magha.
+~@N5:10:4~
+Jupiter is in the fourth pada of Magha.
+~@N5:11:1~
+Jupiter is in the first pada of P.Phalguni.
+~@N5:11:2~
+Jupiter is in the second pada of P.Phalguni.
+~@N5:11:3~
+Jupiter is in the third pada of P.Phalguni.
+~@N5:11:4~
+Jupiter is in the fourth pada of P.Phalguni.
+~@N5:12:1~
+Jupiter is in the first pada of U.Phalguni.
+~@N5:12:2~
+Jupiter is in the second pada of U.Phalguni.
+~@N5:12:3~
+Jupiter is in the third pada of U.Phalguni.
+~@N5:12:4~
+Jupiter is in the fourth pada of U.Phalguni.
+~@N5:13:1~
+Jupiter is in the first pada of Hasta.
+~@N5:13:2~
+Jupiter is in the second pada of Hasta.
+~@N5:13:3~
+Jupiter is in the third pada of Hasta.
+~@N5:13:4~
+Jupiter is in the fourth pada of Hasta.
+~@N5:14:1~
+Jupiter is in the first pada of Chitra.
+~@N5:14:2~
+Jupiter is in the second pada of Chitra.
+~@N5:14:3~
+Jupiter is in the third pada of Chitra.
+~@N5:14:4~
+Jupiter is in the fourth pada of Chitra.
+~@N5:15:1~
+Jupiter is in the first pada of Swati.
+~@N5:15:2~
+Jupiter is in the second pada of Swati.
+~@N5:15:3~
+Jupiter is in the third pada of Swati.
+~@N5:15:4~
+Jupiter is in the fourth pada of Swati.
+~@N5:16:1~
+Jupiter is in the first pada of Vishaka.
+~@N5:16:2~
+Jupiter is in the second pada of Vishaka.
+~@N5:16:3~
+Jupiter is in the third pada of Vishaka.
+~@N5:16:4~
+Jupiter is in the fourth pada of Vishaka.
+~@N5:17:1~
+Jupiter is in the first pada of Anuradha.
+~@N5:17:2~
+Jupiter is in the second pada of Anuradha.
+~@N5:17:3~
+Jupiter is in the third pada of Anuradha.
+~@N5:17:4~
+Jupiter is in the fourth pada of Anuradha.
+~@N5:18:1~
+Jupiter is in the first pada of Jyestha.
+~@N5:18:2~
+Jupiter is in the second pada of Jyestha.
+~@N5:18:3~
+Jupiter is in the third pada of Jyestha.
+~@N5:18:4~
+Jupiter is in the fourth pada of Jyestha.
+~@N5:19:1~
+Jupiter is in the first pada of Moola.
+~@N5:19:2~
+Jupiter is in the second pada of Moola.
+~@N5:19:3~
+Jupiter is in the third pada of Moola.
+~@N5:19:4~
+Jupiter is in the fourth pada of Moola.
+~@N5:20:1~
+Jupiter is in the first pada of P.Ashadha.
+~@N5:20:2~
+Jupiter is in the second pada of P.Ashadha.
+~@N5:20:3~
+Jupiter is in the third pada of P.Ashadha.
+~@N5:20:4~
+Jupiter is in the fourth pada of P.Ashadha.
+~@N5:21:1~
+Jupiter is in the first pada of U.Ashadha.
+~@N5:21:2~
+Jupiter is in the second pada of U.Ashadha.
+~@N5:21:3~
+Jupiter is in the third pada of U.Ashadha.
+~@N5:21:4~
+Jupiter is in the fourth pada of U.Ashadha.
+~@N5:22:1~
+Jupiter is in the first pada of Sravana.
+~@N5:22:2~
+Jupiter is in the second pada of Sravana.
+~@N5:22:3~
+Jupiter is in the third pada of Sravana.
+~@N5:22:4~
+Jupiter is in the fourth pada of Sravana.
+~@N5:23:1~
+Jupiter is in the first pada of Dhanishtha.
+~@N5:23:2~
+Jupiter is in the second pada of Dhanishtha.
+~@N5:23:3~
+Jupiter is in the third pada of Dhanishtha.
+~@N5:23:4~
+Jupiter is in the fourth pada of Dhanishtha.
+~@N5:24:1~
+Jupiter is in the first pada of Shatabhisha.
+~@N5:24:2~
+Jupiter is in the second pada of Shatabhisha.
+~@N5:24:3~
+Jupiter is in the third pada of Shatabhisha.
+~@N5:24:4~
+Jupiter is in the fourth pada of Shatabhisha.
+~@N5:25:1~
+Jupiter is in the first pada of P.Bhadra.
+~@N5:25:2~
+Jupiter is in the second pada of P.Bhadra.
+~@N5:25:3~
+Jupiter is in the third pada of P.Bhadra.
+~@N5:25:4~
+Jupiter is in the fourth pada of P.Bhadra.
+~@N5:26:1~
+Jupiter is in the first pada of Uttara Bhadra.
+~@N5:26:2~
+Jupiter is in the second pada of Uttara Bhadra.
+~@N5:26:3~
+Jupiter is in the third pada of Uttara Bhadra.
+~@N5:26:4~
+Jupiter is in the fourth pada of Uttara Bhadra.
+~@N5:27:1~
+Jupiter is in the first pada of Revati.
+~@N5:27:2~
+Jupiter is in the second pada of Revati.
+~@N5:27:3~
+Jupiter is in the third pada of Revati.
+~@N5:27:4~
+Jupiter is in the fourth pada of Revati.
+~@G5~
+Jupiter is in a Gandanta.
+~&i&~
+Considerations for Venus.
+~6Y1~
+Venus is conjunct the Sun.
+~6Y2~
+Venus is conjunct Moon.
+~6Y3~
+Venus is conjunct Mars.
+~6Y4~
+Venus is conjunct Mercury.
+~6Y5~
+Venus is conjunct Jupiter.
+~6Y6~
+Venus is conjunct Venus.
+~6Y7~
+Venus is conjunct Saturn.
+~6Y8~
+Venus is conjunct Rahu.
+~6Y9~
+Venus is conjunct Ketu.
+~6IR1~
+Venus is in Aries.
+~6IR2~
+Venus is in Taurus.
+~6IR3~
+Venus is in Gemini.
+~6IR4~
+Venus is in Cancer.
+~6IR5~
+Venus is in Leo.
+~6IR6~
+Venus is in Virgo.
+~6IR7~
+Venus is in Libra.
+~6IR8~
+Venus is in Scorpio.
+~6IR9~
+Venus is in Sagittarius.
+~6IR10~
+Venus is in Capricorn.
+~6IR11~
+Venus is in Aquarius.
+~6IR12~
+Venus is in Pisces.
+~6I!1~
+Venus is in the first house.
+~6I!2~
+Venus is in the second house.
+~6I!3~
+Venus is in the third house.
+~6I!4~
+Venus is in the fourth house.
+~6I!5~
+Venus is in the fifth house.
+~6I!6~
+Venus is in the sixth house.
+~6I!7~
+Venus is in the seventh house.
+~6I!8~
+Venus is in the eighth house.
+~6I!9~
+Venus is in the 9th house.
+~6I!10~
+Venus is in the 10th house.
+~6I!11~
+Venus is in the 11th house.
+~6I!12~
+Venus is in the 12th house.
+~6K~
+Venus is in Kendra.
+~6T~
+Venus is in Trikona.
+~6QJ~
+Venus is in a Kendra or Trikona.
+~6·~
+Venus is in a Kendra or Trikona or the 11th house.
+~$i6~
+Venus is the Atma karaka
+~°i6~
+Venus is the Amatya karaka.
+~§i6~
+Venus is the Bhratri karaka.
+~©i6~
+Venus is the Matri karaka.
+~.pi6~
+Venus is the Putra karaka.
+~¥i6~
+Venus is the Gnati (or Jnati) karaka.
+~®i6~
+Venus is the Dara karaka.
+~6iX~
+Venus is considered strong in Shad Bala.
+~6iXX~
+Venus is the strongest planet in this chart.
+~6v~
+Venus is weak in Shad Bala.
+~6P~
+Venus is strong in Shad Bala.
+~6iE~
+Venus is Exalted in the birth chart.
+~6i.E~
+Venus is exalted in the Navamsha chart.
+~6YO~
+Venus is conjunct a planet in its own sign.
+~6i ï~
+Venus is in a high dignity (own sign, Moola-Trikona or exalted).
+~6YF~
+Venus in conjunct a planet that is friendly to Venus.
+~6YB~
+Venus is conjunct a benefic.
+~6YBS~
+Venus is conjunct a strong benefic.
+~6YBU~
+Venus is conjunct a benefic is a good dignity (friends, great friends or better dignity).
+~6YBO~
+Venus is conjunct a benefic which is in its own sign.
+~6YBE~
+Venus is conjunct an exalted benefic.
+~6Y.BK~
+Venus in conjunct a benefic in a Kendra.
+~6Y.Br~
+Venus is conjunct a retrograde benefic planet.
+~6Yá~
+Venus is conjunct a eunuch planet.
+~6Y.F~
+Venus is conjunct a female planet.
+~6Y.M~
+Venus is conjunct a male planet.
+~6Y.r~
+Venus is conjunct a retrograde planet.
+~6i.y~
+Venus has lost a planetary war. 
+~6i.Y~
+Venus has won a planetary war.
+~6Yb~
+Venus is conjunct a combust planet.
+~6ie~
+Venus is in enemy's sign or worse dignity.
+~6Yt~
+Venus is conjunct a debilitated planet.
+~6Yee~
+Venus is conjunct by a planet inimical to Venus.
+~6Y.t~
+Venus is conjunct a planet which is debilitated in the Navamsha.
+~6im~
+Venus is a natural malefic.
+~6imS~
+Venus is strong and malefic. 
+~6i.mr~
+Venus is retrograde and malefic.
+~6i.mt~
+Venus is debilitated and malefic.
+~6i.L~
+Venus is the stronger of the two luminaries.
+~6Y.C~
+Venus is conjunct the stronger of one of Moon and Lagna.
+~6i.R~
+Venus is the stronger of the lord of the 1st and the lord of the 8th.
+~6Qh~
+Venus is in a human Rashi.
+~6Qq~
+Venus is in a quadruped rashis (4 legged) rashi.
+~6Qw~
+Venus is in a watery rashi.
+~6Qd~
+Venus is in a dry Rashi.
+~6Qr~
+Venus is retrograde.
+~6V~
+Venus is strong in Varga.
+~6w~
+Venus is moving towards conjunction with Surya ("waning").
+~6W~
+Venus is moving towards opposition with Surya ("waning").
+~6f~
+Venus is far away from the Sun ("full from 150 to 210 degrees from Surya).
+~6è~
+Venus is Vargottama.
+~6F~
+Venus is in a Friend's sign.
+~6G~
+Venus is in GreatFriend's sign.
+~6H~
+Venus is hemmed Hemmed between benefics.
+~6U~
+Venus is in a friendly sign or higher dignity.
+~6M~
+Venus is in Mool-trikona.
+~6O~
+Venus is in its own sign.
+~6ï~
+Venus is in own or exalted.
+~6E~
+Venus is exalted.
+~6EE~
+Venus is in deep is in exact or deep exaltation (paramocha).
+~6u~
+Venus is in low dignity.
+~6c~
+Venus is combust
+~6cm~
+Venus is combust and related to a malefic
+~6n~
+Venus is in a neutral sign.
+~6e~
+Venus is in enemy sign.
+~6g~
+Venus is in great enemy sign.
+~6ð~
+Venus is afflicted (in enemies sign, debilitated or combust).
+~6ë~
+Venus is in enemy sign or debilitated.
+~6h~
+Venus is hemmed in malefic planets.
+~6d~
+Venus is debilitated.
+~6dd~
+Venus is in deep debilitation.
+~6º293~
+Venus is in the 293rd degree of y.
+~6y3~
+Venus is in a planetary war with Mars (the later planet wins).
+~6y4~
+Venus is in a planetary war with Mercury (the later planet wins).
+~6y5~
+Venus is in a planetary war with Jupiter (the later planet wins).
+~6Y6~
+Venus is in a planetary war with Venus (the later planet wins).
+~6y7~
+Venus is in a planetary war with Saturn (the later planet wins).
+~6R1~
+Venus is aspected or conjunct the Sun.
+~6R2~
+Venus is aspected or conjunct Moon.
+~6R3~
+Venus is aspected or conjunct Mars.
+~6R4~
+Venus is aspected or conjunct Mercury.
+~6R5~
+Venus is aspected or conjunct Jupiter.
+~6R6~
+Venus is aspected or conjunct Venus.
+~6R7~
+Venus is aspected or conjunct Saturn.
+~6R8~
+Venus is aspected or conjunct Rahu.
+~6R9~
+Venus is aspected or conjunct Ketu.
+~6A1~
+Venus is associated with the Sun.
+~6A2~
+Venus is associated with Moon.
+~6A3~
+Venus is associated with Mars.
+~6A4~
+Venus is associated with Mercury.
+~6A5~
+Venus is associated with Jupiter.
+~6A6~
+Venus is associated with Venus.
+~6A7~
+Venus is associated with Saturn.
+~6A8~
+Venus is associated with Rahu.
+~6A9~
+Venus is associated with Ketu.
+~6D1~
+Venus is aspected by the Sun.
+~6D2~
+Venus is aspected by Moon.
+~6D3~
+Venus is aspected by Mars.
+~6D4~
+Venus is aspected by Mercury.
+~6D5~
+Venus is aspected by Jupiter.
+~6D6~
+Venus is aspected by Venus.
+~6D7~
+Venus is aspected by Saturn.
+~6D8~
+Venus is aspected by Rahu.
+~6D9~
+Venus is aspected by Ketu.
+~6l1~
+Venus exchanges house with the Sun.
+~6l2~
+Venus exchanges house with Moon.
+~6l3~
+Venus exchanges house with Mars.
+~6l4~
+Venus exchanges house with Mercury.
+~6l5~
+Venus exchanges house with Jupiter.
+~6l6~
+Venus exchanges house with Venus.
+~6l7~
+Venus exchanges house with Saturn.
+~6l8~
+Venus exchanges house with Rahu.
+~6l9~
+Venus exchanges house with Ketu.
+~6X1~
+Venus is associated or aspected by the Sun.
+~6X2~
+Venus is associated or aspected by Moon.
+~6X3~
+Venus is associated or aspected by Mars.
+~6X4~
+Venus is associated or aspected by Mercury.
+~6X5~
+Venus is associated or aspected by Jupiter.
+~6X6~
+Venus is associated or aspected by Venus.
+~6X7~
+Venus is associated or aspected by Saturn.
+~6X8~
+Venus is associated or aspected by Rahu.
+~6X9~
+Venus is associated or aspected by Ketu.
+~!1D6~
+Venus is aspecting the first house.
+~!2D6~
+Venus is aspecting the second house.
+~!3D6~
+Venus is aspecting the third house.
+~!4D6~
+Venus is aspecting the fourth house.
+ ~!5D6~
+Venus is aspecting the fifth house.
+~!6D6~
+Venus is aspecting the sixth house.
+~!7D6~
+Venus is aspecting the seventh house.
+~!8D6~
+Venus is aspecting the eighth house.
+~!9D6~
+Venus is aspecting the 9th house.
+~!10D6~
+Venus is aspecting the 10th house.
+~!11D6~
+Venus is aspecting the 11th house.
+~!12D6~
+Venus is aspecting the 12th house.
+~6I!K~
+Venus is in a Kendra.
+~6I!D~
+Venus is in a Panaphara house.
+~6I!A~
+Venus is in an Apoklima house.
+~6I!H~
+Venus is in a Dharma.
+~6I!R~
+Venus is in an Artha house.
+~6I!O~
+Venus is in a Kama house.
+~6I!M~
+Venus is in a Moksha house.
+~6I!T~
+Venus is in a Trikona house.
+~6I!U~
+Venus is in a Upachaya house.
+~6I!a~
+Venus is in a Dusthana or Trik house.
+~6I!C~
+Venus is in a Chaturasra house.
+~6ISB2~
+Venus is in Parijatamsha.
+~6ISB3~
+Venus is in Uttamamsha.
+~6ISB4~
+Venus is in Gopuramsha.
+~6ISB5~
+Venus is in Simhasanamsha.
+~6ISB6~
+Venus is in Paravatamsha.
+~6ISB7~
+Venus is in Devalokamsha.
+~6ISB8~
+Venus is in Brahmalokamsha (Suralokamsha).
+~6ISB9~
+Venus is in Iravatamsha.
+~6ISB10~
+Venus is in Vaishnavamsha.
+~6ISB11~
+Venus is in Saivamsha.
+~6ISB12~
+Venus is in Bhasvadamsha.
+~6ISB13~
+Venus is in Vaisheshikamsha.
+~6Isy~
+Venus is in Sayan Avastha.
+~6Isu~
+Venus is in Upavesan Avastha.
+~6Isn~
+Venus is in Netrapani Avastha.
+~6Isp~
+Venus is in Prakash Avastha.
+~6Isg~
+Venus is in Gaman Avastha.
+~6Isa~
+Venus is in Agaman Avastha.
+~6Isb~
+Venus is in Sabh Avastha.
+~6Isv~
+Venus is in Agam Avastha.
+~6Ish~
+Venus is in Bojan Avastha.
+~6Ist~
+Venus is in Nritya Lips Avastha.
+~6Isk~
+Venus is in Kautuk Avastha.
+~6Isi~
+Venus is in Nidr Avastha.
+~6ISL~
+Venus is in Lajit Avastha.
+~6ISG~
+Venus is in Garvit Avastha.
+~6ISU~
+Venus is in Kshudhit Avastha.
+~6IST~
+Venus is in Trushit Avastha.
+~6ISM~
+Venus is in Mudit Avastha.
+~6ISK~
+Venus is in Kshobit Avastha.
+~6ISC~
+Venus is in cruel Shastyamsha
+~6ISW1~
+Venus is more often in the Shadvarga of the Sun than of any other graha.
+~6ISW2~
+Venus is more often in the Shadvarga of the Moon than of any other graha
+~6ISW3~
+Venus is more often in the Shadvarga of Mars than of any other graha
+~6ISW4~
+Venus is more often in the Shadvarga of Mercury than of any other graha
+~6ISW5~
+Venus is more often in the Shadvarga of Jupiter than of any other graha
+~6ISW6~
+Venus is more often in the Shadvarga of Venus than of any other graha
+~6ISW7~
+Venus is more often in the Shadvarga of Saturn than of any other graha
+@SB0:6:s~
+Venus is strong in Shadbala (six-fold strength).
+@SB0:6:v~
+Venus is weak in Shadbala (six-fold strength).
+~@SB1:6:s~ 
+Venus is strong in Sthanabala (positional strength).
+~@SB1:6:v~ 
+Venus is weak in Sthanabala (positional strength).
+~@SB2:6:s~
+Venus is strong in Digbala (directional strength).
+~@SB2:6:v~ 
+Venus is weak in Digbala (directional strength).
+~@SB5:6:s~ 
+Venus is strong in Kalabala (time strength).
+~@SB5:6:v~ 
+Venus is weak in Kalabala (time strength).
+~@SB6:6:s~ 
+Venus is strong in Chestabala (motional strength).
+~@SB6:6:v~
+Venus is weak in Chestabala (motional strength).
+~@SB7:6:s~ 
+Venus is strong in Ayanabala (motional strength).
+~@SB7:6:v~
+Venus is weak in Ayanabala (motional strength).
+~@Kb6~
+Venus is in a bird or feathered Drekkana.
+~@Ks6~
+Venus is in a serpent Drekkana.
+~@Ka6~
+Venus is in an armed Drekkana.
+~@Kq6~
+Venus is in a quadruped Drekkana.
+~@K6~
+Venus is in a male Drekkana.
+~@Kf6~
+Venus is in a female Drekkana.
+~@N6:1:1~
+Venus is in the first pada of Aswini.
+~@N6:1:2~
+Venus is in the second pada of Aswini.
+~@N6:1:3~
+Venus is in the third pada of Aswini.
+~@N6:1:4~
+Venus is in the fourth pada of Aswini.
+~@N6:2:1~
+Venus is in the first pada of Bharani.
+

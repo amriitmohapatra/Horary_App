@@ -1,0 +1,289 @@
+% =============================================================================
+\section{Divisional charts (vargas)}
+\label{sec:vargas}
+% =============================================================================
+
+\subsection{What PL7 offers}
+
+The manual lists sixteen Parashari vargas (D1, D2, D3, D4, D7, D9, D10, D12, D16, D20,
+D24, D27, D30, D40, D45, D60) and four Tajika vargas: Panchamsha D5, Shashtamsha D6,
+Ashtamsha D8 and Ekadashamsha D11 \tagDOC\ \parencite[pp.~40, 52--53]{geovision2006pl7}. It
+also mentions ``alternate'' vargas marked II or III, without defining them. PL7's own
+documentation gives \emph{no} computational rule for any varga; the bundled translation of
+BPHS (\texttt{CHAP/CHAP06.TXT}) states the classical rules for D9, D10 and D24 only.
+
+\subsection{What the code actually does}
+
+All vargas go through one dispatcher, \texttt{fcn.0057d9cf}, a 31-way \texttt{switch} on
+the varga's position in the list. A byte table at \texttt{0x5f47b8} gives the divisor of
+each position: $1, 2, 3, 4, 7, 9, 10, 12, 16, 20, 24, 27, 30, 40, 45, 60$ (positions
+1--16), then $5, 6, 8, 11$ (the Tajika four), then $150$ (Nadiamsha), then ten alternate
+vargas with divisors $2, 2, 3, 4, 10, 12, 30, 5, 16, 11$ \tagBIN. There are two kinds of
+routine:
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Cyclic.} \texttt{fcn.0057d1e1} returns $n\lambda \bmod 360^\circ$, where
+  $\lambda$ is the sidereal longitude and $n$ the divisor. Counting continuously from Aries
+  in this way \emph{is} the standard Parashari rule for D7, D9, D16, D20 and D27; for D9 it
+  reproduces ``movable from itself, fixed from the 9th, dual from the 5th''.
+  \item \textbf{Sign-dependent.} D3, D4, D10, D12, D24, D30, D40, D45, D60, D5, D6, D8,
+  D11 and two alternates have their own routines, which take the sign number $s$ (Aries
+  $=1$) and the degrees $d$ within the sign.
+\end{itemize}
+
+I re-implemented the routines you asked about exactly as decoded
+(\texttt{scripts/pl7\_vargas.py}); \autoref{tab:vargas} gives each rule and the starting
+sign for every sign.
+
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption[Decoded varga rules]{Varga rules decoded from \texttt{PL7.exe} \tagBIN.
+  ``Start'' is the sign of the first amsa for Aries, Taurus, Gemini \ldots\ Pisces, taken
+  from the re-implementation. $s$ = sign number (Aries $=1$); $d$ = degrees in the sign.}
+  \label{tab:vargas}
+  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{3.7cm}}
+    \toprule
+    Varga & Routine & Rule & Start (Ar \ldots Pi) \\
+    \midrule
+    D9 Navamsha & \texttt{0057d1e1} & $9\lambda \bmod 360$ (cyclic from Aries) & Ar Cp Li Cn, repeating \\
+    D10 Dashamsha & \texttt{0057d55c} & odd $s$: from the sign itself; even $s$: from the 9th & Ar Cp Ge Pi Le Ta Li Cn Sg Vi Aq Sc \\
+    D24 Chatur\-vimshamsha & \texttt{0057d675} & odd $s$: from Leo; even $s$: from Cancer & Le Cn, repeating \\
+    D6 Shashtamsha & \texttt{0057d4dc} & odd $s$: from Aries; even $s$: from Libra & Ar Li, repeating \\
+    D8 Ashtamsha & \texttt{0057d510} & movable: from Aries; fixed: from Sagittarius; dual: from Leo & Ar Sg Le, repeating \\
+    D11 Ekadashamsha & \texttt{0057d5a6} & $(11d/30 + 1 - s)\times 30$, identical to $11\lambda \bmod 360$ (cyclic from Aries) & Ar Pi Aq Cp Sg Sc Li Vi Le Cn Ge Ta \\
+    D11 alternate (position 31) & \texttt{0057d5d6} & $(1 - 11d/30)\times 30$: every sign starts at Aries and counts \emph{backwards} & Ar for all (2nd amsa Pi) \\
+    D16 alternate (position 30) & \texttt{0057d5fb} & odd $s$: forwards from the sign; even $s$: backwards & Ar Le Ge Li Le Sg \ldots \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{notebox}\ksimple On D11: PL7 has two Ekadashamsha rules and no rule named
+Rudramsha or ``Iyer''. Its main D11 is the plain continuous count from Aries; its alternate
+D11 counts backwards from Aries for every sign. If the ``Iyer'' D11 you have in mind is a
+third rule, PL7 does not implement it, and Kala Chakra has no D11 at all. Given the rule,
+it can be added to Kala Chakra as a single function.\end{notebox}
+
+Varga strength (Vimshopaka) is offered on 6-, 7-, 10- and 16-varga schemes with scores of
+5--20, and the planetary table's ``vimshopaka bala'' column uses the 10-varga scheme
+\tagDOC\ \parencite[p.~145]{geovision2006pl7}. The per-varga weights are not documented and
+were not decoded.
+
+% =============================================================================
+\section{Bhava chalit (the Bhava chart)}
+\label{sec:bhava}
+% =============================================================================
+
+PL7 does not use the name ``Bhava Chalit''; the equivalent is the \emph{Bhava chart}
+\tagDOC. Three house divisions are offered as special charts
+\parencite[p.~56]{geovision2006pl7}:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Bhava (Sripati)}, centred on the ascendant. The tutorial
+  (\texttt{Extras1/pib11770}) defines it: the ascendant and MC are the madhyas (centres) of
+  houses 1 and 10 and the opposite points those of 7 and 4; ``the spaces in between are
+  further divided in 3 equal portions''; and ``the Bhava Sandhis are placed halfway between
+  each pair of adjacent houses''. This is Porphyry-style trisection of each quadrant,
+  applied to bhava \emph{centres}.
+  \item \textbf{Bhava (equal)}: each house spans $15^\circ$ either side of a madhya set by
+  the ascendant degree.
+  \item \textbf{Krishnamurti chart (Placidus)}, in which the ascendant is the
+  \emph{beginning} of the first house; this is the KP cusp chart of \autoref{sec:placidus}.
+\end{enumerate}
+
+\begin{keybox}\kidea PL7's ``bhava chalit'' is a Sripati chart: \emph{centres} at Asc and MC
+with quadrant trisection. Kala Chakra's houses are KP-style \emph{beginnings}
+(Topocentric cusps). The two answer different questions, so a planet can legitimately sit
+in different houses in the two programs even with identical longitudes.\end{keybox}
+
+% =============================================================================
+\section{Yogi, Avayogi and Duplicate Yogi}
+\label{sec:yogidoc}
+% =============================================================================
+
+The manual never states the Yogi formula; the binary does (\autoref{sec:yogi}): the Yogi
+point is Sun $+$ Moon $+$ $93^\circ 20'$ \tagBIN. The report templates print ``Yogi
+Point'', ``Yogi'' (the lord of the Yogi point's nakshatra) and a combined field
+``Avayogi/Duplicate Yogi'' (\texttt{Extras1/pib337}) \tagDOC. The dictionary defines
+Avayogi only as the point opposite the Yogi point \parencite[p.~208]{geovision2006pl7};
+the Duplicate Yogi is not defined at all. Definitions of both vary between authors, and PL7's documentation does not say which it
+uses; I could not settle them from the code within the time available, so they are left
+open here rather than filled in from general knowledge. Kala Chakra computes
+none of these points.
+
+% =============================================================================
+\section{Dashas}
+\label{sec:dashas}
+% =============================================================================
+
+\subsection{Systems and levels}
+
+PL7 offers at least twenty dasha systems (Vimshottari, Ashtottari, Shodashottari,
+Dwadashottari, Panchottari, Shatabdika, Chaturashitisama, Dwisaptatisama, Shastihayani,
+Shattrimshatsama, Kalachakra, Chara, Sthira, Niryana Shoola, Drig, Yogini, Navamsha,
+Tribhagi, Tribhagi~40, Narayana, and more below the visible part of the list), shown to at
+most five levels: maha, antar, pratyantar, sookshma and prana \tagDOC\
+\parencite[pp.~42--44]{geovision2006pl7}. The reference body can be the Moon (default), the
+ascendant or any planet. The balance at birth is computed ``by degree'' (fraction of
+$13^\circ 20'$ traversed, the default) or ``by time''. Kala Chakra computes Vimshottari only,
+but to \emph{six} levels (adding deha), by degree from the Moon, anchored once at the chart
+moment.
+
+\subsection{The dasha year: a hidden discrepancy}
+
+The Dashas tab offers ``360 days or 365.25 days or 327.85 days for a dasha year'', and its
+screenshot shows 365.25 selected \tagDOC\ \parencite[pp.~193--194]{geovision2006pl7}. The
+code says something different \tagBIN. The OK handler (\texttt{0x4c7dc2}) writes setting byte
+\texttt{0x68c}: 2 for the ``360'' button, 1 for ``365.25'' and 3 for ``327.85''; the
+reset-to-defaults routine also sets~1. The year-length function \texttt{fcn.00464743} then
+returns 360.0 for~2 and 327.85 for~3, but for~1 it returns \emph{365.2421875} days (the
+tropical year), not 365.25. The Vimshottari start is computed as birth minus year length
+times balance (\texttt{fcn.00460018}), and the year-length function is called from six places in
+the dasha routines (\texttt{0x4600e8}, \texttt{0x4601af}, \texttt{0x460600}, \texttt{0x460697},
+\texttt{0x4606b9}, \texttt{0x4709b4}). The constant 365.25 does occur in the same code region, but
+next to 30.6001, 122.1, 1524 and 1\,720\,994.5: the Meeus calendar-to-Julian-Day conversion, not
+a dasha year. Your PL7 dasha screenshots used for the 40/40 check (RA Job, SG, MANTA) show
+periods within about two years of the chart, consistent with the explanation below.
+
+\begin{derivbox}
+\textbf{Why the 40/40 validation could not see this.} The two year lengths differ by
+$0.0078$~day, or $11.25$~minutes per year of dasha time. Your validation compared dates
+near the chart moment, within about $\pm 5$ years, so the boundaries moved by under an hour
+and fell on the same calendar date. For a natal chart the drift grows: about $1.9$~h at 10
+years from birth and about $11$~h at 60 years, which is enough to move pratyantar and
+sookshma boundaries by a day, and prana boundaries much more.
+\end{derivbox}
+
+For horary use, where the periods of interest lie within weeks of the chart, the two
+programs agree. If exact PL7 parity is ever wanted for long-range natal dashas, Kala Chakra
+would need 365.2421875-day years. Either way, the knowledge base's description of the PL7
+convention as ``365.25-day years'' should be corrected.
+
+% =============================================================================
+\section{The KP section: calculation and display}
+\label{sec:kp}
+% =============================================================================
+
+\textbf{Cusps.} Placidus, with the cusp as the beginning of the house \tagBIN\ \tagDOC\
+\parencite[pp.~56, 200]{geovision2006pl7}.
+
+\textbf{Ayanamsa.} The dictionary says KP printouts use the Krishnamurti ayanamsa
+``regardless of the default set'' \parencite[pp.~218--219]{geovision2006pl7}. In the code,
+the only places that write the values 7 or 8 to the ayanamsa selector are in the options
+dialog. Two printing/model routines (\texttt{fcn.00553970}, \texttt{fcn.00578e80}) load the
+selector from a stored record (field \texttt{+0x260}), which matches the manual's
+per-astrologer ayanamsa setting for model printing \parencite[p.~165]{geovision2006pl7}.
+Which KP ayanamsa (selector 7 or 8) a KP printout uses was \emph{not determined} \tagINF.
+
+\textbf{Lords.} The planetary and cusp tables show the nakshatra lord and sub lord
+\parencite[p.~145]{geovision2006pl7}. Sub-sub lords are not documented and no sub-sub
+column exists \tagDOC.
+
+\textbf{Display.} PL7 has a circular KP chart, whose ``inner ring shows the Rashis, the next
+ring the Nakshatras, the next the houses'' \parencite[p.~200]{geovision2006pl7}, with a table
+of sub lords, occupants, ``tenants'' (planets in the nakshatras of occupants), owner and
+tenants of the owner. There are also four KP worksheets (Krishnamurti, Krishnamurti~II,
+Krishnamurti Prashna, Krishnamurti Prashna~II) and two reports. ``KP -- Chart'' gives the
+birth chart, cuspal chart and ``Bhava Details (Placidus System)''. ``KP -- Significators''
+gives the houses signified by planets, graded from ``very strong significator'' down; ruling
+planets (day lord, lagna sign/star/sub lord, Moon sign/star/sub lord); and Fortuna \tagDOC.
+
+\textbf{Horary.} ``Krishnamurti Prashna'' is cast for the current time ``and the ascendant
+is based on a number selected by the user'' (worksheet help). Two integer-input calls in the
+binary are bounded at 249 (\texttt{0x553f5a}, \texttt{0x557a21}), so the number is almost
+certainly 1--249 \tagINF. The number-to-ascendant table was not decoded.
+
+\begin{keybox}\kidea For KP horary, Kala Chakra is ahead of PL7 in four concrete ways. It
+gives a five-level sub-lord chain (PL7 stops at the sub). It computes the family's
+cusp-number vectors and power calculation, which PL7 has no notion of. It replicates Solar
+Fire to $\le 1''$. And it is not affected by the Moon-vector planet error of
+\autoref{sec:moonvector}. PL7 is ahead in breadth: significator grading, ruling planets,
+Fortuna, and 1--249 horary ascendants.\end{keybox}
+
+% =============================================================================
+\section{Jaimini: karakas, padas and special lagnas}
+\label{sec:jaimini}
+% =============================================================================
+
+Jaimini is implemented in PL7 \tagDOC. Everything below comes from the documentation; none
+of it exists in Kala Chakra.
+
+\textbf{Chara karakas.} A calculation option chooses 8 karakas including Rahu or 7 without
+\parencite[p.~192]{geovision2006pl7}. Separately, the worksheet offers ``Karakas(8)'' and
+``Karakas(7)'', where the 7-karaka scheme merges the mother and children karakas. Rahu's
+degree is measured backwards (30 minus its degree in the sign). The default is not
+documented.
+
+\textbf{Aspects.} Rashi drishti: ``fixed signs aspect all the movable signs except the one
+next to it'', and vice versa; dual signs aspect each other
+\parencite[pp.~216--217]{geovision2006pl7}.
+
+\textbf{Arudha padas.} A ``Jaimini padas and lagnas'' worksheet shows the padas of all twelve
+houses for the birth chart, Navamsha and Dashamsha. The rule is to count from the house to
+its lord, then as many houses again \parencite[p.~222]{geovision2006pl7}. The exceptions are
+stated two different ways:
+
+\begin{itemize}[leftmargin=*]
+  \item The tutorial (\texttt{pib11755}): lord in the 4th or 7th gives the 4th house as
+  Arudha Lagna, and lord in the 1st gives the 10th.
+  \item The bundled BPHS (\texttt{CHAP29}): a pada falling in the same house goes to the
+  10th from it, and one falling in the 7th goes to the 4th from the original house.
+\end{itemize}
+
+\textbf{The two disagree when the lord is in the 7th}, and neither says which the engine
+applies \tagDOC.
+
+\textbf{Upapada.} ``Generally considered as the pada of the 12th house, though there are
+different views'' \parencite[p.~230]{geovision2006pl7}.
+
+\textbf{Karakamsha and Swamsha.} Both are offered; the Karakamsha chart ``takes the sign of
+the Atma Karaka (AK) in the Navamsha as the ascendant'', drawn on the birth chart or on the
+Navamsha \parencite[p.~57]{geovision2006pl7}.
+
+\textbf{Special lagnas.} Bhava lagna advances $15^\circ$ per hour from the Sun's position at
+sunrise, Hora lagna one sign per hour, and Ghatika lagna one sign per 24 minutes; Varnada,
+Indu and Pranapada are also given. Sunrise is taken at the Sun's edge or its centre, as an
+option \parencite[p.~192]{geovision2006pl7}; the default and the refraction handling are not
+documented.
+
+\textbf{Argala.} Planets in the 2nd, 4th, 11th and 5th from a point cause argala, obstructed
+from the 12th, 10th, 3rd and 9th; the direction is reversed for Rahu and Ketu.
+
+% =============================================================================
+\section{Guna matching (compatibility)}
+\label{sec:guna}
+% =============================================================================
+
+PL7 offers both systems \tagDOC\ \parencite[pp.~104--106]{geovision2006pl7}:
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Ashtakoota} (North Indian), on the Moon's nakshatra: varna, vashya, tara,
+  yoni, graha maitri, gana, bhakoot and nadi, totalling 36. Gana, bhakoot and nadi are
+  flagged as \emph{maha doshas}, and the Pancha-nadi exception is mentioned. The points per
+  koota are not stated in any readable line.
+  \item \textbf{Dashakoota} (South Indian, after Kalaprakasika), with three totals printed
+  (Kalaprakasika, B.~V.~Raman and Ashtakoota methods): ``a number below 18 is questionable,
+  between 18 and 24 is good and above 24 is excellent''.
+  \item \textbf{Manglik (Kuja) dosha}: Mars in the 1st, 2nd, 4th, 7th, 8th or 12th from the
+  ascendant and from the Moon, with seven printed cancellation rules.
+  \item Matching can also be run on planets other than the Moon, and a rashi-distance
+  comparison is offered.
+\end{itemize}
+
+There are no options to configure the koota rules. Kala Chakra has no matching module.
+
+\Needspace{8\baselineskip}
+% =============================================================================
+\section{The planetary ``summariser'' table}
+\label{sec:summary}
+% =============================================================================
+
+The planetary-details table has fifteen selectable columns \tagDOC\
+\parencite[p.~145]{geovision2006pl7}: degrees; retrograde/combust flag; sign; nakshatra;
+pada; nakshatra lord/sub; dignity; shadbala; vimshopaka bala (10 vargas); varga
+classification; avasthas in the 3-, 5-, 9- and 12-state schemes; and lordships. The cusp
+table has degrees, sign, nakshatra, pada and nakshatra lord/sub.
+
+Kala Chakra's tables show degree, star lord and the five-level sub chain, house placement,
+ownership numbers and the power string. They have no retrograde flag (the engine requests
+no planetary speed), no dignity, no shadbala, no vimshopaka and no avasthas.

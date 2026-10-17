@@ -1,0 +1,1601 @@
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+.
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+Panchang considerations
+~@bN~
+Birth at : Night time
+~@bD~
+Birth at : Day time
+~@sun~
+Weekday : Sunday
+~@mon~
+Weekday : Monday
+~@tue~
+Weekday : Tuesday
+~@wed~
+Weekday : Wednesday
+~@thu~
+Weekday : Thursday
+~@fri~
+Weekday : Friday
+~@sat~
+Weekday : Saturday
+~@bS~
+Paksha : Shukla
+~@bK~
+Paksha : Krishna
+~@bn~
+Paksha + day/night : Shukla paksha at night time
+~@bd~
+Paksha + day/night : Krishna paksha at day time
+~@LY15~
+Yoga : Vishkambha
+~@LY16~
+Yoga : Priti
+~@LY17~
+Yoga : Ayushman
+~@LY18~
+Yoga : Saubhagya
+~@LY19~
+Yoga : Sobhana
+~@LY20~
+Yoga : Atiganda
+~@LY21~
+Yoga : Sukarma
+~@LY22~
+Yoga : Dhriti
+~@LY23~
+Yoga : Shula
+~@LY24~
+Yoga : Ganda
+~@LY25~
+Yoga : Vriddhi
+~@LY26~
+Yoga : Dhruva
+~@LY27~
+Yoga : Vyaghat
+~@LY1~
+Yoga : Harshana
+~@LY2~
+Yoga : Vajra
+~@LY3~
+Yoga : Siddhi
+~@LY4~
+Yoga : Vyatipata
+~@LY5~
+Yoga : Variyan
+~@LY6~
+Yoga : Parigha
+~@LY7~
+Yoga : Shiva
+~@LY8~
+Yoga : Siddha
+~@LY9~
+Yoga : Sadhya
+~@LY10~
+Yoga : Shubha
+~@LY11~
+Yoga : Shukla
+~@LY12~
+Yoga : Brahma
+~@LY13~
+Yoga : Indra
+~@LY14~
+Yoga : Vaidhriti
+~?~
+Avakahada Chakra
+~2IN1~
+Nakshatra : Ashwini
+
+Nadi : Aadhya
+
+Yoni : Ashwa
+
+Gana : Deva
+~2IN2~
+Nakshatra : Bharani
+
+Nadi : Madhya
+
+Yoni : Gaja
+
+Gana : Manushya
+~2IN3~
+Nakshatra : Krittika
+
+Nadi : Antya
+
+Yoni : Mesha
+
+Gana : Rakshasa
+~2IN4~
+Nakshatra : Rohini
+
+Nadi : Antya
+
+Yoni : Sarpa
+
+Gana : Manushya
+~2IN5~
+Nakshatra : Mrigashira
+
+Nadi : Madhya
+
+Yoni : Sarpa
+
+Gana : Deva
+~2IN6~
+Nakshatra : Ardra
+
+Nadi : Aadhya
+
+Yoni : Shvana
+
+Gana : Manushya
+~2IN7~
+Nakshatra : Punarvasu
+
+Nadi : Aadhya
+
+Yoni : Marjar
+
+Gana : Deva
+~2IN8~
+Nakshatra : Pushya
+
+Nadi : Madhya
+
+Yoni : Mesha
+
+Gana : Deva
+~2IN9~
+Nakshatra : Ashlesha
+
+Nadi : Antya
+
+Yoni : Marjar
+
+Gana : Rakshas
+~2IN10~
+Nakshatra : Magha
+
+Nadi : Antya
+
+Yoni : Mushak
+
+Gana : Rakshas
+~2IN11~
+Nakshatra : Poorva Phalguni
+
+Nadi : Madhya
+
+Yoni : Mushak
+
+Gana : Manushya
+~2IN12~
+Nakshatra : Uttara Phalguni
+
+Nadi : Aadhya
+
+Yoni : Gau
+
+Gana : Manushya
+~2IN13~
+Nakshatra : Hasta
+
+Nadi : Aadhya
+
+Yoni : Mahisha
+
+Gana : Deva
+~2IN14~
+Nakshatra : Chitra
+
+Nadi : Madhya
+
+Yoni : Vyaghra
+
+Gana : Rakshasa
+~2IN15~
+Nakshatra : Swati
+
+Nadi : Antya
+
+Yoni : Mahisha
+
+Gana : Deva
+~2IN16~
+Nakshatra : Vishakha
+
+Nadi : Antya
+
+Yoni : Vyaghra
+
+Gana : Rakshasa
+~2IN17~
+Nakshatra : Anuradha
+
+Nadi : Madhya
+
+Yoni : Mriga
+
+Gana : Deva
+~2IN18~
+Nakshatra : Jyeshtha
+
+Nadi : Aadhya
+
+Yoni : Mriga
+
+Gana : Rakshasa
+~2IN19~
+Nakshatra : Moola
+
+Nadi : Aadhya
+
+Yoni : Shwana
+
+Gana : Rakshasa
+~2IN20~
+Nakshatra : Poorvashadha
+
+Nadi : Madhya
+
+Yoni : Vanar
+
+Gana : Manushya
+~2IN21~
+Nakshatra : Uttarashadha
+
+Nadi : Antya
+
+Yoni : Nakula
+
+Gana : Manushya
+~2IN22~
+Nakshatra : Shravan
+
+Nadi : Antya
+
+Yoni : Vanar
+
+Gana : Deva
+~2IN23~
+Nakshatra : Dhanishtha
+
+Nadi : Madhya
+
+Yoni : Simha
+
+Gana : Rakshasa
+~2IN24~
+Nakshatra : Shatbhishaj
+
+Nadi : Aadhya
+
+Yoni : Ashwa
+
+Gana : Rakshasa
+~2IN25~
+Nakshatra : Poorvabhadrapada
+
+Nadi : Aadhya
+
+Yoni : Simha
+
+Gana : Manushya
+~2IN26~
+Nakshatra : Uttarabhadrapada
+
+Nadi : Madhya
+
+Yoni : Gau
+
+Gana : Manushya
+~2IN27~
+Nakshatra : Revati
+
+Nadi : Antya
+
+Yoni : Gaja
+
+Gana : Deva
+~?~
+Aries
+~2IR1~
+Chandra Rashi : Mesha
+
+Chandra Rashipati : Mangal
+
+Varna : Kshatriya
+
+Vashya : Chatushpada
+~?~
+Taurus
+~2IR2~
+Chandra Rashi : Vrisha
+
+Chandra Rashipati : Shukra
+
+Varna : Vaishya
+
+Vashya : Chatushpada
+~?~
+Gemini
+~2IR3~
+Chandra Rashi : Mithuna
+
+Chandra Rashipati : Buddha
+
+Varna : Shudra
+
+Vashya : Manav
+~?~
+Cancer
+~2IR4~
+Chandra Rashi : Karka
+
+Chandra Rashipati : Chandra
+
+Varna : Brahmin
+
+Vashya : Jalachara
+~?~
+Leo
+~2IR5~
+Chandra Rashi : Simha
+
+Chandra Rashipati : Surya
+
+Varna : Kshatriya
+
+Vashya : Jalachara
+~?~
+Virgo
+~2IR6~
+Chandra Rashi : Kanya
+
+Chandra Rashipati : Buddha
+
+Varna : Vaishya
+
+Vashya : Manav
+~?~
+Libra
+~2IR7~
+Chandra Rashi : Tula
+
+Chandra Rashipati : Shukra
+
+Varna : Shudra
+
+Vashya : Manav
+~?~
+Scorpio
+~2IR8~
+Chandra Rashi : Vrishchika
+
+Chandra Rashipati : Mangal
+
+Varna : Brahmin
+
+Vashya : Keeta
+~?~
+Sagittarius
+~2IR9~
+Chandra Rashi : Dhanu
+
+Chandra Rashipati : Guru
+
+Varna : Kshatriya
+
+Vashya : Manav
+~?~
+Capricorn
+~2IR10~
+Chandra Rashi : Makara
+
+Chandra Rashipati : Shani
+
+Varna : Vaishya
+
+Vashya : Jalachara
+~?~
+Aquarius
+~2IR11~
+Chandra Rashi : Kumbha
+
+Chandra Rashipati : Shani
+
+Varna : Shudra
+
+Vashya : Manav
+~?~
+Pisces
+~2IR12~
+Chandra Rashi : Meena
+
+Chandra Rashipati : Guru
+
+Varna : Brahmin
+
+Vashya : Jalachara
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+.
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+Ghat Chakra
+~?~
+Aries
+~2IR1~
+Ghat Masa : Kartik
+
+Ghat Tithi : 1, 6, 11
+
+Ghat Day : Sunday
+
+Ghat Nakshatra : Magha
+
+Ghat Yoga : Vishkumbha
+
+Ghat Karana : Bav
+
+Prahar : 1
+~2IR1*-@W~
+Ghaat Chandra : Aries
+~2IR1*@W~
+Ghaat Chandra : Aries***
+~?~
+Taurus
+~2IR2~
+Ghat Masa : Margashirsha
+
+Ghat Tithi : 5, 10, 15
+
+Ghat Day : Saturday
+
+Ghat Nakshatra : Hasta
+
+Ghat Yoga : Shukla
+
+Ghat Karana : Shakuni
+
+Prahar : 4
+~2IR2*-@W~
+Ghaat Chandra : Kanya
+~2IR2*@W~
+Ghaat Chandra : Dhanu
+~?~
+Gemini
+~2IR3~
+Ghat Masa : Aashadha
+
+Ghat Tithi : 2, 7, 12
+
+Ghat Day : Monday
+
+Ghat Nakshatra : Swati
+
+Ghat Yoga : Parigha
+
+Ghat Karana : Kaulava
+
+Prahar : 3
+~2IR3*-@W~
+Ghaat Chandra : Kumbha
+~2IR3*@W~
+Ghaat Chandra : Dhanu
+~?~
+Cancer
+~2IR4~
+Ghat Masa : Pausha
+
+Ghat Tithi : 2, 7, 12
+
+Ghat Day : Wednesday
+
+Ghat Nakshatra : Anuradha
+
+Ghat Yoga : Vyaghata
+
+Ghat Karana : Naga
+
+Prahar : 1
+~2IR4*-@W~
+Ghaat Chandra : Simha
+~2IR4*@W~
+Ghaat Chandra : Meena
+~?~
+Leo
+~2IR5~
+Ghat Masa : Jyeshtha
+
+Ghat Tithi : 3, 8, 13
+
+Ghat Day : Saturday
+
+Ghat Nakshatra : Moola
+
+Ghat Yoga : Dhriti
+
+Ghat Karana : Bav
+
+Prahar : 1
+~2IR5*-@W~
+Ghaat Chandra : Makara
+~2IR5*@W~
+Ghaat Chandra : Vrishchika
+~?~
+Virgo
+~2IR6~
+Ghat Masa : Bhadrapada
+
+Ghat Tithi : 5, 10, 15
+
+Ghat Day : Saturday
+
+Ghat Nakshatra : Shravan
+
+Ghat Yoga : Shukla
+
+Ghat Karana : Kaulav
+
+Prahar : 1
+~2IR6*-@W~
+Ghaat Chandra : Mithuna
+~2IR6*@W~
+Ghaat Chandra : Vrishchika
+~?~
+Libra
+~2IR7~
+Ghat Masa : Maagh
+
+Ghat Tithi : 4, 9, 14
+
+Ghat Day : Thursday
+
+Ghat Nakshatra : Shatbhishaj
+
+Ghat Yoga : Shukla
+
+Ghat Karana : Taitila
+
+Prahar : 4
+~2IR7*-@W~
+Ghaat Chandra : Dhanu
+~2IR7*@W~
+Ghaat Chandra : Meena
+~?~
+Scorpio
+~2IR8~
+Ghat Masa : Ashwin
+
+Ghat Tithi : 1, 6, 11
+
+Ghat Day : Friday
+
+Ghat Nakshatra : Revati
+
+Ghat Yoga : Vyatipata
+
+Ghat Karana : Gara
+
+Prahar : 1
+~2IR8*-@W~
+Ghaat Chandra : Vrishabh
+~2IR8*@W~
+Ghaat Chandra : Dhanu
+~?~
+Sagittarius
+~2IR9~
+Ghat Masa : Shravana
+
+Ghat Tithi : 3, 8, 13
+
+Ghat Day : Friday
+
+Ghat Nakshatra : Bharani
+
+Ghat Yoga : Vajra
+
+Ghat Karana : Taitila
+
+Prahar : 1
+~2IR9*-@W~
+Ghaat Chandra : Meena
+~2IR9*@W~
+Ghaat Chandra : Kanya
+~?~
+Capricorn
+~2IR10~
+Ghat Masa : Vaishakh
+
+Ghat Tithi : 4, 9, 14
+
+Ghat Day : Tuesday
+
+Ghat Nakshatra : Rohini
+
+Ghat Yoga : Vaidhriti
+
+Ghat Karana : Shakuni
+
+Prahar : 4
+~2IR10*-@W~
+Ghaat Chandra : Simha
+~2IR10*@W~
+Ghaat Chandra : Vrishchika
+~?~
+Aquarius
+~2IR11~
+Ghat Masa : Chaitra
+
+Ghat Tithi : 3, 8, 12
+
+Ghat Day : Thursday
+
+Ghat Nakshatra : Ardra
+
+Ghat Yoga : Ganda
+
+Ghat Karana : Kinstughan
+
+Prahar : 3
+~2IR11*-@W~
+Ghaat Chandra : Dhanu
+~2IR11*@W~
+Ghaat Chandra : Mithuna
+~?~
+Pisces
+~2IR12~
+Ghat Masa : Phalgun
+
+Ghat Tithi : 5, 10, 15
+
+Ghat Day : Friday
+
+Ghat Nakshatra : Ashlesha
+
+Ghat Yoga : Vajra
+
+Ghat Karana : Chatushpada
+
+Prahar : 4
+~2IR12*-@W~
+Ghaat Chandra : Kumbha
+~2IR12*@W~
+Ghaat Chandra : Kumbha
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+.
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+.
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+.
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+.
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+.
+~1IR1+1IR2+1IR3+1IR4+1IR5+1IR6+1IR7+1IR8+1IR9+1IR10+1IR11+1IR12~
+General Characteristics
+~?~
+Results of Moon in Different nakshatras
+~2IN1~
+You are born when the Moon was in Ashwini nakshatra.
+You are scrupulous, prosperous, obedient, truthful, and
+obtain all comports. You are endowed with good family and
+children and wealth. You are daring, handsome and monied. You
+are a capable administrator, cruel, of big body and respected.
+You sacrifice money, have a good conduct and an enjoyer. You
+are quick and candid, a knower of scriptures, rational and
+succeed in quarrels. You have long hands and wide eyes. You
+are respected by kings and speek sweetly. You are daring,
+arrogant, thief, and a fraud. You are unkind, practice forbidden
+paths, intelligent, and contain some symbol on their girdle. You
+are fickle and undertake travelling. You may court other women
+and are farsighted. You are not independent, but strong.
+~2IN2~
+You are born when the Moon was in Bharani nakshatra.
+Those born in the Bharani star incur the displeasure of others;
+they are enjoyers, obedient and learned; they fear water and get
+the wealth of bad people. They know the scriptures, rationale,
+intelligent and win the quarrels. They bear scars on their body
+due to injuries. They are good speakers and suffer from heart
+diseases. They are stable, knowledgeable and truthful. They are
+longlived. They are also determined, and proud, they do not
+tolerate others' prosperity.
+~2IN3~
+You are born when the Moon was in Krittika nakshatra.
+Those born in the star Krittika are bereft of friends and
+family; endowed with son and they enjoy life and are very
+prosperous. They suffer from hunger and they are without
+strength and money; they undertake purposeless traveling
+but recollect the help rendered by others. They are very
+harsh, and do jobs forbidden. They are cruel and do good
+jobs and they also have defective face. They are bright,
+instant angry and run after other women. They are heavy
+eaters and fiery. They are stingy, intelligent, famous,
+successful, loved by partner, with property earned by
+themselves, white haired, afraid of wind and carry the
+symbols of til and fish.
+~2IN4~
+You are born when the Moon was in Rohini nakshatra.
+Those born in the star Rohini are agriculturists, experts, well
+behaved, handsome, good speakers and poets. They are stable
+minded, respected, enjoyers and interested in love making.
+They are of sweet-speech, intelligent, capable and bright.
+They are long-lived and perform accepted jobs, religious,
+truthful and help those who have helped them. They are
+respected by kings. They respect gods and brahmins and know
+the science of metres and metaphors. They are able servants
+of their lords and determined. They are endowed with good
+looking hands and wide forehead, handsome, independent, loved
+by their children, experts, wealthy with respect to corns and
+money, have desire to wear new clothes, suffer from eye diseases,
+little feared and play with women.
+~2IN5~
+You are born when the Moon was in Mrigashira nakshatra.
+Those born in the Mrigashira star are truthful, handsome,
+enjoy wealth and prosperity, pure in heart, bright,
+sage-like and fickle minded. They are interested in
+learning, obedient, always loving teachers, friendly with
+the king and respected by kings. They are enthusiastic,
+feared, monied, lovable, knowledgeable in architecture,
+kingly and good at administration. They are pleasant
+spoken, intelligent and affectionate to their mother. They
+are quick and arrogant and they hate others.
+~2IN6~
+You are born when the Moon was in Ardra nakshatra.
+Those born in the Ardra star are soft, stable minded, strong,
+earning by sacrifice, afflicted by sickness, fear and angry.
+They suffer due to hunger, hard bodied, lovable, forget the
+help rendered by others, experts in trade and commerce, cruel,
+having many relatives, ill advisers and hate all. Those born
+in Ardra are with pride, of lower levels and do jobs which
+are forbidden. They are bereft of money and corns. Such people
+are poets, little-learned, longlived, and little interested
+in things.
+~2IN7~
+You are born when the Moon was in Punarvasu nakshatra.
+Those born in the star Punarvasu are endowed with children,
+good qualities, wealthy and they indulge in bringing difference
+of opinion among friends. They speak very clearly and are
+secretive in their dealings. They are learned in the sciences
+and interested in personal decoration with gems and gold
+ornaments. They are givers and famous. They are religious,
+attractive, carry out works of other women. They are tolerant,
+satisfied with small things and fast movers. They collect a
+good circle of friends, daily eat good food, sacrificers and
+worship lord Vishnu. They are peaceful, happy, enjoying and
+endowed with good progeny. Those born in the Punarvasu star
+are noted to be long lived, loved by wife, handsome, interested
+in pomp, of good heart, high in conduct, with low voice,
+like cereals, intelligent, thinkers, and possess fish sign
+on stomach.
+~2IN8~
+You are born when the Moon was in Pushya nakshatra.
+Those born in the star Pushya are wealthy, happy, respected,
+stable minded, endowed with good looks and are loved by
+women. Those born in the star Pushya are wealthy, happy,
+respected, stable minded, endowed with handsome body; respecting
+parents, following their religion, and most obedient. They
+command money and vehicles of novelty. They are important
+persons in the world, knowledgeable in the science of spells
+and respected by kings. They retain their stand, and are happy.
+They are characterised by the presence of fish symbol on the
+hands -and feet. They are endowed with all good qualities,
+short tampered, and interested in the discussion on scriptures.
+~2IN9~
+You are born when the Moon was in Ashlesha nakshatra.
+Those born in the star Ashlesha are cruel, daring and angry;
+they probably co-habit with people of same sex and animals
+like cow, according to Narasimha Prayoga Parijata. They
+travel aimlessly, do undesirable jobs, harmful to his own
+and other people; they are proud and suffer on account of
+sex starvation. They are angry and are strong like lion;
+they know Brahman and dependent on others for life. They
+are cruel to all beings, pay fines by doing sinful acts,
+unstable minded, and fearful. They are always sad, serve
+others, short temptered, and vary bad persons. They are
+childish, slow in the work of their lord (nidhana-drohi),
+wide eyed, endowed with fish sign in eyes, develop enemity
+with his own people, highly stingy and stubborn.
+~2IN10~
+You are born when the Moon was in Magha nakshatra.
+Those born in the star Magha are reserved, highly sexy,
+endowed with comforts and have wives who are also reserved.
+knowledgeable, pure and sacrifice things. Those born in the
+Makha star are cruel, respect their fathers, sharp in reacting
+with others, non-sinners and destroy their enemies. They are
+harsh-spoken, hefty bodied, angry, transact with teachers
+and kings, interested in the advise of Devaguru and are bright.
+They tread the religious path and endowed with pleasant
+qualities; enjoyers and truthful. They are served by many
+servants, conduct big operations and are leaders of a big
+army. They are learned, longlived, earn good money,
+obedient and help their relatives. They have bloodshot
+eye and possess fish sign on the chest.
+~2IN11~
+You are born when the Moon was in Poorva Phalguni nakshatra.
+Those born in this nakshatra are experts in love making,
+strong and handsome but extremely fearful. They help
+others, and carry out works which cannot be done by
+others. They are angry, frauds, cruel and candid. They
+are bright, wealthy, givers, and experts in music and
+dance. They are wise and are in the service of kings. They
+are long lived and beget few children. They are learned,
+reserved, love women, enjoyers, prominent amongst the
+learned, handsome, love their brothers, endowed with soft
+hands and feet, born of Rajamsha, strict transactors,
+endowed with attractive eyes, idle and possess kingly signs.
+~2IN12~
+You are born when the Moon was in Uttara Phalguni nakshatra.
+Those born in the Uttara Phalguni are wealthy, know the
+science of weapons, impotent, respectful and endowed with
+attractive eyes. They are fixed to the sciences and stingy
+in expending money. They are givers, kind hearted, happy
+and endowed with good qualities, famous, kingly, daring
+and extremely soft personalities. They win over their
+enemies, loved by women, experts in arts, truthful, and
+learned. They are obedient, religious, loved by people,
+stable and bright. They are fearful but good wamors?.
+~2IN13~
+You are born when the Moon was in Hasta nakshatra.
+Those born in the star Hasta are stable bodied, untruthful,
+bear excellent character and warriors. They are givers,
+independent, famous, interested in the worshipping of gods
+and pious people, and likely to get all the properties of
+their father. They are learned, handsome, wealthy, daring,
+helpful to others and all knowledgeable. They are cruel
+and grab others' property. They are bad people, strong,
+interested in music, happy with their relatives and
+friends, respected by kings, respect the gods and pious,
+destroy their enemies, famous and posses the signs of fish.
+~2IN14~
+You are born when the Moon was in Chitra nakshatra.
+Those born in the star Chitra are extremely fearful of
+low mind suffer from hunger, and troubled in mind They
+are weak and perverse sexed. They are troubled by their
+enemies, obedient, capable and wear peculiar dresses. They
+advance peculiar arguments. Those born in the Chittra star
+are experts in love making, bright, wealthy, enjoyers and
+learned. They are probably distorted (personalities),
+strong, brave, endowed with wife and children, and respect
+the gods and pious.
+~2IN15~
+You are born when the Moon was in Swati nakshatra.
+Those born in the star Swati are wise, witty and learned.
+They are religious and pleasant minded. They are endowed
+with the body of kingly symbols, bright and handsome and
+loved by their wives. They perform religious works,
+truthful, experts in transactions, sexy, givers and
+learned. They are obedient, lovers of pious people,
+experts in architecture and sculpture, stingy and respect
+gods and brahmins. They help others, daring, long lived,
+large eyed, kind, famous, lovers of relatives and friends,
+independent, eat optimum food, and followers of their own
+religion.
+~2IN16~
+You are born when the Moon was in Vishakha nakshatra.
+Those born with the Moon in Vishakha nakshatra are
+physically impure, strong, go after others' women, bereft of
+relatives and cause deference amongst friends. They are
+always thinking about sex, experts in the jobs of fire,
+brewery, ?ores and metallurgical operations and do not
+develop friendship with anybody. They are jealous, subtle,
+kind, forbidden love, of controlled senses, wealthy and
+stingy. They are intelligent, stable minded, good speakers,
+love relatives, children and friends. They are great people.
+They are candid and quarrelsome and addicted to
+prostitutes. They are witty, obedient, longlived, help many,
+speakers of truth, short tempered, lovers of women,
+possess blood-shot eyes and also fish sign on the secret
+parts.
+~2IN17~
+You are born when the Moon was in Anuradha nakshatra.
+Those born in the star Anuradha are interested in women,
+with commendable complexion of the body, bewildered, idle
+and weak minded. They are famous, experts in arts, and
+destroyers of their enemies. They are servers of king,
+brave, stationed in countries other than their own,
+handsome, and destroyers of their sins. They are truthful,
+respect kings, respect their mothers and are musicians.
+They enjoy life and go after other women. They are fit for
+friendship, kind hearted, of helping nature, intelligent,
+enjoyers and travellers.
+~2IN18~
+You are born when the Moon was in Jyeshtha nakshatra.
+Those born in the Jyeshtha star are fond of daily physical
+exercises, warriors, always respecting brahmins, famous
+and endowed with fine qualities. They gain fame, are
+bright, accompany kings, affected in mind, deeply idle,
+well known, and speak final. They are addicted to bad
+jobs, capable of undergoing difficulties, unbearable,
+cruel, untruthful and wealthy. They are tall and endowed
+with few children. They are pure and intelligent. They
+are religious and have a good circle of friends; they are
+poets and wise. They are generally dark complexioned,
+happy, stable and much learned.
+~2IN19~
+You are born when the Moon was in Moola nakshatra.
+Those born in the Moola star are fast walkers, soft,
+fickle, endowed with good qualities, harmful and untrust
+worthy. Those born in the Moola star route out the
+different parties unconcerned; otherwise they enhance the
+prosperity of their clan and comfort their mothers. They
+are sage-like, wealthy, enjoyers; helping others,
+comforted by women and suffer from phlegm diseases. They
+are also proud, serve the king; processes knowledge of
+finer aspects, daily enjoyers, handsome and hated by all.
+They are happy and have vehicles, harmful, do permanent
+jobs, and famous by defeating their enemies. They are
+religious, thieves, respectable, show affection to
+relatives,?red complexioned, sexy, obedient, independent,
+bloodshot-eyed and loved by women.
+~2IN20~
+You are born when the Moon was in Purvashadha nakshatra.
+Those born in the star Purvashadha are thieves, proud,
+angry, wealthy, endowed with good qualities, always speak
+untruth and capable. They are drunkards, fickle, good
+speakers, endowed with good qualities and attractive face,
+obedient, lovers of cows, suffer ungrudgingly, youthful
+and live with respect. They help at the sight of
+difficulty, loved by people, and experts in almost all
+fields. They are slightly taller, possess subtle fingures,
+famous and sophisticated.
+~2IN21~
+You are born when the Moon was in Uttarashadha nakshatra.
+Those born in the star Uttarashadha are born with
+Brahmamsha, cause difference of opinion between friends,
+do physical exercises, loved by people, enjoyers and
+travel a lot. They are givers, successful, obtain
+enjoyment from wife and happy. They recollect the help
+rendered by others, religious, obedient and endowed with
+may children. They are independent, handsome and wealthy.
+Loved by their relatives they are great givers. They are
+all knowledgeable, pure, endowed with good qualities,
+entertain guests, witty, kind hearted, furnished of grand
+qualities, brave, endowed with long nose and fish signs
+on private parts.
+~2IN22~
+You are born when the Moon was in Shravana nakshatra.
+Those born in the Shravana star are experts in music,
+dance and drama, truthful and stable minded; they enjoy
+hearing scriptures. They are endowed with many children
+and friends, respect pious people, win over their enemies,
+large-hearted, knowledgeable, brave, learned, wealthy,
+experts in arts, religious, famous, givers, recollect the
+help rendered by others, accompanied by relatives, and
+pure in heart. They are interested in scents and flowers,
+hefty bodied, go after other women, handsome, large-
+hearted, support many relatives and loved by all. They
+are good speakers, enjoy life, wise, possess signs of fish
+on private parts.
+~2IN23~
+You are born when the Moon was in Dhanishtha nakshatra.
+Those born in the star Dhanishtha are difficult to win,
+bereft of sadness, good eaters, and very famous. They
+serve the elders and always protect others. They are
+religious, endowed with many good qualities, wealthy, kind
+hearted, and having good establishment. They are sad,
+cruel, suffer from diseases like tuberculosis, and are
+stubborn. They are after other women, daring, and loved by
+women. They worship the gods and elders, good givers and
+wealthy. They are interested in music, respected by
+relatives, decorated by jewellary and rule many people.
+They are bright, jobfull, cruel, hate brahmins, hot
+constitutional, stingy and possess long feet. They speak
+much and show pride in undertaking many works.
+~2IN24~
+You are born when the Moon was in Shatabhisha nakshatra.
+Those born in the star Shatabhisha are endowed with many
+children, angry, daring, extreme and unbearable; they are
+most selfish and gamblers. They are of questionable
+character and experts in magic. They are stubborn, stable
+minded, specially knowledgeable, brave,cruel, eat little,
+stingy, wealthy, servers and go after other women. They
+live in foreign lands and most sexy. They are respected by
+the world, plenty minded, their enemies, longlived and are
+witty. They are good in various transactions, astrologers,
+suffer from various diseases, and are endowed with some knowledge.
+~2IN25~
+You are born when the Moon was in Purvabhadra nakshatra.
+Those born in the Purvabhadra star are worshipful of gods
+and teachers, of righteous conduct and of broad minded.
+They are respectable and above controversies. They are
+having control over their senses, experts in all kinds of
+jobs, endowed with good chest; they are at home with the
+learned, determined, won over by women, stubborn, despise
+others, irreligious, brave, givers, enjoyers, soft
+spoken , handsome, and loving their relatives. They are
+speakers, endowed with children, sleep excess, possess
+long tongue, suffer from the diseases of ears, obedient,
+helping nature, tall and possess symbols of fish and til
+on the private parts.
+~2IN26~
+You are born when the Moon was in Uttarabhadra nakshatra.
+Those born in the Uttarabhadra star suffer from fluctuation
+of funds, wise and surrounded by many people.They are
+affected by the imbalance of bile and always idle. They
+are prominent amongst their clan, wear jewels, always do
+constructive jobs, obtain wealth and corns and they are
+givers. They are endowed with children, religious, winners
+of their enemies, happy, determined, sexy, learned,
+sacrificers, respected in all circles, suffer from various
+diseases, brave, wise, idle, fickle, possess the signs of
+fish and til on their private parts and loved by their
+relatives, They are just and they earn by righteous means.
+~2IN27~
+You are born when the Moon was in Revati nakshatra.
+Those born in the star Revati practice irreligious
+things, candid, handsome, talk angrily and quick. They are
+independent in pursuing any jobs. They are endowed with
+good qualities, have control over their senses, always
+thinking about their home, wise, handsome, wealthy, enjoy
+life, learned, fickle, earn good money, sexy, brave,
+givers, lose women, pure in mind, intelligent, endowed
+with well proportioned body, capable, hefty bodied,
+bright, help others and move in foreign lands.
+~R1I!1~
+Physical Appearance. Persons born under Aries sign possess 
+lean and muscular body, middle stature, neither thick nor 
+stout, rudy complexion, long face and neck, broad head at 
+the temples and narrow at the chin. Thin features, mark or 
+scar on head or temples, bushy eye brow, rough or wiry hair 
+varying in colour from dark to sandy, sometimes going bald. 
+Eyes grey to grayish brown.
+~R1I!1~
+Mental Tendencies. Ambitious, activity, courage, energy, 
+enterprise, impulsiveness and ingenuity. Lover of 
+independence.
+~R1I!1~
+Personality. Aries born persons are ambitious, rash in 
+temper and of aggressive nature. They are of simple, frank 
+and of outspoken nature, well disposed and capable of 
+holding command in executive positions. They are not good 
+in organising schemes, but they can guide, control and 
+govern themselves or others. Lover of independence, brave, 
+venturesome, generous, to some extent extravagant. Also 
+well informed, ingenious, zealous, dogmatic in their 
+opinions, remarkable for sudden changes and quick action 
+and have progressive tendency. Life will be full of 
+struggle and fortune is variable. Ardent in politics and 
+religion. Travelling in life is imminent. Relatives are not 
+favourable and the family ties are sometimes strained, 
+frequent changes in residence, having a few children. They 
+marry early and in a hurry. Legal proceedings in life may 
+follow him. Residence in foreign land under forced 
+circumstances. There will be no dearth of enemies but you 
+will be conquerer of them. Somewhat fiery or quick 
+tempered. They will succeed best in vocations requiring 
+quick action, decision, executive or mechanical ability and 
+responsibility.
+~R1I!1~
+Health. Generally Arians enjoy good health and have power 
+of resistance or the diseases. They are prone to minor 
+injuries and serious accidents particularly to the head. So 
+they should avoid rash driving. Arians are liable to suffer 
+headaches, burns, inflammatory diseases, brain affliction, 
+colic pains, high fever, pimples, paralysis, insomnia and 
+small pox etc.
+~R1I!1~
+Aries denotes skull bones and face except nasal. Also 
+indicates muscles like occipitals, depriments articularm, 
+buccinator, internal carotids, temporal carotids and head 
+etc.    
+~R1I!1~
+Cautions. Arians should take plenty of rest and sleep. 
+Green vegetables and good food is must for them. They 
+should relax, control their feelings, avoid worry, 
+excitement and anger. They should avoid stimulants and non-
+vegetarian meals.
+~R1I!1~
+Finances. Arians are not meant for amasing wealth inspite 
+of their strong desires. Extravagence should be avoided. 
+They lose money through impulsive actions and rash 
+investments. Evil planets if posited in Aries indicate that 
+they start in a flash and end in a crash, their budget 
+always remain as unbalanced. They should think calmly and 
+seriously before any action.
+~R1I!1~
+Romance and Marriage. Arians are extremely frank and 
+enthusiastic in love, their good nature and charm attract 
+the opposite sex. They are of practical views, desire 
+lasting affection, freedom and adventure in love are their 
+basic traits. Arians should soften their dominant nature, 
+to be happy and should not be impatient and emotional. They 
+should stick to old lovers rather to change.
+~@W*R1I!1~
+Ladies. Arian ladies are witty, intelligent, and 
+independent, zealous, proud and always speak high of their 
+domestic environments, appearance, own family but prove to 
+be a good host. They expect that their husbands should look 
+after them well, speak high of them and never praise others 
+especially in their presence. They love the man if they can 
+admire him. Generally Arian ladies over ride and over power 
+their partners and husbands. They are aggressive and are 
+very romantic. They can be controlled with tact and 
+patience. In short Arian ladies have Fiery nature.
+~-@W*R1I!1~
+Husbands. Such persons are very desirable partners, usually 
+they select beautiful, clever and good wives. Generous and 
+bountiful, romantic but spendthrift. Rash and passionate.
+~R1I!1~
+Ideal Match. Leo, Libra and Sagittarius born persons are 
+fit to marry Arians. But they should try to be peaceful, 
+avoid lavish spending, rash temperament and have saving 
+disposition.
+~R1I!1~
+Domestic Environments. A good neat and clean house. Good 
+friends and excellent hosts. Love their home and family. 
+Good company and many friends are the weakness of Arians 
+and they are of cheerful nature. In order to have a happy 
+home, they should avoid rash temperament, criticism of each 
+other and should not to be impulsive, impatient, sarcastic 
+and revengeful.
+~R1I!1~
+Professions. Professions ruled by Mars best suit Arians. If 
+the planet which denotes one's profession by owning either 
+2nd, 6th or 10th house in one's horoscope, occupies Aries 
+in rasi or lord of the house occupies, in Navamsa, if Aries 
+happens to be the 2nd, 6th or 10th house and lord Mars is 
+very strong, professions connected with Army, Defence 
+Department, Surgeons, Police, Chemist, Law, Iron and Steel, 
+Machines, Factories, industry or sports goods are best 
+suited for them.
+~R1I!1~
+Lucky days, Number. Colour and Stone. Lucky days for Arian 
+born people are Tuesday, Saturdays and Fridays, Monday and 
+Sunday are fair. Other days are expensive and undesirable. 
+Day of fast is Tuesday.
+~R1I!1~
+Lucky numbers are 9 and 1, attractive 4 and 8. Passive 
+numbers are 2,3,5 and disagreeable numbers are 6 and 7.
+~R1I!1~
+Favourable colours are Red, Yellow, Copper and Golden. Use 
+of Black colour be avoided.
+~R1I!1~
+The lucky stone is Red Coral be used in Copper or silver in 
+first finger on Tuesday morning after offering prayers.
+~R1I!1*3d~
+When Mars is in fall or unfavourable one should use Ruby or 
+Red Coral and Pearl.
+~?~
+2. Taurus-Varishba
+~R2I!1~
+Physical Appearance. The person born with Taurus as rising 
+sign at the Ascendant are of short to middle height of 
+broad forehead, plumpy, bright eyes, thick and stout neck, 
+dark hairs, clear complexion, well developed body, 
+ambitious and obstinate.
+~R2I!1~
+Mental Tendencies. Persevering, constant, conservative 
+determined, obstinate and ambitious of power yet social, 
+affectionate and loving but can also be very unreasonable 
+at times, prejudiced, when angry will not stop at any 
+thing. Slow but good and steady worker.
+~R2I!1~
+Personality. Taurians are enduring and very patient, 
+voilent and unrelenting. They are slow and steady and are 
+possessed of strong Will, domestic and determined. Any 
+thing done is well done and thought before hand. Can work 
+hard, when opposed they become stubborn and unyielding. 
+Usually secretive and reserved, sincere, reliable and 
+trustworthy. They are fond of pleasure and love, natural 
+beauty, art, music and literature, Sympathetic having a 
+magnetic quality. They have the ability to earn and are 
+good for executive jobs. They become worldly and lead a 
+pleasurable life. Fond of ease, comfort, opposite sex and 
+will have many love affairs. They will on the whole enjoy a 
+good health. One can depend or their opinion, ever smiling 
+but highly diplomatic. The planetary significator is Venus.
+~R2I!1~
+Health. Taurians possess normally robust and super-human 
+health, less sensitive to pains. They suffer from an over 
+abundance of life, will never admit physical disability. It 
+they fall ill, suffer fro a long time as their recuperative 
+power is not satisfactory and recovery is slow.
+~R2I!1~
+Generally Taurians are prone to affliction of throat, 
+tonsils, diphtheria, neck, pyorrhea, cold and apoplexy. 
+Pimples and eyesores give them troubles. The most sensitive 
+part is throat for which a great care be taken. As age 
+advances, one may suffer from constipation, plethora and 
+similar difficulties. They have unbounded appetite and try 
+to lead temperate life.
+~R2I!1~
+Finances. Such persons have saving nature, will accumulate 
+and hoard money and never squander unnecessarily. Gambling 
+nature is also indicated and will gain during Mercury 
+period. Patience and perseverance is the basic nature. Of 
+materialistic mind, will get money from others. Practical 
+and rise gradually, they do not take chances, absolutely 
+not extravagant but save always and do not risk money. They 
+know the value of money and never waste.
+~R2I!1~
+Romance and Marriage. Venus is lord of Taurus sign. It 
+indicate, love affairs, taste in music, art, cinema and 
+drama etc. Taurians are may be opposition and upsetting 
+conditions. They should have a self control. They are not 
+impulsive in love, and take a long time in selecting 
+partner in life. Faithful in love with deep emotion, do not 
+like quarrels and hate confusion. They respond well to kind 
+treatment and are flattered by luxury. They will always 
+fulfil their social and financial obligations.
+~R2I!1~
+In married life they are well set, men will have loving 
+wives and ladies devoted husbands. Divorce is rare. They 
+will bear and suffer the untold miseries and never desert 
+the partner. They will shelter the partner, well looked 
+after, attended upon, cared for and protected under any 
+circumstances. They are fond of giving parties, sumptuous 
+food to others and hope to be treated by others in similar 
+ways.
+~@W*R2I!1~
+Ladies. Such ladies are good wives and mothers, reserved 
+and calm. They doubt their husband's love and make no 
+secret of their love. Anxious to lead a happy domestic 
+life. Taurians ladies take more care for their home and are 
+good dutiful mothers for children being strict and 
+tyrannical to them with good intentions. Gentle and of 
+peace loving nature, it is sincerity which make them 
+desirable companions in life and of very loving nature but 
+their feelings are not easily hurt and are not hasty in 
+decisions. They get pleasure, gain and respect through 
+children who will be intelligent and of good built.
+~-@W*R2I!1~
+Husbands. Taurians husbands devoted to their wives and 
+adore them, they are reliable, generous and faithful. They 
+never neglect the house and needs of the partner. The 
+husband likes to see his wife well dressed, attractive and 
+pleasing. Cooperative to the maximum in the domestic sphere 
+and love the partner extensively.
+~R2I!1~
+Ideal Match. Taurus born people are best suited for Virgo, 
+Capricorn, Cancer, Scorpio and Pisces. The matches between 
+them will indicate good partners, contributing to peace, 
+maintaining harmony and leading a happy life.
+~R2I!1~
+Domestic Environments. A happy and harmonious domestic 
+atmosphere. The life will be good and prosperous. Good and 
+devoted husband and a happy, home and loving wife. They 
+have comfort, rest and peace at home. An orderly and 
+decorated home, a tidy and good maintenance of house and 
+furniture etc. Peace, pleasure, property, prosperity, 
+popularity and position means much to them. (Six P's)
+~R2I!1~
+Profession. Taurians like to trade in luxury goods, 
+cosmetics, scents, jewels and gems etc. Any business 
+connected with finance, agriculture, music, pleasure 
+resorts, cinema, actors, film producers etc. transport 
+business, I.T. Department, Ladies clubs and schools, 
+fashion and beauty parlours etc. dealer in ladies garments 
+and beauty items will be a source of success.
+~R2I!1~
+Lucky days, Numbers, Colours and Stones. The numbers 
+vibrate with them are 2 and 8, attractive to them are 7 and 
+9, passive numbers are 1,3,4 and 6, where as number 5 will 
+disagree.
+~R2I!1~
+Friday, Wednesday, Saturday and Monday are the favourable 
+days. Thursday indicates gain through partner. Tuesday 
+denotes extravagant expenses. Sunday should be a day of 
+rest at home. Day of fast is Friday.
+~R2I!1~
+The best suited colours are Pink, Green and White. Avoid 
+use of Red colour.
+~R2I!1~
+Lucky stones are Diamond, Sapphire and Emerald in Gold or 
+Platinum which should be worn in 3rd finger of right hand 
+on Friday morning after performing prayers. When the lord 
+Venus is in fall or unfavourable, one should use white 
+coral or white sapphire to mitigate the evil effects.
+~R2I!1~
+An advice. Taurians should not be obstinate, nor slow in 
+actions, should not be selfish and vindictive. They should 
+not retain anger for a long time.
+~?~
+3. Gemini-Mithuna
+~R3I!1~
+Physical Features. Gemini born persons are tall, upright, 
+slender, quick. Lovely and quick witted, sometimes shy or 
+retiring humane, good disposition, but nervous and 
+restless. Admirer of music, dance, drawing, painting, 
+travel and inventions.
+~R3I!1~
+Mental Tendencies. Quick in grasping, learning and 
+acquiring a good education. Lovely and quick witted, 
+sometimes shy or retiring humane, good disposition, but 
+nervous and restless. Admirer of music, dance, drawing, 
+painting, travel and inventions.  
+~R3I!1~
+Personality. No one can do better things successfully and 
+gracefully than Geminians, but the weakness is, they should 
+have deliberate determination to do their work and stick to 
+its completion. They lack concentration and quick decision.
+~R3I!1~
+They are ambitious, aspiring, curious to know the results 
+of their efforts immediately. Argumentative, engaged in two 
+or more pursuits at a time. Fond of mental recreations. At 
+times they are restless, anxious, highly strung and 
+diffusive, mentally timid, indecisive and excitable. Love, 
+change and diversity in all spheres to life. They are good 
+advisors and can be relied only in the case of emergency. 
+They are very clever as they are progressive, energetic, 
+inventive, mechanical, ingenious and have retentive power. 
+They refuse to be bound by rules.
+~R3I!1~
+Geminians can prove good detectives, journalists and an 
+excellent schemer. If Mercury is retrograde at birth, they 
+will prefer to side-step the truth and enjoy a good joke.
+~R3I!1~
+They are subject to lot of changes in their life. Enjoy the 
+life to the maximum and suffer continuous misfortunes under 
+the influence of opposite sex and disagreement with the 
+father and family disputes arise. Troubles from progney. 
+Capable of making friendship very quickly but such 
+relations die due to their fault finding nature. The more 
+the romance, more happy they will be. They should only 
+marry with person born in Libra, Aquarius, Aries and Leo 
+having as their ascendants.
+~R3I!1~
+The planetary significator is Mercury.
+~R3I!1~
+Weakness. The Geminians lack in concentration and quick 
+decision. They should not give themselves upto a petty 
+strife. Always hasty and anxious to know the results of 
+their efforts then and there. They want only short cuts, 
+are able to carry out work quickly adopting improved 
+methods. Events will move faster in their life than others. 
+They should give up curious traits hastening others.
+~R3I!1~
+Advice. They should take rest, take plenty of exercise, 
+fresh air breathing, eat conservatively and cultivate 
+physical and mental peace.
+~R3I!1~
+Health and Diseases. Geminians spoil their health through 
+unnecessary and unavoidable worry and anxiety. So they 
+should avoid mental strain, their health will be normally 
+good. Do not overtax yourself by large variety or overwork. 
+By rest and good sleep he can maintain his health.
+~R3I!1~
+Gemini rules over lungs, shoulders and Arms. Plumonary 
+affections, cold running of nose, influenza, pleurisy, 
+bronchitis, T.B. all are the possible diseases which can 
+afflict him. When Gemini is afflicted defects in shoulders 
+and arms is indicated. Piles, fistula, bladder and kidney 
+afflictions are also denoted.
+~R3I!1~
+Finance. There will be lot of changes in their life. They 
+will enjoy the life with a good fortune and suffer 
+continuous misfortune experiencing both privation and 
+plenty. Family disputes and disagreement with father. They 
+will bring their downfall themselves by their secret love 
+affairs if Mars, Saturn and Venus afflict they also 
+contribute and such attachments will bring loss and 
+difficulties. Some may have progney through such 
+connections which will be perenial source of trouble and 
+headache to them.
+~R3I!1~
+Romance and Marriage. Gemini is a dual sign, so the natives 
+will feel that variety is the spice of life. They make 
+quick friendship and find fault quickly and often lose 
+them, so they cannot find a friend to their satisfaction 
+even though they long for it. They cannot be understood 
+easily but romance for them is the source of most 
+happiness. Their affection is controlled by the mind than 
+by the emotions. They are calculating and cynical in love. 
+They are flirts by nature.
+~R3I!1~
+In case the partner of Geminian is equally intelligent they 
+will enjoy the married life otherwise bickerings and 
+separation may follow. Many short journeys in life are 
+indicated.
+~@W*R3I!1~
+Ladies. Geminian ladies are very intelligent and seek 
+mental companionship and do not wish to be a mere house 
+keeper. After marriage, they do not want to give up their 
+outside activities. They cannot tolerate any resentment by 
+the partner against their wish. They should be more tactful 
+for getting happy life. These ladies can not be easily 
+imposed upon, for it they like to earn by outside work, 
+they may neglect the husband, or if they want to be house 
+wife, they will leave their career. They are highly refined 
+and keep their homes tidy and clean.
+~-@W*R3I!1~
+Husbands. Such persons want "Yes Wife". The partners should 
+not take their flirtations seriously if they want peace and 
+harmony at home. Such people can put and brupt end to the 
+romance if they feel, it is a source of expense and loss, 
+and cannot tolerate overbearing wives and may leave home as 
+they are unable to put up with constant pressure for the 
+partner.
+~R3I!1~
+Ideal Match. Geminians are best suited for Libra, Aquarius, 
+Aries and Leo born people. These combination can lead to 
+happy and favourable life.
+~R3I!1~
+Domestic Environments. Geminians feel delight in 
+entertaining business partners, friends, relatives and 
+customers. They are a bit extravagant. Keen for keeping the 
+home at a medium level. They often change their residence. 
+Being Mercurians they cannot remain idle mentally or 
+physically. Generally they are fair. Quite hospitable and 
+generally of adjusting nature. Though fond of children yet 
+give less parental care and need careful handling.
+~R3I!1~
+Professions. Geminians have interest in varied jobs as they 
+are active, alert and industrious. As they are intelligent, 
+humorous, and good speakers and will come eventually before 
+the public. So the best professions for them are brokers, 
+intelligent agents, successful businessman, secretaries and 
+efficient advocates. A good convincing power in one of 
+their attributes and may lead in journalism. They like to 
+travel from place to place and have varied professions and 
+are successful travelling agents and jobs Connected with 
+it. They can find ways and new methods of earnings and will 
+have dual source of income in life. But they are advised to 
+be more economical as they will be having a regular income.
+~R3I!1~
+Lucky Days, Numbers, Colours and Stones. Monday, Thursday, 
+Wednesday and Friday are favourable days, Tuesday and 
+Saturday are days of worries, difficulties and loss. Sunday 
+good for short journeys and routine work.
+~R3I!1~
+The vibrated numbers are 7 and 3, attractive 5,6 and 9, 
+positive numbers are 1,2 whereas disagree numbers are 4 and 
+8.
+~R3I!1~
+Lucky and favourable colours are yellow, purple, blue, 
+green and pink, Avoid red and black.
+~R3I!1~
+Day of fast is full Moon day.
+~R3I!1~
+Lucky stones are Emerald and Yellow Sapphire which should 
+be used in Gold of 3,5,7 or 10 Carats in 4th finger of 
+right hand on wednesday morning after offering prayers. But 
+when Mercury is unfavourable or in fall, one should use 
+emerald and Ruby in Gold to reduce or mitigate the evil 
+effects.
+~?~
+4. Cancer or Karak
+~R4I!1~
+Physical Appearance. Not usually above average height, 
+tendency to stoutness, sometimes awkward and walk with a 
+rolling gait. Round face, full cheeks, tendency to double 
+chin. Short nose but sometimes prominent at the tip. Grey 
+or light blue eyes, pale complexion, wide chest and small 
+hands and feet.
+~R4I!1~
+Mental Tendencies. Cancerians are fond of change, novelty 
+and travelling. Attached to relatives and home, inclined to 
+public life, sympathetic, changeful and impatient. 
+Sentimental, sympathetic, emotional and over sensitive. 
+Anger comes and goes quickly. Diplomatic, discreet and 
+conventional.
+~R4I!1~
+Presonality. Changeable, ups and downs of positions and 
+occupations in life. Of fertile imagination, sentimental, 
+sympathetic and talkative. They are timid to face physical 
+danger but are brave. Their temper is changeable. They have 
+tenacious memory, and are industrious, emotional and 
+conventional.
+~R4I!1~
+They have strong emotional nature and are romantic, they 
+also have psychic medium faculty. They have changeable 
+nature. In love affairs they love intensly and have a 
+nature of true hospitality. Of fiscal mind and have deep 
+feelings of loyalty and responsibility. Cancerians are more 
+interested to obtain small sums of money from different 
+sources than a big amount, from one source. They are 
+secretive, impressionable and magnetic. They should not be 
+impatient, changeability and indolence are the other 
+weakness. Health will be fragile in youth but will improve 
+as age advances. Cancerians can be afflicted for lungs, 
+flu, cough, asthma, bronchitis, tuberculosis and dyspepsia 
+etc. Best suited for commercial career, they can not 
+tolerate dishonesty in business etc. They accumulate wealth 
+by dint of their own hard efforts. Good husbands and wives 
+are born in Cancer ascendant. They are devoted to domestic 
+life, to husbands, to wives sincere and sympathetic. 
+Cancerians can sacrifice all for their children.
+~R4I!1~
+Health and Disease. Cancerians have fragile health in youth 
+but as age advances they will pick up the health. Cancer 
+rules chest and stomach. Nervous and worried. Digestive 
+system and throat is to be taken care of. They should not 
+be worring and should have a reasonable diet without 
+alcohol. Guard against asthma, gastric problems, week 
+digestion, rheumatism and sciatica.
+~R4I!1~
+Diseases which can afflict Cancerians are afflictions of 
+lungs, throat, flu, cough, pleurisy, dyspepsia, flatulence, 
+nervousness, fear complex, hysteria, bile, gall stone, 
+worms and boils on the chest.
+~R4I!1~
+Finance. Cancerians are very careful for the money, being 
+honest themselves, they can not tolerate any dishonesty and 
+are not extravagant. As Jupiter is exalted in this sign, 
+they accumulate wealth through their own hard labour. 
+Fortunate in finances.
+~R4I!1~
+Romance and Marriage. Monotonous life without romance for 
+Cancer born people, loyal sincere and affectionate in love, 
+but they lack in expressing their loyalty and sincerity to 
+the partners. They are honest and very true. They are 
+stubborn and determined but also fickle minded and 
+changeable.
+~R4I!1~
+Cancer born people love their home, family and enjoy a 
+settled family life. A good homely bird as a general rule 
+but of romantic and passionate in nature. They make good 
+parents for children, for them they will sacrifice their 
+own needs and will provide education and all comforts to 
+their children. Their children will also remain grateful, 
+obedient and dutiful. Gain through children, inspite of the 
+fact that their children will be frank and will not 
+tolerate any imposition upon them, full of heroism, cool 
+and calm minded, collected and sharp.
+~-@W*R4I!1~
+Husbands. Cancer born husbands are devoted to their wives. 
+They would like to marry a homely girl, keep their wives 
+cheerful, pleasing her in every way. Such persons are often 
+dissatisfied and will be indulging in criticism in one way 
+or the other and may interfere in routine household matters 
+and create unpleasant atmosphere, which attitude should be 
+avoided by them.
+~@W*R4I!1~
+Ladies. Such ladies are sincere, loyal and devoted to their 
+husbands, affectionate, dutiful, patients, pleasing and 
+sympathetic. A good mother for children. Adaptable with 
+homely atmosphere but moody at times. They are satisfied 
+from their husbands, they attend them properly, they offer 
+them spiritual strength also. They become moody at times, 
+when neglected, overlooked or ignored they become stubborn 
+and determined, they will not yield. They being if 
+changeable in nature will not give up unless the partners 
+do something drastic to which they cannot tolerate.
+~R4I!1~
+Cancerians are open and frank at sight, but in reality they 
+hide much from each others. They are impressionable and 
+magnetic. Sensitive and retiring, romantic and imaginative. 
+Easily influenced and will adjust to circumstances.
+~R4I!1~
+Ideal Match. Cancer born persons should preferably marry 
+Cancerians, Scorpio or Pisces born persons.
+~R4I!1~
+Domestic Environments. Cancer born are devoted to their 
+family. They love the home, and derive pleasure. Fond of 
+collecting antiquities, constant journeys but even they 
+keep home comfortable. A good family atmosphere, attend to 
+their friends, host them to their full satisfaction. Love 
+of home and children are their basic instinct. They desire 
+to keep friendship on long standing basis. A good homely 
+atmosphere prevails generally.
+~R4I!1~
+Professions. Cancerians have commercial career and in 
+things derived from water, conches, pearl, fish etc. May be 
+sailors, in Navy, submarine, shipping departments, import 
+or export, transport and travels. Also a good caterer, 
+restaurant managers, orators, preachers, contractor or any 
+good job in irrigation department. Interested in developing 
+Vedic and sacred texts.
+~R4I!1~
+Traits to be Corrected. Cancerians should be patient, 
+endured and avoid sensitiveness. Indolence and 
+changeability are their weak points and needs to be 
+corrected. Be a practical hand, avoid inferiority complex 
+and should not be over anxious, lazy and passive. They 
+should control their emotions and develop spiritual side, 
+should not be vindictive. They should overcome their timid 
+nature and do not be very sensitive and extremely selfish 
+where as patience and endurance should be cultivated.
+~R4I!1~
+Lucky Days numbers, Colours and Gems Etc. Sunday and 
+Fridays are favourable for enjoyment and pleasure. Monday, 
+Tuesday and Thursdays are days of success. Wednesday is 
+good for journey and investments. But Saturday is an 
+unfavourable day and may create disharmony, dispute, 
+difference of opinions, delay in efforts etc.
+~R4I!1~
+Lucky Colours. are white, cream, red and yellow. But blue 
+and green should be avoided.
+
