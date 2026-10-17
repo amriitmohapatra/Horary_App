@@ -163,20 +163,30 @@ export function sunriseFlags(c: SunriseConvention): number {
   }
 }
 
+/** JD (UT) of local civil midnight opening the civil date that contains `jdUT`. */
+export const civilMidnight = (jdUT: number, zoneHours: number): number =>
+  Math.floor(jdUT + zoneHours / 24 + 0.5) - 0.5 - zoneHours / 24;
+
+/** Sunrise of the local civil date containing `jdUT` (search from local midnight); null if none that date. */
+export function civilDaySunrise(swe: SwissEph, jdUT: number, zoneHours: number, latDeg: number, lonDeg: number,
+  c: SunriseConvention = DEFAULT_SUNRISE): number | null {
+  const midnight = civilMidnight(jdUT, zoneHours);
+  const sr = swe.riseTrans(midnight, SE.SUN, sunriseFlags(c), lonDeg, latDeg);
+  return sr !== null && sr < midnight + 1 ? sr : null;
+}
+
 /**
- * The last sunrise at or before `jdUT` (UT), searching back at most two days;
- * null where the Sun does not rise.
+ * The sunrise that opens the Hindu day holding `jdUT`: the civil date's
+ * sunrise if the moment is at or after it, else the previous date's.
+ * Every search starts at a local midnight (as almanacs and PyJHora do):
+ * starting swe_rise_trans just after a previous sunrise can return a wrong
+ * root at high latitude (seen at 64° N in May: 9 min late).
  */
-export function lastSunrise(swe: SwissEph, jdUT: number, latDeg: number, lonDeg: number, c: SunriseConvention = DEFAULT_SUNRISE): number | null {
-  const rsmi = sunriseFlags(c);
-  let sr = swe.riseTrans(jdUT - 2, SE.SUN, rsmi, lonDeg, latDeg);
-  if (sr === null || sr > jdUT) return null;
-  for (let guard = 0; guard < 4; guard++) {
-    const next = swe.riseTrans(sr + 1e-4, SE.SUN, rsmi, lonDeg, latDeg);
-    if (next === null || next > jdUT) return sr;
-    sr = next;
-  }
-  return sr;
+export function lastSunrise(swe: SwissEph, jdUT: number, zoneHours: number, latDeg: number, lonDeg: number,
+  c: SunriseConvention = DEFAULT_SUNRISE): number | null {
+  const today = civilDaySunrise(swe, jdUT, zoneHours, latDeg, lonDeg, c);
+  if (today !== null && today <= jdUT) return today;
+  return civilDaySunrise(swe, jdUT - 1, zoneHours, latDeg, lonDeg, c);
 }
 
 /** Weekday 0 = Sunday … 6 of the local civil date containing `jdUT`. */
@@ -189,7 +199,7 @@ export function vara(swe: SwissEph, chart: ChartResult, opts: { sunrise?: Sunris
   const { jdUT } = chart.moment;
   const { latDeg, lonDeg } = chart.input.place;
   const civil = civilWeekday(jdUT, zone);
-  const sr = lastSunrise(swe, jdUT, latDeg, lonDeg, convention);
+  const sr = lastSunrise(swe, jdUT, zone, latDeg, lonDeg, convention);
   const w = sr === null ? civil : civilWeekday(sr, zone);
   return {
     num: w + 1, name: VARA_NAMES[w]!, sanskrit: VARA_SANSKRIT[w]!, lord: VARA_LORDS[w]!,

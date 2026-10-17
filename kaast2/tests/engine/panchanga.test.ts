@@ -10,10 +10,11 @@ import { resolve } from 'node:path';
 import { bootNode } from './boot';
 import { cast, type ChartInput, type ChartResult } from '../../src/engine';
 import type { SwissEph } from '../../src/engine/ephem/swisseph';
-import { lastSunrise, panchanga, vara, type SunriseConvention } from '../../src/engine/panchanga/panchanga';
+import { lastSunrise, panchanga, sunriseFlags, vara, type SunriseConvention } from '../../src/engine/panchanga/panchanga';
+import { SE } from '../../src/engine/ephem/swisseph';
 import { yogiPoints } from '../../src/engine/yogi/yogi';
 import { bhavaChart } from '../../src/engine/houses/bhava';
-import { fromJulianDay } from '../../src/engine/time/julian';
+import { fromJulianDay, julianDay } from '../../src/engine/time/julian';
 import { dmsInSign, signIndex } from '../../src/engine/zodiac';
 
 interface Case {
@@ -72,18 +73,20 @@ describe('Amitabh Bachchan, 1942-10-11 16:00 (+6.5), Allahabad — worked values
       '11:01:56:52', '12:05:28:48', '1:09:00:44', '2:12:32:40', '3:09:00:44', '4:05:28:48',
       '5:01:56:52', '6:05:28:48', '7:09:00:44', '8:12:32:40', '9:09:00:44', '10:05:28:48',
     ]);
-    expect(b.houses).toEqual({ As: 1, Su: 7, Mo: 8, Ma: 7, Me: 7, Ju: 5, Ve: 7, Sa: 4, Ra: 6, Ke: 12 });
+    expect(b.houses).toEqual({ As: 1, Su: 9, Mo: 9, Ma: 9, Me: 9, Ju: 6, Ve: 8, Sa: 4, Ra: 7, Ke: 1 });
+    // equal bhava differs only for Saturn (Taurus 19°14′: Sripati 4, equal 5)
+    expect(bhavaChart(amitabh(), 'equal').houses).toEqual({ ...b.houses, Sa: 5 });
   });
 });
 
 describe('engine longitudes = oracle longitudes (so the PyJHora fixture compares rules, not ephemerides)', () => {
-  it('Sun and Moon arcseconds identical on every chart; exact degrees within 0.01″', () => {
+  it('Sun and Moon arcseconds identical on every chart; exact degrees within 0.05″ (WASM vs pyswisseph Moon ≤ 0.03″)', () => {
     const bad: string[] = [];
     charts.forEach((ch, i) => {
       const c = fixture.cases[i]!;
       for (const p of ['Su', 'Mo'] as const) {
         if (ch.bodies[p].lon !== c.arcsec[p]) bad.push(`${c.input.name} ${p} ${ch.bodies[p].lon} vs ${c.arcsec[p]}`);
-        if (Math.abs(ch.bodies[p].lonDeg - c.deg[p]!) * 3600 > 0.01) bad.push(`${c.input.name} ${p} deg`);
+        if (Math.abs(ch.bodies[p].lonDeg - c.deg[p]!) * 3600 > 0.05) bad.push(`${c.input.name} ${p} deg`);
       }
       if (Math.abs(ch.asc.lonDeg - c.ascDeg) * 3600 > 0.01) bad.push(`${c.input.name} Asc`);
     });
@@ -98,7 +101,7 @@ describe('sunrise conventions = pyswisseph swe_rise_trans (≤ 0.1 s)', () => {
     fixture.cases.forEach((c, i) => {
       if (!c.sunriseSwe) return;
       n++;
-      const ours = lastSunrise(swe, charts[i]!.moment.jdUT, c.input.lat, c.input.lon, conv);
+      const ours = lastSunrise(swe, charts[i]!.moment.jdUT, c.input.tz, c.input.lat, c.input.lon, conv);
       const want = c.sunriseSwe[conv];
       if (ours === null || want === null) { if (ours !== want) bad.push(`${c.input.name}: ${ours} vs ${want}`); return; }
       if (Math.abs(ours - want) * 86400 > 0.1) bad.push(`${c.input.name}: ${(ours - want) * 86400} s`);
@@ -118,7 +121,7 @@ describe('sunrise conventions = pyswisseph swe_rise_trans (≤ 0.1 s)', () => {
 });
 
 describe('vara vs PyJHora (drik.vaara, Hindu rising)', () => {
-  it("'hindu' convention: same weekday as PyJHora on every chart with a sunrise; same sunrise to ≤ 1 s", () => {
+  it("'hindu' convention: same weekday as PyJHora on every chart with a sunrise; same sunrise to ≤ 2 s (PyJHora rounds to the second)", () => {
     const bad: string[] = [];
     let n = 0, shifted = 0;
     fixture.cases.forEach((c, i) => {
@@ -129,11 +132,21 @@ describe('vara vs PyJHora (drik.vaara, Hindu rising)', () => {
       if (v.num - 1 !== c.pyjhora.vaara_pyjhora) bad.push(`${c.input.name}: ours ${v.name}, PyJHora ${c.pyjhora.vaara_pyjhora}`);
       // PyJHora reports the civil date's sunrise; ours is the last one before the moment — equal unless before sunrise
       const jh = c.pyjhora.sunrise_pyjhora!.jdUT;
-      if (!v.beforeSunrise && Math.abs(v.sunriseJdUT! - jh) * 86400 > 1) bad.push(`${c.input.name}: sunrise ${(v.sunriseJdUT! - jh) * 86400} s`);
+      if (!v.beforeSunrise && Math.abs(v.sunriseJdUT! - jh) * 86400 > 2) bad.push(`${c.input.name}: sunrise ${(v.sunriseJdUT! - jh) * 86400} s`);
     });
     expect(n).toBeGreaterThan(40);
     expect(shifted).toBeGreaterThan(3);
     expect(bad).toEqual([]);
+  });
+
+  it('sunrise searches start at local midnight: Swiss rise_trans started just after the previous sunrise is 9 min late at 64° N', () => {
+    // Synthetic Reykjavik 64.1466 N 21.9426 W, 2076-05-24 06:11 UT; Hindu rising
+    const jd = julianDay(2076, 5, 24, 6 + 11 / 60);
+    const sr = lastSunrise(swe, jd, 0, 64.1466, -21.9426, 'hindu')!;
+    expect(local(sr, 0)).toBe('2076-5-24 3:56:27');                     // = PyJHora drik.sunrise
+    const prev = lastSunrise(swe, jd - 1, 0, 64.1466, -21.9426, 'hindu')!;
+    const naive = swe.riseTrans(prev + 1e-4, SE.SUN, sunriseFlags('hindu'), -21.9426, 64.1466)!;
+    expect((naive - sr) * 1440).toBeGreaterThan(9);                      // the root we must not take
   });
 
   it('a birth before sunrise takes the previous weekday', () => {

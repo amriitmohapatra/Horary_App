@@ -191,19 +191,23 @@ def run_pyjhora(c, ch, with_sunrise):
 
 
 def swe_sunrises(c, ch):
-    """Last sunrise at or before the moment for KAAST's three conventions (pyswisseph)."""
+    """Sunrise opening the Hindu day of the moment, per KAAST convention (pyswisseph).
+
+    Searches start at local civil midnight (zone c["tz"]): the civil date's sunrise if the
+    moment is at/after it, else the previous date's. (Starting rise_trans just after an
+    earlier sunrise can return a wrong root at high latitude.)
+    """
     flags = {"upper-limb": swe.CALC_RISE, "disc-centre": swe.CALC_RISE | swe.BIT_DISC_CENTER,
              "hindu": swe.CALC_RISE | swe.BIT_HINDU_RISING}
+    jd = ch["jdUT"]
+    midnight = math.floor(jd + c["tz"] / 24 + 0.5) - 0.5 - c["tz"] / 24
+    def day_sunrise(m0, rsmi):
+        rc, tret = swe.rise_trans(m0, swe.SUN, rsmi, (c["lon"], c["lat"], 0.0), 1013.25, 15.0, swe.FLG_SWIEPH)
+        return tret[0] if rc == 0 and tret[0] < m0 + 1 else None
     res = {}
     for k, rsmi in flags.items():
-        sr = None
-        t = ch["jdUT"] - 2
-        for _ in range(5):
-            rc, tret = swe.rise_trans(t, swe.SUN, rsmi, (c["lon"], c["lat"], 0.0), 1013.25, 15.0, swe.FLG_SWIEPH)
-            if rc != 0 or tret[0] > ch["jdUT"]:
-                break
-            sr = tret[0]; t = sr + 1e-4
-        res[k] = sr
+        sr = day_sunrise(midnight, rsmi)
+        res[k] = sr if sr is not None and sr <= jd else day_sunrise(midnight - 1, rsmi)
     return res
 
 

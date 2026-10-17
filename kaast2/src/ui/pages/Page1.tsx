@@ -13,6 +13,18 @@ import { rasiEntries, vargaEntries } from '../chartEntries';
 import { PlanetTable } from '../components/PlanetTable';
 import { DashaList } from '../components/DashaList';
 import { HowComputed } from '../components/HowComputed';
+import { StrengthTable } from '../components/StrengthTable';
+import { ShadbalaBars } from '../components/ShadbalaBars';
+import { strength } from '../state/store';
+import type { Page1Strengths } from '../../engine/strength';
+
+const ORD = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'];
+/** PL's house-edge label, e.g. "1st h. 31 479.48" (SAV bindus, Bhava Bala), placed by sign. */
+function edgeLabels(s: Page1Strengths): string[] {
+  const out: string[] = Array(12).fill('');
+  for (const h of s.houses) out[h.sign] = `${ORD[h.house - 1]} h.  ${h.sav}  ${h.bhavaBala.toFixed(2)}`;
+  return out;
+}
 import { t, type MessageKey } from '../i18n';
 import { coords, hms, longDate } from '../format';
 
@@ -39,6 +51,7 @@ export function Page1({ chart }: { chart: ChartResult }): JSX.Element {
     now.getUTCHours() + now.getUTCMinutes() / 60 + now.getUTCSeconds() / 3600);
   const name = input.name || t('page1.birthChart');
   const compact = useMedia('(max-width: 560px)');
+  const st = strength.value;
 
   return (
     <article class="page1" data-testid="page1">
@@ -59,10 +72,14 @@ export function Page1({ chart }: { chart: ChartResult }): JSX.Element {
                 { text: coords(input.place.latDeg, input.place.lonDeg), size: 17 },
               ]}
             maxFont={compact ? 46 : 27} minFont={compact ? 24 : 9}
+            edges={st && !compact ? edgeLabels(st) : undefined}
           />
         </Panel>
         <Panel id="planets" title="page1.planets">
           <PlanetTable rows={m.rows} />
+        </Panel>
+        <Panel id="strengths" title="page1.strengths">
+          {st ? <StrengthTable s={st} /> : <p class="pending">{t('page1.strengthsUnavailable')}</p>}
         </Panel>
         </div>
         <div class="p1-col">
@@ -78,9 +95,11 @@ export function Page1({ chart }: { chart: ChartResult }): JSX.Element {
         <Panel id="dasha" title="page1.vimshottari">
           <DashaList mahas={m.mahas} zoneHours={zoneHours} nowJd={nowJd} />
         </Panel>
-        <Panel id="strengths" title="page1.strengths">
-          <p class="pending">{t('page1.strengthsPending')}</p>
-        </Panel>
+        {st && (
+          <Panel id="shadbala" title="page1.shadbala">
+            <ShadbalaBars s={st} />
+          </Panel>
+        )}
         </div>
       </div>
       <HowComputed chart={chart} />

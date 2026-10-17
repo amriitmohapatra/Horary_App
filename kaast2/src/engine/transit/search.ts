@@ -21,8 +21,9 @@
  * Recursion stops at TAU (0.5 s): an excursion across a boundary lasting
  * less than that is reported as at most one crossing. Stations (sign
  * changes of the Swiss speed, i.e. of the chart's "R" flag) use the same
- * bound on the speed itself; two stations closer than STATION_SEP (60 s) are
- * not resolved (the true node does this: its motion wobbles by ~1e-7°).
+ * bound on the speed itself, down to STATION_SEP (60 s): a hidden pair of
+ * stations closer together than that (a reversal lasting < 1 min) can be
+ * missed — both together, so directions still alternate.
  */
 import { RATE_SLACK as E, type BodySample, type Evaluator, type Motion } from './body';
 import { ZODIAC } from '../zodiac';
@@ -149,13 +150,21 @@ export class BodyScan {
     return out;
   }
 
+  /**
+   * Stations in [a, b]. The evaluated samples form a partition of [a, b] and
+   * each sign change between neighbours yields exactly one station, so
+   * directions alternate by construction. Around a station c the speed is
+   * re-sampled at c ± STATION_SEP; a second sign change inside that window
+   * is still found (it shows as a sign difference with the bracket).
+   */
   private st(a: BodySample, b: BodySample, out: Station[]): void {
     const m = this.m, h = b.t - a.t;
     if (sgn(a.v) !== sgn(b.v)) {
-      const c = this.solveStation(a, b);
-      out.push(c);
-      if (c.t - STATION_SEP > a.t) this.st(a, this.at(c.t - STATION_SEP), out);
-      if (c.t + STATION_SEP < b.t) this.st(this.at(c.t + STATION_SEP), b, out);
+      const { lo, hi, station } = this.solveStation(a, b);
+      out.push(station);
+      const lt = station.t - STATION_SEP, rt = station.t + STATION_SEP;
+      if (lt > a.t) { const l = this.at(lt); this.st(l, lo, out); this.st(a, l, out); } else this.st(a, lo, out);
+      if (rt < b.t) { const r = this.at(rt); this.st(hi, r, out); this.st(r, b, out); } else this.st(hi, b, out);
       return;
     }
     if (h * m.az < m.vz && Math.abs(a.v) + Math.abs(b.v) > m.az * h) return;
@@ -165,8 +174,8 @@ export class BodyScan {
     this.st(mid, b, out);
   }
 
-  /** Illinois regula falsi on the speed; returns the sample just after the sign change. */
-  private solveStation(a: BodySample, b: BodySample): Station {
+  /** Illinois regula falsi on the speed; returns the final bracket and the station. */
+  private solveStation(a: BodySample, b: BodySample): { lo: BodySample; hi: BodySample; station: Station } {
     let lo = a, hi = b;
     let flo = a.v, fhi = b.v;
     let side = 0;
@@ -174,7 +183,7 @@ export class BodyScan {
       let t = lo.t + ((hi.t - lo.t) * flo) / (flo - fhi);
       if (!(t > lo.t && t < hi.t)) t = (lo.t + hi.t) / 2;
       const s = this.at(t);
-      if (sgn(s.v) === sgn(lo.v)) {
+      if (sgn(s.v) === sgn(a.v)) {
         lo = s; flo = s.v;
         if (side === -1) fhi /= 2;
         side = -1;
@@ -184,8 +193,7 @@ export class BodyScan {
         side = 1;
       }
     }
-    const t = (lo.t + hi.t) / 2;
     const raw = lo.raw + wrap(hi.raw - lo.raw) / 2;
-    return { t, raw: ((raw % ZODIAC) + ZODIAC) % ZODIAC, dir: sgn(b.v) as 1 | -1 };
+    return { lo, hi, station: { t: (lo.t + hi.t) / 2, raw: ((raw % ZODIAC) + ZODIAC) % ZODIAC, dir: sgn(b.v) as 1 | -1 } };
   }
 }

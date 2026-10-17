@@ -53,7 +53,7 @@ function verifyEvents(profile: ProfileId, events: TransitEvent[]): number {
         const at = transitPositions(swe, profile, first.jdUT + SEC)[first.body];
         expect(Math.abs(((at.lon - first.lon + 1_296_000 + 648_000) % 1_296_000) - 648_000)).toBeLessThan(60);
       }
-      checked++;
+      checked += j - i + 1;
       i = j + 1;
     }
   }
@@ -132,10 +132,17 @@ describe('(a) events are real crossings, (b) brute force finds nothing missed', 
   it('Rahu and Ketu (true node): 20 years of sign, nakshatra, pada and stations (brute force every 3 h)', () => {
     const a = jd(2010), b = jd(2030);
     const ev = findEvents(swe, 'pl9', { bodies: ['Ra', 'Ke'], kinds: ['sign', 'nakshatra', 'pada', 'station'], fromJd: a, toJd: b });
-    const ra = ev.filter((e) => e.body === 'Ra'), ke = ev.filter((e) => e.body === 'Ke');
-    expect(ra.length).toBe(ke.length);
-    ra.forEach((e, i) => { expect(ke[i]!.jdUT).toBe(e.jdUT); expect(ke[i]!.direction).toBe(e.direction); });
-    expect(ra.some((e) => e.kind === 'pada' && e.direction === 'direct')).toBe(true); // the true node does move direct
+    // Ketu = Rahu + 180° = 6 signs = 54 padas = 13½ nakshatras: sign, pada and station
+    // instants coincide; Ketu's nakshatra changes fall on Rahu's pada 2→3 boundaries.
+    for (const kind of ['sign', 'pada', 'station'] as const) {
+      const ra = ev.filter((e) => e.body === 'Ra' && e.kind === kind), ke = ev.filter((e) => e.body === 'Ke' && e.kind === kind);
+      expect(ke.length).toBe(ra.length);
+      ra.forEach((e, i) => { expect(ke[i]!.jdUT).toBe(e.jdUT); expect(ke[i]!.direction).toBe(e.direction); });
+      if (kind === 'sign') ra.forEach((e, i) => expect(ke[i]!.to).toBe((e.to + 6) % 12));
+    }
+    const raPada = new Set(ev.filter((e) => e.body === 'Ra' && e.kind === 'pada' && (e.direction === 'direct' ? e.to : e.from) % 4 === 2).map((e) => e.jdUT));
+    expect(ev.filter((e) => e.body === 'Ke' && e.kind === 'nakshatra').every((e) => raPada.has(e.jdUT))).toBe(true);
+    expect(ev.some((e) => e.body === 'Ra' && e.kind === 'pada' && e.direction === 'direct')).toBe(true); // the true node does move direct
     expect(verifyEvents('pl9', ev)).toBe(ev.length);
     for (const body of ['Ra', 'Ke'] as const) for (const kind of ['sign', 'nakshatra', 'pada'] as const) bruteForce('pl9', body, kind, ev, a, b, 1 / 8);
   });

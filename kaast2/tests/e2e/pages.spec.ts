@@ -151,3 +151,37 @@ test('Display: theme button cycles Light → Dark → Warm night; text size enla
   await expect.poll(async () => (await page.evaluate(() => parseFloat(getComputedStyle(document.documentElement).fontSize))) / before)
     .toBeCloseTo(1.25, 2);
 });
+
+test('Page 1 strengths match the PL 9 screen (table, bars, house-edge labels)', async ({ page }) => {
+  const errors = await castAmitabh(page);
+  const table = page.getByTestId('strength-table');
+  const want: Record<string, string[]> = {
+    Su: ['Enemy', '1.22', '2', '11', '2', 'Drm.', 'Infant', 'AK', 'Neutral'],
+    Ju: ['Exalt.', '1.23', '3', '18', '7', 'Alr.', 'Dead', 'DK', 'Malefic'],
+    Ve: ['Debil.', '1.14', '2', '13', '4', 'Slp.', 'Adoles.', 'PiK', 'Benefic'],
+    Sa: ['Neutr.', '1.30', '4', '10', '3', 'Drm.', 'Youth.', 'MK', 'Benefic'],
+  };
+  for (const [p, cells] of Object.entries(want)) {
+    await expect(table.locator(`tr[data-point="${p}"] td`)).toHaveText(cells);
+  }
+  await expect(page.locator('.sb-bar')).toHaveCount(7);
+  const edges = await page.locator('svg.plate .plate-edge').allTextContents();
+  expect(edges).toHaveLength(12);
+  const pl: Record<string, [number, number]> = { '1st': [31, 479.48], '2nd': [27, 554.78], '6th': [42, 392.83], '10th': [29, 374.6] };
+  for (const [h, [sav, bb]] of Object.entries(pl)) {
+    const e = edges.find((x) => x.startsWith(`${h} h.`))!;
+    const [, s, b] = e.split(/\s+/).filter(Boolean).slice(1);
+    expect(Number(s)).toBe(sav);
+    expect(Math.abs(Number(b) - bb)).toBeLessThanOrEqual(0.6);
+  }
+  expect(errors).toEqual([]);
+});
+
+test('Strengths page shows Shad Bala, Bhava Bala and Ashtakavarga (SAV = 337)', async ({ page }) => {
+  await castAmitabh(page);
+  await page.getByRole('link', { name: 'Strengths' }).click();
+  await expect(page.getByTestId('shadbala-table').locator('tbody tr')).toHaveCount(23);
+  await expect(page.getByTestId('bhavabala-table').locator('tbody tr')).toHaveCount(12);
+  const savRow = page.getByTestId('ashtakavarga-table').locator('tr', { hasText: 'Sarva' });
+  await expect(savRow.locator('td').last()).toHaveText('337');
+});

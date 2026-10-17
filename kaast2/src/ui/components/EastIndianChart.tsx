@@ -27,7 +27,11 @@ export interface EastIndianChartProps {
   /** Largest font in viewBox units (the plate is 1020 × 780). */
   maxFont?: number;
   minFont?: number;
+  /** Text along the outer edge of each sign region (index 0 = Aries), as PL prints house strengths. */
+  edges?: (string | undefined)[];
 }
+
+
 
 const W = 1020, H = 780;
 const x = [10, 340, 680, 1010] as const;
@@ -38,6 +42,17 @@ const xdTR = (yy: number) => x[3] - ((x[3] - x[2]) * (yy - y[0])) / BH;
 const xdBL = (yy: number) => x[1] - ((x[1] - x[0]) * (yy - y[2])) / BH;
 const xdBR = (yy: number) => x[2] + ((x[3] - x[2]) * (yy - y[2])) / BH;
 const PAD = 12;
+
+/** Where each sign region meets the outer frame: [x, y, rotation]. */
+const EDGE_POS: [number, number, number][] = [
+  /* Ar */ [(x[1] + x[2]) / 2, y[0] - 12, 0], /* Ta */ [(x[0] + x[1]) / 2, y[0] - 12, 0],
+  /* Ge */ [x[0] - 12, (y[0] + y[1]) / 2, -90], /* Cn */ [x[0] - 12, (y[1] + y[2]) / 2, -90],
+  /* Le */ [x[0] - 12, (y[2] + y[3]) / 2, -90], /* Vi */ [(x[0] + x[1]) / 2, y[3] + 26, 0],
+  /* Li */ [(x[1] + x[2]) / 2, y[3] + 26, 0], /* Sc */ [(x[2] + x[3]) / 2, y[3] + 26, 0],
+  /* Sg */ [x[3] + 12, (y[2] + y[3]) / 2, 90], /* Cp */ [x[3] + 12, (y[1] + y[2]) / 2, 90],
+  /* Aq */ [x[3] + 12, (y[0] + y[1]) / 2, 90], /* Pi */ [(x[2] + x[3]) / 2, y[0] - 12, 0],
+];
+const EDGE_MARGIN = 34;
 
 type Row = { x: number; a: 'start' | 'end'; w: number };
 interface Region {
@@ -159,10 +174,18 @@ export function EastIndianChart(props: EastIndianChartProps): JSX.Element {
   const lagna = props.lagnaSign !== undefined ? REGIONS[props.lagnaSign] : undefined;
 
   return (
-    <svg class="plate" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={props.title}>
+    <svg class="plate" viewBox={props.edges ? `${-EDGE_MARGIN} ${-EDGE_MARGIN} ${W + 2 * EDGE_MARGIN} ${H + 2 * EDGE_MARGIN}` : `0 0 ${W} ${H}`}
+      role="img" aria-label={props.title}>
       <title>{props.title}</title>
       {props.description && <desc>{props.description}</desc>}
-      <rect class="plate-ground" x={0} y={0} width={W} height={H} rx={14} />
+      <rect class="plate-ground" x={props.edges ? -EDGE_MARGIN : 0} y={props.edges ? -EDGE_MARGIN : 0}
+        width={W + (props.edges ? 2 * EDGE_MARGIN : 0)} height={H + (props.edges ? 2 * EDGE_MARGIN : 0)} rx={14} />
+      {props.edges?.map((txt, s) => {
+        if (!txt) return null;
+        const [ex, ey, rot] = EDGE_POS[s]!;
+        return <text key={`e${s}`} class="plate-edge" x={ex} y={ey} text-anchor="middle" font-size={19}
+          transform={rot ? `rotate(${rot} ${ex} ${ey})` : undefined}>{txt}</text>;
+      })}
       {lagna && <polygon class="plate-lagna" points={lagna.poly} />}
       <rect class="plate-frame" x={x[0]} y={y[0]} width={x[3] - x[0]} height={y[3] - y[0]} />
       {lines.map(([a, b, c, d], i) => <line key={i} class="plate-line" x1={a} y1={b} x2={c} y2={d} />)}

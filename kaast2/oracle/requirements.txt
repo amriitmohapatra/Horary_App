@@ -1,2 +1,3 @@
 pyswisseph==2.10.3.2
 PyJHora==4.8.7        # oracle/vargas_pyjhora.py (independent varga cross-check)
+# PyJHora (pinned above) also drives oracle/jaimini_pyjhora.py → tests/fixtures/jaimini_pyjhora.json

@@ -241,3 +241,27 @@ table.data .sign { color: var(--text-muted); }
 .varga-thumb[aria-pressed='true'] { border-color: var(--plate-line); box-shadow: 0 0 0 2px color-mix(in srgb, var(--plate-line) 45%, transparent); }
 .thumb-label { font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); }
 @media (max-width: 900px) { .varga-main { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---- strengths ---- */
+.plate-edge { fill: var(--plate-muted); font-family: var(--font-data); }
+.sb-chart { margin: 0; }
+.sb-chart svg { display: block; width: 100%; height: auto; }
+.sb-grid { stroke: var(--rule); stroke-width: 1; }
+.sb-axis { stroke: var(--text-muted); stroke-width: 1; }
+.sb-tick { fill: var(--text-muted); font: 12px var(--font-data); }
+.sb-fill { fill: color-mix(in srgb, var(--plate-line) 80%, var(--text)); }
+.sb-fill.weak { fill: color-mix(in srgb, var(--plate-line) 40%, var(--surface)); stroke: var(--plate-line); stroke-width: 1; }
+.sb-bar:hover .sb-fill { filter: brightness(1.08); }
+.sb-val { fill: var(--text); font: 600 13px var(--font-data); paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+.sb-name { font: 700 14px var(--font-body); fill: currentColor; }
+.sb-ref { stroke: var(--text); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.sb-ref-label { fill: var(--text-muted); font: 12px var(--font-body); }
+.strengths-page { display: flex; flex-direction: column; gap: var(--sp-4); }
+.two-col { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: var(--sp-4); align-items: start; }
+table.data .r { text-align: right; }
+.comp-table tr.sum > * { font-weight: 700; }
+.comp-table tbody tr.sum > * { border-top: 1px solid var(--rule); }
+.av-table td.own { outline: 2px solid var(--plate-line); outline-offset: -3px; border-radius: 3px; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px var(--sp-4); margin: 0 0 var(--sp-3); }
+.facts div { display: contents; } .facts dt { color: var(--text-muted); } .facts dd { margin: 0; }
+@media (max-width: 900px) { .two-col { grid-template-columns: minmax(0, 1fr); } }

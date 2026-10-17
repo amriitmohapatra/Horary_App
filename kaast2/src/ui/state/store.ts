@@ -8,6 +8,7 @@ import { cast, DEFAULT_PROFILE, type ChartInput, type ChartResult, type ProfileO
 import type { SwissEph } from '../../engine/ephem/swisseph';
 import { BUILTIN_PLACES, type Place, zoneFor } from '../../io/places';
 import type { BootResult } from '../../boot/wasmLoader';
+import { strengths, type Page1Strengths } from '../../engine/strength';
 
 export type EngineState =
   | { status: 'booting' }
@@ -37,8 +38,15 @@ export const chart = computed<{ ok: ChartResult } | { error: string } | null>(()
   catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
 });
 
+/** Page 1 strength fields and their breakdowns (slice 2b). */
+export const strength = computed<Page1Strengths | null>(() => {
+  const e = engine.value, c = chart.value;
+  if (e.status !== 'ready' || !c || !('ok' in c)) return null;
+  try { return strengths(e.swe, c.ok); } catch { return null; }
+});
+
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
-export const ROUTES = ['page1', 'vargas', 'dashas', 'settings'] as const;
+export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];
 const routeFromHash = (): Route => {
   const h = location.hash.replace('#', '') as Route;
