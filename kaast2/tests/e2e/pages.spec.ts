@@ -185,3 +185,18 @@ test('Strengths page shows Shad Bala, Bhava Bala and Ashtakavarga (SAV = 337)', 
   const savRow = page.getByTestId('ashtakavarga-table').locator('tr', { hasText: 'Sarva' });
   await expect(savRow.locator('td').last()).toHaveText('337');
 });
+
+test('Jaimini page: K7 equals the PL 9 column; padas, lagnas, argala render', async ({ page }) => {
+  const errors = await castAmitabh(page);
+  await page.getByRole('link', { name: 'Jaimini' }).click();
+  const k7 = page.getByTestId('karakas7');
+  const want: [string, string][] = [['AK', 'Su'], ['AmK', 'Me'], ['BK', 'Ma'], ['MK', 'Sa'], ['PiK', 'Ve'], ['GK', 'Mo'], ['DK', 'Ju']];
+  for (const [k, p] of want) {
+    await expect(k7.locator('tbody tr').filter({ has: page.getByRole('rowheader', { name: k, exact: true }) })).toContainText(p);
+  }
+  await expect(page.getByTestId('special-lagnas').locator('tr')).toHaveCount(7);
+  await expect(page.getByTestId('argala-table').locator('tbody tr')).toHaveCount(4);
+  for (const v of ['D9', 'D10', 'D1']) await page.getByRole('button', { name: v, exact: true }).click();
+  await expect(page.getByText(/UL, the upapada, is in Vi/)).toBeVisible();
+  expect(errors).toEqual([]);
+});

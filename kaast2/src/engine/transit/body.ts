@@ -45,16 +45,36 @@ export function evaluator(swe: SwissEph, profile: Profile, body: PlanetId): Eval
   const node = body === 'Ra' || body === 'Ke';
   const code = node ? (profile.node === 'true' ? SE.TRUE_NODE : SE.MEAN_NODE) : SWE_BODY[body as keyof typeof SWE_BODY];
   const ketu = body === 'Ke';
-  return (t) => {
+  const one = (t: number): BodySample => {
     const f = siderealFrame(swe, profile, t);
     const r = swe.calc(f.jdTT, code, f.planetFlags);
     let raw = normDeg(r.lon + f.offsetDeg) * 3600;
     if (ketu) { raw += ZODIAC / 2; if (raw >= ZODIAC) raw -= ZODIAC; }
     return { t, raw, v: r.lonSpeed };
   };
+  if (!(node && profile.node === 'true')) return one;
+  // True node: Swiss derives it from the Moon's osculating orbit, which is
+  // discontinuous at the lunar-file segment joints (every 27.55 d): the
+  // longitude steps by ≤ TRUE_NODE_JUMP and the numerical speed spikes for
+  // ~17 s (to ±0.15 °/d). The search uses the median of the speeds at
+  // t − 20 s, t, t + 20 s: equal to the speed at t wherever it is monotonic
+  // over those 40 s, and never a spike.
+  return (t) => {
+    const c = one(t);
+    const a = one(t - DESPIKE).v, b = one(t + DESPIKE).v;
+    const v = c.v;
+    c.v = Math.max(Math.min(a, b), Math.min(Math.max(a, b), v));
+    return c;
+  };
 }
 
+const DESPIKE = 20 / 86400;
+
 export interface Motion {
+  /** Allowance for a longitude discontinuity inside one step, arcseconds (true node only). */
+  jump: number;
+  /** Allowance for a speed discontinuity inside one step, °/day (true node only). */
+  dv: number;
   /** Top-level sampling step, days. ≤ vz/az, and vmax·h0 ≪ 180°. */
   h0: number;
   /** Bound on |d lon/dt| (sidereal), °/day. */
@@ -80,13 +100,14 @@ export function motionOf(profile: Profile, body: PlanetId): Motion {
 }
 
 const MOTION = {
-  Su: { h0: 4, vmax: 1.03, monotonic: true, vz: 0, az: 0 },
-  Mo: { h0: 1, vmax: 15.6, monotonic: true, vz: 0, az: 0 },
-  Me: { h0: 1, vmax: 2.4, monotonic: false, vz: 1.0, az: 0.25 },
-  Ve: { h0: 2, vmax: 1.4, monotonic: false, vz: 0.5, az: 0.06 },
-  Ma: { h0: 2, vmax: 0.9, monotonic: false, vz: 0.3, az: 0.04 },
-  Ju: { h0: 4, vmax: 0.3, monotonic: false, vz: 0.15, az: 0.01 },
-  Sa: { h0: 4, vmax: 0.18, monotonic: false, vz: 0.08, az: 0.005 },
-  meanNode: { h0: 16, vmax: 0.06, monotonic: true, vz: 0, az: 0 },
-  trueNode: { h0: 0.5, vmax: 0.45, monotonic: false, vz: 0.45, az: 0.5 },
+  //             step       |speed| bound   no reversal      |v| < vz ⇒ |dv/dt| ≤ az   (measured: |v|max, az)
+  Su: { h0: 4, vmax: 1.1, monotonic: true, vz: 0, az: 0, jump: 0, dv: 0 },                // 1.0199, speed ≥ 0.9528
+  Mo: { h0: 1, vmax: 16, monotonic: true, vz: 0, az: 0, jump: 0, dv: 0 },                 // 15.401, speed ≥ 11.760
+  Me: { h0: 1, vmax: 2.6, monotonic: false, vz: 1.5, az: 0.3, jump: 0, dv: 0 },           // 2.2034, 0.1987
+  Ve: { h0: 2, vmax: 1.5, monotonic: false, vz: 0.9, az: 0.065, jump: 0, dv: 0 },         // 1.2625, 0.04245
+  Ma: { h0: 2, vmax: 1.0, monotonic: false, vz: 0.6, az: 0.023, jump: 0, dv: 0 },         // 0.7916, 0.01516
+  Ju: { h0: 4, vmax: 0.35, monotonic: false, vz: 0.2, az: 0.0055, jump: 0, dv: 0 },       // 0.2428, 0.003521
+  Sa: { h0: 4, vmax: 0.2, monotonic: false, vz: 0.08, az: 0.003, jump: 0, dv: 0 },        // 0.1341, 0.001910
+  meanNode: { h0: 16, vmax: 0.06, monotonic: true, vz: 0, az: 0, jump: 0, dv: 0 },        // −0.052954 … −0.052953
+  trueNode: { h0: 1, vmax: 0.45, monotonic: false, vz: 0.45, az: 0.15, jump: 0.3, dv: 0.002 }, // TBD
 } satisfies Record<string, Motion>;

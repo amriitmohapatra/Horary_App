@@ -212,7 +212,7 @@ one slice ≈ one focused session.
 | 6 | Bhava chalit | Sripati + equal bhava tables and charts | Printout parity |
 | 7 | Jaimini | Karakas, padas, upapada, karakamsha, drishti, argala, special lagnas | Printout parity + PyJHora cross-check |
 | 8 | Transits | Transit chart, scrubber, upcoming-transit list | Transit export parity at fixed instants; ingress dates vs Swiss |
-| 8b | Desktop installers | `KAAST 2 Setup.exe` (Windows) and `KAAST 2.dmg` (macOS) built in CI from the same source; USB-stick install guide | Installer runs on an offline VM/machine; Playwright-equivalent smoke inside Tauri; checksum file published |
+| 8b | Desktop installers | `Astro-Amriit Setup.exe` (Windows) and `Astro-Amriit.dmg` (macOS) built in CI from the same source; USB-stick install guide | ✅ config + CI + guide 2026-10-17; Linux build ran fully offline (`unshare -n`): boots, casts, saves. Pending: first CI run and offline Windows/macOS machines (checklist in reminders) |
 | 9 | Parity audit and 1.0 | `parity/REPORT.md`, user guide, release note | All rows green or explicitly waived by you |
 | 10 | Phase 2 kick-off | Your feature cull list; customisation backlog; Vercel; open-sourcing | — |
 
@@ -339,7 +339,8 @@ decoding, Playwright for build verification, a field-by-field parity script;
    - Strength pages (Shad Bala, Bhava Bala, Ashtakavarga, Vimshopaka) for slice 2b parity.
    - Avayogi / Duplicate Yogi convention; arudha exception for the lord in the 7th.
    - PL's exact nakshatra spellings and pada syllables (unless decoded from the binary first).
-6. **Still owed by the boss:** the "Iyer Cure" D11 definition (or its source);
+6. **Installer proof (when the build is complete):** run the `kaast2-desktop` workflow by hand; try the Windows Setup on an offline Windows 10 VM without WebView2 and on Windows 11; the `.dmg` on an Apple Silicon and an Intel Mac (first-open flow); a 1366×768 laptop; checksums per the USB guide.
+7. **Still owed by the boss:** the "Iyer Cure" D11 definition (or its source);
    the "New Techniques of Prediction" books (reminder 1).
 
 ## 11. Reminder for the end of Phase 1: going public

@@ -78,7 +78,8 @@ jobs:
       - name: Offline check - the bundled page references no remote host
         run: |
           # Only XML namespace identifiers (w3.org) may appear; they are never fetched.
-          if grep -rhoE "https?://[A-Za-z0-9.-]+" dist-site | grep -vE "^http://www\.w3\.org$" | sort -u | grep .; then
+          # -I skips binary files (the WASM and the ephemeris data).
+          if grep -rIhoE "https?://[A-Za-z0-9.-]+" dist-site | grep -vE "^http://www\.w3\.org$" | sort -u | grep .; then
             echo "::error::dist-site references a remote host (see above)"; exit 1
           fi
           echo "dist-site: no remote hosts"

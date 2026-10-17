@@ -9,3 +9,9 @@ declare module 'virtual:ephemeris-assets' {
   export const wasm: string;
   export const data: string;
 }
+
+declare module 'virtual:swisseph-glue' {
+  import type { SweFactory } from './engine/ephem/swisseph';
+  const Swisseph: SweFactory;
+  export default Swisseph;
+}

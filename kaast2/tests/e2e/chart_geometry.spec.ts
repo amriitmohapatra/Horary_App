@@ -62,6 +62,9 @@ for (const vw of [1440, 390]) {
       await page.getByRole('link', { name: 'Page 1' }).click();
       bad.push(...(await violations(page)));
       await page.getByRole('link', { name: 'Vargas' }).click();
+      await page.getByRole('link', { name: 'Jaimini' }).click();
+      bad.push(...(await violations(page)));
+      await page.getByRole('link', { name: 'Vargas' }).click();
       for (const g of ['16 Parashari', 'Tajika and D150', 'PL alternates']) {
         await page.getByRole('button', { name: g }).click();
         bad.push(...(await violations(page)));

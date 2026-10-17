@@ -139,6 +139,8 @@ export function ChartForm(): JSX.Element {
     const a = document.createElement('a');
     a.href = url; a.download = name; a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
+    // The desktop app (Tauri) saves straight to the Downloads folder without a dialog.
+    if (typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window) setNote('file.savedDesktop');
   };
   const fileStem = () => (f.name.trim() || 'chart').replace(/[^\p{L}\p{N} _-]+/gu, '').trim() || 'chart';
   const onSave = (kind: 'json' | 'pl') => {

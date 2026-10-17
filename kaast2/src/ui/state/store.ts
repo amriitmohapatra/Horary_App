@@ -46,7 +46,7 @@ export const strength = computed<Page1Strengths | null>(() => {
 });
 
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
-export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'settings'] as const;
+export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'jaimini', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];
 const routeFromHash = (): Route => {
   const h = location.hash.replace('#', '') as Route;

@@ -70,10 +70,10 @@ export class BodyScan {
   private noReversal(a: BodySample, b: BodySample): boolean {
     const m = this.m;
     if (m.monotonic) return true;
-    const h = b.t - a.t;
-    if (h * m.az >= m.vz - E) return false;
+    const h = b.t - a.t, e = E + m.dv;
+    if (h * m.az >= m.vz - e) return false;
     const va = Math.abs(a.v), vb = Math.abs(b.v);
-    return sgn(a.v) === sgn(b.v) && va > E && vb > E && va + vb - 2 * E > m.az * h;
+    return sgn(a.v) === sgn(b.v) && va > e && vb > e && va + vb - 2 * e > m.az * h;
   }
 
   /** Bound on the path length ∫|dX/dt| over [a, b], arcseconds. */
@@ -81,8 +81,8 @@ export class BodyScan {
     const m = this.m, h = b.t - a.t;
     const va = Math.abs(a.v), vb = Math.abs(b.v);
     let p = m.vmax * h;
-    if (Math.max(va, vb) + m.az * h < m.vz) p = Math.min(p, E * h + (h * (va + vb)) / 2 + (m.az * h * h) / 2);
-    return p * 3600;
+    if (Math.max(va, vb) + m.dv + m.az * h < m.vz) p = Math.min(p, (E + m.dv) * h + (h * (va + vb)) / 2 + (m.az * h * h) / 2);
+    return p * 3600 + 2 * m.jump;
   }
 
   crossings(g: Grid): Crossing[] {
@@ -167,7 +167,7 @@ export class BodyScan {
       if (rt < b.t) { const r = this.at(rt); this.st(hi, r, out); this.st(r, b, out); } else this.st(hi, b, out);
       return;
     }
-    if (h * m.az < m.vz && Math.abs(a.v) + Math.abs(b.v) > m.az * h) return;
+    if (h * m.az < m.vz - m.dv && Math.abs(a.v) + Math.abs(b.v) > m.az * h + 2 * m.dv) return;
     if (h <= STATION_SEP) return;
     const mid = this.at((a.t + b.t) / 2);
     this.st(a, mid, out);

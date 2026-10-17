@@ -5,9 +5,8 @@
  * The engine never knows which one ran.
  */
 import * as assets from 'virtual:ephemeris-assets';
-import glueSource from '../../vendor/swisseph_glue.js?raw';
+import Swisseph from 'virtual:swisseph-glue';
 import { createSwissEph, type EphemerisBlobs, type SwissEph } from '../engine/ephem/swisseph';
-import { factoryFromGlue } from './glue';
 
 export interface EphemerisLoader {
   readonly kind: 'embedded' | 'fetch';
@@ -53,6 +52,6 @@ export interface BootResult { swe: SwissEph; loader: EphemerisLoader['kind']; ms
 
 export async function bootEphemeris(loader: EphemerisLoader = defaultLoader()): Promise<BootResult> {
   const t0 = performance.now();
-  const swe = await createSwissEph(factoryFromGlue(glueSource), await loader.load());
+  const swe = await createSwissEph(Swisseph, await loader.load());
   return { swe, loader: loader.kind, ms: Math.round(performance.now() - t0) };
 }

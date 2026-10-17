@@ -9,6 +9,7 @@ import { Page1 } from './pages/Page1';
 import { Dashas } from './pages/Dashas';
 import { Vargas } from './pages/Vargas';
 import { Strengths } from './pages/Strengths';
+import { Jaimini } from './pages/Jaimini';
 import { Settings } from './pages/Settings';
 import { t } from './i18n';
 import { chart, chartInput, engine, formOpen, lastPlace, nowInput, route, setTheme, shownTheme, textSize, theme } from './state/store';
@@ -20,6 +21,7 @@ function Routed({ c }: { c: ChartResult }): JSX.Element {
     case 'dashas': return <Dashas chart={c} />;
     case 'vargas': return <Vargas chart={c} />;
     case 'strengths': return <Strengths chart={c} />;
+    case 'jaimini': return <Jaimini chart={c} />;
     case 'settings': return <Settings input={chartInput.value} />;
     default: return <Page1 chart={c} />;
   }

@@ -39,13 +39,31 @@ export const data = dataUrl;`;
   };
 }
 
+/**
+ * `virtual:swisseph-glue` — the classic-script Emscripten glue as an ES module
+ * (appends `export default Swisseph`). No `new Function`/eval is needed at run
+ * time, so the desktop build's Content-Security-Policy can forbid eval.
+ */
+function swissephGlue(): Plugin {
+  const id = 'virtual:swisseph-glue';
+  const rid = '\0' + id;
+  return {
+    name: 'astro-amriit-swisseph-glue',
+    resolveId: (s) => (s === id ? rid : undefined),
+    load(i) {
+      if (i !== rid) return;
+      return readFileSync(resolve(root, 'vendor/swisseph_glue.js'), 'utf8') + '\nexport default Swisseph;\n';
+    },
+  };
+}
+
 function gitCommit(): string {
   try { return execSync('git rev-parse --short HEAD', { cwd: root }).toString().trim(); }
   catch { return 'unknown'; }
 }
 
 export default defineConfig(({ mode }) => ({
-  plugins: [preact(), ephemerisAssets(mode), ...(mode === 'single' ? [viteSingleFile()] : [])],
+  plugins: [preact(), ephemerisAssets(mode), swissephGlue(), ...(mode === 'single' ? [viteSingleFile()] : [])],
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
     __BUILD_COMMIT__: JSON.stringify(gitCommit()),

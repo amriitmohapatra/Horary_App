@@ -265,3 +265,13 @@ table.data .r { text-align: right; }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px var(--sp-4); margin: 0 0 var(--sp-3); }
 .facts div { display: contents; } .facts dt { color: var(--text-muted); } .facts dd { margin: 0; }
 @media (max-width: 900px) { .two-col { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---- jaimini ---- */
+.jaimini { display: flex; flex-direction: column; gap: var(--sp-4); }
+.karaka-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
+.cap-top { caption-side: top; text-align: left; font-size: var(--fs-xs); font-weight: 700; color: var(--text-muted); padding-bottom: 4px; }
+.aspect-list { list-style: none; margin: 0 0 var(--sp-3); padding: 0; columns: 2; }
+.aspect-list li { padding: 3px 0; break-inside: avoid; }
+.muted { color: var(--text-muted); font-size: var(--fs-xs); }
+.panel-body .controls-row { margin-bottom: var(--sp-3); }
+@media (max-width: 560px) { .karaka-pair { grid-template-columns: 1fr; } .aspect-list { columns: 1; } }
