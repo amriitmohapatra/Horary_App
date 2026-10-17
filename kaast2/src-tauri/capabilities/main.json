@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main",
+  "description": "KAAST 2 grants the page no native permissions: it is a plain offline web app in a window.",
+  "windows": ["main"],
+  "permissions": []
+}

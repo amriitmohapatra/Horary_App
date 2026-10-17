@@ -1,0 +1,25 @@
+# KAAST 2 desktop shell (ARCHITECTURE.md §6, ADR-9).
+# A thin Tauri 2 window around the offline site build (../dist-site).
+# No plugins: no shell, no http, no fs, no updater, no telemetry.
+[package]
+name = "kaast2"
+version = "0.1.0"
+description = "KAAST 2 desktop shell: the offline web build in a native window"
+license = "AGPL-3.0-only"
+edition = "2021"
+rust-version = "1.77.2"
+publish = false
+
+[build-dependencies]
+# ~ = same minor line (2.6.x / 2.11.x); Cargo.lock pins the exact versions.
+tauri-build = { version = "~2.6", features = [] }
+
+[dependencies]
+tauri = { version = "~2.11", features = [] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true
