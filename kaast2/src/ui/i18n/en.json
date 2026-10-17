@@ -407,5 +407,10 @@
   "kp.levelB": "house the planet occupies",
   "kp.levelC": "houses whose cusp falls in a sign of the star lord",
   "kp.levelD": "houses whose cusp falls in a sign of the planet",
-  "kp.none": "none"
+  "kp.none": "none",
+  "nav.ntp": "NTP",
+  "ntp.intro": "What H. R. Seshadri Iyer's New Techniques of Prediction (NTP) says about this chart: only the rules whose conditions this chart meets are listed, each with its volume and source-page citation. Iyer's rules are guidance for the astrologer; they have not been tested against outcomes here.",
+  "ntp.trioNote": "Iyer groups the nine planets into three sets of three that share common friendship. When one planet of a set is the Yogi, the other two take on yoga character as well — specially noticed with Rahu, who becomes yoga-like when the Sun or Mercury is the Yogi. Each planet has one enemy, which becomes the Avayogi when that planet is the Yogi (NTP-2 p. 6).",
+  "ntp.bhuktiNote": "Iyer reads a Dasha from the birth chart, and a Bhukti from both the birth chart and the Dasha chart. In the Dasha chart each Bhukti lord \"crosses\" a Starter (the beginning of the Bhukti) and a Ruler (its end); the Ruler decides the final result (NTP-2 pp. 22, 34). Click a row's rules to see why.",
+  "ntp.how": "Houses are Sripati bhavas: a bhava's lord is the lord of the sign holding its middle, and a planet's bhava is the span it lies in (NTP-1 pp. 93–97). Yoga point = Sun + Moon + 93°20′; Zero Rasis come from the birth tithi. Positive bhavas are 1, 2, 4, 5, 7, 9, 10 and 11, negative ones 3, 6, 8 and 12; a positive sign is the planet's own sign, a negative one a Zero Rasi or its debilitation sign. Combust counts as Iyer's \"eclipsed\". The Dasha chart uses the birth week day {weekday} (1 = Sunday), taken from sunrise to sunrise; Iyer does not say which convention he used. Iyer's own worked example (NTP-2 Chart 1) is reproduced exactly by the app's tests."
 }

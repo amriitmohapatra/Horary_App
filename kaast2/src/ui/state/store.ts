@@ -78,7 +78,7 @@ export const kpChart = computed<{ ok: ChartResult } | { error: string } | null>(
 });
 
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
-export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'kp', 'yogi', 'jaimini', 'transits', 'settings'] as const;
+export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'kp', 'ntp', 'yogi', 'jaimini', 'transits', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];
 const routeFromHash = (): Route => {
   const h = location.hash.replace('#', '') as Route;
