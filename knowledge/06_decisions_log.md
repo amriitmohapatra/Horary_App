@@ -395,3 +395,13 @@ architecture.
 - Deliberately not shown: death, widowhood, chastity and ganda readings.
 - OPEN: Graha Samayam counting (inclusive assumed); the birth weekday
   convention for the Dasha chart; combustion orbs (Iyer gives none).
+
+## 2026-10-17 (session 2, later) — Astro-Amriit v0.7: chart text fix
+- Chromium snaps the font size of scaled SVG text to whole pixels unless
+  `text-rendering: geometricPrecision`; label widths then varied with the
+  chart's on-screen scale and the machine's font settings (5.280–5.301
+  font-sizes measured locally; constant 5.2508 with geometricPrecision) and
+  broke the canvas-based font fit on GitHub's runner. Chart text now uses
+  geometricPrecision (invariant: chart layout must not depend on scale).
+- Text-width cache entries are stored only once every font weight they use
+  has loaded. v0.7 = v0.6 features + these fixes; CI green.

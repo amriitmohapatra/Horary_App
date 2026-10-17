@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.5 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.6.html` (seconds entry on phones, saved places, KP chart and significators, NTP/Iyer guidance) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
+Status: **v0.7 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.7.html` (seconds entry on phones, saved places, KP chart and significators, NTP/Iyer guidance) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
