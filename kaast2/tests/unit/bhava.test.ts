@@ -41,7 +41,7 @@ describe('Sripati bhava (DOC: pib11770, manual p. 227)', () => {
     const b = sripati(100, 0);
     expect(b.sandhi[0]).toBeCloseTo((66 + 2 / 3 + 100) / 2, 9);          // between madhya 12 and 1
     expect(b.sandhi[3]).toBeCloseTo((153 + 1 / 3 + 180) / 2, 9);          // between 3 and 4
-    expect(b.sandhi[9]).toBeCloseTo((333 + 1 / 3 + 360) / 2 - 360, 9);    // between 9 and 10, across 0°
+    expect(b.sandhi[9]).toBeCloseTo(346 + 2 / 3, 9);                     // between 9 (333°20′) and 10 (0°)
   });
 
   it('wraps through 0° Aries (Asc 350°, MC 260°)', () => {

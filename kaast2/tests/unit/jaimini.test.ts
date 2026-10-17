@@ -94,8 +94,10 @@ describe('arudha padas — the count and its exceptions', () => {
   });
   it('works for any varga: only sign placements are needed', () => {
     const r = arudhaPadas({ As: Ar, Ma: Ar, Ve: Ta, Me: Ge, Mo: Cn, Su: Le, Ju: Sg, Sa: Cp }, Ar);
-    // every lord in its own sign → every pada is the 10th from its house
-    expect(r.padas).toEqual([Cp, Aq, Pi, Ar, Ta, Ge, Cn, Le, Vi, Li, Sc, Sg]);
+    // houses whose lord sits in them (Ar Ta Ge Cn Le Sg Cp) → the 10th from the house
+    expect([0, 1, 2, 3, 4, 8, 9].map((i) => r.padas[i])).toEqual([Cp, Aq, Pi, Ar, Ta, Vi, Li]);
+    // Virgo: Mercury in Gemini, the 10th from it → raw pada Pisces (7th) → 4th from Virgo
+    expect(r.padas[5]).toBe(Sg);
   });
   it('throws when a lord has no placement', () => {
     expect(() => arudhaPadas({ As: Ar }, Ar)).toThrow(/Ma/);
@@ -116,14 +118,15 @@ describe('co-lords of Scorpio and Aquarius', () => {
     expect(strongerCoLord(Aq, 'Sa', 'Ra', s)).toBe('Ra');
   });
   it('rule 5: degrees break the final tie', () => {
-    const s: SignMap = { Ma: Ta, Ke: Le, Su: Ar, Mo: Ar, Me: Ar, Ju: Ar, Ve: Ar, Sa: Ar, Ra: Aq };
+    // everyone else in Gemini, which aspects neither Taurus nor Leo; both fixed, neither exalted
+    const s: SignMap = { Ma: Ta, Ke: Le, Su: Ge, Mo: Ge, Me: Ge, Ju: Ge, Ve: Ge, Sa: Ge, Ra: Aq };
     expect(strongerCoLord(Sc, 'Ma', 'Ke', s, { Ma: Ta * SIGN + 3600, Ke: Le * SIGN + 7200 })).toBe('Ke');
     expect(strongerCoLord(Sc, 'Ma', 'Ke', s)).toBe('Ma');
   });
   it("'stronger' changes the pada when Ketu wins", () => {
     const s: SignMap = { As: Sc, Ma: Sc, Ke: Cp, Ra: Cn, Su: Ar, Mo: Ar, Me: Ar, Ju: Ar, Ve: Ar, Sa: Ar };
     expect(arudhaPadas(s, Sc).padas[0]).toBe(Le);                        // Mars in own → 10th
-    expect(arudhaPadas(s, Sc, { coLords: 'stronger' }).padas[0]).toBe(Vi); // Ketu in Cp (3rd) → 5th
+    expect(arudhaPadas(s, Sc, { coLords: 'stronger' }).padas[0]).toBe(Pi); // Ketu in Cp (3rd) → 3rd from Cp
   });
 });
 
@@ -155,17 +158,22 @@ describe('argala', () => {
       5: [['Ju'], [], 'unobstructed'],
     });
   });
-  it("'reverse-causers': Rahu in the 12th gives 2nd-house argala, Ketu in the 6th 9th-house obstruction... counted backward", () => {
+  it("'reverse-causers': Rahu in the 12th (2nd counted backward) gives 2nd-house argala instead of obstructing it", () => {
     const r = byPlace(argala(s, Ar, { nodes: 'reverse-causers' }));
     expect(r[2]).toEqual([['Su', 'Ra'], ['Me'], 'prevails']);
     // Ketu in Virgo = 8th backward from Aries → neither an argala nor an obstruction place
     expect(Object.values(r).flatMap((x) => [...(x[0] as PlanetId[]), ...(x[1] as PlanetId[])])).not.toContain('Ke');
   });
   it("'reverse-reference' (default): counting from Rahu in Pisces runs backward (2nd = Aquarius)", () => {
-    const r = byPlace(argala(s, 'Ra'));
-    expect(r[2]![0]).toEqual(['Ma']);       // Aquarius
-    expect(r[4]![0]).toEqual(['Ve']);       // Capricorn is the 4th backward... no: Pi→Aq→Cp→Sg
-    expect(r[12]).toBeUndefined();
+    // backward from Pisces: 2nd Aq, 12th Ar, 4th Sg, 10th Ge, 11th Ta, 3rd Cp, 5th Sc, 9th Cn
+    expect(byPlace(argala(s, 'Ra'))).toEqual({
+      2: [['Ma'], [], 'unobstructed'],
+      4: [[], ['Sa'], 'none'],
+      11: [['Su'], ['Ve'], 'by-strength'],
+      5: [[], ['Mo'], 'none'],
+    });
+    // forward from Pisces instead ('none'): 2nd Ar, 4th Ge, 11th Cp, 5th Cn
+    expect(byPlace(argala(s, 'Ra', { nodes: 'none' }))[4]![0]).toEqual(['Sa']);
   });
   it('from a planet, the planet itself is not counted; empty places give none', () => {
     const r = argala({ Su: Ar, Mo: Ta }, 'Su');
@@ -193,18 +201,20 @@ describe('special lagnas (pure formulas)', () => {
     expect(induLagnaSign(Ar, Cn)).toBe(Aq);
     // Leo lagna → 9th Ar → Ma 6; Moon Taurus → 9th Cp → Sa 1; 7 → 7th from Taurus = Scorpio
     expect(induLagnaSign(Le, Ta)).toBe(Sc);
-    // remainder 0 counts as 12: Ge lagna → 9th Aq → Sa 1; Moon Le → 9th Ar → Ma 6 = 7; Cp lagna → Vi → Me 8 + Moon Vi → Ta → Ve 12 = 20
-    expect(induLagnaSign(Cp, Vi)).toBe(Cp);
+    // Cp lagna → 9th Vi → Me 8; Moon Vi → 9th Ta → Ve 12; 20 mod 12 = 8 → 8th from Virgo = Aries
+    expect(induLagnaSign(Cp, Vi)).toBe(Ar);
+    // remainder 0 counts as 12: Vi lagna and Moon in Vi → 9th Ta → Ve 12 + 12 = 24 → 12th from Virgo = Leo
+    expect(induLagnaSign(Vi, Vi)).toBe(Le);
   });
   it('Varnada: both methods on worked cases', () => {
     // Lagna Taurus (even: count 11 back from Pisces), HL Gemini (odd: 3) — BPHS: counts both odd → 14 → 2 → even → back from Pisces 2 = Aquarius
     expect(varnadaSign(Ta, Ge, 'bphs')).toBe(Aq);
-    // Raman: signs differ in parity → |11 − 3| = 8; lagna even → 8 back from Pisces = Cancer
-    expect(varnadaSign(Ta, Ge, 'raman')).toBe(Cn);
+    // Raman: signs differ in parity → |11 − 3| = 8; lagna even → 8 back from Pisces = Leo
+    expect(varnadaSign(Ta, Ge, 'raman')).toBe(Le);
     // both odd: Aries (1) + Leo (5) = 6 → Raman forward from Aries = Virgo; BPHS even → back = Libra
     expect(varnadaSign(Ar, Le, 'raman')).toBe(Vi);
     expect(varnadaSign(Ar, Le, 'bphs')).toBe(Li);
-    // 12-multiple: Pisces (1) + Libra (7)... Aries (1) + Pisces (1) = 2; Ar & Sg (9) + Ar(1)... 11 + 1 = 12 → back 12 from Pisces = Aries
+    // a multiple of 12 counts as 12: Taurus (11) + Aries (1) = 12 → back 12 from Pisces = Aries
     expect(varnadaSign(Ta, Ar, 'bphs')).toBe(Ar);
     expect(varnadas(Ta, Ge)).toHaveLength(12);
     expect(varnadas(Ta, Ge)[0]).toBe(Aq);
@@ -218,9 +228,10 @@ describe('special lagnas (pure formulas)', () => {
   });
   it('specialLagnasFrom bundles everything (Varnada from the Hora lagna sign)', () => {
     const r = specialLagnasFrom({ sunAtSunriseDeg: 15, sunAtBirthDeg: 16, ishtaMinutes: 120, ascDeg: 40, moonDeg: 100 });
-    expect([r.bhava.sign, r.hora.sign, r.ghatika.sign]).toEqual([Ge, Le, Pi]);
+    // 120 min: Bhava 15 + 30 = 45°, Hora 15 + 60 = 75°, Ghatika 15 + 150 = 165°
+    expect([r.bhava.sign, r.hora.sign, r.ghatika.sign]).toEqual([Ta, Ge, Vi]);
     expect(r.hora.lonDeg).toBeCloseTo(75, 9);
-    expect(r.varnada).toBe(varnadaSign(Ta, Le));
+    expect(r.varnada).toBe(varnadaSign(Ta, Ge));
     expect(r.indu).toBe(induLagnaSign(Ta, Cn));
     expect(r.pranapada.lon).toBe(Math.round(((16 + 600) % 360) * 3600));
   });

@@ -64,7 +64,10 @@ function verifyEvents(profile: ProfileId, events: TransitEvent[]): number {
 function bruteForce(profile: ProfileId, body: PlanetId, kind: EventKind, events: TransitEvent[],
   fromJd: number, toJd: number, step: number): { samples: number; changes: number } {
   const ev = events.filter((e) => e.body === body && e.kind === kind);
-  for (let i = 1; i < ev.length; i++) expect(ev[i]!.from, `chain ${body} ${kind} at ${ev[i]!.jdUT}`).toBe(ev[i - 1]!.to);
+  for (let i = 1; i < ev.length; i++) {
+    if (kind === 'station') expect(ev[i]!.direction, `alternation ${body} at ${ev[i]!.jdUT}`).not.toBe(ev[i - 1]!.direction);
+    else expect(ev[i]!.from, `chain ${body} ${kind} at ${ev[i]!.jdUT}`).toBe(ev[i - 1]!.to);
+  }
   const cell = (t: number) => {
     const p = transitPositions(swe, profile, t)[body];
     return kind === 'station' ? (p.speedDeg < 0 ? 1 : 0) : cellOf(kind, p.lon);
