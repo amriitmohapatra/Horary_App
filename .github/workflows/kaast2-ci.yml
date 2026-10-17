@@ -23,7 +23,7 @@ jobs:
       - run: npm ci
       - name: Typecheck
         run: npm run typecheck
-      - name: Unit and engine tests (oracles: PL9 Page 1, PL7 cache, Solar Fire charts)
+      - name: "Unit and engine tests (oracles: PL9 Page 1, PL7 cache, Solar Fire charts)"
         run: npm test
       - name: Site build
         run: npm run build
