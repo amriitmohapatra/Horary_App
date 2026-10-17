@@ -87,6 +87,18 @@ describe('PL9 Page 1 — planet table view-model', () => {
     const m = page1Model(chart);
     for (const r of m.rows) expect([r.id, r.flags]).toEqual([r.id, table[r.id]![2]]);
   });
+  it('nakshatra names (PL short form) match PL9 for every body', async () => {
+    const { page1Model } = await import('../../src/engine/page1');
+    for (const r of page1Model(chart).rows) expect([r.id, r.nakshatraName]).toEqual([r.id, table[r.id]![3]]);
+  });
+  it('3-letter nakshatra forms in the Rasi chart match PL9', async () => {
+    const { page1Model } = await import('../../src/engine/page1');
+    const labels = fixture.rasi_chart_labels as Record<string, string>;
+    for (const r of page1Model(chart).rows) {
+      const key = Object.keys(labels).find((k) => k.slice(0, 2) === r.id)!;
+      expect([r.id, r.nakshatraAbbr]).toEqual([r.id, labels[key]!.split(' ')[1]]);
+    }
+  });
   it('pada syllables match PL9 for every body', async () => {
     const { page1Model } = await import('../../src/engine/page1');
     const m = page1Model(chart);

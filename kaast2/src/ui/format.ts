@@ -24,6 +24,10 @@ export function civilDate(jdUT: number, zoneHours: number): string {
   const c = fromJulianDay(jdUT + zoneHours / 24);
   return `${pad2(c.d)}-${pad2(c.m)}-${c.y}`;
 }
+export function civilTime(jdUT: number, zoneHours: number): string {
+  const c = fromJulianDay(jdUT + zoneHours / 24);
+  return `${pad2(c.h)}:${pad2(c.mi)}`;
+}
 export function civilWeekday(jdUT: number, zoneHours: number): string {
   return WEEKDAYS[weekday(jdUT + zoneHours / 24)]!;
 }

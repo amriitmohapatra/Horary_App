@@ -9,7 +9,7 @@
 import { SE, type SwissEph } from './ephem/swisseph';
 import { PL_AYANAMSA, SF_AYANAMSA_CAL_DEG } from './ephem/ayanamsa';
 import { geocentricLatitude } from './houses/latitude';
-import { PROFILES, type Profile } from './profiles';
+import { resolveProfile, type Profile } from './profiles';
 import { julianDay } from './time/julian';
 import { deltaTseconds } from './time/deltaT';
 import { PLANETS, type ChartInput, type ChartResult, type PlanetId, type Position } from './types';
@@ -83,8 +83,7 @@ export function bodiesIn(swe: SwissEph, f: SiderealFrame): Record<PlanetId, Posi
 
 /** Cast a chart. `jdUTOverride` casts at an exact instant (transits, oracle tests). */
 export function cast(swe: SwissEph, input: ChartInput, jdUTOverride?: number): ChartResult {
-  const profile = PROFILES[input.profileId];
-  if (!profile) throw new Error(`unknown profile ${input.profileId}`);
+  const profile = resolveProfile(input.profileId, input.overrides);
   const jdUT = jdUTOverride ?? jdUTof(input);
   const f = siderealFrame(swe, profile, jdUT);
   const { jdTT, deltaTsec, ayanamsaDeg, offsetDeg, sf } = f;
@@ -111,6 +110,6 @@ export function cast(swe: SwissEph, input: ChartInput, jdUTOverride?: number): C
   };
 }
 
-export { PROFILES, DEFAULT_PROFILE } from './profiles';
-export type { Profile, ProfileId } from './profiles';
+export { PROFILES, DEFAULT_PROFILE, DASHA_YEARS, resolveProfile } from './profiles';
+export type { Profile, ProfileId, ProfileOverrides } from './profiles';
 export * from './types';

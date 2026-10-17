@@ -14,7 +14,7 @@ import { PlanetTable } from '../components/PlanetTable';
 import { DashaList } from '../components/DashaList';
 import { HowComputed } from '../components/HowComputed';
 import { t, type MessageKey } from '../i18n';
-import { coords, dm, hms, longDate, zone } from '../format';
+import { coords, dm, hms, longDate } from '../format';
 
 function Panel(props: { id: string; title: MessageKey; children: ComponentChildren; extra?: ComponentChildren }): JSX.Element {
   return (
@@ -92,13 +92,6 @@ export function Page1({ chart }: { chart: ChartResult }): JSX.Element {
 
   return (
     <article class="page1" data-testid="page1">
-      <header class="chart-strip">
-        <h1 class="chart-name">{name}</h1>
-        <p class="chart-meta">
-          <span>{date}</span><span>{time}</span><span>{input.place.name}</span>
-          <span>UTC{zone(zoneHours)}</span><span>{coords(input.place.latDeg, input.place.lonDeg)}</span>
-        </p>
-      </header>
       <div class="p1-grid">
         <div class="p1-col">
         <Panel id="rasi" title="page1.birthChart">

@@ -89,3 +89,37 @@ export function periodsFrom(mahas: DashaPeriod[], depth: number, from: number, n
   for (const m of mahas) walk(m, 0);
   return out;
 }
+
+/**
+ * The next period `depth` levels deep whose own lord is `lord` and which
+ * starts at or after `afterJd`, returned as its full chain (Maha first).
+ * Walks structurally from the anchored timeline (invariant 7).
+ */
+export function nextPeriodOf(mahas: DashaPeriod[], depth: number, lord: PlanetId, afterJd: number): DashaPeriod[] | null {
+  const walk = (p: DashaPeriod, level: number, path: DashaPeriod[]): DashaPeriod[] | null => {
+    if (p.end <= afterJd) return null;
+    const here = [...path, p];
+    if (level === depth) return p.start >= afterJd && p.lords[level] === lord ? here : null;
+    for (const s of subperiods(p)) {
+      const hit = walk(s, level + 1, here);
+      if (hit) return hit;
+    }
+    return null;
+  };
+  for (const m of mahas) {
+    const hit = walk(m, 0, []);
+    if (hit) return hit;
+  }
+  return null;
+}
+
+/** Years, months, days of a span (dasha years of the profile; months = year/12, days = whole days). */
+export function spanYMD(days: number, yearDays: number): { y: number; m: number; d: number } {
+  const eps = 1e-6; // periods are exact fractions of a year; absorb float residue
+  const month = yearDays / 12;
+  const y = Math.floor(days / yearDays + eps);
+  let r = Math.max(0, days - y * yearDays);
+  const m = Math.floor(r / month + eps);
+  r = Math.max(0, r - m * month);
+  return { y, m, d: Math.floor(r + eps) };
+}

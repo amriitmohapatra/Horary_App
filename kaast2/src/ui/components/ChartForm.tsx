@@ -9,7 +9,7 @@ import { PROFILES, type ChartInput, type ProfileId } from '../../engine';
 import { allPlaces, savePlace, zoneFor, type Place } from '../../io/places';
 import { t, type MessageKey } from '../i18n';
 import { longDate, pad2 } from '../format';
-import { chartInput, lastPlace, nowInput, rememberPlace } from '../state/store';
+import { chartInput, formOpen, lastPlace, nowInput, rememberPlace } from '../state/store';
 
 interface Fields {
   name: string; date: string; time: string; place: string;
@@ -92,6 +92,7 @@ export function ChartForm(): JSX.Element {
     const p = places.find((q) => q.name === r.input!.place.name);
     rememberPlace(p ?? { name: r.input.place.name, lat: r.input.place.latDeg, lon: r.input.place.lonDeg, tz: r.input.tzHours });
     chartInput.value = r.input;
+    formOpen.value = false;
   };
 
   const now = () => {
@@ -101,6 +102,7 @@ export function ChartForm(): JSX.Element {
     setF(toFields(i));
     setErrors({});
     chartInput.value = i;
+    formOpen.value = false;
   };
 
   const onSavePlace = () => {

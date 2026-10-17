@@ -3,9 +3,22 @@ import { useEffect } from 'preact/hooks';
 import type { JSX } from 'preact';
 import { bootEphemeris } from '../boot/wasmLoader';
 import { ChartForm } from './components/ChartForm';
+import { ChartBar } from './components/ChartBar';
+import { Nav } from './components/Nav';
 import { Page1 } from './pages/Page1';
+import { Dashas } from './pages/Dashas';
+import { Settings } from './pages/Settings';
 import { t } from './i18n';
-import { chart, chartInput, engine, lastPlace, nowInput, setTheme, theme } from './state/store';
+import { chart, chartInput, engine, formOpen, lastPlace, nowInput, route, setTheme, theme } from './state/store';
+import type { ChartResult } from '../engine';
+
+function Routed({ c }: { c: ChartResult }): JSX.Element {
+  switch (route.value) {
+    case 'dashas': return <Dashas chart={c} />;
+    case 'settings': return <Settings input={chartInput.value} />;
+    default: return <Page1 chart={c} />;
+  }
+}
 
 function EngineStatus(): JSX.Element {
   const e = engine.value;
@@ -52,9 +65,13 @@ export function App(): JSX.Element {
           onClick={() => setTheme(dark ? 'light' : 'dark')}>{dark ? '☀' : '☾'}</button>
       </header>
       <main>
-        {engine.value.status === 'ready' && <ChartForm />}
+        {engine.value.status === 'ready' && formOpen.value && <ChartForm />}
         {c && 'error' in c && <p class="status status-bad" role="alert">{c.error}</p>}
-        {c && 'ok' in c ? <Page1 chart={c.ok} /> : engine.value.status === 'ready' && <p class="empty">{t('page1.empty')}</p>}
+        {c && 'ok' in c && <ChartBar chart={c.ok} />}
+        {engine.value.status === 'ready' && <Nav />}
+        {route.value === 'settings'
+          ? <Settings input={chartInput.value} />
+          : c && 'ok' in c ? <Routed c={c.ok} /> : engine.value.status === 'ready' && <p class="empty">{t('page1.empty')}</p>}
       </main>
       <footer class="foot">
         KAAST 2 v{__APP_VERSION__} · {__BUILD_MODE__} build {__BUILD_COMMIT__} · Swiss Ephemeris © Astrodienst AG, AGPL

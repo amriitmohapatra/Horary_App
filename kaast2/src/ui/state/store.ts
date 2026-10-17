@@ -4,7 +4,7 @@
  * remembered (localStorage, try/catch, versioned keys).
  */
 import { computed, signal } from '@preact/signals';
-import { cast, DEFAULT_PROFILE, type ChartInput, type ChartResult } from '../../engine';
+import { cast, DEFAULT_PROFILE, type ChartInput, type ChartResult, type ProfileOverrides } from '../../engine';
 import type { SwissEph } from '../../engine/ephem/swisseph';
 import { BUILTIN_PLACES, type Place, zoneFor } from '../../io/places';
 import type { BootResult } from '../../boot/wasmLoader';
@@ -17,12 +17,39 @@ export type EngineState =
 export const engine = signal<EngineState>({ status: 'booting' });
 export const chartInput = signal<ChartInput | null>(null);
 
+/* ---- settings: profile overrides (PL's Options → Calculation) ---- */
+const SETTINGS = 'kaast2.settings.v1';
+export const overrides = signal<ProfileOverrides>(((): ProfileOverrides => {
+  try { const raw = localStorage.getItem(SETTINGS); return raw ? (JSON.parse(raw) as ProfileOverrides) : {}; }
+  catch { return {}; }
+})());
+export function setOverride<K extends keyof ProfileOverrides>(k: K, v: ProfileOverrides[K] | undefined): void {
+  const next = { ...overrides.value, [k]: v };
+  if (v === undefined) delete next[k];
+  overrides.value = next;
+  try { localStorage.setItem(SETTINGS, JSON.stringify(next)); } catch { /* non-fatal */ }
+}
+
 export const chart = computed<{ ok: ChartResult } | { error: string } | null>(() => {
   const e = engine.value, inp = chartInput.value;
   if (e.status !== 'ready' || !inp) return null;
-  try { return { ok: cast(e.swe, inp) }; }
+  try { return { ok: cast(e.swe, { ...inp, overrides: overrides.value }) }; }
   catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
 });
+
+/* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
+export const ROUTES = ['page1', 'dashas', 'settings'] as const;
+export type Route = (typeof ROUTES)[number];
+const routeFromHash = (): Route => {
+  const h = location.hash.replace('#', '') as Route;
+  return (ROUTES as readonly string[]).includes(h) ? h : 'page1';
+};
+export const route = signal<Route>(routeFromHash());
+addEventListener('hashchange', () => { route.value = routeFromHash(); });
+export function go(r: Route): void { if (location.hash !== `#${r}`) location.hash = r; route.value = r; }
+
+/** The chart form folds away once a chart is cast; "Edit chart" opens it. */
+export const formOpen = signal(true);
 
 const LAST_PLACE = 'kaast2.lastPlace.v1';
 const THEME = 'kaast2.theme.v1';

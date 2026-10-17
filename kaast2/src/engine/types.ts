@@ -4,7 +4,7 @@
  * arcseconds (ADR-4); the exact float is kept alongside for the few rules
  * that need it (dasha balance).
  */
-import type { Profile, ProfileId } from './profiles';
+import type { Profile, ProfileId, ProfileOverrides } from './profiles';
 
 /** Integer arcseconds, 0 … 1 295 999. */
 export type Arcsec = number;
@@ -23,6 +23,8 @@ export interface ChartInput {
   dstHours: number;
   place: { name: string; latDeg: number; lonDeg: number };
   profileId: ProfileId;
+  /** Settings that replace profile constants (ayanamsa, Delta-T, node, dasha year). */
+  overrides?: ProfileOverrides;
 }
 
 export interface Moment {

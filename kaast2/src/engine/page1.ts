@@ -5,7 +5,7 @@
 import { isCombust } from './combust';
 import { mahadashas, type DashaPeriod } from './dasha/vimshottari';
 import { lordChain } from './kp/lords';
-import { NAKSHATRA_ABBR, NAKSHATRA_NAMES, PADA_SYLLABLES } from './names';
+import { NAKSHATRA_ABBR, NAKSHATRA_SHORT, PADA_SYLLABLES } from './names';
 import { PLANETS, type ChartResult, type PlanetId, type PointId, type Position } from './types';
 import { navamshaSign } from './varga/cyclic';
 import { dmsInSign, nakshatraIndex, pada, signIndex } from './zodiac';
@@ -50,7 +50,7 @@ function rowFor(p: Position, sun: Position): PointRow {
     id: p.id, sign: signIndex(p.lon), deg: d, min: m, sec: s,
     retrograde: p.retrograde, combust,
     flags: (p.retrograde ? 'R' : '') + (combust ? 'c' : ''),
-    nakshatra: nak, nakshatraName: NAKSHATRA_NAMES[nak]!, nakshatraAbbr: NAKSHATRA_ABBR[nak]!,
+    nakshatra: nak, nakshatraName: NAKSHATRA_SHORT[nak]!, nakshatraAbbr: NAKSHATRA_ABBR[nak]!,
     pada: pd, syllable: PADA_SYLLABLES[nak]![pd - 1]!,
     lords: lordChain(p.lon, 3),
     navamshaSign: navamshaSign(p.lon),

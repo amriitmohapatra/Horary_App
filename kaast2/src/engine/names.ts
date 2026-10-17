@@ -1,38 +1,50 @@
 /**
- * Display names. Grades: nakshatra names STD; PL's exact table spellings,
- * 3-letter chart abbreviations and pada syllables are being decoded from
- * PL (docs/spec/PAGE1_SPEC.md) — entries confirmed on the PL9 Page 1 are
- * marked NUM in the comment; the rest are textbook (STD) until then.
+ * Display names, as Parashara's Light spells them: decoded from PL7's UI
+ * string table (BIN; tests/fixtures/nakshatra_names.json and
+ * pada_syllables.json carry the string ids) and confirmed by every name on
+ * the PL 9 Page 1 (NUM). PL spells a few padas identically (e.g. Pushya-4,
+ * P.Shad-2/4 and P.Bhadra-3 are all "Dah") — kept verbatim.
  */
 import type { PlanetId } from './types';
 
-export const NAKSHATRA_NAMES = [
-  'Ashwini', 'Bharani', 'Krittika', 'Rohini', 'Mrigashira', 'Ardra', 'Punarvasu', 'Pushya', 'Ashlesha',
-  'Magha', 'P.Phalguni', 'U.Phalguni', 'Hasta', 'Chitra', 'Swati', 'Vishakha', 'Anuradha', 'Jyeshtha',
-  'Mula', 'P.Ashadha', 'U.Ashadha', 'Shravana', 'Dhanishta', 'Satabhisha', 'P.Bhadrapada', 'U.Bhadrapada', 'Revati',
-] as const;
+/** Full names (PL's long form). */
+export const NAKSHATRA_NAMES = ["Ashwini", "Bharani", "Krittika", "Rohini", "Mrigasira", "Ardra", "Punarvasu", "Pushya", "Ashlesha", "Magha", "Poorva Phalg.", "Uttara Phalg.", "Hasta", "Chitra", "Swati", "Vishakha", "Anuradha", "Jyeshtha", "Moola", "Poorvashadha", "Uttarashadha", "Shravana", "Dhanishta", "Shatabhishak", "Poorvabhadra", "Uttarabhadra", "Revati"] as const;
 
-/** 3-letter chart abbreviations (PL9 shows Dha Sat Roh Pun Mag Cht Has Swa — NUM). */
-export const NAKSHATRA_ABBR = [
-  'Asw', 'Bha', 'Kri', 'Roh', 'Mri', 'Ard', 'Pun', 'Pus', 'Asl',
-  'Mag', 'PPh', 'UPh', 'Has', 'Cht', 'Swa', 'Vis', 'Anu', 'Jye',
-  'Mul', 'PAs', 'UAs', 'Shr', 'Dha', 'Sat', 'PBh', 'UBh', 'Rev',
-] as const;
+/** PL's short form, used in the Page 1 planet table ("Dhanish.", "Satabhi."). */
+export const NAKSHATRA_SHORT = ["Ashwini", "Bharani", "Krittika", "Rohini", "Mrigashi", "Ardra", "Punarvasu", "Pushya", "Ashlesha", "Magha", "P.Phalg.", "U.Phalg.", "Hasta", "Chitra", "Swati", "Vishakha", "Anuradha", "Jyeshtha", "Moola", "P.Shad.", "U.Shad.", "Shravana", "Dhanish.", "Satabhi.", "P.Bhadra.", "U.Bhadra.", "Revati"] as const;
 
-/**
- * Pada syllables (Avakahada), 4 per nakshatra, in PL's English phonetic
- * spelling where seen on the PL9 Page 1 (Goo Pay Ray Tuh Hee Shah Vee May Sah — NUM).
- */
+/** 3-letter forms shown after the degrees in the Rasi chart. */
+export const NAKSHATRA_ABBR = ["Ash", "Bha", "Kri", "Roh", "Mrg", "Ard", "Pun", "Pus", "Asl", "Mag", "PPh", "UPh", "Has", "Cht", "Swa", "Vis", "Anu", "Jye", "Mul", "PSh", "USh", "Shr", "Dha", "Sat", "PBh", "UBh", "Rev"] as const;
+
+/** Pada syllables (nama nakshatra), 4 per nakshatra. */
 export const PADA_SYLLABLES: readonly (readonly [string, string, string, string])[] = [
-  ['Chu', 'Chay', 'Cho', 'La'], ['Lee', 'Loo', 'Lay', 'Lo'], ['A', 'Ee', 'Oo', 'Ay'],
-  ['O', 'Va', 'Vee', 'Voo'], ['Vay', 'Vo', 'Ka', 'Kee'], ['Koo', 'Gha', 'Ng', 'Chha'],
-  ['Kay', 'Ko', 'Ha', 'Hee'], ['Hoo', 'Hay', 'Ho', 'Da'], ['Dee', 'Doo', 'Day', 'Do'],
-  ['Ma', 'Mee', 'Moo', 'May'], ['Mo', 'Ta', 'Tee', 'Too'], ['Tay', 'To', 'Pa', 'Pee'],
-  ['Poo', 'Shah', 'Na', 'Tuh'], ['Pay', 'Po', 'Ra', 'Ree'], ['Roo', 'Ray', 'Ro', 'Ta'],
-  ['Tee', 'Too', 'Tay', 'To'], ['Na', 'Nee', 'Noo', 'Nay'], ['No', 'Ya', 'Yee', 'Yoo'],
-  ['Yay', 'Yo', 'Bha', 'Bhee'], ['Bhoo', 'Dha', 'Pha', 'Dha'], ['Bhay', 'Bho', 'Ja', 'Jee'],
-  ['Joo', 'Jay', 'Jo', 'Gha'], ['Ga', 'Gee', 'Goo', 'Gay'], ['Go', 'Sah', 'See', 'Soo'],
-  ['Say', 'So', 'Da', 'Dee'], ['Doo', 'Tha', 'Jha', 'Na'], ['Day', 'Do', 'Cha', 'Chee'],
+  ["Chu", "Chay", "Cho", "Lah"],
+  ["Lee", "Loo", "Lay", "Loh"],
+  ["Ah", "Ee", "Oo", "Ay"],
+  ["Oh", "Vah", "Vee", "Voo"],
+  ["Vay", "Vo", "Kah", "Kee"],
+  ["Koo", "Gha", "Nga", "Cha"],
+  ["Kay", "Koh", "Hah", "Hee"],
+  ["Hoo", "Hay", "Hoh", "Dah"],
+  ["Dee", "Doo", "Day", "Doh"],
+  ["Mah", "Mee", "Moo", "May"],
+  ["Moh", "Tah", "Tee", "Too"],
+  ["Tay", "Toh", "Pah", "Pee"],
+  ["Poo", "Shah", "Nuh", "Tuh"],
+  ["Pay", "Poh", "Rah", "Ree"],
+  ["Roo", "Ray", "Roh", "Tah"],
+  ["Tee", "Too", "Tay", "Toh"],
+  ["Nah", "Nee", "Noo", "Nay"],
+  ["Noh", "Yah", "Yee", "Yoo"],
+  ["Yay", "Yoh", "Bha", "Bee"],
+  ["Boo", "Dah", "Pah", "Dah"],
+  ["Bay", "Boh", "Jah", "Jee"],
+  ["Joo", "Jay", "Joh", "Guh"],
+  ["Gah", "Gee", "Goo", "Gay"],
+  ["Goh", "Sah", "See", "See"],
+  ["Say", "Soh", "Dah", "Dee"],
+  ["Doo", "Tu", "Jha", "Jya"],
+  ["Day", "Doh", "Cha", "Chee"],
 ];
 
 export const PLANET_NAMES: Readonly<Record<PlanetId | 'As', string>> = {

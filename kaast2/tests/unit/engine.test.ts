@@ -95,3 +95,33 @@ describe('Vimshottari', () => {
     expect(chainAt(m, 2451545, 1)[0]!.lords).toEqual(['Ra']);
   });
 });
+
+describe('profile overrides', async () => {
+  const { resolveProfile } = await import('../../src/engine/profiles');
+  it('unset keys keep the profile value; set keys replace it', () => {
+    const p = resolveProfile('pl9', { dashaYearDays: 360, ayanamsa: undefined });
+    expect(p.dashaYearDays).toBe(360);
+    expect(p.ayanamsa).toBe('pl_lahiri');
+    expect(resolveProfile('pl9')).toBe(resolveProfile('pl9', undefined));
+  });
+});
+
+describe('Vimshottari navigation', async () => {
+  const { mahadashas, nextPeriodOf, chainAt, spanYMD } = await import('../../src/engine/dasha/vimshottari');
+  const mahas = mahadashas(190.317, 2430644.5, 365.2421875);
+  it('next Sun pratyantar after a date starts after it and is a Sun period', () => {
+    const after = 2458000.5;
+    const path = nextPeriodOf(mahas, 2, 'Su', after)!;
+    expect(path).toHaveLength(3);
+    expect(path[2]!.lords[2]).toBe('Su');
+    expect(path[2]!.start).toBeGreaterThanOrEqual(after);
+    // and no Sun pratyantar starts between `after` and it
+    const running = chainAt(mahas, after, 3)[2]!;
+    expect(running.start <= after).toBe(true);
+  });
+  it('span formatting', () => {
+    expect(spanYMD(365.2421875 * 2 + 40, 365.2421875)).toEqual({ y: 2, m: 1, d: 9 });
+    // Venus–Moon antar = 20 × 10 / 120 years = exactly 1 y 8 m
+    expect(spanYMD(365.2421875 * (20 * 10) / 120, 365.2421875)).toEqual({ y: 1, m: 8, d: 0 });
+  });
+});

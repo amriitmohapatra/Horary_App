@@ -50,3 +50,18 @@ export const PROFILES: Record<ProfileId, Profile> = {
 };
 
 export const DEFAULT_PROFILE: ProfileId = 'pl9';
+
+/** Constants a user may change in Settings, as PL allows in Options → Calculation. */
+export type ProfileOverrides = Partial<Pick<Profile, 'ayanamsa' | 'deltaT' | 'node' | 'dashaYearDays'>>;
+
+/** The profile after applying overrides (unset keys keep the profile's value). */
+export function resolveProfile(id: ProfileId, overrides?: ProfileOverrides): Profile {
+  const base = PROFILES[id];
+  if (!base) throw new Error(`unknown profile ${id}`);
+  if (!overrides) return base;
+  const clean = Object.fromEntries(Object.entries(overrides).filter(([, v]) => v !== undefined));
+  return { ...base, ...clean };
+}
+
+/** Dasha year options offered by PL (the "365.25" button is really 365.2421875 — BIN). */
+export const DASHA_YEARS = [365.2421875, 365.25, 360, 327.85] as const;

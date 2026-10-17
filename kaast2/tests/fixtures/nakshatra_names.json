@@ -1,0 +1,358 @@
+{
+ "_source": "Parashara's Light 7 UI string table Bin/Fn_60_1.enc, blocks _nakshatname_ (full, ids 1642-1668), _ShortNakshatname_ (planet table, ids 1614-1640) and _TinyNakshatname_ (chart labels, ids 3553-3579).",
+ "_grade": "BIN; NUM for the 10 names/abbreviations visible on the PL9 Page 1 fixture (Dhanish., Chitra, Swati, Hasta, Punarvasu, Rohini, Magha, Satabhi.; Dha Sat Roh Pun Mag Cht Has Swa)",
+ "_usage": "Page 1 planet table shows 'short'; rasi-chart planet labels show 'tiny' after the dd:mm degree.",
+ "nakshatras": [
+  {
+   "index": 1,
+   "start_deg": 0.0,
+   "lord": "Ke",
+   "full": "Ashwini",
+   "short": "Ashwini",
+   "tiny": "Ash",
+   "pl7_string_ids": {
+    "full": 1642,
+    "short": 1614,
+    "tiny": 3553
+   }
+  },
+  {
+   "index": 2,
+   "start_deg": 13.333333,
+   "lord": "Ve",
+   "full": "Bharani",
+   "short": "Bharani",
+   "tiny": "Bha",
+   "pl7_string_ids": {
+    "full": 1643,
+    "short": 1615,
+    "tiny": 3554
+   }
+  },
+  {
+   "index": 3,
+   "start_deg": 26.666667,
+   "lord": "Su",
+   "full": "Krittika",
+   "short": "Krittika",
+   "tiny": "Kri",
+   "pl7_string_ids": {
+    "full": 1644,
+    "short": 1616,
+    "tiny": 3555
+   }
+  },
+  {
+   "index": 4,
+   "start_deg": 40.0,
+   "lord": "Mo",
+   "full": "Rohini",
+   "short": "Rohini",
+   "tiny": "Roh",
+   "pl7_string_ids": {
+    "full": 1645,
+    "short": 1617,
+    "tiny": 3556
+   }
+  },
+  {
+   "index": 5,
+   "start_deg": 53.333333,
+   "lord": "Ma",
+   "full": "Mrigasira",
+   "short": "Mrigashi",
+   "tiny": "Mrg",
+   "pl7_string_ids": {
+    "full": 1646,
+    "short": 1618,
+    "tiny": 3557
+   }
+  },
+  {
+   "index": 6,
+   "start_deg": 66.666667,
+   "lord": "Ra",
+   "full": "Ardra",
+   "short": "Ardra",
+   "tiny": "Ard",
+   "pl7_string_ids": {
+    "full": 1647,
+    "short": 1619,
+    "tiny": 3558
+   }
+  },
+  {
+   "index": 7,
+   "start_deg": 80.0,
+   "lord": "Ju",
+   "full": "Punarvasu",
+   "short": "Punarvasu",
+   "tiny": "Pun",
+   "pl7_string_ids": {
+    "full": 1648,
+    "short": 1620,
+    "tiny": 3559
+   }
+  },
+  {
+   "index": 8,
+   "start_deg": 93.333333,
+   "lord": "Sa",
+   "full": "Pushya",
+   "short": "Pushya",
+   "tiny": "Pus",
+   "pl7_string_ids": {
+    "full": 1649,
+    "short": 1621,
+    "tiny": 3560
+   }
+  },
+  {
+   "index": 9,
+   "start_deg": 106.666667,
+   "lord": "Me",
+   "full": "Ashlesha",
+   "short": "Ashlesha",
+   "tiny": "Asl",
+   "pl7_string_ids": {
+    "full": 1650,
+    "short": 1622,
+    "tiny": 3561
+   }
+  },
+  {
+   "index": 10,
+   "start_deg": 120.0,
+   "lord": "Ke",
+   "full": "Magha",
+   "short": "Magha",
+   "tiny": "Mag",
+   "pl7_string_ids": {
+    "full": 1651,
+    "short": 1623,
+    "tiny": 3562
+   }
+  },
+  {
+   "index": 11,
+   "start_deg": 133.333333,
+   "lord": "Ve",
+   "full": "Poorva Phalg.",
+   "short": "P.Phalg.",
+   "tiny": "PPh",
+   "pl7_string_ids": {
+    "full": 1652,
+    "short": 1624,
+    "tiny": 3563
+   }
+  },
+  {
+   "index": 12,
+   "start_deg": 146.666667,
+   "lord": "Su",
+   "full": "Uttara Phalg.",
+   "short": "U.Phalg.",
+   "tiny": "UPh",
+   "pl7_string_ids": {
+    "full": 1653,
+    "short": 1625,
+    "tiny": 3564
+   }
+  },
+  {
+   "index": 13,
+   "start_deg": 160.0,
+   "lord": "Mo",
+   "full": "Hasta",
+   "short": "Hasta",
+   "tiny": "Has",
+   "pl7_string_ids": {
+    "full": 1654,
+    "short": 1626,
+    "tiny": 3565
+   }
+  },
+  {
+   "index": 14,
+   "start_deg": 173.333333,
+   "lord": "Ma",
+   "full": "Chitra",
+   "short": "Chitra",
+   "tiny": "Cht",
+   "pl7_string_ids": {
+    "full": 1655,
+    "short": 1627,
+    "tiny": 3566
+   }
+  },
+  {
+   "index": 15,
+   "start_deg": 186.666667,
+   "lord": "Ra",
+   "full": "Swati",
+   "short": "Swati",
+   "tiny": "Swa",
+   "pl7_string_ids": {
+    "full": 1656,
+    "short": 1628,
+    "tiny": 3567
+   }
+  },
+  {
+   "index": 16,
+   "start_deg": 200.0,
+   "lord": "Ju",
+   "full": "Vishakha",
+   "short": "Vishakha",
+   "tiny": "Vis",
+   "pl7_string_ids": {
+    "full": 1657,
+    "short": 1629,
+    "tiny": 3568
+   }
+  },
+  {
+   "index": 17,
+   "start_deg": 213.333333,
+   "lord": "Sa",
+   "full": "Anuradha",
+   "short": "Anuradha",
+   "tiny": "Anu",
+   "pl7_string_ids": {
+    "full": 1658,
+    "short": 1630,
+    "tiny": 3569
+   }
+  },
+  {
+   "index": 18,
+   "start_deg": 226.666667,
+   "lord": "Me",
+   "full": "Jyeshtha",
+   "short": "Jyeshtha",
+   "tiny": "Jye",
+   "pl7_string_ids": {
+    "full": 1659,
+    "short": 1631,
+    "tiny": 3570
+   }
+  },
+  {
+   "index": 19,
+   "start_deg": 240.0,
+   "lord": "Ke",
+   "full": "Moola",
+   "short": "Moola",
+   "tiny": "Mul",
+   "pl7_string_ids": {
+    "full": 1660,
+    "short": 1632,
+    "tiny": 3571
+   }
+  },
+  {
+   "index": 20,
+   "start_deg": 253.333333,
+   "lord": "Ve",
+   "full": "Poorvashadha",
+   "short": "P.Shad.",
+   "tiny": "PSh",
+   "pl7_string_ids": {
+    "full": 1661,
+    "short": 1633,
+    "tiny": 3572
+   }
+  },
+  {
+   "index": 21,
+   "start_deg": 266.666667,
+   "lord": "Su",
+   "full": "Uttarashadha",
+   "short": "U.Shad.",
+   "tiny": "USh",
+   "pl7_string_ids": {
+    "full": 1662,
+    "short": 1634,
+    "tiny": 3573
+   }
+  },
+  {
+   "index": 22,
+   "start_deg": 280.0,
+   "lord": "Mo",
+   "full": "Shravana",
+   "short": "Shravana",
+   "tiny": "Shr",
+   "pl7_string_ids": {
+    "full": 1663,
+    "short": 1635,
+    "tiny": 3574
+   }
+  },
+  {
+   "index": 23,
+   "start_deg": 293.333333,
+   "lord": "Ma",
+   "full": "Dhanishta",
+   "short": "Dhanish.",
+   "tiny": "Dha",
+   "pl7_string_ids": {
+    "full": 1664,
+    "short": 1636,
+    "tiny": 3575
+   }
+  },
+  {
+   "index": 24,
+   "start_deg": 306.666667,
+   "lord": "Ra",
+   "full": "Shatabhishak",
+   "short": "Satabhi.",
+   "tiny": "Sat",
+   "pl7_string_ids": {
+    "full": 1665,
+    "short": 1637,
+    "tiny": 3576
+   }
+  },
+  {
+   "index": 25,
+   "start_deg": 320.0,
+   "lord": "Ju",
+   "full": "Poorvabhadra",
+   "short": "P.Bhadra.",
+   "tiny": "PBh",
+   "pl7_string_ids": {
+    "full": 1666,
+    "short": 1638,
+    "tiny": 3577
+   }
+  },
+  {
+   "index": 26,
+   "start_deg": 333.333333,
+   "lord": "Sa",
+   "full": "Uttarabhadra",
+   "short": "U.Bhadra.",
+   "tiny": "UBh",
+   "pl7_string_ids": {
+    "full": 1667,
+    "short": 1639,
+    "tiny": 3578
+   }
+  },
+  {
+   "index": 27,
+   "start_deg": 346.666667,
+   "lord": "Me",
+   "full": "Revati",
+   "short": "Revati",
+   "tiny": "Rev",
+   "pl7_string_ids": {
+    "full": 1668,
+    "short": 1640,
+    "tiny": 3579
+   }
+  }
+ ]
+}
