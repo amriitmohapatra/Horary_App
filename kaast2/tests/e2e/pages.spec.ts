@@ -3,6 +3,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { openTab } from './nav';
 
 const url = pathToFileURL(resolve(import.meta.dirname, '../..', process.env.KAAST2_HTML ?? 'dist-single/index.html')).href;
 
@@ -29,7 +30,7 @@ test('form folds after casting and reopens with Edit chart', async ({ page }) =>
 
 test('Dashas: PL table for the antar running on 1 Jun 2018 matches the PL 9 dates', async ({ page }) => {
   const errors = await castAmitabh(page);
-  await page.getByRole('link', { name: 'Dashas' }).click();
+  await openTab(page, 'Dashas');
   await page.getByLabel('Periods running on').fill('2018-06-01');
   const table = page.getByTestId('pl-dasha-table');
   await expect(table.getByRole('heading')).toHaveText('Venus-Sun');
@@ -41,7 +42,7 @@ test('Dashas: PL table for the antar running on 1 Jun 2018 matches the PL 9 date
 
 test('Dashas: PL convention — periods that ended before the chart moment have no dates', async ({ page }) => {
   await castAmitabh(page);
-  await page.getByRole('link', { name: 'Dashas' }).click();
+  await openTab(page, 'Dashas');
   // the first Mahadasha (Rahu) began before birth: select it to list its antars
   await page.getByTestId('dasha-tree').getByRole('button', { name: /^Ra\s*Rahu$/ }).first().click();
   const rows = page.getByTestId('pl-dasha-table').locator('tbody tr');
@@ -52,7 +53,7 @@ test('Dashas: PL convention — periods that ended before the chart moment have 
 
 test('Dashas: jump to the next Moon pratyantar selects it', async ({ page }) => {
   await castAmitabh(page);
-  await page.getByRole('link', { name: 'Dashas' }).click();
+  await openTab(page, 'Dashas');
   await page.getByLabel('Periods running on').fill('2018-06-01');
   await page.getByLabel('Jump to the next period of').selectOption('Mo');
   await page.getByLabel('Level').selectOption('2');
@@ -66,7 +67,7 @@ test('Dashas: jump to the next Moon pratyantar selects it', async ({ page }) => 
 
 test('Dashas: switching to 365.25-day years moves Ve-Su-Ra to 17-05-2018', async ({ page }) => {
   await castAmitabh(page);
-  await page.getByRole('link', { name: 'Dashas' }).click();
+  await openTab(page, 'Dashas');
   await page.getByLabel('Periods running on').fill('2018-06-01');
   await page.getByLabel('Dasha year').selectOption('365.25');
   await expect(page.getByTestId('pl-dasha-table').locator('tr', { hasText: 'Rahu' })).toContainText('17-05-2018');
@@ -74,14 +75,14 @@ test('Dashas: switching to 365.25-day years moves Ve-Su-Ra to 17-05-2018', async
 
 test('Settings: Krishnamurti New ayanamsa changes the Moon by about 6 minutes', async ({ page }) => {
   await castAmitabh(page);
-  await page.getByRole('link', { name: 'Settings' }).click();
+  await openTab(page, 'Settings');
   await page.getByLabel('Ayanamsa').selectOption('pl_krishnamurti_new');
-  await page.getByRole('link', { name: 'Page 1' }).click();
+  await openTab(page, 'Page 1');
   const mo = page.getByTestId('planet-table').locator('tr[data-point="Mo"]');
   await expect(mo).toContainText('Li 10:25:');
-  await page.getByRole('link', { name: 'Settings' }).click();
+  await openTab(page, 'Settings');
   await page.getByRole('button', { name: 'Use the profile value' }).click();
-  await page.getByRole('link', { name: 'Page 1' }).click();
+  await openTab(page, 'Page 1');
   await expect(mo).toContainText('Li 10:19:02');
 });
 
@@ -125,7 +126,7 @@ test('saves a chart file that reopens identically', async ({ page }) => {
 
 test('Vargas: D9 signs in the table match the PL 9 Navamsha, and every group renders', async ({ page }) => {
   const errors = await castAmitabh(page);
-  await page.getByRole('link', { name: 'Vargas' }).click();
+  await openTab(page, 'Vargas');
   const table = page.getByTestId('varga-table');
   const col = await table.locator('thead th').allInnerTexts();
   const d9 = col.indexOf('D9');
@@ -149,7 +150,7 @@ test('Display: theme button cycles Light → Dark → Warm night; text size enla
   await expect(html).toHaveAttribute('data-theme', 'dark');
   await page.getByRole('button', { name: /Switch to Warm night/ }).click();
   await expect(html).toHaveAttribute('data-theme', 'warm');
-  await page.getByRole('link', { name: 'Settings' }).click();
+  await openTab(page, 'Settings');
   const before = await page.evaluate(() => parseFloat(getComputedStyle(document.documentElement).fontSize));
   await page.getByLabel('Text size').selectOption('larger');
   await expect.poll(async () => (await page.evaluate(() => parseFloat(getComputedStyle(document.documentElement).fontSize))) / before)
@@ -183,7 +184,7 @@ test('Page 1 strengths match the PL 9 screen (table, bars, house-edge labels)', 
 
 test('Strengths page shows Shad Bala, Bhava Bala and Ashtakavarga (SAV = 337)', async ({ page }) => {
   await castAmitabh(page);
-  await page.getByRole('link', { name: 'Strengths' }).click();
+  await openTab(page, 'Strengths');
   await expect(page.getByTestId('shadbala-table').locator('tbody tr')).toHaveCount(23);
   await expect(page.getByTestId('bhavabala-table').locator('tbody tr')).toHaveCount(12);
   const savRow = page.getByTestId('ashtakavarga-table').locator('tr', { hasText: 'Sarva' });
@@ -192,7 +193,7 @@ test('Strengths page shows Shad Bala, Bhava Bala and Ashtakavarga (SAV = 337)', 
 
 test('Jaimini page: K7 equals the PL 9 column; padas, lagnas, argala render', async ({ page }) => {
   const errors = await castAmitabh(page);
-  await page.getByRole('link', { name: 'Jaimini' }).click();
+  await openTab(page, 'Jaimini');
   const k7 = page.getByTestId('karakas7');
   const want: [string, string][] = [['AK', 'Su'], ['AmK', 'Me'], ['BK', 'Ma'], ['MK', 'Sa'], ['PiK', 'Ve'], ['GK', 'Mo'], ['DK', 'Ju']];
   for (const [k, p] of want) {
@@ -209,7 +210,7 @@ test('Panchanga line and Yogi & Bhava page (Amitabh Bachchan worked values)', as
   const errors = await castAmitabh(page);
   const pa = page.getByTestId('panchanga');
   for (const s of ['Shukla Dwitiya', 'Swati 2', 'Vishkambha yoga', 'Balava karana', 'Sunday']) await expect(pa).toContainText(s);
-  await page.getByRole('link', { name: 'Yogi & Bhava' }).click();
+  await openTab(page, 'Yogi & Bhava');
   await expect(page.getByTestId('yogi-row')).toContainText('Cn 08:01:55');
   await expect(page.getByTestId('yogi-row')).toContainText('Saturn');
   await expect(page.getByTestId('avayogi-row')).toContainText('Moon');
@@ -225,7 +226,7 @@ test('Panchanga line and Yogi & Bhava page (Amitabh Bachchan worked values)', as
 
 test('Transits: chart, positions, stepping, events, Sade Sati and returns', async ({ page }) => {
   const errors = await castAmitabh(page);
-  await page.getByRole('link', { name: 'Transits' }).click();
+  await openTab(page, 'Transits');
   await page.getByLabel('Zone for these times (hours east)').fill('5.5');
   await page.getByLabel('Date', { exact: true }).fill('2025-01-01');
   await page.getByLabel('Hours', { exact: true }).fill('05:30:00');
@@ -269,7 +270,7 @@ test('coordinates may be typed in degrees, minutes and seconds', async ({ page }
 test('Saved places: add, use, edit, export, delete, import', async ({ page }) => {
   await page.goto(url);
   await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
-  await page.getByRole('link', { name: 'Settings' }).click();
+  await openTab(page, 'Settings');
   const pm = page.getByTestId('places-manager');
   await pm.getByLabel('Place', { exact: true }).fill('Test village');
   await pm.getByLabel('Latitude').fill('21 42 12 N');
@@ -281,7 +282,7 @@ test('Saved places: add, use, edit, export, delete, import', async ({ page }) =>
   await expect(row).toContainText('84°01′53″ E');
 
   // it appears in the chart form and fills the coordinates (and war time in 1943)
-  await page.getByRole('link', { name: 'Page 1' }).click();
+  await openTab(page, 'Page 1');
   if (await page.getByRole('button', { name: 'Edit chart' }).count()) await page.getByRole('button', { name: 'Edit chart' }).click();
   await page.getByLabel('Date').fill('1943-01-01');
   await page.getByLabel('Place', { exact: true }).fill('Test village');
@@ -289,7 +290,7 @@ test('Saved places: add, use, edit, export, delete, import', async ({ page }) =>
   await expect(page.getByLabel('Zone (hours east of UTC)')).toHaveValue('6.5');
 
   // edit, export, delete, import
-  await page.getByRole('link', { name: 'Settings' }).click();
+  await openTab(page, 'Settings');
   await pm.getByRole('button', { name: 'Edit Test village' }).click();
   await pm.getByLabel('Zone (hours east of UTC)').fill('5.75');
   await pm.getByRole('button', { name: 'Save changes' }).click();

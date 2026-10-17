@@ -16,6 +16,11 @@ A fix release: same features as v0.6.
   could be cached and reused; widths are now cached only once both font
   weights have loaded, and charts redraw when they have.
 - CI uploads Playwright failure reports.
+- Tests: the browser tests now wait for a tab switch to finish before acting
+  (helper `openTab`). Before, a slow runner could act on the previous page —
+  the saved-places test failed on `main` (CI run 21) by finding two "Place"
+  fields. Reproduced by delaying route changes 300 ms; the whole e2e suite
+  now passes under that delay.
 
 **Evidence** 645 unit/engine tests; 32 e2e on the shipped file; the
 label-crossing check also at 360, 768, 1280, 1412 and 1920 px; contract

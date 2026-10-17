@@ -3,6 +3,7 @@
 import { expect, test } from '@playwright/test';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { openTab } from './nav';
 
 const url = pathToFileURL(resolve(import.meta.dirname, '../..', process.env.KAAST2_HTML ?? 'dist-single/index.html')).href;
 
@@ -16,7 +17,7 @@ test('NTP page: Yogi, Avayogi, sets of three, Zero Rasis, Dasha reading', async 
   await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
   await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
   await page.getByRole('button', { name: 'Cast chart' }).click();
-  await page.getByRole('link', { name: 'NTP', exact: true }).click();
+  await openTab(page, 'NTP');
 
   const yoga = page.getByTestId('ntp-yoga');
   // Panchanga yoga Vishkambha → star Pushyami → Yogi Saturn (NTP-1 p. 22); Saturn's enemy is the Moon (NTP-2 p. 6).

@@ -3,6 +3,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { openTab } from './nav';
 
 const url = pathToFileURL(resolve(import.meta.dirname, '../..', process.env.KAAST2_HTML ?? 'dist-single/index.html')).href;
 const SIGNS = ['Ar', 'Ta', 'Ge', 'Cn', 'Le', 'Vi', 'Li', 'Sc', 'Sg', 'Cp', 'Aq', 'Pi'];
@@ -29,7 +30,7 @@ async function cast(page: Page) {
 test('KP page: Krishnamurti ayanamsa by default, chart, cusps and significators', async ({ page }) => {
   const errors = await cast(page);
   const moonPage1 = arcsec(await page.getByTestId('planet-table').locator('tr[data-point="Mo"] td').first().innerText());
-  await page.getByRole('link', { name: 'KP', exact: true }).click();
+  await openTab(page, 'KP');
   await expect(page.getByTestId('kp-used')).toContainText('Krishnamurti');
   await expect(page.getByTestId('kp-used')).toContainText('Placidus');
   await expect(page.getByRole('img', { name: /Krishnamurti chart/ })).toBeVisible();
@@ -61,7 +62,7 @@ test('KP page: Krishnamurti ayanamsa by default, chart, cusps and significators'
 
 test('Transits: 1 week step moves the date by seven days', async ({ page }) => {
   await cast(page);
-  await page.getByRole('link', { name: 'Transits' }).click();
+  await openTab(page, 'Transits');
   const date = page.getByLabel('Date', { exact: true });
   const before = await date.inputValue();
   await page.getByLabel('Step', { exact: true }).selectOption('w');

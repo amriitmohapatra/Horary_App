@@ -22,6 +22,7 @@ for (const theme of ['light', 'dark', 'warm']) {
       const link = page.getByRole('link', { name, exact: true });
       if (!(await link.count())) continue;
       await link.click();
+      await expect(link).toHaveAttribute('aria-current', 'page');
       await page.waitForTimeout(150);
       // @axe-core/playwright is typed against another Playwright minor; the runtime API is the same.
       const r = await new AxeBuilder({ page: page as unknown as ConstructorParameters<typeof AxeBuilder>[0]['page'] }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
