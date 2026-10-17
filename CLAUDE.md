@@ -35,5 +35,7 @@ is written down. **Do not ask the user to re-explain the domain.**
 - `Advanced_Setup/` — KAAST v0.95/v0.96 web apps with the in-browser
   Swiss Ephemeris (WASM) and the dasha module; own build + tests.
 - `knowledge/` — the project brain. Read it.
+- `PLAN.md`, `ARCHITECTURE.md` — the KAAST 2 (PL7-parity app) programme;
+  read both before touching `kaast2/` (folder created in slice 0).
 - Everything else (Testing/, *.xlsx, PDFs, screenshots) — source data and
   ground truth; treat as read-only.

@@ -229,3 +229,24 @@ architecture.
   quotes (notebook photos) to extend quotes.js.
 - Dasha in Python Excel pipeline (`kp-build` doesn't print dasha yet —
   only the apps show it; Python dasha.py has full API incl. pranas).
+
+## 2026-10-17 (later) — KAAST 2 planned: a PL7-parity app built from scratch
+- New project decided by the user: an open-source, offline single-file app
+  whose DEFAULT profile is Parashara's Light 7 (Placidus on geographic
+  latitude, PL7 Lahiri polynomial, true node, mean equinox, PL7 ΔT curve,
+  365.2421875-day dasha year), with the Solar Fire profile kept as a second
+  constant bundle. Scope Phase 1 = parity on: Page 1, vargas (D6 D8 D9 D10
+  D11×2 D24 + all others), Yogi/Avayogi/Duplicate Yogi, Vimshottari to Deha
+  with an interactive tree, Jaimini, bhava chalit, transits.
+- Plan and architecture written at repo root: `PLAN.md`, `ARCHITECTURE.md`.
+  Target folder `kaast2/` (working name KAAST 2), TypeScript + Vite + Preact,
+  ONE engine (ADR-1: Python only as a test oracle — a deliberate departure
+  from invariant 9 for the new app; Kala Chakra 1.5 itself is unchanged).
+- User rulings: chart layout = East Indian exactly as Kala Chakra 1.5
+  (ported geometry); the Iyer books "New Techniques of Prediction" will be
+  shared later and their rules catalogued for Phase 2.
+- Oracle strategy: PL7 printouts to be produced by the user on Windows for a
+  16-chart parity set (GeoVision XMLs hold inputs only); PL7 transit cache
+  (Moon/Rahu, 348 months) as automatic ΔT/ayanamsa test; decoded rules as
+  fixtures; PyJHora as independent cross-check.
+- No engine code changed in this session.
