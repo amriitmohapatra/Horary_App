@@ -8,6 +8,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { openTab } from './nav';
 
 const url = pathToFileURL(resolve(import.meta.dirname, '../..', process.env.KAAST2_HTML ?? 'dist-single/index.html')).href;
 
@@ -59,18 +60,18 @@ for (const vw of [1440, 390]) {
       await page.getByLabel('Hours', { exact: true }).fill(c.time);
       await page.getByLabel('Place').fill(c.place);
       await page.getByRole('button', { name: 'Cast chart' }).click();
-      await page.getByRole('link', { name: 'Page 1' }).click();
+      await openTab(page, 'Page 1');
       bad.push(...(await violations(page)));
-      await page.getByRole('link', { name: 'Vargas' }).click();
-      await page.getByRole('link', { name: 'Jaimini' }).click();
+      await openTab(page, 'Vargas');
+      await openTab(page, 'Jaimini');
       bad.push(...(await violations(page)));
-      await page.getByRole('link', { name: 'Yogi & Bhava' }).click();
+      await openTab(page, 'Yogi & Bhava');
       bad.push(...(await violations(page)));
       await page.getByRole('button', { name: 'Equal houses' }).click();
       bad.push(...(await violations(page)));
-      await page.getByRole('link', { name: 'Transits' }).click();
+      await openTab(page, 'Transits');
       bad.push(...(await violations(page)));
-      await page.getByRole('link', { name: 'Vargas' }).click();
+      await openTab(page, 'Vargas');
       for (const g of ['16 Parashari', 'Tajika and D150', 'PL alternates']) {
         await page.getByRole('button', { name: g }).click();
         bad.push(...(await violations(page)));
