@@ -1,4 +1,4 @@
-# Design contract — KAAST 2
+# Design contract — Astro-Amriit
 
 Status: v0.1 (2026-10-17). Tokens: `src/ui/design/tokens.css`. Every colour,
 size and font in the UI comes from there.

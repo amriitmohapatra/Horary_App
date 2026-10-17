@@ -86,9 +86,39 @@ function safeRow(reg: Region, yy: number, f: number): Row {
   return { x: a.a === 'start' ? l : r, a: a.a, w: Math.max(0, r - l) };
 }
 
-const plainLen = (e: ChartEntry) => e.parts.reduce((n, p) => n + p.text.length, 0);
-/** Average advance of the chart face in ems, conservative for bold Atkinson (Kala Chakra used 0.585 for Georgia). */
+/** Average advance in ems, used only where text cannot be measured (Node tests); Kala Chakra used 0.585 for Georgia. */
 const EM = 0.66;
+
+/**
+ * Width of an entry at font size 1, measured with the chart's real font via a
+ * canvas (widths scale linearly with size, so one measurement per string is
+ * cached). Before the web font loads the fallback font is measured; the app
+ * re-renders when fonts are ready (see app.tsx), so the final layout uses the
+ * real metrics.
+ */
+const widthCache = new Map<string, number>();
+let ctx: CanvasRenderingContext2D | null | undefined;
+function unitWidth(e: ChartEntry): number {
+  if (ctx === undefined) {
+    try { ctx = typeof document !== 'undefined' ? document.createElement('canvas').getContext('2d') : null; } catch { ctx = null; }
+  }
+  if (!ctx) return EM * Math.max(e.parts.reduce((n, p) => n + p.text.length, 0), 4);
+  const loaded = typeof document !== 'undefined' && document.fonts?.check?.('16px "Atkinson Hyperlegible"') ? 1 : 0;
+  const key = loaded + '|' + e.parts.map((p) => (p.bold ? '*' : '') + (p.tone === 'sign' || p.tone === 'house' ? '~' : '') + p.text).join('\u0001');
+  let w = widthCache.get(key);
+  if (w === undefined) {
+    w = 0;
+    for (const p of e.parts) {
+      ctx.font = `${p.bold ? 700 : 400} 100px "Atkinson Hyperlegible", system-ui, sans-serif`;
+      // sign/house labels are drawn at 0.78em with letter-spacing (see styles.css .tone-sign)
+      const k = p.tone === 'sign' || p.tone === 'house' ? 0.78 * 1.08 : 1;
+      w += (ctx.measureText(p.text).width / 100) * k;
+    }
+    w *= 1.04; // safety margin for SVG text rendering differences
+    widthCache.set(key, w);
+  }
+  return w;
+}
 const LH = 1.24;
 
 /** Does every row fit, at its own position, with font size `f`? */
@@ -96,7 +126,7 @@ function fits(reg: Region, entries: ChartEntry[], f: number): boolean {
   const lh = f * LH;
   const y0 = reg.y0(entries.length, lh);
   if (y0 + (entries.length - 1) * lh > reg.yMax + 0.5) return false;
-  return entries.every((e, i) => safeRow(reg, y0 + i * lh, f).w >= EM * plainLen(e) * f);
+  return entries.every((e, i) => safeRow(reg, y0 + i * lh, f).w >= unitWidth(e) * f);
 }
 
 /**
@@ -153,7 +183,7 @@ export function EastIndianChart(props: EastIndianChartProps): JSX.Element {
         const lh = f * LH;
         const y0 = reg.y0(entries.length, lh);
         return (
-          <g key={s} data-sign={s}>
+          <g key={s} data-sign={s} data-poly={reg.poly}>
             {entries.map((e, i) => {
               const yy = y0 + i * lh;
               const r = safeRow(reg, yy, f);

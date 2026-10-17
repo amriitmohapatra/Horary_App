@@ -7,7 +7,7 @@
  *    (India = −5.5); <DST> holds the extra hour (India's 1942–45 war time is
  *    stored as DST 1);
  *  - <Events> hold further charts for the same person (Today, Muhurta, …).
- * KAAST 2 uses east-positive longitude and zones; this module converts both ways.
+ * Astro-Amriit uses east-positive longitude and zones; this module converts both ways.
  * Pure (no DOM), so it runs in tests and in the app alike.
  */
 import { DEFAULT_PROFILE, type ChartInput, type ProfileId } from '../engine';

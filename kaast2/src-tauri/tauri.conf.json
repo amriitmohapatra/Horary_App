@@ -1,8 +1,9 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "KAAST 2",
+  "productName": "Astro-Amriit",
+  "mainBinaryName": "Astro-Amriit",
   "version": "../package.json",
-  "identifier": "org.kararashram.kaast2",
+  "identifier": "org.kararashram.astroamriit",
   "build": {
     "frontendDist": "../dist-site",
     "devUrl": "http://localhost:5173",
@@ -14,7 +15,8 @@
     "windows": [
       {
         "label": "main",
-        "title": "KAAST 2",
+        "create": false,
+        "title": "Astro-Amriit",
         "width": 1400,
         "height": 950,
         "minWidth": 900,
@@ -46,11 +48,11 @@
     "targets": ["nsis", "msi", "dmg"],
     "createUpdaterArtifacts": false,
     "publisher": "Kararashram",
-    "copyright": "KAAST 2 contributors. Licensed under AGPL-3.0-only.",
+    "copyright": "Astro-Amriit contributors. Licensed under AGPL-3.0-only.",
     "license": "AGPL-3.0-only",
     "category": "Lifestyle",
     "shortDescription": "Offline Vedic astrology",
-    "longDescription": "KAAST 2: offline Vedic astrology with Parashara's Light parity. Works without any internet connection.",
+    "longDescription": "Astro-Amriit: offline Vedic astrology with Parashara's Light parity. Works without any internet connection.",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",

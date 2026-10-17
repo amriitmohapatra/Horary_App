@@ -7,6 +7,7 @@ import { useMemo, useState } from 'preact/hooks';
 import type { JSX } from 'preact';
 import { LEVEL_NAMES, periodsInWindow, type DashaPeriod } from '../../engine/dasha/vimshottari';
 import { t } from '../i18n';
+import { Icon, type IconName } from './Icon';
 import { civilDate, civilWeekday } from '../format';
 
 const ROWS = 10;
@@ -29,8 +30,8 @@ export function DashaList({ mahas, zoneHours, nowJd }: { mahas: DashaPeriod[]; z
   const later = () => setAnchor(view[view.length - 1]!.start);
 
   const level = LEVEL_NAMES[depth]!;
-  const btn = (label: string, icon: string, onClick: () => void, disabled = false) => (
-    <button type="button" class="icon-btn" aria-label={label} title={label} onClick={onClick} disabled={disabled}>{icon}</button>
+  const btn = (label: string, icon: IconName, onClick: () => void, disabled = false) => (
+    <button type="button" class="icon-btn" aria-label={label} title={label} onClick={onClick} disabled={disabled}><Icon name={icon} /></button>
   );
 
   return (
@@ -38,10 +39,10 @@ export function DashaList({ mahas, zoneHours, nowJd }: { mahas: DashaPeriod[]; z
       <div class="dasha-bar">
         <span class="dasha-level">{level}</span>
         <span class="spacer" />
-        {btn(t('page1.dashaShallower'), '−', () => setDepth((d) => Math.max(0, d - 1)), depth === 0)}
-        {btn(t('page1.dashaDeeper'), '+', () => setDepth((d) => Math.min(5, d + 1)), depth === 5)}
-        {btn(t('page1.dashaEarlier'), '↑', earlier, view[0]!.start <= first)}
-        {btn(t('page1.dashaLater'), '↓', later, view[view.length - 1]!.end >= last)}
+        {btn(t('page1.dashaShallower'), 'minus', () => setDepth((d) => Math.max(0, d - 1)), depth === 0)}
+        {btn(t('page1.dashaDeeper'), 'plus', () => setDepth((d) => Math.min(5, d + 1)), depth === 5)}
+        {btn(t('page1.dashaEarlier'), 'arrowUp', earlier, view[0]!.start <= first)}
+        {btn(t('page1.dashaLater'), 'arrowDown', later, view[view.length - 1]!.end >= last)}
         <button type="button" class="btn btn-small" onClick={() => setAnchor(nowJd)}>{t('page1.dashaToday')}</button>
       </div>
       <table class="data dasha-table">

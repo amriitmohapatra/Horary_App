@@ -1,5 +1,5 @@
 /**
- * Copy the single-file build to dist/KAAST 2 v<major.minor>.html.
+ * Copy the single-file build to dist/Astro-Amriit v<major.minor>.html.
  * Shipped files are never overwritten (invariant 11): bump package.json
  * "version" to ship a new file. Pass --force only to rebuild an UNSHIPPED
  * version during the same slice.
@@ -11,7 +11,7 @@ const root = resolve(import.meta.dirname, '..');
 const { version } = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'));
 const short = version.split('.').slice(0, 2).join('.');
 const src = resolve(root, 'dist-single/index.html');
-const dst = resolve(root, `dist/KAAST 2 v${short}.html`);
+const dst = resolve(root, `dist/Astro-Amriit v${short}.html`);
 const force = process.argv.includes('--force');
 
 if (existsSync(dst) && !force) {

@@ -40,11 +40,13 @@ describe('PL chart files', () => {
   });
 });
 
-describe('KAAST 2 chart files', () => {
+describe('Astro-Amriit chart files', () => {
   it('round-trips and validates', () => {
     const { input } = parseGeoVision(SAMPLE);
     expect(parseChartFile(toChartFile(input))).toEqual(input);
-    expect(() => parseChartFile('{"format":"kaast2-chart","version":1,"input":{}}')).toThrow(/incomplete/);
+    expect(() => parseChartFile('{"format":"astro-amriit-chart","version":1,"input":{}}')).toThrow(/incomplete/);
+    // files saved by v0.1 (then called KAAST 2) still open
+    expect(parseChartFile(toChartFile(input).replace('astro-amriit-chart', 'kaast2-chart'))).toEqual(input);
     expect(() => parseChartFile('nope')).toThrow(/not JSON/);
   });
 });

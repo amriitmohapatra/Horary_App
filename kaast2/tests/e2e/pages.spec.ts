@@ -110,11 +110,44 @@ test('saves a chart file that reopens identically', async ({ page }) => {
   await castAmitabh(page);
   await page.getByRole('button', { name: 'Edit chart' }).click();
   const [dl] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Save chart' }).click()]);
-  expect(dl.suggestedFilename()).toBe('Amitabh Bachchan.kaast2.json');
+  expect(dl.suggestedFilename()).toBe('Amitabh Bachchan.astro-amriit.json');
   const path = await dl.path();
   await page.reload();
   await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
   await page.getByLabel('Open chart file…').setInputFiles(path!);
   await expect(page.locator('.chart-name')).toHaveText('Amitabh Bachchan');
   await expect(page.getByTestId('planet-table').locator('tr[data-point="Mo"]')).toContainText('Li 10:19:02');
+});
+
+test('Vargas: D9 signs in the table match the PL 9 Navamsha, and every group renders', async ({ page }) => {
+  const errors = await castAmitabh(page);
+  await page.getByRole('link', { name: 'Vargas' }).click();
+  const table = page.getByTestId('varga-table');
+  const col = await table.locator('thead th').allInnerTexts();
+  const d9 = col.indexOf('D9');
+  const want: Record<string, string> = { As: 'Li', Su: 'Le', Mo: 'Cp', Ma: 'Cn', Me: 'Le', Ju: 'Cn', Ve: 'Ta', Sa: 'Ge', Ra: 'Cn', Ke: 'Cp' };
+  for (const [p, sign] of Object.entries(want)) {
+    await expect(table.locator('tbody tr', { has: page.locator(`.pl-${p}`) }).locator('td').nth(d9 - 1)).toContainText(sign);
+  }
+  for (const g of ['Tajika and D150', 'PL alternates', '16 Parashari']) {
+    await page.getByRole('button', { name: g }).click();
+    await expect(page.locator('.varga-thumb').first()).toBeVisible();
+  }
+  await page.getByRole('button', { name: /Show D60/ }).click();
+  await expect(page.locator('#h-varga')).toContainText('D60');
+  expect(errors).toEqual([]);
+});
+
+test('Display: theme button cycles Light → Dark → Warm night; text size enlarges text', async ({ page }) => {
+  await castAmitabh(page);
+  const html = page.locator('html');
+  await page.getByRole('button', { name: 'Switch to Dark' }).click();
+  await expect(html).toHaveAttribute('data-theme', 'dark');
+  await page.getByRole('button', { name: /Switch to Warm night/ }).click();
+  await expect(html).toHaveAttribute('data-theme', 'warm');
+  await page.getByRole('link', { name: 'Settings' }).click();
+  const before = await page.evaluate(() => parseFloat(getComputedStyle(document.documentElement).fontSize));
+  await page.getByLabel('Text size').selectOption('larger');
+  await expect.poll(async () => (await page.evaluate(() => parseFloat(getComputedStyle(document.documentElement).fontSize))) / before)
+    .toBeCloseTo(1.25, 2);
 });

@@ -8,7 +8,7 @@ import { DASHA_YEARS, resolveProfile, type ChartInput, type ProfileOverrides } f
 import { PL_AYANAMSA, type AyanamsaId } from '../../engine/ephem/ayanamsa';
 import { DEFAULT_PROFILE } from '../../engine/profiles';
 import { t, type MessageKey } from '../i18n';
-import { overrides, setOverride, setTheme, theme, type Theme } from '../state/store';
+import { overrides, setOverride, setTextSize, setTheme, textSize, theme, type TextSize, type Theme } from '../state/store';
 
 const AYANAMSAS: [AyanamsaId, string][] = [
   ...Object.entries(PL_AYANAMSA).map(([id, v]) => [id as AyanamsaId, `${v.label} (PL)`] as [AyanamsaId, string]),
@@ -67,7 +67,18 @@ export function Settings({ input }: { input: ChartInput | null }): JSX.Element {
               <option value="auto">{t('settings.theme.auto')}</option>
               <option value="light">{t('settings.theme.light')}</option>
               <option value="dark">{t('settings.theme.dark')}</option>
+              <option value="warm">{t('settings.theme.warm')}</option>
             </select>
+            <small class="hint">{t('settings.theme.hint')}</small>
+          </div>
+          <div class="setting">
+            <label for="s-text">{t('settings.text')}</label>
+            <select id="s-text" value={textSize.value} onChange={(e) => setTextSize(e.currentTarget.value as TextSize)}>
+              <option value="normal">{t('settings.text.normal')}</option>
+              <option value="large">{t('settings.text.large')}</option>
+              <option value="larger">{t('settings.text.larger')}</option>
+            </select>
+            <small class="hint">{t('settings.text.hint')}</small>
           </div>
         </div>
       </section>

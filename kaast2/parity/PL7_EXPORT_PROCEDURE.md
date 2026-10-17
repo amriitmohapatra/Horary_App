@@ -1,6 +1,6 @@
 # PL export procedure: getting the raw evidence out of Parashara's Light
 
-Version 1.0, 2026-10-17. Written for the boss. Owner: technical writer, KAAST 2 programme.
+Version 1.0, 2026-10-17. Written for the boss. Owner: technical writer, Astro-Amriit programme.
 Related: PLAN.md §2.3 (unknowns) and §4.3 (what we need); ARCHITECTURE.md §2 (`parity/`).
 
 The file name still says "PL7". Your Page 1 screenshot came from **Parashara's Light 9.0**,
@@ -50,7 +50,7 @@ so this procedure is written for **PL 9 first**. Where PL 7 is different, a note
 
 ## What we already know (so you know why each step matters)
 
-- KAAST 2 already reproduces your PL 9 Page 1 for Amitabh Bachchan. All 9 planets match to
+- Astro-Amriit already reproduces your PL 9 Page 1 for Amitabh Bachchan. All 9 planets match to
   the displayed second. The Ascendant matches within 5″. All 10 dasha dates on Page 1 match.
 - From that one chart we learned three things about PL 9:
   1. PL 9 **rounds** seconds (it does not cut them off).

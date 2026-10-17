@@ -145,7 +145,7 @@ export function ChartForm(): JSX.Element {
     const r = parse(f);
     setErrors(r.errors);
     if (!r.input) return;
-    if (kind === 'json') download(`${fileStem()}.kaast2.json`, toChartFile(r.input), 'application/json');
+    if (kind === 'json') download(`${fileStem()}.astro-amriit.json`, toChartFile(r.input), 'application/json');
     else download(`${fileStem()}.xml`, toGeoVision(r.input), 'application/xml');
   };
 

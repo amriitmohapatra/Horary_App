@@ -1,115 +1,110 @@
 /*
- * KAAST 2 design tokens (primitive → semantic). See docs/design/DESIGN_CONTRACT.md.
- * Signature: the chart is an engraved plate — indigo night ground, brass
- * line-work — in both themes. Everything else stays quiet: cool chalk paper,
- * indigo ink, one brass accent.
+ * Astro-Amriit design tokens (primitive → semantic). See docs/design/DESIGN_CONTRACT.md.
+ * Comfort rules: no pure white or pure black surfaces (less glare/halation);
+ * body text 12–15:1 contrast (readable, not harsh); every text/background pair
+ * ≥ 4.5:1 in every theme (checked by scripts in the design contract);
+ * dark themes are desaturated tonal variants, not inversions; Warm night cuts
+ * blue light for evening reading. Text size scales with Settings → Text size.
+ * Signature kept: the chart is an engraved plate with brass line-work.
  */
 :root {
-  /* primitives */
-  --indigo-950: #0d1230;
-  --indigo-900: #141b3d;
-  --indigo-800: #1d2754;
-  --indigo-700: #2b376b;
-  --brass-300: #ecd396;
-  --brass-400: #d9b86e;
-  --brass-500: #c6a15b;
-  --brass-700: #8a6420;
-  --chalk-50: #f6f7f4;
-  --chalk-100: #eceee9;
-  --slate-300: #d5d9e2;
-  --slate-500: #5d6480;
-  --slate-700: #3b4160;
-  --ink-900: #171c35;
-
-  /* semantic — light */
-  --bg: var(--chalk-50);
-  --surface: #ffffff;
-  --surface-sunk: var(--chalk-100);
-  --text: var(--ink-900);
-  --text-muted: var(--slate-500);
-  --rule: var(--slate-300);
-  --accent: var(--brass-700);
-  --accent-contrast: #ffffff;
+  /* light (default) */
+  --bg: #f2f3ef;
+  --surface: #fafaf7;
+  --surface-sunk: #eceee8;
+  --text: #1f2440;
+  --text-muted: #4f5672;
+  --rule: #d6d9e0;
+  --accent: #7e5b1a;
+  --accent-contrast: #fafaf7;
   --focus: #2f5bd3;
   --danger: #a3222f;
-  --ok: #1c7a4b;
-  --running-bg: #fbf1d8;
+  --ok: #1c7044;
+  --running-bg: #f6ecd2;
+  --shadow: 0 1px 2px rgb(20 24 50 / 0.05), 0 3px 12px rgb(20 24 50 / 0.05);
+  --lord-star: #1c7044; --lord-sub: #a42343; --lord-subsub: #2f4fa8;
+  --pl-As: #1f2440; --pl-Su: #b53a0a; --pl-Mo: #3f4659; --pl-Ma: #b01c1c; --pl-Me: #15733a;
+  --pl-Ju: #8f5200; --pl-Ve: #93199f; --pl-Sa: #1d47c8; --pl-Ra: #6b4f3a; --pl-Ke: #6b4f3a;
 
-  /* KP lords — continuity with Kala Chakra */
-  --lord-star: #1c7a4b;
-  --lord-sub: #b02748;
-  --lord-subsub: #2f4fa8;
-
-  /* planets on paper */
-  --pl-Su: #c2410c; --pl-Mo: #3f4659; --pl-Ma: #b91c1c; --pl-Me: #15803d; --pl-Ju: #a35d00;
-  --pl-Ve: #a21caf; --pl-Sa: #1d4ed8; --pl-Ra: #6b4f3a; --pl-Ke: #6b4f3a; --pl-As: #171c35;
-
-  /* the plate (same in both themes) */
-  --plate-bg: var(--indigo-900);
+  /* the plate (indigo, light and dark themes) */
+  --plate-bg: #141b3d;
   --plate-bg-lagna: #222d60;
-  --plate-line: var(--brass-500);
-  --plate-text: #e9ebf5;
-  --plate-muted: #9aa3c7;
-  --plate-sign: var(--brass-400);
-  --plp-Su: #ff9a5c; --plp-Mo: #e9ebf5; --plp-Ma: #ff7b7b; --plp-Me: #6ee29b; --plp-Ju: #ffc861;
-  --plp-Ve: #f39cf6; --plp-Sa: #8fb2ff; --plp-Ra: #d2b48c; --plp-Ke: #d2b48c; --plp-As: var(--brass-300);
+  --plate-line: #c6a15b;
+  --plate-text: #e4e7f2;
+  --plate-muted: #a6aecf;
+  --plate-sign: #d9b86e;
+  --plate-display: #ecd396;
+  --plp-As: #ecd396; --plp-Su: #ff9a5c; --plp-Mo: #e4e7f2; --plp-Ma: #ff8a8a; --plp-Me: #7fe2a6;
+  --plp-Ju: #ffc861; --plp-Ve: #f3a6f6; --plp-Sa: #9db8ff; --plp-Ra: #d2b48c; --plp-Ke: #d2b48c;
+  --topbar-bg: var(--plate-bg);
+  --topbar-text: var(--plate-text);
+  --topbar-muted: var(--plate-muted);
 
   /* type */
   --font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
   --font-data: 'IBM Plex Mono', ui-monospace, monospace;
   --font-display: 'Marcellus', Georgia, serif;
-  --fs-xs: 0.78rem;
-  --fs-sm: 0.875rem;
-  --fs-md: 1rem;
-  --fs-lg: 1.2rem;
-  --fs-xl: 1.6rem;
+  --fs-xs: 0.8125rem;  /* 13 */
+  --fs-sm: 0.9375rem;  /* 15 */
+  --fs-md: 1rem;       /* 16 */
+  --fs-lg: 1.25rem;    /* 20 */
+  --fs-xl: 1.625rem;   /* 26 */
+  --lh-body: 1.55;
 
-  /* space, shape */
+  /* space, shape, targets */
   --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px;
   --radius: 6px;
-  --shadow: 0 1px 2px rgb(13 18 48 / 0.06), 0 4px 16px rgb(13 18 48 / 0.06);
+  --target: 36px;
   color-scheme: light;
 }
 
+/* dark: desaturated tonal variant */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --bg: var(--indigo-950);
-    --surface: #151c3a;
-    --surface-sunk: #10163a;
-    --text: #e6e8f2;
-    --text-muted: #9aa1bf;
-    --rule: #2a3358;
-    --accent: var(--brass-400);
-    --accent-contrast: var(--indigo-950);
-    --focus: #8fb2ff;
-    --danger: #ff8a95;
-    --ok: #6ee29b;
-    --running-bg: #2a2a3e;
-    --lord-star: #6ee29b; --lord-sub: #ff8fa6; --lord-subsub: #9db7ff;
-    --pl-Su: #ff9a5c; --pl-Mo: #d6d9e6; --pl-Ma: #ff7b7b; --pl-Me: #6ee29b; --pl-Ju: #ffc861;
-    --pl-Ve: #f39cf6; --pl-Sa: #8fb2ff; --pl-Ra: #d2b48c; --pl-Ke: #d2b48c; --pl-As: #e6e8f2;
-    --plate-bg: #0a0f28;
-    --plate-bg-lagna: #19224d;
+  :root:not([data-theme='light']):not([data-theme='warm']) {
+    --bg: #10142b; --surface: #171e3b; --surface-sunk: #121834; --text: #dce0ec; --text-muted: #a0a7c2;
+    --rule: #2b3459; --accent: #d9b86e; --accent-contrast: #10142b; --focus: #9db8ff; --danger: #ff9aa4; --ok: #78d9a0;
+    --running-bg: #262a40; --shadow: none;
+    --lord-star: #78d9a0; --lord-sub: #ff9db0; --lord-subsub: #a9c0ff;
+    --pl-As: #dce0ec; --pl-Su: #f7a372; --pl-Mo: #d3d7e4; --pl-Ma: #f59595; --pl-Me: #7fd9a0;
+    --pl-Ju: #f0c674; --pl-Ve: #e7a6ea; --pl-Sa: #9db8f7; --pl-Ra: #cdb394; --pl-Ke: #cdb394;
+    --plate-bg: #0e1330; --plate-bg-lagna: #1b2450;
     color-scheme: dark;
   }
 }
 :root[data-theme='dark'] {
-  --bg: var(--indigo-950);
-  --surface: #151c3a;
-  --surface-sunk: #10163a;
-  --text: #e6e8f2;
-  --text-muted: #9aa1bf;
-  --rule: #2a3358;
-  --accent: var(--brass-400);
-  --accent-contrast: var(--indigo-950);
-  --focus: #8fb2ff;
-  --danger: #ff8a95;
-  --ok: #6ee29b;
-  --running-bg: #2a2a3e;
-  --lord-star: #6ee29b; --lord-sub: #ff8fa6; --lord-subsub: #9db7ff;
-  --pl-Su: #ff9a5c; --pl-Mo: #d6d9e6; --pl-Ma: #ff7b7b; --pl-Me: #6ee29b; --pl-Ju: #ffc861;
-  --pl-Ve: #f39cf6; --pl-Sa: #8fb2ff; --pl-Ra: #d2b48c; --pl-Ke: #d2b48c; --pl-As: #e6e8f2;
-  --plate-bg: #0a0f28;
-  --plate-bg-lagna: #19224d;
+  --bg: #10142b; --surface: #171e3b; --surface-sunk: #121834; --text: #dce0ec; --text-muted: #a0a7c2;
+  --rule: #2b3459; --accent: #d9b86e; --accent-contrast: #10142b; --focus: #9db8ff; --danger: #ff9aa4; --ok: #78d9a0;
+  --running-bg: #262a40; --shadow: none;
+  --lord-star: #78d9a0; --lord-sub: #ff9db0; --lord-subsub: #a9c0ff;
+  --pl-As: #dce0ec; --pl-Su: #f7a372; --pl-Mo: #d3d7e4; --pl-Ma: #f59595; --pl-Me: #7fd9a0;
+  --pl-Ju: #f0c674; --pl-Ve: #e7a6ea; --pl-Sa: #9db8f7; --pl-Ra: #cdb394; --pl-Ke: #cdb394;
+  --plate-bg: #0e1330; --plate-bg-lagna: #1b2450;
   color-scheme: dark;
 }
+
+/* warm night: low blue light, for evening reading */
+:root[data-theme='warm'] {
+  --bg: #191511; --surface: #211c17; --surface-sunk: #1c1814; --text: #e8ddcb; --text-muted: #b5a890;
+  --rule: #3a3128; --accent: #d9b36a; --accent-contrast: #191511; --focus: #e8c27a; --danger: #f2a08e; --ok: #9bcb8e;
+  --running-bg: #2e261c; --shadow: none;
+  --lord-star: #9bcb8e; --lord-sub: #e8a08a; --lord-subsub: #b9b4e0;
+  --pl-As: #e8ddcb; --pl-Su: #f0a06a; --pl-Mo: #e2d6c2; --pl-Ma: #ee9580; --pl-Me: #a7d08f;
+  --pl-Ju: #e8c273; --pl-Ve: #dda6c9; --pl-Sa: #afb6e6; --pl-Ra: #cdb394; --pl-Ke: #cdb394;
+  --plate-bg: #211a13; --plate-bg-lagna: #33281c; --plate-line: #b8925a; --plate-text: #eadfcc;
+  --plate-muted: #b9ac94; --plate-sign: #d4ae66; --plate-display: #e9cf94;
+  --plp-As: #e9cf94; --plp-Su: #f5a46e; --plp-Mo: #eadfcc; --plp-Ma: #f09a86; --plp-Me: #a9d492;
+  --plp-Ju: #ebc676; --plp-Ve: #e0aacc; --plp-Sa: #b2b9ea; --plp-Ra: #d2b48c; --plp-Ke: #d2b48c;
+  color-scheme: dark;
+}
+
+/* more contrast when the system asks for it */
+@media (prefers-contrast: more) {
+  :root { --text-muted: var(--text); --rule: currentColor; }
+}
+
+/* text size (Settings → Text size); everything is in rem, the charts scale with their panels */
+:root[data-text='large'] { font-size: 112.5%; }
+:root[data-text='larger'] { font-size: 125%; }
+
+/* touch screens: 44 px targets */
+@media (pointer: coarse) { :root { --target: 44px; } }

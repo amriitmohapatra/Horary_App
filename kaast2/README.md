@@ -1,10 +1,10 @@
-# KAAST 2
+# Astro-Amriit
 
 **Karar Ashram Astrology Software, version 2** — an offline Vedic astrology
 app that reproduces Parashara's Light (PL) at its default settings, drawn in
 the East Indian chart style.
 
-- **One file, no internet.** Download `dist/KAAST 2 v0.1.html` and double-click
+- **One file, no internet.** Download `dist/Astro-Amriit v0.1.html` and double-click
   it. Nothing is uploaded and nothing is fetched; the Swiss Ephemeris runs
   inside the page.
 - **Checked against PL itself.** Every number is tested against PL's own output
@@ -40,7 +40,7 @@ the East Indian chart style.
 npm ci
 npm test            # unit + engine oracles (Vitest)
 npm run build       # dist-site/ (Vercel, Tauri)
-npm run build:single  # dist/KAAST 2 v<version>.html (refuses to overwrite a shipped file)
+npm run build:single  # dist/Astro-Amriit v<version>.html (refuses to overwrite a shipped file)
 npm run contract    # build contract check
 npm run test:e2e    # Playwright against the single file, offline
 npm run scan        # pre-publish personal-data and secrets scan
@@ -54,5 +54,5 @@ Architecture and plan: `../ARCHITECTURE.md`, `../PLAN.md`.
 ## Licence
 
 AGPL-3.0 (required by the Swiss Ephemeris, © Astrodienst AG). Parashara's
-Light is a product of GeoVision Software; KAAST 2 contains none of its code or
+Light is a product of GeoVision Software; Astro-Amriit contains none of its code or
 data files, only rules re-derived and tested against its output.

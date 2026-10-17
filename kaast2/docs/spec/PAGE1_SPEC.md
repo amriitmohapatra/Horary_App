@@ -1,6 +1,6 @@
 # PL Page 1 — strength fields: implementable specification
 
-Status: research spec for the KAAST 2 engine team. Oracle: `kaast2/oracle/page1_strengths.py`
+Status: research spec for the Astro-Amriit engine team. Oracle: `kaast2/oracle/page1_strengths.py`
 (runs in under 1 s; 145 fields checked against `kaast2/tests/fixtures/pl9_page1_amitabh.json`;
 0 mismatches; 2 rows reported OPEN).
 

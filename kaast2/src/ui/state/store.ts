@@ -38,7 +38,7 @@ export const chart = computed<{ ok: ChartResult } | { error: string } | null>(()
 });
 
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
-export const ROUTES = ['page1', 'dashas', 'settings'] as const;
+export const ROUTES = ['page1', 'vargas', 'dashas', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];
 const routeFromHash = (): Route => {
   const h = location.hash.replace('#', '') as Route;
@@ -65,13 +65,28 @@ export function rememberPlace(p: Place): void {
   try { localStorage.setItem(LAST_PLACE, JSON.stringify(p)); } catch { /* non-fatal */ }
 }
 
-export type Theme = 'auto' | 'light' | 'dark';
+export type Theme = 'auto' | 'light' | 'dark' | 'warm';
 export const theme = signal<Theme>(((): Theme => {
-  try { const t = localStorage.getItem(THEME); return t === 'light' || t === 'dark' ? t : 'auto'; } catch { return 'auto'; }
+  try { const t = localStorage.getItem(THEME); return t === 'light' || t === 'dark' || t === 'warm' ? t : 'auto'; } catch { return 'auto'; }
 })());
 export function setTheme(t: Theme): void {
   theme.value = t;
   try { localStorage.setItem(THEME, t); } catch { /* non-fatal */ }
+}
+/** The theme actually showing (resolves 'auto' against the device). */
+export function shownTheme(): Exclude<Theme, 'auto'> {
+  if (theme.value !== 'auto') return theme.value;
+  return typeof matchMedia === 'function' && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+const TEXT = 'kaast2.textSize.v1';
+export type TextSize = 'normal' | 'large' | 'larger';
+export const textSize = signal<TextSize>(((): TextSize => {
+  try { const t = localStorage.getItem(TEXT); return t === 'large' || t === 'larger' ? t : 'normal'; } catch { return 'normal'; }
+})());
+export function setTextSize(t: TextSize): void {
+  textSize.value = t;
+  try { localStorage.setItem(TEXT, t); } catch { /* non-fatal */ }
 }
 
 /** A chart for this moment at the given place (horary default). */

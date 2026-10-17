@@ -1,10 +1,12 @@
 /**
- * KAAST 2's own chart file (`*.kaast2.json`): the exact input, versioned,
+ * Astro-Amriit's own chart file (`*.astro-amriit.json`): the exact input, versioned,
  * so a chart reopens identically. Settings overrides are saved with it.
  */
 import { PROFILES, type ChartInput } from '../engine';
 
-export const CHART_FORMAT = 'kaast2-chart';
+export const CHART_FORMAT = 'astro-amriit-chart';
+/** Format id written by v0.1 (when the app was called KAAST 2). */
+const LEGACY_FORMATS = ['kaast2-chart'];
 export const CHART_VERSION = 1;
 
 export function toChartFile(input: ChartInput): string {
@@ -13,9 +15,9 @@ export function toChartFile(input: ChartInput): string {
 
 export function parseChartFile(text: string): ChartInput {
   let doc: unknown;
-  try { doc = JSON.parse(text); } catch { throw new Error('This file is not a KAAST 2 chart (not JSON).'); }
+  try { doc = JSON.parse(text); } catch { throw new Error('This file is not a Astro-Amriit chart (not JSON).'); }
   const d = doc as { format?: string; version?: number; input?: ChartInput };
-  if (d?.format !== CHART_FORMAT) throw new Error('This file is not a KAAST 2 chart.');
+  if (d?.format !== CHART_FORMAT && !LEGACY_FORMATS.includes(d?.format ?? '')) throw new Error('This file is not a Astro-Amriit chart.');
   if (d.version !== CHART_VERSION) throw new Error(`Chart file version ${d.version} is not supported by this app.`);
   const i = d.input!;
   const finite = (...xs: unknown[]) => xs.every((x) => typeof x === 'number' && Number.isFinite(x));

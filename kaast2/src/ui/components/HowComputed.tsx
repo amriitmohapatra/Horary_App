@@ -13,7 +13,7 @@ export function HowComputed({ chart }: { chart: ChartResult }): JSX.Element {
     [t('how.ayanamsa'), `${degDms(m.ayanamsaDeg, 2)} (${p.ayanamsa}, mean equinox)`],
     [t('how.houses'), `${p.houses.system === 'P' ? 'Placidus' : 'Topocentric'}, ${p.houses.latitude} latitude ${v.houseLatitudeDeg.toFixed(4)}°`],
     [t('how.dashaYear'), `${p.dashaYearDays} days`],
-    [t('how.engine'), `KAAST 2 engine ${v.engineVersion} · Swiss Ephemeris ${v.swissephVersion} · seconds ${p.rounding === 'round' ? 'rounded' : 'truncated'}`],
+    [t('how.engine'), `Astro-Amriit engine ${v.engineVersion} · Swiss Ephemeris ${v.swissephVersion} · seconds ${p.rounding === 'round' ? 'rounded' : 'truncated'}`],
   ];
   return (
     <details class="how">

@@ -1,8 +1,9 @@
-# KAAST 2 desktop installers (PLAN.md slice 8b, ARCHITECTURE.md §6, ADR-9).
+# Desktop installers for Astro-Amriit (codename KAAST 2; source in kaast2/)
+# (PLAN.md slice 8b, ARCHITECTURE.md §6, ADR-9).
 # Builds unsigned installers (decision D10) for devices that never go online:
-#   Windows x64 : "KAAST 2 Setup vX.Y.Z.exe" (NSIS) and "KAAST 2 vX.Y.Z.msi",
+#   Windows x64 : "Astro-Amriit Setup vX.Y.Z.exe" (NSIS) and "Astro-Amriit vX.Y.Z.msi",
 #                 both with the WebView2 OFFLINE installer embedded
-#   macOS       : "KAAST 2 vX.Y.Z.dmg" (universal: Intel + Apple Silicon, ad-hoc signed)
+#   macOS       : "Astro-Amriit vX.Y.Z.dmg" (universal: Intel + Apple Silicon, ad-hoc signed)
 # plus SHA256SUMS.txt and a ready-to-copy "USB kit" artefact.
 # Runs only by hand (Actions tab -> kaast2-desktop -> Run workflow) or on a
 # tag kaast2-vX.Y.Z. It never publishes a release; download the artefacts.
@@ -71,7 +72,8 @@ jobs:
       - run: npm ci
 
       - name: Build installers (tauri build; runs `npm run build` first)
-        run: npx tauri build --ci --target ${{ matrix.tauri-target }} --bundles ${{ matrix.bundles }}
+        # `-- --locked`: build exactly the crate versions in src-tauri/Cargo.lock.
+        run: npx tauri build --ci --target ${{ matrix.tauri-target }} --bundles ${{ matrix.bundles }} -- --locked
 
       - name: Offline check - the bundled page references no remote host
         run: |
@@ -89,15 +91,15 @@ jobs:
           set -euo pipefail
           OUT="$RUNNER_TEMP/out"; mkdir -p "$OUT"
           if [[ "$RUNNER_OS" == "Windows" ]]; then
-            cp "$BUNDLE"/nsis/*-setup.exe "$OUT/KAAST 2 Setup v$VERSION.exe"
-            cp "$BUNDLE"/msi/*.msi "$OUT/KAAST 2 v$VERSION.msi"
+            cp "$BUNDLE"/nsis/*-setup.exe "$OUT/Astro-Amriit Setup v$VERSION.exe"
+            cp "$BUNDLE"/msi/*.msi "$OUT/Astro-Amriit v$VERSION.msi"
             cd "$OUT" && sha256sum *.exe *.msi > SHA256SUMS.txt
             # The embedded WebView2 offline installer is ~200 MB; a small
             # installer means it is missing and offline installs would fail.
-            SIZE=$(stat -c %s "KAAST 2 Setup v$VERSION.exe")
+            SIZE=$(stat -c %s "Astro-Amriit Setup v$VERSION.exe")
             if (( SIZE < 150000000 )); then echo "::error::NSIS installer is only $SIZE bytes - WebView2 offline installer not embedded?"; exit 1; fi
           else
-            cp "$BUNDLE"/dmg/*.dmg "$OUT/KAAST 2 v$VERSION.dmg"
+            cp "$BUNDLE"/dmg/*.dmg "$OUT/Astro-Amriit v$VERSION.dmg"
             cd "$OUT" && shasum -a 256 *.dmg > SHA256SUMS.txt
           fi
           ls -la "$OUT"; cat SHA256SUMS.txt
@@ -121,10 +123,10 @@ jobs:
         working-directory: ${{ runner.temp }}/out
         run: |
           $ErrorActionPreference = 'Stop'
-          $setup = Get-ChildItem -Filter 'KAAST 2 Setup v*.exe' | Select-Object -First 1
+          $setup = Get-ChildItem -Filter 'Astro-Amriit Setup v*.exe' | Select-Object -First 1
           Start-Process -FilePath $setup.FullName -ArgumentList '/S' -Wait
           $exe = Get-ChildItem -Path $env:LOCALAPPDATA -Recurse -Depth 3 -Filter *.exe -ErrorAction SilentlyContinue |
-            Where-Object { $_.DirectoryName -like '*KAAST 2*' -and $_.Name -notlike 'uninstall*' } | Select-Object -First 1
+            Where-Object { $_.DirectoryName -like '*Astro-Amriit*' -and $_.Name -notlike 'uninstall*' } | Select-Object -First 1
           if (-not $exe) { throw 'installed exe not found under LOCALAPPDATA' }
           "installed: $($exe.FullName)" | Tee-Object -FilePath $env:GITHUB_STEP_SUMMARY -Append
           $p = Start-Process -FilePath $exe.FullName -PassThru
@@ -148,8 +150,8 @@ jobs:
         run: |
           set -euo pipefail
           MNT=$(mktemp -d)
-          hdiutil attach -nobrowse -readonly -mountpoint "$MNT" KAAST\ 2\ v*.dmg
-          APP="$RUNNER_TEMP/KAAST 2.app"; cp -R "$MNT/KAAST 2.app" "$APP"; hdiutil detach "$MNT"
+          hdiutil attach -nobrowse -readonly -mountpoint "$MNT" Astro-Amriit\ v*.dmg
+          APP="$RUNNER_TEMP/Astro-Amriit.app"; cp -R "$MNT/Astro-Amriit.app" "$APP"; hdiutil detach "$MNT"
           BIN=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$APP/Contents/Info.plist")
           { echo '```'; lipo -archs "$APP/Contents/MacOS/$BIN"; codesign -dv "$APP" 2>&1 | grep -E 'Signature|Identifier' || true; echo '```'; } | tee -a "$GITHUB_STEP_SUMMARY"
           lipo -archs "$APP/Contents/MacOS/$BIN" | grep -q x86_64
@@ -190,7 +192,7 @@ jobs:
         run: |
           set -euo pipefail
           VERSION=$(node -p "require('./kaast2/package.json').version")
-          KIT="KAAST 2 v$VERSION - USB kit"
+          KIT="Astro-Amriit v$VERSION - USB kit"
           mkdir -p "kit/$KIT"
           cp parts/*/*.exe parts/*/*.msi parts/*/*.dmg "kit/$KIT/"
           cp kaast2/docs/install/USB_INSTALL_GUIDE.md "kit/$KIT/READ ME FIRST - install guide.txt"
@@ -198,7 +200,7 @@ jobs:
           sha256sum *.exe *.msi *.dmg > SHA256SUMS.txt
           sha256sum -c SHA256SUMS.txt
           ls -la
-          echo "name=kaast2-usb-kit-v$VERSION" >> "$GITHUB_OUTPUT"
+          echo "name=astro-amriit-usb-kit-v$VERSION" >> "$GITHUB_OUTPUT"
           { echo '### USB kit'; echo '```'; ls -la; cat SHA256SUMS.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:

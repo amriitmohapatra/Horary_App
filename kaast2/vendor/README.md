@@ -14,4 +14,4 @@ SHA-256 (verified by `scripts/build_contract_check.mjs` against every build):
 dc3a83def45eac14c784e7c9861af4afd8488e431942884f2d2d2bcf8c9cfff4  swisseph_glue.js
 ```
 
-Using the Swiss Ephemeris makes KAAST 2 AGPL-3.0 (decision D9).
+Using the Swiss Ephemeris makes Astro-Amriit AGPL-3.0 (decision D9).

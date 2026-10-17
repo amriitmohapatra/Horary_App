@@ -8,6 +8,7 @@ import type { JSX } from 'preact';
 import { LEVEL_NAMES, subperiods, spanYMD, type DashaPeriod } from '../../engine/dasha/vimshottari';
 import { PLANET_NAMES } from '../../engine/names';
 import { t } from '../i18n';
+import { Icon } from './Icon';
 import { civilDate, civilTime } from '../format';
 
 export const keyOf = (p: DashaPeriod) => p.lords.join('-');
@@ -41,7 +42,7 @@ function Row({ p, level, props }: { p: DashaPeriod; level: number; props: TreePr
         style={{ '--lvl': level } as JSX.CSSProperties}>
         {level < 5
           ? <button type="button" class="dt-toggle" aria-label={`${open ? t('dasha.collapse') : t('dasha.expand')} ${key}`}
-              onClick={() => props.onToggle(key)}>{open ? '▾' : '▸'}</button>
+              onClick={() => props.onToggle(key)}><Icon name={open ? 'chevronDown' : 'chevronRight'} size={16} /></button>
           : <span class="dt-toggle" aria-hidden="true" />}
         <button type="button" class="dt-name" onClick={() => props.onSelect(p)} title={LEVEL_NAMES[level]}>
           {p.lords.map((l, i) => <span key={i} class={i === level ? `pl pl-${l}` : 'dt-parent'}>{i ? '-' : ''}{l}</span>)}

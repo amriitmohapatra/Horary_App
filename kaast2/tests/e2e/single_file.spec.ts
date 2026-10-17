@@ -90,6 +90,12 @@ test('screenshots for review (desktop, phone, dark)', async ({ page }) => {
   await page.screenshot({ path: `${out}/desktop.png`, fullPage: true });
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.screenshot({ path: `${out}/desktop-dark.png`, fullPage: true });
+  await page.evaluate(() => document.documentElement.setAttribute('data-theme', 'warm'));
+  await page.screenshot({ path: `${out}/desktop-warm.png`, fullPage: true });
+  await page.evaluate(() => document.documentElement.removeAttribute('data-theme'));
+  await page.goto(page.url().split('#')[0] + '#vargas');
+  await page.screenshot({ path: `${out}/vargas.png`, fullPage: true });
+  await page.goto(page.url().split('#')[0] + '#page1');
   await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ colorScheme: 'light' });
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

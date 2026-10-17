@@ -1,12 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <!-- KAAST 2 app mark: brass "K2" on indigo. Source for `npx tauri icon`
-       (see src-tauri/README.md). Pure paths, no fonts, so it renders the same everywhere. -->
+  <!-- Astro-Amriit app mark: a brass "A" with a four-pointed star, on indigo.
+       Pure paths, no fonts, so it renders the same everywhere. Regenerate the icon set with
+       `npx tauri icon src-tauri/icons/icon-source.svg -o <tmp dir>` and copy the 7 files
+       listed in tauri.conf.json > bundle > icon (plus 64x64.png, icon.png). -->
   <defs>
     <linearGradient id="bg" x1="0" y1="64" x2="0" y2="960" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#2B2766"/>
       <stop offset="1" stop-color="#16133F"/>
     </linearGradient>
-    <linearGradient id="brass" x1="0" y1="290" x2="0" y2="734" gradientUnits="userSpaceOnUse">
+    <linearGradient id="brass" x1="0" y1="250" x2="0" y2="780" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ECCB74"/>
       <stop offset="0.55" stop-color="#C99A2E"/>
       <stop offset="1" stop-color="#A67C1F"/>
@@ -15,20 +17,16 @@
       <stop offset="0" stop-color="#ECCB74"/>
       <stop offset="1" stop-color="#A67C1F"/>
     </linearGradient>
-    <clipPath id="k"><rect x="176" y="300" width="360" height="424"/></clipPath>
-    <clipPath id="two"><rect x="560" y="300" width="330" height="424"/></clipPath>
+    <clipPath id="a"><rect x="150" y="300" width="560" height="460"/></clipPath>
   </defs>
   <rect x="64" y="64" width="896" height="896" rx="196" fill="url(#bg)"/>
   <rect x="104" y="104" width="816" height="816" rx="160" fill="none" stroke="url(#rim)" stroke-width="14" opacity="0.85"/>
-  <g fill="none" stroke="url(#brass)" stroke-linecap="butt">
-    <!-- K -->
-    <g clip-path="url(#k)">
-      <line x1="222" y1="260" x2="222" y2="760" stroke-width="92"/>
-      <line x1="200" y1="672" x2="520" y2="262" stroke-width="86"/>
-      <line x1="318" y1="500" x2="536" y2="772" stroke-width="92"/>
-    </g>
-    <!-- 2 -->
-    <path clip-path="url(#two)" stroke-width="86" stroke-linejoin="miter"
-          d="M 600 414 C 600 344 650 300 712 300 C 780 300 826 348 826 412 C 826 470 790 506 746 550 L 628 681 L 860 681"/>
+  <!-- A: two legs meeting in a flat apex, plus a crossbar -->
+  <g clip-path="url(#a)" fill="none" stroke="url(#brass)" stroke-linecap="butt">
+    <path d="M 210 800 L 430 260 L 650 800" stroke-width="100" stroke-linejoin="miter" stroke-miterlimit="2"/>
+    <line x1="300" y1="600" x2="560" y2="600" stroke-width="78"/>
   </g>
+  <!-- four-pointed star -->
+  <path fill="url(#brass)"
+        d="M 740 250 C 750 320 770 340 840 350 C 770 360 750 380 740 450 C 730 380 710 360 640 350 C 710 340 730 320 740 250 Z"/>
 </svg>
