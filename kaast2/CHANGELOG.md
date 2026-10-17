@@ -2,6 +2,28 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.4 — 2026-10-17 · `dist/Astro-Amriit v0.4.html`
+
+**What works**
+- **Seconds on every phone.** Birth time is three boxes — Hours, Minutes,
+  Seconds — with a number keypad; typing moves to the next box after two
+  digits (`160037` → 16:00:37), and a whole time pasted into Hours is spread
+  over the boxes. iPhone's time picker (no seconds) is no longer used. Same
+  on the Transits page.
+- **Saved places manager** (Settings): add, edit, delete (with confirm),
+  built-in list for reference, **Export places** / **Import places…** to
+  move your list between devices (each browser keeps its own).
+- Latitude and longitude accept decimal or degrees-minutes-seconds
+  (`20 15 30 N`, `85°50′E`, `-73.5`).
+- No sideways scrolling on any page at 320 px and 390 px phone widths.
+
+**Evidence** 620 unit/engine tests; 29 e2e on the shipped file (new: phone
+digit-by-digit seconds, DMS coordinates, places add/use/edit/export/delete/
+import, phone overflow on all 8 pages); contract check; pre-publish scan.
+
+**Companion fix** Kala Chakra v1.6 (`Advanced_Setup/web/dist/`) shows the
+seconds next to hh:mm in the result, chart, Excel and event lines.
+
 ## v0.3 — 2026-10-17 · `dist/Astro-Amriit v0.3.html`
 
 Fixes found while writing the user guide (docs/user_guide/USER_GUIDE.md).

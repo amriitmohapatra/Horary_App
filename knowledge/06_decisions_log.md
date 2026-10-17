@@ -344,3 +344,19 @@ architecture.
   store signal; war time for saved Indian places via coordinates; plain
   varga rules; readable provenance). CI workflow YAML fixed; GitHub refuses
   to start the job (account-level; see PLAN §10 item 7).
+
+## 2026-10-17 (session 2, later) — seconds on iPhone; saved places
+- **iOS drops seconds.** Safari's native `<input type=time>` offers only
+  hh:mm on iPhone. Kala Chakra already had a separate seconds box, but the
+  result line, chart centre, Excel time cell and event lines printed only
+  the time input's hh:mm. Fixed in NEW files Kala Chakra v1.6 (app, Odia,
+  Caster): every displayed time is hh:mm:ss built from both boxes. v1.5 is
+  untouched. Engine unchanged (seconds were always used in the calculation);
+  wasm suite 0 failures, RA Job 130 passed.
+- **Astro-Amriit v0.4:** no native time picker at all — three numeric boxes
+  (Hours/Minutes/Seconds) that auto-advance, so `160037` typed on a phone
+  keypad gives 16:00:37. Latitude/longitude accept degrees-minutes-seconds
+  (`20 15 30 N`, `85°50′E`). Saved places get a manager in Settings
+  (add/edit/delete, export/import JSON) because browser storage is per
+  device; war time applies to saved places inside India. Phone overflow at
+  320/390 px fixed on all pages and locked by an e2e test.

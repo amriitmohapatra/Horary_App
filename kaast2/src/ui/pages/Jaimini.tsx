@@ -60,7 +60,7 @@ export function Jaimini({ chart }: { chart: ChartResult }): JSX.Element {
   for (const p of ['As', ...PLANETS] as PointId[]) kmGroups[d9map[p]!]!.push(p);
 
   const karakaTable = (list: ReturnType<typeof charaKarakas>, id: string, label: MessageKey) => (
-    <table class="data" data-testid={id}>
+    <div class="table-wrap"><table class="data" data-testid={id}>
       <caption class="cap-top">{t(label)}</caption>
       <thead><tr><th scope="col">{t('jai.karaka')}</th><th scope="col">{t('col.body')}</th><th scope="col" class="r">{t('jai.degree')}</th></tr></thead>
       <tbody>
@@ -72,7 +72,7 @@ export function Jaimini({ chart }: { chart: ChartResult }): JSX.Element {
           </tr>
         ))}
       </tbody>
-    </table>
+    </table></div>
   );
 
   return (
@@ -90,7 +90,7 @@ export function Jaimini({ chart }: { chart: ChartResult }): JSX.Element {
           <div class="panel-body">
             {lag ? (
               <>
-                <table class="data" data-testid="special-lagnas">
+                <div class="table-wrap"><table class="data" data-testid="special-lagnas">
                   <tbody>
                     {([['jai.bhava', lag.bhava.lon], ['jai.hora', lag.hora.lon], ['jai.ghatika', lag.ghatika.lon], ['jai.pranapada', lag.pranapada.lon], ['jai.sri', lag.sri.lon]] as [MessageKey, number][]).map(([k, v]) => (
                       <tr key={k}><th scope="row">{t(k)}</th><td class="num">{lonText(v)}</td></tr>
@@ -98,7 +98,7 @@ export function Jaimini({ chart }: { chart: ChartResult }): JSX.Element {
                     <tr><th scope="row">{t('jai.varnada')}</th><td class="num">{SIGNS[lag.varnada]}</td></tr>
                     <tr><th scope="row">{t('jai.indu')}</th><td class="num">{SIGNS[lag.indu]}</td></tr>
                   </tbody>
-                </table>
+                </table></div>
                 <p class="hint-text">{t('jai.lagnasNote', { sunrise: civilTime(lag.sunriseJdUT, zone), ishta: lag.ishtaMinutes.toFixed(1) })}</p>
               </>
             ) : <p class="pending">{t('engine.booting')}</p>}
@@ -160,7 +160,7 @@ export function Jaimini({ chart }: { chart: ChartResult }): JSX.Element {
                 </select>
               </div>
             </div>
-            <table class="data" data-testid="argala-table">
+            <div class="table-wrap"><table class="data" data-testid="argala-table">
               <thead><tr><th scope="col">{t('jai.place')}</th><th scope="col">{t('jai.argalaBy')}</th><th scope="col">{t('jai.virodhaBy')}</th><th scope="col">{t('jai.outcome')}</th></tr></thead>
               <tbody>
                 {arg.map((a) => (
@@ -172,7 +172,7 @@ export function Jaimini({ chart }: { chart: ChartResult }): JSX.Element {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table></div>
           </div>
         </section>
         <section class="panel" aria-labelledby="h-drishti">

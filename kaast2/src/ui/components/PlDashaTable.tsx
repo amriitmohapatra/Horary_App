@@ -18,7 +18,7 @@ export function PlDashaTable({ parent, chartJd, zoneHours, showTimes }:
       <h3 class="pl-dasha-title">
         {parent.lords.map((l, i) => <span key={i}>{i ? '-' : ''}<span class={`pl pl-${l}`}>{PLANET_NAMES[l]}</span></span>)}
       </h3>
-      <table class="data">
+      <div class="table-wrap"><table class="data">
         <caption class="sr-only">{t('dasha.plTable')}: {parent.lords.join('-')}</caption>
         <thead><tr><th scope="col">{t('dasha.sub')}</th><th scope="col">{t('dasha.beginning')}</th><th scope="col">{t('dasha.ending')}</th></tr></thead>
         <tbody>
@@ -34,7 +34,7 @@ export function PlDashaTable({ parent, chartJd, zoneHours, showTimes }:
             );
           })}
         </tbody>
-      </table>
+      </table></div>
     </div>
   );
 }

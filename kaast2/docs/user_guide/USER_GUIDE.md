@@ -1,6 +1,6 @@
 # Astro-Amriit — User Guide
 
-*For version 0.3. Written for astrologers, not for computer people.*
+*For version 0.4. Written for astrologers, not for computer people.*
 
 Every screenshot in this guide uses one public example chart: **Amitabh
 Bachchan, 11 October 1942, 16:00, Allahabad (Prayagraj)**. You can cast the
@@ -47,7 +47,7 @@ calculating instrument. The judgement is yours.
 
 Astro-Amriit is **one file** that ends in `.html`. Its name starts with
 `Astro-Amriit` and includes a version number, for example
-`Astro-Amriit v0.3.html`.
+`Astro-Amriit v0.4.html`.
 
 1. Copy the file to your computer (for example to the Desktop).
 2. **Double-click** it. It opens in your web browser (Chrome, Edge, Firefox or
@@ -65,7 +65,7 @@ that you can type your own chart.
 ![The top of the app when it opens: the title bar with "ready", and the chart form](img/01_opening_form.png)
 
 At the very bottom of every page is a small line such as
-`Astro-Amriit v0.3.0 · single build …`. This is the version. Quote it if you
+`Astro-Amriit v0.4.0 · single build …`. This is the version. Quote it if you
 report a problem.
 
 ### The desktop installers (Windows and Mac)
@@ -92,10 +92,10 @@ Downloads folder."*
 |---|---|
 | **Name** | Who or what the chart is for. Optional. It appears in the centre of the Rasi chart and in file names. |
 | **Date** | The date of birth or of the question. Years 1800 to 2399. |
-| **Time** | Hours, minutes and seconds of the local clock. |
+| **Time** | Three boxes — **Hours**, **Minutes**, **Seconds** — on the 24-hour clock (4 pm is `16`). Typing two digits moves you to the next box, so on a phone you can simply type `160037` for 16:00:37. You may also type or paste a whole time such as `16:00:37` into **Hours**. (The phone's own time picker is not used, because on iPhone it has no seconds.) |
 | **Place** | Start typing; a list of places appears. Choosing one fills **Latitude**, **Longitude** and **Zone**. |
-| **Latitude** | Degrees, north positive (south is negative). Between −66.5 and 66.5. |
-| **Longitude** | Degrees, east positive (west is negative). |
+| **Latitude** | Decimal degrees (`21.7033`, south negative) **or** degrees, minutes and seconds (`21 42 12 N`, `21°42′12″N`). Between −66.5 and 66.5. |
+| **Longitude** | Decimal degrees (`84.0314`, west negative) **or** degrees, minutes and seconds (`84 01 53 E`). |
 | **Zone (hours east of UTC)** | The time zone of the clock time you typed. India is `5.5`. |
 | **Daylight saving** | Tick this if the clock was one hour ahead for summer time (or war time, see below). |
 | **Calculation** | The calculation profile: **Parashara's Light 9** (the default), **Parashara's Light 7**, or **Solar Fire / Kala Chakra**. |
@@ -697,6 +697,29 @@ change.
 | **Delta-T (TT − UT)** | *Swiss Ephemeris (modern)*, *Parashara's Light 7 table and curve*, *Solar Fire 9 curve* | The small correction between clock time and astronomical time. It moves the Moon by about half an arcsecond per second of Delta-T. Other planets are hardly affected. |
 | **Rahu and Ketu** | *True node*, *Mean node* | The position of Rahu and Ketu (and everything that depends on them). PL uses the true node unless changed in its options. |
 | **Dasha year** | 365.2421875 days (PL), 365.25 days (Kala Chakra), 360 days, 327.85 days | All dasha dates. See [The dasha year](#the-dasha-year-and-why-pls-36525-is-really-3652421875). |
+
+### Saved places
+
+Your own list of places with their coordinates and zone. They appear in the
+**Place** list when you cast a chart, alongside the built-in places.
+
+1. Type the **Place** name, its **Latitude** and **Longitude** (decimal, or
+   degrees-minutes-seconds such as `21 42 12 N` and `84 01 53 E`) and its
+   **Zone (hours east of UTC)**.
+2. Press **Add place**. It appears in the table below, with the coordinates
+   written out as degrees, minutes and seconds so you can check them.
+3. **Edit** puts a place back into the boxes; change it and press **Save
+   changes**. **Delete** asks *Delete …?* — press **Yes, delete** to remove it.
+4. **Export places** saves all your places to a file
+   (`astro-amriit-places.json`). **Import places…** reads such a file back;
+   places with the same name are replaced, others are added.
+
+Saved places are kept **in the browser on that device** (the phone and the
+computer each keep their own list). Use **Export places** on one and
+**Import places…** on the other to copy your list across, and keep the file
+as a backup. The **Save this place** button on the chart form adds to the
+same list. For Indian places, war time (1942–45) is applied to saved places
+too.
 
 The **Calculation** profile in the chart form chooses all of these at once
 for one chart. The Settings page changes one of them for all charts.

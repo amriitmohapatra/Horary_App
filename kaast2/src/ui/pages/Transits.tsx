@@ -16,6 +16,7 @@ import { findEvents, returns, sadeSati, stepJd, transitPositions, type EventKind
 import { EastIndianChart, type ChartEntry } from '../components/EastIndianChart';
 import { signRow } from '../chartEntries';
 import { Icon } from '../components/Icon';
+import { TimeFields } from '../components/TimeFields';
 import { t, type MessageKey } from '../i18n';
 import { civilDate, civilTime, dm, longDate, pad2 } from '../format';
 import { engine } from '../state/store';
@@ -36,6 +37,7 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
   const [unit, setUnit] = useState<StepUnit>('d');
   const [kinds, setKinds] = useState<Record<EventKind, boolean>>({ sign: true, nakshatra: false, pada: false, station: true });
   const [horizon, setHorizon] = useState<(typeof HORIZONS)[number]>(91);
+  const [timeDraft, setTimeDraft] = useState<string | null>(null);
 
   const pos = useMemo(() => (swe ? transitPositions(swe, chart.profile, jd) : null), [swe, chart.profile, jd]);
   const events = useMemo(() => {
@@ -92,8 +94,11 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
           <div class="field"><label for="tr-date">{t('form.date')}</label>
             <input id="tr-date" type="date" value={dateStr} onInput={(ev) => setLocal(ev.currentTarget.value, timeStr)} />
             <small class="hint">{longDate(local.y, local.m, local.d)}</small></div>
-          <div class="field"><label for="tr-time">{t('form.time')}</label>
-            <input id="tr-time" type="time" step={1} value={timeStr} onInput={(ev) => setLocal(dateStr, ev.currentTarget.value)} /></div>
+          <div class="field">
+            <TimeFields id="tr-time" legend={t('form.time')} value={timeDraft ?? timeStr} onChange={(v) => {
+              if (/^\d{2}:\d{2}:\d{2}$/.test(v)) { setTimeDraft(null); setLocal(dateStr, v); } else setTimeDraft(v);
+            }} />
+          </div>
           <div class="field"><label for="tr-zone">{t('tr.zone')}</label>
             <input id="tr-zone" inputMode="decimal" value={String(zone)} onInput={(ev) => { const v = Number(ev.currentTarget.value); if (Number.isFinite(v) && Math.abs(v) <= 14) setZone(v); }} /></div>
           <div class="field"><label for="tr-unit">{t('tr.step')}</label>

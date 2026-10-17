@@ -56,7 +56,7 @@ for (const vw of [1440, 390]) {
       if (await page.getByRole('button', { name: 'Edit chart' }).count()) await page.getByRole('button', { name: 'Edit chart' }).click();
       await page.getByLabel('Name').fill(c.name);
       await page.getByLabel('Date').fill(c.date);
-      await page.getByLabel('Time').fill(c.time);
+      await page.getByLabel('Hours', { exact: true }).fill(c.time);
       await page.getByLabel('Place').fill(c.place);
       await page.getByRole('button', { name: 'Cast chart' }).click();
       await page.getByRole('link', { name: 'Page 1' }).click();

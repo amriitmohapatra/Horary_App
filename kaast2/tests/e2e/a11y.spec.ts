@@ -14,7 +14,7 @@ for (const theme of ['light', 'dark', 'warm']) {
     await page.evaluate((t) => document.documentElement.setAttribute('data-theme', t), theme);
     await page.getByLabel('Name').fill('Amitabh Bachchan');
     await page.getByLabel('Date').fill('1942-10-11');
-    await page.getByLabel('Time').fill('16:00:00');
+    await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
     await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
     await page.getByRole('button', { name: 'Cast chart' }).click();
     const found: string[] = [];

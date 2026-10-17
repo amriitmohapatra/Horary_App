@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>କାଳ ଚକ୍ର v 1.6 (ଓଡ଼ିଆ) | KAAST — କରାର ଆଶ୍ରମ ଜ୍ୟୋତିଷ ସଫ୍ଟୱେର</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --ink:#26231e; --accent:#8a4b2d; --accent2:#3d5a80; --soft:#f6f1e7;
+          --line:#8a4b2d; --card:#fff; }
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; color: var(--ink);
+         background: var(--soft); margin: 0; }
+  header { background: var(--accent); color: #fff; padding: 18px 28px; }
+  header h1 { margin: 0; font-size: 1.45rem; font-weight: normal; letter-spacing: .5px; }
+  header .tag { opacity: .85; font-size: .85rem; }
+  header .liner { opacity: .75; font-size: .8rem; font-style: italic; margin-top: 2px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 22px; }
+  .card { background: var(--card); border-radius: 14px; padding: 20px 24px;
+          box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 20px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  label { display: block; font-size: .85rem; color: #6b665e; margin: 10px 0 3px; }
+  input[type=text], input[type=date], input[type=time], textarea {
+    width: 100%; padding: 9px 12px; border: 1px solid #d8cfc0; border-radius: 8px;
+    font-family: inherit; font-size: .95rem; background: #fffdf9; }
+  textarea { min-height: 170px; font-family: ui-monospace, Menlo, Consolas, monospace;
+             font-size: .8rem; white-space: pre; }
+  .btn { display: inline-block; background: var(--accent); color: #fff; border: 0;
+         padding: 11px 22px; border-radius: 9px; font-family: inherit;
+         font-size: 1rem; cursor: pointer; margin: 12px 8px 0 0; }
+  .btn.secondary { background: var(--accent2); }
+  .btn:disabled { opacity: .45; cursor: default; }
+  .drop { border: 2px dashed #c9b8a0; border-radius: 10px; padding: 12px;
+          text-align: center; color: #8b8478; font-size: .85rem; cursor: pointer; margin-top: 8px; }
+  .drop.hover { background: #fdf6ec; }
+  header .quote { margin-top: 10px; font-style: italic; opacity: .93;
+    max-width: 940px; line-height: 1.5; }
+  header .quote .qby { display: block; font-style: normal; font-size: .76rem;
+    opacity: .75; margin-top: 3px; }
+  .secbox { width: 74px !important; }
+  .timerow { display: flex; gap: 6px; align-items: center; }
+
+  .mini { font-size: .78rem; color: var(--accent2); cursor: pointer; text-decoration: underline; background: none; border: none; font-family: inherit; padding: 0; margin-top: 6px; }
+  .err { color: #c62828; } .warn { color: #b26a00; } .ok { color: #2e7d32; }
+  #results { display: none; }
+  h2 { font-size: 1.15rem; border-bottom: 2px solid var(--accent);
+       padding-bottom: 5px; margin: 4px 0 14px; font-weight: normal; }
+  .qbanner { font-size: 1.1rem; font-style: italic; margin-bottom: 4px; }
+  .meta { color: #6b665e; font-size: .88rem; margin-bottom: 14px; }
+  svg text { font-family: Georgia, serif; }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th, td { border: 1px solid #e4dccb; padding: 6px 10px; text-align: left; }
+  th { background: #f3ecdd; font-weight: normal; color: #5c5648; }
+  td.num { font-variant-numeric: tabular-nums; }
+  .powers { font-weight: bold; color: var(--accent2); }
+  details { margin: 8px 0; background: #faf6ee; border-radius: 8px; padding: 8px 14px; }
+  summary { cursor: pointer; font-size: .95rem; }
+  details .part { margin: 6px 0 2px; font-size: .85rem; color: #6b665e; }
+  details .terms { font-size: .85rem; margin-left: 14px; }
+  sup { font-size: .68em; }
+  /* lord highlighting: consistent across cusps and planets */
+  .sl-star { color: #1c7a4b; font-weight: bold; }
+  .pw-max { color: #b25000; background: #fff3dd; padding: 0 5px;
+            border-radius: 7px; font-weight: bold; }
+  .sl-sub  { color: #b02748; font-weight: bold; }
+
+  .final { font-size: 1.02rem; margin-top: 6px; }
+  /* fraction rendering (dad's paper notation) */
+  .frac { display: inline-block; text-align: center; vertical-align: middle;
+          margin: 6px 10px; line-height: 1.9; }
+  .frac .top { display: inline-block; padding: 2px 14px 10px;
+               border-bottom: 2px solid var(--ink); }
+  .frac .bot { display: inline-block; padding: 12px 14px 2px; }
+  .frac sup, .powers sup { line-height: 0; }
+  .grp { white-space: nowrap; padding: 0 4px; word-spacing: 7px; }
+  .gsep { color: var(--accent); padding: 0 14px; font-weight: bold; }
+  .powers { word-spacing: 7px; letter-spacing: .02em; }
+  .steplbl { display: inline-block; min-width: 168px; color: #6b665e;
+             font-size: .85rem; vertical-align: middle; }
+  .steprow { margin: 10px 0; }
+  .formula { color: #8b8478; font-size: .9rem; }
+  .planet-block { border-top: 1px solid #e4dccb; padding: 14px 0 8px; }
+  .planet-block:first-child { border-top: 0; }
+  .planet-h { font-size: 1.05rem; margin-bottom: 4px; }
+  .empty { color: #b9b1a1; }
+  footer { text-align: center; color: #9b937f; font-size: .8rem; padding: 18px; }
+  @media print {
+    header, #inputcard, .btn, footer, .noprint { display: none !important; }
+    body { background: #fff; } .card { box-shadow: none; padding: 6px; }
+    #results { display: block !important; }
+  }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>କାଳ ଚକ୍ର &nbsp;·&nbsp; କାଳ ଚକ୍ର <span style='font-size:.7em;opacity:.8'>v 1.6 · ଓଡ଼ିଆ</span></h1>
+  <div class="tag">KAAST — କରାର ଆଶ୍ରମ ଜ୍ୟୋତିଷ ସଫ୍ଟୱେର · ପ୍ରଶ୍ନ କୁଣ୍ଡଳୀ, ନକ୍ଷତ୍ର/ଉପ ସ୍ୱାମୀ, ଭାବ ସଂଖ୍ୟା ଓ ଶକ୍ତି ଗଣନା</div>
+  <div class="liner">ସ୍ୱାମୀ ଯୋଗେଶ୍ୱରାନନ୍ଦ ଗିରିଙ୍କ ଦ୍ୱାରା</div>
+  <div class="quote" id="quote"></div>
+</header>
+<div class="wrap">
+
+  <div class="card" id="inputcard">
+    <div class="grid2">
+      <div>
+        <label>ପ୍ରଶ୍ନ (ହୋରାରୀ)</label>
+        <input type="text" id="question" placeholder="ମୁଁ କଣ … ପାଇବି?">
+        <label>ପ୍ରଶ୍ନକର୍ତ୍ତା / ନାମ</label>
+        <input type="text" id="name" placeholder="ନାମ">
+        <div class="grid2">
+          <div><label>ତାରିଖ</label><input type="date" id="date"></div>
+          <div><label>ସମୟ</label><div class="timerow"><input type="time" id="time" step="1"><input type="number" class="secbox" id="sec" min="0" max="59" placeholder="ss" title="seconds (for iPhone/iPad, where the time picker has no seconds)"></div></div>
+        </div>
+        <label>ସ୍ଥାନ</label>
+        <input type="text" id="location" list="placelist" placeholder="ଲେଖନ୍ତୁ… ଯଥା Lapanga">
+        <datalist id="placelist"></datalist>
+        <div class="grid2">
+          <div><label>ଅକ୍ଷାଂଶ (+ଉତ୍ତର)</label><input type="number" id="lat" step="0.00001"></div>
+          <div><label>ଦ୍ରାଘିମା (+ପୂର୍ବ)</label><input type="number" id="lon" step="0.00001"></div>
+        </div>
+        <div class="grid2">
+          <div><label>UTC ଫରକ (ଘଣ୍ଟା)</label><input type="number" id="tz" step="0.25" value="8"></div>
+          <div><label>ଗଣନା ପଦ୍ଧତି</label>
+            <select id="castmode">
+              <option value="sf">ସୋଲାର ଫାୟାର ସମତୁଲ୍ୟ</option>
+              <option value="modern">ଆଧୁନିକ (ସର୍ବାଧିକ ସଠିକ)</option>
+            </select></div>
+        </div>
+        <button class="mini" id="saveplace" type="button">ଏହି ସ୍ଥାନ ଭବିଷ୍ୟତ ପାଇଁ ସାଇତି ରଖନ୍ତୁ</button>
+      </div>
+      <div>
+        <label>ମୂଳ ଜ୍ୟୋତିଷ ତଥ୍ୟ — ଐଚ୍ଛିକ। ଖାଲି ଛାଡ଼ିଲେ ଭିତରର ଗଣନା ଯନ୍ତ୍ର ବ୍ୟବହୃତ ହେବ; ନଚେତ୍ Solar Fire “CHART ANALYSIS REPORT” ଏଠାରେ ଲଗାନ୍ତୁ</label>
+        <textarea id="raw" placeholder="*** CHART ANALYSIS REPORT ***&#10;…&#10;HOUSE CUSPS (Topocentric)&#10; 1 20°Sc15'20''   4 18°Aq05'15''  …&#10;CHART POINTS&#10; Mon  02°Pi28'13''  …"></textarea>
+        <div class="drop" id="drop">…କିମ୍ବା ରପ୍ତାନି ହୋଇଥିବା .xlsx / .txt ଫାଇଲ ଏଠାରେ ପକାନ୍ତୁ</div>
+      </div>
+    </div>
+    <button class="btn" id="go" disabled>କୁଣ୍ଡଳୀ ଗଣନା କରନ୍ତୁ</button>
+    <span id="enginestatus" style="font-size:.85rem;color:#6b665e">ଗଣନା ଯନ୍ତ୍ର ଲୋଡ଼ ହେଉଛି…</span>
+    <span id="inputmsg" class="err"></span>
+  </div>
+
+  <div id="results">
+    <div class="card">
+      <div class="qbanner" id="r_question"></div>
+      <div class="meta" id="r_meta"></div>
+      <div id="chart_svg"></div>
+      <div id="r_warnings"></div>
+      <button class="btn noprint" id="dl">ଏକ୍ସେଲ ଫାଇଲ ଡାଉନଲୋଡ଼</button>
+      <button class="btn secondary noprint" onclick="window.print()">ଛାପନ୍ତୁ / PDF ସାଇତନ୍ତୁ</button>
+    </div>
+
+    <div class="card">
+      <h2>ଭାବ ସ୍ପୁଟ (କସ୍ପ)</h2>
+      <table id="t_cusps"></table>
+    </div>
+
+    <div class="card">
+      <h2>ଗ୍ରହ ସ୍ପୁଟ</h2>
+      <table id="t_points"></table>
+    </div>
+
+    <div class="card" id="dashacard" style="display:none">
+      <h2>ଦଶା କାଳ (ବିଂଶୋତ୍ତରୀ, ପରାଶର ପଦ୍ଧତି)</h2>
+      <div class="meta" id="d_chain"></div>
+      <div class="grid2">
+        <div><table id="t_prat"></table></div>
+        <div>
+          <div class="meta" style="margin-bottom:4px">ଆଗାମୀ ପ୍ରତ୍ୟନ୍ତର ଦଶା ପରିବର୍ତ୍ତନ — ଆଗାମୀ ୮ ମାସ</div>
+          <table id="t_next"></table>
+        </div>
+      </div>
+      <div style="height:14px"></div>
+      <div class="meta" style="margin-bottom:4px">ଆଗାମୀ ପ୍ରାଣ ଦଶା (ମହା-ଅନ୍ତର-ପ୍ରତ୍ୟନ୍ତର-ସୂକ୍ଷ୍ମ-ପ୍ରାଣ)</div>
+      <table id="t_prana"></table>
+    </div>
+
+    <div class="card" id="eventcard" style="display:none">
+      <h2>ଘଟଣା ଯାଞ୍ଚ — ଘଟଣା ସମୟର ପ୍ରାଣ ଦଶା (ଐଚ୍ଛିକ)</h2>
+      <label>ପ୍ରଶ୍ନ / ଘଟଣା ବିଷୟରେ ଟିପ୍ପଣୀ</label>
+      <textarea id="ev_notes" style="min-height:64px" placeholder="ଯଥା: ନିଯୁକ୍ତି ପତ୍ର ଏହି ଦିନ ଆସିଥିଲା…"></textarea>
+      <div class="timerow" style="margin-top:8px; flex-wrap:wrap">
+        <div><label>ଘଟଣା ତାରିଖ</label><input type="date" id="ev_date"></div>
+        <div><label>ଘଟଣା ସମୟ (ସ୍ଥାନୀୟ)</label>
+          <div class="timerow"><input type="time" id="ev_time" step="1">
+          <input type="number" class="secbox" id="ev_sec" min="0" max="59" placeholder="ss" title="seconds (for iPhone/iPad, where the time picker has no seconds)"></div>
+        </div>
+        <div style="align-self:flex-end"><button class="btn secondary" id="ev_show" type="button" style="margin-top:0">ଦଶା ଦେଖାନ୍ତୁ (±୨ ଦିନ)</button></div>
+      </div>
+      <div class="meta" id="ev_meta" style="margin-top:10px"></div>
+      <table id="ev_table"></table>
+    </div>
+
+    <div class="card">
+      <h2>ଶକ୍ତି ଗଣନା — କ୍ରମାନୁସାରେ</h2>
+      <div class="formula" style="margin-bottom:10px">
+        ସାଧାରଣ ରୂପ:&nbsp;
+        <span class="frac">
+          <span class="top">(Planet)<sup>2</sup>(own)<sup>1</sup><span class="gsep">−</span>(Star&nbsp;lord)<sup>4</sup>(own)<sup>3</sup><span class="gsep">−</span>(Sub&nbsp;lord)<sup>6</sup>(own)<sup>5</sup></span><br>
+          <span class="bot">(Star)<sup>7</sup>(Sub)<sup>10</sup><span class="gsep">−</span>(Star)<sup>8</sup>(Sub)<sup>11</sup><span class="gsep">−</span>(Star)<sup>9</sup>(Sub)<sup>12</sup></span>
+        </span>
+        &nbsp; — ଲବ: ଗ୍ରହ, ତାର ନକ୍ଷତ୍ର ସ୍ୱାମୀ ଓ ଉପ ସ୍ୱାମୀ; ହର: ଯେଉଁ ଭାବରେ ସେମାନେ ନକ୍ଷତ୍ର/ଉପ ସ୍ୱାମୀ।
+      </div>
+      <div id="stepwise"></div>
+    </div>
+
+    <div class="card">
+      <h2>ପ୍ରତ୍ୟେକ ପଦର ବିବରଣୀ</h2>
+      <div id="powersteps"></div>
+    </div>
+
+    <div class="card" id="dehacard" style="display:none">
+      <h2>ଦେହ ଦଶା — ଷଷ୍ଠ ସ୍ତର (ମହା-ଅନ୍ତର-ପ୍ରତ୍ୟନ୍ତର-ସୂକ୍ଷ୍ମ-ପ୍ରାଣ-ଦେହ)</h2>
+      <div class="meta" id="dh_chain"></div>
+      <div class="meta">ଉପରର “ଆଗାମୀ ପ୍ରାଣ ଦଶା” ସାରଣୀର ସମାନ ଅବଧି ପାଇଁ ଦେହ ଦଶା</div>
+      <table id="t_deha"></table>
+      <div id="dh_ev_wrap" style="display:none">
+        <div style="height:12px"></div>
+        <div class="meta" id="dh_ev_meta"></div>
+        <table id="t_deha_ev"></table>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<footer>ସମସ୍ତ ଗଣନା ଏହି କମ୍ପ୍ୟୁଟରରେ ହୁଏ — କିଛି ବି ଅପଲୋଡ଼ ହୁଏ ନାହିଁ। ହସ୍ତଗଣିତ କୁଣ୍ଡଳୀ ସହ ଯାଞ୍ଚିତ।</footer>
+
+<!--LIBS-->
+
+<script>
+"use strict";
+
+/* Odia display maps (v1.5 ଓଡ଼ିଆ) */
+const OD_PLANET = { Mo:"ଚନ୍ଦ୍ର", Su:"ରବି", Me:"ବୁଧ", Ve:"ଶୁକ୍ର", Ma:"ମଙ୍ଗଳ",
+                    Ju:"ବୃହସ୍ପତି", Sa:"ଶନି", Ra:"ରାହୁ", Ke:"କେତୁ" };
+const OD_LEVELS = ["ମହାଦଶା","ଅନ୍ତର୍ଦଶା","ପ୍ରତ୍ୟନ୍ତର ଦଶା","ସୂକ୍ଷ୍ମ ଦଶା","ପ୍ରାଣ ଦଶା","ଦେହ ଦଶା"];
+const OD_PLANET_SHORT = { Su:"ର", Mo:"ଚ", Ma:"ମ", Ju:"ବୃ", Me:"ବୁ",
+                          Ve:"ଶୁ", Sa:"ଶ", Ra:"ରା", Ke:"କେ" };
+const OD_SIGN_FULL = { Ar:"ମେଷ", Ta:"ବୃଷ", Ge:"ମିଥୁନ", Cn:"କର୍କଟ", Le:"ସିଂହ",
+                       Vi:"କନ୍ୟା", Li:"ତୁଳା", Sc:"ବିଛା", Sg:"ଧନୁ", Cp:"ମକର",
+                       Aq:"କୁମ୍ଭ", Pi:"ମୀନ" };
+const OD_DIGITS = { "0":"୦","1":"୧","2":"୨","3":"୩","4":"୪","5":"୫","6":"୬","7":"୭","8":"୮","9":"୯" };
+const RE_PLANET = /\b(Su|Mo|Ma|Me|Ju|Ve|Sa|Ra|Ke)\b/g;
+const RE_SIGN = /\b(Ar|Ta|Ge|Cn|Le|Vi|Li|Sc|Sg|Cp|Aq|Pi)\b/g;
+const RE_SIGN_DEG = /°(Ar|Ta|Ge|Cn|Le|Vi|Li|Sc|Sg|Cp|Aq|Pi)/g;   // sign inside a longitude
+/* convert every text node under `root`: lord codes -> Odia short forms,
+ * sign codes -> full Odia sign names, digits -> Odia numerals.
+ * Inputs/textareas are untouched (attributes, not text nodes). */
+function odiaify(root) {
+  if (!root) return;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let n;
+  while ((n = walker.nextNode())) {
+    let t = n.nodeValue;
+    if (!t || !/[0-9]|[A-Z][a-z]/.test(t)) continue;
+    t = t.replace(RE_SIGN_DEG, (m, g) => "°" + OD_SIGN_FULL[g])
+         .replace(RE_SIGN, m => OD_SIGN_FULL[m])
+         .replace(RE_PLANET, m => OD_PLANET_SHORT[m])
+         .replace(/[0-9]/g, d => OD_DIGITS[d]);
+    if (t !== n.nodeValue) n.nodeValue = t;
+  }
+}
+
+
+/* --- random banner quote (see quotes.js to add more) --- */
+(function () {
+  if (typeof KAAST_QUOTES === "undefined" || !KAAST_QUOTES.length) return;
+  const q = KAAST_QUOTES[Math.floor(Math.random() * KAAST_QUOTES.length)];
+  const el = document.getElementById("quote");
+  if (!el) return;
+  const size = q.text.length > 220 ? ".85rem" : q.text.length > 120 ? ".92rem" : "1rem";
+  el.style.fontSize = size;
+  el.innerHTML = "\u201C" + q.text.replace(/&/g, "&amp;").replace(/</g, "&lt;") + "\u201D" +
+    (q.by ? '<span class="qby">— ' + q.by + "</span>" : "");
+})();
+
+/* seconds helper: iOS time pickers omit seconds — merge with the ss box */
+function timeParts(timeVal, secEl) {
+  const tp = (timeVal || "").split(":").map(Number);
+  const box = parseInt(secEl && secEl.value, 10);
+  const ss = (tp.length >= 3 && !isNaN(tp[2])) ? tp[2]
+           : (isNaN(box) ? 0 : Math.min(59, Math.max(0, box)));
+  return [tp[0], tp[1], ss];
+}
+
+/* v1.6: the displayed time always carries seconds. On iPhone/iPad the time
+   picker gives only hh:mm and the seconds come from the separate box, so the
+   display is built from the same parts the calculation uses. */
+function fmtTime(tp) {
+  return tp.slice(0, 3).map(v => String(v || 0).padStart(2, "0")).join(":");
+}
+function fmtEvMs(ms) {
+  const d = new Date(ms);
+  return KPDasha.fmtDateTime(ms) + ":" + String(d.getUTCSeconds()).padStart(2, "0");
+}
+
+
+/* colored lord chains: star lord green, sub lord crimson, deeper subs plain */
+function slChainHtml(lon) {
+  return KP.subLords(lon, 5).map((l, i) =>
+    i === 0 ? `<span class="sl-star">${l}</span>` :
+    i === 1 ? `<span class="sl-sub">${l}</span>` : l).join("/");
+}
+
+/* ---------- input handling ---------- */
+const $ = id => document.getElementById(id);
+let currentChart = null, currentMeta = null;
+
+$("drop").addEventListener("click", () => {
+  const inp = document.createElement("input");
+  inp.type = "file"; inp.accept = ".xlsx,.txt";
+  inp.onchange = () => inp.files[0] && loadFile(inp.files[0]);
+  inp.click();
+});
+$("drop").addEventListener("dragover", e => { e.preventDefault(); $("drop").classList.add("hover"); });
+$("drop").addEventListener("dragleave", () => $("drop").classList.remove("hover"));
+$("drop").addEventListener("drop", e => {
+  e.preventDefault(); $("drop").classList.remove("hover");
+  if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]);
+});
+
+async function loadFile(f) {
+  try {
+    if (/\.xlsx$/i.test(f.name)) {
+      const wb = await XlsxSurgical.openWorkbook(await f.arrayBuffer());
+      let text = "";
+      for (const sheet of wb.sheets) {
+        const grid = await XlsxSurgical.readGrid(wb, sheet.path);
+        const rows = [];
+        for (let r = 1; r <= grid.maxRow; r++) {
+          const row = [];
+          for (let c = 1; c <= grid.maxCol; c++) row.push(grid.get(r, c));
+          rows.push(row);
+        }
+        text += KP.gridToText(rows) + "\n";
+      }
+      $("raw").value = text;
+    } else {
+      $("raw").value = await f.text();
+    }
+    $("inputmsg").textContent = "";
+  } catch (e) { $("inputmsg").textContent = "Could not read file: " + e.message; }
+}
+
+/* try to prefill date/time from the SF header (ET = … line) */
+$("raw").addEventListener("input", () => {
+  const m = /ET\s*=\s*(\d{1,2}):(\d{2}):?(\d{2})?\s*([ap]m)\s+([A-Za-z]{3})\s+(\d{1,2})\s+(\d{4})/.exec($("raw").value);
+  if (m && !$("date").value) {
+    const months = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
+    const mo = months[m[5]];
+    if (mo) $("date").value = `${m[7]}-${String(mo).padStart(2,"0")}-${String(+m[6]).padStart(2,"0")}`;
+    let h = +m[1] % 12; if (m[4] === "pm") h += 12;
+    if (!$("time").value) $("time").value = `${String(h).padStart(2,"0")}:${m[2]}:${m[3] || "00"}`;
+  }
+});
+
+/* place gazetteer wiring */
+function refreshPlaces() {
+  $("placelist").innerHTML = KPPlaces.all().map(p => `<option value="${p.name}">`).join("");
+}
+refreshPlaces();
+$("location").addEventListener("change", () => {
+  const p = KPPlaces.find($("location").value);
+  if (p) { $("lat").value = p.lat; $("lon").value = p.lon; $("tz").value = p.tz; }
+});
+$("saveplace").addEventListener("click", () => {
+  if (KPPlaces.save($("location").value, +$("lat").value, +$("lon").value, +$("tz").value)) {
+    refreshPlaces();
+    $("inputmsg").textContent = "";
+    $("enginestatus").textContent = "ସ୍ଥାନ ସାଇତା ହେଲା।";
+  }
+});
+
+/* boot the ephemeris engine */
+(async () => {
+  try {
+    const wasmBinary = Uint8Array.from(atob(WASM_B64), c => c.charCodeAt(0)).buffer;
+    const dataBuffer = Uint8Array.from(atob(EPHE_B64), c => c.charCodeAt(0)).buffer;
+    await KPEph.init({ wasmBinary, dataBuffer });
+    $("go").disabled = false;
+    $("enginestatus").textContent = "ଗଣନା ଯନ୍ତ୍ର ପ୍ରସ୍ତୁତ।";
+  } catch (e) {
+    $("go").disabled = false;
+    $("enginestatus").textContent = "engine unavailable (" + e.message + ") — paste mode still works.";
+  }
+})();
+
+$("go").addEventListener("click", () => {
+  $("inputmsg").textContent = "";
+  try {
+    let chart, castInfo = null;
+    if ($("raw").value.trim()) {                     // paste mode
+      chart = KP.parseSfText($("raw").value);
+    } else {                                          // cast mode (built-in)
+      const [y, m, d] = $("date").value.split("-").map(Number);
+      const tp = timeParts($("time").value, $("sec"));
+      if (!y || isNaN(tp[0]) || isNaN(tp[1])) throw new Error("ତାରିଖ ଓ ସମୟ ଦିଅନ୍ତୁ (କିମ୍ବା ରିପୋର୍ଟ ଲଗାନ୍ତୁ)");
+      const lat = +$("lat").value, lon = +$("lon").value;
+      if (!isFinite(lat) || !isFinite(lon) || $("lat").value === "" || $("lon").value === "")
+        throw new Error("ଅକ୍ଷାଂଶ/ଦ୍ରାଘିମା ଦିଅନ୍ତୁ, କିମ୍ବା ସାଇତା ସ୍ଥାନ ବାଛନ୍ତୁ");
+      const res = KPEph.castChart({ y, m, d, hh: tp[0], mi: tp[1], ss: tp[2] || 0,
+                                    tz: +$("tz").value, lat, lon, mode: $("castmode").value });
+      chart = new KP.Chart(res.cusps, res.planets);
+      castInfo = { lat, lon, deltat: res.deltat, mode: res.mode };
+    }
+    chart.signToHouses();
+    currentChart = chart;
+    currentMeta = {
+      question: $("question").value, name: $("name").value,
+      date: $("date").value ? new Date($("date").value + "T00:00:00")
+              .toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" }) : "",
+      time: fmtTime(timeParts($("time").value, $("sec"))), location: $("location").value,
+      coords: castInfo ? KPPlaces.fmtCoord(castInfo.lat, castInfo.lon) : "",
+      engine: castInfo ? `KAAST ephemeris (${castInfo.mode} mode, ΔT ${castInfo.deltat.toFixed(1)}s)` : "Solar Fire report",
+    };
+    render(chart, currentMeta);
+    renderDasha(chart);
+    renderDehaApp(chart);
+    odiaify(document.getElementById("results"));
+    $("results").style.display = "block";
+    document.querySelector("#results").scrollIntoView({ behavior: "smooth" });
+  } catch (e) {
+    $("inputmsg").textContent = e.message;
+  }
+});
+
+/* ---------- rendering ---------- */
+const SIGN_NAME = { Ar:"ମେଷ", Ta:"ବୃଷ", Ge:"ମିଥୁନ", Cn:"କର୍କଟ", Le:"ସିଂହ",
+  Vi:"କନ୍ୟା", Li:"ତୁଳା", Sc:"ବିଛା", Sg:"ଧନୁ", Cp:"ମକର",
+  Aq:"କୁମ୍ଭ", Pi:"ମୀନ" };
+
+function render(chart, meta) {
+  $("r_question").textContent = meta.question || "";
+  $("r_meta").textContent = [meta.name, meta.date, meta.time, meta.location,
+    meta.coords, meta.engine].filter(Boolean).join("  ·  ");
+  $("chart_svg").innerHTML = chartSvg(chart, meta);
+
+  $("r_warnings").innerHTML = chart.warnings
+    .map(w => `<div class="warn">Note: ${w}</div>`).join("");
+
+  let h = "<tr><th>ଭାବ</th><th>ସ୍ପୁଟ</th><th>ନକ୍ଷତ୍ର / ଉପ / ଉପ² / ଉପ³ / ଉପ⁴ ସ୍ୱାମୀ</th></tr>";
+  for (let c = 1; c <= 12; c++)
+    h += `<tr><td class="num">${c}</td><td>${KP.formatLongitude(chart.cusps[c])}</td>` +
+         `<td>${slChainHtml(chart.cusps[c])}</td></tr>`;
+  $("t_cusps").innerHTML = h;
+
+  h = "<tr><th>ଗ୍ରହ</th><th>ସ୍ପୁଟ</th><th>ନକ୍ଷତ୍ର / ଉପ / ଉପ² / ଉପ³ / ଉପ⁴ ସ୍ୱାମୀ</th><th>ଭାବ</th>" +
+      "<th>ଭାବ ସଂଖ୍ୟା</th><th>ଶକ୍ତି</th></tr>";
+  for (const p of KP.PLANET_ORDER) {
+    const lon = chart.planets[p];
+    h += `<tr><td>${OD_PLANET[p]}</td><td>${KP.formatLongitude(lon)}</td>` +
+         `<td>${slChainHtml(lon)}</td><td class="num">${chart.houseOf(lon)}</td>` +
+         `<td class="num">${chart.numbersString(p)}</td>` +
+         `<td class="powers">${powersHtml(chart.powersFor(p))}</td></tr>`;
+  }
+  $("t_points").innerHTML = h;
+
+  $("stepwise").innerHTML = KP.PLANET_ORDER.map(p => stepwiseHtml(chart, p)).join("");
+
+  let s = "";
+  for (const p of KP.PLANET_ORDER) {
+    const t = chart.powerTerms(p);
+    s += `<details><summary><b>${OD_PLANET[p]}</b> — ନକ୍ଷତ୍ର ${t.star}, ଉପ ${t.sub}` +
+         ` &nbsp; → &nbsp; <span class="powers">${powersHtml(chart.powersFor(p))}</span></summary>`;
+    for (const side of ["numerator", "denominator"]) {
+      s += `<div class="part"><b>${side === "numerator" ? "ଲବ" : "ହର"}</b></div>`;
+      for (const [part, terms] of Object.entries(t[side])) {
+        const txt = terms.map(([b, pw, why]) => `${b}<sup>${pw}</sup> <span style="color:#9b937f">(${why})</span>`).join(", ");
+        s += `<div class="terms">${part}: ${txt || "—"}</div>`;
+      }
+    }
+    s += `<div class="final">ମିଳିତ ଫଳ: <span class="powers">${powersHtml(chart.powersFor(p))}</span></div></details>`;
+  }
+  $("powersteps").innerHTML = s;
+}
+
+function renderDasha(chart) {
+  const card = $("dashacard");
+  if (!$("date").value || !$("time").value) { card.style.display = "none"; return; }
+  const [y, m, d] = $("date").value.split("-").map(Number);
+  const tp = timeParts($("time").value, $("sec"));
+  const ms = KPDasha.momentMs(y, m, d, tp[0], tp[1], tp[2]);
+  const moon = chart.planets.Mo;
+  const chain = KPDasha.currentChain(moon, ms, 5);
+  $("d_chain").innerHTML = "ବର୍ତ୍ତମାନ ଚାଲିଛି: <b>" +
+    chain.map(p => p.lords[p.lords.length - 1]).join("-") + "</b> &nbsp;(" +
+    chain.map((p, i) => `${OD_LEVELS[i]} ${p.lords[p.lords.length - 1]}`).join(" · ") + ")";
+  const antar = chain[1];
+  let h = `<tr><th colspan="3">${antar.lords.join("-")} — pratyantar periods</th></tr>` +
+          "<tr><th>ପ୍ରତ୍ୟନ୍ତର</th><th>ଆରମ୍ଭ</th><th>ଶେଷ</th></tr>";
+  for (const p of KPDasha.subperiods(antar)) {
+    const cur = p.start <= ms && ms < p.end;
+    h += `<tr${cur ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${p.lords[2]}</td><td>${KPDasha.fmtDate(p.start)}</td><td>${KPDasha.fmtDate(p.end)}</td></tr>`;
+  }
+  $("t_prat").innerHTML = h;
+  h = "<tr><th>ଦଶା କ୍ରମ</th><th>ଠାରୁ</th><th>ପର୍ଯ୍ୟନ୍ତ</th></tr>";
+  for (const u of KPDasha.upcomingPratyantarsHorizon(moon, ms, 244))
+    h += `<tr><td>${u.chain}</td><td>${KPDasha.fmtDate(u.start)}</td><td>${KPDasha.fmtDate(u.end)}</td></tr>`;
+  $("t_next").innerHTML = h;
+  h = "<tr><th>ଦଶା କ୍ରମ</th><th>ଠାରୁ</th><th>ପର୍ଯ୍ୟନ୍ତ</th></tr>";
+  KPDasha.upcomingPranas(moon, ms, 12).forEach((u, i) => {
+    h += `<tr${i === 0 ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${u.chain}</td><td>${KPDasha.fmtDateTime(u.start)}</td><td>${KPDasha.fmtDateTime(u.end)}</td></tr>`;
+  });
+  $("t_prana").innerHTML = h;
+  card.style.display = "block";
+  window.__evCtx = { moon, chartMs: ms };
+  $("eventcard").style.display = "block";
+}
+
+function powersHtml(p) {
+  const max = Math.max(...Object.values(p));
+  return Object.keys(p).map(b =>
+    p[b] === max
+      ? `<span class="pw-max">${b}<sup>${p[b]}</sup></span>`
+      : `${b}<sup>${p[b]}</sup>`).join(" ");
+}
+
+/* dad's-notation step-by-step block for one planet */
+function stepwiseHtml(chart, p) {
+  const t = chart.powerTerms(p);
+  const [numTot, denTot] = chart.sideTotals(p);
+  const grp = terms => terms.length
+      ? `<span class="grp">${terms.map(([b, pw]) => `${b}<sup>${pw}</sup>`).join(" ")}</span>`
+      : `<span class="grp empty">—</span>`;
+  const side = obj => Object.values(obj).map(grp)
+      .join(`<span class="gsep">−</span>`);
+  const tot = o => Object.keys(o).length
+      ? Object.keys(o).map(b => `${b}<sup>${o[b]}</sup>`).join(" ") : "—";
+
+  let s = `<div class="planet-block">`;
+  s += `<div class="planet-h"><b>${OD_PLANET[p]}</b> ` +
+       `(${p}, ${t.star}, ${t.sub}) — Planet ${p}, Star lord ${t.star}, Sub lord ${t.sub}</div>`;
+  s += `<div class="steprow"><span class="steplbl">୧. ଭାବ ସଂଖ୍ୟା ବସାନ୍ତୁ</span>` +
+       `<span class="frac"><span class="top">${side(t.numerator)}</span><br>` +
+       `<span class="bot">${side(t.denominator)}</span></span></div>`;
+  s += `<div class="steprow"><span class="steplbl">୨. ଲବ ଏକତ୍ର କରନ୍ତୁ</span> ` +
+       `<span class="powers">${tot(numTot)}</span></div>`;
+  s += `<div class="steprow"><span class="steplbl">୩. ହର ଏକତ୍ର କରନ୍ତୁ</span> ` +
+       `<span class="powers">${tot(denTot)}</span></div>`;
+  s += `<div class="steprow"><span class="steplbl">୪. ମିଶାଇ ସଜାନ୍ତୁ</span> ` +
+       `<span class="powers" style="font-size:1.08rem">${powersHtml(chart.powersFor(p))}</span></div>`;
+  return s + `</div>`;
+}
+
+/* ---------- East Indian chart (SVG) ---------- */
+function svgSl(lon) {
+  const [st, su] = KP.subLords(lon, 2);
+  return `<tspan fill="#1c7a4b" font-weight="bold">${st}</tspan>/<tspan fill="#b02748" font-weight="bold">${su}</tspan>`;
+}
+
+function chartSvg(chart, meta) {
+  const W = 1020, H = 780, x = [10, 340, 680, 1010], y = [10, 265, 520, 775];
+  // ---- geometry-aware regions: every text row computes its safe x from
+  // the corner diagonal at that row's height, so nothing crosses a line.
+  const BH = y[1] - y[0];                             // corner box height
+  const xdTL = yy => x[0] + (x[1]-x[0]) * (yy - y[0]) / BH;  // TL diag ↘
+  const xdTR = yy => x[3] - (x[3]-x[2]) * (yy - y[0]) / BH;  // TR diag ↙
+  const xdBL = yy => x[1] - (x[1]-x[0]) * (yy - y[2]) / BH;  // BL diag ↙
+  const xdBR = yy => x[2] + (x[3]-x[2]) * (yy - y[2]) / BH;  // BR diag ↘
+  const PAD = 12;
+  // per sign: startY + row geometry fn(yy) -> {x, anchor, maxW}
+  const REGION = {
+    Ta: { y0: y[0]+22,  row: yy => ({ x: xdTL(yy)+PAD, a: "start", w: x[1]-8-(xdTL(yy)+PAD) }) },
+    Ge: { y0: y[0]+140, row: yy => ({ x: x[0]+10,      a: "start", w: xdTL(yy)-PAD-(x[0]+10) }) },
+    Pi: { y0: y[0]+22,  row: yy => ({ x: x[2]+12,      a: "start", w: xdTR(yy)-PAD-(x[2]+12) }) },
+    Aq: { y0: y[0]+150, row: yy => ({ x: x[3]-10,      a: "end",   w: x[3]-10-(xdTR(yy)+PAD) }) },
+    Le: { y0: y[2]+24,  row: yy => ({ x: x[0]+10,      a: "start", w: xdBL(yy)-PAD-(x[0]+10) }) },
+    Vi: { y0: y[2]+170, row: yy => ({ x: xdBL(yy)+PAD, a: "start", w: x[1]-8-(xdBL(yy)+PAD) }) },
+    Sg: { y0: y[2]+24,  row: yy => ({ x: x[3]-10,      a: "end",   w: x[3]-10-(xdBR(yy)+PAD) }) },
+    Sc: { y0: y[2]+150, row: yy => ({ x: x[2]+10,      a: "start", w: xdBR(yy)-PAD-(x[2]+10) }) },
+    Ar: { y0: y[0]+22,  row: yy => ({ x: x[1]+12,      a: "start", w: x[2]-x[1]-24 }) },
+    Li: { y0: y[2]+24,  row: yy => ({ x: x[1]+12,      a: "start", w: x[2]-x[1]-24 }) },
+    Cn: { y0: y[1]+26,  row: yy => ({ x: x[0]+10,      a: "start", w: x[1]-x[0]-22 }) },
+    Cp: { y0: y[1]+26,  row: yy => ({ x: x[2]+12,      a: "start", w: x[3]-x[2]-24 }) },
+  };
+  const F = 12.5;
+  let g = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;background:#fffdf8;border-radius:10px">`;
+  const ln = (a, b, c, d) => `<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="var(--line)" stroke-width="1.6"/>`;
+  g += `<rect x="${x[0]}" y="${y[0]}" width="${x[3]-x[0]}" height="${y[3]-y[0]}" fill="none" stroke="var(--line)" stroke-width="2"/>`;
+  g += ln(x[1], y[0], x[1], y[3]) + ln(x[2], y[0], x[2], y[3]);
+  g += ln(x[0], y[1], x[3], y[1]) + ln(x[0], y[2], x[3], y[2]);
+  g += ln(x[0], y[0], x[1], y[1]) + ln(x[3], y[0], x[2], y[1]);
+  g += ln(x[0], y[3], x[1], y[2]) + ln(x[3], y[3], x[2], y[2]);
+  // centre
+  const cx = (x[1] + x[2]) / 2;
+  const cy0 = (y[1]+y[2])/2 - 36;
+  const centerLines = [
+    [esc(meta.name || ""), 15, "italic"],
+    [esc(meta.date || ""), 14, ""],
+    [esc(meta.time || ""), 14, ""],
+    [esc(meta.location || ""), 14, ""],
+    [esc(meta.coords || ""), 12.5, ""],
+  ].filter(l => l[0]);
+  centerLines.forEach((l, i) => {
+    g += `<text x="${cx}" y="${cy0 + i * 21}" text-anchor="middle" font-size="${l[1]}"${l[2] ? ` font-style="${l[2]}"` : ""}>${l[0]}</text>`;
+  });
+
+  for (const sign of KP.SIGNS) {
+    const reg = REGION[sign];
+    const entries = [`<tspan font-weight="bold" fill="#8a4b2d">${SIGN_NAME[sign]}</tspan>`];
+    for (let h = 1; h <= 12; h++)
+      if (KP.signOf(chart.cusps[h]) === sign)
+        entries.push(`${h} ${KP.formatLongitude(chart.cusps[h])} ${svgSl(chart.cusps[h])}`);
+    for (const p of KP.PLANET_ORDER)
+      if (KP.signOf(chart.planets[p]) === sign) {
+        const lon = chart.planets[p];
+        entries.push(`<tspan font-weight="bold">${OD_PLANET[p]}</tspan> ${KP.formatLongitude(lon)} ${svgSl(lon)}-${chart.houseOf(lon)}`);
+      }
+    // two-pass adaptive layout: pass 1 estimates the font from each row's
+    // OWN width allowance at its provisional height; pass 2 places rows.
+    const plainLen = t => t.replace(/<[^>]+>/g, "").length;
+    let f = F;
+    for (let pass = 0; pass < 2; pass++) {
+      const lh0 = f + 2.8;
+      let fNew = F;
+      entries.forEach((e, i) => {
+        const r = reg.row(reg.y0 + i * lh0);
+        const need = 0.585 * Math.max(plainLen(e), 8);
+        fNew = Math.min(fNew, Math.max(r.w, 40) / need);
+      });
+      f = Math.max(7.8, Math.min(F, fNew));
+    }
+    const lh = f + 2.8;
+    entries.forEach((e, i) => {
+      const yy = reg.y0 + i * lh;
+      const r = reg.row(yy);
+      g += `<text x="${r.x}" y="${yy}" text-anchor="${r.a}" font-size="${f.toFixed(1)}">${e}</text>`;
+    });
+  }
+  return g + "</svg>";
+}
+function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+/* ---------- Excel download ---------- */
+$("dl").addEventListener("click", async () => {
+  if (!currentChart) return;
+  const bytes = Uint8Array.from(atob(TEMPLATE_B64), ch => ch.charCodeAt(0));
+  const wb = await XlsxSurgical.openWorkbook(bytes.buffer);
+  const sheetPath = wb.sheets[0].path;
+  const grid = await XlsxSurgical.readGrid(wb, sheetPath);
+  const updates = KP.builderUpdates(currentChart, currentMeta);
+  XlsxSurgical.applyUpdates(grid.xmlDoc, updates);
+  await XlsxSurgical.saveSheet(wb, sheetPath, grid.xmlDoc);
+  const out = await XlsxSurgical.toArrayBuffer(wb);
+  const blob = new Blob([out], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  const base = (currentMeta.question || currentMeta.name || "horary").slice(0, 40)
+    .replace(/[^\w ]+/g, "").trim().replace(/ +/g, "_") || "horary";
+  a.download = base + "_horary.xlsx";
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+/* --- event check: prana periods ±2 days around a user-noted event.
+       Timeline is anchored at the HORARY CHART moment (never at the event). --- */
+$("ev_show").addEventListener("click", () => {
+  const info = window.__evCtx;
+  if (!info) { $("ev_meta").textContent = "ପ୍ରଥମେ କୁଣ୍ଡଳୀ ଗଣନା କରନ୍ତୁ।"; return; }
+  if (!$("ev_date").value || !$("ev_time").value) {
+    $("ev_meta").textContent = "ଘଟଣାର ତାରିଖ ଓ ସମୟ ଦିଅନ୍ତୁ।"; return; }
+  const [y, m, d] = $("ev_date").value.split("-").map(Number);
+  const [hh, mi, ss] = timeParts($("ev_time").value, $("ev_sec"));
+  const evMs = KPDasha.momentMs(y, m, d, hh, mi, ss);
+  const rows = KPDasha.pranasInWindow(info.moon, info.chartMs,
+                                      evMs - 2 * 86400000, evMs + 2 * 86400000);
+  const notes = ($("ev_notes").value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const evChain = rows.find(r => r.start <= evMs && evMs < r.end);
+  $("ev_meta").innerHTML =
+    (notes ? "<i>" + notes + "</i><br>" : "") +
+    "ଘଟଣା: <b>" + fmtEvMs(evMs) + "</b> — ଚାଲୁଥିବା ପ୍ରାଣ ଦଶା: <b>" +
+    (evChain ? evChain.chain : "—") + "</b> (ସମୟରେଖା କୁଣ୍ଡଳୀ ମୁହୂର୍ତ୍ତରେ ସ୍ଥିର)";
+  let h = "<tr><th>ଦଶା କ୍ରମ (ମହା-ଅନ୍ତର-ପ୍ରତ୍ୟନ୍ତର-ସୂକ୍ଷ୍ମ-ପ୍ରାଣ)</th><th>ଠାରୁ</th><th>ପର୍ଯ୍ୟନ୍ତ</th></tr>";
+  for (const r of rows) {
+    const cur = r.start <= evMs && evMs < r.end;
+    h += `<tr${cur ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${r.chain}</td><td>${KPDasha.fmtDateTime(r.start)}</td><td>${KPDasha.fmtDateTime(r.end)}</td></tr>`;
+  }
+  $("ev_table").innerHTML = h;
+});
+
+function renderDehaApp(chart) {
+  if (!$("date").value || !$("time").value) return;
+  const [y, m, d] = $("date").value.split("-").map(Number);
+  const tp = timeParts($("time").value, $("sec"));
+  renderDeha(chart.planets.Mo, KPDasha.momentMs(y, m, d, tp[0], tp[1], tp[2]));
+}
+
+/* --- v1.5: Deha dasha (sixth tier) — end-of-page section.
+       Same windows as the prana displays; timeline anchored at the chart
+       moment; existing cards untouched. --- */
+function renderDeha(moon, ms) {
+  const pr = KPDasha.upcomingPranas(moon, ms, 12);
+  if (!pr.length) return;
+  const winEnd = pr[pr.length - 1].end;
+  const chain = KPDasha.currentChain(moon, ms, 6);
+  $("dh_chain").innerHTML = "ବର୍ତ୍ତମାନ ଚାଲିଛି: <b>" +
+    chain.map(p => p.lords[p.lords.length - 1]).join("-") + "</b> &nbsp;(" +
+    chain.map((p, i) => `${OD_LEVELS[i]} ${p.lords[p.lords.length - 1]}`).join(" · ") + ")";
+  const rows = KPDasha.periodsInWindow(moon, ms, ms, winEnd, 5);
+  let h = "<tr><th>ଦଶା କ୍ରମ (…-ପ୍ରାଣ-ଦେହ)</th><th>ଠାରୁ</th><th>ପର୍ଯ୍ୟନ୍ତ</th></tr>";
+  for (const r of rows) {
+    const cur = r.start <= ms && ms < r.end;
+    h += `<tr${cur ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${r.chain}</td><td>${KPDasha.fmtDateTime(r.start)}</td><td>${KPDasha.fmtDateTime(r.end)}</td></tr>`;
+  }
+  $("t_deha").innerHTML = h;
+  $("dehacard").style.display = "block";
+}
+
+/* deha view of the event window (same ±2 days as the prana event table) */
+$("ev_show").addEventListener("click", () => {
+  const info = window.__evCtx;
+  if (!info || !$("ev_date").value || !$("ev_time").value) return;
+  const [y, m, d] = $("ev_date").value.split("-").map(Number);
+  const [hh, mi, ss] = timeParts($("ev_time").value, $("ev_sec"));
+  const evMs = KPDasha.momentMs(y, m, d, hh, mi, ss);
+  const rows = KPDasha.periodsInWindow(info.moon, info.chartMs,
+                                       evMs - 2 * 86400000, evMs + 2 * 86400000, 5);
+  const evRow = rows.find(r => r.start <= evMs && evMs < r.end);
+  $("dh_ev_meta").innerHTML = "ଘଟଣା ଅବଧି ±୨ ଦିନ — ଦେହ ଦଶା। ଘଟଣା ସମୟର ଦେହ ଦଶା: <b>" +
+    (evRow ? evRow.chain : "&mdash;") + "</b>";
+  let h = "<tr><th>ଦଶା କ୍ରମ (…-ପ୍ରାଣ-ଦେହ)</th><th>ଠାରୁ</th><th>ପର୍ଯ୍ୟନ୍ତ</th></tr>";
+  for (const r of rows) {
+    const cur = r.start <= evMs && evMs < r.end;
+    h += `<tr${cur ? ' style="background:#f3ecdd;font-weight:bold"' : ""}>` +
+         `<td>${r.chain}</td><td>${KPDasha.fmtDateTime(r.start)}</td><td>${KPDasha.fmtDateTime(r.end)}</td></tr>`;
+  }
+  $("t_deha_ev").innerHTML = h;
+  $("dh_ev_wrap").style.display = "block";
+});
+
+$("ev_show").addEventListener("click", () => {
+  odiaify(document.getElementById("eventcard"));
+  odiaify(document.getElementById("dehacard"));
+});
+</script>
+</body>
+</html>

@@ -33,7 +33,7 @@ test('casts the PL9 Page 1 chart and renders every Page 1 field', async ({ page 
   const { errors } = await open(page);
   await page.getByLabel('Name').fill('Amitabh Bachchan');
   await page.getByLabel('Date').fill('1942-10-11');
-  await page.getByLabel('Time').fill('16:00:00');
+  await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
   await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
   await expect(page.getByText('India war time was in force')).toBeVisible();
   await expect(page.getByLabel('Zone (hours east of UTC)')).toHaveValue('6.5');
@@ -57,7 +57,7 @@ test('casts the PL9 Page 1 chart and renders every Page 1 field', async ({ page 
 test('Vimshottari list reproduces PL9 dates when walked to 2018', async ({ page }) => {
   await open(page);
   await page.getByLabel('Date').fill('1942-10-11');
-  await page.getByLabel('Time').fill('16:00:00');
+  await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
   await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
   await page.getByRole('button', { name: 'Cast chart' }).click();
   const list = page.getByTestId('dasha-list');
@@ -82,7 +82,7 @@ test('screenshots for review (desktop, phone, dark)', async ({ page }) => {
   await open(page);
   await page.getByLabel('Name').fill('Amitabh Bachchan');
   await page.getByLabel('Date').fill('1942-10-11');
-  await page.getByLabel('Time').fill('16:00:00');
+  await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
   await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
   await page.getByRole('button', { name: 'Cast chart' }).click();
   const out = process.env.KAAST2_SHOTS;

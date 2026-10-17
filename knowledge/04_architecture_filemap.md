@@ -43,11 +43,14 @@ web/src/
   kp_logic.js, xlsx_surgical.js   verbatim copies from KP_Automation
   caster_shell.html / app_shell.html          v0.95 shells
   caster_shell_v096.html / app_shell_v096.html  v0.96 (adds dasha card)
+  *_v16.html (caster, app, app_od)  Kala Chakra v1.6: seconds shown with
+                    hh:mm everywhere (result line, chart, Excel, events)
 web/vendor/
   swisseph.wasm, swisseph.data (trimmed 2.1 MB), swisseph_glue.js
   (patched: classic-script compatible, node shim `__kaast_require`),
   jszip.min.js
 web/build.py → dist v0.95 · web/build_v096.py → dist v0.96
+web/build_v16.py, build_v16_od.py → dist Kala Chakra v1.6 (+ Odia, Caster)
 web/dist/     the four shipped single-file apps (~3.7 MB each)
 tests/test_wasm_engine.mjs + reference_charts.json + VALIDATION_REPORT.md
 ```

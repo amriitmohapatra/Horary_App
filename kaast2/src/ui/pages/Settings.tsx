@@ -8,6 +8,7 @@ import { DASHA_YEARS, resolveProfile, type ChartInput, type ProfileOverrides } f
 import { PL_AYANAMSA, type AyanamsaId } from '../../engine/ephem/ayanamsa';
 import { DEFAULT_PROFILE } from '../../engine/profiles';
 import { t, type MessageKey } from '../i18n';
+import { PlacesManager } from '../components/PlacesManager';
 import { overrides, setOverride, setTextSize, setTheme, textSize, theme, type TextSize, type Theme } from '../state/store';
 
 const AYANAMSAS: [AyanamsaId, string][] = [
@@ -58,6 +59,7 @@ export function Settings({ input }: { input: ChartInput | null }): JSX.Element {
             options={DASHA_YEARS.map((y) => [String(y), t(`dasha.year.${String(y).replace('.', '_')}` as MessageKey)])} parse={Number} />
         </div>
       </section>
+      <PlacesManager />
       <section class="panel" aria-labelledby="h-look">
         <header class="panel-head"><h2 id="h-look">{t('settings.look')}</h2></header>
         <div class="panel-body settings-grid">

@@ -61,3 +61,51 @@ export function zoneFor(place: Place, y: number, m: number, d: number): { tz: nu
   }
   return { tz: place.tz };
 }
+
+export function deletePlace(name: string): boolean {
+  const list = savedPlaces().filter((q) => q.name.toLowerCase() !== name.trim().toLowerCase());
+  try { localStorage.setItem(KEY, JSON.stringify(list)); return true; } catch { return false; }
+}
+
+/**
+ * Read a latitude or longitude typed in any common form: decimal degrees
+ * ("21.7033", "-84.03"), degrees-minutes(-seconds) with spaces or symbols
+ * ("21 42 12 N", "21°42′12″N", "84°01'53\"E", "21:42:12"), with N/S/E/W or a
+ * sign. Returns decimal degrees (north and east positive), or null.
+ */
+export function parseCoord(text: string, kind: 'lat' | 'lon'): number | null {
+  const s = text.trim().toUpperCase().replace(/[°º′'’″"”:]/g, ' ').replace(/,/g, '.').replace(/\s+/g, ' ').trim();
+  if (!s) return null;
+  // optional sign or leading hemisphere, 1–3 numbers, optional trailing hemisphere
+  const m = /^([+-]|[NSEW])?\s*(\d+(?:\.\d+)?)(?:\s+(\d+(?:\.\d+)?))?(?:\s+(\d+(?:\.\d+)?))?\s*([NSEW])?$/.exec(s);
+  if (!m) return null;
+  const lead = m[1], trail = m[5];
+  if (lead && /[NSEW]/.test(lead) && trail) return null;
+  const hemi = trail ?? (lead && /[NSEW]/.test(lead) ? lead : undefined);
+  const deg = +m[2]!, min = m[3] ? +m[3] : 0, sec = m[4] ? +m[4] : 0;
+  if (min >= 60 || sec >= 60 || ((m[3] || m[4]) && !Number.isInteger(deg))) return null;
+  if (hemi && ((kind === 'lat' && /[EW]/.test(hemi)) || (kind === 'lon' && /[NS]/.test(hemi)))) return null;
+  const sign = (lead === '-' ? -1 : 1) * (hemi === 'S' || hemi === 'W' ? -1 : 1);
+  const v = sign * (deg + min / 60 + sec / 3600);
+  return Math.abs(v) <= (kind === 'lat' ? 90 : 180) ? v : null;
+}
+
+export const PLACES_FORMAT = 'astro-amriit-places';
+
+/** A backup file of the saved places (to keep a copy, or move them to another device). */
+export function exportPlaces(): string {
+  return JSON.stringify({ format: PLACES_FORMAT, version: 1, places: savedPlaces() }, null, 2);
+}
+
+/** Merge places from a backup file: same name → replaced. Returns how many were read. */
+export function importPlaces(text: string): number {
+  let doc: unknown;
+  try { doc = JSON.parse(text); } catch { throw new Error('This file is not a places file (not JSON).'); }
+  const d = doc as { format?: string; places?: Place[] };
+  if (d?.format !== PLACES_FORMAT || !Array.isArray(d.places)) throw new Error('This file is not an Astro-Amriit places file.');
+  const ok = d.places.filter((p) => p && typeof p.name === 'string' && p.name.trim()
+    && [p.lat, p.lon, p.tz].every((x) => typeof x === 'number' && Number.isFinite(x))
+    && Math.abs(p.lat) <= 90 && Math.abs(p.lon) <= 180 && Math.abs(p.tz) <= 14);
+  for (const p of [...ok].reverse()) savePlace({ name: p.name, lat: p.lat, lon: p.lon, tz: p.tz, ...(p.country ? { country: p.country } : {}) });
+  return ok.length;
+}

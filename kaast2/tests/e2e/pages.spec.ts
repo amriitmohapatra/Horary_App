@@ -13,7 +13,7 @@ async function castAmitabh(page: Page) {
   await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
   await page.getByLabel('Name').fill('Amitabh Bachchan');
   await page.getByLabel('Date').fill('1942-10-11');
-  await page.getByLabel('Time').fill('16:00:00');
+  await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
   await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
   await page.getByRole('button', { name: 'Cast chart' }).click();
   await expect(page.getByRole('button', { name: 'Edit chart' })).toBeVisible();
@@ -228,7 +228,7 @@ test('Transits: chart, positions, stepping, events, Sade Sati and returns', asyn
   await page.getByRole('link', { name: 'Transits' }).click();
   await page.getByLabel('Zone for these times (hours east)').fill('5.5');
   await page.getByLabel('Date', { exact: true }).fill('2025-01-01');
-  await page.getByLabel('Time', { exact: true }).fill('05:30:00');
+  await page.getByLabel('Hours', { exact: true }).fill('05:30:00');
   // 2025-01-01 00:00 UT, PL9 profile (Swiss Delta-T): Moon Sg 29°42'26" (export procedure, Test 5)
   await expect(page.getByTestId('transit-table').locator('tr[data-point="Mo"]')).toContainText('Sg 29:42:26');
   await page.getByLabel('Step', { exact: true }).selectOption('d');
@@ -238,4 +238,68 @@ test('Transits: chart, positions, stepping, events, Sade Sati and returns', asyn
   await expect(page.getByTestId('sade-sati').locator('tbody tr')).not.toHaveCount(0);
   await expect(page.getByTestId('returns').locator('tbody tr')).not.toHaveCount(0);
   expect(errors).toEqual([]);
+});
+
+test('phone: seconds can be typed digit by digit and show with the cast time', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(url);
+  await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
+  await page.getByLabel('Date').fill('1942-10-11');
+  await page.getByLabel('Hours', { exact: true }).click();
+  await page.keyboard.type('160037'); // auto-advances hours → minutes → seconds
+  await expect(page.getByLabel('Seconds')).toHaveValue('37');
+  await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
+  await page.getByRole('button', { name: 'Cast chart' }).click();
+  await expect(page.locator('.chart-strip')).toContainText('16:00:37');
+});
+
+test('coordinates may be typed in degrees, minutes and seconds', async ({ page }) => {
+  await page.goto(url);
+  await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
+  await page.getByLabel('Name').fill('DMS test');
+  await page.getByLabel('Date').fill('1942-10-11');
+  await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
+  await page.getByLabel('Latitude').fill('25 27 0 N');
+  await page.getByLabel('Longitude').fill('81°51′E');
+  await page.getByLabel('Zone (hours east of UTC)').fill('6.5');
+  await page.getByRole('button', { name: 'Cast chart' }).click();
+  await expect(page.getByTestId('planet-table').locator('tr[data-point="Mo"]')).toContainText('Li 10:19:02');
+});
+
+test('Saved places: add, use, edit, export, delete, import', async ({ page }) => {
+  await page.goto(url);
+  await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
+  await page.getByRole('link', { name: 'Settings' }).click();
+  const pm = page.getByTestId('places-manager');
+  await pm.getByLabel('Place', { exact: true }).fill('Test village');
+  await pm.getByLabel('Latitude').fill('21 42 12 N');
+  await pm.getByLabel('Longitude').fill('84°01′53″E');
+  await pm.getByLabel('Zone (hours east of UTC)').fill('5.5');
+  await pm.getByRole('button', { name: 'Add place' }).click();
+  const row = pm.getByTestId('places-table').locator('tr', { hasText: 'Test village' });
+  await expect(row).toContainText('21°42′12″ N');
+  await expect(row).toContainText('84°01′53″ E');
+
+  // it appears in the chart form and fills the coordinates (and war time in 1943)
+  await page.getByRole('link', { name: 'Page 1' }).click();
+  if (await page.getByRole('button', { name: 'Edit chart' }).count()) await page.getByRole('button', { name: 'Edit chart' }).click();
+  await page.getByLabel('Date').fill('1943-01-01');
+  await page.getByLabel('Place', { exact: true }).fill('Test village');
+  await expect(page.getByLabel('Latitude')).toHaveValue(/^21\.703/);
+  await expect(page.getByLabel('Zone (hours east of UTC)')).toHaveValue('6.5');
+
+  // edit, export, delete, import
+  await page.getByRole('link', { name: 'Settings' }).click();
+  await pm.getByRole('button', { name: 'Edit Test village' }).click();
+  await pm.getByLabel('Zone (hours east of UTC)').fill('5.75');
+  await pm.getByRole('button', { name: 'Save changes' }).click();
+  await expect(row).toContainText('UTC+5:45');
+  const [dl] = await Promise.all([page.waitForEvent('download'), pm.getByRole('button', { name: 'Export places' }).click()]);
+  const file = await dl.path();
+  await pm.getByRole('button', { name: 'Delete Test village' }).click();
+  await pm.getByRole('button', { name: 'Yes, delete' }).click();
+  await expect(pm.getByTestId('places-table')).toHaveCount(0);
+  await pm.getByLabel('Import places…').setInputFiles(file!);
+  await expect(pm.getByText('1 places added or updated.')).toBeVisible();
+  await expect(row).toContainText('UTC+5:45');
 });

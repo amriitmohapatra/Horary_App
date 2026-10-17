@@ -6,10 +6,11 @@
 import { useState } from 'preact/hooks';
 import type { JSX } from 'preact';
 import { PROFILES, type ChartInput, type ProfileId } from '../../engine';
-import { allPlaces, savePlace, zoneFor, type Place } from '../../io/places';
+import { allPlaces, parseCoord, savePlace, zoneFor, type Place } from '../../io/places';
 import { decodeChartBytes, parseGeoVision, toGeoVision } from '../../io/geovision';
 import { parseChartFile, toChartFile } from '../../io/chartfile';
 import { t, type MessageKey } from '../i18n';
+import { TimeFields } from './TimeFields';
 import { longDate, pad2 } from '../format';
 import { chartInput, formOpen, lastPlace, nowInput, openedEvents, rememberPlace } from '../state/store';
 
@@ -42,9 +43,9 @@ function parse(f: Fields): { input?: ChartInput; errors: Errors } {
   if (!dm || y < 1800 || y > 2399) errors.date = 'form.error.date';
   const tm = /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/.exec(f.time.trim());
   if (!tm || +tm[1]! > 23 || +tm[2]! > 59 || +(tm[3] ?? 0) > 59) errors.time = 'form.error.time';
-  const lat = Number(f.lat), lon = Number(f.lon), tz = Number(f.tz);
-  if (!Number.isFinite(lat) || Math.abs(lat) > 66.5 || f.lat.trim() === '') errors.lat = 'form.error.lat';
-  if (!Number.isFinite(lon) || Math.abs(lon) > 180 || f.lon.trim() === '') errors.lon = 'form.error.lon';
+  const lat = parseCoord(f.lat, 'lat') ?? NaN, lon = parseCoord(f.lon, 'lon') ?? NaN, tz = Number(f.tz);
+  if (!Number.isFinite(lat) || Math.abs(lat) > 66.5) errors.lat = 'form.error.lat';
+  if (!Number.isFinite(lon)) errors.lon = 'form.error.lon';
   if (!Number.isFinite(tz) || Math.abs(tz) > 14 || f.tz.trim() === '') errors.tz = 'form.error.tz';
   if (Object.keys(errors).length) return { errors };
   return {
@@ -151,7 +152,8 @@ export function ChartForm(): JSX.Element {
   };
 
   const onSavePlace = () => {
-    const ok = savePlace({ name: f.place, lat: Number(f.lat), lon: Number(f.lon), tz: Number(f.tz) });
+    const lat = parseCoord(f.lat, 'lat'), lon = parseCoord(f.lon, 'lon');
+    const ok = lat !== null && lon !== null && savePlace({ name: f.place, lat, lon, tz: Number(f.tz) });
     setNote(ok ? 'form.placeSaved' : null);
   };
 
@@ -179,9 +181,11 @@ export function ChartForm(): JSX.Element {
             aria-describedby={errors.date ? 'e-date' : 'h-date'} onInput={(e) => onDate(e.currentTarget.value)} />
           {!errors.date && <small id="h-date" class="hint date-echo">{dateInWords(f.date)}</small>}
         </>)}
-      {field('time', 'form.time',
-        <input id="f-time" type="time" step={1} value={f.time} aria-invalid={!!errors.time}
-          aria-describedby={desc('time')} onInput={(e) => set('time', e.currentTarget.value)} />)}
+      <div class="field field-time">
+        <TimeFields id="f-time" legend={t('form.time')} value={f.time} onChange={(v) => set('time', v)}
+          invalid={!!errors.time} describedBy={errors.time ? 'e-time' : undefined} />
+        {errors.time && <small id="e-time" class="error" role="alert">{t(errors.time)}</small>}
+      </div>
       {field('place', 'form.place',
         <>
           <input id="f-place" list="kaast2-places" value={f.place} placeholder={t('form.place.placeholder')}
@@ -189,10 +193,10 @@ export function ChartForm(): JSX.Element {
           <datalist id="kaast2-places">{places.map((p) => <option key={p.name} value={p.name} />)}</datalist>
         </>)}
       {field('lat', 'form.lat',
-        <input id="f-lat" inputMode="decimal" value={f.lat} aria-invalid={!!errors.lat}
+        <input id="f-lat" autoComplete="off" value={f.lat} aria-invalid={!!errors.lat}
           aria-describedby={desc('lat', true)} onInput={(e) => set('lat', e.currentTarget.value)} />, 'form.lat.hint')}
       {field('lon', 'form.lon',
-        <input id="f-lon" inputMode="decimal" value={f.lon} aria-invalid={!!errors.lon}
+        <input id="f-lon" autoComplete="off" value={f.lon} aria-invalid={!!errors.lon}
           aria-describedby={desc('lon', true)} onInput={(e) => set('lon', e.currentTarget.value)} />, 'form.lon.hint')}
       {field('tz', 'form.tz',
         <input id="f-tz" inputMode="decimal" value={f.tz} aria-invalid={!!errors.tz}
