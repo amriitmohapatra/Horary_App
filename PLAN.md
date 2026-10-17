@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.3 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.2.html`. Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
+Status: **v0.3 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.3.html` (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
@@ -340,7 +340,14 @@ decoding, Playwright for build verification, a field-by-field parity script;
    - Avayogi / Duplicate Yogi convention; arudha exception for the lord in the 7th.
    - PL's exact nakshatra spellings and pada syllables (unless decoded from the binary first).
 6. **Installer proof (when the build is complete):** run the `kaast2-desktop` workflow by hand; try the Windows Setup on an offline Windows 10 VM without WebView2 and on Windows 11; the `.dmg` on an Apple Silicon and an Intel Mac (first-open flow); a 1366×768 laptop; checksums per the USB guide.
-7. **Still owed by the boss:** the "Iyer Cure" D11 definition (or its source);
+7. **GitHub Actions does not start jobs on this repository** (2026-10-17): the
+   CI workflow now parses (an unquoted ": " had made every earlier run a
+   parse failure), but its job ends in 2 s without a runner and without a log
+   — an account-level block (typically Actions minutes or spending limit for
+   private repositories, or Actions disabled). Local CI (`npm run ci`) is
+   green. The boss checks GitHub → Settings → Billing / Actions; the desktop
+   installers also need Actions.
+8. **Still owed by the boss:** the "Iyer Cure" D11 definition (or its source);
    the "New Techniques of Prediction" books (reminder 1).
 
 ## 11. Reminder for the end of Phase 1: going public

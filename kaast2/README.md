@@ -4,7 +4,7 @@
 app that reproduces Parashara's Light (PL) at its default settings, drawn in
 the East Indian chart style.
 
-- **One file, no internet.** Download `dist/Astro-Amriit v0.2.html` and double-click
+- **One file, no internet.** Download `dist/Astro-Amriit v0.3.html` and double-click
   it. Nothing is uploaded and nothing is fetched; the Swiss Ephemeris runs
   inside the page.
 - **Checked against PL itself.** Every number is tested against PL's own output

@@ -7,11 +7,11 @@ import { useState } from 'preact/hooks';
 import type { JSX } from 'preact';
 import { PROFILES, type ChartInput, type ProfileId } from '../../engine';
 import { allPlaces, savePlace, zoneFor, type Place } from '../../io/places';
-import { decodeChartBytes, parseGeoVision, toGeoVision, type ImportedChart } from '../../io/geovision';
+import { decodeChartBytes, parseGeoVision, toGeoVision } from '../../io/geovision';
 import { parseChartFile, toChartFile } from '../../io/chartfile';
 import { t, type MessageKey } from '../i18n';
 import { longDate, pad2 } from '../format';
-import { chartInput, formOpen, lastPlace, nowInput, rememberPlace } from '../state/store';
+import { chartInput, formOpen, lastPlace, nowInput, openedEvents, rememberPlace } from '../state/store';
 
 interface Fields {
   name: string; date: string; time: string; place: string;
@@ -65,7 +65,6 @@ export function ChartForm(): JSX.Element {
   const [errors, setErrors] = useState<Errors>({});
   const [note, setNote] = useState<MessageKey | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
-  const [events, setEvents] = useState<ImportedChart['events']>([]);
   const places = allPlaces();
 
   const set = <K extends keyof Fields>(k: K, v: Fields[K]) => setF((o) => ({ ...o, [k]: v }));
@@ -119,14 +118,14 @@ export function ChartForm(): JSX.Element {
   const onOpenFile = async (file: File | undefined) => {
     if (!file) return;
     setFileError(null);
-    setEvents([]);
+    openedEvents.value = [];
     try {
       const text = decodeChartBytes(new Uint8Array(await file.arrayBuffer()));
       if (/\.json$/i.test(file.name) || text.trimStart().startsWith('{')) {
         castInput(parseChartFile(text));
       } else {
         const imported = parseGeoVision(text, f.profile);
-        setEvents(imported.events);
+        openedEvents.value = imported.events;
         castInput(imported.input);
       }
     } catch (err) {
@@ -220,9 +219,9 @@ export function ChartForm(): JSX.Element {
         <button type="button" class="btn btn-quiet" onClick={() => onSave('pl')}>{t('file.savePl')}</button>
       </div>
       {fileError && <p class="form-note error" role="alert">{fileError}</p>}
-      {events.length > 0 && (
+      {openedEvents.value.length > 0 && (
         <p class="form-note">{t('file.events')}{' '}
-          {events.map((ev) => <button key={ev.name} type="button" class="btn btn-small" onClick={() => castInput(ev.input)}>{ev.name}</button>)}
+          {openedEvents.value.map((ev) => <button key={ev.name} type="button" class="btn btn-small" onClick={() => castInput(ev.input)}>{ev.name}</button>)}
         </p>
       )}
       {note && <p class="form-note" role="status">{t(note)}</p>}

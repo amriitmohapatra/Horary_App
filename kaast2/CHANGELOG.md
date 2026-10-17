@@ -2,6 +2,24 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.3 — 2026-10-17 · `dist/Astro-Amriit v0.3.html`
+
+Fixes found while writing the user guide (docs/user_guide/USER_GUIDE.md).
+
+- **Fixed:** the extra charts (events) of an opened PL file now appear under
+  "This file also holds:" (they were lost when the form folded away). The
+  end-to-end test that should have caught this was passing for the wrong
+  reason and now checks the right button.
+- India war time is also applied to saved places inside India (before, only
+  built-in places).
+- Date in words under the Dashas and Transits dates; plain-language varga
+  rules (program routine under "Source"); readable "How was this computed?";
+  left/right step arrows; "Lagna (ascendant)" wording; Sade Sati phases
+  listed once with a re-entry note; "Untitled chart" when no name is given;
+  wider Calculation box; ayanamsa labels "PL: …".
+- Nakshatra names and pada syllables are PL's own spellings (since v0.2).
+- User guide (≈7 000 words, 33 screenshots).
+
 ## v0.2 — 2026-10-17 · `dist/Astro-Amriit v0.2.html`
 
 The first functional build: every Phase 1 slice is in. The app is now called

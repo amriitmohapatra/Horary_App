@@ -148,7 +148,7 @@ export function Jaimini({ chart }: { chart: ChartResult }): JSX.Element {
               <div class="field">
                 <label for="j-from">{t('jai.from')}</label>
                 <select id="j-from" value={argalaFrom} onChange={(e) => setArgalaFrom(e.currentTarget.value as PointId)}>
-                  {(['As', ...PLANETS] as PointId[]).map((p) => <option key={p} value={p}>{p === 'As' ? t('chart.ascendant') : PLANET_NAMES[p]}</option>)}
+                  {(['As', ...PLANETS] as PointId[]).map((p) => <option key={p} value={p}>{p === 'As' ? t('jai.lagna') : PLANET_NAMES[p]}</option>)}
                 </select>
               </div>
               <div class="field">

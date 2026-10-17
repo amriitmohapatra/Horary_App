@@ -50,3 +50,13 @@ describe('Astro-Amriit chart files', () => {
     expect(() => parseChartFile('nope')).toThrow(/not JSON/);
   });
 });
+
+describe('historical zones', async () => {
+  const { zoneFor } = await import('../../src/io/places');
+  it('India war time for a built-in place, a typed Indian place (no country), but not abroad', () => {
+    expect(zoneFor({ name: 'Allahabad', lat: 25.45, lon: 81.85, tz: 5.5, country: 'IN' }, 1942, 10, 11).tz).toBe(6.5);
+    expect(zoneFor({ name: 'My village', lat: 21.2, lon: 84.1, tz: 5.5 }, 1943, 1, 1).tz).toBe(6.5);
+    expect(zoneFor({ name: 'Colombo', lat: 6.93, lon: 79.85, tz: 5.5, country: 'LK' }, 1943, 1, 1).tz).toBe(5.5);
+    expect(zoneFor({ name: 'My village', lat: 21.2, lon: 84.1, tz: 5.5 }, 1945, 10, 15).tz).toBe(5.5);
+  });
+});

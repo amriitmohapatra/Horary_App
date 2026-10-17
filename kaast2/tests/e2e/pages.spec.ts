@@ -103,7 +103,11 @@ test('opens a Parashara\'s Light chart file and offers its events', async ({ pag
   await expect(page.getByTestId('planet-table').locator('tr[data-point="Mo"]')).toContainText('Li 10:19:02');
   await expect(page.locator('.chart-strip')).toContainText('UTC+6:30');
   await page.getByRole('button', { name: 'Edit chart' }).click();
-  await expect(page.getByRole('button', { name: 'Today' })).toBeVisible();
+  // the file's event list (not the Vimshottari "Today" button) must survive the form closing
+  const holds = page.locator('.form-note', { hasText: 'This file also holds' });
+  await expect(holds.getByRole('button', { name: 'Today' })).toBeVisible();
+  await holds.getByRole('button', { name: 'Today' }).click();
+  await expect(page.locator('.chart-strip')).toContainText('Jaipur');
 });
 
 test('saves a chart file that reopens identically', async ({ page }) => {

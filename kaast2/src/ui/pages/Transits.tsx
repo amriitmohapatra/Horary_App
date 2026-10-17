@@ -17,7 +17,7 @@ import { EastIndianChart, type ChartEntry } from '../components/EastIndianChart'
 import { signRow } from '../chartEntries';
 import { Icon } from '../components/Icon';
 import { t, type MessageKey } from '../i18n';
-import { civilDate, civilTime, dm, pad2 } from '../format';
+import { civilDate, civilTime, dm, longDate, pad2 } from '../format';
 import { engine } from '../state/store';
 
 const UNITS: StepUnit[] = ['s', 'min', 'h', 'd', 'mo', 'y', '10y'];
@@ -90,18 +90,19 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
       <section class="panel" aria-label={t('tr.controls')}>
         <div class="panel-body controls-row">
           <div class="field"><label for="tr-date">{t('form.date')}</label>
-            <input id="tr-date" type="date" value={dateStr} onInput={(ev) => setLocal(ev.currentTarget.value, timeStr)} /></div>
+            <input id="tr-date" type="date" value={dateStr} onInput={(ev) => setLocal(ev.currentTarget.value, timeStr)} />
+            <small class="hint">{longDate(local.y, local.m, local.d)}</small></div>
           <div class="field"><label for="tr-time">{t('form.time')}</label>
             <input id="tr-time" type="time" step={1} value={timeStr} onInput={(ev) => setLocal(dateStr, ev.currentTarget.value)} /></div>
           <div class="field"><label for="tr-zone">{t('tr.zone')}</label>
             <input id="tr-zone" inputMode="decimal" value={String(zone)} onInput={(ev) => { const v = Number(ev.currentTarget.value); if (Number.isFinite(v) && Math.abs(v) <= 14) setZone(v); }} /></div>
           <div class="field"><label for="tr-unit">{t('tr.step')}</label>
             <span class="inline">
-              <button type="button" class="icon-btn" aria-label={t('tr.back')} title={t('tr.back')} onClick={() => setJd((x) => stepJd(x, unit, -1))}><Icon name="arrowUp" /></button>
+              <button type="button" class="icon-btn" aria-label={t('tr.back')} title={t('tr.back')} onClick={() => setJd((x) => stepJd(x, unit, -1))}><Icon name="arrowLeft" /></button>
               <select id="tr-unit" value={unit} onChange={(ev) => setUnit(ev.currentTarget.value as StepUnit)}>
                 {UNITS.map((u) => <option key={u} value={u}>{t(`tr.unit.${u}` as MessageKey)}</option>)}
               </select>
-              <button type="button" class="icon-btn" aria-label={t('tr.forward')} title={t('tr.forward')} onClick={() => setJd((x) => stepJd(x, unit, 1))}><Icon name="arrowDown" /></button>
+              <button type="button" class="icon-btn" aria-label={t('tr.forward')} title={t('tr.forward')} onClick={() => setJd((x) => stepJd(x, unit, 1))}><Icon name="arrowRight" /></button>
             </span>
           </div>
           <button type="button" class="btn btn-small" onClick={() => setJd(nowJd())}>{t('form.now')}</button>
@@ -184,7 +185,11 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
                   {life.sade.map((p, i) => (
                     <tr key={i}>
                       <td class="num">{civilDate(p.start, zone)} → {civilDate(p.end, zone)}</td>
-                      <td>{p.phases.map((ph) => `${ph.phase} (${SIGNS[ph.sign]})`).join(' · ')}</td>
+                      <td>{(() => {
+                        const seen: string[] = [];
+                        for (const ph of p.phases) { const k = `${ph.phase} (${SIGNS[ph.sign]})`; if (!seen.includes(k)) seen.push(k); }
+                        return seen.join(' → ') + (p.phases.length > seen.length ? ` · ${t('tr.reentries')}` : '');
+                      })()}</td>
                     </tr>
                   ))}
                 </tbody>

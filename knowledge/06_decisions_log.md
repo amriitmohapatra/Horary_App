@@ -340,3 +340,7 @@ architecture.
   beginnings; Astro-Amriit follows PL's tutorial (madhya = centre).
 - Desktop: the Swiss glue is an ES module; the Tauri CSP forbids eval.
 - ChartResult gained `mcDeg` (exact MC) for Sripati.
+- v0.3 (same day): fixes from the user-guide pass (PL-file events kept in a
+  store signal; war time for saved Indian places via coordinates; plain
+  varga rules; readable provenance). CI workflow YAML fixed; GitHub refuses
+  to start the job (account-level; see PLAN §10 item 7).

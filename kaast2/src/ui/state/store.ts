@@ -56,6 +56,9 @@ export const route = signal<Route>(routeFromHash());
 addEventListener('hashchange', () => { route.value = routeFromHash(); });
 export function go(r: Route): void { if (location.hash !== `#${r}`) location.hash = r; route.value = r; }
 
+/** Extra charts (events) held by the last opened PL file; kept here so they survive the form closing. */
+export const openedEvents = signal<{ name: string; input: ChartInput }[]>([]);
+
 /** The chart form folds away once a chart is cast; "Edit chart" opens it. */
 export const formOpen = signal(true);
 

@@ -14,7 +14,7 @@ export function ChartBar({ chart }: { chart: ChartResult }): JSX.Element {
   const pa = useMemo(() => (e.status === 'ready' ? panchanga(e.swe, chart, { sunrise: 'hindu' }) : null), [e, chart]);
   return (
     <header class="chart-strip">
-      <h1 class="chart-name">{input.name || t('page1.birthChart')}</h1>
+      <h1 class="chart-name">{input.name || t('chart.untitled')}</h1>
       <p class="chart-meta">
         <span>{longDate(input.date.y, input.date.m, input.date.d)}</span>
         <span>{hms(input.time.h, input.time.mi, input.time.s)}</span>

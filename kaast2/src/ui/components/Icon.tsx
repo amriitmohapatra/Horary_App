@@ -13,6 +13,8 @@ const PATHS = {
   chevronDown: 'm6 9 6 6 6-6',
   arrowUp: 'M12 19V5M5 12l7-7 7 7',
   arrowDown: 'M12 5v14M19 12l-7 7-7-7',
+  arrowLeft: 'M19 12H5M12 19l-7-7 7-7',
+  arrowRight: 'M5 12h14M12 5l7 7-7 7',
   minus: 'M5 12h14',
   plus: 'M12 5v14M5 12h14',
 } as const;

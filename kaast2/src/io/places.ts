@@ -54,7 +54,9 @@ export function savePlace(p: Place): boolean {
  */
 export function zoneFor(place: Place, y: number, m: number, d: number): { tz: number; note?: 'india_war_time' } {
   const ymd = y * 10000 + m * 100 + d;
-  if (place.country === 'IN' && place.tz === 5.5 && ymd >= 19420901 && ymd < 19451015) {
+  // Indian places: by country, or (for typed/saved places) by IST and coordinates inside India.
+  const inIndia = place.country === 'IN' || (place.country === undefined && place.lat >= 6 && place.lat <= 37.5 && place.lon >= 68 && place.lon <= 97.5);
+  if (inIndia && place.tz === 5.5 && ymd >= 19420901 && ymd < 19451015) {
     return { tz: 6.5, note: 'india_war_time' };
   }
   return { tz: place.tz };

@@ -23,6 +23,17 @@ const GROUPS: { id: GroupId; label: MessageKey; ids: VargaId[] }[] = [
 ];
 const ORDER: PointId[] = ['As', ...PLANETS];
 
+/** The rule in plain words; the program address goes under "Source". */
+function plainRule(v: VargaDef): { rule: string; source?: string } {
+  const note = v.note ?? '';
+  const src = /^(fcn\.[0-9a-f]+(?: case \d+)?)/.exec(note)?.[1];
+  if (note.startsWith('fcn.0057d1e1')) {
+    const extra = note.split('; ').slice(1).join('; ');
+    return { rule: t('vargas.cyclic', { n: v.divisor }) + (extra ? ` (${extra.replace(/^equals /, t('vargas.sameAs') + ' ')})` : ''), source: src };
+  }
+  return { rule: note.replace(/^fcn\.[0-9a-f]+(?: case \d+)?:\s*/, ''), source: src };
+}
+
 function gradeText(v: VargaDef): string {
   return v.grade === 'BIN' ? t('vargas.grade.bin') : v.grade === 'OPEN' ? t('vargas.grade.open') : t('vargas.grade.std');
 }
@@ -68,7 +79,8 @@ export function Vargas({ chart }: { chart: ChartResult }): JSX.Element {
           <header class="panel-head"><h2 id="h-rule">{t('vargas.rule')}</h2></header>
           <div class="panel-body varga-rule">
             <p><span class={`grade grade-${sel.grade}`}>{sel.grade}</span> {gradeText(sel)}</p>
-            <p class="num rule-note">{sel.note}</p>
+            <p>{plainRule(sel).rule}</p>
+            {plainRule(sel).source && <p class="muted">{t('vargas.source', { src: plainRule(sel).source! })}</p>}
             <p class="hint-text">{t('vargas.boundary')}</p>
           </div>
         </section>

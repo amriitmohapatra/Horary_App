@@ -1,6 +1,6 @@
 # Astro-Amriit — User Guide
 
-*For version 0.2. Written for astrologers, not for computer people.*
+*For version 0.3. Written for astrologers, not for computer people.*
 
 Every screenshot in this guide uses one public example chart: **Amitabh
 Bachchan, 11 October 1942, 16:00, Allahabad (Prayagraj)**. You can cast the
@@ -47,7 +47,7 @@ calculating instrument. The judgement is yours.
 
 Astro-Amriit is **one file** that ends in `.html`. Its name starts with
 `Astro-Amriit` and includes a version number, for example
-`Astro-Amriit v0.2.html`.
+`Astro-Amriit v0.3.html`.
 
 1. Copy the file to your computer (for example to the Desktop).
 2. **Double-click** it. It opens in your web browser (Chrome, Edge, Firefox or
@@ -65,7 +65,7 @@ that you can type your own chart.
 ![The top of the app when it opens: the title bar with "ready", and the chart form](img/01_opening_form.png)
 
 At the very bottom of every page is a small line such as
-`Astro-Amriit v0.2.0 · single build …`. This is the version. Quote it if you
+`Astro-Amriit v0.3.0 · single build …`. This is the version. Quote it if you
 report a problem.
 
 ### The desktop installers (Windows and Mac)
@@ -121,9 +121,10 @@ and shows this note in the form:
 
 > India war time was in force on this date: zone set to +6:30.
 
-This happens for the built-in Indian places. For places you typed yourself
-or saved yourself, the app does not know the country, so set the zone
-yourself (see [Troubleshooting](#7-troubleshooting)).
+This happens for the built-in Indian places and, from version 0.3, for
+places you saved yourself that lie inside India. If you type latitude,
+longitude and zone by hand without choosing a place from the list, the app
+cannot tell, so set the zone yourself (see [Troubleshooting](#7-troubleshooting)).
 
 There are two ways to write war time, and both give the same moment:
 
@@ -184,11 +185,10 @@ Points to know:
 - Files saved by earlier test versions of this app (called *KAAST 2*) also
   open.
 - A PL file can hold further charts for the same person, called *events*
-  (for example "Today" or a muhurta). The app is meant to list them under
-  **This file also holds:** as buttons you can press to cast each one.
-  **In version 0.2 this list does not appear**, because the form folds away
-  as soon as the file is opened. Only the main birth chart is opened. This
-  has been reported.
+  (for example "Today" or a muhurta). After opening the file, press **Edit
+  chart**: they are listed under **This file also holds:** as buttons; press
+  one to cast that chart. (In version 0.2 this list did not appear; fixed in
+  version 0.3.)
 - **Save for Parashara's Light** writes only the main chart, not events.
 
 If the file is not a PL chart file, the app says *This is not a Parashara's
@@ -429,8 +429,10 @@ Next to the large chart, the **Rule** panel says where the rule comes from:
 - **OPEN** — a placeholder. The D11 "Iyer" chart is equal to the alternate
   D11 until the Iyer rule is supplied.
 
-Under it is a technical note (the line in typewriter letters). It is a
-reference for the developers; you can ignore it. The last line explains
+Under it the rule is written in plain words (for example *Counted
+continuously from Aries: 9 × the longitude*), followed by a grey **Source**
+line naming the routine in Parashara's Light's program that it was read
+from. The last line explains
 boundaries: *A planet exactly on an amsa boundary belongs to the amsa that
 begins there.*
 
@@ -598,7 +600,7 @@ sign as the ascendant (marked **KL**, with the AK named in the centre).
 ![Argala table and Rashi drishti list](img/23_jaimini_argala_drishti.png)
 
 **Argala**: choose the point to count from in **Counted from** (the
-**Ascendant** or any planet), and how to treat Rahu and Ketu in **Rahu and
+**Lagna (ascendant)** or any planet), and how to treat Rahu and Ketu in **Rahu and
 Ketu**:
 
 - **Count backwards from a node** (the default);
@@ -620,7 +622,9 @@ round; dual signs aspect each other.
 
 *The Transits page is new and still being finished. Its layout may change.*
 
-![Transit controls, transit chart and transit positions](img/30_transits_chart.png)
+![Transit controls: date, time, zone, step arrows and Now](img/30a_transit_controls.png)
+
+![Transit chart and transit positions](img/30_transits_chart.png)
 
 #### Choosing the moment
 
@@ -630,8 +634,8 @@ round; dual signs aspect each other.
   times are shown. It starts with the chart's zone. For a war-time chart it
   starts at 5.5, because war time has ended.
 - **Step** — choose a step (**1 second**, **1 minute**, **1 hour**, **1 day**,
-  **1 month**, **1 year**, **10 years**) and press the arrows: **↑** steps
-  back, **↓** steps forward.
+  **1 month**, **1 year**, **10 years**) and press the arrows: **←** steps
+  back, **→** steps forward.
 - **Now** returns to the present moment.
 
 #### Transit chart and positions

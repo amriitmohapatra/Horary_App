@@ -11,8 +11,8 @@ import { t, type MessageKey } from '../i18n';
 import { overrides, setOverride, setTextSize, setTheme, textSize, theme, type TextSize, type Theme } from '../state/store';
 
 const AYANAMSAS: [AyanamsaId, string][] = [
-  ...Object.entries(PL_AYANAMSA).map(([id, v]) => [id as AyanamsaId, `${v.label} (PL)`] as [AyanamsaId, string]),
-  ['sf_lahiri', 'Lahiri (Solar Fire / Kala Chakra)'],
+  ...Object.entries(PL_AYANAMSA).map(([id, v]) => [id as AyanamsaId, `PL: ${v.label}`] as [AyanamsaId, string]),
+  ['sf_lahiri', 'Solar Fire / Kala Chakra: Lahiri'],
 ];
 
 function Setting<K extends keyof ProfileOverrides>(props: {

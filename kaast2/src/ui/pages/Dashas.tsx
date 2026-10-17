@@ -15,7 +15,7 @@ import type { PlanetId } from '../../engine/types';
 import { DashaTree, keyOf } from '../components/DashaTree';
 import { PlDashaTable } from '../components/PlDashaTable';
 import { t } from '../i18n';
-import { civilDate, civilTime, pad2 } from '../format';
+import { civilDate, civilTime, longDate, pad2 } from '../format';
 import { overrides, setOverride } from '../state/store';
 
 const todayIso = () => { const d = new Date(); return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`; };
@@ -70,6 +70,7 @@ export function Dashas({ chart }: { chart: ChartResult }): JSX.Element {
               <input id="d-cursor" type="date" value={cursorIso} onInput={(e) => setCursorIso(e.currentTarget.value)} />
               <button type="button" class="btn btn-small" onClick={() => setCursorIso(todayIso())}>{t('page1.dashaToday')}</button>
             </span>
+            <small class="hint">{(() => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(cursorIso); return m ? longDate(+m[1]!, +m[2]!, +m[3]!) : ''; })()}</small>
           </div>
           <div class="field">
             <label for="d-jump-lord">{t('dasha.jump')}</label>

@@ -15,9 +15,9 @@ export function toChartFile(input: ChartInput): string {
 
 export function parseChartFile(text: string): ChartInput {
   let doc: unknown;
-  try { doc = JSON.parse(text); } catch { throw new Error('This file is not a Astro-Amriit chart (not JSON).'); }
+  try { doc = JSON.parse(text); } catch { throw new Error('This file is not an Astro-Amriit chart (not JSON).'); }
   const d = doc as { format?: string; version?: number; input?: ChartInput };
-  if (d?.format !== CHART_FORMAT && !LEGACY_FORMATS.includes(d?.format ?? '')) throw new Error('This file is not a Astro-Amriit chart.');
+  if (d?.format !== CHART_FORMAT && !LEGACY_FORMATS.includes(d?.format ?? '')) throw new Error('This file is not an Astro-Amriit chart.');
   if (d.version !== CHART_VERSION) throw new Error(`Chart file version ${d.version} is not supported by this app.`);
   const i = d.input!;
   const finite = (...xs: unknown[]) => xs.every((x) => typeof x === 'number' && Number.isFinite(x));

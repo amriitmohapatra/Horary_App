@@ -332,5 +332,13 @@
   "tr.period": "Period",
   "tr.phases": "Phases (from the natal Moon)",
   "tr.sadeNote": "Saturn in the 12th, 1st and 2nd signs from the natal Moon ({sign}), from birth for 100 years.",
-  "tr.returns": "Jupiter and Saturn returns"
+  "tr.returns": "Jupiter and Saturn returns",
+  "vargas.cyclic": "Counted continuously from Aries: {n} × the longitude",
+  "vargas.sameAs": "the same as",
+  "vargas.source": "Source: Parashara's Light 7 program, routine {src}",
+  "how.sfLahiri": "Lahiri as Solar Fire (Swiss Lahiri, longitudes +1.251″)",
+  "how.meanEquinox": "from the mean equinox",
+  "jai.lagna": "Lagna (ascendant)",
+  "tr.reentries": "with retrograde re-entries",
+  "chart.untitled": "Untitled chart"
 }
