@@ -1,0 +1,502 @@
+
+=== NTP-1 | SOURCE PDF PAGE 0091 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 1)
+BEGIN EMBEDDED TEXT
+92 
+NTP-I
+distributed in the signs you find the following noteworthy
+points which will be helpful for detailed readings.
+(a) Some stars are wholly sihrated in a sign (whole stars).
+(b) Some are spread half and haHin two rasis (equal stars)
+(c) Some are unequally spread in two rasis (unequal stars).
+(d) Some commence from a rasl - (commencing stars)
+(e) Some terminate in a rasi - (ending stars)
+Note: Each one of flre above has its ovm chnacteristic.
+To find the exact position in degrees etc. of a planet
+work out by proportional 
+method for the birth time
+taking the period of transit of that pada as denominator.
+To find moon's position work out form the span of
+the dat's star (Birth star) for the birthtime byproportional
+method, similarly you get the thithi, yoga and karana for
+the birth time.
+Tb frx up lagna work as follows :
+At the end of the line of the day's details the er'rpired
+or in some panchangas the remaining portion of the lagna
+at sunrise (sign occupied by sun, is given in ghatis.
+Referring to the table of rasi-mana (Spans) for the birth
+latitude calculate the balance of that rasi-mana at
+sunrise. Add to this span of succeeding signs till you
+reach the birth time. You get the lagna. By proportions
+you can work out its o<act position in degrees considerkrg
+the rasi-mana of that lagna, rasi being equal to 3O
+degrees.
+Note : Planetary positions for all latitudes and
+longitudes at a particular moment may for our purposes
+be taken to be same while fixing of lagna depends on
+both the latitude and longihrde.
+Till now I have said of Panchanga method; now
+I will describe ephemeries method.
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0092 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 2)
+BEGIN EMBEDDED TEXT
+NTP. I
+(b) Ephemeries Method
+This is more easy as it gives more details as Siderial
+time, Declinations (Ikanthi), 
+I-atitude and other ready
+made tables of great help. In the ephemeries the
+positions are given for each day for a particular 
+time.
+Raphel g1ves sayana positions at noon G.M.T. which is
+5.3O p.m.; I.S.T. Irhiri g;ves Niral,anapositions at 5.3O
+a.m. from 1941 onwards and at 5.3O p.m. I.S.T. before
+1941. Work out by proportions the exact positions of all
+planets.
+To work out I agna :
+Add to the siderial time (at noon) of the day the
+birth time in L.M.T. measure. If birth before noon (I.S.T.)
+deduct 12 hours. The nett is the siderial hour of birth.
+There are other minute rectifications prescribed here.
+But you may not worry with all that as the difference will
+be only in seconds which does not affect the lagna point
+perceptibly as also with all those corrections you may
+not, for several reasons stated already, arrive at correct
+lagna point which has to be finally settled by other
+methods that I narrate later in my chapter on Division
+Charts. So, for our present purpose this will do. With
+the aid of Table of Houses for the latihrde of the birth
+place find out the lagna point and tenth cusp. Then the
+seventh and fourth bhava cusps will be 18O degrees apart
+from lagna and tenth cusps respectively. Thus you have
+struck tlre four major Redix points-the cusps of l, 4,2
+and 1O Bhavas. In fixing up the other cusps we have to
+differ from the western theory and adopt the Hindu
+system, enunciated in Sripathi Paddathi. Qivide tle spatl
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0093 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 3)
+BEGIN EMBEDDED TEXT
+94 
+NIP.I
+of each quarter into 3 equal parts and thus fix up the
+other cuspal points. As calculation under Sripathi
+Paddathi is hard a nut to crackfor all beginners and also
+takes a lot of time to work out a horoscope. Those
+working with Panchanga only may after working out the
+lagna point frnd out its equivalent Siderial Birth Hour
+referring to Table of Houses and then work out the tenth
+cusp for the said Sederial Hour. This can be done at a
+glance.
+8. Bhava Kundali (Bhava Chart)
+You have now understood to fix up Bhava cusps*.
+The next thing is to establish the Bhava Charl To do this
+you must know the total span or spread of a Bhava. Call
+the middle point between the cusps of the Bhavas in
+question and of its preceeding and suceeding Bhavas as
+A and B. Then the spread of this Bhava is from A to B. A
+is the starting poinf 
+the cusp its centre and B the
+terminating 
+point of that Bhava. Sometimes this span
+may be located in one, two or three r?asis.
+Illustations 
+:
+1. A Bhava ranging from lDeg. of Mithuna ta 29
+Deg. of Mithuna (case of 1 rasi)
+, 
+2. A Bhava starting at 20 Deg. of Vrishabha ending
+at24Deg. 
+of Mithuna (case of 2 rasis)
+3. A Bhava from 29 Deg. of Mesha to 1 Deg. of
+Mithuna (case of 3 rasis)
+Having thus fixed the commencing, middle and
+ending points of a Bhava it is now easy to locate the
+* Editofs Note : Correct nomenclature 'Bhava Madhya' Cusp denoted
+the starting point of Bhava according to western system.
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0094 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 4)
+BEGIN EMBEDDED TEXT
+NTP.I 
+95
+Bhava positions of planets. A planet located anywhere
+wituin the said span falls in that Bhaua.
+Here you have to note the sigpificance of cusp of a
+Bhava and its span. The two are used for two
+different purposes. Vl/hen we want to find the lordships
+we have to consider cuspal point 
+The lord of the Rasi
+containing 
+this point is that Bhaua l-ord. The Bhavic
+positions of planets are to be judged from the Span. To
+have clear perspective prepare two charts as follows.
+Rahu
+Asc
+Jupite
+Rasi
+-Chakra
+Mars
+Sun
+VIoon
+Ketu
+lagrra 
+: 
+20 48'
+Moon 
+: 
+23o 38'
+Mars 
+: 
+160 59'
+Mercury : 
+l3o 48'
+Jupiter 
+: 2Oo 47'
+Rahrr Asc
+Sun
+Mmn
+BHAVA
+CIIART
+hrnitor
+Mars
+io fr
+ir^-.
+Ketu
+Degrees ofplanets and houses
+Venus
+Saturn
+Rahu
+Ketu
+: 2o016'
+: 23o O6'
+: 25042'
+: 25042'
+Call the first as Cuspal chart and the second as Bhava
+Chart. In both the Charts retain lagna in the same sign
+as in Rasi chart. In cuspal chart place the cusps in the
+concerned signs. Sometimes a Rasi may contain even
+three cusps and some other time a Rasi may go without
+even one cusp. Thus a planet may own even 3 or more
+Bhavas or not own any Bhava. Next in Bhava Chart place
+the planet in the Rasi as distant from I aglna Rasi equal
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0095 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 5)
+BEGIN EMBEDDED TEXT
+96 
+NTP. I
+to the number of the Bhava in which it is situated. In
+this chart reckon only the number of Rasis from l,agna
+Rasi but forget that they are Rasis.
+For example, if a planet is found to be in fourth
+Bhava, place it in fourth Rasi from l-agna Rasi. This $ves
+a ready view of Bhavic positions.
+Next is to erect other correlative maps- i.e. from
+General (Rasi chart) to Species (Division charts) which
+will be discussed in the Chapter on Division Charts.
+Mere Rasi chart is not sufficient for prediction. The
+Word " Rasi " in Sanskrit means a 'heap'. A Rasi (Bhava)
+is a heap of many cannotations. AJl of them may not be
+simultaneously good, bad or mixed. Some of them may
+go bad, some good and some mixed. How to discern and
+differentiate them is a knotty problem. By God's grace I
+have found a way out, so simple and sure that even a
+layman can grasp easily. Please read the Chapter on
+Division charts. After Rasi chart the Bhava chart should
+also be erected. Judgement from Rasi chart only of the
+Lordships 
+of planets or their Bhauic positions merely
+countingfrom 
+lagta Rasi will notalways be cortect- Fot
+real perspective, Cuspal and Bhaua charts 
+should be
+reckoned.In cases where the Rasi and Bhava charts are
+similar the Astrologer may be successful even with Rasi
+prediction. Then that Astrologer must be really running
+good time. When his bad period rules charts of differences
+come to him only to pull down his name.
+Some times a planet appearing to own a Bhava in
+Rasi chart may not own it. Sometimes some other planet
+@qy own that Bhava. One may q$/n even t'hree or more
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0096 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 6)
+BEGIN EMBEDDED TEXT
+N I P . I
+F7/97
+Bhavas or none. Planet appearing to be in a Bhaua as
+per Rasi chart may not be acfitally tltere when the Bhava
+Span is scrutinised. In Gochara reading this is of much
+significance.In Rasi a planet may appear to be transiffing
+a Bhava at a particular time while as per Bhava span he
+may be in any of the abutting Bhavas-one less or one
+more. That makes a lot of difference.
+To make this more lucid, I cite the following chart
+I have handled. Birth on 27.1.1937 
+at 7.79 p.m. at
+Sialkot (Iat 32" 29'N long 74" 35'E) 
+- MaIe Child
+BHAVA SPUTA
+Bhava Bhava Start
+Bhava Middle
+O1. Aries
+O2. Taurus
+G-. Gemini
+O4. Cancer
+05. I-eo
+O6. Virgo
+OT.Ijbra
+O8. Scorpio
+O9. Sagtttarius
+1O. Capricorn
+11. Aquarius
+12. Pisces
+- 14252255
+- L4:52255
+- 9:L247
+- 3:1O:39
+'3:1O:39
+- 9z0lz47
+- 14:52255
+- 14:52:55
+- 9:Olz47
+- 3:1O:39
+- 3:lO:39
+- 9zL:47
+Taurus
+Taurus
+Gemini
+Cancer
+L 6
+Virgo
+Scorpio
+Scorpio
+Sagittarius-
+Capricorn-
+Aquarius -
+Pisces
+2248:29
+26:57:21
+2LzGzlS
+l5:15:5
+2Lz6:L3
+26257:2L
+2:48229
+26:57:21
+.21:6:13
+15:15:5
+21:O6:13
+27:57:2L
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0097 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 7)
+BEGIN EMBEDDED TEXT
+N I P . I
+'; , CUSPAL CzuRT
+Bhava Sputa
+See the difference between Rasi chart and this chart';
+II Bhava falls in Vrishabha instead of Mithuna as in Rasi
+charl 
+III falls in Mithuna, 
+IV in Kataka and likewise
+there are several displacements. For example if you read
+Budha as lord of 2 and 5 from Rasi chart it goes wrong
+as really he becomes the lord of 3 and 6 Bhavas (see
+cuspal chart). Again I and II Bhavas fall in Vrishabha.
+No Bhavas exist in Mesha and Thula. Thus you see a lot
+of difference here. Predictions made with such Rasi
+charts are sure to go wrong.
+Bhava Spans
+Those marked in small figures are the end points of
+Bhavas. For example)ilI 
+Bhavas spread from 9 degrees of
+Meena to 15 degrees of Mesha. In Rasi, Rahu appears
+to be in XI Bhava while in reality is in XII Bhava- A
+planet in transit after 15 degrees of Mesha though
+appearing in Rasi chart in XII will be actually transiffing
+LagryaBhava. These subfle differences mustbe mastered.
+Bhava Chart
+At the mere glance you can say in what Bhavas,
+Planets are placed. Beyond this do not touch up any
+other point in this charl For example you may read Guru
+being in III Bhava, but do not say he is in l(ataka and
+exalted. If the variations are not noticed in time the
+Astrologer will surely get perplexed when he sees effects
+caused by unconcerned planets who do not appear to
+have any jurisdiction 
+in the Rasi Chart. Such
+disappointrnents are likelyto mislead us to resortto some
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0098 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 8)
+BEGIN EMBEDDED TEXT
+NTP-I 
+99
+other rule or even coin a new Rule or resort to a different
+system of Dasha. That is how this science is actually
+butchered. Plenty of such novel sayings may be seen in
+" Uttarakalamrita" 
+supposed to have been uritten 
+by
+Kalidasa-evidenfly 
+and definitely not that famous l(avi
+Kalidas as maybe seen from the poetic composition and
+mostly miscellaneous matter of various Dichrms beir€
+compiled. Also no authority is forthcoming on the point
+of IGvi Kalidasa to have written any bock on Astrologr.
+(9) Finalv I deal witfr DASIIA CAIXUIAIION. 
+As
+orplained before I follow Udu-Dasha. (Vimshottari of L2O
+years). The following table gives the details.
+Stars
+Dasha
+Inrd
+Dasha
+Yearc
+Ashwini-Makha-Moola
+Bharani-Pubba- P. Ashada
+Krithika-Uttara- 
+U. Ashada
+Rohini-Hasta-Sravana
+Mrigasira- Chitra-Dhanista
+Aridra- Swati-Shathabhisha
+Punarvasu-Vishakha- P. Bhadra
+Pushyami-Anuradha-U.Bhadra
+Asle sha-Jyesta-Revathi
+Kehr
+Sulrra
+Sun
+Moon
+Kuja
+Rahu
+Guru
+Sani
+Budha
+7
+20
+6
+10
+7
+18
+l6
+19
+t7
+i 
+Note; 
+The order of the Dashas are the same as
+tabled above. The balance of Dasha at birth is got by
+RuIe of tltree process in proportion 
+to the balance of
+span of Birth Star.
+To calculate Bhukti, 
+multiply 
+the Dasha year b1-
+Bhukti lord's years and leave off the unifs digit in the
+producl The rest of the figure represents months. Thrice
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0099 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 9)
+BEGIN EMBEDDED TEXT
+1OO 
+NTP. I
+flre units digitrepresents days. This is a shorter contrivzrnce
+of mathematical process of distributing the Dasha years
+to all the 9 planets in proportion to the Dasha years of
+the respective Bhukti Lord. By continuance of this pro-
+cess you may work out Anthara, Antharanthara,
+Sookshma, Prana etc. to minutestparts. For our purposes
+stage upto Anthara is enough. For example say Guru
+Dasha-Shani Bhukti : Shani years are 19 and Guru years
+16. Multiplying both, (16X19), we get 3O4. I-eaving off
+the unit's digit 4 the remaining figure is 3O months.
+Multiplying the unifs digit 4 by 3 we get L2 (days). So,
+Guru Dasha-Shani Bhuld or Shani Dasha-G.qru Bhukti
+is 2 years, 8 months, 12 days. If unit's diglt is Zero,
+then the number of days is nil.
+To make the subject more clear, I illustrate by an
+uample.
+BIRTII ON 1-2-1962 at 4 p.m. OR GIIAIIS 23-23
+AI MADRAS. Sun rise is 6-39 A-M.
+First Work out From Panchanga.'(sHRowTI's)
+The Starry quarters prior to Birth Tine are :
+Sun
+Sravan-3
+Moon
+Moola-1
+Kuja
+U-ashad-3
+Budha
+Dhani-2
+Guru
+Dhan-l
+Sukra
+Sravan-4
+Shani
+Sravan-1
+Rahu
+Aslesh-3
+Ketu
+Dhan-f
+Budha and Shani are Asta (eclipsed).
+MOON r on 1-2-62 is Jyesta 2L-15 Gh (3-9 p.m.)
+on 2-2-62 is MooLa 18-14 Gh (1-57 p.m.)
+The span of Moola star is roughly 57 Ghatis. So
+each quarter is L4V+ Ghatis.
+
+END EMBEDDED TEXT
+
+=== NTP-1 | SOURCE PDF PAGE 0100 ===
+Visual source: ../pdf-sections/ntp-1_pdf-pages-0091-0100.pdf (section page 10)
+BEGIN EMBEDDED TEXT
+NTP. I 
+lOI
+Birth being at Gh 23-23 time passed in Moola Star
+till birth time is (23-23)-(2f -15) : Gh. 2-8. This is just
+the first quarter of Moola. So birth star or the chara of
+Moon is Moola 1.
+Tb find the Dasha balance :
+For 57 Ghatis the birth Dasha of Ketu is 7 years.
+For Gh 2-B (2 z/LS) itis 7/57 X 3 ? yr.; yr. O-3-4
+So the balance of Ketu Dasha at birth is 6-8-26 yrs..
+As per this, Moon's position is 3O minutes in Dhanus
+{8-o-30).
+Tb find Lagna :
+On l-2-62 the balance of Udaya I-agrn (Rising Sign
+Makara) is given as Gh. I-46. As per Rasi span of
+Madras I-atitude, balance in Makara is 1-46, Kumbha
+4-L6, Meena 4-LO, Mesha 4-28, Vrishabha 5-3 total
+Gh. 19-43. Birth being at23-23 Gh., there still remains
+Gh. 3-4O to pass in Mithuna. Thus Lagna is Mithuna.
+Tb work out the exact degtee
+. 
+position of l-agna:
+The span of Mithuna is Gh. 5-29 or 329 Yig.
+for 30 degrees. For Gh. 3-4O Or 22O Yig. the position
+is (3O x 2OO) +329= Deg. 2O-3 [Vig stands for Vighalige]
+' 
+Hence the oract Lagna point in Mithuna is Deg. 20.3
+i.e. (2-2O-3)
+To workout tentlt meridian from Lagna :
+On pp. 72 of Lahiris Ephemeries of 1962 in the
+Table of Houses: against 2O-3 of Mithuna in col. 1, the
+siderial time under Madras (col.4) is 0-35-5O
+
+END EMBEDDED TEXT

@@ -1,0 +1,10 @@
+node_modules/
+dist-site/
+dist-single/
+test-results/
+playwright-report/
+parity/pl7_exports/
+oracle/.venv/
+*.local
+src-tauri/target/
+src-tauri/gen/schemas/

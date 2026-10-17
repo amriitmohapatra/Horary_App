@@ -1,0 +1,29 @@
+# Astro-Amriit desktop shell (codename KAAST 2; ARCHITECTURE.md §6, ADR-9).
+# A thin Tauri 2 window around the offline site build (../dist-site).
+# No plugins: no shell, no http, no fs, no updater, no telemetry.
+[package]
+name = "kaast2"
+version = "0.1.0"
+description = "Astro-Amriit desktop shell: the offline web build in a native window"
+license = "AGPL-3.0-only"
+edition = "2021"
+rust-version = "1.77.2"
+publish = false
+
+[build-dependencies]
+# One release train: tauri 2.11.x with tauri-build 2.6.x (CLI @tauri-apps/cli 2.11.5).
+# Cargo.lock pins the whole train (tauri-runtime 2.11.3, tauri-runtime-wry 2.11.4,
+# tauri-utils 2.9.3, tauri-codegen/macros 2.6.3, wry 0.55.1). Do NOT run a bare
+# `cargo update`: tauri 2.11.6 accepts tauri-runtime 2.12 by semver but does not
+# compile against it. CI builds with `--locked`.
+tauri-build = { version = "~2.6", features = [] }
+
+[dependencies]
+tauri = { version = "~2.11", features = [] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true

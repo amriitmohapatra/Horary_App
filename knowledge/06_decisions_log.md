@@ -229,3 +229,169 @@ architecture.
   quotes (notebook photos) to extend quotes.js.
 - Dasha in Python Excel pipeline (`kp-build` doesn't print dasha yet —
   only the apps show it; Python dasha.py has full API incl. pranas).
+
+## 2026-10-17 (later) — KAAST 2 planned: a PL7-parity app built from scratch
+- New project decided by the user: an open-source, offline single-file app
+  whose DEFAULT profile is Parashara's Light 7 (Placidus on geographic
+  latitude, PL7 Lahiri polynomial, true node, mean equinox, PL7 ΔT curve,
+  365.2421875-day dasha year), with the Solar Fire profile kept as a second
+  constant bundle. Scope Phase 1 = parity on: Page 1, vargas (D6 D8 D9 D10
+  D11×2 D24 + all others), Yogi/Avayogi/Duplicate Yogi, Vimshottari to Deha
+  with an interactive tree, Jaimini, bhava chalit, transits.
+- Plan and architecture written at repo root: `PLAN.md`, `ARCHITECTURE.md`.
+  Target folder `kaast2/` (working name KAAST 2), TypeScript + Vite + Preact,
+  ONE engine (ADR-1: Python only as a test oracle — a deliberate departure
+  from invariant 9 for the new app; Kala Chakra 1.5 itself is unchanged).
+- User rulings: chart layout = East Indian exactly as Kala Chakra 1.5
+  (ported geometry); the Iyer books "New Techniques of Prediction" will be
+  shared later and their rules catalogued for Phase 2.
+- Oracle strategy: PL7 printouts to be produced by the user on Windows for a
+  16-chart parity set (GeoVision XMLs hold inputs only); PL7 transit cache
+  (Moon/Rahu, 348 months) as automatic ΔT/ayanamsa test; decoded rules as
+  fixtures; PyJHora as independent cross-check.
+- No engine code changed in this session.
+- Addendum: the user also wants Windows (.exe) and macOS (.dmg) installers
+  for devices that never connect to the internet → Tauri 2 wrapper around the
+  same web build (ADR-9), slice 8b, decision D10 on code signing.
+
+## 2026-10-17 (session 2) — KAAST 2 slices 0, 1, 2a; the boss's program is PL 9
+- Boss: "start with default slices"; UI left to the team; Page 1 reference =
+  a **Parashara's Light 9.0** "Birth chart I" screenshot (Amitabh Bachchan,
+  11 Oct 1942 16:00, Allahabad). Defaults D1–D10 applied; D5 revised (below).
+- **PL 9 decoded from that one screen (NUM):** Swiss Ephemeris positions,
+  PL Lahiri polynomial, mean equinox, true node → all 9 planets equal to the
+  displayed second; residuals −0.5…+0.3″, so PL 9 **rounds** seconds (KC
+  truncates). PL's atlas applied **India war time UTC+6:30** (1942-09-01 –
+  1945-10-15); with +5:30 the Moon is off by 35′. Ascendant +4″ with
+  geographic latitude vs +198″ with geocentric → **geographic** latitude for
+  houses. Placidus is not testable from the ascendant (still BIN from PL 7).
+  Dasha: **365.2421875-day years 10/10** dates 76 years out; 365.25 gives 5/10.
+  No Moon-vector planet error in PL 9 (at least for 1942).
+- Open for PL 9: ΔT for modern dates (Swiss 69 s vs PL7 curve 87.5 s in
+  2025 → Moon 26″ vs 36″ in Sg 29°42′ on 2025-01-01 0h UT) — Test 5 of
+  `kaast2/parity/PL7_EXPORT_PROCEDURE.md`.
+- **PL 7 profile reproduces PL 7's own transit cache**: 1392 samples
+  2020–2048, Moon ≤0.06″, Rahu ≤0.76″, using DELTAT.ASC (1800–1993) then a
+  line to 83.0 s at 2020.0 and +0.89 s/yr. (Cache files from 2049 on hold the
+  approx.dat fallback and are excluded; JD cut-off 2469442.5.)
+- KAAST 2 profiles: `pl9` (default; ADR-10), `pl7`, `solarfire` (KC 1.5,
+  still 80 planets ≤1″ / 120 cusps ≤12″ on the 10 SF charts).
+- East Indian geometry ported from KC 1.5 with three refinements needed at
+  Page 1 font sizes: bisection font fit (KC's two-pass estimate oscillates),
+  baseline + cap-height row check, vertical budget per region.
+- Scope change: Shad Bala, Bhava Bala, Ashtakavarga, Vimshopaka, avasthas,
+  karakas and functional nature are IN Phase 1 because PL 9's Page 1 shows
+  them → slice 2b. The house-edge numbers on PL's Rasi chart are SAV bindus
+  (sum 337) and Bhava Bala.
+- Fixture hygiene: the Solar Fire reference fixture copied into kaast2 had
+  private chart titles → anonymised to SF01–SF10 (JDs kept). The pre-publish
+  scan derives its name denylist at run time from the private GeoVision
+  collection, so no list of names is stored in kaast2/.
+- Shipped `kaast2/dist/KAAST 2 v0.1.html` (4.0 MB, offline). Kala Chakra 1.5
+  and its engines are unchanged.
+
+## 2026-10-17 (session 2, later) — Astro-Amriit; vargas decoded; comfort design
+- **Name:** the boss renamed the app **Astro-Amriit**. The folder `kaast2/`
+  stays as the internal codename while slices are in flight (and becomes the
+  root of the public repository at publication anyway). Chart file format id
+  `astro-amriit-chart`; files saved as `kaast2-chart` still open.
+- **Vargas (slice 3):** all 31 PL varga positions decoded from PL7.exe
+  (dispatcher `fcn.0057d9cf`, jump table 0x57db65, divisors at 0x5f47b8).
+  Corrections to the PL7 report: D2 (Leo/Cancer hora) and D2-alt2 have their
+  own routines; seven alternates are plain cyclic; D150 is plain cyclic, not
+  the Chandra Kala Nadi rule. PL-only rules (no PyJHora equivalent): D2-alt2,
+  D16-alt, D11-alt. **Boundary convention (lead decision):** every amsa is
+  half-open [from, to) on the rasi longitude (invariant 1); PL's float code
+  differs only for points exactly on a boundary (D2 at 15°, D30 limits,
+  exact 360°, D45's 1.50000000015 factor) — not reproduced, documented.
+  Still to confirm on PL 9 printouts; the labels of positions 22–31 are
+  descriptive stand-ins.
+- **Page 1 strengths decoded** (docs/spec/PAGE1_SPEC.md): 145 PL 9 fields
+  reproduced by the Python oracle with 0 mismatches. PL-specific conventions
+  required by the fixture: shadbala sunrise = instant Asc = Sun (centre, no
+  refraction); PL's own cheshta rule; Raman's saptavargaja values and
+  required totals; Equal-house bhava centres for Bhava Bala; Av5 label order
+  Dead/Old/Adoles./Youth./Infant; Vimshopaka fits shadvarga. OPEN: Ketu VB
+  (9.1 vs 14), Rahu AV rule, nodes' functional nature rule.
+- **PL chart files:** BirthDate is the local-clock JD; west-positive
+  longitude and zone; war time stored as DST = 1; ASCII or UTF-16 BOM. All
+  1560 files of the private collection parse.
+- **Comfort design:** Light / Dark / Warm night themes, all pairs ≥4.5:1
+  (body 12–15:1, no pure white/black), text size setting, SVG icons, 44 px
+  touch targets; chart labels measured with the real font; an e2e geometry
+  test guarantees no label crosses a chart line.
+
+## 2026-10-17 (session 2, end) — Astro-Amriit v0.2: every Phase 1 slice built
+- Shipped `kaast2/dist/Astro-Amriit v0.2.html`; 616 unit/engine tests, 24 e2e
+  on the shipped file (geometry, axe WCAG 2.1 AA in three themes, offline).
+- **Sunrise convention of PL = the Sun's centre with no refraction** (the
+  instant the Sun's sidereal longitude equals the ascendant; Swiss
+  BIT_HINDU_RISING). Established independently twice: the PL 9 strength
+  fixture (hora lord) and PL 7's own Pranapada export (manual p. 130). Used
+  for Shad Bala, special lagnas and the panchanga vara.
+- Transits: search proven complete (bounded motion + brute force); events
+  defined on the profile's integer arcsecond; stations follow the chart's R
+  flag (tropical speed) — the sidereal turning point differs by up to ~32 min
+  for Saturn (OPEN whether PL users expect the sidereal definition). Swiss
+  true node has joints every 27.55 d (handled). Range 1800-01-02 … 2400-01-01.
+- Yogi: Yogi point + 186°40′ lies in the 15th nakshatra from the Yogi's,
+  whose lord equals the 6th's — the "6th nakshatra" textbook rule gives the
+  same planet. Sripati: PyJHora's chart method 3 uses madhyas as house
+  beginnings; Astro-Amriit follows PL's tutorial (madhya = centre).
+- Desktop: the Swiss glue is an ES module; the Tauri CSP forbids eval.
+- ChartResult gained `mcDeg` (exact MC) for Sripati.
+- v0.3 (same day): fixes from the user-guide pass (PL-file events kept in a
+  store signal; war time for saved Indian places via coordinates; plain
+  varga rules; readable provenance). CI workflow YAML fixed; GitHub refuses
+  to start the job (account-level; see PLAN §10 item 7).
+
+## 2026-10-17 (session 2, later) — seconds on iPhone; saved places
+- **iOS drops seconds.** Safari's native `<input type=time>` offers only
+  hh:mm on iPhone. Kala Chakra already had a separate seconds box, but the
+  result line, chart centre, Excel time cell and event lines printed only
+  the time input's hh:mm. Fixed in NEW files Kala Chakra v1.6 (app, Odia,
+  Caster): every displayed time is hh:mm:ss built from both boxes. v1.5 is
+  untouched. Engine unchanged (seconds were always used in the calculation);
+  wasm suite 0 failures, RA Job 130 passed.
+- **Astro-Amriit v0.4:** no native time picker at all — three numeric boxes
+  (Hours/Minutes/Seconds) that auto-advance, so `160037` typed on a phone
+  keypad gives 16:00:37. Latitude/longitude accept degrees-minutes-seconds
+  (`20 15 30 N`, `85°50′E`). Saved places get a manager in Settings
+  (add/edit/delete, export/import JSON) because browser storage is per
+  device; war time applies to saved places inside India. Phone overflow at
+  320/390 px fixed on all pages and locked by an e2e test.
+
+## 2026-10-17 (session 2, later) — Astro-Amriit v0.5: KP page
+- PL's "Krishnamurti" (manual pp. 56, 205): Placidus cusps, ascendant =
+  beginning of house 1, no house numbers on signs; significator table =
+  Occupants, Tenants(Occupants) (planets in the occupants' nakshatras),
+  Owner (lord of the cusp's sign — NOT Kala Chakra's span rule),
+  Tenants(Owner). Planet-wise A–D levels are textbook KP (STD).
+- KP pages use the Krishnamurti ayanamsa regardless of the default (manual
+  pp. 218–219, DOC); app default 'auto' = pl_krishnamurti for PL profiles,
+  the profile's own Lahiri for Solar Fire / Kala Chakra (family practice).
+  Which of PL's two KP ayanamsas PL 9 uses on screen: OPEN (Test 2).
+- Kala Chakra's power calculation is untouched and stays in Kala Chakra;
+  the two significator notions are deliberately separate.
+- Transit step gained 1 week.
+
+## 2026-10-17 (session 2, later) — Astro-Amriit v0.6: NTP (Iyer) page
+- Source: Iyer, New Techniques of Prediction I–III, in `references/NTP/`
+  (private; text, OCR, page PDFs). Rule catalogues with PDF-page citations:
+  `references/NTP/notes/ntp1_rules.md`, `ntp2b_rules.md`, `ntp3_rules.md`;
+  NTP-2 ch. I–II read by the lead directly.
+- Settled by Iyer (DOC, page images checked): Duplicate Yogi = lord of the
+  sign of the Yoga point (NTP-2 p. 5); Avayogi = the Yogi's one enemy, table
+  NTP-2 p. 6 — identical to the app's 'sixth-nakshatra' variant; the sets of
+  three are {Ke Mo Ju}, {Ve Ma Sa}, {Su Ra Me} (Vimshottari positions 1-4-7,
+  2-5-8, 3-6-9). Iyer's Dagdha table (NTP-1 pp. 17–18) = the app's.
+- Iyer's conventions used on the NTP page only: Sripati bhavas with cusp =
+  madhya; mean node (NTP-1 p. 101; switchable); aspects 7th + Ma 4/8, Ju 5/9,
+  Sa/Ra/Ke 3/10, including conjunction; week day sunrise to sunrise.
+- Oracles: Dasha chart "easy method" reproduces Chart 1 Guru Dasha exactly;
+  Iyer's D-charts (his own D-11, D-16, D-30, D-45) match his Chart 1 table
+  167/170 (3 book misprints, OQ-3/4); Mathematical Navamsha reproduces all 7
+  worked examples.
+- Deliberately not shown: death, widowhood, chastity and ganda readings.
+- OPEN: Graha Samayam counting (inclusive assumed); the birth weekday
+  convention for the Dasha chart; combustion orbs (Iyer gives none).

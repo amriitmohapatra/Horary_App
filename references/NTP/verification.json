@@ -1,0 +1,39 @@
+{
+  "total_pages": 381,
+  "total_sections": 39,
+  "missing_pages": [],
+  "duplicate_pages": [],
+  "source_files_unchanged": true,
+  "all_render_comparisons_passed": true,
+  "all_embedded_text_comparisons_passed": true,
+  "render_comparison_dpi": 108,
+  "ocr_input_dpi": 216,
+  "ocr_language": "English",
+  "semantic_ocr_accuracy_guaranteed": false,
+  "books": [
+    {
+      "book": "ntp-1",
+      "source_filename": "NTP 1.pdf",
+      "pages": 159,
+      "source_sha256": "2b1ed78fd24179fe9e799ed3378f094ae937d755bbcbb8fc5d1e2c400da93b66",
+      "original_copy_identical": true,
+      "pdf_sections": 16
+    },
+    {
+      "book": "ntp-2",
+      "source_filename": "NTP-Part-II.pdf",
+      "pages": 182,
+      "source_sha256": "573ec1f31832dfacbacc522afe838da6371086eb694ce2bb8410ec2776b015b3",
+      "original_copy_identical": true,
+      "pdf_sections": 19
+    },
+    {
+      "book": "ntp-3",
+      "source_filename": "pdfcoffee.com_book-new-techniques-of-predictions-vol-3-pdf-free.pdf",
+      "pages": 40,
+      "source_sha256": "3f0ef79e20ca9fb7fdb9c5121ae74ee20614f3bf194d12754dbb4195cb3c948a",
+      "original_copy_identical": true,
+      "pdf_sections": 4
+    }
+  ]
+}

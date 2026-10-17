@@ -1,0 +1,159 @@
+# Changelog
+
+Release-note style (what works · evidence · out of scope). One entry per shipped file.
+
+## v0.6 — 2026-10-17 · `dist/Astro-Amriit v0.6.html`
+
+**What works**
+- **NTP page** (new tab after KP): H. R. Seshadri Iyer's *New Techniques of
+  Prediction* applied to the chart, every point cited to volume and PDF page.
+  - **NTP Guidance**: only the points that apply to this chart.
+  - **Yoga, Avayoga and the sets of three**: Birth Yogi, Duplicate Yogi,
+    Avayogi (Iyer's one-enemy table), the three friendship sets with the
+    Yogi's and Avayogi's highlighted, the birth-yoga effect, Zero Rasis.
+  - **Planet cards**: states (exalted, debilitated, own, Zero Rasi, combust,
+    retrograde, Yogi roles), positive/negative character with reasons,
+    Theories 1–34 (NTP-2 ch. I), NTP-1 planet-state, bhava and yoga rules,
+    Graha Samayam, three Navamsha stars, areas its Dasha favours or harms.
+  - **Dasha and Bhukti**: Iyer's Dasha chart (Starter, Ruler, Dasha Yogi,
+    Raja Yogi), Dasha rules, the area-by-area reading through Iyer's own
+    division charts, and every Bhukti's start/end tone with its Dasha-chart
+    and classical (A–E) rules.
+  - Mean node, as Iyer (switchable).
+
+**Evidence** 645 unit/engine tests. The Dasha chart reproduces Iyer's worked
+Chart 1: 10/10 Starters and Rulers, the Raja Yogi and 3 Dasha Yogis. The
+division charts match his Chart 1 table in 167/170 cells (3 book misprints).
+The Mathematical Navamsha matches all 7 worked examples and his 12/24/72 pada
+count. 32 e2e on the shipped file (new: NTP page; NTP in the phone and axe
+runs), contract check, pre-publish scan.
+
+**Sources** `references/NTP/` (private; never published — PLAN §11) with rule
+catalogues in `references/NTP/notes/`.
+
+## v0.5 — 2026-10-17 · `dist/Astro-Amriit v0.5.html`
+
+**What works**
+- **KP page** (new tab after Dashas) — PL's *Krishnamurti Chart* and *KP –
+  Significators*: East Indian chart on Placidus cusps (ascendant = beginning
+  of house 1) listing cusps and planets with star/sub lords and KP house;
+  cusp and planet tables with sign, star, sub and sub-sub lords;
+  significators of the houses (occupants, tenants of occupants, owner,
+  tenants of owner — PL 7 manual p. 205) and of the planets (A–D levels).
+- **KP ayanamsa** as PL: the KP page uses the Krishnamurti ayanamsa
+  whatever the other pages use (manual pp. 218–219); Krishnamurti New or
+  the chart's own ayanamsa are selectable. The Solar Fire / Kala Chakra
+  profile keeps its Lahiri on "Automatic".
+- **1 week** transit step.
+
+**Evidence** 626 unit/engine tests (new: KP placement equal to Kala
+Chakra's `houseOf` on 2 000 random charts, lords equal to Kala Chakra's
+`subLords`, hand-worked significators); 31 e2e on the shipped file (new: KP
+page vs Page 1 through the Krishnamurti–Lahiri difference, week step; KP in
+the phone-overflow and axe runs); contract check; pre-publish scan.
+
+**Open** not yet compared with a PL KP printout; which Krishnamurti
+ayanamsa PL 9's KP screen uses (export procedure Test 2).
+
+## v0.4 — 2026-10-17 · `dist/Astro-Amriit v0.4.html`
+
+**What works**
+- **Seconds on every phone.** Birth time is three boxes — Hours, Minutes,
+  Seconds — with a number keypad; typing moves to the next box after two
+  digits (`160037` → 16:00:37), and a whole time pasted into Hours is spread
+  over the boxes. iPhone's time picker (no seconds) is no longer used. Same
+  on the Transits page.
+- **Saved places manager** (Settings): add, edit, delete (with confirm),
+  built-in list for reference, **Export places** / **Import places…** to
+  move your list between devices (each browser keeps its own).
+- Latitude and longitude accept decimal or degrees-minutes-seconds
+  (`20 15 30 N`, `85°50′E`, `-73.5`).
+- No sideways scrolling on any page at 320 px and 390 px phone widths.
+
+**Evidence** 620 unit/engine tests; 29 e2e on the shipped file (new: phone
+digit-by-digit seconds, DMS coordinates, places add/use/edit/export/delete/
+import, phone overflow on all 8 pages); contract check; pre-publish scan.
+
+**Companion fix** Kala Chakra v1.6 (`Advanced_Setup/web/dist/`) shows the
+seconds next to hh:mm in the result, chart, Excel and event lines.
+
+## v0.3 — 2026-10-17 · `dist/Astro-Amriit v0.3.html`
+
+Fixes found while writing the user guide (docs/user_guide/USER_GUIDE.md).
+
+- **Fixed:** the extra charts (events) of an opened PL file now appear under
+  "This file also holds:" (they were lost when the form folded away). The
+  end-to-end test that should have caught this was passing for the wrong
+  reason and now checks the right button.
+- India war time is also applied to saved places inside India (before, only
+  built-in places).
+- Date in words under the Dashas and Transits dates; plain-language varga
+  rules (program routine under "Source"); readable "How was this computed?";
+  left/right step arrows; "Lagna (ascendant)" wording; Sade Sati phases
+  listed once with a re-entry note; "Untitled chart" when no name is given;
+  wider Calculation box; ayanamsa labels "PL: …".
+- Nakshatra names and pada syllables are PL's own spellings (since v0.2).
+- User guide (≈7 000 words, 33 screenshots).
+
+## v0.2 — 2026-10-17 · `dist/Astro-Amriit v0.2.html`
+
+The first functional build: every Phase 1 slice is in. The app is now called
+**Astro-Amriit** (v0.1 shipped as "KAAST 2").
+
+**What works**
+- **Page 1** exactly as PL 9's "Birth chart I": Rasi chart (East Indian) with
+  PL's house-edge labels (SAV bindus, Bhava Bala), D9, Vimshottari, planet
+  table, strength table (Dignity, SB%, SB#, VB, AV, Av3, Av5, K7, Func.),
+  Shad Bala bars, panchanga line.
+- **Strengths**: Shad Bala and Bhava Bala by component, Ashtakavarga BAV/SAV.
+- **Vargas**: all 31 PL divisional charts (decoded from PL's program) plus an
+  "Iyer" D11 placeholder; "signs in all vargas" with vargottama.
+- **Dashas**: six-level tree, PL's sub-period table, jump, running chain,
+  dasha-year switch.
+- **Yogi & Bhava**: Yogi/Avayogi/Duplicate Yogi, Dagdha rashis, Sripati and
+  equal bhava chalit.
+- **Jaimini**: karakas (7, 8), special lagnas, arudha padas (D1/D9/D10),
+  Karakamsha, argala, rashi drishti.
+- **Transits**: transit chart around the natal chart, steps from 1 s to 10 y,
+  coming sign/nakshatra/pada changes and stations, Sade Sati, returns.
+- Open and save Parashara's Light chart files (all 1560 of the private
+  collection open) and Astro-Amriit chart files.
+- Settings: PL's 8 ayanamsas, Delta-T model, node, dasha year; Light / Dark /
+  Warm night themes; text size.
+- Desktop installers configured (Windows, macOS) — first CI build pending.
+
+**Evidence** — 616 unit/engine tests; 24 end-to-end tests on the shipped file
+(offline, file://), including a geometry test that no chart label crosses a
+line and an axe WCAG 2.1 AA scan of every page in every theme; contract check;
+pre-publish scan. PL 9 Page 1 reproduced field by field except two open
+items (Ketu's VB: 9 vs 14; Rahu's AV rule).
+
+**Open (need PL printouts — see PLAN §10)** — Avayogi / Duplicate Yogi
+convention, arudha exception, argala node rule, karaka scheme default, PL 9
+Delta-T for modern dates, Placidus check for intermediate cusps, Iyer D11.
+
+## v0.1 — 2026-10-17 · `dist/KAAST 2 v0.1.html`
+
+Slices 0 (foundation), 1 (engine core) and 2a (Page 1 without strengths).
+
+**What works**
+- Single offline HTML file (4.0 MB) with the Swiss Ephemeris 2.10.03 WASM
+  embedded; boots in about a second and shows *ready*.
+- Chart input with a place list, saved places, war-time zone suggestion,
+  date echoed in words (guards against day/month swaps), inline errors that
+  keep what was typed.
+- Three calculation profiles: PL 9 (default), PL 7, Solar Fire / Kala Chakra.
+- Page 1 after PL 9's "Birth chart I": East Indian Rasi chart (Kala Chakra
+  1.5 geometry, ported), D9 Navamsha chart, Vimshottari list with PL's four
+  controls (shallower/deeper level to Deha, earlier/later) and *Today*,
+  planet table (longitude, retrograde/combust flags, nakshatra, pada syllable,
+  pada and star/sub/sub-sub lords), and "How was this computed?".
+- Light and dark themes; phone layout (compact chart labels); keyboard focus.
+
+**Evidence** — 60 unit/engine tests, 5 end-to-end tests, contract check,
+pre-publish scan; see README *Evidence*.
+
+**Out of scope (next: slice 2b)** — the Strengths panel (Shad Bala, Bhava
+Bala, Ashtakavarga, Vimshopaka, avasthas, karakas, functional nature) and the
+house-edge labels of the Rasi chart. Nakshatra spellings and pada syllables
+not seen on the PL 9 screen are textbook values until PL's own table is decoded.

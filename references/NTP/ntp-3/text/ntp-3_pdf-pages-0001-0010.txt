@@ -1,0 +1,1408 @@
+
+=== NTP-3 | SOURCE PDF PAGE 0001 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 1)
+BEGIN EMBEDDED TEXT
+NEW 
+T'E,CHNIQUES 
+...,.. ..,...., ,.... ..,. ..,. T ~ .,.- A "' ..,-, n 
+OF 
+Vol. III 
+~ 
+~ 
+IJf\ 
+~~ ~~~ t:>f\ 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0002 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 2)
+BEGIN EMBEDDED TEXT
+» ~ Contents 
+Chapter 1 
+New Techniques of Prediction Part III 
+Chapter 2 
+Nakshatra positions ofGrahas 
+Chapter3 
+Akshara Shastra (Aiphabetology) 
+Chapter 4 
+Theories of spotting the Winners 
+Chapter 5 
+Order of preferrence of tests A to D 
+Illustrations 
+Chapter 6 
+Winner by Navamsa 
+Chapter 7 
+Dead certs 
+Alphabets ofNakshatra Padas Table 
+Significators (indicators) Table 
+« ~ New Techniques of Prediction- Part lli 
+\5b Contents \5b 
+n~ 
+rnTTrrTTr~ n" 
+-1-
+by Chistabo, A.D. 2013 ~ >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0003 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 3)
+BEGIN EMBEDDED TEXT
+» $> Chapter 1 
+li Contents 1 
+Astrological aspect $> << 
+New Techniques of Prediction Part III 
+T ~,- , ... 
+T ,-,-T..,..TTT,-,. ~,-'""' ~T 11"" 
+T 
+,-,......,.,-,.-y~y..,.. T 
+,...,..,. r 
+TTT 
+This science of Race astrology is based on 3 factors - (1) elementary principles of astrology, (2) alphabetology 
+(Akshara Shastra), and lastly (3) numerology (Sankhya Shastra). There are authors who have dealt with them 
+separately but we have adopted a different method in which we have clubbed all 3 branches for arriving at the 
+judgment. So we are going to describe what are all the fundamentals that one should know under each head. 
+~ Astr~ologicataspecct_$>~ 
+Under this head we are not going to deal with more than what is essential to follow this method. So one should 
+not be afraid that because this is based on astrology it would be beyond the hold of a layman. What is needed in 
+this connection is to erect the chart for the day of event and note Lagnas running during the race times. In the 
+following lessons we teach even a layman to be able to follow us. Please read with care. 
+What is really needed is the positions of planets in Rasi chart and the stars in which they are posited and Lagnas 
+running at each race. For our purposes it is not even necessary to find their exact positions. Those that are able 
+to work out these with the aid of a standard Panchanga may do so. Others will do good to do this with the aid of 
+Lahiri Ephemeris for the year concerned which will be explained in detail hereunder. Those that work with the 
+aid of Raphael's Ephemeris may also do so but convert the positions into Nirayana by subtracting the correct 
+Ayanamsa of the year as followed by Lahiri. We take up one by one in detail and show the way out . 
+.i5Q C_akQlation_Of La_gna $> 
+To do this the factors needed are the latitude and longitude of the place of race. Planetary positions are to be 
+calculated for 1ST while Lagna on LMT of the place. What they are will be explained later. 1ST is Indian Standard 
+Time which is 51/2 hours in advance ofGreenwhich Mean Time (GMT) followed all over India. 
+For the benefit of those who cannot follow the astrological vocabulary we have used in this text we furnish the 
+translations in English. 
+Grahas (planets) 
+Rasis (signs) 
+Sanskrit 
+Western 
+Sanskrit 
+Western 
+Surya [Ravi] 
+Sun 
+Mesha 
+Aries 
+Chandr 
+Moon 
+Vrisabha 
+Taurus 
+Mangal [Kuja] 
+Mars 
+Mithuna 
+Gemini 
+Budh 
+Mercury 
+Karkataka 
+Cancer 
+Guru 
+Jupiter 
+Simha 
+Leo 
+Sukr 
+Venus 
+Kanya 
+Virgo 
+Sani 
+Saturn 
+Thula 
+Libra 
+Rahu 
+Dragon's head 
+Vrischika 
+Scorpio 
+Ketu 
+Dragon's tail 
+Dhanur 
+Sagittarius 
+Lagna 
+Ascendant 
+Makara 
+Capricorn 
+Rasi 
+Sign 
+Kumbha 
+Aquarius 
+$> To_find_LM_Lfrom_ISL $> 
+At the rate of 4' for every degree of longitude work out the time of the place. This is the time difference for that 
+place reckoned from Greenwich Mean Time. If this be more than 5 1/2 hours add the difference to the 1ST to get 
+the LMT of the place, but if this is less than 5 1/2 hours subtract this difference from 1ST to get the equivalent 
+LMT of the place. 
+Now refer to the Annual Ephemeris of Lahiri. Note the Siderial Time at Noon LMT on that day as given under 
+Col. 2 under Sid. Time. To this add the LMT got as before for the required race time, This becomes the Sidereal 
+Time in hours and minutes for the race time. Now turn to the Table of Ascendants (Abridged) on page 74- 75 of 
+Lahiri Annual Ephemeris. Under the Col. nearby the latitude of the place of race look for this Sid. Time and 
+across that Row under Col. I see how many degrees of Lagna and under what Rasi. That becomes Lagna. For our 
+purposses it is enough if you merely note what Lagna is. When it falls at margin then you have to calculate 
+<< $> New Techniques of Prediction- Part Ill 
+-1-
+by Chistabo, A.D. 2013 $> >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0004 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 4)
+BEGIN EMBEDDED TEXT
+» $> Chapter 1 
+li Contents 1 
+Working of Graha's positions $> << 
+strictly by proportional methods as will be described later. If you have Lahiri's detailed Table of Ascendants then 
+this becomes easy. 
+Let us work out a practical case on 04.10.1970 at 02:30 pm 1ST at Hyderabad whose latitude is 17 N 26 and 
+longitude 78 E 27. 
+First we have to convert 02:30 pm 1ST into LMT. Multiplying the longitude of the place 70° 27' by 4' we get 314' 
+as the LMT ofHyderabad in advance of GMT. As 1ST is 51/2 hours in advance of GMT the LMT ofHyderabad is 
+16 minutes less than 1ST (330- 314). So the LMT of Hyderabad is got by subtracting 16 minutes from 1ST and so 
+LMT of 02:30 pm 1ST becomes 02:14pm LMT. 
+In Col. 2 of Lahiri Ephemeris for 04.10.1970 Sidereal time at noon is given as 12 h 50 m correcting to minutes 
+(omitting the seconds). To this add time elapsed from noon, i.e. 02 h 14m. We get 15 h 04 mas the Sid. time at 
+race time of 02:30pm !ST. 
+Now turn to Table of Ascendants on page 74- 75 of Lahiri Annual Ephemeris. This being an abridged table you 
+have to work out by proportions both for latitude and Sidereal Time. If you possess detailed table you may 
+straightaway look under the said latitude for the required Sid. Time and strike Lagna in a minute. If this 
+abridged table is used work as follows: 
+As the latitude of Hyderabad falls between 16 N 47 and 18 N 58 for which the details are given here you have to 
+work by proportions Lagnas correspondings to the given Sid. Time and then work out by proportions. 
+Let us first take up lat. 16 N 47 
+For Sid. Time ofl4 h 47 m 
+Lagna is 10° Makara 
+For Sid. Time of 15 h 24 m 
+Lagna is 20° Makara 
+So for 37 m 
+Lagna moves by 10° 
+So for 17m 
+(15-4- 14-47) 
+Lagna moves by 10 x 17 + 37° 
+= 04° 34' (roughly). 
+Adding this to the position for Sid. Time of 14-4 7 we get 14 o 34' of Makara. 
+Similarly work out for lat. 18 N 58 when we get 14° Makara as Lagna. 
+For 16 N 47 
+Lagna is 14° 34' of Makara 
+For 18 N 58 
+Lagna is 14° oo' of Makara 
+We require for 17° 26'. Working as usual by proportions we get Lagna at 02:30pm 1ST at Hyderabad on that day 
+as 14° 17' of Makara. As stated before worked with detailed table it becomes easy. 
+~ Wo_rJ<.in~o_LG_t:.ah<(s_p_o_s_i"ti_o_ns_~ 
+After finding out Lagna for each race we have to work out the planetary positions as at race times. Except 
+Chandr all Grahas remain in the same Rasi during the course of race time ranging usually between 10 am and o6 
+pm. It is enough if we work out the positions for some day time say 01:30pm on the race day or for the time of 
+first race noting of course any changes of any particular Graha during the said hours in its Nakshatra and Rasi 
+positions. In the case of Chandr if there be change the same may be worked out. 
+i5b_How to wodcouLGrah<Ls ~ositions OILO.f.10.1970 aLo2:3o-~m_ISI_i5b_ 
+In this connection we wish to point out that except the position of Lagna the positions of Grahas remain the 
+same at the moment of 02:30 pm 1ST all over world. So for calculation of Graha's positions we need not bother 
+about the place of race. If you choose to work out their positions from a standard Panchanga of Driganitha you 
+may do so noting Nakshatra Padas of each Graha as that is of importance to us. 
+If you wish to work out from Lahiri Ephemeris proceed as follows. Lahiri has given the positions of Grahas 
+(longitudes in Rasi-degree-minute) for 05:30 am !ST. Starting with this, work out for the required time of race 
+noting the movement of that Graha for the difference of time thus evolved. If the motion is direct add this 
+difference and if retrograde (Vakri) subtract from the position at 05:30 am !ST. Then you get the positions for 
+the required time. The difference is got by working out by proportions noting the daily motion of that Graha 
+which can be seen from the two successive days positions. Whether it is direct or retrograde motion may also be 
+seen from them. Of late Lahiri has given True Rahu positions in his Ephemeris while in the previous years he 
+was giving Mean Rahu positions. What we want is Mean Rahu position and this is given once in 10 days on page 
+30 of his annual Ephemeris. Taking the daily motion of Rahu as 3.18 minutes a day as his average motion work 
+out from the position of the known date given to the day of race by proportional basis. In this way you will be 
+able to cast the positions of all Grahas. As Ketu is situated at 180° apart from Rahu (once Rahu) is known Ketu is 
+automatically known. 
+Let us now work out Graha's positions at 02:30pm 1ST on 04.10.1970. 
+<< $> New Techniques of Prediction- Part lli 
+-2-
+by Chistabo, A.D. 2013 $> >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0005 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 5)
+BEGIN EMBEDDED TEXT
+» $> Chapter 1 
+li Contents 1 
+Working of Rahu and Ketu $> << 
+First of all note the difference of time from 05:30am 1ST to 02:30pm 1ST which is 9 hours. 
+Let us first take up the case ofSurya. 
+R-D-M 
+On 05.10.1970 at 05:30am his position is 05-17-53 
+On o4.I0.1970 
+05-16-54 
+The difference gives the daily motion of Surya as 59' a day of 24 hours. So his movement for 9 hours is 59 + 24 x 
+9 minutes which is roughly 22 minutes. Adding this to the position of Surya at 05:30 am we get the position of 
+Surya at 02:30 pm 1ST as 5 Rasis 17° and 16' (ignoring seconds). This position is at 17° 17' of Kanya and its 
+Nakshatra is Hasta 3rd Pada whose Nakshatra Lord is Chandr. See later lessons for reading Nakshatra positions 
+and Nakshatra Lords from degrees and minutes positions in Rasis. 
+In this way work out other Grahas noting of course their direct and retrograde motions. Worked this way the 
+following will be the positions of Grahas. 
+Surya - 05-17-16; Chandr - o6-26-56; Mangal - 04-26-19; Budh - 05-01-01; Guru - o6-15-18; Sukr - o6-27-13; Sani -
+00-28-24 
+and their Nakshatra Lords in order are: 
+Ch- Gu- Sk- Sy- Ra- Gu - Sy respectively from Surya on to Sani in order. 
+$l Working__of_Ra_b.~u~a_!l_d_Ketu~~ 
+Please refer to page 30 of Lahiri Ephemeris. On 28.09.1970 at 05:30 am his position is 10-07-32. On 04.10.1970 at 
+02:30pm the difference is 6 days and 9 hours. 
+For 6 days at 03-18 a day it works to about 19'. 
+For another 9 hours it is 1 minute. Thus the motion for the said difference is 20'. As motion of Rahu is always 
+retrograde substract 20' from the position on 28.09.1970 and thus we get Rahu posited at 10 Rasis 07° 12', i.e. at 
+07° 12' in Kumbha. As Ketu is at 180° from Rahu the position of Ketu is 07° 12' of Simha. Nakshatras of Rahu and 
+Ketu are Shatabhisha 1st Pada and Magha 3rd Pada respectively and their Nakshatra Lords are Rahu and Ketu 
+respectively. 
+Summing up, the chart as at 02:30pm 1ST on 04.10.1970 stands as following: 
+R~i~ 
+NTP Race ex 001 
+E 
+"''" 
+Roh 7 
+.... ' 
+"'" 
+Pun 1 
+Pus L .. , 
+a 
+YP: 
+a a 
+Sa~ 
+Rahu 
+Bt..S 
+M«g 4 
+r--
+r--
+u 
+a 
+v 
+k 
+h 
+D 
+uu 
+Ke~o 
+Ketu 
+Ash 4 
+P.p 5 
+Kuja 
+I 
+lri 
+Vrs 
+Mit 
+Kar 
+lrii 
+m 
+I 
+Moon 
+Guru 
+Budha 
+Sukra 
+Sun 
+From SJS 6: 
+Ma~1 
+""'' 
+Nand a 
+U.po 
+ch 
+Mes 
+0 
+Ravi 
+au 
+Sim 
+T 
+Bu~2 
+Mang 
+U.b :.< 
+Rikta 
+Purna Bhadra 
+Has 7 
+Tabular form of Graha's positions 
+d 
+Min 
+Sukr 
+Shan 
+Soma 
+Kan 
+p 
+Sy~3 
+Budh 
+Graha 
+Rasi 
+O&' 
+Nak. Pada 
+Nak. 
+P.b 1 
+Jaya 
+C1Ul 
+Lord 
+s 
+Kum 
+ah 
+Guru 
+am 
+Tul 
+r 
+Sy 
+Kan 
+17-16 
+Hasta 
+3 
+Ch 
+Ch 
+Thu 
+26-56 
+Visakha 
+3 
+Gu 
+ShUJ 
+Swt' 
+g 
+ai 
+Mak 
+Dha 
+Vrk 
+e 
+t 
+Bili. 
+Gu~s 
+Dhn t1 
+Vis 1 
+Ma 
+Sim 
+26-19 
+Pubba 
+4 
+Sk 
+rii 
+kh 
+j 
+bh 
+y 
+n 
+ri 
+Sk~6 
+Ch~6 
+Bu 
+Kan 
+01-01 
+Uttara 
+2 
+Sy 
+~rv7 
+Ab10 
+UAso 
+PAs5 
+Mul4 
+Jye 3 
+Am' 
+ii 
+Lg; 
+; 
+Gu 
+Tul 
+15-18 
+Swati 
+3 
+Ra 
+. 
+Sk 
+Tul 
+27-13 
+Visakha 
+3 
+Gu 
+SaR 
+Mes 
+28-24 
+Krittika 
+1 
+Sy 
+Ra 
+Kum 
+07-12 
+Shatabisha 
+1 
+Ra 
+Ke 
+Sim 
+07-12 
+Makha 
+3 
+Ke 
+For picking the winners we need the positions of Grahas in Rasis and Nakshatras and again we have to know 
+what each quarter of a Nakshatra represents in terms of alphabets (Nama Nakshatra). As we are mainly 
+concerned with Nakshatra positions of Grahas it is enough if they are worked out either with the aid of standard 
+Drigganita Panchanga as "Kumbakonam Mutt Viswanatha Swrothy Panchangam" or Lahiri Ephemeris. Those 
+who use Raphael or any other Sayana Ephemeris should get the positions converted to Nirayana using the 
+correct Ayanamsa formulated by Government of India. 
+« $> New Techniques of Prediction - Part lli 
+by Chistabo, A.D. 2013 $> >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0006 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 6)
+BEGIN EMBEDDED TEXT
+» $> Chapter 2 
+li Contents 1 
+Distribution of Nakshatras in Rasis $> << 
+~ S:h~R~~f ~ ~ 
+Nakshatra nositions of Grahas So 
+T ~,...,TirtTY,...,rT r.- ~OrtTrTOTTr-t OT ,-,T t'"'TT,...,rt 
+.r- .... 
+Nakshatra positions of Grahas are very important for us as the crux of picking up the winners depends mainly 
+on Nakshatra Lords. How Nakshatras are distributed in the Zodiac and how to evaluate from the degree 
+positions the concerned Nakshatras will be explained in these lessons. 
+So_Distribution_of_Nakshatras in_Rasis So_ 
+There are 27 Nakshatras running in a particular order from Aswini to Revati. All these 27 Nakshatras are 
+distributed equally and in consecutive order in 12 Rasis of the Zodiac. Thus by 'Rule-of-Three' we get 2 1/2 
+Nakshatras located in each Rasi. For some convenience each Nakshatra is divided into 4 equal parts called 
+Padas. Thus a Rasi contains 2 1/2 Nakshatras or 9 Padas. The entire Zodiac has 108 Padas which number is given 
+much importance in the chantings (Astotharam). Next the order: 
+Starting from oo
+0 of Mesha with Aswini 1st Pada, we have in Mesha - Aswini 4 Padas, Bharani 4 Padas and 
+Krittika 1 Pada, totalling 2 1/2 Nakshatras or 9 Padas. Next Vrishabha Rasi starts with Krittika 2nd, 3rd and 4th 
+Pada, Rohini 4 Padas and Mrigashira 1st and 2nd Pada. Running further in the same order, lastly in Meena Rasi 
+4th Pada of Purvabhadra, all 4 Padas of Uttarabhadra and all 4 Padas of Revati are situated. Thus you have to 
+note the distribution of Nakshatras. These are fixed Nakshatra positions. 
+;JiJ l;:.l_yw_ t o_app_y_I:_tj_o_~lo_ngi tQd_i_na_Ls p_a_ns_to _ th_es e_N a_ksh_a_t:tas? ~ 
+You must know that the longitudinal span of a Rasi is 30°. Distributing these 30° to 9 Padas of a Rasi, we get 03° 
+20' as the longitudinal span of a Nakshatra Pada. As such 4 Padas constituting a full Nakshatra occupy 13° 20' 
+span in a Rasi. Above is stated the order of Nakshatras in Rasis. Accordingly allot their degree positions. For 
+clearer understanding see the table below: 
+Rasis 
+Nakshatras 
+Span in ° & ' 
+Rasis 
+Nakshatras 
+Span in ° & ' 
+!) 
+Mes 
+Aswini (F) 
+oo-oo to 13-20 
+7) 
+Tul 
+Chitra (3/4) 
+oo-oo to o6-4o 
+Bharani (F) 
+13-20 to 26-40 
+Swati (F) 
+o6-4o to 20-oo 
+Kritika (1) 
+26-40 to 30-oo 
+Vishaka (1/2/3) 
+20-oo to 30-oo 
+2) 
+Vrb 
+Krittika (2/3/4) 
+oo-o to 10-oo 
+8) 
+Vrk 
+Vishaka (4) 
+oo-oo to 03-20 
+Rohini (F) 
+10-oo to 23-20 
+Anuradha (F) 
+03-20 to 16-40 
+Mrigashira (1/2) 
+23-20 to 30-oo 
+Jyesta (F) 
+16-40 to 30-oo 
+3) 
+Mit 
+Mrigashira (3/ 4) 
+oo-oo to o6-4o 
+9) 
+Dha 
+Moola (F) 
+oo-oo to 13-20 
+Ardra (F) 
+o6-4o to 20-oo 
+P. Ashada (F) 
+13-20 to 26-40 
+Punarvasu ( 1/2/3) 
+20-oo to 30-oo 
+U. Ashada (1) 
+26-40 to 30-oo 
+4) 
+Kar 
+Punarvasu (4) 
+oo-oo to 03-20 
+10) 
+Mak 
+U. Ashada (2/3/4) 
+oo-oo to 10-oo 
+Pushya (F) 
+03-20 to 16-40 
+Sravana (F) 
+10-oo to 23-20 
+Aslesha (F) 
+16-40 to 30-oo 
+Dhanista (1/2) 
+23-20 to 30-oo 
+5) 
+Sim 
+Magha (F) 
+oo-oo to 13-20 
+n) 
+Kum 
+Dhanista (3/4) 
+oo-oo to o6-4o 
+P. Phalguni (F) 
+13-20 to 26-40 
+Shatabisha (F) 
+o6-4o to 20-oo 
+U. Phalguni (1) 
+26-40 to 30-oo 
+P. Bhadra (1/2/3) 
+20-oo to 30-oo 
+6) 
+Kan 
+U. Phalguni (2/3/ 4) 
+oo-oo to w-oo 
+12) 
+Min 
+P. Bhadra (4) 
+oo-oo to 03-20 
+Hasta (F) 
+10-oo to 23-20 
+U. Bhadra (F) 
+03-20 to 16-40 
+Chitra (1/2) 
+23-20 to 30-oo 
+Revati (F) 
+16-40 to 30-oo 
+From the above table Nakshatra falling at a particular degree and minute may be worked out. Grahas posited at 
+such places are said to be in that Nakshatra. 
+« $> New Techniques of Prediction- Part lli 
+by Chistabo, A.D. 2013 $> >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0007 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 7)
+BEGIN EMBEDDED TEXT
+» $> Chapter 2 
+li Contents 1 
+Nakshatra Lord $> << 
+~ N akshat_r_a Lor~ 
+Each Nakshatra is ruled by a Graha as per Udu Dasha as stated below. Thus the ruling Graha of a Nakshatra in 
+which a Graha is posited becomes Nakshatra Lord of that Graha. 
+Nakshatra 
+Nakshatra 
+Lord 
+Aswini 
+Magha 
+Moola 
+Ke 
+Bharani 
+Purvaphalguni 
+Purvashadha 
+Sk 
+Krittika 
+Uttaraphalguni 
+Uttarashadha 
+Sy 
+Rohini 
+Hasta 
+Sravana 
+Ch 
+Mrigashira 
+Chitra 
+Dhanista 
+Ma 
+Ardra 
+Swati 
+Satabisha 
+Ra 
+Punarvasu 
+Vishaka 
+Purvabhadra 
+Gu 
+Pushya 
+Anuradha 
+Uttarabhadra 
+Sa 
+Aslesha 
+Jyesta 
+Revati 
+Bu 
+~ Aspects $> 
+This is also of importance to us and so you should know the system of aspects. All Grahas aspect 7th Rasi from 
+the one occupied by them. In addition, the following are the special aspects to be noted: 
+Mangal aspects 
+4 and 8 
+Guru aspects 
+Sani, Rahu & Ketu aspect 
+sand 9 
+3 and 10. 
+$> RasiLords \5!>. 
+You should first of all know Lord of each Rasi and they are as follows: 
+Mesha & Vrischika 
+are ruled by 
+Mangal 
+Vrishabha & Tula 
+Mithuna & Kanya 
+Dhanus & Meena 
+Makara & Kumbha 
+Karkataka 
+Simha 
+Kumbha 
+Sukr 
+Budh 
+Guru 
+Sani 
+Chandr 
+Surya 
+Rahu [co-Lord] 
+Mesha 
+Ketu [co-Lord; more common info is Vrischika] 
+P.S.: Inspite of this easy coaching on the astrological side if anyone feels it difficult to erect the map he may get 
+it done by a local astrologer, and then proceed further on our theory. 
+For the benefit of laymen who do not know much of astrology we furnish below a ready-made table of Navamsa 
+and Drekkana. Please note the following meanings. 
+The Roman figures denote the number of Rasis counted from Mesha as 1 is Mesha, 5 is Simha, 12 is Meena and so 
+on. The top row in Roman figures denotes Rasis from Mesha onwards in which we wish to know Amsa parts. 
+The first column is in degrees and minutes in those Rasis. The other columns from top to bottom denote Rasis 
+counted from Mesha where those Amsas fall. For example, to know Drekkana of a Graha situated in Kanya 
+between 10 and 20° see under Roman figure 6 and 2nd row showing No. 10, meaning 10th Rasi counted from 
+Mesha, i.e. Makara and so Drekkana falls in Makara. 
+Similarly a Graha situated in Mithuna 15° finds its Navamsa in Kumbha as follows: 
+In Navamsa table in 3rd column find 4th row showing No. 10 which is Kumbha. In this way you can evaluate the 
+two charts with a little practice. 
+« $> New Techniques of Prediction- Part lli 
+by Chistabo, A.D. 2013 $> >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0008 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 8)
+BEGIN EMBEDDED TEXT
+» $> Chapteq 
+li Contents 1 
+Numberology $> << 
+Drekkana table 
+Drekkanas 
+Till 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+]] 
+12 
+10-00 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+lO 
+11 
+12 
+20-00 
+5 
+6 
+7 
+8 
+9 
+lO 
+11 
+12 
+I 
+2 
+3 
+4 
+30-00 
+9 
+10 
+11 
+12 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+Table of Navamsa 
+Navamsas 
+Till 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+]] 
+12 
+03-20 
+1 
+lO 
+7 
+4 
+1 
+lO 
+7 
+4 
+I 
+10 
+7 
+4 
+o6-4o 
+2 
+11 
+8 
+5 
+2 
+11 
+8 
+5 
+2 
+11 
+8 
+5 
+10-00 
+3 
+12 
+9 
+6 
+3 
+12 
+9 
+6 
+3 
+12 
+9 
+6 
+13-20 
+4 
+I 
+10 
+7 
+4 
+1 
+10 
+7 
+4 
+I 
+10 
+7 
+16-40 
+5 
+2 
+11 
+8 
+5 
+2 
+11 
+8 
+5 
+2 
+11 
+8 
+20-00 
+6 
+3 
+12 
+9 
+6 
+3 
+12 
+9 
+6 
+3 
+12 
+9 
+23-20 
+7 
+4 
+1 
+10 
+7 
+4 
+1 
+10 
+7 
+4 
+I 
+10 
+26-40 
+8 
+5 
+2 
+11 
+8 
+5 
+2 
+11 
+8 
+5 
+2 
+11 
+30-00 
+9 
+6 
+3 
+12 
+9 
+6 
+3 
+12 
+9 
+6 
+3 
+12 
+~ l~tumber,ology ~ 
+We have our own system of numberals different from the one followed by the West. Still it would be 
+advantageous sometimes to know that too which are as follows: 
+Numbers 
+Graha 
+governed 
+Sy 
+1&4 
+Ch 
+2 &7 
+Ma [Ke] 
+9 
+Bu 
+5 
+Gu 
+3 
+Sk 
+6 
+Sa [Raj 
+8 
+Please remember always that Rahu is like Sani and Ketu like Mangal and so Rahu's No. is 8 while Ketu's No. is 9· 
+~ s;n~~~~r 3 ~ 
+The next and the most important item you have to learn is Akshara Nama (alphabetology) of Nakshatra Padas. 
+We have already described that each Nakshatra has 4 Padas and also taught the mode of reading them from the 
+degree positions in Rasis. We now give the alphabets assigned to each quarter. 
+$> Al~habets o{Nakshatra_Fadas $> 
+P.S.: In the following it is more the pronounciation that is important than letters as it is the sound that counts 
+more than letters and this can be perfectly stated in Sanskrit letters. When it has to be mentioned in other 
+languages its real consonance should be explained and so when writing it is English we prefer to convey them 
+through sound formed by more than one letter. In such cases it is only the sound formed by that word to be 
+taken into consideration and not the letters. For proper guidance we give also the Sanskrit letters that may 
+always be taken as correct one. 
+<< $> New Techniques of Prediction- Part Ill 
+-6-
+by Chistabo, A.D. 2013 $> >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0009 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 9)
+BEGIN EMBEDDED TEXT
+» ~ Chapteq 
+li Contents 1 
+Alphabets ofNakshatra Padas ~ 
+<< 
+Nakshatras 
+Sound of Padas 
+Devanagari' 
+lAST 
+01 
+Aswini 
+Ke 
+Chu 
+Chay 
+Cho 
+Law 
+~ 'il 
+'<it 
+<.>; 
+cu 
+ce 
+co 
+Ia 
+02 
+Bharani 
+Sk 
+Lee 
+Loo 
+Lay 
+Low 
+8 
+~ 
+~ 
+<>;) 
+li 
+lu 
+le 
+lo 
+03 
+Krittika 
+Sy 
+Awe 
+E 
+00 
+A 
+;on 
+~ 
+'3" 
+'1. 
+a 
+i 
+u 
+e 
+04 
+Rohini 
+Ch 
+0 
+Va 
+We 
+Vu 
+;oil 
+<! 
+Ff 
+'! 
+0 
+va 
+vi 
+vu 
+05 
+Mrigashira 
+Ma 
+Way 
+Woe 
+Ka 
+Ki 
+~ 
+cit 
+9>1 
+f<f; 
+ve 
+YO 
+ka 
+ki 
+o6 
+Ardra 
+Ra 
+Ku 
+Gha 
+Gna 
+Chha 
+~ " 
+[>!]* 
+~ ku 
+ga 
+[gna] 
+cha 
+07 
+Punarvasu 
+Gu 
+K 
+Ko 
+Ha 
+He 
+~ <fit 
+l?: 
+fu 
+ke 
+ko 
+ha 
+hi 
+o8 
+Pushya 
+Sa 
+Who 
+Hay 
+Ho 
+Da 
+!!: 
+~ m '5 
+hu 
+he 
+ho 
+c;la 
+09 
+Aslesha 
+Bu 
+D 
+Do 
+Day 
+Doe 
+fs 
+~ 
+~ 
+'51 
+o;li 
+o;lu 
+o;le 
+o;lo 
+10 
+Magha 
+Ke 
+Ma 
+Me 
+Mu 
+May 
+l1 
+#! 
+13: 
+it 
+rna 
+mi 
+mu 
+me 
+11 
+Purvaphalguni 
+Sk 
+Mo 
+Ta 
+Ti 
+To 
+lit 
+l: 
+R: 
+~ 
+mo 
+ta 
+ti 
+\U 
+12 
+Uttaraphalguni 
+Sy 
+Tay 
+Toe 
+Pa 
+p 
+~ it 
+q 
+fq 
+te 
+\0 
+pa 
+pi 
+13 
+Hasta 
+Ch 
+Pu 
+Sha 
+Na 
+Dha 
+'3: 
+q 
+UT 
+?: 
+pu 
+pa 
+l)a 
+o;lha 
+14 
+Chitra 
+Ma 
+Pay 
+Po 
+Ra 
+Ri 
+q qr 
+\ 
+ft 
+pe 
+po 
+ra 
+ri 
+15 
+Swati 
+Ra 
+Ru 
+Ray 
+Ro 
+Tha 
+~ 
+~ 
+if 
+(I 
+ru 
+re 
+ro 
+ta 
+J6 
+Visakha 
+Gu 
+Thi 
+Thu 
+Thay 
+Tho 
+Rl 
+~ 
+~ 
+a1 
+ti 
+tu 
+te 
+to 
+17 
+Anuradha 
+Sa 
+Na 
+Ni 
+Nu 
+Nay 
+;:j 
+R 
+~ 
+;. 
+na 
+ni 
+nu 
+ne 
+IS 
+Jyesta 
+Bu 
+No 
+Ya 
+Yi 
+You 
+;:ft 
+<I 
+~ 
+':! 
+no 
+ya 
+yi 
+yu 
+19 
+Moola 
+Ke 
+Ye 
+Yo 
+Ba 
+B 
+i! 
+<it 
+Cl 
+Ff 
+ye 
+yo 
+ba 
+bi 
+20 
+Purvashadha 
+Sk 
+Bu 
+Ddha 
+Bha 
+Da 
+'! 
+'<l 
+~ 
+'5 
+bu 
+dha 
+bha 
+c;la 
+21 
+Uttarashadha 
+Sy 
+Bay 
+Bo 
+Ja 
+Ji 
+~ 
+~ 
+;;:{ 
+~ be 
+bho 
+ja 
+ji 
+00 
+Abhijit 
+Sy 
+Ju 
+Jay 
+Jo 
+Sha 
+'i!. 
+~ 
+;;it 
+~· 
+ju 
+je 
+jo 
+sa 
+22 
+Sravana 
+Ch 
+She 
+Shoe 
+Shay 
+Show fu 
+~ 
+~ w si 
+su 
+se 
+so 
+23 
+Dhanista 
+Ma 
+Ga 
+Gi 
+Gu 
+Gay " 
+F1 
+~ 
+ij 
+ga 
+gi 
+gu 
+ge 
+24 
+Satabisha 
+Ra 
+Go 
+Sa 
+See 
+Sue 
+<it "' 
+ffi 
+~ go 
+sa 
+si 
+su 
+25 
+Purvabhadra 
+Gu 
+Say 
+So 
+Tha 
+The 
+B ~ 
+G; 
+~ se 
+so 
+da 
+di 
+26 
+Uttarabhadra 
+Sa 
+Thu 
+Kha 
+Jha 
+Thha 
+~ 
+'-" 
+~ 
+lq 
+du 
+kha 
+jha 
+tha 
+27 
+Revati 
+Bu 
+They Though 
+Cha 
+Chi 
+~ 
+qT 
+"' 
+Rl 
+de 
+do 
+ca 
+ci 
+-- --
+-- ---
+'Devanagari font and lAST transcription have been added by editor, Chistabo. If you do not know what is this, simply 
+ignore. If you want, you can cross-compare thoroughness of my 'addition'- there is original scan at the end of the document. 
+If you compare 'original' sounds of Padas with lAST you can notice that sounds as given by original author (brilliant (bow!) 
+Mr. Iyer) are mere phonetically expressed original Sanskrit 'letters'- Aksharas. 
+*This is closest match I could find (Sravana 4th Pada), but I strongly believe it is correct; [Ardra 3rd Pada] is missing from 
+original pdf, this is 'direct translation'. Bear in mind I am only amateur student of Sanskrit. 
+« ~ New Techniques of Prediction- Part lli 
+by Chistabo, A.D. 2013 ~ >> 
+
+END EMBEDDED TEXT
+
+=== NTP-3 | SOURCE PDF PAGE 0010 ===
+Visual source: ../pdf-sections/ntp-3_pdf-pages-0001-0010.pdf (section page 10)
+BEGIN EMBEDDED TEXT
+» ~ Chapter 4 
+.:; Contents ~ 
+f 
+"'-
+!!, 
+;) 
+Some peculiarities in the application o alphabetology ~ 
+<< 
+P.S.: Letters of Abhijit Nakshatra are included under Sravana Nakshatra. 
+So Some _Reculiarities in the al!_Rlication of al_Rhabetology So_ 
+Under our system of diagnosing the winner we make use of alphabetology and numerology. Alphabetology is 
+used only to find Nakshatra Pada from the initial sound of the name of the horse. Its first letter and its first 
+pronouncement (Uchharana) is important for us irrespective of what other letters of the name of the horse are. 
+For example, for horse named 'Episode' we take its first pronouncement as 'A' [think phonetically] and not the 
+first letter 'E' and so take it as Krittika 4th Pada. For 'Full Try' we take 'Pu' as in Sankrit there is not a letter 
+conveying its real pronounciation and so as Hasta 1st Pada. In some cases the initial and the stressed 
+pronounciation have both to be considered. For horse named 'Fragrance' take 'Pa' first of Uttaraphalguni 3rd 
+Pada and then 'Ra' of Chitra 3rd Pada. For horse named 'Grey' take 'Gay' of Dhanista 4th Pada and 'Ray' of Swati 
+2nd Pada. In the case of a horse with more than one syllable take all syllables paying more value to the first. For 
+horse named 'Nee! Kamal' take 'Nee' ['Ni' actually] of first syllable of Anuradha 2nd Pada and then 'Ka' of 
+Mrigashira 3rd Pada. When unimportant words are prefixed to the names of horses omit them and take only 
+more important ones. They are of the type like 'The', 'Mr.' etc. that preceed the names. 
+~ ~h~~!~f~ ~ 
+\30 Theories of spottin~ the Winners \30 
+I"\-
+TTT,-,.......,.y,-....._ ,.....11' 
+....._.,."""',.....~rTTTs=J ~li'Tr 
+I I TTTTTrTt"""\ 
+1"'\-. 
+We have so far discussed at length all the fundamentals needed for judgement of a winner in a race. We now go 
+to the subject proper. 
+I divide this chapter into 4 sections each one dealing with a different theory of spotting the winner, and then 
+finally conclude as to how to use them in toto or in preferrential order. 
+In a race it is only the name of the horse and its card number that are prominent both in toto and with the 
+bookies. Mostly it is the card number that predominates. So any rule of detecting the winner should be based 
+only on these 2 factors. As the card number is more prominent as the horse carries its number on its back we 
+attach more importance to card number in our tests. In this connection we wish to caution the punters that 
+they always long for a very simple rule understandable by even a layman. If the art was so simple then everyone 
+would have gained and the glamour for race would have stopped. Just to please such punters there have been 
+many simple rules formulated by easy authors with the result the authors having grown richer by the sale of 
+their books while the punters have gone poorer. Be it remembered that any theory that is not based on 
+Heavenly bodies is sure to fall to the ground. Test our theories based entirely on Heavenly bodies though a bit 
+taxing and then see how it works. 
+As has been said it is with the aid of alphabetology and numerology that we find the winner and that the letter is 
+founded on quite a different principle from what the westerners and their followers use. We count numbers 
+taking account of Rasis counted from Lagna. 
+If you so desire you may also make use of the western system of numbers provided they also second the first 
+arrived numbers. 
+Under alphabetology there are 2 methods. One based on Nakshatra Padas that we use in this text and other one 
+based on groups of letters called Vargas which are as follows: 
+Group 
+Governed 
+by 
+Vowels from AA to Aou 
+Sy 
+Kavarga (Ka to Gyna) 
+Ma 
+Chavarga (Cha to Engna) 
+Sk 
+Tavarga (Ta to NNa) 
+Bu 
+Thavarga (Tha to Na) 
+Gu 
+Pavarga (Pa to Ma) 
+Sa 
+Consonants from Ya to LLa 
+Ch 
+We have given these only for the sake of knowledge and they have not given full satisfaction in this case and so 
+we leave it there. So alphabetology based on Nakshatra Padas is the one you have to master as at each stage we 
+make use of it. 
+After stating all the necessary factors we will thereafter take up the spotting of winners by different modes as 
+mentioned before. 
+« ~ New Techniques of Prediction- Part Ill 
+-8-
+by Chistabo, A.D. 2013 ~ >> 
+
+END EMBEDDED TEXT

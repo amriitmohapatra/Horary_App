@@ -1,0 +1,38 @@
+{
+  "name": "astro-amriit",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Astro-Amriit \u2014 offline, single-file Vedic astrology app with Parashara's Light parity",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode site",
+    "build:single": "vite build --mode single && node scripts/finalize_single.mjs",
+    "build:desktop": "tauri build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "contract": "node scripts/build_contract_check.mjs",
+    "scan": "node scripts/prepublish_scan.mjs",
+    "ci": "npm run typecheck && npm test && npm run build && vite build --mode single && npm run contract && npm run test:e2e && npm run scan"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "^5.2.6",
+    "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@fontsource/marcellus": "^5.2.6",
+    "@preact/signals": "2.2.1",
+    "preact": "10.26.9"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.1",
+    "@preact/preset-vite": "2.10.1",
+    "@tauri-apps/cli": "2.11.5",
+    "@types/node": "22.15.30",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "vite-plugin-singlefile": "2.2.0",
+    "vitest": "3.2.4"
+  }
+}

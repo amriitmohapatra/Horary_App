@@ -90,3 +90,12 @@ numbers come from its transit cache, 2020–2056). Full evidence:
   cross-check for horary dates (see
   [05_validation_ground_truth.md](05_validation_ground_truth.md)).
   PL 9 advertises Swiss Ephemeris/True Chitra (not examined).
+
+## Parashara's Light 9 (the family's current program; KAAST 2 default)
+
+Decoded 2026-10-17 from one PL 9.0 Page 1 screenshot (NUM; details in
+06_decisions_log.md): Swiss Ephemeris positions; PL Lahiri polynomial
+(same formula as PL 7); mean equinox; true node; houses on **geographic**
+latitude; seconds **rounded**; dasha year **365.2421875** days; the atlas
+applies India war time (UTC+6:30, 1942-09-01 – 1945-10-15). Still open:
+ΔT for modern dates and the house system of the intermediate cusps.
