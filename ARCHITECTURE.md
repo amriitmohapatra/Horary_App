@@ -92,6 +92,9 @@ kaast2/
     user_guide/
   .github/workflows/ci.yml    lint, typecheck, unit, engine, build both modes, e2e, contract check
   vercel.json                 static output dir, headers (wasm MIME, COOP/COEP not needed)
+  src-tauri/                  Tauri 2 shell for the desktop installers (Rust toolchain in CI only)
+    tauri.conf.json           window, bundle targets (nsis, msi, dmg), updater DISABLED, no network allowlist
+    icons/
 ```
 
 The folder is self-contained so that, at publication time, it can become the
@@ -156,6 +159,7 @@ bundles. Adding "PL9" or "JHora" later is a third bundle.
   base64 and switches the loader to Embedded. New version = new file name; shipped
   files are never overwritten (invariant 11).
 - **Site build**: `npm run build` → `dist-site/` for Vercel (static, no functions).
+- **Desktop build**: `npm run build:desktop` → Tauri 2 wraps `dist-site/` in a native window (system WebView2 on Windows, WKWebView on macOS); outputs `KAAST 2 Setup.exe` (NSIS) / `.msi` and `KAAST 2.dmg`, plus `SHA256SUMS.txt`. Built in CI on `windows-latest` and `macos-latest` runners; no network access is needed by the app at install or run time. The WASM and data files ship inside the bundle via the FetchLoader reading from the app's own asset protocol (no Embedded base64 needed).
 - **Contract check** after every build: parse the dist, ensure every referenced
   helper exists and the embedded blobs decode to the expected byte lengths.
 - **CI** (GitHub Actions): typecheck → lint → unit → engine (Node + WASM) →
@@ -246,9 +250,15 @@ Consequences: visual continuity guaranteed; other styles are additive.
 
 ---
 
+**ADR-9 Desktop installers with Tauri, not Electron.**
+Context: an acquaintance of the boss uses devices with no internet at all; a double-clickable installer on a USB stick is the only acceptable delivery. Options: Electron (bundles Chromium, ~150 MB, heavy), Tauri 2 (uses the OS WebView, ~10 MB, Rust toolchain only in CI), PWA (needs a first online visit — rejected), plain HTML file (already offered; some users want "a real app").
+Decision: Tauri 2, same `dist-site/` output, updater disabled, no permissions beyond file dialogs for import/export, installers built in CI for Windows x64 and macOS (Intel + Apple Silicon universal).
+Consequences: one more CI job and a Rust toolchain in CI; unsigned builds show a one-time OS warning (documented; signing is decision D10); the single HTML file stays the primary artefact for everyone else.
+
 ## 10. Open architectural questions
 
 - Rounding of displayed longitudes in PL7 (truncate/round; seconds/minutes) → profile constant after printouts.
 - Whether to compute Placidus with Swiss `swe_houses_ex` (fast, well tested) or our own semi-arc trisection to mirror PL7's routine; start with Swiss, add our own only if printouts show a systematic difference.
 - Placement of Uranus/Neptune/Pluto (PL7 shows them optionally) — off by default.
 - Export formats beyond JSON/XML (PDF print stylesheet is planned; Excel via surgical writer is Phase 2).
+- Desktop: minimum OS versions (WebView2 is preinstalled on Windows 10 20H2+/11; older Windows needs the offline WebView2 bootstrapper bundled in the installer — to be verified in slice 8b); macOS 11+.

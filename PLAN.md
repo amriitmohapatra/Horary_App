@@ -155,6 +155,7 @@ nakshatra, yoga, karana — STD).
 - Loads in < 3 s on a 2020 laptop; a chart recalculates in < 100 ms after WASM boot.
 - Works on phone width (16 px gutter, no horizontal scroll), keyboard-navigable, colour never the only cue, light and dark themes, Odia-ready text pipeline (Phase 2).
 - Every number shown is reproducible: a "How was this computed?" panel per artefact (as the Kala Chakra power steps do today).
+- **Installable on devices that never go online**: a Windows installer (`.exe`/`.msi`) and a macOS disk image (`.dmg`) that wrap the same offline build (Tauri, ADR-9). Install from a USB stick; no network at install or run time; no telemetry; no auto-update calls. The single HTML file remains the zero-install option.
 
 ---
 
@@ -206,6 +207,7 @@ one slice ≈ one focused session.
 | 6 | Bhava chalit | Sripati + equal bhava tables and charts | Printout parity |
 | 7 | Jaimini | Karakas, padas, upapada, karakamsha, drishti, argala, special lagnas | Printout parity + PyJHora cross-check |
 | 8 | Transits | Transit chart, scrubber, upcoming-transit list | Transit export parity at fixed instants; ingress dates vs Swiss |
+| 8b | Desktop installers | `KAAST 2 Setup.exe` (Windows) and `KAAST 2.dmg` (macOS) built in CI from the same source; USB-stick install guide | Installer runs on an offline VM/machine; Playwright-equivalent smoke inside Tauri; checksum file published |
 | 9 | Parity audit and 1.0 | `parity/REPORT.md`, user guide, release note | All rows green or explicitly waived by you |
 | 10 | Phase 2 kick-off | Your feature cull list; customisation backlog; Vercel; open-sourcing | — |
 
@@ -241,6 +243,7 @@ Parallel track (any time): import/export of GeoVision XML; places; themes; docs.
 | D7 | Replicate PL7's Krishnamurti ayanamsas as options | Yes (cheap, decoded) |
 | D8 | Avayogi / Duplicate Yogi conventions if PL7 printouts stay ambiguous | Textbook: 6th nakshatra lord / sign lord |
 | D9 | Licence of the public repo: AGPL-3.0 (forced by Swiss Ephemeris unless a commercial licence is bought) | AGPL-3.0 |
+| D10 | Desktop installers: unsigned builds (free; one-time OS warning) or signed builds (Apple developer account ≈ US$99/yr, Windows certificate) | Unsigned, with a USB install guide |
 
 ---
 
@@ -295,6 +298,7 @@ decoding, Playwright for build verification, a field-by-field parity script;
 | Personal data in the repo (1 559 charts incl. family births; proprietary PL7 installation) | Must never go public | §10 cleanup before any public push; fixtures anonymised |
 | Build drops code silently (happened in v1.01) | Broken release | Contract check + Playwright smoke in CI |
 | Odia text pipeline later | Rework | Keep all user-visible strings in one dictionary from slice 0 |
+| Unsigned installers trigger OS warnings (Windows SmartScreen; macOS Gatekeeper "unidentified developer") | Internet-phobic acquaintance cannot install | Document the right-click → Open / "More info → Run anyway" steps in the USB guide; optional later: Apple notarisation (needs a paid developer account) and a Windows code-signing certificate — a boss decision (D10) |
 
 ---
 
@@ -310,6 +314,7 @@ decoding, Playwright for build verification, a field-by-field parity script;
    sketches, or words) before the UI/UX designer writes the design contract in
    slice 0/2. A `kaast2/docs/design/IDEAS_FROM_BOSS.md` file will hold them.
 3. **Chart layout is East Indian, exactly as Kala Chakra 1.5** — carried into D4 and §3.2.
+4. **Build Windows `.exe` and macOS `.dmg` installers** so the app can be installed on devices with no internet at all (an acquaintance uses no Wi-Fi and no mobile data). Carried into §3.10, slice 8b, D10 and ADR-9. Distribution: USB stick with the installer, a checksum file and a one-page install guide.
 
 ## 11. Reminder for the end of Phase 1: going public
 
@@ -324,4 +329,4 @@ When parity is reached and Phase 2 customisation is agreed, we will:
 
 ## 12. Session log
 
-- **2026-10-17** — Boot from CLAUDE.md/knowledge; absorbed the PL7 report and open items; inventoried GeoVision (1 559 input-only charts; 436 cache months); read the guide's method chapters; wrote PLAN v0.1 and ARCHITECTURE v0.1. Boss decided: East Indian chart layout as in Kala Chakra; share the Iyer books later; next session starts from the prompt in CLOUD_HANDOFF.md. No app code yet. Next: boss answers D1–D9; slice 0.
+- **2026-10-17** — Boot from CLAUDE.md/knowledge; absorbed the PL7 report and open items; inventoried GeoVision (1 559 input-only charts; 436 cache months); read the guide's method chapters; wrote PLAN v0.1 and ARCHITECTURE v0.1. Boss decided: East Indian chart layout as in Kala Chakra; share the Iyer books later; Windows and macOS installers for fully offline devices; next session starts from the prompt in CLOUD_HANDOFF.md. No app code yet. Next: boss answers D1–D9; slice 0.

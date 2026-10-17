@@ -250,3 +250,6 @@ architecture.
   (Moon/Rahu, 348 months) as automatic ΔT/ayanamsa test; decoded rules as
   fixtures; PyJHora as independent cross-check.
 - No engine code changed in this session.
+- Addendum: the user also wants Windows (.exe) and macOS (.dmg) installers
+  for devices that never connect to the internet → Tauri 2 wrapper around the
+  same web build (ADR-9), slice 8b, decision D10 on code signing.

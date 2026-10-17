@@ -53,7 +53,8 @@ Then do the following:
   rules can be catalogued; (b) send my rough UI design ideas; (c) send a
   screenshot/PDF of my PL7 "Page 1" and the definition of the "Iyer Cure" D11;
   (d) at the end of Phase 1 we make the app public and clean this repository
-  for external audiences (PLAN.md §11).
+  for external audiences (PLAN.md §11); (e) Windows .exe and macOS .dmg
+  installers are planned (slice 8b, ADR-9) for fully offline devices.
 - Commit on the designated branch with clear messages and push when the slice
   is green. Finish with a short report: what works, what evidence, what is
   next, and what you need from me.
@@ -62,6 +63,7 @@ My answers to D1–D9 (edit before sending):
 D1: KAAST 2 / kaast2   D2: (attach Page 1 + Iyer D11 definition)   D3: one TS engine
 D4: East Indian, Kala Chakra layout   D5: PL7 ΔT default   D6: yes, I will run the PL7 exports
 D7: yes   D8: textbook defaults until printouts say otherwise   D9: AGPL-3.0
+D10: unsigned installers + USB guide (or: signed, I will get the accounts)
 ```
 
 ## Notes for the cloud environment
