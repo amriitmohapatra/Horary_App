@@ -2,6 +2,25 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.7 — 2026-10-17 · `dist/Astro-Amriit v0.7.html`
+
+A fix release: same features as v0.6.
+
+- **Fixed:** chart labels could cross a chart line on small charts (the
+  Vargas page at desktop width) on some machines. Chromium rounded the font
+  size of scaled-down chart text to whole pixels, so a label's width
+  depended on the chart's on-screen size and the machine's font settings.
+  Chart text now uses `text-rendering: geometricPrecision`, so its layout is
+  the same everywhere. This was the failing GitHub CI check.
+- **Fixed:** a label width measured before the bold font finished loading
+  could be cached and reused; widths are now cached only once both font
+  weights have loaded, and charts redraw when they have.
+- CI uploads Playwright failure reports.
+
+**Evidence** 645 unit/engine tests; 32 e2e on the shipped file; the
+label-crossing check also at 360, 768, 1280, 1412 and 1920 px; contract
+check; pre-publish scan; GitHub CI green on the fix commit.
+
 ## v0.6 — 2026-10-17 · `dist/Astro-Amriit v0.6.html`
 
 **What works**

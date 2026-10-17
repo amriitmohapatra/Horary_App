@@ -1,6 +1,6 @@
 # Astro-Amriit — User Guide
 
-*For version 0.6. Written for astrologers, not for computer people.*
+*For version 0.7. Written for astrologers, not for computer people.*
 
 Every screenshot in this guide uses one public example chart: **Amitabh
 Bachchan, 11 October 1942, 16:00, Allahabad (Prayagraj)**. You can cast the
@@ -49,7 +49,7 @@ calculating instrument. The judgement is yours.
 
 Astro-Amriit is **one file** that ends in `.html`. Its name starts with
 `Astro-Amriit` and includes a version number, for example
-`Astro-Amriit v0.6.html`.
+`Astro-Amriit v0.7.html`.
 
 1. Copy the file to your computer (for example to the Desktop).
 2. **Double-click** it. It opens in your web browser (Chrome, Edge, Firefox or
@@ -67,7 +67,7 @@ that you can type your own chart.
 ![The top of the app when it opens: the title bar with "ready", and the chart form](img/01_opening_form.png)
 
 At the very bottom of every page is a small line such as
-`Astro-Amriit v0.6.0 · single build …`. This is the version. Quote it if you
+`Astro-Amriit v0.7.0 · single build …`. This is the version. Quote it if you
 report a problem.
 
 ### The desktop installers (Windows and Mac)
