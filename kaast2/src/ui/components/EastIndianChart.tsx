@@ -107,31 +107,31 @@ const EM = 0.66;
 /**
  * Width of an entry at font size 1, measured with the chart's real font via a
  * canvas (widths scale linearly with size, so one measurement per string is
- * cached). Before the web font loads the fallback font is measured; the app
- * re-renders when fonts are ready (see app.tsx), so the final layout uses the
- * real metrics.
+ * cached). A measurement is cached only once every weight it uses (regular,
+ * bold) has loaded: measured earlier, the canvas falls back to another font
+ * and a stale, too-narrow width would stick (the CI failure of 2026-10-17).
+ * The app re-renders when both weights are in (see app.tsx).
  */
 const widthCache = new Map<string, number>();
 let ctx: CanvasRenderingContext2D | null | undefined;
+const weightLoaded = (w: number) => typeof document !== 'undefined' && !!document.fonts?.check?.(`${w} 16px "Atkinson Hyperlegible"`);
 function unitWidth(e: ChartEntry): number {
   if (ctx === undefined) {
     try { ctx = typeof document !== 'undefined' ? document.createElement('canvas').getContext('2d') : null; } catch { ctx = null; }
   }
   if (!ctx) return EM * Math.max(e.parts.reduce((n, p) => n + p.text.length, 0), 4);
-  const loaded = typeof document !== 'undefined' && document.fonts?.check?.('16px "Atkinson Hyperlegible"') ? 1 : 0;
-  const key = loaded + '|' + e.parts.map((p) => (p.bold ? '*' : '') + (p.tone === 'sign' || p.tone === 'house' ? '~' : '') + p.text).join('\u0001');
-  let w = widthCache.get(key);
-  if (w === undefined) {
-    w = 0;
-    for (const p of e.parts) {
-      ctx.font = `${p.bold ? 700 : 400} 100px "Atkinson Hyperlegible", system-ui, sans-serif`;
-      // sign/house labels are drawn at 0.78em with letter-spacing (see styles.css .tone-sign)
-      const k = p.tone === 'sign' || p.tone === 'house' ? 0.78 * 1.08 : 1;
-      w += (ctx.measureText(p.text).width / 100) * k;
-    }
-    w *= 1.04; // safety margin for SVG text rendering differences
-    widthCache.set(key, w);
+  const key = e.parts.map((p) => (p.bold ? '*' : '') + (p.tone === 'sign' || p.tone === 'house' ? '~' : '') + p.text).join('\u0001');
+  const cached = widthCache.get(key);
+  if (cached !== undefined) return cached;
+  let w = 0;
+  for (const p of e.parts) {
+    ctx.font = `${p.bold ? 700 : 400} 100px "Atkinson Hyperlegible", system-ui, sans-serif`;
+    // sign/house labels are drawn at 0.78em with letter-spacing (see styles.css .tone-sign)
+    const k = p.tone === 'sign' || p.tone === 'house' ? 0.78 * 1.08 : 1;
+    w += (ctx.measureText(p.text).width / 100) * k;
   }
+  w *= 1.04; // safety margin for SVG text rendering differences
+  if (e.parts.every((p) => weightLoaded(p.bold ? 700 : 400))) widthCache.set(key, w);
   return w;
 }
 const LH = 1.24;

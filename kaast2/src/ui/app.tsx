@@ -52,7 +52,13 @@ function EngineStatus(): JSX.Element {
 export function App(): JSX.Element {
   // Re-render once the embedded fonts are ready, so charts are laid out with real text metrics.
   const [, setFontsReady] = useState(false);
-  useEffect(() => { document.fonts?.ready.then(() => setFontsReady(true)).catch(() => undefined); }, []);
+  // Both chart weights are loaded explicitly: bold is otherwise fetched lazily, after `fonts.ready` may already have resolved.
+  useEffect(() => {
+    const f = document.fonts;
+    if (!f) return;
+    Promise.all([f.load('400 16px "Atkinson Hyperlegible"'), f.load('700 16px "Atkinson Hyperlegible"')])
+      .then(() => f.ready).then(() => setFontsReady(true)).catch(() => undefined);
+  }, []);
 
   useEffect(() => {
     bootEphemeris()

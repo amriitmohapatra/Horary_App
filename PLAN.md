@@ -340,13 +340,12 @@ decoding, Playwright for build verification, a field-by-field parity script;
    - Avayogi / Duplicate Yogi convention; arudha exception for the lord in the 7th.
    - PL's exact nakshatra spellings and pada syllables (unless decoded from the binary first).
 6. **Installer proof (when the build is complete):** run the `kaast2-desktop` workflow by hand; try the Windows Setup on an offline Windows 10 VM without WebView2 and on Windows 11; the `.dmg` on an Apple Silicon and an Intel Mac (first-open flow); a 1366×768 laptop; checksums per the USB guide.
-7. **GitHub Actions does not start jobs on this repository** (2026-10-17): the
-   CI workflow now parses (an unquoted ": " had made every earlier run a
-   parse failure), but its job ends in 2 s without a runner and without a log
-   — an account-level block (typically Actions minutes or spending limit for
-   private repositories, or Actions disabled). Local CI (`npm run ci`) is
-   green. The boss checks GitHub → Settings → Billing / Actions; the desktop
-   installers also need Actions.
+7. **GitHub Actions** (resolved 2026-10-17): jobs run again from run 16 on.
+   The first real runs failed one e2e check (chart labels crossing a line on
+   the small Varga charts at 1440 px): Chromium snapped scaled SVG font sizes
+   to whole pixels, so label widths depended on the on-screen scale and the
+   runner's font settings. Fixed with `text-rendering: geometricPrecision` on
+   chart text; CI now uploads Playwright failure reports.
 8. **Still owed by the boss:** the "Iyer Cure" D11 definition (or its source);
    the "New Techniques of Prediction" books (reminder 1).
 

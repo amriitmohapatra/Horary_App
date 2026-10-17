@@ -94,6 +94,10 @@ main { max-width: 1440px; margin: 0 auto; padding: var(--sp-4); }
 
 /* ---- the plate (signature) ---- */
 .plate { display: block; width: 100%; height: auto; }
+/* Lay chart text out at exact, unhinted sizes: otherwise Chromium snaps the scaled font size to
+   whole pixels, so a label's width depends on the chart's on-screen scale and the machine's
+   font settings, and no longer matches the canvas measurement the font fit relies on. */
+.plate text { text-rendering: geometricPrecision; }
 .plate-ground { fill: var(--plate-bg); }
 .plate-lagna { fill: var(--plate-bg-lagna); }
 .plate-frame { fill: none; stroke: var(--plate-line); stroke-width: 3; }
