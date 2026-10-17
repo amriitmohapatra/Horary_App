@@ -1,3 +1,4 @@
+// prepublish-synthetic-charts: the PL-format samples below are a public celebrity chart.
 /** Dashas and Settings pages, on the single-file build, offline. */
 import { expect, test, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
@@ -85,7 +86,7 @@ test('Settings: Krishnamurti New ayanamsa changes the Moon by about 6 minutes', 
 });
 
 const PL_FILE = [
-  '<!DOCTYPE BirthData>', '<BirthData>', // prepublish-ok (synthetic test data)
+  '<!DOCTYPE BirthData>', '<BirthData>', // prepublish-ok
   ' <BirthInfo><FirstName>Amitabh</FirstName>', '  <LastName>Bachhan</LastName>',
   '  <BirthDate>2430644.166667</BirthDate>', '  <Longitude>-81.850000</Longitude>', '  <Latitude>25.450000</Latitude>',
   '  <TimeZone>-5.500000</TimeZone>', '  <DST>1.000000</DST>', '  <City>Allahabad</City>', '  <Country>India</Country>',

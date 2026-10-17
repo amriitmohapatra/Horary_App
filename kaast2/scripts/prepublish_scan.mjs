@@ -6,7 +6,8 @@
  *  - names of people in the private GeoVision chart collection — the denylist
  *    is derived at run time from ../Astro_Fork/GeoVision/GeoVisionCharts/*.xml
  *    when that private folder exists, so no list of names is ever stored here.
- * Exit 1 on any finding. Allow a line with the marker `prepublish-ok`.
+ * Exit 1 on any finding. Allow a line with the marker `prepublish-ok`; a file
+ * containing `prepublish-synthetic-charts` is exempt from the chart-data rule only.
  */
 import { execSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
@@ -24,7 +25,7 @@ const RULES = [
   [/\b(AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}|sk-[A-Za-z0-9]{20,})\b/, 'token'],
   // e-mail addresses (not retina asset names like icon@2x.png)
   [/\b[A-Za-z0-9._%+-]+@(?!\d+x\.)[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.(?!png\b|jpe?g\b|svg\b|webp\b|ico\b|icns\b)[A-Za-z]{2,}\b/, 'e-mail address'],
-  [/<BirthData\b/i, 'GeoVision chart data'],
+  [/<(?:BirthDate|Date)>\s*\d{7}\.\d/, 'GeoVision chart data (a Julian Day of a chart)'],
 ];
 
 const STOP = new Set(('admission chart charts recovery question test phd stockholm singapore india wharton yale oxford ' +
@@ -50,9 +51,10 @@ for (const f of files) {
   let text;
   try { text = readFileSync(p, 'utf8'); } catch { continue; }
   if (text.includes('\u0000')) continue; // binary
+  const synthetic = text.includes('prepublish-synthetic-charts');
   text.split('\n').forEach((line, i) => {
     if (line.includes('prepublish-ok')) return;
-    for (const [re, what] of RULES) if (re.test(line)) findings.push(`${f}:${i + 1}: ${what}: ${line.trim().slice(0, 100)}`);
+    for (const [re, what] of RULES) if (!(synthetic && what.startsWith('GeoVision')) && re.test(line)) findings.push(`${f}:${i + 1}: ${what}: ${line.trim().slice(0, 100)}`);
     const m = nameRe && nameRe.exec(line);
     if (m) findings.push(`${f}:${i + 1}: name from private charts ("${m[1]}"): ${line.trim().slice(0, 100)}`);
   });

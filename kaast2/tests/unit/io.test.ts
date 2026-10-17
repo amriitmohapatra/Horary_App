@@ -1,10 +1,11 @@
+// prepublish-synthetic-charts: the PL-format samples below are a public celebrity chart.
 import { describe, expect, it } from 'vitest';
 import { decodeChartBytes, parseGeoVision, toGeoVision } from '../../src/io/geovision';
 import { parseChartFile, toChartFile } from '../../src/io/chartfile';
 
 // A synthetic PL chart file with the structure PL writes (values are those of a public chart).
 const SAMPLE = [
-  '<!DOCTYPE BirthData>', '<BirthData>', // prepublish-ok (synthetic test data)
+  '<!DOCTYPE BirthData>', '<BirthData>', // prepublish-ok
   ' <BirthInfo><FirstName>Amitabh</FirstName>', '  <LastName>Bachhan</LastName>',
   '  <BirthDate>2430644.166667</BirthDate>', '  <Longitude>-81.850000</Longitude>', '  <Latitude>25.450000</Latitude>',
   '  <TimeZone>-5.500000</TimeZone>', '  <DST>1.000000</DST>', '  <City>Allahabad</City>', '  <Country>India</Country>',
