@@ -1,5 +1,5 @@
 /**
- * Step controls of the transit screen (PLAN.md §3.8: 1 s … 10 yr). Pure.
+ * Step controls of the transit screen (PLAN.md §3.8: 1 s … 10 yr, plus 1 week). Pure.
  * Fixed units add exact multiples of a day; months and years are calendar
  * steps in UT: same day of month and time of day, the day clamped to the
  * end of a shorter month (31 Jan + 1 mo = 28/29 Feb; 29 Feb + 1 y = 28 Feb).
@@ -7,9 +7,9 @@
  */
 import { fromJulianDay, julianDay } from '../time/julian';
 
-export type StepUnit = 's' | 'min' | 'h' | 'd' | 'mo' | 'y' | '10y';
+export type StepUnit = 's' | 'min' | 'h' | 'd' | 'w' | 'mo' | 'y' | '10y';
 
-const FIXED: Partial<Record<StepUnit, number>> = { s: 1 / 86400, min: 1 / 1440, h: 1 / 24, d: 1 };
+const FIXED: Partial<Record<StepUnit, number>> = { s: 1 / 86400, min: 1 / 1440, h: 1 / 24, d: 1, w: 7 };
 const MONTHS: Partial<Record<StepUnit, number>> = { mo: 1, y: 12, '10y': 120 };
 
 const daysInMonth = (y: number, m: number) =>

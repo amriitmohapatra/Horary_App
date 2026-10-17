@@ -11,6 +11,8 @@ describe('stepJd — transit step controls', () => {
     expect(civil(stepJd(t, 'min', -46))).toBe('2024-1-31 12:59:30');
     expect(civil(stepJd(t, 'h', 11))).toBe('2024-2-1 0:45:30');
     expect(civil(stepJd(t, 'd', 30))).toBe('2024-3-1 13:45:30');
+    expect(civil(stepJd(t, 'w', 1))).toBe('2024-2-7 13:45:30');
+    expect(civil(stepJd(t, 'w', -5))).toBe('2023-12-27 13:45:30');
   });
   it('months clamp to the end of a shorter month, keep the time of day', () => {
     expect(civil(stepJd(t, 'mo', 1))).toBe('2024-2-29 13:45:30');

@@ -360,3 +360,17 @@ architecture.
   (add/edit/delete, export/import JSON) because browser storage is per
   device; war time applies to saved places inside India. Phone overflow at
   320/390 px fixed on all pages and locked by an e2e test.
+
+## 2026-10-17 (session 2, later) — Astro-Amriit v0.5: KP page
+- PL's "Krishnamurti" (manual pp. 56, 205): Placidus cusps, ascendant =
+  beginning of house 1, no house numbers on signs; significator table =
+  Occupants, Tenants(Occupants) (planets in the occupants' nakshatras),
+  Owner (lord of the cusp's sign — NOT Kala Chakra's span rule),
+  Tenants(Owner). Planet-wise A–D levels are textbook KP (STD).
+- KP pages use the Krishnamurti ayanamsa regardless of the default (manual
+  pp. 218–219, DOC); app default 'auto' = pl_krishnamurti for PL profiles,
+  the profile's own Lahiri for Solar Fire / Kala Chakra (family practice).
+  Which of PL's two KP ayanamsas PL 9 uses on screen: OPEN (Test 2).
+- Kala Chakra's power calculation is untouched and stays in Kala Chakra;
+  the two significator notions are deliberately separate.
+- Transit step gained 1 week.

@@ -2,6 +2,30 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.5 — 2026-10-17 · `dist/Astro-Amriit v0.5.html`
+
+**What works**
+- **KP page** (new tab after Dashas) — PL's *Krishnamurti Chart* and *KP –
+  Significators*: East Indian chart on Placidus cusps (ascendant = beginning
+  of house 1) listing cusps and planets with star/sub lords and KP house;
+  cusp and planet tables with sign, star, sub and sub-sub lords;
+  significators of the houses (occupants, tenants of occupants, owner,
+  tenants of owner — PL 7 manual p. 205) and of the planets (A–D levels).
+- **KP ayanamsa** as PL: the KP page uses the Krishnamurti ayanamsa
+  whatever the other pages use (manual pp. 218–219); Krishnamurti New or
+  the chart's own ayanamsa are selectable. The Solar Fire / Kala Chakra
+  profile keeps its Lahiri on "Automatic".
+- **1 week** transit step.
+
+**Evidence** 626 unit/engine tests (new: KP placement equal to Kala
+Chakra's `houseOf` on 2 000 random charts, lords equal to Kala Chakra's
+`subLords`, hand-worked significators); 31 e2e on the shipped file (new: KP
+page vs Page 1 through the Krishnamurti–Lahiri difference, week step; KP in
+the phone-overflow and axe runs); contract check; pre-publish scan.
+
+**Open** not yet compared with a PL KP printout; which Krishnamurti
+ayanamsa PL 9's KP screen uses (export procedure Test 2).
+
 ## v0.4 — 2026-10-17 · `dist/Astro-Amriit v0.4.html`
 
 **What works**

@@ -9,6 +9,7 @@ import type { SwissEph } from '../../engine/ephem/swisseph';
 import { BUILTIN_PLACES, type Place, zoneFor } from '../../io/places';
 import type { BootResult } from '../../boot/wasmLoader';
 import { strengths, type Page1Strengths } from '../../engine/strength';
+import type { AyanamsaId } from '../../engine/ephem/ayanamsa';
 
 export type EngineState =
   | { status: 'booting' }
@@ -45,8 +46,39 @@ export const strength = computed<Page1Strengths | null>(() => {
   try { return strengths(e.swe, c.ok); } catch { return null; }
 });
 
+/* ---- KP page: PL's Krishnamurti printouts use the Krishnamurti ayanamsa
+ * "regardless of the default set" (PL 7 manual pp. 218–219). 'auto' does that
+ * for the PL profiles and keeps the chart's own ayanamsa for Solar Fire /
+ * Kala Chakra (the family's KP practice on Lahiri). ---- */
+export type KpAyanamsa = 'auto' | 'chart' | 'pl_krishnamurti' | 'pl_krishnamurti_new';
+const KP_AYAN = 'kaast2.kpAyanamsa.v1';
+export const kpAyanamsa = signal<KpAyanamsa>(((): KpAyanamsa => {
+  try {
+    const v = localStorage.getItem(KP_AYAN);
+    return v === 'chart' || v === 'pl_krishnamurti' || v === 'pl_krishnamurti_new' ? v : 'auto';
+  } catch { return 'auto'; }
+})());
+export function setKpAyanamsa(v: KpAyanamsa): void {
+  kpAyanamsa.value = v;
+  try { localStorage.setItem(KP_AYAN, v); } catch { /* non-fatal */ }
+}
+/** The ayanamsa the KP page uses for a chart cast with `chartAyanamsa` in profile `profileId`. */
+export function kpAyanamsaFor(choice: KpAyanamsa, profileId: ChartInput['profileId'], chartAyanamsa: AyanamsaId): AyanamsaId {
+  if (choice === 'chart') return chartAyanamsa;
+  if (choice === 'auto') return profileId === 'solarfire' ? chartAyanamsa : 'pl_krishnamurti';
+  return choice;
+}
+export const kpChart = computed<{ ok: ChartResult } | { error: string } | null>(() => {
+  const e = engine.value, inp = chartInput.value, c = chart.value;
+  if (e.status !== 'ready' || !inp || !c || !('ok' in c)) return null;
+  const ayanamsa = kpAyanamsaFor(kpAyanamsa.value, inp.profileId, c.ok.profile.ayanamsa);
+  if (ayanamsa === c.ok.profile.ayanamsa) return c;
+  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, ayanamsa } }) }; }
+  catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
+});
+
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
-export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'yogi', 'jaimini', 'transits', 'settings'] as const;
+export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'kp', 'yogi', 'jaimini', 'transits', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];
 const routeFromHash = (): Route => {
   const h = location.hash.replace('#', '') as Route;

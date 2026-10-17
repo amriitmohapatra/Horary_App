@@ -12,6 +12,7 @@ import { Strengths } from './pages/Strengths';
 import { Jaimini } from './pages/Jaimini';
 import { YogiBhava } from './pages/YogiBhava';
 import { Transits } from './pages/Transits';
+import { Kp } from './pages/Kp';
 import { Settings } from './pages/Settings';
 import { t } from './i18n';
 import { chart, chartInput, engine, formOpen, lastPlace, nowInput, route, setTheme, shownTheme, textSize, theme } from './state/store';
@@ -24,6 +25,7 @@ function Routed({ c }: { c: ChartResult }): JSX.Element {
     case 'vargas': return <Vargas chart={c} />;
     case 'strengths': return <Strengths chart={c} />;
     case 'jaimini': return <Jaimini chart={c} />;
+    case 'kp': return <Kp />;
     case 'yogi': return <YogiBhava chart={c} />;
     case 'transits': return <Transits chart={c} />;
     case 'settings': return <Settings input={chartInput.value} />;

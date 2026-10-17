@@ -21,7 +21,7 @@ import { t, type MessageKey } from '../i18n';
 import { civilDate, civilTime, dm, longDate, pad2 } from '../format';
 import { engine } from '../state/store';
 
-const UNITS: StepUnit[] = ['s', 'min', 'h', 'd', 'mo', 'y', '10y'];
+const UNITS: StepUnit[] = ['s', 'min', 'h', 'd', 'w', 'mo', 'y', '10y'];
 const HORIZONS = [30, 91, 365] as const;
 
 function nowJd(): number {

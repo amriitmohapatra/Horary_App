@@ -1,6 +1,6 @@
 # Astro-Amriit — User Guide
 
-*For version 0.4. Written for astrologers, not for computer people.*
+*For version 0.5. Written for astrologers, not for computer people.*
 
 Every screenshot in this guide uses one public example chart: **Amitabh
 Bachchan, 11 October 1942, 16:00, Allahabad (Prayagraj)**. You can cast the
@@ -16,9 +16,10 @@ same chart and compare it with the pictures.
    - [4.2 Strengths](#42-strengths)
    - [4.3 Vargas](#43-vargas)
    - [4.4 Dashas](#44-dashas)
-   - [4.5 Yogi & Bhava](#45-yogi--bhava)
-   - [4.6 Jaimini](#46-jaimini)
-   - [4.7 Transits](#47-transits)
+   - [4.5 KP (Krishnamurti)](#45-kp-krishnamurti)
+   - [4.6 Yogi & Bhava](#46-yogi--bhava)
+   - [4.7 Jaimini](#47-jaimini)
+   - [4.8 Transits](#48-transits)
 5. [Settings](#5-settings)
 6. [How far can I trust each number?](#6-how-far-can-i-trust-each-number)
 7. [Troubleshooting](#7-troubleshooting)
@@ -47,7 +48,7 @@ calculating instrument. The judgement is yours.
 
 Astro-Amriit is **one file** that ends in `.html`. Its name starts with
 `Astro-Amriit` and includes a version number, for example
-`Astro-Amriit v0.4.html`.
+`Astro-Amriit v0.5.html`.
 
 1. Copy the file to your computer (for example to the Desktop).
 2. **Double-click** it. It opens in your web browser (Chrome, Edge, Firefox or
@@ -65,7 +66,7 @@ that you can type your own chart.
 ![The top of the app when it opens: the title bar with "ready", and the chart form](img/01_opening_form.png)
 
 At the very bottom of every page is a small line such as
-`Astro-Amriit v0.4.0 · single build …`. This is the version. Quote it if you
+`Astro-Amriit v0.5.0 · single build …`. This is the version. Quote it if you
 report a problem.
 
 ### The desktop installers (Windows and Mac)
@@ -208,7 +209,7 @@ weekday.
 ## 4. The pages, one by one
 
 The tabs under the chart line are, in order: **Page 1**, **Strengths**,
-**Vargas**, **Dashas**, **Yogi & Bhava**, **Jaimini**, **Transits** and
+**Vargas**, **Dashas**, **KP**, **Yogi & Bhava**, **Jaimini**, **Transits** and
 **Settings**. Click a tab to open its page.
 
 Some conventions apply everywhere:
@@ -512,7 +513,84 @@ Changing the dasha year here changes it **for every chart** (the note
 *Changed in Settings; applies to every chart.* appears). To go back, choose
 the value again or use **Use the profile value** on the **Settings** page.
 
-### 4.5 Yogi & Bhava
+### 4.5 KP (Krishnamurti)
+
+This page is PL's **Krishnamurti chart** together with its **KP –
+Significators** page.
+
+#### KP ayanamsa
+
+PL's KP pages always use the **Krishnamurti** ayanamsa, whatever ayanamsa
+is set for the other pages (PL 7 manual, pp. 218–219). The app does the same
+by default. Choose in **KP ayanamsa**:
+
+| Choice | What it does |
+|---|---|
+| **Automatic — as PL's KP pages** (default) | Krishnamurti ayanamsa. With the *Solar Fire / Kala Chakra* profile the page keeps that profile's Lahiri (the family's KP practice). |
+| **PL: Krishnamurti** | PL's Krishnamurti ayanamsa (24°11′54″ on 1 Jan 2025). |
+| **PL: Krishnamurti New** | PL's second KP option (24°06′23″ on 1 Jan 2025). |
+| **Same as the chart (Settings)** | The ayanamsa of every other page. The longitudes are then exactly those of Page 1. |
+
+The line under the list says which ayanamsa and which house system the
+page used. Krishnamurti is about half a minute of arc smaller than
+Lahiri, so a planet near a boundary can change its sub lord between this
+page and Page 1. That is expected, and PL behaves the same way.
+
+**Changing the ayanamsa for the whole app.** If you want *every* page in
+Krishnamurti, go to **Settings → Calculation → Ayanamsa** and choose
+**PL: Krishnamurti**. All pages recast at once: planets, cusps, nakshatras,
+lords, vargas, dashas, strengths and transits. **Use the profile value**
+puts it back.
+
+#### Krishnamurti chart
+
+The chart is drawn in the East Indian style, as Kala Chakra draws it.
+The houses are **Placidus**, and the ascendant is the **beginning** of
+house 1, not its centre. Each sign lists:
+
+- the **cusps** that fall in it: number, degree:minute, star lord / sub lord
+  (for example `1 01:57 Ma/Ke`);
+- the **planets**: degree:minute, star lord / sub lord, and **-house**, the
+  house the planet occupies (for example `Mo 10:19 Ra/Ju-8`).
+
+A house runs from its cusp to the next cusp, so a planet's KP house can
+differ from its house in the Rasi chart. As in PL, the signs carry no house
+numbers: in KP a sign can hold two cusps or none. On a phone the chart
+shows only cusp numbers (`C1`) and planets with their houses (`Mo-8`). The
+tables below give the full detail.
+
+#### Cusps and Planets
+
+For every cusp and planet: longitude, **sign lord**, **star lord**, **sub
+lord** and **sub-sub lord**. The planet table also gives the KP house. The
+lords are computed with the same rule as Page 1 and Kala Chakra.
+
+#### Significators of the houses
+
+For each house, the columns PL prints:
+
+- **Occupants** — planets in the house.
+- **Tenants (occupants)** — planets placed in the nakshatras of the occupants.
+- **Owner** — lord of the sign in which the cusp falls.
+- **Tenants (owner)** — planets placed in the nakshatras of the owner.
+
+Rahu and Ketu own no sign, but they own nakshatras, so they can have
+tenants. A dash (–) means none.
+
+#### Significators of the planets
+
+The same table read planet by planet, with the textbook KP levels:
+
+- **A** — houses occupied by the planet's star lord;
+- **B** — the house the planet occupies;
+- **C** — houses whose cusp falls in a sign of the star lord;
+- **D** — houses whose cusp falls in a sign of the planet.
+
+Note: these are PL's significators. Kala Chakra's power calculation (the
+cusp-number vector, with its span rule and node dispositors) is a
+different, family-specific method. It stays in Kala Chakra.
+
+### 4.6 Yogi & Bhava
 
 #### Yogi points
 
@@ -555,7 +633,7 @@ the Rasi chart, 9th in bhava chalit).
 The **Bhavas** table gives, for each house, where it **Begins (sandhi)**, its
 **Centre (madhya)**, and the planets **In this bhava**.
 
-### 4.6 Jaimini
+### 4.7 Jaimini
 
 #### Chara karakas and special lagnas
 
@@ -618,7 +696,7 @@ other by sign, and whether by **dual signs** or **fixed ↔ movable**. Movable
 signs aspect the fixed signs except the one next to them, and the other way
 round; dual signs aspect each other.
 
-### 4.7 Transits
+### 4.8 Transits
 
 *The Transits page is new and still being finished. Its layout may change.*
 
@@ -633,7 +711,7 @@ round; dual signs aspect each other.
 - **Zone for these times (hours east)** — the zone in which the transit
   times are shown. It starts with the chart's zone. For a war-time chart it
   starts at 5.5, because war time has ended.
-- **Step** — choose a step (**1 second**, **1 minute**, **1 hour**, **1 day**,
+- **Step** — choose a step (**1 second**, **1 minute**, **1 hour**, **1 day**, **1 week**,
   **1 month**, **1 year**, **10 years**) and press the arrows: **←** steps
   back, **→** steps forward.
 - **Now** returns to the present moment.
@@ -782,6 +860,7 @@ exact; nothing here is rounded up.
 | Yogi point | Decoded from PL's program; cross-checked with PyJHora | Matches |
 | **Avayogi** and **Duplicate Yogi** | — | **Open.** PL's convention not yet confirmed; the Avayogi rule is selectable |
 | Panchanga (tithi, nakshatra, yoga, karana) | Cross-checked with PyJHora | Matches. The weekday uses PL's sunrise convention |
+| KP page: cusps, lords, houses, significators | House placement compared with Kala Chakra's KP engine on 2 000 random charts (all equal); lords use the Page 1 rule, which matches PL 9; significator definitions from PL 7's manual | Not yet compared with a PL KP printout. Which Krishnamurti ayanamsa PL 9 uses on its KP screen is still to be confirmed (Test 2 of the export procedure) |
 | Bhava chalit (Sripati and equal houses) | Cross-checked with PyJHora on over 100 charts | Centres and houses match. Not yet compared with PL |
 | Chara karakas (7) | PL 9 Page 1 K7 column | 7 of 7 |
 | Pranapada | A PL 7 printout of another public chart | Within 0.05° |
