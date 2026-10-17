@@ -7,6 +7,8 @@ import { useState } from 'preact/hooks';
 import type { JSX } from 'preact';
 import { PROFILES, type ChartInput, type ProfileId } from '../../engine';
 import { allPlaces, savePlace, zoneFor, type Place } from '../../io/places';
+import { decodeChartBytes, parseGeoVision, toGeoVision, type ImportedChart } from '../../io/geovision';
+import { parseChartFile, toChartFile } from '../../io/chartfile';
 import { t, type MessageKey } from '../i18n';
 import { longDate, pad2 } from '../format';
 import { chartInput, formOpen, lastPlace, nowInput, rememberPlace } from '../state/store';
@@ -62,6 +64,8 @@ export function ChartForm(): JSX.Element {
   const [f, setF] = useState<Fields>(() => toFields(chartInput.value ?? nowInput(lastPlace())));
   const [errors, setErrors] = useState<Errors>({});
   const [note, setNote] = useState<MessageKey | null>(null);
+  const [fileError, setFileError] = useState<string | null>(null);
+  const [events, setEvents] = useState<ImportedChart['events']>([]);
   const places = allPlaces();
 
   const set = <K extends keyof Fields>(k: K, v: Fields[K]) => setF((o) => ({ ...o, [k]: v }));
@@ -103,6 +107,46 @@ export function ChartForm(): JSX.Element {
     setErrors({});
     chartInput.value = i;
     formOpen.value = false;
+  };
+
+  const castInput = (i: ChartInput) => {
+    setF(toFields(i));
+    setErrors({});
+    chartInput.value = i;
+    formOpen.value = false;
+  };
+
+  const onOpenFile = async (file: File | undefined) => {
+    if (!file) return;
+    setFileError(null);
+    setEvents([]);
+    try {
+      const text = decodeChartBytes(new Uint8Array(await file.arrayBuffer()));
+      if (/\.json$/i.test(file.name) || text.trimStart().startsWith('{')) {
+        castInput(parseChartFile(text));
+      } else {
+        const imported = parseGeoVision(text, f.profile);
+        setEvents(imported.events);
+        castInput(imported.input);
+      }
+    } catch (err) {
+      setFileError(err instanceof Error ? err.message : String(err));
+    }
+  };
+
+  const download = (name: string, text: string, type: string) => {
+    const url = URL.createObjectURL(new Blob([text], { type }));
+    const a = document.createElement('a');
+    a.href = url; a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  const fileStem = () => (f.name.trim() || 'chart').replace(/[^\p{L}\p{N} _-]+/gu, '').trim() || 'chart';
+  const onSave = (kind: 'json' | 'pl') => {
+    const r = parse(f);
+    setErrors(r.errors);
+    if (!r.input) return;
+    if (kind === 'json') download(`${fileStem()}.kaast2.json`, toChartFile(r.input), 'application/json');
+    else download(`${fileStem()}.xml`, toGeoVision(r.input), 'application/xml');
   };
 
   const onSavePlace = () => {
@@ -165,7 +209,20 @@ export function ChartForm(): JSX.Element {
         <button type="submit" class="btn btn-primary">{t('form.cast')}</button>
         <button type="button" class="btn" onClick={now}>{t('form.now')}</button>
         <button type="button" class="btn btn-quiet" onClick={onSavePlace}>{t('form.savePlace')}</button>
+        <span class="spacer" />
+        <label class="btn btn-quiet file-btn">
+          {t('file.open')}
+          <input type="file" accept=".xml,.json" class="sr-only" onChange={(e) => { void onOpenFile(e.currentTarget.files?.[0]); e.currentTarget.value = ''; }} />
+        </label>
+        <button type="button" class="btn btn-quiet" onClick={() => onSave('json')}>{t('file.save')}</button>
+        <button type="button" class="btn btn-quiet" onClick={() => onSave('pl')}>{t('file.savePl')}</button>
       </div>
+      {fileError && <p class="form-note error" role="alert">{fileError}</p>}
+      {events.length > 0 && (
+        <p class="form-note">{t('file.events')}{' '}
+          {events.map((ev) => <button key={ev.name} type="button" class="btn btn-small" onClick={() => castInput(ev.input)}>{ev.name}</button>)}
+        </p>
+      )}
       {note && <p class="form-note" role="status">{t(note)}</p>}
     </form>
   );

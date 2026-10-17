@@ -83,3 +83,37 @@ test('Settings: Krishnamurti New ayanamsa changes the Moon by about 6 minutes', 
   await page.getByRole('link', { name: 'Page 1' }).click();
   await expect(mo).toContainText('Li 10:19:02');
 });
+
+const PL_FILE = [
+  '<!DOCTYPE BirthData>', '<BirthData>', // prepublish-ok (synthetic test data)
+  ' <BirthInfo><FirstName>Amitabh</FirstName>', '  <LastName>Bachhan</LastName>',
+  '  <BirthDate>2430644.166667</BirthDate>', '  <Longitude>-81.850000</Longitude>', '  <Latitude>25.450000</Latitude>',
+  '  <TimeZone>-5.500000</TimeZone>', '  <DST>1.000000</DST>', '  <City>Allahabad</City>', '  <Country>India</Country>',
+  ' </BirthInfo>',
+  ' <Events><Event Id="1" ><Name>Today</Name>', '   <Date>2452016.021528</Date>', '   <Longitude>-75.816667</Longitude>',
+  '   <Latitude>26.916667</Latitude>', '   <TimeZone>-5.500000</TimeZone>', '   <DST>0.000000</DST>', '   <City>Jaipur(Raj)</City>',
+  '   <Country>India</Country>', '  </Event>', ' </Events>', '</BirthData>', '',
+].join('\r\n');
+
+test('opens a Parashara\'s Light chart file and offers its events', async ({ page }) => {
+  await page.goto(url);
+  await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
+  await page.getByLabel('Open chart file…').setInputFiles({ name: 'BACHHANA.xml', mimeType: 'application/xml', buffer: Buffer.from(PL_FILE) });
+  await expect(page.getByTestId('planet-table').locator('tr[data-point="Mo"]')).toContainText('Li 10:19:02');
+  await expect(page.locator('.chart-strip')).toContainText('UTC+6:30');
+  await page.getByRole('button', { name: 'Edit chart' }).click();
+  await expect(page.getByRole('button', { name: 'Today' })).toBeVisible();
+});
+
+test('saves a chart file that reopens identically', async ({ page }) => {
+  await castAmitabh(page);
+  await page.getByRole('button', { name: 'Edit chart' }).click();
+  const [dl] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Save chart' }).click()]);
+  expect(dl.suggestedFilename()).toBe('Amitabh Bachchan.kaast2.json');
+  const path = await dl.path();
+  await page.reload();
+  await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
+  await page.getByLabel('Open chart file…').setInputFiles(path!);
+  await expect(page.locator('.chart-name')).toHaveText('Amitabh Bachchan');
+  await expect(page.getByTestId('planet-table').locator('tr[data-point="Mo"]')).toContainText('Li 10:19:02');
+});

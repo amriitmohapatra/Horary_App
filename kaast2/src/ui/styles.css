@@ -208,3 +208,8 @@ table.data .sign { color: var(--text-muted); }
 .setting .hint { font-size: 0.75rem; color: var(--text-muted); }
 
 @media (max-width: 900px) { .dasha-grid { grid-template-columns: minmax(0, 1fr); } }
+
+.file-btn { display: inline-flex; align-items: center; cursor: pointer; }
+.file-btn:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
+.form-note .btn-small { margin: 0 4px; }
+.form-note.error { color: var(--danger); }

@@ -116,5 +116,9 @@
   "settings.theme": "Theme",
   "settings.theme.auto": "Follow this device",
   "settings.theme.light": "Light",
-  "settings.theme.dark": "Dark"
+  "settings.theme.dark": "Dark",
+  "file.open": "Open chart file…",
+  "file.save": "Save chart",
+  "file.savePl": "Save for Parashara's Light",
+  "file.events": "This file also holds:"
 }
