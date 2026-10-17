@@ -77,6 +77,24 @@ export const kpChart = computed<{ ok: ChartResult } | { error: string } | null>(
   catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
 });
 
+/* ---- NTP page: Iyer uses the mean node ("Take always Mean Rahu", NTP-1 p. 101). ---- */
+export type NtpNode = 'mean' | 'chart';
+const NTP_NODE = 'kaast2.ntpNode.v1';
+export const ntpNode = signal<NtpNode>(((): NtpNode => {
+  try { return localStorage.getItem(NTP_NODE) === 'chart' ? 'chart' : 'mean'; } catch { return 'mean'; }
+})());
+export function setNtpNode(v: NtpNode): void {
+  ntpNode.value = v;
+  try { localStorage.setItem(NTP_NODE, v); } catch { /* non-fatal */ }
+}
+export const ntpChart = computed<{ ok: ChartResult } | { error: string } | null>(() => {
+  const e = engine.value, inp = chartInput.value, c = chart.value;
+  if (e.status !== 'ready' || !inp || !c || !('ok' in c)) return null;
+  if (ntpNode.value === 'chart' || c.ok.profile.node === 'mean') return c;
+  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, node: 'mean' } }) }; }
+  catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
+});
+
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
 export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'kp', 'ntp', 'yogi', 'jaimini', 'transits', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];

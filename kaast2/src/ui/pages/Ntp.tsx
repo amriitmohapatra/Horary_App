@@ -15,12 +15,41 @@ import { mahadashas, subperiods } from '../../engine/dasha/vimshottari';
 import { julianDay } from '../../engine/time/julian';
 import { vara, TITHI_NAMES } from '../../engine/panchanga/panchanga';
 import { ntpModel, dashaReading, type Finding, type PlanetNtp, type Pol, type Tone } from '../../engine/iyer/ntp';
-import { TRIOS } from '../../engine/iyer/dashaChart';
-import { ruleText } from '../ntpRules';
-import { BHAVA_MATTERS } from '../ntpMeanings';
-import { engine } from '../state/store';
+import { TRIOS, grahaSamayam } from '../../engine/iyer/dashaChart';
+import { VIM_YEARS } from '../../engine/zodiac';
+import { yoga as yogaOf } from '../../engine/panchanga/panchanga';
+import { areaNote, ruleText } from '../ntpRules';
+import { PORTFOLIO } from '../../engine/iyer/dcharts';
+import type { AreaReading } from '../../engine/iyer/ntp2b';
+import { BHAVA_MATTERS, SAMAYAM, YOGA_EFFECTS } from '../ntpMeanings';
+import { engine, ntpChart, ntpNode, setNtpNode, type NtpNode } from '../state/store';
 import { t } from '../i18n';
 import { civilDate, dms } from '../format';
+
+const RATING_TONE = { good: 'good', bad: 'bad', mixed: 'mixed', neutral: 'info' } as const;
+function AreaTable({ areas, lord }: { areas: AreaReading[]; lord: PlanetId }): JSX.Element {
+  return (
+    <div class="table-wrap" tabIndex={0} role="region" aria-label={`Areas of life in the ${PLANET_NAMES[lord]} Dasha`}>
+      <table class="data ntp-areas" data-testid="ntp-areas">
+        <caption class="sr-only">Areas of life in the {PLANET_NAMES[lord]} Dasha</caption>
+        <thead><tr><th scope="col">Chart</th><th scope="col">Area of life</th><th scope="col" class="c">House</th><th scope="col">Reading</th><th scope="col">Why</th></tr></thead>
+        <tbody>
+          {areas.map((a) => (
+            <tr key={a.d}>
+              <th scope="row">D-{a.d}</th><td>{PORTFOLIO[a.d]}</td><td class="c num">{a.house}</td>
+              <td><ToneTag tone={RATING_TONE[a.rating]} /></td>
+              <td class="ntp-why">{a.notes.map(areaNote).join('; ')}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+function areaSummary(areas: AreaReading[]): { good: string; bad: string } {
+  const pick = (v: AreaReading['rating']) => areas.filter((a) => a.rating === v).map((a) => PORTFOLIO[a.d]).join(', ') || 'none';
+  return { good: pick('good'), bad: pick('bad') };
+}
 
 const TONE_WORD: Record<Tone, string> = { good: 'Good', bad: 'Bad', mixed: 'Mixed', info: 'Note' };
 const POL_WORD: Record<Pol, string> = { '+': 'Positive', '-': 'Negative', mixed: 'Mixed', '0': 'Neutral' };
@@ -58,6 +87,12 @@ function states(p: PlanetNtp): string[] {
   return s;
 }
 
+function Samayam({ chart, id }: { chart: ChartResult; id: PlanetId }): JSX.Element {
+  const n = grahaSamayam(signIndex(chart.asc.lon), signIndex(chart.bodies[id].lon), VIM_YEARS[id]);
+  const [name, effect] = SAMAYAM[n - 1]!;
+  return <>Graha Samayam {n}, <i>{name}</i>: {effect}. <cite class="ntp-cite">NTP-1 pp. 28–30</cite></>;
+}
+
 function PlanetCard({ p, chart }: { p: PlanetNtp; chart: ChartResult }): JSX.Element {
   const { d, m, s } = dmsInSign(chart.bodies[p.id].lon);
   const matters = [...new Set([...p.owns, p.bhava])].sort((a, b) => a - b);
@@ -83,13 +118,22 @@ function PlanetCard({ p, chart }: { p: PlanetNtp; chart: ChartResult }): JSX.Ele
           Iyer reads a Dasha from the birth chart (NTP-2 p. 22): the {PLANET_NAMES[p.id]} Dasha will tend to be <b>{TONE_WORD[p.tone].toLowerCase()}</b>,
           for the matters of bhava{matters.length > 1 ? 's' : ''} {matters.map((h) => `${h} (${BHAVA_MATTERS[h - 1]})`).join('; ')}.
         </p>
+        <p><Samayam chart={chart} id={p.id} /></p>
+        <p>By Iyer's division charts (NTP-2 p. 82) its Dasha favours: <b>{areaSummary(p.areas).good}</b>; and is unfavourable for: <b>{areaSummary(p.areas).bad}</b>.</p>
         <ul class="ntp-findings">{p.findings.filter((f) => f.tone === 'info').map((f, i) => <FindingItem key={i} f={f} />)}</ul>
       </details>
     </section>
   );
 }
 
-export function Ntp({ chart }: { chart: ChartResult }): JSX.Element {
+export function Ntp(): JSX.Element {
+  const nc = ntpChart.value;
+  if (!nc) return <p class="empty">{t('page1.empty')}</p>;
+  if ('error' in nc) return <p class="status status-bad" role="alert">{nc.error}</p>;
+  return <NtpPage chart={nc.ok} />;
+}
+
+function NtpPage({ chart }: { chart: ChartResult }): JSX.Element {
   const e = engine.value;
   const weekday = useMemo(() => (e.status === 'ready' ? vara(e.swe, chart).num : 1), [chart, e]);
   const m = useMemo(() => ntpModel(chart, weekday), [chart, weekday]);
@@ -106,6 +150,7 @@ export function Ntp({ chart }: { chart: ChartResult }): JSX.Element {
   const maha = mahas[idx]!;
   const reading = useMemo(() => dashaReading(chart, m, maha, subperiods(maha)), [chart, m, maha]);
   const yp = dmsInSign(m.yogaPoint);
+  const by = yogaOf(chart.bodies.Su.lon, chart.bodies.Mo.lon);
   const guidance = [...m.chartFindings, ...reading.findings.filter((f) => f.tone !== 'info')];
   const highlights = m.planets.filter((p) => p.tone === 'good' || p.tone === 'bad');
   const rank = (tr: readonly PlanetId[]) => (tr.includes(m.yogi) ? 0 : tr.includes(m.avayogi) ? 1 : 2);
@@ -146,6 +191,7 @@ export function Ntp({ chart }: { chart: ChartResult }): JSX.Element {
             <div><dt>Birth Yogi</dt><dd><Pl id={m.yogi} /> {PLANET_NAMES[m.yogi]} (lord of its star)</dd></div>
             <div><dt>Duplicate Yogi</dt><dd><Pl id={m.duplicateYogi} /> {PLANET_NAMES[m.duplicateYogi]} (lord of its sign)</dd></div>
             <div><dt>Avayogi</dt><dd><Pl id={m.avayogi} /> {PLANET_NAMES[m.avayogi]} (the Yogi's one enemy) <cite class="ntp-cite">NTP-2 p. 6</cite></dd></div>
+            <div><dt>Birth yoga</dt><dd data-testid="ntp-birth-yoga">{by.num} {by.name}: {YOGA_EFFECTS[by.num - 1]} <cite class="ntp-cite">NTP-1 pp. 22–24</cite></dd></div>
             <div><dt>Tithi</dt><dd>{m.tithi} {TITHI_NAMES[m.tithi - 1] ?? ''}</dd></div>
             <div><dt>Zero Rasis</dt><dd>{m.zeroRasis.length ? m.zeroRasis.map((s) => SIGNS[s]).join(', ') : 'none'}{m.zeroBhavas.length ? ` · bhavas ${m.zeroBhavas.join(', ')}` : ''} <cite class="ntp-cite">NTP-1 pp. 17–18</cite></dd></div>
           </dl>
@@ -180,8 +226,13 @@ export function Ntp({ chart }: { chart: ChartResult }): JSX.Element {
               {mahas.map((p, i) => <option key={i} value={i}>{PLANET_NAMES[p.lords[0]!]} {civilDate(p.start, zone)} – {civilDate(p.end, zone)}{i === runningIdx ? ' (running)' : ''}</option>)}
             </select>
           </div>
+          <p><Pl id={reading.lord} /> {PLANET_NAMES[reading.lord]} as Dasha lord — <Samayam chart={chart} id={reading.lord} /></p>
           <p>Dasha Yogi <Pl id={reading.dashaYogi} /> {PLANET_NAMES[reading.dashaYogi]} · Dasha Raja Yogi <Pl id={reading.rajaYogi} /> {PLANET_NAMES[reading.rajaYogi]} <cite class="ntp-cite">NTP-2 pp. 29–30, 36</cite></p>
           <ul class="ntp-findings">{reading.findings.map((f, i) => <FindingItem key={i} f={f} />)}</ul>
+          <h3 class="ntp-sub">What the {PLANET_NAMES[reading.lord]} Dasha gives, area by area</h3>
+          <p class="hint-text">{t('ntp.areasNote')}</p>
+          <AreaTable areas={m.planets.find((q) => q.id === reading.lord)!.areas} lord={reading.lord} />
+          <h3 class="ntp-sub">Bhuktis</h3>
           <div class="table-wrap">
             <table class="data" data-testid="ntp-bhuktis">
               <caption class="sr-only">Bhuktis of the {PLANET_NAMES[reading.lord]} Dasha</caption>
@@ -193,7 +244,10 @@ export function Ntp({ chart }: { chart: ChartResult }): JSX.Element {
                     <td class="num">{civilDate(b.start, zone)}</td>
                     <td><Pl id={b.starter} /></td><td><Pl id={b.ruler} /></td>
                     <td><ToneTag tone={b.startTone} /> → <ToneTag tone={b.finalTone} /></td>
-                    <td><details><summary>{b.findings.length} rule{b.findings.length === 1 ? '' : 's'}</summary><ul class="ntp-findings">{b.findings.map((f, i) => <FindingItem key={i} f={f} />)}</ul></details></td>
+                    <td><details><summary>{b.findings.length + b.classical.length} rule{b.findings.length + b.classical.length === 1 ? '' : 's'}</summary>
+                      <p class="ntp-sub-label">Dasha chart (NTP-2 ch. II)</p><ul class="ntp-findings">{b.findings.map((f, i) => <FindingItem key={i} f={f} />)}</ul>
+                      {b.classical.length > 0 && <><p class="ntp-sub-label">Classical rules (NTP-2 ch. IV)</p><ul class="ntp-findings">{b.classical.map((f, i) => <FindingItem key={`c${i}`} f={f} />)}</ul></>}
+                    </details></td>
                   </tr>
                 ))}
               </tbody>
@@ -205,7 +259,17 @@ export function Ntp({ chart }: { chart: ChartResult }): JSX.Element {
 
       <section class="panel" aria-labelledby="h-ntp-how">
         <header class="panel-head"><h2 id="h-ntp-how">How this page reads the chart</h2></header>
-        <div class="panel-body"><p class="hint-text">{t('ntp.how', { weekday: String(weekday) })}</p></div>
+        <div class="panel-body">
+          <div class="field inline-field">
+            <label for="ntp-node">Rahu and Ketu</label>
+            <select id="ntp-node" value={ntpNode.value} onChange={(ev) => setNtpNode(ev.currentTarget.value as NtpNode)}>
+              <option value="mean">Mean node, as Iyer (NTP-1 p. 101)</option>
+              <option value="chart">Same as the chart (Settings)</option>
+            </select>
+          </div>
+          <p class="hint-text" data-testid="ntp-node-used">This page uses the {chart.profile.node} node{chart.profile.node === 'mean' && ntpNode.value === 'mean' ? ', as Iyer does' : ''}.</p>
+          <p class="hint-text">{t('ntp.how', { weekday: String(weekday) })}</p>
+        </div>
       </section>
     </article>
   );

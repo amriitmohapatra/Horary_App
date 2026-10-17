@@ -15,7 +15,7 @@ import { deltaTseconds } from './time/deltaT';
 import { PLANETS, type ChartInput, type ChartResult, type PlanetId, type Position } from './types';
 import { ZODIAC, normDeg, toArcsec } from './zodiac';
 
-export const ENGINE_VERSION = '0.5.0';
+export const ENGINE_VERSION = '0.6.0';
 
 const SWE_BODY: Record<Exclude<PlanetId, 'Ra' | 'Ke'>, number> = {
   Su: SE.SUN, Mo: SE.MOON, Ma: SE.MARS, Me: SE.MERCURY, Ju: SE.JUPITER, Ve: SE.VENUS, Sa: SE.SATURN,

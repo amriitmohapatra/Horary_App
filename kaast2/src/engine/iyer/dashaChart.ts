@@ -106,3 +106,17 @@ export function dashaYogis(yogaPoint: Arcsec, lons: Readonly<Record<PlanetId, Ar
   out[second] = enemyOf(out[first]);
   return out;
 }
+
+/**
+ * Graha Samayam (NTP-1 PDF p. 28, checked on the page image): (signs from
+ * Aries to the Lagna + signs from the Lagna to the Dasha lord) × 2 × its Udu
+ * Dasha years, remainder by 27 → state 1 … 27. Counts are taken inclusively
+ * (Aries to Aries = 1), the usual Indian convention; remainder 0 = state 27.
+ */
+export function grahaSamayam(lagnaSign: number, planetSign: number, years: number): number {
+  const a = lagnaSign + 1;
+  const b = ((planetSign - lagnaSign + 12) % 12) + 1;
+  const r = ((a + b) * 2 * years) % 27;
+  return r === 0 ? 27 : r;
+}
+

@@ -53,6 +53,5 @@ describe('NTP model of the example chart', () => {
         if (p.starLord === b.lord && b.lord !== 'Mo') expect(b.starter).toBe(b.ruler);
       }
     }
-    if (process.env.NTP_DUMP) console.log(JSON.stringify({ m, d: dashaReading(chart, m, mahas[3]!, subperiods(mahas[3]!)) }, null, 1).slice(0, 6000));
   });
 });

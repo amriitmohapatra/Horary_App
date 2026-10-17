@@ -2,6 +2,35 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.6 — 2026-10-17 · `dist/Astro-Amriit v0.6.html`
+
+**What works**
+- **NTP page** (new tab after KP): H. R. Seshadri Iyer's *New Techniques of
+  Prediction* applied to the chart, every point cited to volume and PDF page.
+  - **NTP Guidance**: only the points that apply to this chart.
+  - **Yoga, Avayoga and the sets of three**: Birth Yogi, Duplicate Yogi,
+    Avayogi (Iyer's one-enemy table), the three friendship sets with the
+    Yogi's and Avayogi's highlighted, the birth-yoga effect, Zero Rasis.
+  - **Planet cards**: states (exalted, debilitated, own, Zero Rasi, combust,
+    retrograde, Yogi roles), positive/negative character with reasons,
+    Theories 1–34 (NTP-2 ch. I), NTP-1 planet-state, bhava and yoga rules,
+    Graha Samayam, three Navamsha stars, areas its Dasha favours or harms.
+  - **Dasha and Bhukti**: Iyer's Dasha chart (Starter, Ruler, Dasha Yogi,
+    Raja Yogi), Dasha rules, the area-by-area reading through Iyer's own
+    division charts, and every Bhukti's start/end tone with its Dasha-chart
+    and classical (A–E) rules.
+  - Mean node, as Iyer (switchable).
+
+**Evidence** 645 unit/engine tests. The Dasha chart reproduces Iyer's worked
+Chart 1: 10/10 Starters and Rulers, the Raja Yogi and 3 Dasha Yogis. The
+division charts match his Chart 1 table in 167/170 cells (3 book misprints).
+The Mathematical Navamsha matches all 7 worked examples and his 12/24/72 pada
+count. 32 e2e on the shipped file (new: NTP page; NTP in the phone and axe
+runs), contract check, pre-publish scan.
+
+**Sources** `references/NTP/` (private; never published — PLAN §11) with rule
+catalogues in `references/NTP/notes/`.
+
 ## v0.5 — 2026-10-17 · `dist/Astro-Amriit v0.5.html`
 
 **What works**

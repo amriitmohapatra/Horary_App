@@ -33,6 +33,8 @@ import { DEBIL_SIGN, EXALT_SIGN } from '../strength/common';
 import { mahadashas, type DashaPeriod } from '../dasha/vimshottari';
 import { ENEMY, dashaChart, dashaYogis, sameTrio, trioOf, type ChartPoint, type DashaChart } from './dashaChart';
 import { VIM_ORDER } from '../zodiac';
+import { aspectsSign, ntp1, type Ntp1Planet } from './ntp1';
+import { areaReadings, bhuktiClassical, threeStarFindings, threeStars, type AreaReading, type ThreeStars } from './ntp2b';
 
 export type Pol = '+' | '-' | 'mixed' | '0';
 export type Tone = 'good' | 'bad' | 'mixed' | 'info';
@@ -47,12 +49,9 @@ const OWN_SIGNS: Readonly<Record<PlanetId, readonly number[]>> = {
   Su: [4], Mo: [3], Ma: [0, 7], Me: [2, 5], Ju: [8, 11], Ve: [1, 6], Sa: [9, 10], Ra: [], Ke: [],
 };
 
-/** Aspects (graha drishti, full strength): every planet the 7th; Mars 4th, 8th; Jupiter 5th, 9th; Saturn 3rd, 10th. */
-const SPECIAL_ASPECTS: Partial<Record<PlanetId, number[]>> = { Ma: [4, 8], Ju: [5, 9], Sa: [3, 10] };
+/** Aspects as Iyer gives them (NTP-1 pp. 46, 126): 7th for all; Mars 4/8, Jupiter 5/9, Saturn, Rahu, Ketu 3/10. */
 export function aspects(from: PlanetId, fromSign: number, toSign: number): boolean {
-  const n = ((toSign - fromSign + 12) % 12) + 1;
-  if (from === 'Ra' || from === 'Ke') return false;
-  return n === 7 || (SPECIAL_ASPECTS[from] ?? []).includes(n);
+  return fromSign !== toSign && aspectsSign(from, fromSign, toSign);
 }
 
 const mul = (a: Pol, b: Pol): Pol => {
@@ -86,6 +85,10 @@ export interface PlanetNtp {
   group: 'yogi' | 'avayogi' | 'other';
   findings: Finding[];
   tone: Tone;
+  ntp1: Ntp1Planet;
+  /** Iyer's area-by-area (D-chart) reading of this planet's Dasha (NTP-2 pp. 57–63, 82). */
+  areas: AreaReading[];
+  stars: ThreeStars;
 }
 
 export interface BhuktiReading {
@@ -98,6 +101,8 @@ export interface BhuktiReading {
   /** Tone at the start (Starter) and the final tone (Ruler — "the Ruler is most important"). */
   startTone: Tone;
   finalTone: Tone;
+  /** Classical Bhukti rules A–E (NTP-2 ch. IV, pp. 86–89). */
+  classical: Finding[];
 }
 export interface DashaReading {
   lord: PlanetId;
@@ -172,6 +177,7 @@ export function ntpModel(chart: ChartResult, weekday: number): NtpModel {
   const signOf = (p: PlanetId) => signIndex(chart.bodies[p].lon);
   const starOf = (p: PlanetId) => VIM_ORDER[nakshatraIndex(chart.bodies[p].lon) % 9]!;
   const isYogiish = (p: PlanetId) => p === yogi || p === duplicateYogi;
+  const n1 = ntp1(chart, bc, yogi, bhavaLords);
 
   const planets: PlanetNtp[] = PLANETS.map((p) => {
     const b = bases[p];
@@ -265,7 +271,16 @@ export function ntpModel(chart: ChartResult, weekday: number): NtpModel {
     const partner = PLANETS.find((q) => q !== p && starOf(q) === p && star === q);
     if (partner) f.push({ rule: 'T32', tone: 'info', params: { ...P, other: partner } });
 
+    // NTP-1: eclipsed planets (p. 127), then the planet-state and bhava rules.
+    if (combust) f.push({ rule: p === 'Sa' || p === 'Ve' ? 'N1combustHalf' : bhavaPol === '-' ? 'N1combustWorst' : 'N1combust', tone: p === 'Sa' || p === 'Ve' ? 'mixed' : 'bad', params: P });
+    f.push(...n1.planets[p].findings);
+    f.push(...threeStarFindings(chart, p, yogi, avayogi));
+    if (p === 'Ra' || p === 'Ke') f.push({ rule: 'N2node', tone: 'info', params: P });
+    const debilNoNB = f.some((x) => x.rule === 'N1debil');
     return {
+      ntp1: n1.planets[p].info,
+      areas: areaReadings(chart, p, { combust, debilNoNB, yogi, duplicateYogi, avayogi }),
+      stars: threeStars(chart.bodies[p].lon),
       id: p, sign, bhava, nakshatra: nakshatraIndex(chart.bodies[p].lon), starLord: star, owns: b.owns,
       reasonsPos: b.pos, reasonsNeg: b.neg, pol: b.pol, rasiPol, bhavaPol, starPol, effective,
       exalted, debilitated: debil, ownSign: own, zeroRasi: zero, combust, retrograde: retro,
@@ -293,6 +308,7 @@ export function ntpModel(chart: ChartResult, weekday: number): NtpModel {
   if (dustZero.length) cf.push({ rule: 'O4', tone: 'good', params: { list: dustZero.join(', ') } });
   if (!zeroRasis.length) cf.push({ rule: 'ZR0', tone: 'info' });
   if (yogi === duplicateYogi) cf.push({ rule: 'YD', tone: 'good', params: { yogi } });
+  cf.push(...n1.chartFindings);
 
   const lons = Object.fromEntries(PLANETS.map((p) => [p, chart.bodies[p].lon])) as Record<PlanetId, number>;
   const dy = dashaYogis(y.yogiPoint.lon, lons, yogi);
@@ -387,9 +403,11 @@ export function dashaReading(chart: ChartResult, m: NtpModel, maha: DashaPeriod,
     if (px === '-' && ps === '-' && pr === '+') bf.push({ rule: 'B7', tone: 'mixed', params: { bhukti: X } });
     if ((px === '+' && ps === '+' && pr === '+') || (px === '-' && ps === '-' && pr === '-')) bf.push({ rule: 'B8', tone: 'good', params: { bhukti: X } });
     if (row.ruler === ENEMY[D] && dPlanet.effective === '-') bf.push({ rule: 'D6', tone: 'bad', params: { bhukti: X, dasha: D } });
+    const good = (q: PlanetId) => { const t = m.planets.find((z) => z.id === q)!.tone; return t === 'good' || t === 'bad' ? t : 'mixed'; };
+    const classical = bhuktiClassical(chart, D, X, good, (q) => m.planets.find((z) => z.id === q)!.bhava);
     bf.push(...s, ...r);
     return {
-      lord: X, start: bp.start, end: bp.end, starter: row.starter, ruler: row.ruler, findings: bf,
+      lord: X, start: bp.start, end: bp.end, starter: row.starter, ruler: row.ruler, findings: bf, classical,
       startTone: toneOf(s), finalTone: row.ruler === row.starter ? toneOf(s) : toneOf(r),
     };
   });

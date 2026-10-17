@@ -27,7 +27,7 @@ function Routed({ c }: { c: ChartResult }): JSX.Element {
     case 'strengths': return <Strengths chart={c} />;
     case 'jaimini': return <Jaimini chart={c} />;
     case 'kp': return <Kp />;
-    case 'ntp': return <Ntp chart={c} />;
+    case 'ntp': return <Ntp />;
     case 'yogi': return <YogiBhava chart={c} />;
     case 'transits': return <Transits chart={c} />;
     case 'settings': return <Settings input={chartInput.value} />;

@@ -344,3 +344,6 @@ table.data .r { text-align: right; }
 .ntp-trio.trio-avayogi { border-left-color: var(--danger); }
 .ntp table td details summary { cursor: pointer; color: var(--accent); }
 .ntp table tr.running { background: var(--running-bg); }
+.ntp-sub { font-size: var(--fs-md); margin: var(--sp-4) 0 var(--sp-2); }
+.ntp-sub-label { margin: var(--sp-2) 0 var(--sp-1); font-size: var(--fs-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.ntp-why { font-size: var(--fs-sm); }

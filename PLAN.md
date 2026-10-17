@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.5 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.5.html` (seconds entry on phones, saved places, KP chart and significators) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
+Status: **v0.5 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.6.html` (seconds entry on phones, saved places, KP chart and significators, NTP/Iyer guidance) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
@@ -354,7 +354,7 @@ decoding, Playwright for build verification, a field-by-field parity script;
 
 When parity is reached and Phase 2 customisation is agreed, we will:
 1. Create a **new public GitHub repository** containing only `kaast2/` (app, tests, docs, anonymised fixtures), the sanitised `knowledge/` files, PLAN.md, ARCHITECTURE.md, LICENSE (AGPL-3.0), README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY.md, issue templates, CI.
-2. **Never publish**: `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`.
+2. **Never publish**: `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`, and `references/` (Iyer's NTP books — copyrighted, private reference only).
 3. Run a pre-publish scan (script in `kaast2/scripts/prepublish_scan`) for names, coordinates, JDs from the private corpus, API keys, and absolute paths.
 4. Archive this private repository as the family's research record; the public repo starts with a clean history (no rewriting of the private one).
 5. Write the external-audience README: what the app is, who it is for, how to run the single HTML, how to deploy to Vercel, how to cite PL7 and Swiss Ephemeris, and what is intentionally not included.

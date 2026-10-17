@@ -1,6 +1,6 @@
 # Astro-Amriit — User Guide
 
-*For version 0.5. Written for astrologers, not for computer people.*
+*For version 0.6. Written for astrologers, not for computer people.*
 
 Every screenshot in this guide uses one public example chart: **Amitabh
 Bachchan, 11 October 1942, 16:00, Allahabad (Prayagraj)**. You can cast the
@@ -17,9 +17,10 @@ same chart and compare it with the pictures.
    - [4.3 Vargas](#43-vargas)
    - [4.4 Dashas](#44-dashas)
    - [4.5 KP (Krishnamurti)](#45-kp-krishnamurti)
-   - [4.6 Yogi & Bhava](#46-yogi--bhava)
-   - [4.7 Jaimini](#47-jaimini)
-   - [4.8 Transits](#48-transits)
+   - [4.6 NTP (Iyer)](#46-ntp-iyer)
+   - [4.7 Yogi & Bhava](#47-yogi--bhava)
+   - [4.8 Jaimini](#48-jaimini)
+   - [4.9 Transits](#49-transits)
 5. [Settings](#5-settings)
 6. [How far can I trust each number?](#6-how-far-can-i-trust-each-number)
 7. [Troubleshooting](#7-troubleshooting)
@@ -48,7 +49,7 @@ calculating instrument. The judgement is yours.
 
 Astro-Amriit is **one file** that ends in `.html`. Its name starts with
 `Astro-Amriit` and includes a version number, for example
-`Astro-Amriit v0.5.html`.
+`Astro-Amriit v0.6.html`.
 
 1. Copy the file to your computer (for example to the Desktop).
 2. **Double-click** it. It opens in your web browser (Chrome, Edge, Firefox or
@@ -66,7 +67,7 @@ that you can type your own chart.
 ![The top of the app when it opens: the title bar with "ready", and the chart form](img/01_opening_form.png)
 
 At the very bottom of every page is a small line such as
-`Astro-Amriit v0.5.0 · single build …`. This is the version. Quote it if you
+`Astro-Amriit v0.6.0 · single build …`. This is the version. Quote it if you
 report a problem.
 
 ### The desktop installers (Windows and Mac)
@@ -209,7 +210,7 @@ weekday.
 ## 4. The pages, one by one
 
 The tabs under the chart line are, in order: **Page 1**, **Strengths**,
-**Vargas**, **Dashas**, **KP**, **Yogi & Bhava**, **Jaimini**, **Transits** and
+**Vargas**, **Dashas**, **KP**, **NTP**, **Yogi & Bhava**, **Jaimini**, **Transits** and
 **Settings**. Click a tab to open its page.
 
 Some conventions apply everywhere:
@@ -590,7 +591,156 @@ Note: these are PL's significators. Kala Chakra's power calculation (the
 cusp-number vector, with its span rule and node dispositors) is a
 different, family-specific method. It stays in Kala Chakra.
 
-### 4.6 Yogi & Bhava
+### 4.6 NTP (Iyer)
+
+This page applies H. R. Seshadri Iyer's *New Techniques of Prediction*
+(three volumes: NTP-1, NTP-2, NTP-3) to the chart. Every point shown carries
+its volume and the **source PDF page** of the copy kept with the project
+(`references/NTP/`), so you can look it up. Wording is a short paraphrase,
+not the book's text.
+
+Only rules whose conditions **this chart meets** are listed. Iyer's rules
+were never tested against outcomes here. Read them as the book's guidance for
+the astrologer, not as a final judgement.
+
+#### NTP Guidance
+
+The top panel lists the points that matter most for this chart:
+
+- the Birth Yogi, the Duplicate Yogi, the Avayogi and the Yogi's set of three;
+- the chart-wide rules that apply: Lagna in the Yogi's star, the Lagna lord
+  as Yogi, Zero Rasis on dusthanas, and the yogas of NTP-1 ch. V (Raja,
+  Viparita, Gaja-kesari, Kartari and others);
+- the planets whose Dasha Iyer's rules point clearly to good or bad;
+- the running Mahadasha and Bhukti, read by Iyer's Dasha chart.
+
+Each line is tagged **Good**, **Bad**, **Mixed** or **Note**. The colours
+only repeat those words.
+
+#### Yoga, Avayoga and the sets of three
+
+- **Birth Yoga point** = Sun + Moon + 93°20′. Its star's lord is the **Birth
+  Yogi**, and the lord of its sign is the **Duplicate Yogi** (NTP-2 p. 5).
+- **Avayogi**: Iyer gives every planet exactly one enemy (NTP-2 p. 6):
+  Sun–Saturn, Moon–Mercury, Mars–Ketu, Mercury–Mars, Jupiter–Sun,
+  Venus–Jupiter, Saturn–Moon, Rahu–Venus, Ketu–Rahu. The Yogi's enemy is the
+  Avayogi.
+- **The sets of three** (NTP-2 p. 6): {Ketu, Moon, Jupiter}, {Venus, Mars,
+  Saturn}, {Sun, Rahu, Mercury}. When one planet of a set is the Yogi, the
+  other two take on yoga character as well. With Rahu this is specially
+  noticed: Rahu becomes yoga-like when the Sun or Mercury is the Yogi. The
+  Avayogi's set leans the other way. The page marks the Yogi's set in green
+  and the Avayogi's in red.
+- **Birth yoga**: its effect as Iyer lists it (NTP-1 pp. 22–24). He says these
+  are the only birth-element effects that stand the test.
+- **Zero Rasis**: the burnt (Dagdha) signs of the birth tithi, from Iyer's
+  table (NTP-1 pp. 17–18). Bhavas counted from them, their lords and planets
+  in them lose power unless retrograde.
+
+#### Planets by Iyer's rules
+
+There is one card per planet. It gives:
+
+- **position**: sign, Sripati bhava, star and star lord;
+- **states**: Birth Yogi, Duplicate Yogi, Avayogi, Exalted, Debilitated, Own
+  sign, Zero Rasi, Combust (Iyer's "eclipsed"), Retrograde, Yogi's set or
+  Avayogi's set;
+- **character**: Positive, Negative or Mixed, with the reasons (NTP-2 pp. 7–9).
+  Lords of bhavas 1, 2, 4, 5, 7, 9, 10 and 11 that are not Zero Rasis are
+  positive, and so are the Yogi and the Duplicate Yogi. Lords of 3, 6, 8 and
+  12, lords of Zero Rasis, the Avayogi, Rahu and Ketu are negative. A planet
+  with both kinds of reason is mixed; its rules are marked **Positive side**
+  or **Negative side**.
+- **rules**: every Iyer rule the planet meets. These cover Theories 1–34 of
+  NTP-2 ch. I, and NTP-1's rules on:
+  - exaltation, debilitation and Neecha Bhanga, with the Bhukti in which the
+    cancellation shows;
+  - own sign, combustion, and functional and natural nature;
+  - degree of effect and aroha/avaroha (whether the bhava's results grow or
+    decline through its period);
+  - karaka in bhava, bhavat bhava, Digbala and Sookshma lordship.
+- **Its Dasha and notes** (click to open):
+  - what its Dasha tends to give, for which bhavas;
+  - its **Graha Samayam**, one of 27 "planetary states" (NTP-1 pp. 28–30);
+  - the areas of life its Dasha favours or harms;
+  - its **three stars** in Iyer's Mathematical Navamsha (NTP-2 p. 83).
+
+The card's overall tag (Good, Bad, Mixed) is the balance of its rules, not
+Iyer's own word.
+
+#### Dasha and Bhukti by Iyer's Dasha chart
+
+Choose any Mahadasha; the running one is preselected.
+
+- **Graha Samayam of the Dasha lord**, the **Dasha Yogi** and the **Dasha
+  Raja Yogi** (NTP-2 pp. 29–30, 36).
+- **Dasha rules** (NTP-2 pp. 36–38). In Iyer's Dasha chart each planet
+  "crosses" a **Starter** and a **Ruler**. For example: "the Birth Yogi
+  crosses the Dasha Yogi: a very powerful Dasha".
+- **What the Dasha gives, area by area** (NTP-2 pp. 57–63, 82). Iyer reads a
+  Dasha through the division charts, one area of life each:
+
+  | Chart | Area | Chart | Area |
+  |---|---|---|---|
+  | D-3 | co-borns | D-11 | gains without effort |
+  | D-4 | assets | D-12 | parents |
+  | D-5 | spirituality | D-16 | happiness, vehicles |
+  | D-6 | health | D-20 | worship |
+  | D-7 | children | D-24 | education |
+  | D-8 | longevity | D-27 | stamina |
+  | D-9 | partner | D-30 | happiness and misery |
+  | D-10 | profession | D-40 | auspicious effects |
+  |  |  | D-45 | character |
+
+  The Dasha lord's house from each chart's own Lagna decides:
+  - houses 3, 6, 8 and 12 are always bad for that area (Mars in the 6th is
+    the exception);
+  - the 2nd is neutral, the rest good.
+
+  The table also shows the strengths that add to the result (exaltation,
+  Vargottama, own sign, Digbala) and the special rules (karaka in its own
+  D-Lagna, lord of the D-Lagna, a strong Jupiter's relief).
+
+  The charts are built **Iyer's way**. His D-11, D-16, D-30 and D-45 differ
+  from Parashara's Light (the Vargas page shows PL's). Iyer's death and
+  widowhood readings are deliberately not shown.
+- **Bhuktis**: for each Bhukti:
+  - the Starter and the Ruler;
+  - the tone at the start and at the end. The Ruler decides the end, and Iyer
+    calls it the more important (NTP-2 p. 34).
+  - the rules behind them, with **Dasha chart** rules (NTP-2 pp. 34–36) and
+    **classical** rules (NTP-2 pp. 86–89) shown separately. The classical
+    rules cover:
+    - the Bhukti lord in the 3rd, 6th, 8th or 12th from the Dasha lord;
+    - its position from the Lagna;
+    - "guest" and "tenant";
+    - whether the two lords are related at all ("without such relationship
+      no results happen").
+
+#### How this page reads the chart
+
+- **Houses** are Sripati bhavas: a bhava's lord is the lord of the sign
+  holding its middle, and a planet's bhava is the span it lies in
+  (NTP-1 pp. 93–97).
+- **Rahu and Ketu**: the page uses the **mean node**, as Iyer says ("Take
+  always Mean Rahu", NTP-1 p. 101). You can switch to the chart's own
+  setting. The ayanamsa is the chart's (Lahiri in the PL profiles, as Iyer
+  uses).
+- **Combustion orbs**: Iyer gives none, so the app's standard orbs are used.
+  Iyer took combustion from the panchanga.
+- **Week day** for the Dasha chart: sunrise to sunrise (NTP-1 pp. 15–16).
+
+**What was checked:**
+
+- The Dasha chart reproduces Iyer's worked Chart 1 exactly: all 10 Starters
+  and Rulers, the Raja Yogi and the Dasha Yogis (NTP-2 pp. 23–34).
+- The division charts match his own Chart 1 table in 167 of 170 cells. The
+  other 3 are misprints in the book.
+- The Mathematical Navamsha reproduces all 7 of his worked examples.
+
+**Not checked:** whether his rules predict well. That is for you to judge.
+
+### 4.7 Yogi & Bhava
 
 #### Yogi points
 
@@ -633,7 +783,7 @@ the Rasi chart, 9th in bhava chalit).
 The **Bhavas** table gives, for each house, where it **Begins (sandhi)**, its
 **Centre (madhya)**, and the planets **In this bhava**.
 
-### 4.7 Jaimini
+### 4.8 Jaimini
 
 #### Chara karakas and special lagnas
 
@@ -696,7 +846,7 @@ other by sign, and whether by **dual signs** or **fixed ↔ movable**. Movable
 signs aspect the fixed signs except the one next to them, and the other way
 round; dual signs aspect each other.
 
-### 4.8 Transits
+### 4.9 Transits
 
 *The Transits page is new and still being finished. Its layout may change.*
 
@@ -860,6 +1010,7 @@ exact; nothing here is rounded up.
 | Yogi point | Decoded from PL's program; cross-checked with PyJHora | Matches |
 | **Avayogi** and **Duplicate Yogi** | — | **Open.** PL's convention not yet confirmed; the Avayogi rule is selectable |
 | Panchanga (tithi, nakshatra, yoga, karana) | Cross-checked with PyJHora | Matches. The weekday uses PL's sunrise convention |
+| NTP page: Dasha chart, division charts, Mathematical Navamsha | Iyer's own worked examples (NTP-2 Chart 1 Dasha chart; Chart 1 D-chart table; 7 Navamsha examples) | Exact, apart from 3 misprinted cells in the book's D-chart table. The rules themselves are Iyer's; whether they predict well is untested |
 | KP page: cusps, lords, houses, significators | House placement compared with Kala Chakra's KP engine on 2 000 random charts (all equal); lords use the Page 1 rule, which matches PL 9; significator definitions from PL 7's manual | Not yet compared with a PL KP printout. Which Krishnamurti ayanamsa PL 9 uses on its KP screen is still to be confirmed (Test 2 of the export procedure) |
 | Bhava chalit (Sripati and equal houses) | Cross-checked with PyJHora on over 100 charts | Centres and houses match. Not yet compared with PL |
 | Chara karakas (7) | PL 9 Page 1 K7 column | 7 of 7 |

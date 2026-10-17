@@ -374,3 +374,24 @@ architecture.
 - Kala Chakra's power calculation is untouched and stays in Kala Chakra;
   the two significator notions are deliberately separate.
 - Transit step gained 1 week.
+
+## 2026-10-17 (session 2, later) — Astro-Amriit v0.6: NTP (Iyer) page
+- Source: Iyer, New Techniques of Prediction I–III, in `references/NTP/`
+  (private; text, OCR, page PDFs). Rule catalogues with PDF-page citations:
+  `references/NTP/notes/ntp1_rules.md`, `ntp2b_rules.md`, `ntp3_rules.md`;
+  NTP-2 ch. I–II read by the lead directly.
+- Settled by Iyer (DOC, page images checked): Duplicate Yogi = lord of the
+  sign of the Yoga point (NTP-2 p. 5); Avayogi = the Yogi's one enemy, table
+  NTP-2 p. 6 — identical to the app's 'sixth-nakshatra' variant; the sets of
+  three are {Ke Mo Ju}, {Ve Ma Sa}, {Su Ra Me} (Vimshottari positions 1-4-7,
+  2-5-8, 3-6-9). Iyer's Dagdha table (NTP-1 pp. 17–18) = the app's.
+- Iyer's conventions used on the NTP page only: Sripati bhavas with cusp =
+  madhya; mean node (NTP-1 p. 101; switchable); aspects 7th + Ma 4/8, Ju 5/9,
+  Sa/Ra/Ke 3/10, including conjunction; week day sunrise to sunrise.
+- Oracles: Dasha chart "easy method" reproduces Chart 1 Guru Dasha exactly;
+  Iyer's D-charts (his own D-11, D-16, D-30, D-45) match his Chart 1 table
+  167/170 (3 book misprints, OQ-3/4); Mathematical Navamsha reproduces all 7
+  worked examples.
+- Deliberately not shown: death, widowhood, chastity and ganda readings.
+- OPEN: Graha Samayam counting (inclusive assumed); the birth weekday
+  convention for the Dasha chart; combustion orbs (Iyer gives none).
