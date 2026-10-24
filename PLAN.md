@@ -420,6 +420,61 @@ for the boss's chart (aspects 72/72, lordships, Dominance, Func.; kept in git-ig
 a printout exercising PL's Tara and neutral Graha Maitri quirks; the house point of PL's default
 house-aspect graphs; user-guide screenshots for the new tabs (the boss asked to wait).
 
+## 14. Phase 1c — KP (Research) programme (boss's brief of 2026-10-24, evening)
+
+Brief: label the KP tab "KP (Research)"; bring in the knowledge of K. S.
+Krishnamurti's six KP Readers (B1 Casting the Horoscope, B2 Fundamental
+Principles, B3 Predictive Stellar Astrology, B4 Marriage, Married Life and
+Children, B5 Transits, B6 Horary Astrology; `KP_Materials.7z`, an Obsidian
+vault transcribed from the scans, 431 chapters, 280 figures) in the same
+manner as NTP; first filter out what the app already computes, add only what
+is missing; judge book by book, chapter by chapter, topic by topic; decide
+whether horary belongs; work slowly and autonomously.
+
+**The deeper version.**
+1. *What a top professional would do that the brief does not ask.* A senior
+   KP astrologer would not read a list of rules: they would (a) judge each
+   life matter by the cuspal sub-lord of its house and the house group it must
+   signify (KP's "promise"), (b) time it with Dasa–Bhukti–Anthra lords that
+   signify the same group, (c) confirm with Ruling Planets at the moment of
+   judgement and with transits of the Sun, Moon, Jupiter and Saturn through the
+   significators' stars and subs, and (d) rectify the birth time with Ruling
+   Planets before trusting any sub-lord. A UI/UX designer would show that
+   chain (cusp → sub lord → its star lord → houses signified → verdict) in one
+   glance per matter, with "why" one click away, and keep the existing tables
+   as the evidence layer. A KP teacher would mark which rules are
+   Krishnamurti's own and which he quotes from tradition to reject.
+2. *The rawest material.* Not the topic index: the Readers' chapters and their
+   figures (tables and charts), with the scan page of every claim (the vault's
+   `p. N` anchors); the worked example charts printed in the books (birth data,
+   cusps, planets, Dasa balance, significator tables, the events that
+   followed); the family's own KP practice (`knowledge/01_domain_horary_kp.md`,
+   Kala Chakra) and PL 7's KP pages already reproduced.
+3. *Methods and tools.* A per-book rule catalogue with citations (book,
+   chapter, PDF page) and a relevance verdict for every chapter (EXISTS /
+   NEW-COMPUTABLE / NEW-GUIDANCE / HORARY / NOT-RELEVANT); figures read as
+   images where numbers matter; the KP sub table, Krishnamurti ayanamsa,
+   Placidus cusps and Vimshottari engine already in the app reused, not
+   re-derived; new pure engine modules with unit tests; the guidance written
+   in the app's own words with citations, as on the NTP page.
+4. *What, other than us, shows it is right.* The Readers' own worked examples:
+   recompute their charts (Moon and Dasa balance, cusps within the table
+   precision Krishnamurti used, star/sub lords, the significator lists he
+   prints) and reproduce his promise/timing verdicts for the events he reports;
+   the family's validated Kala Chakra lords; PL 7's KP pages (already matched).
+
+**Rewritten brief (what is being done).** Rename the tab KP (Research).
+Ingest the Readers into `references/KP/` (private, never published). Read all
+six books with chapter-level relevance verdicts and rule catalogues
+(`references/KP/notes/`), and extract the worked example charts as oracles.
+Build only what the app lacks — expected: KP significators in Krishnamurti's
+order of strength, Ruling Planets, cuspal sub-lord promise per life matter
+with the house groups of the Readers, Dasa–Bhukti–Anthra timing of a matter,
+KP transits, Fortuna, the Readers' own rules on retrograde, combust and node
+planets, KP's view on marriage matching, and (decision below) the horary
+1–249 method — as KP (Research) sub-tabs with citations, verified on the
+books' own examples; ship as a new version with docs.
+
 ## 12. Session log
 
 - **2026-10-17** — Boot from CLAUDE.md/knowledge; absorbed the PL7 report and open items; inventoried GeoVision (1 559 input-only charts; 436 cache months); read the guide's method chapters; wrote PLAN v0.1 and ARCHITECTURE v0.1. Boss decided: East Indian chart layout as in Kala Chakra; share the Iyer books later; Windows and macOS installers for fully offline devices; next session starts from the prompt in CLOUD_HANDOFF.md. No app code yet. Next: boss answers D1–D9; slice 0.
