@@ -2,7 +2,7 @@
 
 Reader: agent b6. Scope: all 36 vault notes `B6-00` … `B6-35` (PDF pp. 1–333, 78 figures).
 Rule IDs in `b6_rules.md` are `KP6-001` … ; worked charts are in `b6_examples.json`
-(`b6-E01` … `b6-E64`).
+(`b6-E01` … `b6-E65`).
 
 Verdict legend (from the brief): **EXISTS** · **NEW-COMPUTABLE** · **NEW-GUIDANCE** · **HORARY** ·
 **NOT-RELEVANT**. "REJECTED-TRADITION" marks parts where Krishnamurti quotes traditional
@@ -22,7 +22,7 @@ Hindu or Western rules only to reject them (recorded as a rule status in `b6_rul
 >    in that example's `notes` field.
 > 3. **The printed significator tables are not uniform** (F020, F026, F030, F067). I
 >    recomputed them from the printed positions with
->    `scratchpad/b6tools/sig.py`. The non-node rows match the app's A–D levels exactly in
+>    a throw-away script (session scratchpad, not kept in the repo). The non-node rows match the app's A–D levels exactly in
 >    three of the four tables. The fourth (F030, no. 175) leaves out level C. The node rows
 >    use an agency rule that changes from example to example. See KP6-021…KP6-024.
 > 4. **The B6 249-sub table (figs. B6.4–B6.10) is identical to the app's generated table.**
@@ -73,12 +73,15 @@ Hindu or Western rules only to reject them (recorded as a rule status in `b6_rul
 
 | Verdict | Chapters (a chapter can carry two) |
 |---|---|
-| EXISTS | 2 (B6-16 star/sub table; B6-17 249 table) |
-| NEW-COMPUTABLE | 13 (B6-16, 18, 19, 21, 22, 24, 25, 27, 28, 30 [relative groups], 32, 33, 35) |
-| NEW-GUIDANCE | 9 (B6-08, 14, 16, 19, 20, 23, 30, 34, + 32's group list as text) |
-| HORARY | 14 (B6-17, 21, 24–34) |
-| REJECTED-TRADITION | 9 (B6-09, 10, 11, 12, 13, 15, 22, 23, 31, 34 – parts) |
-| NOT-RELEVANT | 12 (B6-00…07, 08 mostly, 15 lists, 35 prayer part) |
+| EXISTS | 2: B6-16 (star/sub doctrine), B6-17 (249 table) |
+| NEW-COMPUTABLE | 12: B6-16, 18, 19, 21, 22, 24, 25, 27, 28, 32, 33, 35 |
+| NEW-GUIDANCE | 8: B6-08, 14, 16, 19, 20, 23, 30, 34 |
+| HORARY | 13: B6-17, 21, 24–34 |
+| REJECTED-TRADITION | 10: B6-09, 10, 11, 12, 13, 15, 22, 23, 31, 34 (parts) |
+| NOT-RELEVANT | 12: B6-00…08, 13, 15 (lists), 35 (prayer part) |
+
+Rule catalogue: 165 entries (KP6-001…232, with gaps). Examples: 65 charts, 60 checked against
+the page image, 52 with a horary number.
 
 ## Judgement for the app owner: what B6 offers a NATAL tool
 

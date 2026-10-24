@@ -138,7 +138,7 @@ and so on.
 - **KP6-024** · **The printed significator tables, checked (validation oracle).** Four tables
   list "house → significators" and "planet → houses": fig. B6.20 (no. 29), B6.26 (no. 217),
   B6.30 (no. 175), B6.67 (no. 247, 1-7-1969). I recomputed them from the printed positions
-  (`scratchpad/b6tools/sig.py`). **Result:** (i) for every planet whose star lord is not a
+  (throw-away script, not kept in the repo). **Result:** (i) for every planet whose star lord is not a
   node, the four-level rule with cusp-sign ownership (= app A–D) reproduces the book exactly in
   F020, F026 and F067 (Sun, Moon, Mars, Mercury, Jupiter, Saturn where applicable). (ii) Three
   "planet" rows drop a house that the matching "house" row of the same figure includes. These
