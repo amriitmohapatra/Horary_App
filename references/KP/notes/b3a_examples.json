@@ -1,0 +1,2593 @@
+[
+ {
+  "id": "b3a-E01",
+  "cite": "B3 p. 157-158, Fig. B3.11",
+  "kind": "natal",
+  "birth": {
+   "date": "1900-12-28",
+   "time": "07:52",
+   "ampm_or_24h_as_printed": "7-52 A.M.",
+   "zone_or_time_standard": null,
+   "place": "(Madras; place not named)",
+   "lat": "13-04 N",
+   "lon": "80-15 E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Cap 2°26'",
+   "2": "Aqu 5°45' (printed '115-45')",
+   "3": "Pis 9°45' (printed '119-45')",
+   "4": "Ari 11°45'",
+   "5": "Tau 9°45' (printed 'V9-45')",
+   "6": "Gem 5°45' (printed 'V15-45')",
+   "7": "Can 2°46' (printed 'VII 2.46'; Asc is 2°26', doubtful)",
+   "8": "Leo 5°45'",
+   "9": "Vir 9°45' (printed '1X9-45')",
+   "10": "Lib 11°45'",
+   "11": "Sco 9°45'",
+   "12": "Sag 5°45'"
+  },
+  "planets": {
+   "Sun": "Sag 13°34'",
+   "Moon": "Pis 0°45'",
+   "Mars": "Leo 18°38'",
+   "Mercury": "Sco 28°40'",
+   "Jupiter": "Sag 2°24'",
+   "Venus": "Sco 13°28'",
+   "Saturn": "Sag 14°53'",
+   "Rahu": "Tau 7°40'",
+   "Ketu": "Sco 7°40'",
+   "Uranus": "Sco 21°43' (printed '(Ira. 2143')",
+   "Neptune": "Gem 5°16'"
+  },
+  "dasa_balance": "Jupiter 3y 1m 6d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "gains, fortune, success",
+    "date": "(not dated)",
+    "dasa": "Saturn, Mars, Sun sub-periods",
+    "verdict": "favourable"
+   },
+   {
+    "what": "desirable benefits",
+    "date": "(not dated)",
+    "dasa": "Jupiter, Mercury sub-periods",
+    "verdict": "favourable"
+   },
+   {
+    "what": "untoward results",
+    "date": "(not dated)",
+    "dasa": "Ketu (in 10), Venus (in 11), Rahu (in 4) sub-periods",
+    "verdict": "adverse"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "KSK's long-time friend. Used to show that planets in the 12th bhava gave gains and Raja-yoga planets gave trouble, so judge by star lord, not house or yoga. Balance checked: Moon Pis 0°45' (PBh, Jupiter) gives 3.1 y. Cusp numerals partly fused in the print ('115-45' = II 5-45); opposite-cusp pairs confirm the reading."
+ },
+ {
+  "id": "b3a-E02",
+  "cite": "B3 p. 161-165, Fig. B3.12",
+  "kind": "natal",
+  "birth": {
+   "date": "1928-01-29",
+   "time": "19:06",
+   "ampm_or_24h_as_printed": "7-06 P.M.",
+   "zone_or_time_standard": null,
+   "place": "(Madras; place not named)",
+   "lat": "13-04 N",
+   "lon": "80-15"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Leo 0°04'",
+   "2": "Leo 28°30'",
+   "3": "Lib 0°30'",
+   "4": "Sco 1°30'",
+   "5": "Sag 1°30'",
+   "6": "Cap 0°30'",
+   "7": "Aqu 0°04'",
+   "8": "Aqu 28°30'",
+   "9": "Ari 0°30'",
+   "10": "Tau 1°30' (printed 'x1.30')",
+   "11": "Gem 1°30'",
+   "12": "Can 0°30'"
+  },
+  "planets": {
+   "Sun": "Cap 15°40'",
+   "Moon": "Ari 12°25'",
+   "Mars": "Sag 14°59'",
+   "Mercury": "Cap 29°02'",
+   "Jupiter": "Pis 8°27'",
+   "Venus": "Sag 7°53'",
+   "Saturn": "Sco 23°37'",
+   "Rahu": "Tau 23°23'",
+   "Ketu": "Sco 23°23'"
+  },
+  "dasa_balance": "Ketu 0y 5m 23d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "mother died",
+    "date": "1947-04-11 (text also prints 27-4-47 [sic])",
+    "dasa": "Venus-Mercury-Saturn, Rahu sookshma",
+    "verdict": "death; Friday, Moolam star, lagna Poorvashada 15° Sag at night"
+   },
+   {
+    "what": "marriage",
+    "date": "1947-07-06",
+    "dasa": "Venus-Ketu-Venus-Moon",
+    "verdict": "married; Sravanam star day"
+   },
+   {
+    "what": "first appointment",
+    "date": "1952-01 (January 1952)",
+    "dasa": "Sun-Saturn-Moon",
+    "verdict": "service"
+   },
+   {
+    "what": "father died",
+    "date": "1952-07 (July 1952)",
+    "dasa": "Sun-Mercury-Venus",
+    "verdict": "death"
+   },
+   {
+    "what": "discontinued studies after completing medical course",
+    "date": "1952-12 as printed (dasa fits Nov-Dec 1951)",
+    "dasa": "Sun-Saturn-Sun",
+    "verdict": "education ends"
+   },
+   {
+    "what": "death of a child",
+    "date": "(not dated)",
+    "dasa": "Moon-Jupiter-Rahu",
+    "verdict": "death"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Planets in Virgo: none (Virgo intercepted in house 2). Dasa checked with 365.25-day years from the printed balance: 11-4-1947 = Ve-Me-Sa, 6-7-1947 = Ve-Ke-Ve, Dec 1951-Jan 1952 = Su-Sa-Mo, Jul 1952 = Su-Me-Ve. Sun-Saturn-Sun falls in Nov 1951, so 'December, 1952' is probably December 1951 (Saturn bhukti precedes Mercury bhukti). Death of father judged with the 9th as father's lagna and the badhaka of the 9th."
+ },
+ {
+  "id": "b3a-E03",
+  "cite": "B3 p. 172-177, Fig. B3.13 (Example I)",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Sco (degree not printed; sub lord Mars per text)"
+  },
+  "planets": {
+   "Sun": "Gem 1°32'",
+   "Moon": "Vir (degree not printed)",
+   "Mars": "Tau 13°",
+   "Mercury": "Gem (degree not printed; printed 'Mere')",
+   "Jupiter": "Cap 24°43'",
+   "Venus": "Ari 20°35'",
+   "Saturn": "Cap (degree not printed)",
+   "Rahu": "Lib (degree not printed)",
+   "Ketu": "Ari 9°20'",
+   "Uranus": "Sco 26°11'",
+   "Neptune": "Gem 8°31'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "cataract develops; surgery restores vision in Sun bhukti",
+    "date": "1962-06-04 to 1965-04-04 (Venus bhukti)",
+    "dasa": "Mercury-Venus, then Mercury-Sun",
+    "verdict": "eye disease and cure"
+   },
+   {
+    "what": "Rahu bhukti begins",
+    "date": "1968-07-07",
+    "dasa": "Mercury-Rahu",
+    "verdict": null
+   },
+   {
+    "what": "death (predicted end in Ketu anthra 2-1-70 to 25-2-70; Saturn transiting Ketu star, Saturn sub, conjunct natal Ketu)",
+    "date": "1970-02-18 07:30",
+    "dasa": "Mercury-Rahu-Ketu",
+    "verdict": "died"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "No birth data printed. Planets fit about mid-June 1902 (Sun Gem 1°32', Jupiter and Saturn in Cap, Uranus Sco 26°): an inference, not printed. 'He is now running 63 years of age'. Badhaka for fixed Scorpio = 9th (Moon). Rahu = agent of Venus (7th lord, kendradhipathi), Ketu = agent of Mars."
+ },
+ {
+  "id": "b3a-E04",
+  "cite": "B3 p. 177-180 (Fig. B3.14, Example II) and B3 p. 354-359 (Fig. B3.55, B3.56)",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Can 1°00'",
+   "2": "Can 26°56'",
+   "3": "Leo 25°56' (printed \"25'-56'\")",
+   "4": "Vir 27°56'",
+   "5": "Sco 0°56'",
+   "6": "Sag 1°56'",
+   "7": "Cap 1°00'",
+   "8": "Cap 26°56'",
+   "9": "Aqu 25°56'",
+   "10": "Pis 27°56'",
+   "11": "Tau 0°56'",
+   "12": "Gem 1°56'"
+  },
+  "planets": {
+   "Sun": "Sco 6°21'",
+   "Moon": "Vir 15°01'",
+   "Mars": "Sco 6°36'",
+   "Mercury": "Sco 13°28'",
+   "Jupiter": "Vir 12°04'",
+   "Venus": "Lib 15°29'",
+   "Saturn": "Sco 10°26'",
+   "Rahu": "Cap 7°42'",
+   "Ketu": "Can 7°42'",
+   "Uranus": "Sco 6°57' (Fig. B3.14 prints 'Lira 6%57')",
+   "Neptune": "Tau 29°27'",
+   "Fortuna": "Tau 9°40'"
+  },
+  "dasa_balance": "Moon 6y 2m 26d",
+  "ayanamsa_as_printed": null,
+  "significators": {
+   "2,6,10 (service)": "no occupants; lords Moon (2) and Jupiter (6, 10); Moon and Jupiter in Hasta (Moon's star) are the significators; Ketu (in Moon's sign) and Rahu (aspected by Jupiter) stronger",
+   "badhaka (B3-14)": "Taurus (11th for movable Cancer): Neptune only; Venus (lord) in Rahu star; Rahu in Sun star; majority of planets in Anuradha (Saturn)"
+  },
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "entered service, Finance Department",
+    "date": "1921-09-06",
+    "dasa": "Rahu-Ketu-Ketu",
+    "verdict": "service; Swati star day (text) – 6-9-1921 was a Tuesday"
+   },
+   {
+    "what": "selected; promoted from Ketu anthra",
+    "date": "1932",
+    "dasa": "Jupiter-Saturn-Mercury, then Ketu anthra",
+    "verdict": "promotion"
+   },
+   {
+    "what": "transfer with additional allowance (9 months)",
+    "date": "1936",
+    "dasa": "Jupiter-Ketu",
+    "verdict": "transfer"
+   },
+   {
+    "what": "special duty in Central Board",
+    "date": "(not dated)",
+    "dasa": "Jupiter-Venus-Ketu",
+    "verdict": "promotion"
+   },
+   {
+    "what": "posted to a far-off place",
+    "date": "(not dated)",
+    "dasa": "Jupiter-Sun-Ketu",
+    "verdict": "transfer"
+   },
+   {
+    "what": "retired",
+    "date": "1955",
+    "dasa": "Saturn-Sun",
+    "verdict": "retirement"
+   },
+   {
+    "what": "set up private practice",
+    "date": "(not dated)",
+    "dasa": "Saturn-Moon-Ketu",
+    "verdict": "business"
+   },
+   {
+    "what": "Mercury dasa begins",
+    "date": "1964-02-16",
+    "dasa": "Mercury",
+    "verdict": null
+   },
+   {
+    "what": "Mercury bhukti ends / Ketu bhukti begins",
+    "date": "1966-07-13",
+    "dasa": "Mercury-Ketu",
+    "verdict": null
+   },
+   {
+    "what": "Venus bhukti (34 months)",
+    "date": "1967-07-10",
+    "dasa": "Mercury-Venus",
+    "verdict": "popular, prosperous"
+   },
+   {
+    "what": "Sun bhukti: will give up practice (prediction)",
+    "date": "1970-05-10",
+    "dasa": "Mercury-Sun",
+    "verdict": "forecast"
+   },
+   {
+    "what": "health fails, Sun transiting Aqu 2° (Dhanishta, Mercury sub) (prediction in B3-14)",
+    "date": "1973-02 (3rd week)",
+    "dasa": "Mercury-Mars with Saturn/Venus/Sun sub-subs, after 19-12-1972",
+    "verdict": "forecast; 'This person is yet alive'"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Same native in B3-14 (Fig. B3.14, partial) and B3-40 (Fig. B3.55, full); identified by identical lagna, Fortuna, Jupiter, Mercury, Saturn, Uranus. Birth date not printed: the printed dasa dates put Mercury dasa at 16-2-1964 = birth + 66 y 2 m 26 d, i.e. about 20-11-1897 (inference; fits Sun Sco 6°21'). Dasa of the Mercury-dasa bhuktis checked. Lagna Cancer 1°00' is Punarvasu, Mars sub ('Mars Rajayogadhipathi rules the sub'). The table in Fig. B3.56 is only partly legible: Ketu Can 7°42' Moon–Saturn–Ketu; Jupiter Vir 12°04' Mercury–Moon–Rahu; Moon Vir 15°01' Mercury–Moon–Jupiter; Venus Lib 15°29' Venus–Rahu–Venus; Sun Sco 6°21' Mars–Saturn–Mercury; Saturn Mars–Saturn–Sun; Mercury Mars–Saturn–Rahu; Rahu Cap 7°42' Saturn–Sun–Ketu; Fortuna Tau 9°40' Venus–Sun–Venus."
+ },
+ {
+  "id": "b3a-E05",
+  "cite": "B3 p. 182-185, Fig. B3.15",
+  "kind": "natal",
+  "birth": {
+   "date": "1931-11-02",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib 28°28'",
+   "2": "Sco 26°59'",
+   "3": "Sag 26°59'",
+   "4": "Cap 27°59'",
+   "5": "Aqu 29°59'",
+   "6": "Ari 0°59'",
+   "7": "Ari 28°28'",
+   "8": "Tau 26°59'",
+   "9": "Gem 26°59'",
+   "10": "Can 27°59'",
+   "11": "Leo 29°59'",
+   "12": "Lib 0°59' (printed 'XII 0.59')"
+  },
+  "planets": {
+   "Sun": "Lib '11.-2-48'' as printed (illegible; about Lib 16° expected for 2 Nov)",
+   "Moon": "Can 0°12'",
+   "Mars": "Sco 9°02'",
+   "Mercury": "Lib 24°15'",
+   "Jupiter": "Can 25°13' (printed '256-13'')",
+   "Venus": "Sco 0°09'",
+   "Saturn": "Sag 25°13' (printed '25%13''; same minutes as Jupiter, doubtful)",
+   "Rahu": "Pis 10°39'",
+   "Ketu": "Vir 10°39' (printed '106-39'')",
+   "Uranus": "Pis 23°44'",
+   "Neptune": "Leo 14°45'"
+  },
+  "dasa_balance": "Jupiter 3y 8m 28d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "left India (overseas)",
+    "date": "(not dated)",
+    "dasa": "Mercury-Rahu-Venus-Saturn sookshma",
+    "verdict": "journey abroad"
+   },
+   {
+    "what": "died in the crash of an Air India Boeing 707 (117 passengers)",
+    "date": "not printed; the description (Monday, Sathabhisha star) fits Air India 101, 24-1-1966 (inference)",
+    "dasa": "Mercury-Rahu-Venus (computed 24-1-1966: Me-Ra-Ve-Me)",
+    "verdict": "death far from home"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Born Monday (2-11-1931 was a Monday). Moon and Jupiter in Cancer 'like Lord Shri Rama'. 8th CSL = Jupiter (lord 3, in 9, in Mercury's star) gives death far away during travel. Ruling planets at the crash: Monday (Moon), star Sathabhisha (Rahu), lagna perhaps 11° Capricorn (Moon's star)."
+ },
+ {
+  "id": "b3a-E06",
+  "cite": "B3 p. 183-185, Fig. B3.16",
+  "kind": "natal",
+  "birth": {
+   "date": "1937-09-13",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Can 0°01'"
+  },
+  "planets": {
+   "Sun": "Leo 26°39'",
+   "Moon": "Sco 20°29' (see notes)",
+   "Mars": "Sco 25°46'",
+   "Mercury": "Leo 29°52'",
+   "Jupiter": "Sag 25°31'",
+   "Venus": "Can 22°14'",
+   "Saturn": "Pis 9°41'",
+   "Rahu": "Sco 17°04'",
+   "Ketu": "Tau 17°04'"
+  },
+  "dasa_balance": "Mercury 4y 5m 24d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "husband (b3a-E05) dies in an air crash abroad",
+    "date": "(1966; see E05)",
+    "dasa": "Venus-Mercury-Venus",
+    "verdict": "widowhood"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Wife of b3a-E05. Printed Moon Sco 20°29' would give a Mercury balance of about 12 y 1 m. The printed 4 y 5 m 24 d needs Moon ≈ Sco 26°29', and only the printed balance puts 1966 in Venus–Mercury. Moon probably 26°29' (misprint '20-29'). Text lists her Chandra-Mangala, Sunapha, Adhi, Nipuna, Vesi yogas to show they did not prevent widowhood."
+ },
+ {
+  "id": "b3a-E07",
+  "cite": "B3 p. 186-187, Fig. B3.17",
+  "kind": "natal",
+  "birth": {
+   "date": "1925-06-15",
+   "time": "13:00",
+   "ampm_or_24h_as_printed": "1 P.M.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Vir 19 (printed \"19'\")",
+   "8": "Tau 18°35'"
+  },
+  "planets": {
+   "Sun": "Gem",
+   "Moon": "Pis",
+   "Mars": "Can",
+   "Mercury": "Tau",
+   "Jupiter": "Sag (printed \"29'\")",
+   "Venus": "Gem",
+   "Saturn": "Lib",
+   "Rahu": "Can",
+   "Ketu": "Cap"
+  },
+  "dasa_balance": "Mercury 9y 3m 5d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "truck hit his vehicle on the way home; fell left and escaped",
+    "date": "1962-09-01 (Saturday)",
+    "dasa": "Sun-Mars-Saturn (checked)",
+    "verdict": "escape from accident; day star Uttaraphalguni, lagna Scorpio in Anuradha pada 4"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Virgo lagna: Mars owns 8 and Saturn 6, hence accident-prone. Dasa and bhukti lords above the horizon = fell left; Jupiter aspecting from below = help from the right (KP3-074)."
+ },
+ {
+  "id": "b3a-E08",
+  "cite": "B3 p. 200, Fig. B3.18",
+  "kind": "natal",
+  "birth": {
+   "date": "1934-03-06",
+   "time": "06:26",
+   "ampm_or_24h_as_printed": "6.26 a.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Aqu 12°40'"
+  },
+  "planets": {
+   "Sun": "Aqu 21°55'",
+   "Moon": "Lib 17°14'",
+   "Mars": "Pis (degree illegible, printed 'CP-39'')",
+   "Mercury": "Aqu 21°54'",
+   "Jupiter": "Vir 29°15'",
+   "Venus": "Cap 16°25'",
+   "Saturn": "Cap 29°02'",
+   "Rahu": "Cap 25°20'",
+   "Ketu": "Can 25°20'",
+   "Uranus": "Ari 2°14'",
+   "Neptune": "Leo 18°05'",
+   "Fortuna": "Lib 7°29'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "very rich person 'who gain crores of rupees every year'",
+    "date": null,
+    "dasa": null,
+    "verdict": "wealth"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Study chart without analysis (the analysis lines are illegible: 'Sun in the constellation of lord of 2 and 11 …'). Shown to ask whether Raja yogas exist."
+ },
+ {
+  "id": "b3a-E09",
+  "cite": "B3 p. 201, Fig. B3.19",
+  "kind": "natal",
+  "birth": {
+   "date": "1924-03-30",
+   "time": "21:38",
+   "ampm_or_24h_as_printed": "9.38 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib 29°00'"
+  },
+  "planets": {
+   "Sun": "Pis 16°58'",
+   "Moon": "Cap 22°23'",
+   "Mars": "Sag 22°13'",
+   "Mercury": "Pis 25°35'",
+   "Jupiter": "Sco 27°08'",
+   "Venus": "Tau 1°13'",
+   "Saturn": "Lib (degree illegible)",
+   "Rahu": "Leo 7°35' (printed '70-35'')",
+   "Ketu": "Aqu 7°35'",
+   "Uranus": "Aqu 3°26'",
+   "Neptune": "Can 25°07'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "rich person (study chart)",
+    "date": null,
+    "dasa": null,
+    "verdict": "wealth"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "One of four rich-person charts given without analysis."
+ },
+ {
+  "id": "b3a-E10",
+  "cite": "B3 p. 201, Fig. B3.20",
+  "kind": "natal",
+  "birth": {
+   "date": "1936-08-15",
+   "time": "13:30:36",
+   "ampm_or_24h_as_printed": "1.30.36 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sco 10°30' (printed '10%30'')"
+  },
+  "planets": {
+   "Sun": "Can 29°29'",
+   "Moon": "Can 8°01 (last digit doubtful)",
+   "Mars": "Can 10°19'",
+   "Mercury": "Leo 17°29'",
+   "Jupiter": "Sco 21°45'",
+   "Venus": "Leo 12°23' (printed '12ü-23'')",
+   "Saturn": "Aqu 25°14'",
+   "Rahu": "Sag 8°01'",
+   "Ketu": "Gem 8°00'",
+   "Uranus": "Ari 16°44'",
+   "Neptune": "Leo 22°45'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "'the richest person in India' (with E11); 'Future promises more riches'",
+    "date": null,
+    "dasa": null,
+    "verdict": "wealth"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Positions fit 15-8-1936 (Sun sidereal Can 29° = tropical Leo 22°)."
+ },
+ {
+  "id": "b3a-E11",
+  "cite": "B3 p. 202, Fig. B3.21",
+  "kind": "natal",
+  "birth": {
+   "date": "1936-08-15 (as printed; see notes)",
+   "time": "13:30:36",
+   "ampm_or_24h_as_printed": "1.30.36 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Ari ?°48' (printed 'W-48'')"
+  },
+  "planets": {
+   "Sun": "Aqu 16°53'",
+   "Moon": "Aqu 23°33'",
+   "Mars": "Cap 24°38'",
+   "Mercury": "Cap 23°59'",
+   "Jupiter": "Tau 14°05'",
+   "Venus": "Aqu 22°33'",
+   "Saturn": "Sag 17°01? (printed '170-1.')",
+   "Rahu": "Ari 13°02'",
+   "Ketu": "Lib 13°02'",
+   "Uranus": "Pis 19°49'",
+   "Neptune": "Leo 9°13'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "'the richest person in India' (with E10)",
+    "date": null,
+    "dasa": null,
+    "verdict": "wealth"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Printed with the same date/time caption as Fig. B3.20, but the positions can't belong to 15-8-1936 (Sun in Aquarius). They fit about 1-3 March 1930 (Sun tropical Pisces ~10°, Jupiter Gemini ~6°, Saturn Capricorn ~10°, Uranus Aries ~12°). Probably a second person or a caption error."
+ },
+ {
+  "id": "b3a-E12",
+  "cite": "B3 p. 203-209, Fig. B3.22 (B3-16 and B3-17)",
+  "kind": "natal",
+  "birth": {
+   "date": "1920-08-07",
+   "time": "07:10",
+   "ampm_or_24h_as_printed": "7-10 A.M.",
+   "zone_or_time_standard": "L.M.T.",
+   "place": null,
+   "lat": "22° 0' North",
+   "lon": "73° 16' East"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Leo 14°34'",
+   "10": "Tau 14°29' (M.C.)"
+  },
+  "planets": {
+   "Sun": "Can 21°03'",
+   "Moon": "Ari 16°13'",
+   "Mars": "Lib 20°19'",
+   "Mercury": "Can 6°03'",
+   "Jupiter": "Leo 2°59' (printed '2?-59''; text: in Makha)",
+   "Venus": "Leo 1°19'",
+   "Saturn": "Leo 18°27'",
+   "Rahu": "Lib 18°29'",
+   "Ketu": "Ari 18°20'",
+   "Uranus": "Aqu 11°49'",
+   "Neptune": "Can 1°45'",
+   "Fortuna": "Tau 9°06'"
+  },
+  "dasa_balance": "not printed (Moon Ari 16°13' gives Venus ≈ 15y 8m)",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "joined a bank (Sun transiting Poorvashada)",
+    "date": "1941-12 (end of December)",
+    "dasa": "Sun-Venus-Jupiter",
+    "verdict": "service"
+   },
+   {
+    "what": "went to Rajkot",
+    "date": "1942-05-01",
+    "dasa": "Sun-Venus-Ketu",
+    "verdict": "change"
+   },
+   {
+    "what": "joined the International Bank",
+    "date": "1942-05-06",
+    "dasa": "Sun-Venus-Ketu, Mercury sub-period",
+    "verdict": "service"
+   },
+   {
+    "what": "left the bank, joined Government Revenue Department",
+    "date": "(not dated)",
+    "dasa": "Moon-Mars-Sun",
+    "verdict": "change of job"
+   },
+   {
+    "what": "promoted Class I officer with change of place",
+    "date": "(not dated)",
+    "dasa": "Moon-Sun",
+    "verdict": "promotion"
+   },
+   {
+    "what": "'a good lift'",
+    "date": "1959-07-15 (Swati star day)",
+    "dasa": "Rahu-Rahu-Rahu",
+    "verdict": "promotion"
+   },
+   {
+    "what": "moved to confidential (investigating) department",
+    "date": "1962-05",
+    "dasa": "Rahu-Jupiter-Saturn",
+    "verdict": "change"
+   },
+   {
+    "what": "Saturn bhukti begins",
+    "date": "1964-06-13",
+    "dasa": "Rahu-Saturn",
+    "verdict": null
+   },
+   {
+    "what": "father died (Moon in Uttarashada, Saturn transiting Sathabhisha)",
+    "date": "1964-06-27 (Saturday)",
+    "dasa": "Rahu-Saturn (start)",
+    "verdict": "death of father"
+   },
+   {
+    "what": "promotion (prediction)",
+    "date": "1966-11",
+    "dasa": "Rahu-Saturn-Rahu-Venus",
+    "verdict": "forecast"
+   },
+   {
+    "what": "overseas (prediction)",
+    "date": "1968-06",
+    "dasa": "Rahu-Mercury-Moon",
+    "verdict": "forecast"
+   },
+   {
+    "what": "promotion (prediction)",
+    "date": "1968-10",
+    "dasa": "Rahu-Mercury-Rahu",
+    "verdict": "forecast"
+   },
+   {
+    "what": "worries (prediction)",
+    "date": "1970-05",
+    "dasa": "Rahu-Ketu-Saturn",
+    "verdict": "forecast"
+   },
+   {
+    "what": "climax in career, different work (prediction)",
+    "date": "1972-11",
+    "dasa": "Rahu-Venus-Jupiter",
+    "verdict": "forecast"
+   },
+   {
+    "what": "higher rank (prediction)",
+    "date": "1974-03 (middle)",
+    "dasa": "Rahu-Sun-Jupiter",
+    "verdict": "forecast"
+   },
+   {
+    "what": "covetable post (prediction)",
+    "date": "1976-07",
+    "dasa": "Rahu-Mars-Jupiter",
+    "verdict": "forecast"
+   },
+   {
+    "what": "retirement (prediction; Sun in Pisces, Uttarabhadra, Ketu sub)",
+    "date": "1980-03-21 (about)",
+    "dasa": "Jupiter-Saturn-Ketu (Jupiter-Saturn from 28-5-1979)",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Born Saturday (7-8-1920 was a Saturday). Fortuna Tau 9°06' = Krittika (Sun), Venus sub, so service in Sun–Venus. Dasa computed from the Moon matches the printed dates to within ~1 month. The B3-17 retirement analysis (houses 1, 5, 9) continues this chart."
+ },
+ {
+  "id": "b3a-E13",
+  "cite": "B3 p. 209-212, Fig. B3.23",
+  "kind": "natal",
+  "birth": {
+   "date": "1931-01-19",
+   "time": "10:30",
+   "ampm_or_24h_as_printed": "10.30 a.m.",
+   "zone_or_time_standard": null,
+   "place": "(native wrote from Bombay)",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Pis"
+  },
+  "planets": {
+   "Sun": "Cap",
+   "Moon": "Cap (Sravanam per text)",
+   "Mars": "Can",
+   "Mercury": "Sag",
+   "Jupiter": "Gem",
+   "Venus": "Sco",
+   "Saturn": "Sag",
+   "Rahu": "Pis",
+   "Ketu": "Vir"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "bought Rs 5 prize bond on KSK's advice",
+    "date": "1960-04-16",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "won Rs 500 in the prize-bond draw (draw 1-12-1964); cash received on a Monday, Moon in Swati",
+    "date": "1964-12",
+    "dasa": "Rahu-Moon-Sun",
+    "verdict": "gain without pains, during Sade Sati"
+   },
+   {
+    "what": "Rahu dasa ends",
+    "date": "1966-01-17",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "greater fortune predicted after March 1968; 'try lottery. Never go to races'",
+    "date": "1968-03 onward",
+    "dasa": "Jupiter-Saturn",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Letter case. No degrees printed. Rahu dasa ending 17-1-1966 implies a Moon-dasa birth balance of about 10 y (Moon at the start of Sravana)."
+ },
+ {
+  "id": "b3a-E14",
+  "cite": "B3 p. 212-215 (text list, no figure)",
+  "kind": "natal",
+  "birth": {
+   "date": "1899-11-23",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib 18°18'",
+   "10": "16°42' (sign not printed)"
+  },
+  "planets": {
+   "Moon": "Can 13°02' (Pushya, Rahu sub)",
+   "Saturn": "Sag 0°49' (sign from text: lord of 5 in the 2nd bhava, third sign)",
+   "Jupiter": "Sco 0°33' (text: Scorpio, own star Visakha, Moon sub)",
+   "Sun": "8°07' (sign not printed; Scorpio expected)",
+   "Mars": "22°03' (sign not printed)",
+   "Venus": "25°20' (sign not printed)",
+   "Rahu": "28°53' (text: Scorpio)",
+   "Ketu": "28°53' (Taurus implied)",
+   "Uranus": "15°27' (sign not printed)",
+   "Neptune": "[illegible]",
+   "[illegible planet, probably Mercury]": "28°55'",
+   "Fortuna": "23°12'"
+  },
+  "dasa_balance": "5y 2m 4d (Saturn, from Moon in Pushya)",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "sudden gain at the races",
+    "date": "1955-05-08",
+    "dasa": "Moon-Moon-Jupiter",
+    "verdict": "gain"
+   },
+   {
+    "what": "money received (event chart b3a-E15)",
+    "date": "1955-05-09 10:30 (Monday, Jyeshta star, Cancer lagna)",
+    "dasa": "Moon-Moon-Jupiter",
+    "verdict": "gain"
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Printed as a list without signs. Text: 'Born on 23.11.1899, Saturday', but 23-11-1899 was a Thursday. 'Seven planets are in the sign Scorpio and also in the second bhava'. Signs above follow the text where stated."
+ },
+ {
+  "id": "b3a-E15",
+  "cite": "B3 p. 213-215, Fig. B3.24",
+  "kind": "horary",
+  "birth": {
+   "date": "1955-05-09",
+   "time": "10:30",
+   "ampm_or_24h_as_printed": "10.30 a.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Can 1°"
+  },
+  "planets": {
+   "Sun": "Ari 24°30'",
+   "Moon": "Sco 19°35'",
+   "Mars": "Tau 25°49'",
+   "Mercury": "Tau 11°44'",
+   "Jupiter": "Can 0°34'",
+   "Venus": "Pis 24°",
+   "Saturn": "Lib 24°",
+   "Rahu": "Sag 6°",
+   "Ketu": "Gem 6°"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "receipt of race winnings by native b3a-E14",
+    "date": "1955-05-09 10:30 (Monday)",
+    "dasa": "Moon-Moon-Jupiter (native's)",
+    "verdict": "gain"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Event-moment chart, not a question chart. The text says Jupiter was at Cancer 3°25'–3°30' on 8-9 May 1955, but the figure prints Jupiter 0°34'. Neither is in a Moon sub (KP3-120)."
+ },
+ {
+  "id": "b3a-E16",
+  "cite": "B3 p. 218-219, Fig. B3.25",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Can 1°"
+  },
+  "planets": {
+   "Moon": "Aqu 21°",
+   "Mercury": "Cap ('40' as printed; doubtful)",
+   "Venus": "Sag 10°",
+   "Saturn": "Can 2°"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "chronic indebtedness",
+    "date": null,
+    "dasa": null,
+    "verdict": "debts"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Partial chart of 'a person who is ever in debts'. Text: Saturn (lord 8) in lagna in Punarvasu (lord of 6); lagna lord Moon in Jupiter's star (lord 6) in the 8th; Mercury (lord 12) aspects lagna."
+ },
+ {
+  "id": "b3a-E17",
+  "cite": "B3 p. 221-222, Fig. B3.26",
+  "kind": "natal",
+  "birth": {
+   "date": "1915-08-07",
+   "time": "18:00",
+   "ampm_or_24h_as_printed": "6 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Cap"
+  },
+  "planets": {
+   "Sun": "Can",
+   "Moon": "Gem",
+   "Mars": "Gem",
+   "Mercury": "Can",
+   "Jupiter": "Pis",
+   "Venus": "Can",
+   "Saturn": "Gem",
+   "Rahu": "Cap",
+   "Ketu": "Can",
+   "Uranus": "Cap",
+   "Neptune": "Can"
+  },
+  "dasa_balance": "Rahu 9y 5m 18d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "stood surety for elder brother (born in Anuradha); brother died within a month; native repaid the loan",
+    "date": "1953-12 (beginning of December)",
+    "dasa": "Saturn-Mars-Jupiter (checked: 21-10 to 14-12-1953)",
+    "verdict": "debt through elder brother"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Illustrates 'significator of 11 and Mars associated with 8 or 12 = debt due to elder brother'."
+ },
+ {
+  "id": "b3a-E18",
+  "cite": "B3 p. 223, Fig. B3.27",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Ari"
+  },
+  "planets": {
+   "Sun": "Pis",
+   "Moon": "Leo",
+   "Mars": "Vir",
+   "Mercury": "Ari",
+   "Venus": "Aqu"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "Dharidra yoga illustration",
+    "date": null,
+    "dasa": null,
+    "verdict": null
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Partial chart; no data or analysis."
+ },
+ {
+  "id": "b3a-E19",
+  "cite": "B3 p. 224, Fig. B3.28",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Gem"
+  },
+  "planets": {
+   "Moon": "Can",
+   "Mercury": "Cap",
+   "Jupiter": "Tau"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "Dharidra yoga illustration",
+    "date": null,
+    "dasa": null,
+    "verdict": null
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Partial chart; no data or analysis."
+ },
+ {
+  "id": "b3a-E20",
+  "cite": "B3 p. 229-232, Fig. B3.29",
+  "kind": "natal",
+  "birth": {
+   "date": "1923-03-09",
+   "time": "10:00",
+   "ampm_or_24h_as_printed": "10 a.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib 18°13'"
+  },
+  "planets": {
+   "Sun": "Aqu 25°24'",
+   "Moon": "Sco 24°16'44\"",
+   "Mars": "Ari 11°29'42\"",
+   "Mercury": "Aqu 21°06'",
+   "Jupiter": "Lib 26°14'",
+   "Venus": "Cap 11°14'45\"",
+   "Saturn": "(not shown in figure)",
+   "Rahu": "Leo 28°05'",
+   "Ketu": "Aqu 28°05'",
+   "Uranus": "Aqu 21°07'",
+   "Neptune": "Can 23°18'",
+   "Fortuna": "Can 17°05'31\""
+  },
+  "dasa_balance": "Mercury 7y 11m 26d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "repeated borrowing and repaying",
+    "date": "(Sun dasa)",
+    "dasa": "Sun dasa",
+    "verdict": "debts"
+   },
+   {
+    "what": "Moon dasa begins",
+    "date": "1964-03-05",
+    "dasa": "Moon",
+    "verdict": null
+   },
+   {
+    "what": "repays and clears debts (prediction)",
+    "date": "1965-08-05 to 1967-02-05",
+    "dasa": "Moon-Rahu",
+    "verdict": "forecast"
+   },
+   {
+    "what": "free from debts (prediction)",
+    "date": "1966-11-20 to 1967-01-04",
+    "dasa": "Moon-Rahu-Moon",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Saturn is missing from the figure. Printed Moon Sco 24°16'44\" gives a Mercury balance of 7 y 3 m; the printed 7 y 11 m 26 d needs Moon ≈ Sco 23°44'. The dasa dates in the text follow the printed balance. The text's 'Rahu sub' for the Moon fits 24°16' (Mars sub at 23°44'), so one of the two is a misprint. Text 'Mars in Aries is in the 8th [sic]' and 'Jupiter owns the 8th [sic]' should be 6th."
+ },
+ {
+  "id": "b3a-E21",
+  "cite": "B3 p. 232-238, Fig. B3.30",
+  "kind": "horary",
+  "birth": {
+   "date": "1964-11-08",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": "Madras (Bharatiya Vidya Bhavan class)",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": 16,
+  "cusps": {
+   "1": "Tau 20°00'–23°20' (printed '20-23'20'; number 16 of 108 = Rohini pada 4)"
+  },
+  "planets": {
+   "Sun": "Lib",
+   "Moon": "Sag (Moolam pada 2, in the 7th bhava)",
+   "Mars": "Leo",
+   "Mercury": "Sco",
+   "Jupiter": "Ari (R)",
+   "Venus": "Vir",
+   "Saturn": "Aqu",
+   "Rahu": "Gem",
+   "Ketu": "Sag",
+   "Uranus": "Leo",
+   "Neptune": "Lib"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "theft of jewels, silver, silk saris and cash between 8.15 a.m. and 12.30 p.m. (date before the query)",
+    "date": null,
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "query (number 16, Sunday, Moolam star)",
+    "date": "1964-11-08",
+    "dasa": null,
+    "verdict": "recovery promised; thief a young dark man with two women"
+   },
+   {
+    "what": "Jupiter (11th lord) stations direct",
+    "date": "1965-01-10",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "thief caught",
+    "date": "1965-01-20",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "property returned (Jupiter transiting Bharani 24°00'–25°31', Venus star, Mercury sub)",
+    "date": "1965-02-05 to 1965-02-19",
+    "dasa": null,
+    "verdict": "recovered"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Horary number 16 out of 108 (padas), not 1–249. Navamsa lagna Cancer. The table printed under the chart is garbled in the source. Letter of S. Govindan, 5-2-1965."
+ },
+ {
+  "id": "b3a-E22",
+  "cite": "B3 p. 251-252, Fig. B3.31",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Pis 16°"
+  },
+  "planets": {
+   "Sun": "Cap 29°34'",
+   "Moon": "Gem 3°11'",
+   "Mars": "Pis 29°42'",
+   "Mercury": "Aqu 16°23' (printed 'Budha')",
+   "Jupiter": "Can 6°53'",
+   "Venus": "Pis 14°57'",
+   "Saturn": "Pis 3°09'",
+   "Rahu": "Gem 19°06'",
+   "Ketu": "Sag 19°04' (2' off Rahu as printed)",
+   "Uranus": "Sag 22°31'",
+   "Neptune": "Gem 20°02'"
+  },
+  "dasa_balance": "Mars 1y 9m 23d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "father's house sold",
+    "date": "1912-07 (first week)",
+    "dasa": "Rahu-Rahu-Mars",
+    "verdict": "sale"
+   },
+   {
+    "what": "purchased a house",
+    "date": "1940-11-05",
+    "dasa": "Jupiter-Mars-Jupiter",
+    "verdict": "purchase"
+   },
+   {
+    "what": "sold it",
+    "date": "1958-06-08",
+    "dasa": "Saturn-Rahu-Saturn",
+    "verdict": "sale"
+   },
+   {
+    "what": "purchased a building; later extended it in Saturn-Jupiter-Mars",
+    "date": "1960-07-04",
+    "dasa": "Saturn-Jupiter-Mercury",
+    "verdict": "purchase"
+   },
+   {
+    "what": "will purchase one more house (prediction)",
+    "date": "1971-12",
+    "dasa": "Mercury-Mars-Mercury",
+    "verdict": "forecast"
+   },
+   {
+    "what": "will sell one (prediction); have another in Jupiter bhukti, Mercury anthra",
+    "date": "(after 1971)",
+    "dasa": "Mercury-Rahu-Saturn",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Birth date not printed. The dasa dates and the positions (Sun Cap 29°34', Jupiter Cancer, Saturn Pisces) fit about 11-12 February 1908 (inference). Rahu in 4, in its own star, Mars sub."
+ },
+ {
+  "id": "b3a-E23",
+  "cite": "B3 p. 252-256, Fig. B3.32",
+  "kind": "natal",
+  "birth": {
+   "date": "1931-11-21",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": "(native lives in Mylapore, Madras)",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Cap"
+  },
+  "planets": {
+   "Sun": "Sco",
+   "Moon": "Pis",
+   "Mars": "Sco",
+   "Mercury": "Sco",
+   "Jupiter": "Can",
+   "Venus": "Sco (Jyeshta per text)",
+   "Saturn": "Sag (Poorvashada per text)",
+   "Rahu": "Pis",
+   "Ketu": "Vir"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "consulted KSK",
+    "date": "1966-02-21",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "prediction: will buy a house between 4 and 7 March 1967",
+    "date": "1967-03-04 to 1967-03-07",
+    "dasa": "Venus-Venus-Jupiter (an earlier line says Venus-Sun-Jupiter)",
+    "verdict": "forecast"
+   },
+   {
+    "what": "bought house No. 5, Mundakanni Amman Koil Street, Mylapore; occupied by 5-3-1967",
+    "date": "1967-03-04",
+    "dasa": "Venus-Venus-Jupiter",
+    "verdict": "purchase"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Letter of A.V.K. Murthy. Also published in KP Vol. II pp. 143-145. Houses judged: 4, 11, 12, plus 6 or 9 for possession. Two different bhuktis printed (Sun, then Venus)."
+ },
+ {
+  "id": "b3a-E24",
+  "cite": "B3 p. 255-256 (query moment for b3a-E23)",
+  "kind": "horary",
+  "birth": {
+   "date": "1966-02-21",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib"
+  },
+  "planets": {
+   "Moon": "Aqu ≈22° (Poorvabhadra)"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Saturn (Moon sign Aquarius)",
+   "Jupiter (Moon star Poorvabhadra)",
+   "Venus (lagna Libra)"
+  ],
+  "events": [
+   {
+    "what": "purchase timed from the query moment; significators (Sun or Venus) to transit Aqu 22°",
+    "date": "1967-03-05 (about); bought 4-3-1967",
+    "dasa": "Venus-Venus-Jupiter",
+    "verdict": "purchase"
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Query-moment chart in the text only. Ruling planets: Saturn (Moon's sign), Jupiter (Moon's star), Venus (lagna)."
+ },
+ {
+  "id": "b3a-E25",
+  "cite": "B3 p. 256-258, Fig. B3.33",
+  "kind": "natal",
+  "birth": {
+   "date": "1927-06-25",
+   "time": "02:15",
+   "ampm_or_24h_as_printed": "2.15 a.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Ari 12°"
+  },
+  "planets": {
+   "Sun": "Gem 9°29'",
+   "Moon": "Ari 11°50'",
+   "Mars": "Can 18°22'",
+   "Mercury": "Can 4°10'",
+   "Jupiter": "Pis 9°17'",
+   "Venus": "Can 24°41'",
+   "Saturn": "Sco 9°03'",
+   "Rahu": "Gem 4°53' (printed '4-53W')",
+   "Ketu": "Sag 4°53'"
+  },
+  "dasa_balance": "Ketu 0y 9m 13d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "new house built and occupied",
+    "date": "1960-02-06 (Saturday, Rohini star)",
+    "dasa": "Moon-Saturn-Rahu",
+    "verdict": "acquisition"
+   },
+   {
+    "what": "sale agreement (prediction)",
+    "date": "1967 (early)",
+    "dasa": "Mars-Saturn-Mercury",
+    "verdict": "forecast"
+   },
+   {
+    "what": "advance in early March 1967; hand over possession on a Dhanishta or Anuradha day; deed by June 1967 (prediction)",
+    "date": "1967-03 to 1967-06",
+    "dasa": "Mars-Saturn-Venus",
+    "verdict": "forecast: sale without loss"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Acquisition judged by 2, 4, 11; disposal by 3, 5, 10. 'Always take the Lagna alone … What we had been following in KP printed in 1966, is to be given up.' Computed from the printed balance, 6-2-1960 is the last day of Mo-Sa-Ju (the Rahu antara is Aug–Nov 1959). Book dates run ~2–3 months later than the balance implies."
+ },
+ {
+  "id": "b3a-E26",
+  "cite": "B3 p. 266, Fig. B3.34",
+  "kind": "natal",
+  "birth": {
+   "date": "1935-04-27",
+   "time": "23:00",
+   "ampm_or_24h_as_printed": "11 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sag"
+  },
+  "planets": {
+   "Sun": "Ari",
+   "Moon": "Aqu",
+   "Mars": "Vir",
+   "Mercury": "Ari",
+   "Jupiter": "Lib",
+   "Venus": "Tau",
+   "Saturn": "Aqu",
+   "Rahu": "Cap",
+   "Ketu": "Can"
+  },
+  "dasa_balance": "Mars 1y 4m 20d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "married; received a car from the father-in-law (gift of vehicle)",
+    "date": "1961-01 (end of January) as printed",
+    "dasa": "Jupiter-Mercury-Sun",
+    "verdict": "gift of vehicle"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Yoga: lords of 1 and 4 (Jupiter) strong in 11 aspected by the lords of 9 and 10. From the printed balance, end-Jan 1961 is Ju-Me-Ju and Ju-Me-Su is about Dec 1959–Feb 1960, so the year may be 1960."
+ },
+ {
+  "id": "b3a-E27",
+  "cite": "B3 p. 267-268, Fig. B3.35 (chart I)",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Vir"
+  },
+  "planets": {
+   "Jupiter": "Pis",
+   "Venus": "Sag"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "vehicle through partner (Venus in 4, 4th lord in 7)",
+    "date": null,
+    "dasa": null,
+    "verdict": null
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Schematic chart."
+ },
+ {
+  "id": "b3a-E28",
+  "cite": "B3 p. 267-268, Fig. B3.35 (chart III)",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Sco"
+  },
+  "planets": {
+   "Saturn": "Tau",
+   "Venus": "Aqu"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "vehicle through partner (Venus in 4, 4th lord in 7)",
+    "date": null,
+    "dasa": null,
+    "verdict": null
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Schematic chart. Chart II is described as missing from the crop."
+ },
+ {
+  "id": "b3a-E29",
+  "cite": "B3 p. 280-281, Fig. B3.36",
+  "kind": "natal",
+  "birth": {
+   "date": "1933-03-28",
+   "time": "22:23",
+   "ampm_or_24h_as_printed": "10-23 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sco"
+  },
+  "planets": {
+   "Sun": "Pis",
+   "Moon": "Ari",
+   "Mars": "Leo",
+   "Jupiter": "Leo",
+   "Venus": "Pis",
+   "Saturn": "Cap",
+   "Rahu": "Aqu"
+  },
+  "dasa_balance": "Venus 19y 0m 3d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "paid for and completed MBBS and MD",
+    "date": null,
+    "dasa": null,
+    "verdict": "paid study"
+   },
+   {
+    "what": "scholarship order received on a Pushya day; left India on a Sravana day as the Moon passed natal Saturn; studying in America",
+    "date": "(not dated; Moon-Saturn ≈ 1962–1964)",
+    "dasa": "Moon-Saturn",
+    "verdict": "scholarship and overseas"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Born Tuesday (28-3-1933 was a Tuesday). Mercury and Ketu not shown."
+ },
+ {
+  "id": "b3a-E30",
+  "cite": "B3 p. 281-282, Fig. B3.37",
+  "kind": "natal",
+  "birth": {
+   "date": "1908-11-01",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": "(K. S. Krishnamurti, born Thiruvaiyaru, B3 p. 3)",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Cap"
+  },
+  "planets": {
+   "Sun": "Lib",
+   "Moon": "Cap",
+   "Mars": "Vir",
+   "Mercury": "Lib",
+   "Jupiter": "Leo",
+   "Venus": "Vir",
+   "Saturn": "Pis",
+   "Rahu": "Gem",
+   "Ketu": "Sag"
+  },
+  "dasa_balance": "Moon 8y 2m",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "scholarship at St. Joseph's College, Trichy",
+    "date": "1926-08",
+    "dasa": "Rahu-Rahu-Mars (checked)",
+    "verdict": "scholarship"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "'the Editor of this book', the author himself (same birth date as B3-01). Rahu in Mars's star (lord of 4 and 11) and in Mercury's sign Gemini (Mercury = lord 6 and 9)."
+ },
+ {
+  "id": "b3a-E31",
+  "cite": "B3 p. 283-284, Fig. B3.38",
+  "kind": "natal",
+  "birth": null,
+  "horary_number": null,
+  "cusps": {
+   "1": "Cap 21°41'",
+   "2": "Aqu 29°34'",
+   "3": "Ari 4°34' (printed '111 4-34')",
+   "4": "Tau 3°37'",
+   "5": "Tau 28°34'",
+   "6": "Gem 23°34'",
+   "7": "Can 21°41'",
+   "8": "Leo 29°34'",
+   "9": "Lib 4°34'",
+   "10": "Sco 3°37'",
+   "11": "Sco 28°34'",
+   "12": "Sag 23°34'"
+  },
+  "planets": {
+   "Sun": "Sco 19°23'",
+   "Moon": "Ari 1°31'",
+   "Mars": "Sco 5°01'",
+   "Mercury": "Sco 1°21'",
+   "Jupiter": "Pis (degree not printed)",
+   "Venus": "Lib 3°16'",
+   "Saturn": "Sco 17°40'",
+   "Rahu": "Tau 26°20'",
+   "Ketu": "Sco 26°20'"
+  },
+  "dasa_balance": "Ketu 6y 2m 13d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "purchased a plot for farming (Saturday; Moon in Venus sign, Jupiter star; Venus transiting Punarvasu)",
+    "date": "1968-07-06",
+    "dasa": "Moon-Venus-Mars-Saturn",
+    "verdict": "land purchase"
+   },
+   {
+    "what": "future: cultivation smooth for the rest of Moon dasa; moderate in Mars dasa; bumper crops in Rahu dasa (prediction)",
+    "date": null,
+    "dasa": "Moon / Mars / Rahu dasas",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Birth data not printed. Positions and the printed dasa fit about the first week of December 1927 (inference). The figure's centre carries a stray 'III 9-45 Moon 0-45' copied from Fig. B3.11 (ignore). Ketu Sco 26°20' is before the XI cusp (Sco 28°34'), so it is in house 10, as the text says (10th occupied by Mars, Saturn, Sun, Ketu)."
+ },
+ {
+  "id": "b3a-E32",
+  "cite": "B3 p. 285-286, Fig. B3.39",
+  "kind": "natal",
+  "birth": {
+   "date": "1936-04-21",
+   "time": "05:07",
+   "ampm_or_24h_as_printed": "5-7 a.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": "30° 55' N",
+   "lon": "75° 54' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Pis 20°25'",
+   "2": "Ari 25°43' (printed '1125-43')",
+   "3": "Tau 22°25'",
+   "4": "Gem 15°25'",
+   "5": "Can 9°25'",
+   "6": "Leo 9°43'",
+   "7": "Vir 20°25'",
+   "8": "Lib 25°43'",
+   "9": "Sco 22°25'",
+   "10": "Sag 15°25'",
+   "11": "Cap 9°25'",
+   "12": "Aqu 9°43'"
+  },
+  "planets": {
+   "Sun": "Ari 7°50'",
+   "Moon": "Ari 0°11'",
+   "Mars": "Ari 21°08'",
+   "Mercury": "Ari 10°22'",
+   "Jupiter": "Sag 1°24'",
+   "Venus": "Pis 19°21'",
+   "Saturn": "Aqu 25°33'",
+   "Rahu": "Sag 14°11'",
+   "Ketu": "Gem 14°11'"
+  },
+  "dasa_balance": "Ketu 6y 10m 25d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "will own a cinema theatre (Sun transiting Moon's star in Saturn's sign) (prediction)",
+    "date": "1974-01 (end) to 1974-02 (beginning)",
+    "dasa": "Moon-Saturn-Venus (computed 9-1 to 15-4-1974)",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "4th CSL Venus (Gem 15°25' = Ardra, Venus sub, checked) shows the building's use (cinema). 12th occupied by Venus and Saturn (lord 11, 12)."
+ },
+ {
+  "id": "b3a-E33",
+  "cite": "B3 p. 287-291, Fig. B3.40",
+  "kind": "natal",
+  "birth": {
+   "date": "1936-12-15",
+   "time": "14:49",
+   "ampm_or_24h_as_printed": "2-49 p.m.",
+   "zone_or_time_standard": null,
+   "place": "(Karachi coordinates)",
+   "lat": "24° 51' N",
+   "lon": "67° 04' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Ari 4°46'",
+   "2": "Tau 6°19'",
+   "3": "Gem 2°19'",
+   "4": "Gem 26°19'",
+   "5": "Can 23°19'",
+   "6": "Leo 25°19'",
+   "7": "Lib 4°26' (should equal Asc 4°46'; doubtful)",
+   "8": "Sco 6°19'",
+   "9": "Sag 2°19'",
+   "10": "Sag 26°19'",
+   "11": "Cap 23°19'",
+   "12": "Aqu 25°19'"
+  },
+  "planets": {
+   "Sun": "Sag 0°23'",
+   "Moon": "Sag 16°07'",
+   "Mars": "Vir 25°10'",
+   "Mercury": "Sag 14°59'",
+   "Jupiter": "Sag 10°07'",
+   "Venus": "Cap 11°37'",
+   "Saturn": "Aqu 23°31'",
+   "Rahu": "Sag 1°33'",
+   "Ketu": "Gem 1°33'"
+  },
+  "dasa_balance": "Venus 15y 9m 27d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Mars (lagna Aries, consultation)",
+   "Venus (Moon sign Taurus, consultation)"
+  ],
+  "events": [
+   {
+    "what": "building contract signed (Saturday, Saturn star; time in Capricorn, Moon star)",
+    "date": "1967-10-14",
+    "dasa": "Moon-Venus-Saturn-Venus (checked)",
+    "verdict": "agreement"
+   },
+   {
+    "what": "1st payment Rs 6,600 (Saturday, Moon in Cancer)",
+    "date": "1968-06-29 (printed '29-6-61 [sic]')",
+    "dasa": "Moon-Sun-Saturn (computed Mo-Su-Ju to 30-6, Saturn next)",
+    "verdict": "payment"
+   },
+   {
+    "what": "2nd payment Rs 10,000 (Monday, Moon in Rahu star, Mercury sign)",
+    "date": "1968-10-14",
+    "dasa": "Mars-Mars-Mars-Rahu (checked)",
+    "verdict": "payment"
+   },
+   {
+    "what": "3rd payment Rs 7,000 (Saturday, Moon in Capricorn)",
+    "date": "1968-12-21",
+    "dasa": "Mars-Mars-Saturn (checked)",
+    "verdict": "payment"
+   },
+   {
+    "what": "next payment (prediction)",
+    "date": "1969-03-15",
+    "dasa": "(computed Mars-Rahu-Rahu)",
+    "verdict": "forecast"
+   },
+   {
+    "what": "loan cleared (prediction)",
+    "date": "1970-01",
+    "dasa": "Mars-Rahu-Sun (checked)",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Born Tuesday, Poorvashada. Consultation at 10.20 a.m. with Aries rising and Moon in Taurus (date not printed): ruling planets Mars and Venus agree with the natal Mars (day) and Venus (star), so the chart is accepted."
+ },
+ {
+  "id": "b3a-E34",
+  "cite": "B3 p. 294-295, Fig. B3.41",
+  "kind": "natal",
+  "birth": {
+   "date": "1922-10-02",
+   "time": "12:17",
+   "ampm_or_24h_as_printed": "12-17 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": "22° 23' N",
+   "lon": "88° 24' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sag 16°20'",
+   "2": "Cap 20°10'",
+   "3": "Aqu 26°10'",
+   "4": "Pis 29°10'",
+   "5": "Ari 27°10'",
+   "6": "Tau 22°10'",
+   "7": "Gem 16°2? (last digit unclear)",
+   "8": "Can 20°10'",
+   "9": "Leo 26°10'",
+   "10": "Vir 29°10'",
+   "11": "Lib 27°10'",
+   "12": "Sco 22°10'"
+  },
+  "planets": {
+   "Sun": "Vir 15°38'",
+   "Moon": "Aqu 4°56'",
+   "Mars": "Sag 18°25'",
+   "Mercury": "Lib 7°28'",
+   "Jupiter": "Lib 1°57'",
+   "Venus": "Sco 0°44'",
+   "Saturn": "Vir 17°43'",
+   "Rahu": "Vir 6°29'",
+   "Ketu": "Pis 6°29'",
+   "Uranus": "Aqu 17°54'",
+   "Neptune": "Can 24°51'",
+   "Fortuna": "Tau 5°38'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Venus (Moon star Poorvashada)",
+   "Jupiter (Moon sign Sagittarius)",
+   "Saturn (Saturday)"
+  ],
+  "events": [
+   {
+    "what": "diabetes (sugar in urine, night thirst)",
+    "date": null,
+    "dasa": null,
+    "verdict": "disease confirmed by laboratory"
+   },
+   {
+    "what": "query in Delhi: Saturday, Moon in Poorvashada (Venus) in Sagittarius (Jupiter): 'body emaciated … sugar in the urine'",
+    "date": null,
+    "dasa": null,
+    "verdict": "diagnosed diabetes"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "6th cusp Tau 22°10' = Rohini (Moon), Venus sub (checked). Venus in Scorpio, in Visakha (Jupiter's star) in Libra, gives kidney/bladder and sugar. Query ruling planets: Saturn (day), Venus (Moon star), Jupiter (Moon sign)."
+ },
+ {
+  "id": "b3a-E35",
+  "cite": "B3 p. 303-307, Fig. B3.42",
+  "kind": "natal",
+  "birth": {
+   "date": "1968-08-12",
+   "time": "10:20",
+   "ampm_or_24h_as_printed": "10.20 a.m.",
+   "zone_or_time_standard": null,
+   "place": "(Delhi coordinates)",
+   "lat": "28-40 N",
+   "lon": "77.12 E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Vir 24°37'",
+   "2": "Lib 23°32'",
+   "3": "Sco 23°32'",
+   "4": "Sag 25°32'",
+   "5": "Cap 27°32'",
+   "6": "Aqu 27°32'",
+   "7": "Pis 24°37'",
+   "8": "Ari 23°32' (printed as 'V / III 23-32')",
+   "9": "Tau 23°32'",
+   "10": "Gem 25°32'",
+   "11": "Can 27°32'",
+   "12": "Leo 27°32'"
+  },
+  "planets": {
+   "Sun": "Can 26°13'",
+   "Moon": "Pis 12°29'",
+   "Mars": "Can 10°56'",
+   "Mercury": "Leo 1°13'",
+   "Jupiter": "Leo 17°07'",
+   "Venus": "Leo 10°45'",
+   "Saturn": "Ari 2°13'",
+   "Rahu": "Pis 18°48'",
+   "Ketu": "Vir 8°48'"
+  },
+  "dasa_balance": "Saturn 5y 11m 16d (Mars bhukti at birth; Moon bhukti at epoch)",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "blind from birth",
+    "date": null,
+    "dasa": "Saturn-Mars at birth",
+    "verdict": "blindness"
+   },
+   {
+    "what": "anxious period for longevity (prediction)",
+    "date": "1973-08 (around)",
+    "dasa": "Saturn-Jupiter-Venus-Mercury (computed Sa-Ju-Ve-Sa to 16-8-1973, Mercury next)",
+    "verdict": "forecast"
+   },
+   {
+    "what": "cure: 'out of question' (coming dasas Saturn, Mercury, Ketu, Venus all in Ketu's star)",
+    "date": null,
+    "dasa": null,
+    "verdict": "no cure"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "12th cusp Leo 27°32' = Uttaraphalguni (Sun), Moon sub (checked). Moon in the 6th bhava (7th cusp at Pis 24°37'). Ketu in 12 in Moon's star; Saturn, Mercury, Venus in Ketu's stars."
+ },
+ {
+  "id": "b3a-E36",
+  "cite": "B3 p. 309-310, Fig. B3.43",
+  "kind": "natal",
+  "birth": {
+   "date": "1957-08-17",
+   "time": "07:30",
+   "ampm_or_24h_as_printed": "7.30 a.m.",
+   "zone_or_time_standard": "LMT",
+   "place": null,
+   "lat": "15.27 N",
+   "lon": "75.5 E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Leo 25°06'",
+   "2": "Vir 24°47'",
+   "3": "Lib 25°47'",
+   "4": "Sco 25°47'",
+   "5": "Sag 25°47'",
+   "6": "Cap 24°47'",
+   "7": "Aqu 25°06'",
+   "8": "Pis 24°47'",
+   "9": "Ari 25°47'",
+   "10": "Tau 25°47'",
+   "11": "Gem 25°47'",
+   "12": "Can 24°47'"
+  },
+  "planets": {
+   "Sun": "Leo 0°45'",
+   "Moon": "Ari 12°40'",
+   "Mars": "Leo 12°28'",
+   "Mercury": "Leo 27°45' (printed 'Mar. 27.45')",
+   "Jupiter": "Vir 8°41'",
+   "Venus": "Vir 3°18'",
+   "Saturn": "Sco 14°32'",
+   "Rahu": "Lib 21°28'",
+   "Ketu": "Ari 21°28'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "heart disease (nervous type) in coming Venus, Sun, Moon, Mars dasas",
+    "date": null,
+    "dasa": null,
+    "verdict": "disease"
+   },
+   {
+    "what": "cure by a surgeon (prediction; Sun transiting Punarvasu in the 11th)",
+    "date": "1976-07",
+    "dasa": "Venus-Mercury-Jupiter",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Lagna Leo 25°06' = Pooram (Venus), Mercury sub (checked). Mercury signifies 12, 1, 2, 11: bedridden; Leo means heart; Saturn's aspect means chronic. Dasa balance not printed (Moon Ari 12°40' = Ketu ≈ 0 y 3½ m)."
+ },
+ {
+  "id": "b3a-E37",
+  "cite": "B3 p. 311-312, Fig. B3.44",
+  "kind": "natal",
+  "birth": {
+   "date": "1919-08-08",
+   "time": "23:01",
+   "ampm_or_24h_as_printed": "11.01 p.m.",
+   "zone_or_time_standard": null,
+   "place": "(Muzaffarpur coordinates)",
+   "lat": "26.07 N",
+   "lon": "85.27 E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Ari 22°06'",
+   "2": "Tau 29°34' (doubtful, see notes)",
+   "3": "Gem 14°34' (printed '1114-34')",
+   "4": "Can 9°22'",
+   "5": "Leo 7°22'",
+   "6": "Vir 12°22'",
+   "7": "Lib 22°06'",
+   "8": "Sco 29°34' (doubtful)",
+   "9": "Sag 4°34' as printed ('[X 4-34'; III is 14°34', so probably 14°34')",
+   "10": "Cap 9°22'",
+   "11": "Aqu 7°22'",
+   "12": "Pis 12°22' (printed 'X1112.22')"
+  },
+  "planets": {
+   "Sun": "Can 22°29'",
+   "Moon": "Sag 16°34'",
+   "Mars": "Gem 27°59'",
+   "Mercury": "Leo 4°12'",
+   "Jupiter": "Can 8°47'",
+   "Venus": "Vir 1°09'",
+   "Saturn": "Leo 6°54'",
+   "Rahu": "Sco 7°26'",
+   "Ketu": "Tau 7°26'"
+  },
+  "dasa_balance": "Venus 15y 1m 24d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "stammering continues until Rahu-Ketu is over",
+    "date": null,
+    "dasa": "Rahu dasa to Rahu-Ketu",
+    "verdict": "speech defect"
+   },
+   {
+    "what": "stammering disappears (Sun in Venus sign, Rahu star = Swati) (prediction)",
+    "date": "1970-11",
+    "dasa": "Rahu-Venus-Jupiter (checked)",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Text: '2nd cusp is in the constellation of a watery planet and sub of Kethu'. The printed II = Tau 29°34' is Mrigasira (Mars), Saturn sub, which contradicts the text. A cusp near Tau 19°40'–20°26' (Rohini = Moon, Ketu sub) would fit, and house sizes suggest II ≈ 19°34'. Likely misprint (VIII likewise). III/IX pair also inconsistent (14°34' vs 4°34')."
+ },
+ {
+  "id": "b3a-E38",
+  "cite": "B3 p. 313, Fig. B3.45",
+  "kind": "natal",
+  "birth": {
+   "date": "1932-11-01",
+   "time": "12:45",
+   "ampm_or_24h_as_printed": "12.45 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": "16-46 N",
+   "lon": "81-44 E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Cap 20°18'",
+   "2": "Aqu 26°30' (printed '11 26-30')",
+   "3": "Ari 0°30'",
+   "4": "Tau 0°30' (printed 'N 0-30')",
+   "5": "Tau 26°20' (XI prints 26°30'; doubtful)",
+   "6": "Gem 21°30'",
+   "7": "Can 20°18'",
+   "8": "Leo 26°30'",
+   "9": "Lib 0°30' (printed 'XI 0-30', should be IX)",
+   "10": "Sco 0°30'",
+   "11": "Sco 26°30'",
+   "12": "Sag 21°30'"
+  },
+  "planets": {
+   "Sun": "Lib 16°51'",
+   "Moon": "Sco 23°31'",
+   "Mars": "Leo 0°42'",
+   "Mercury": "Sco 4°45'",
+   "Jupiter": "Leo 23°58'",
+   "Venus": "Vir 5°55'",
+   "Saturn": "Cap 16°02'",
+   "Rahu": "Aqu 21°19'",
+   "Ketu": "Leo 21°21' (2' off Rahu)"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "stammering",
+    "date": null,
+    "dasa": null,
+    "verdict": "speech defect; cure only if Jupiter conjoins or aspects"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "2nd cusp Aqu 26°30' = Poorvabhadra (Jupiter), Ketu sub (checked). Rahu (in 2) also gives 2nd-house results."
+ },
+ {
+  "id": "b3a-E39",
+  "cite": "B3 p. 316-317, Fig. B3.46",
+  "kind": "natal",
+  "birth": {
+   "date": "1926-06-29",
+   "time": "19 ghatis 45 vighatis",
+   "ampm_or_24h_as_printed": "19 Gathis. 45 Vikathis (after sunrise)",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib"
+  },
+  "planets": {
+   "Sun": "Gem",
+   "Moon": "Aqu (Dhanishta)",
+   "Mars": "Pis",
+   "Mercury": "Can",
+   "Jupiter": "Aqu (Dhanishta)",
+   "Venus": "Tau (Krittika)",
+   "Saturn": "Lib (Visakha)",
+   "Rahu": "Gem (Punarvasu)",
+   "Ketu": "Sag"
+  },
+  "dasa_balance": "Mars 2y 10m 19d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "married at age 12 (Monday, Moolam star)",
+    "date": "1938-07-11",
+    "dasa": "Rahu-Mercury-Moon (checked)",
+    "verdict": "married"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "KSK judges from the Moon sign (stronger than the afflicted lagna), which conflicts with his later lagna-only ruling (B3 p. 256). Ketu not drawn in the figure."
+ },
+ {
+  "id": "b3a-E40",
+  "cite": "B3 p. 318-320, Fig. B3.47",
+  "kind": "natal",
+  "birth": {
+   "date": "1926-04-02",
+   "time": "39 ghatis 40 vighatis",
+   "ampm_or_24h_as_printed": "39G, 40 V (Friday, Anuradha star)",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sco"
+  },
+  "planets": {
+   "Sun": "Pis",
+   "Moon": "Sco (Anuradha)",
+   "Mars": "Cap",
+   "Mercury": "Pis",
+   "Jupiter": "Cap",
+   "Venus": "Aqu",
+   "Saturn": "Sco",
+   "Rahu": "Gem",
+   "Ketu": "Sag"
+  },
+  "dasa_balance": "Saturn 9y 11m 27d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "marriage (prediction)",
+    "date": "1965-01 (end)",
+    "dasa": "Venus-Moon-Jupiter (checked)",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Boy's chart: Ketu in 2 delays; lords of 2 and 11 debilitated; Venus (lord 7) in 4 gives marriage."
+ },
+ {
+  "id": "b3a-E41",
+  "cite": "B3 p. 319-320, Fig. B3.48",
+  "kind": "natal",
+  "birth": {
+   "date": "1935-12-28",
+   "time": "17:58",
+   "ampm_or_24h_as_printed": "5.58 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Gem"
+  },
+  "planets": {
+   "Sun": "Sag",
+   "Moon": "Cap",
+   "Mars": "Cap",
+   "Mercury": "Sag",
+   "Jupiter": "Sco",
+   "Venus": "Lib",
+   "Saturn": "Aqu",
+   "Rahu": "Sag",
+   "Ketu": "Gem"
+  },
+  "dasa_balance": "Moon 2y 6m 19d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "marriage fixed in June, celebrated (prediction confirmed)",
+    "date": "1965-07-14",
+    "dasa": "Jupiter-Jupiter-Rahu (checked)",
+    "verdict": "married after difficulty"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Girl's chart: Rahu in 7, Mars in 8, Saturn aspecting 11, Moon–Saturn 22½° all show delay."
+ },
+ {
+  "id": "b3a-E42",
+  "cite": "B3 p. 320-323, Fig. B3.49",
+  "kind": "horary",
+  "birth": {
+   "date": "1970-06-20",
+   "time": "18:00",
+   "ampm_or_24h_as_printed": "6.00 p.m.",
+   "zone_or_time_standard": "IST",
+   "place": "(Calcutta coordinates)",
+   "lat": "22-33 N",
+   "lon": "88-24 E"
+  },
+  "horary_number": 34,
+  "cusps": {
+   "1": "Tau 17°46'40\"",
+   "2": "Gem 12°40' (printed '1112-40')",
+   "3": "Can 7°40'",
+   "4": "Leo 4°40' (printed '111 4-40')",
+   "5": "Vir 6°40'",
+   "6": "Lib 12°40'",
+   "7": "Sco 17°46'40\"",
+   "8": "Sag 12°40'",
+   "9": "Cap 7°40'",
+   "10": "Aqu 4°40'",
+   "11": "Pis 6°40'",
+   "12": "Ari 12°40'"
+  },
+  "planets": {
+   "Sun": "Gem 6°24'",
+   "Moon": "Sag 19°08'",
+   "Mars": "Gem 18°09'",
+   "Mercury": "Tau 17°38' (printed 'Men')",
+   "Jupiter": "Lib 2°45' (R?) (printed 'Jup (F1)')",
+   "Venus": "Can 11°06'",
+   "Saturn": "Ari 24°42'",
+   "Rahu": "Aqu 12°56'",
+   "Ketu": "Leo 12°56'"
+  },
+  "dasa_balance": "Venus 11y 3m 18d",
+  "ayanamsa_as_printed": null,
+  "significators": {
+   "3rd (badhaka of 7th)": "Venus (occupant); Moon, Saturn (in Venus stars) strong",
+   "8th (2nd from 7th)": "Moon occupant; Mercury (in Moon's star) strongest; Jupiter sign lord 3rd grade",
+   "1st (7th from 7th)": "Sun occupant (none in Sun's star); Moon and Saturn 3rd grade (in star of sign lord Venus)",
+   "nodes": "Rahu, Ketu also"
+  },
+  "ruling_planets": [
+   "20-6-70: Saturn (day), Venus (Moon star), Jupiter (Moon sign and asc lord as printed), Rahu (lagna star)",
+   "26-6-70 5.30 p.m.: Venus (day), Saturn (Moon star), Jupiter (Moon sign), Mars (asc lord), Mercury (asc star lord)"
+  ],
+  "events": [
+   {
+    "what": "query: longevity of a business partnership",
+    "date": "1970-06-20",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "judgement resumed (Friday 5.30 p.m.)",
+    "date": "1970-06-26",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "partnership dissolved and re-formed under the same name (prediction); before Mercury's station retrograde on 31-8-1970",
+    "date": "1970-08-13 to 1970-09-08",
+    "dasa": "Venus-Rahu-Mercury-Saturn (checked: 13-8 to 6-9-1970)",
+    "verdict": "forecast"
+   },
+   {
+    "what": "transit check day",
+    "date": "1970-08-26 (printed 'Friday'; it was a Wednesday)",
+    "dasa": null,
+    "verdict": null
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Number 34 of 249: lagna at the start of sub 34 (Venus–Moon–Mercury). Figure prints 'Sunday 20-6-70' but 20-6-1970 was a Saturday (ruling planets list Saturn as day lord). Badhaka of the 7th (fixed Scorpio) = 3rd house; marakas of the 7th = 8th and 1st. Mercury is sub lord of cusps 1, 2, 5, 6, 7, 8, 11, 12."
+ },
+ {
+  "id": "b3a-E43",
+  "cite": "B3 p. 326-329, Fig. B3.50",
+  "kind": "natal",
+  "birth": {
+   "date": "1926-12-31",
+   "time": "01:47:40",
+   "ampm_or_24h_as_printed": "1.47.40 a.m. IST or 1.58.12 a.m. LMT",
+   "zone_or_time_standard": "IST",
+   "place": null,
+   "lat": "25.36 N",
+   "lon": "85.08 E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib 11°14'",
+   "2": "Sco 9°51' (printed '119.51')",
+   "3": "Sag 10°51' (printed '11110.51')",
+   "4": "Cap 12°51'",
+   "5": "Aqu 14°51'",
+   "6": "Pis 14°51'",
+   "7": "Ari 11°14'",
+   "8": "Tau 9°51'",
+   "9": "Gem 10°51'",
+   "10": "Can 12°51'",
+   "11": "Leo 14°51'",
+   "12": "Vir 14°51'"
+  },
+  "planets": {
+   "Sun": "Sag 15°0?",
+   "Moon": "Lib 26°21'",
+   "Mars": "Ari 15°11'",
+   "Mercury": "Sco 29°27'",
+   "Jupiter": "Aqu 3°21'",
+   "Venus": "Sag 25°1? (last digit lost)",
+   "Saturn": "Sco 10°24'",
+   "Rahu": "Gem 14°18'",
+   "Ketu": "Sag 14°18'",
+   "Uranus": "Pis 3°05'",
+   "Neptune": "Leo 3°57'"
+  },
+  "dasa_balance": "Jupiter 8y 4m 17d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "left for the UK (day Mercury; Moon in Libra, Swati)",
+    "date": "1951-10-03",
+    "dasa": "Saturn-Rahu-Mars-Saturn (checked exactly)",
+    "verdict": "overseas"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "12th cusp Vir 14°51' = Hasta (Moon), Jupiter sub (checked); Jupiter owns 3. Saturn is sub lord of both the 3rd (Sag 10°51', Moola) and 9th (Gem 10°51', Ardra) cusps (checked), which is why it ran dasa and sookshma. Article by a contributor."
+ },
+ {
+  "id": "b3a-E44",
+  "cite": "B3 p. 330-331, Fig. B3.51",
+  "kind": "natal",
+  "birth": {
+   "date": "1930-04-21",
+   "time": "09:19",
+   "ampm_or_24h_as_printed": "9.19 a.m.",
+   "zone_or_time_standard": "IST",
+   "place": null,
+   "lat": "12-55 N",
+   "lon": "79-00 E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Tau 28°25'",
+   "2": "Gem 24°39'",
+   "3": "Can 20°39'",
+   "4": "Leo 20°39'",
+   "5": "Vir 23°39'",
+   "6": "Lib 23°39'",
+   "7": "Sco 25°25' (should equal Asc 28°25'; doubtful)",
+   "8": "Sag 24°39'",
+   "9": "Cap 20°39'",
+   "10": "Aqu 20°39'",
+   "11": "Pis 23°20' (V is 23°39'; doubtful)",
+   "12": "Ari 27°39' (VI is 23°39'; doubtful)"
+  },
+  "planets": {
+   "Sun": "Ari 7°36'",
+   "Moon": "Cap 10°05'",
+   "Mars": "Pis 4°17'",
+   "Mercury": "Ari 26°08'",
+   "Jupiter": "Tau 24°34'",
+   "Venus": "Ari 25°46'",
+   "Saturn": "Sag 19°06'",
+   "Rahu": "Ari 10°19'",
+   "Ketu": "Lib 10°19'",
+   "Neptune": "Leo 8°08'"
+  },
+  "dasa_balance": "Moon 9y 11m 7d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "Jupiter-Saturn bhukti",
+    "date": "1967-05-16 to 1969-11-28",
+    "dasa": "Jupiter-Saturn",
+    "verdict": null
+   },
+   {
+    "what": "scholarship, long journey, foreign stay, higher studies (prediction)",
+    "date": "1969-05-24 (around)",
+    "dasa": "Jupiter-Saturn-Rahu-Ketu (computed Ju-Sa-Ra-Me to 29-5, Ketu next)",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "9th cusp Cap 20°39' = Sravana (Moon), Venus sub (checked). Three opposite-cusp pairs disagree in the print (VII/I, XI/V, XII/VI)."
+ },
+ {
+  "id": "b3a-E45",
+  "cite": "B3 p. 331-335, Fig. B3.52 (balance printed under B3-38)",
+  "kind": "natal",
+  "birth": {
+   "date": "1942-10-27",
+   "time": "19:32",
+   "ampm_or_24h_as_printed": "7.32 p.m.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": "24° 6' N",
+   "lon": "88° 19' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sco 3°42'",
+   "2": "Sag 3°40'",
+   "3": "Cap 5°40'",
+   "4": "Aqu 8°40' (printed 'W 8-40')",
+   "5": "Pis 10°40'",
+   "6": "Ari 8°40'",
+   "7": "Tau 3°42'",
+   "8": "Gem 3°40'",
+   "9": "Can 5°40'",
+   "10": "Leo 8°40' (M.C.)",
+   "11": "Vir 10°40'",
+   "12": "Lib 8°40'"
+  },
+  "planets": {
+   "Sun": "Lib 10°04'",
+   "Moon": "Tau 13°29'",
+   "Mars": "Lib 3°08'",
+   "Mercury": "Vir 21°45'",
+   "Jupiter": "Can 1°51'",
+   "Venus": "Lib 4°56'",
+   "Saturn": "Tau 18°40' (printed 'Sani')",
+   "Rahu": "Leo 8°04'",
+   "Ketu": "Aqu 8°04'"
+  },
+  "dasa_balance": "Moon 7y 4m 20d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Jupiter (Thursday) → Rahu as agent",
+   "Saturn (lagna Capricorn)",
+   "Moon (lagna star Sravana)",
+   "Jupiter / Saturn (Moon in Uttarabhadra)"
+  ],
+  "events": [
+   {
+    "what": "judgement moment: Thursday 23-1-1969, 6.51 a.m., Madras; lagna Capricorn 12°30' (Moon's star Sravana); Moon in Uttarabhadra (Jupiter sign, Saturn star)",
+    "date": "1969-01-23",
+    "dasa": null,
+    "verdict": null
+   },
+   {
+    "what": "will go overseas (prediction)",
+    "date": "1973-04 (third week)",
+    "dasa": "Rahu-Moon-Saturn (checked: 18-4 to 13-7-1973)",
+    "verdict": "forecast"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "12th cusp Lib 8°40' printed: per text 'constellation … Rahu; the sub is also governed by Rahu … one minute later … Jupiter'. Exactly 8°40'00\" is the Jupiter-sub start under half-open boundaries, so the true cusp is just below 8°40'. Ruling planets: Jupiter (Thursday), which the text says Rahu represents 'by occupying his sign'. But natal Rahu is in Leo and Ketu in Aquarius, so that link is doubtful. Saturn (lagna sign), Moon (lagna star)."
+ },
+ {
+  "id": "b3a-E46",
+  "cite": "B3 p. 352-353, Fig. B3.53 (navamsa, captioned RASI) and Fig. B3.54 (rasi)",
+  "kind": "natal",
+  "birth": {
+   "date": "1937-03-19",
+   "time": "18:14",
+   "ampm_or_24h_as_printed": "6.14 P.M.",
+   "zone_or_time_standard": null,
+   "place": "Madras",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Vir 4°47'",
+   "10": "Gem ≈5° (text)"
+  },
+  "planets": {
+   "Sun": "Pis 5°36'",
+   "Moon": "Gem 6°02'",
+   "Mars": "Sco 8°56'",
+   "Mercury": "Pis 0°05' (printed 'Mei' 0.5')",
+   "Jupiter": "Sag 29°43'",
+   "Venus": "Ari 11°38'",
+   "Saturn": "Pis 2°46'",
+   "Rahu": "Sco 26°33'",
+   "Ketu": "Tau 26°33'",
+   "Uranus": "Ari 14°26'",
+   "Neptune": "Leo 24°25'",
+   "Fortuna": "Sag 5°13'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "surgeon practising in Bombay",
+    "date": null,
+    "dasa": null,
+    "verdict": "profession confirmed"
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Fig. B3.53 is not a second rasi chart. It is the navamsa (Lagna Aquarius, Mercury and Venus in Cancer, Moon in Scorpio), which matches the text: Mercury (10th lord) in Cancer navamsa, Moon in Scorpio navamsa. MC Gem 5° = Mrigasira (Mars), Sun sub, so Mercury–Mars–Sun = surgeon."
+ },
+ {
+  "id": "b3a-E47",
+  "cite": "B3 p. 359 (end of B3-40; the chart itself is printed in B3-41)",
+  "kind": "natal",
+  "birth": {
+   "date": "1933-11-15",
+   "time": "19:00",
+   "ampm_or_24h_as_printed": "7 P.M.",
+   "zone_or_time_standard": null,
+   "place": null,
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": null,
+  "planets": null,
+  "dasa_balance": "Ketu 2y 11m 5d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "query: will I continue in service or take up business?",
+    "date": null,
+    "dasa": null,
+    "verdict": "answered in B3-41 (agent b3b)"
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Placeholder so b3b can link: the birth data and balance are printed at the end of B3-40 (p. 359), the chart and analysis in B3-41 (p. 360 ff.)."
+ }
+]

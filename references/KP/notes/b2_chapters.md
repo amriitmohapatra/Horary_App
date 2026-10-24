@@ -45,7 +45,7 @@ about 9–13 pages lower.
 | B2-13 | Who Can Learn Astrology | 95–105 | Aptitude for astrology from Mercury, Moon, Saturn, Uranus and Jupiter aspects. Jataka Parijata and Jataka Tatva combinations. Editors and publishers | NEW-GUIDANCE (KP2-246, KP2-247) | Aspect-based traits. Low value, but each one is computable |
 | B2-14 | Twelve Signs – Classification and Influence | 106–125 | Thirteen sign classifications: odd/even, N/S, element, quality, fruitful/barren, mute, violent, human, voice, bestial, dual, bicorporal, short/long ascension. Rules built on them: children's gender, early marriage, denial of children, speech defects, friendship and partnership tests | NEW-COMPUTABLE (classification lookups KP2-150…153; tests KP2-154…160) + NEW-GUIDANCE (element and quality temperaments) | Lookup tables and simple tests. Many are traditional; KP later puts the sub lord in their place. See REJECTED notes |
 | B2-15 | Aries (Mesha) | 126–133 | Opens the sign series: a sign shows undeviated results only when empty. Aries meaning table. Profession rule via the lords of 2/6/10 | NEW-GUIDANCE (KP2-161) + NEW-COMPUTABLE (KP2-149) | Meaning table |
-| B2-16 | Taurus (Rishaba) | 133–147 | Meaning table. Saturn is a yogakaraka for Taurus (9+10). Trade combinations (milk, ice-cream, silk, petrol, leather, scents…). Afflictions that make a criminal or a forger | NEW-GUIDANCE (KP2-162) + NEW-COMPUTABLE (functional benefic KP2-122) | Meaning table, plus the planet-pair trade list KP2-200 |
+| B2-16 | Taurus (Rishaba) | 133–147 | Meaning table. Saturn is a yogakaraka for Taurus (9+10). Trade combinations (milk, ice-cream, silk, petrol, leather, scents…). Afflictions that make a criminal or a forger | NEW-GUIDANCE (KP2-162) + NEW-COMPUTABLE (functional benefic KP2-123) | Meaning table, plus the planet-pair trade list KP2-200 |
 | B2-17 | Gemini (Mithunam) | 147–160 | Meaning table. Compatibility by trine and sextile signs. Engine driver versus guard (Mars or Jupiter aspect) | NEW-GUIDANCE (KP2-163) | Meaning table |
 | B2-18 | Cancer (Katakam) | 160–172 | Meaning table. Deep exaltation of Jupiter (5°) and debilitation of Mars (28°). Lucky and unlucky Moon-transit stars | NEW-GUIDANCE (KP2-164) | Meaning table |
 | B2-19 | Leo (Simha) | 172–187 | Meaning table. Sun = Government: Jupiter aspect protects, Saturn aspect punishes. Profession by the planet aspecting Leo or the Sun | NEW-GUIDANCE (KP2-165, KP2-201) | Meaning table |
@@ -67,7 +67,7 @@ about 9–13 pages lower.
 | B2-35 | Ninth House | 312–316 | Fortune, religion, higher education, long travel. Father = 9th (4th or 10th for the father rejected) | NEW-GUIDANCE (KP2-181) + REJECTED-TRADITION (KP2-270) | House meaning table |
 | B2-36 | Tenth House | 316–326 | Profession. Kendra, panaphara and apoklima strength. ★ How to judge the 10th (occupants and their stars, the lord and its stars, conjunctions, aspects). Material trinity 2-6-10. The 10th is maraka to the parents | NEW-GUIDANCE (KP2-182) + NEW-COMPUTABLE (KP2-011, KP2-063, KP2-110, KP2-100) | House meaning table |
 | B2-37 | Eleventh House | 326–337 | Gains, friends, fulfilment, elder sibling. Income sources by house. Loans 11/5. Lover = 11th. ★ Badhaka rule from Jataka Chandrika, limited to health and longevity. Saturn in the 11th | NEW-GUIDANCE (KP2-183) + NEW-COMPUTABLE (KP2-087, KP2-120, KP2-047) + HORARY (KP2-265) | House meaning table |
-| B2-38 | Twelfth House | 337–353 | Losses, expenses, hospitals, foreign life, moksha. ★ "It is not the occupation or lordship of the 12th that matters most, but the constellation of the planet in it." Contrary results only in the periods of the afflicting planet. Health 6/8/12. Foreign residence via 9 and 12 | NEW-GUIDANCE (KP2-184) + NEW-COMPUTABLE (KP2-061, KP2-038, KP2-118, KP2-121) | Two core KP statements |
+| B2-38 | Twelfth House | 337–353 | Losses, expenses, hospitals, foreign life, moksha. ★ "It is not the occupation or lordship of the 12th that matters most, but the constellation of the planet in it." Contrary results only in the periods of the afflicting planet. Health 6/8/12. Foreign residence via 9 and 12 | NEW-GUIDANCE (KP2-184) + NEW-COMPUTABLE (KP2-032, KP2-061, KP2-038, KP2-118, KP2-121) | Two core KP statements |
 | B2-39 | Sun – The Father | 354–364 | Karaka (father, husband, government). Kalapurusha. Diseases by afflicting planet. Professions by combination; medical specialities derived from the 7th as patient. ★ Period results arrive on the day, lagna and Moon-star of the period lord | NEW-GUIDANCE (KP2-185, KP2-202) + NEW-COMPUTABLE (KP2-039, KP2-071) | Planet meaning table |
 | B2-40 | Moon – The Mother | 364–373 | Karaka (mother for night births), mind, daily transit. Aspects with Mercury, Venus, Mars, Jupiter, Saturn, Uranus and Neptune. Professions | NEW-GUIDANCE (KP2-186) + NEW-COMPUTABLE (KP2-072) | Planet meaning table |
 | B2-41 | Mars – The Brother | 374–391 | Karaka for brothers and land. Aspects with each planet; Mars–Saturn joint periods are dangerous. Profession by element of the sign. Remedial deities and colours | NEW-GUIDANCE (KP2-187, KP2-250) + NEW-COMPUTABLE (KP2-073, KP2-102) | Planet meaning table |
@@ -82,10 +82,10 @@ about 9–13 pages lower.
 
 ## Verdict counts (a chapter counted once per verdict it carries)
 
-- NOT-RELEVANT: 13 chapters wholly (B2-00…09, plus B2-10 and B2-12 mostly), counted 13
+- NOT-RELEVANT: 12 chapters (B2-00…09 wholly; B2-10 and B2-12 mostly)
 - NEW-GUIDANCE: 40
-- NEW-COMPUTABLE: 31
-- HORARY: 5 (B2-12, B2-28, B2-33, B2-37, plus minor horary notes in B2-10)
+- NEW-COMPUTABLE: 32
+- HORARY: 4 (B2-12, B2-28, B2-33, B2-37). B2-10 also holds one horary anecdote, the lost purse (b2-E05); the grandfather case (b2-E06) is in B2-12
 - EXISTS: 1 as a chapter verdict (B2-27, house = cusp to cusp). Several individual rules are EXISTS: sign lordship, nakshatra padas per sign, Vimshottari dasa, aspects in general, ayanamsa
 - REJECTED-TRADITION parts: in B2-02, B2-30, B2-35, B2-38, B2-43, B2-45, B2-46, B2-47 (see KP2-266…279)
 

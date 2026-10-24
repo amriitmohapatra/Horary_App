@@ -11,7 +11,7 @@ Format: `- **ID** · **Title.** Condition → meaning/procedure · (cite) · gra
 - status: EXISTS / COMPUTABLE / GUIDANCE / HORARY / REJECTED-TRADITION.
 
 **ID range.** This file uses KP3-001 … KP3-193 and KP3-200 … KP3-219 (194–199 unused: 213
-rules). Agent b3b (B3-41 onward) should not reuse these numbers.
+rules). Agent b3b (B3-41 onward) uses KP3-501 and up, so the ranges don't collide.
 
 ### Quick reference: house groups per matter in B3-00 … B3-40
 
@@ -45,7 +45,7 @@ rules). Agent b3b (B3-41 onward) should not reuse these numbers.
 | Blindness | 2 (right eye), 12 (left eye) with Sun, Moon, Venus | — | conjoined periods | KP3-167 |
 | Speech | 2nd CSL (planet nature) | node as 2nd CSL or in 2 = defect | — | KP3-169 |
 | Place of death | 8th CSL sig 1, 4, 10 = home; 3 = short journey; 9 = far away; 6, 8, 12 = hospital/jail | — | 8th-cusp lords' conjoined periods | KP3-085–087 |
-| Change of job | **not stated** in B3-00…40 (only the vault chapter title says "9th house explains"; see B6-33) | — | — | — |
+| Change of job | **not stated** in B3-00…40 (only the vault chapter title says "9th house explains"). B3 p. 360 (b3b KP3-547) gives 3, 9, 12 for changes; B6-33 gives 3, 5, 9 | — | — | — |
 
 **What "significator of house H" means in B3** (used by every rule below). It means any of:
 (1) a planet in the star of an occupant of H; (2) an occupant of H; (3) a planet in the star
@@ -133,7 +133,8 @@ cusp-based form for natal KP and show the sign-based form only where B3-06 is qu
   constellation owning houses (lordship)." Both operate; occupation first. · (B3 p. 130–131)
   · CLEAR · COMPUTABLE · Order for the "nature" of a planet's results: (i) house occupied by
   its star lord, (ii) houses owned by its star lord, (iii) its own house, (iv) its own
-  ownership. Same as the app's A > C > B > D reading of significator columns.
+  ownership. In the app's significator columns that is A, then C, then B, then D. The app
+  prints the columns but does not rank them.
 - **KP3-014** · **If no planet occupies a lord's star, the lord gives its own houses.** "If
   there is no planet [in Sun's stars], Sun gives lagna bhava results." · (B3 p. 162, 165)
   · CLEAR · COMPUTABLE · Same rule in B6-30 (significator order 1–4).
@@ -550,7 +551,8 @@ then …". "Significator" as defined in the header.
 - **KP3-103** · **Retirement / end of service = 1, 5, 9.** 2, 6, 10 = service, so their
   12ths, 1, 5, 9, end it. All significators of 1, 5, 9. "Nodes are stronger than planets".
   The strongest (a node) gives the anthra. · (B3 p. 208–209) · CLEAR · COMPUTABLE · b3a-E12.
-  Date by Sun transit (KP3-115).
+  Date by Sun transit (KP3-118). CONFLICT: B3 p. 396 (b3b KP3-588) uses 3, 5, 9 for
+  retirement; B3-50 (b3b KP3-593) agrees with 1, 5, 9.
 - **KP3-104** · **Lottery, competition, litigation.** Houses 1, 2, 3, 6, 10, 11 favourably
   connected → victory, litigation win, lottery/game gains. Planets in 4, 5, 7, 8, 9, 12 →
   loss. The 5th gives the mind to speculate. 6th = 12th from the 7th (competitors) = their
