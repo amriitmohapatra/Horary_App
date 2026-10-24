@@ -180,3 +180,35 @@ export function rankShare(windows: TimingWindow[], w: TimingWindow, fromJd: numb
   }
   return (above + tie / 2) / (toJd - fromJd);
 }
+
+export interface CuspTest {
+  cusp: number;
+  subLord: PlanetId;
+  starOfSub: PlanetId;
+  /** House the sub lord occupies (B6 p. 209 also reads a sub lord in the 12th as denial; not part of the three conditions). */
+  subHouse: number;
+  /** (i) the sub lord is direct; a retrograde sub lord delays ("wait", B6 p. 187). */
+  subDirect: boolean;
+  /** (ii) the sub lord's star lord is direct; if not, the matter is denied. */
+  starDirect: boolean;
+  /** (iii) the sub lord signifies one of the houses asked about. */
+  signifies: boolean;
+  outcome: 'promised' | 'delayed' | 'denied';
+}
+
+/**
+ * The horary three-condition test of a cusp (B6 pp. 184, 187, 201–202, 219,
+ * 222, 274, 297, 311, 323; KP6-061, KP6-029). Nodes are never retrograde
+ * (KP6-008). Usable on a natal chart only as research: the books apply it
+ * to horary charts.
+ */
+export function cuspTest(m: KpModel, sig: Sig, cusp: number, houses: number[]): CuspTest {
+  const subLord = m.cusps[cusp - 1]!.lords[1];
+  const P = Object.fromEntries(m.planets.map((p) => [p.id, p])) as Record<PlanetId, KpModel['planets'][number]>;
+  const retro = (p: PlanetId) => p !== 'Ra' && p !== 'Ke' && P[p].retrograde;
+  const starOfSub = P[subLord].lords[0];
+  const subDirect = !retro(subLord), starDirect = !retro(starOfSub);
+  const signifies = sig.planets[subLord].all.some((h) => houses.includes(h));
+  const outcome = !signifies || !starDirect ? 'denied' : subDirect ? 'promised' : 'delayed';
+  return { cusp, subLord, starOfSub, subHouse: P[subLord].house, subDirect, starDirect, signifies, outcome };
+}
