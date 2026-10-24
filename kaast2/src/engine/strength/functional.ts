@@ -3,12 +3,13 @@
  * constructor 0x568339; user-editable in PL's "Planetary Natures" dialog, ids 844–860) + NUM (9/9).
  * Oracle: functional().
  *
- * Nodes (PL9, NUM, OPEN between two candidates): the node takes its dispositor's
- * functional nature. "Nature of the house occupied" fits the fixture equally; a
- * chart separating the two is needed (spec §7 item 6).
+ * Nodes (BIN 0x426ee5…0x426fba, docs/specs/pl_worksheets.md §2.1; fits the PL9
+ * fixture and a PL 7.0.1 worksheet 9/9): a node takes the nature of the nearest
+ * other planet in its sign; with none there, its house from the Lagna decides —
+ * 1/5/9 Benefic, 6/8/12 Malefic, else Neutral.
  */
-import type { PlanetId } from '../types';
-import { SIGN_LORD, pid, sgn, type StrengthContext } from './common';
+import { PLANETS, type PlanetId } from '../types';
+import { dist, pid, sgn, type StrengthContext } from './common';
 
 export type FunctionalNature = 'Malefic' | 'Benefic' | 'Neutral';
 const LABEL: Readonly<Record<string, FunctionalNature>> = { M: 'Malefic', B: 'Benefic', N: 'Neutral' };
@@ -21,6 +22,10 @@ const FUNC: readonly string[] = [
 
 export function functionalNature(c: StrengthContext, p: PlanetId): FunctionalNature {
   const row = FUNC[sgn(c.asc)]!;
-  const who = p === 'Ra' || p === 'Ke' ? SIGN_LORD[c.sign[p]]! : p;
-  return LABEL[row[pid(who) - 1]!]!;
+  if (p !== 'Ra' && p !== 'Ke') return LABEL[row[pid(p) - 1]!]!;
+  const mates = PLANETS.filter((q) => q !== p && c.sign[q] === c.sign[p])
+    .sort((a, b) => dist(c.lon[a], c.lon[p]) - dist(c.lon[b], c.lon[p]));
+  if (mates.length) return functionalNature(c, mates[0]!);
+  const h = ((c.sign[p] - sgn(c.asc) + 12) % 12) + 1;
+  return h === 1 || h === 5 || h === 9 ? 'Benefic' : h === 6 || h === 8 || h === 12 ? 'Malefic' : 'Neutral';
 }

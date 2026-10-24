@@ -37,3 +37,40 @@ describe('PL 7 compatibility on the 80 fixture pairs', () => {
     });
   }
 });
+
+/**
+ * A real PL 7.0.1 printout (Ashtkoot Guna Chart and Dashkoota Guna Chart, sent
+ * by the boss 2026-10-24). Only the two Moon stars are kept: groom (PL's first
+ * column) Shatabhisha pada 2, Aquarius; bride Dhanishta pada 2, Capricorn.
+ */
+describe('PL 7.0.1 printout: Shatabhisha-2 groom, Dhanishta-2 bride', () => {
+  const mid = (nak: number, pada: number) => (nak - 1) * (360 / 27) + (pada - 0.5) * (360 / 108);
+  const person = (nak: number, pada: number): KootaPerson => {
+    const lon = mid(nak, pada);
+    return { nak, sign: Math.floor(lon / 30) + 1, lon, degInSign: lon % 30 };
+  };
+  const groom = person(24, 2), bride = person(23, 2);
+  it('Ashtakoot rows, total 23.5, "good", Bhakoot Maha Dosha', () => {
+    const a = ashtakoota(bride, groom);
+    expect(a.rows.map((r) => [r.id, r.score])).toEqual([
+      ['varna', 0], ['vashya', 0.5], ['tara', 3], ['yoni', 1], ['maitri', 5], ['gana', 6], ['bhakoot', 0], ['nadi', 8]]);
+    expect(a.total).toBe(23.5);
+    expect(a.verdict).toBe('good');
+    expect(a.rows.filter((r) => r.dosha).map((r) => r.id)).toEqual(['bhakoot']);
+    expect(a.rows.map((r) => [r.groom, r.bride])).toEqual([
+      ['Shudra', 'Vaishya'], ['Manava', 'Jalachara'], ['Parama Mitra', 'Sampat'], ['Ashwa', 'Simha'],
+      ['Saturn', 'Saturn'], ['Rakshasa', 'Rakshasa'], ['Aquarius', 'Capricorn'], ['Adya', 'Madhya']]);
+  });
+  it('Dashakoota rows and the three totals 29/44, 25/36, 23.5/36', () => {
+    const d = dashakoota(bride, groom);
+    expect([...d.rows, ...d.other].map((r) => [r.id, r.score, r.word])).toEqual([
+      ['dina', 3, 'Auspicious'], ['gana', 6, 'Auspicious'], ['mahendra', 0, 'Inauspicious'], ['stree', 0, 'Inauspicious'],
+      ['yoni', 2, 'Average'], ['rasi', 3.5, 'Average'], ['rasyadhipati', 5, 'Auspicious'], ['vasya', 2, 'Auspicious'],
+      ['rajju', 4, 'Average'], ['vedha', 1, 'Average'], ['gender', 0.5, 'Average'], ['gothra', 1, 'Auspicious'], ['caste', 1, 'Auspicious']]);
+    expect([d.total44, d.bvRaman36, d.ashtakoota36]).toEqual([29, 25, 23.5]);
+    expect([...d.rows, ...d.other].map((r) => [r.groom, r.bride])).toEqual([
+      ['Shatabhishak', 'Dhanishta'], ['Rakshasa', 'Rakshasa'], ['Shatabhishak', 'Dhanishta'], ['Shatabhishak', 'Dhanishta'],
+      ['Ashwa', 'Simha'], ['Aquarius', 'Capricorn'], ['Saturn', 'Saturn'], ['Aquarius', 'Capricorn'], ['Kanta', 'Siro'],
+      ['Shatabhishak', 'Dhanishta'], ['Hermaphrodite nak.', 'Female nak.'], ['Shatabhishak', 'Dhanishta'], ['Shudra', 'Vaishya']]);
+  });
+});

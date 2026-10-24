@@ -69,3 +69,34 @@ export function aspectMatrix(chart: ChartResult): AspectMatrix {
   }
   return m;
 }
+
+/** House point for the house graphs: PL's rashi chart uses the Ascendant degree in every sign (Equal); the bhava chart its cusps. */
+export type HousePoint = 'equal' | 'sripati';
+
+export interface HouseAspects {
+  /** Longitude (degrees) of each house point, index 0 = house 1. */
+  points: number[];
+  lords: PlanetId[];
+  /** onHouse[n][i] = % of a full aspect of planet i on house n+1 (PL graph type 2). */
+  onHouse: Record<PlanetId, number>[];
+  /** plusLord[n][i] = half from the house, half from its lord (PL graph type 3). */
+  plusLord: Record<PlanetId, number>[];
+}
+
+const curve = (p: PlanetId, from: number, to: number): number => aspectValue(fwd(from, to), pid(p));
+
+/** PL 7 worksheets 23–26 (docs/specs/pl_worksheets.md §4.2). `madhya` = bhava cusps in degrees, for 'sripati'. */
+export function houseAspects(chart: ChartResult, mode: HousePoint, madhya?: number[]): HouseAspects {
+  const asc = chart.asc.lonDeg;
+  const points = Array.from({ length: 12 }, (_, n) => (mode === 'sripati' && madhya ? madhya[n]! : (asc + 30 * n) % 360));
+  const lords = points.map((h) => SIGN_LORD_OF[signOf(h)]!);
+  const onHouse = points.map((h) => Object.fromEntries(PLANETS.map((i) => [i, Math.trunc((curve(i, chart.bodies[i].lonDeg, h) * 100) / 60 + 1e-9)])) as Record<PlanetId, number>);
+  const plusLord = points.map((h, n) => Object.fromEntries(PLANETS.map((i) => {
+    const half = Math.trunc((curve(i, chart.bodies[i].lonDeg, h) * 50) / 60 + 1e-9);
+    const lord = lords[n]!;
+    const l = i === lord ? 0 : (curve(i, chart.bodies[i].lonDeg, chart.bodies[lord].lonDeg) * 50) / 60;
+    return [i, Math.trunc(half + l + 1e-9)];
+  })) as Record<PlanetId, number>);
+  return { points, lords, onHouse, plusLord };
+}
+const SIGN_LORD_OF: readonly PlanetId[] = ['Ma', 'Ve', 'Me', 'Mo', 'Su', 'Me', 'Ve', 'Ma', 'Ju', 'Sa', 'Sa', 'Ju'];

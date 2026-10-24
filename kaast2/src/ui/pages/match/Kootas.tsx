@@ -166,6 +166,7 @@ export function DashKoota({ pair }: { pair: Pair }): JSX.Element {
   const rows = (rs: Dashakoota['rows'], start: number) => rs.map((r, i) => (
     <tr key={r.id}>
       <th scope="row">{start ? `${i + 1}. ` : ''}{r.label} <span class="muted">({r.area})</span></th>
+      <td>{r.groom}</td><td>{r.bride}</td>
       <td class="num r">{f1(r.max)}</td><td class="num r strong-cell">{f1(r.score)}</td>
       <td>{r.word && <Chip tone={tone(r.word)}>{r.word}</Chip>}</td><td class="ntp-why">{r.note}</td>
     </tr>
@@ -176,14 +177,14 @@ export function DashKoota({ pair }: { pair: Pair }): JSX.Element {
       <div class="panel-body table-wrap">
         <p class="hint-text">Ten considerations judge a proposed marriage; at least five should be favourable. Here {d.favourable} of 10 score in full.</p>
         <table class="data" data-testid="match-dashkoota">
-          <thead><tr><th scope="col">Koota</th><th scope="col" class="r">Max.</th><th scope="col" class="r">Points</th><th scope="col">Result</th><th scope="col">Why</th></tr></thead>
+          <thead><tr><th scope="col">Koota</th><th scope="col">Groom</th><th scope="col">Bride</th><th scope="col" class="r">Max.</th><th scope="col" class="r">Points</th><th scope="col">Result</th><th scope="col">Why</th></tr></thead>
           <tbody>
             {rows(d.rows, 1)}
-            <tr class="sum"><th scope="row" colSpan={5}>Other considerations</th></tr>
+            <tr class="sum"><th scope="row" colSpan={7}>Other considerations</th></tr>
             {rows(d.other, 0)}
-            <tr class="sum"><th scope="row">Total (Kalaprakasika)</th><td class="num r">44</td><td class="num r strong-cell">{f1(d.total44)}</td><td colSpan={2} /></tr>
-            <tr><th scope="row">BV Raman method</th><td class="num r">36</td><td class="num r">{f1(d.bvRaman36)}</td><td colSpan={2} /></tr>
-            <tr><th scope="row">Ashtakoot method</th><td class="num r">36</td><td class="num r">{f1(d.ashtakoota36)}</td><td colSpan={2} /></tr>
+            <tr class="sum"><th scope="row">Total (Kalaprakasika)</th><td colSpan={2} /><td class="num r">44</td><td class="num r strong-cell">{f1(d.total44)}</td><td colSpan={2} /></tr>
+            <tr><th scope="row">BV Raman method</th><td colSpan={2} /><td class="num r">36</td><td class="num r">{f1(d.bvRaman36)}</td><td colSpan={2} /></tr>
+            <tr><th scope="row">Ashtakoot method</th><td colSpan={2} /><td class="num r">36</td><td class="num r">{f1(d.ashtakoota36)}</td><td colSpan={2} /></tr>
           </tbody>
         </table>
         <p class="hint-text">Where the two Moon-sign lords are the same or mutual friends, or the Moon signs are opposite, PL raises Ganam and Rasi and sets Rajju to 4 and Vedhai to 1; the "Why" column says when.</p>

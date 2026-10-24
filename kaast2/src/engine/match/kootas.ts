@@ -84,9 +84,11 @@ export function lordsFriendly(ra: number, rb: number): boolean {
 /* ---- names ---- */
 export const VARNA_NAMES = ['', 'Shudra', 'Vaishya', 'Kshatriya', 'Brahmin'];
 export const VASHYA_NAMES = ['', 'Chatushpada', 'Manava', 'Jalachara', 'Vanachara', 'Keeta'];
-export const YONI_NAMES = ['', 'Horse', 'Elephant', 'Sheep', 'Serpent', 'Dog', 'Cat', 'Rat', 'Cow', 'Buffalo', 'Tiger', 'Deer', 'Monkey', 'Mongoose', 'Lion'];
+/** PL prints the Sanskrit names (Ashwa, Simha … as on its printout); the animal is in YONI_ANIMALS. */
+export const YONI_NAMES = ['', 'Ashwa', 'Gaja', 'Mesha', 'Sarpa', 'Shwan', 'Marjar', 'Mushak', 'Gau', 'Mahish', 'Vyaghra', 'Mriga', 'Vanar', 'Nakul', 'Simha'];
+export const YONI_ANIMALS = ['', 'horse', 'elephant', 'sheep', 'serpent', 'dog', 'cat', 'rat', 'cow', 'buffalo', 'tiger', 'deer', 'monkey', 'mongoose', 'lion'];
 export const GANA_NAMES = ['', 'Deva', 'Manushya', 'Rakshasa'];
-export const NADI_NAMES = ['', 'Adi', 'Madhya', 'Antya'];
+export const NADI_NAMES = ['', 'Adya', 'Madhya', 'Antya'];
 export const RAJJU_NAMES = ['', 'Padha', 'Kati (Ooru)', 'Nabhi', 'Kanta', 'Siro'];
 export const TARA_NAMES = ['Janma', 'Sampat', 'Vipat', 'Kshema', 'Pratyari', 'Sadhaka', 'Vadha', 'Mitra', 'Parama Mitra'];
 export const GOTHRA_NAMES = ['', 'Mareechi', 'Vasishta', 'Angiras', 'Athri', 'Pulastya', 'Pulaha', 'Kratu'];
@@ -231,8 +233,10 @@ export function ashtakoota(bride: KootaPerson, groom: KootaPerson): Ashtakoota {
   return { rows, total, verdict: total <= 16 ? 'avoid' : total <= 21 ? 'medium' : total <= 30 ? 'good' : 'excellent' };
 }
 
-export interface DashaKootaRow { id: string; label: string; area: string; max: number; score: number; word: 'Auspicious' | 'Average' | 'Inauspicious' | ''; note: string; /** PL's text code (Dhinam). */ code?: number }
+export interface DashaKootaRow { id: string; label: string; area: string; max: number; score: number; word: 'Auspicious' | 'Average' | 'Inauspicious' | ''; note: string; /** PL's text code (Dhinam). */ code?: number; groom?: string; bride?: string }
 const GENDER_WORD = { M: 'male', F: 'female', H: 'neuter' } as const;
+const GENDER_LABEL = { M: 'Male nak.', F: 'Female nak.', H: 'Hermaphrodite nak.' } as const;
+const STAR_NAMES = ['Ashwini', 'Bharani', 'Krittika', 'Rohini', 'Mrigashira', 'Ardra', 'Punarvasu', 'Pushya', 'Ashlesha', 'Magha', 'Purva Phalguni', 'Uttara Phalguni', 'Hasta', 'Chitra', 'Swati', 'Vishakha', 'Anuradha', 'Jyeshtha', 'Mula', 'Purva Ashadha', 'Uttara Ashadha', 'Shravana', 'Dhanishta', 'Shatabhishak', 'Purva Bhadrapada', 'Uttara Bhadrapada', 'Revati'];
 const ordN = (n: number) => `${n}${n % 10 === 1 && n !== 11 ? 'st' : n % 10 === 2 && n !== 12 ? 'nd' : n % 10 === 3 && n !== 13 ? 'rd' : 'th'}`;
 export interface Dashakoota { rows: DashaKootaRow[]; other: DashaKootaRow[]; total44: number; bvRaman36: number; ashtakoota36: number; favourable: number }
 
@@ -245,12 +249,20 @@ export function dashakoota(bride: KootaPerson, groom: KootaPerson): Dashakoota {
   const [dina, dinaCode] = k.dina(1);
   const gana = k.gana(1), yoni = k.yoni(1), rasi = k.rasi(1), maitri = k.maitri(), rajju = k.rajju(1), vedha = k.vedha(1);
   const count = ((groom.sign - bride.sign + 12) % 12) + 1;
+  const STAR = (q: KootaPerson) => STAR_NAMES[q.nak - 1]!;
+  const both = (f: (q: KootaPerson) => string) => ({ groom: f(groom), bride: f(bride) });
+  const cols: Record<string, { groom: string; bride: string }> = {
+    dina: both(STAR), gana: both((q) => GANA_NAMES[ganaOf(q.nak)]!), mahendra: both(STAR), stree: both(STAR),
+    yoni: both((q) => YONI_NAMES[yoniOf(q.nak)]!), rasi: both((q) => SIGN_NAME[q.sign]!), rasyadhipati: both((q) => LORD_NAME[SIGN_LORD[q.sign]!]!),
+    vasya: both((q) => SIGN_NAME[q.sign]!), rajju: both((q) => RAJJU_NAMES[rajjuOf(q.nak)]!), vedha: both(STAR),
+    gender: both((q) => GENDER_LABEL[genderOf(q.nak)]), gothra: both(STAR), caste: both((q) => VARNA_NAMES[varnaOf(q.sign, 0)]!),
+  };
   const rows: DashaKootaRow[] = [
     { id: 'dina', label: 'Dhinam', area: 'luck', max: 3, score: dina, word: dina === 3 ? 'Auspicious' : dina === 0 ? 'Inauspicious' : '', note: `the groom’s star is the ${ordN(((groom.nak - bride.nak + 27) % 27) + 1)} from the bride’s (${taraName(bride.nak, groom.nak)} tara)`, code: dinaCode },
     { id: 'gana', label: 'Ganam', area: 'wealth', max: 6, score: gana, word: gana === 6 ? 'Auspicious' : gana > 1 ? 'Average' : 'Inauspicious', note: `${GANA_NAMES[ganaOf(groom.nak)]} (groom) and ${GANA_NAMES[ganaOf(bride.nak)]} (bride)${lf && k.gana(0) < 3 ? '; raised to 3 because the Moon-sign lords agree' : ''}` },
     { id: 'mahendra', label: 'Mahendhram', area: 'attachment and well-being', max: 2, score: k.mahendra(), word: k.mahendra() ? 'Auspicious' : 'Inauspicious', note: 'the groom’s star 4th, 7th, 10th … 25th from the bride’s' },
     { id: 'stree', label: 'Stree-Dheergham', area: 'general welfare', max: 2, score: k.stree(), word: k.stree() ? 'Auspicious' : 'Inauspicious', note: 'the groom’s star more than 13 from the bride’s' },
-    { id: 'yoni', label: 'Yoni', area: 'sexual', max: 4, score: yoni, word: word3(yoni, 4, (s) => s > 0), note: `${YONI_NAMES[yoniOf(groom.nak)]} (groom) and ${YONI_NAMES[yoniOf(bride.nak)]} (bride)${yoni === 0 ? ': mutually hostile' : yoni === 4 ? ': the same' : ': different, not hostile'}` },
+    { id: 'yoni', label: 'Yoni', area: 'sexual', max: 4, score: yoni, word: word3(yoni, 4, (s) => s > 0), note: `${YONI_NAMES[yoniOf(groom.nak)]} (${YONI_ANIMALS[yoniOf(groom.nak)]}, groom) and ${YONI_NAMES[yoniOf(bride.nak)]} (${YONI_ANIMALS[yoniOf(bride.nak)]}, bride)${yoni === 0 ? ': mutually hostile' : yoni === 4 ? ': the same' : ': different, not hostile'}` },
     { id: 'rasi', label: 'Rasi', area: 'growth of the family', max: 7, score: rasi, word: word3(rasi, 7, (s) => s > 0), note: `the groom’s Moon sign is the ${ordN(count)} from the bride’s` },
     { id: 'rasyadhipati', label: 'Rasyadhipati', area: 'food', max: 5, score: maitri, word: maitri === 5 ? 'Auspicious' : maitri > 2 ? 'Average' : 'Inauspicious', note: `lords ${LORD_NAME[SIGN_LORD[groom.sign]!]} and ${LORD_NAME[SIGN_LORD[bride.sign]!]}` },
     { id: 'vasya', label: 'Vasyam', area: 'posterity', max: 2, score: k.vasya(), word: k.vasya() ? 'Auspicious' : 'Inauspicious', note: k.vasya() ? 'concordant signs' : 'not concordant' },
@@ -263,6 +275,7 @@ export function dashakoota(bride: KootaPerson, groom: KootaPerson): Dashakoota {
     { id: 'gothra', label: 'Gothram', area: 'other', max: 1, score: got, word: got ? 'Auspicious' : 'Inauspicious', note: `${GOTHRA_NAMES[gothraOf(groom.lon)]} (groom) and ${GOTHRA_NAMES[gothraOf(bride.lon)]} (bride)` },
     { id: 'caste', label: 'Caste', area: 'other', max: 1, score: caste, word: caste ? 'Auspicious' : 'Inauspicious', note: `${VARNA_NAMES[varnaOf(groom.sign, 0)]} (groom) and ${VARNA_NAMES[varnaOf(bride.sign, 0)]} (bride); PL scores it with the Kalaprakasika varnas` },
   ];
+  for (const r of [...rows, ...other]) Object.assign(r, cols[r.id]);
   const total44 = [...rows, ...other].reduce((s, r) => s + r.score, 0);
   const bvRaman36 = k.rasi(0) + k.dina(0)[0] + k.gana(0) + k.varna(0) + k.yoni(0) + k.vasya() + k.nadi() + k.maitri();
   return { rows, other, total44, bvRaman36, ashtakoota36: ashtakoota(bride, groom).total, favourable: rows.filter((r) => r.score === r.max).length };

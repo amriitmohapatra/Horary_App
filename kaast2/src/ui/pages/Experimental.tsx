@@ -12,8 +12,9 @@ import { States } from './exp/States';
 import { Lordships } from './exp/Lordships';
 import { Aspects } from './exp/Aspects';
 import { Nadi } from './exp/Nadi';
+import { Worksheet } from './exp/Worksheet';
 
-const TABS: ExpTab[] = ['states', 'lords', 'aspects', 'nadi'];
+const TABS: ExpTab[] = ['states', 'lords', 'aspects', 'worksheet', 'nadi'];
 
 export function Experimental({ chart }: { chart: ChartResult }): JSX.Element {
   const tab = TABS.includes(expTab.value) ? expTab.value : 'states';
@@ -28,6 +29,7 @@ export function Experimental({ chart }: { chart: ChartResult }): JSX.Element {
       {tab === 'states' && <States chart={chart} />}
       {tab === 'lords' && <Lordships chart={chart} />}
       {tab === 'aspects' && <Aspects chart={chart} />}
+      {tab === 'worksheet' && <Worksheet chart={chart} />}
       {tab === 'nadi' && <Nadi chart={chart} />}
     </article>
   );

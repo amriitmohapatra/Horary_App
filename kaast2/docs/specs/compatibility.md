@@ -644,6 +644,15 @@ gana 34, yoni 35, vashya 42, varna 10, maitri 8, total 69. Bhakoot and nadi: 0.
 ---
 
 ## 10. Open questions and how to close them
+
+**Printout check (2026-10-24).** The boss sent PL 7.0.1's "Ashtkoot Guna Chart" and "Dashkoota Guna
+Chart" for one real pair: groom Shatabhisha pada 2 (Aquarius), bride Dhanishta pada 2 (Capricorn).
+Every row, label and total matches this spec (23.5/36 "good" with the Bhakoot Maha Dosha; 29/44,
+BV Raman 25/36), including the LF quirks (Rasi 3.5, Rajju 4, Vedhai 1), gender 0.5 and the Caste
+row printed with X0 names. PL puts the groom in the first column (item 2). The pair does not
+exercise item 1: its Tara count is Sampat and both Moon-sign lords are Saturn, so the textbook
+rules give the same scores. Test: `tests/unit/kootas.test.ts` (Moon stars only, no names).
+
 1. **Tara (§3.3)** and **Graha Maitri neutral–neutral = 1 (§3.5)** are read from the code but
    are surprising. One real PL 7 printout of the "Ashtkoot Guna Matching" page settles both:
    for a pair whose taras are not Janma or Sampat, the Tara row must show 1.5. The PLAN.md
