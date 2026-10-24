@@ -429,3 +429,31 @@ architecture.
   (git-ignored, never pushed; the oracle test skips without it). PL's own
   text (yoga definitions/results, compatibility quotations) is kept in
   separable files for the PLAN §11 review.
+
+## 2026-10-24 (evening) — Astro-Amriit v0.9: KP (Research)
+- Sources: Krishnamurti's six KP Readers (`references/KP/`, private, never
+  published). Notes, rule catalogue (ids KP1-…KP6-) and example oracles in
+  `references/KP/notes/`; synthesis `kaast2/docs/specs/kp_research.md`.
+- "Readers mode" is the tab's default: KP New ayanamsa, mean node, 365¼-day
+  dasa years — what recasting the Readers' charts shows they used. PL's
+  Krishnamurti ("Automatic") and the chart's settings remain.
+- Significators: Krishnamurti's five levels; level 5 = planets conjoined with
+  or ASPECTED BY a significator (the aspected one gains; B4 p. 179). Node
+  agency as in B6 (own house, star lord's houses, full sets of conjoined,
+  aspecting and sign-lord planets); a planet in a node's star takes the node's
+  set. Ownership by cusp sign only (no span rule). Reproduces B6's tables.
+- Ruling planets: day lord sunrise to sunrise; reject in the star OR sub of a
+  retrograde planet (B6 from p. 194); for rectification only the star
+  (B6 p. 147). Nodes represent conjoined/aspecting RPs first, then the sign
+  lord (B6 p. 254), and outrank them (p. 285).
+- Horary: ascendant = start of the numbered unit; other cusps from the RAMC at
+  which it rises at the judgement latitude (exact, where the Readers read
+  Raphael's tables); planets, RPs and dasa of the judgement moment.
+- Natal timing is presented as candidates: on 11 printed marriages the
+  significator strength rank alone is only slightly better than chance.
+- Guidance rules are data (`kaast2/src/engine/kp/guidance/*.json`) in a small
+  condition language; policy test forbids death/longevity/accident/danger/
+  disease words; a rate test removes rules holding for > 80 % of charts.
+- Pre-publish scan stop words extended with generic English words that occur
+  in private chart file names (election, interview, circus, verdict).
+

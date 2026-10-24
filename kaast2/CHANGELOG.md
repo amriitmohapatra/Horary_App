@@ -2,6 +2,51 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.9 — 2026-10-24 · `dist/Astro-Amriit v0.9.html`
+
+The boss's brief: label the KP tab **KP (Research)** and bring in the
+knowledge of Krishnamurti's six KP Readers, adding only what the app lacks,
+judged book by book and chapter by chapter (spec:
+`docs/specs/kp_research.md`).
+
+- **KP (Research)** (renamed tab), seven sub-tabs:
+  - *Chart and tables:* PL's Krishnamurti chart and significator tables, plus
+    Fortuna.
+  - *Significators:* each house's significators in Krishnamurti's five-level
+    order, with nodes acting as agents, planets in a node's star, empty stars;
+    each planet's full set.
+  - *Life matters:* promise of 14 matters by the cuspal sub lord with the
+    Readers' house groups; candidate dasa–bhukti–anthra periods ranked by
+    strength, filtered by the ruling planets of the moment, linked to transit
+    days — with a plain note that the rank alone does not time an event.
+  - *Ruling planets:* of now or a set moment, with node agents, retrograde
+    rejections and strength order; the **rectification assistant**.
+  - *Transit timing:* when the Sun, Moon, Jupiter … pass through units whose
+    sign, star and sub lords are the period lords.
+  - *Horary 1–249:* the number method (ascendant from the unit, cusps for the
+    latitude of judgement), B6's question table, the three-condition test,
+    dasa from the Moon at judgement, periods of significators that are ruling
+    planets.
+  - *KP Guidance:* 435 chart rules and 88 principles from the six books, in
+    our own words with book and page; the condition that fired is shown.
+- **Readers mode** (new default on the tab): KP New ayanamsa, mean node,
+  365¼-day years — what the Readers' charts use. PL's choices stay.
+- **Matching:** new *Krishnamurti (KP)* sub-tab — his test (partner's birth
+  ruling planets among the native's 2-7-11 significators) and 57 notes on
+  the kootas and Mars dosha.
+
+**Evidence** 809 unit/engine tests (61 KP tests, most on the Readers' worked
+charts: significator tables, 45 horary ascendants, 37 horary charts, 32
+dated horary dasas, 7 horary judgements, 15 ruling-planet moments, 11 natal
+marriage charts, 5 transit dates, 2 rectifications; every book slip named);
+35 e2e tests on the shipped file, axe clean on every KP and Matching
+sub-tab; contract and pre-publish scan clean.
+
+**Out of scope** Death, longevity, accidents, danger and disease prognosis
+(policy, as on the NTP page); Western degree aspects, Uranus/Neptune,
+mundane and electional chapters; traditional transit rules Krishnamurti
+rejects (shown only as tradition). The books themselves stay private.
+
 ## v0.8 — 2026-10-24 · `dist/Astro-Amriit v0.8.html`
 
 The boss's v0.8 brief: an experimental Page 1, PL 7's Compatibility reports,

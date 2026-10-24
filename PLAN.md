@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.8 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.8.html` (adds Page 1 (Experimental), Matching, PL yogas and worksheets, NTP marriage matching, Nandi Nadi research) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
+Status: **v0.9 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.9.html` (adds KP (Research): Krishnamurti's six Readers — significators in his order, life-matter promise and candidate periods, ruling planets and rectification, transit timing, horary 1–249, KP Guidance; Matching gets Krishnamurti's view) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
@@ -353,7 +353,7 @@ decoding, Playwright for build verification, a field-by-field parity script;
 
 When parity is reached and Phase 2 customisation is agreed, we will:
 1. Create a **new public GitHub repository** containing only `kaast2/` (app, tests, docs, anonymised fixtures), the sanitised `knowledge/` files, PLAN.md, ARCHITECTURE.md, LICENSE (AGPL-3.0), README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY.md, issue templates, CI.
-2. **Never publish**: `private_oracles/` (the boss's PL worksheet values with birth data; git-ignored), PL-derived text (`kaast2/src/engine/yoga/plYogaText.json`, `kaast2/docs/specs/pl_yogas.json`, the quotations in `kaast2/docs/specs/compatibility.md`: strip or paraphrase before going public), `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`, and `references/` (Iyer's NTP books — copyrighted, private reference only).
+2. **Never publish**: `private_oracles/` (the boss's PL worksheet values with birth data; git-ignored), PL-derived text (`kaast2/src/engine/yoga/plYogaText.json`, `kaast2/docs/specs/pl_yogas.json`, the quotations in `kaast2/docs/specs/compatibility.md`: strip or paraphrase before going public), `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`, and `references/` (Iyer's NTP books and Krishnamurti's KP Readers — copyrighted, private reference only). Review before going public: the KP guidance and matching notes (`kaast2/src/engine/kp/guidance/*.json`) are our paraphrases with page citations, but check them for close wording.
 3. Run a pre-publish scan (script in `kaast2/scripts/prepublish_scan`) for names, coordinates, JDs from the private corpus, API keys, and absolute paths.
 4. Archive this private repository as the family's research record; the public repo starts with a clean history (no rewriting of the private one).
 5. Write the external-audience README: what the app is, who it is for, how to run the single HTML, how to deploy to Vercel, how to cite PL7 and Swiss Ephemeris, and what is intentionally not included.
@@ -475,7 +475,22 @@ planets, KP's view on marriage matching, and (decision below) the horary
 1–249 method — as KP (Research) sub-tabs with citations, verified on the
 books' own examples; ship as a new version with docs.
 
+**Outcome (v0.9, 2026-10-24).** Done as rewritten; full account in
+`kaast2/docs/specs/kp_research.md`. All six Readers read chapter by chapter
+(1 170 catalogued rules, `references/KP/notes/`). New engine modules
+(`kaast2/src/engine/kp/`: significators, ruling, matters, subs, horary,
+transit, rectify, guidance) verified on the books' own worked charts — every
+disagreement is a named book slip. Horary is in, as its own sub-tab (the
+family's practice; B6 is the best-documented Reader). Default calculation
+"Readers mode" (KP New, mean node, 365¼-day years), found by recasting the
+Readers' charts. Research finding stated on the page: significators alone do
+not time an event (wedding periods rank only slightly above chance); the
+Readers narrow by ruling planets and transit. Guidance: 435 chart rules + 88
+principles, policy-filtered (no death/longevity/danger/disease), rules that
+hold for > 80 % of charts removed (test).
+
 ## 12. Session log
 
 - **2026-10-17** — Boot from CLAUDE.md/knowledge; absorbed the PL7 report and open items; inventoried GeoVision (1 559 input-only charts; 436 cache months); read the guide's method chapters; wrote PLAN v0.1 and ARCHITECTURE v0.1. Boss decided: East Indian chart layout as in Kala Chakra; share the Iyer books later; Windows and macOS installers for fully offline devices; next session starts from the prompt in CLOUD_HANDOFF.md. No app code yet. Next: boss answers D1–D9; slice 0.
 - **2026-10-17 (session 2)** — Boss: "start with default slices", UI left to the team, Page 1 = PL 9.0 screenshot. Applied defaults D1–D10 (D5 revised). Found the boss's program is PL 9 and that PL 9 = Swiss Ephemeris + PL Lahiri polynomial + mean equinox + true node + geographic latitude for houses (Asc +4″ vs +198″ geocentric; Placidus still assumed from PL 7, needs a cusp printout), seconds rounded, dasha year 365.2421875, war-time zone honoured (Amitabh 1942 chart: 9/9 planets to the second). Shipped slices 0, 1, 2a as `kaast2/dist/KAAST 2 v0.1.html` (61 engine/unit tests, 5 e2e, contract check, scan). Specialists: domain researcher (Page 1 strengths spec), technical writer (`kaast2/parity/PL7_EXPORT_PROCEDURE.md`, 17 charts + Test 5 for ΔT). Next: slice 2b (strengths).
+- **2026-10-24 (evening)** — KP (Research): boss's brief deepened (PLAN §14); KP_Materials.7z ingested to `references/KP/` (private); 7 reader agents catalogued the six Readers; engine modules built and checked on the Readers' worked charts (significator tables, horary cusps and dasas, ruling planets, natal marriage timing, transit dates, rectification); 5 agents wrote the guidance rules; seven sub-tabs + Matching's Krishnamurti tab; shipped `kaast2/dist/Astro-Amriit v0.9.html` (809 tests, 35 e2e on the shipped file). Next: slice 9 (PL 9 parity audit).
