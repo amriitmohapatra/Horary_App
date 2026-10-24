@@ -13,7 +13,6 @@
  * order is not stated in the Readers: it is placed after the lagna lord.
  */
 import type { ChartResult, PlanetId } from '../types';
-import { PLANETS } from '../types';
 import { SIGN_LORD, signIndex } from '../zodiac';
 import { lordChain } from './lords';
 import { signAspects } from './significators';
