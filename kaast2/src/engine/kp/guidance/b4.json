@@ -152,21 +152,6 @@
       "cite": "B4 pp. 178–180"
     },
     {
-      "id": "KP4-037",
-      "topic": "Marriage and partnership",
-      "when": {
-        "sig": "Sa",
-        "any": [
-          2,
-          7,
-          11
-        ]
-      },
-      "text": "Saturn signifies a marriage house (2, 7 or 11). Krishnamurti: when Saturn is a significator it delays at every stage (proposal, fixing, wedding) but does not deny.",
-      "tone": "mixed",
-      "cite": "B4 p. 112"
-    },
-    {
       "id": "KP4-038",
       "topic": "Marriage and partnership",
       "when": {
@@ -178,497 +163,6 @@
       "text": "Saturn in the 5th aspects the 7th, 11th and 2nd, all three marriage houses; Krishnamurti reads a long delay before marriage.",
       "tone": "bad",
       "cite": "B4 p. 113"
-    },
-    {
-      "id": "KP4-039",
-      "topic": "Marriage and partnership",
-      "when": {
-        "anyOf": [
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  0
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  2,
-                  4,
-                  6,
-                  9
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  1
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  3,
-                  5,
-                  7,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  2
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  2,
-                  4,
-                  6,
-                  8,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  3
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  3,
-                  5,
-                  7,
-                  9
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  4
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  4,
-                  6,
-                  8,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  5
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  2,
-                  5,
-                  7,
-                  9,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  6
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  3,
-                  6,
-                  8,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  7
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  4,
-                  7,
-                  9,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  8
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  2,
-                  5,
-                  8,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  9
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  3,
-                  6,
-                  9,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  10
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  2,
-                  4,
-                  7,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "cusp": 1,
-                "sign": [
-                  11
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  3,
-                  5,
-                  8,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  0
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  2,
-                  4,
-                  6,
-                  9
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  1
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  3,
-                  5,
-                  7,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  2
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  2,
-                  4,
-                  6,
-                  8,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  3
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  3,
-                  5,
-                  7,
-                  9
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  4
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  4,
-                  6,
-                  8,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  5
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  2,
-                  5,
-                  7,
-                  9,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  6
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  3,
-                  6,
-                  8,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  7
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  4,
-                  7,
-                  9,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  8
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  2,
-                  5,
-                  8,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  9
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  3,
-                  6,
-                  9,
-                  11
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  10
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  0,
-                  2,
-                  4,
-                  7,
-                  10
-                ]
-              }
-            ]
-          },
-          {
-            "allOf": [
-              {
-                "planet": "Mo",
-                "sign": [
-                  11
-                ]
-              },
-              {
-                "planet": "Sa",
-                "sign": [
-                  1,
-                  3,
-                  5,
-                  8,
-                  11
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "text": "Saturn is in the 1st, 3rd, 5th, 7th or 10th sign from the Lagna or the Moon: a traditional sign of late marriage that Krishnamurti uses, strongest when Saturn rules no good houses. Even a helpful Saturn delays; it does not deny.",
-      "tone": "bad",
-      "cite": "B4 p. 76"
     },
     {
       "id": "KP4-125",
@@ -1979,36 +1473,6 @@
       "cite": "B4 p. 123"
     },
     {
-      "id": "KP4-133",
-      "topic": "Marriage and partnership",
-      "when": {
-        "csl": 4,
-        "any": [
-          4,
-          8,
-          12
-        ]
-      },
-      "text": "The sub lord of the 4th cusp signifies 4, 8 or 12 (the 10th, 2nd and 6th from the 7th): the spouse works, in service, a profession or business.",
-      "tone": "info",
-      "cite": "B4 p. 102"
-    },
-    {
-      "id": "KP4-132",
-      "topic": "Marriage and partnership",
-      "when": {
-        "sig": "Ma",
-        "any": [
-          4,
-          8,
-          12
-        ]
-      },
-      "text": "Mars signifies house 4, 8 or 12, the houses of the partner’s work: in a man’s chart Krishnamurti reads a wife with a career.",
-      "tone": "info",
-      "cite": "B4 p. 89"
-    },
-    {
       "id": "KP4-134",
       "topic": "Marriage and partnership",
       "when": {
@@ -2348,7 +1812,7 @@
           }
         ]
       },
-      "text": "Spouse (7th sub lord Sun in Karkata (Crab)): short and plain-looking; good-natured, harmless and cheerful, fond of music, dance and sport, but rather lazy about work.",
+      "text": "Spouse (7th sub lord Sun in Cancer): short and plain-looking; good-natured, harmless and cheerful, fond of music, dance and sport, but rather lazy about work.",
       "tone": "mixed",
       "cite": "B4 p. 91"
     },
@@ -2624,7 +2088,7 @@
           }
         ]
       },
-      "text": "Spouse (7th sub lord Moon in Karkata (Crab)): average height, somewhat fleshy, round face; pleasant, harmless and peace-loving, easily influenced and changeable, sociable, fond of travel, fortunate.",
+      "text": "Spouse (7th sub lord Moon in Cancer): average height, somewhat fleshy, round face; pleasant, harmless and peace-loving, easily influenced and changeable, sociable, fond of travel, fortunate.",
       "tone": "good",
       "cite": "B4 p. 92"
     },
@@ -2900,7 +2364,7 @@
           }
         ]
       },
-      "text": "Spouse (7th sub lord Mars in Karkata (Crab)): short, dusky, sparse hair, uneven build; may find steady, responsible work hard to keep.",
+      "text": "Spouse (7th sub lord Mars in Cancer): short, dusky, sparse hair, uneven build; may find steady, responsible work hard to keep.",
       "tone": "bad",
       "cite": "B4 p. 93"
     },
@@ -3176,7 +2640,7 @@
           }
         ]
       },
-      "text": "Spouse (7th sub lord Mercury in Karkata (Crab)): short, stout, small eyes, sharp nose; changeable and unsteady, a little lazy, yet tactful, faithful, sociable and fond of parties.",
+      "text": "Spouse (7th sub lord Mercury in Cancer): short, stout, small eyes, sharp nose; changeable and unsteady, a little lazy, yet tactful, faithful, sociable and fond of parties.",
       "tone": "mixed",
       "cite": "B4 p. 95"
     },
@@ -3452,7 +2916,7 @@
           }
         ]
       },
-      "text": "Spouse (7th sub lord Jupiter in Karkata (Crab)): short, stout, pale; charitable, enterprising, sympathetic and popular, intuitive and artistic, patriotic, loves home yet travels.",
+      "text": "Spouse (7th sub lord Jupiter in Cancer): short, stout, pale; charitable, enterprising, sympathetic and popular, intuitive and artistic, patriotic, loves home yet travels.",
       "tone": "good",
       "cite": "B4 p. 97"
     },
@@ -3728,7 +3192,7 @@
           }
         ]
       },
-      "text": "Spouse (7th sub lord Venus in Karkata (Crab)): short, stout, round face; home-loving, kind and imaginative, close to mother and family; several attachments, and the marriage is not very fortunate.",
+      "text": "Spouse (7th sub lord Venus in Cancer): short, stout, round face; home-loving, kind and imaginative, close to mother and family; several attachments, and the marriage is not very fortunate.",
       "tone": "mixed",
       "cite": "B4 p. 98"
     },
@@ -4004,7 +3468,7 @@
           }
         ]
       },
-      "text": "Spouse (7th sub lord Saturn in Karkata (Crab)): thin, not tall, frail look, deep-set eyes; restless, discontented and changeable, moves house often, but very industrious.",
+      "text": "Spouse (7th sub lord Saturn in Cancer): thin, not tall, frail look, deep-set eyes; restless, discontented and changeable, moves house often, but very industrious.",
       "tone": "bad",
       "cite": "B4 p. 100"
     },
@@ -4469,7 +3933,7 @@
           11
         ]
       },
-      "text": "For a Karkata (Crab), Leo, Sagittarius or Pisces Lagna, Mars is a helpful, yoga-giving planet.",
+      "text": "For a Cancer, Leo, Sagittarius or Pisces Lagna, Mars is a helpful, yoga-giving planet.",
       "tone": "good",
       "cite": "B4 pp. 57–59"
     },
@@ -4937,36 +4401,6 @@
       "text": "The sub lord of the Ascendant or of the 11th cusp is Ketu and is free of 6, 8 and 12: by Krishnamurti’s gem rule, agate or turquoise and the colours mixed colours suit the native.",
       "tone": "info",
       "cite": "B4 pp. 283–284"
-    },
-    {
-      "id": "KP4-221",
-      "topic": "Children, romance and speculation",
-      "when": {
-        "csl": 11,
-        "any": [
-          2,
-          5,
-          11
-        ]
-      },
-      "text": "In a man’s chart this Reader judges children first from the 11th cusp (the wife’s 5th). Its sub lord signifies 2, 5 or 11, which supports the promise of children.",
-      "tone": "good",
-      "cite": "B4 p. 215"
-    },
-    {
-      "id": "KP4-221",
-      "topic": "Children, romance and speculation",
-      "when": {
-        "csl": 11,
-        "none": [
-          2,
-          5,
-          11
-        ]
-      },
-      "text": "In a man’s chart this Reader judges children first from the 11th cusp (the wife’s 5th). Its sub lord signifies none of 2, 5 and 11, which weakens the promise; check the 5th cusp too.",
-      "tone": "bad",
-      "cite": "B4 p. 215"
     },
     {
       "id": "KP4-226",
@@ -5613,7 +5047,7 @@
           }
         ]
       },
-      "text": "Love nature (5th sub lord in Karkata (Crab)). As a man: romantic, loyal and home-loving, but poor at showing love; avoids divorce. As a woman: sincere and devoted but moody, wants attention; may remarry for security.",
+      "text": "Love nature (5th sub lord in Cancer). As a man: romantic, loyal and home-loving, but poor at showing love; avoids divorce. As a woman: sincere and devoted but moody, wants attention; may remarry for security.",
       "tone": "info",
       "cite": "B4 pp. 163–164"
     },

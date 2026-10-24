@@ -22,53 +22,6 @@
       "cite": "B2 pp. 287, 290, 299, 305, 337"
     },
     {
-      "id": "KP2-012",
-      "topic": "Principles of judgement",
-      "when": {
-        "anyOf": [
-          {
-            "planet": "Sa",
-            "house": [
-              3,
-              6,
-              10,
-              11
-            ]
-          },
-          {
-            "planet": "Ma",
-            "house": [
-              3,
-              6,
-              10,
-              11
-            ]
-          },
-          {
-            "planet": "Ra",
-            "house": [
-              3,
-              6,
-              10,
-              11
-            ]
-          },
-          {
-            "planet": "Ke",
-            "house": [
-              3,
-              6,
-              10,
-              11
-            ]
-          }
-        ]
-      },
-      "text": "Tradition (reported by Krishnamurti): a malefic in the 3rd, 6th, 10th or 11th (the upachaya, or growing, houses) turns helpful and brings profit. Krishnamurti adds that a node in the star of a lord of 6, 8 or 12 still harms there.",
-      "tone": "mixed",
-      "cite": "B2 pp. 301–302, 330"
-    },
-    {
       "id": "KP2-013",
       "topic": "Principles of judgement",
       "when": {
