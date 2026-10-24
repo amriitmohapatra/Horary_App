@@ -108,6 +108,10 @@ test('Matching and NTP matching with a prospective match', async ({ page }) => {
   await page.getByRole('button', { name: 'Moon chart, Navamsha, Dashas' }).click();
   await expect(page.getByText('Moon chart (Chandra Lagna)')).toHaveCount(2);
   await axe(page, 'Moon chart', found);
+  await page.getByRole('button', { name: 'Krishnamurti (KP)' }).click();
+  await expect(page.getByTestId('match-kp-test').locator('li')).toHaveCount(2);
+  await expect(page.getByText('General', { exact: true })).toBeVisible();
+  await axe(page, 'Matching KP', found);
 
   // The same partner carries over to Iyer's matching on the NTP page.
   await openTab(page, 'NTP (Research)');

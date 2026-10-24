@@ -407,3 +407,11 @@ table.data .r { text-align: right; }
 .yoga-res { color: var(--text-muted); }
 .yoga details summary { cursor: pointer; color: var(--accent); font-size: var(--fs-xs); }
 .yoga-formula { font-family: var(--font-data); font-size: var(--fs-xs); word-break: break-all; }
+
+/* KP (Research) */
+.kp-warn { margin: 0 0 var(--sp-3); padding: var(--sp-2) var(--sp-3); border-left: 4px solid var(--accent); background: var(--surface-sunk); color: var(--text); font-size: var(--fs-sm); }
+.kp-because { font-size: var(--fs-xs); }
+.kp-ordered .pl:first-child { font-weight: 800; }
+.btn-link { background: none; border: 0; padding: 0; font: inherit; color: var(--text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.btn-link[aria-pressed='true'] { font-weight: 800; text-decoration-thickness: 2px; }
+tr.is-current > * { background: var(--surface-sunk); }

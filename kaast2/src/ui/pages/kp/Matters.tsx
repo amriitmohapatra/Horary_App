@@ -107,7 +107,7 @@ export function Matters({ c, m, sig }: { c: ChartResult; m: KpModel; sig: Sig })
             {j.pruned.length ? <span class="muted"> · {t('kp.pruned')} <Chips ids={j.pruned} /></span> : null}</p>
 
           <h3 class="ntp-sub">{t('kp.periods')}</h3>
-          <p class="status status-warn" role="note">{t('kp.periodsWarn')}</p>
+          <p class="kp-warn" role="note">{t('kp.periodsWarn')}</p>
           <div class="field-row">
             <div class="field inline-field"><label for="kp-from">{t('kp.fromYear')}</label>
               <input id="kp-from" type="number" min={birthYear} max={birthYear + 120} value={from} onChange={(ev) => setFrom(Number(ev.currentTarget.value) || from)} /></div>

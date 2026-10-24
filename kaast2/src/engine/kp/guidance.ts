@@ -75,6 +75,7 @@ export interface GuidanceFinding { rule: GuidanceRule; because: string }
 export const GUIDANCE_RULES: readonly GuidanceRule[] = [B1, B2, B3A, B3B, B4, B5].flatMap((b) => (b as unknown as { rules: GuidanceRule[] }).rules);
 
 type Sig = ReturnType<typeof kpSignifications>;
+const SIGN_NAMES = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
 const NAMES: Record<PlanetId, string> = { Su: 'Sun', Mo: 'Moon', Ma: 'Mars', Me: 'Mercury', Ju: 'Jupiter', Ve: 'Venus', Sa: 'Saturn', Ra: 'Rahu', Ke: 'Ketu' };
 
 /** Evaluate one condition; returns a short reason when it holds, null otherwise. */
@@ -105,7 +106,7 @@ export function holds(c: Cond, m: KpModel, sig: Sig): string | null {
     const ok = (!c.house || c.house.includes(p.house)) && (!c.sign || c.sign.includes(p.sign))
       && (!c.star || c.star.includes(p.lords[0])) && (!c.sub || c.sub.includes(p.lords[1]))
       && (c.retro === undefined || c.retro === p.retrograde);
-    return ok ? `${NAMES[c.planet]} in house ${p.house}, star of ${NAMES[p.lords[0]]}, sub of ${NAMES[p.lords[1]]}${p.retrograde ? ', retrograde' : ''}` : null;
+    return ok ? `${NAMES[c.planet]} in ${SIGN_NAMES[p.sign]}, house ${p.house}, star of ${NAMES[p.lords[0]]}, sub of ${NAMES[p.lords[1]]}${p.retrograde ? ', retrograde' : ''}` : null;
   }
   if ('sig' in c) return houseTest(sigOf(c.sig), c) ? `${NAMES[c.sig]} signifies ${sigOf(c.sig).join(', ')}` : null;
   if ('conj' in c) return P(c.conj[0]).sign === P(c.conj[1]).sign ? `${NAMES[c.conj[0]]} and ${NAMES[c.conj[1]]} in one sign` : null;
@@ -116,7 +117,7 @@ export function holds(c: Cond, m: KpModel, sig: Sig): string | null {
   if ('cusp' in c) {
     const k = m.cusps[c.cusp - 1]!;
     const ok = (!c.sign || c.sign.includes(k.sign)) && (!c.star || c.star.includes(k.lords[0])) && (!c.sub || c.sub.includes(k.lords[1]));
-    return ok ? `cusp ${c.cusp} in the star of ${NAMES[k.lords[0]]}, sub of ${NAMES[k.lords[1]]}` : null;
+    return ok ? `cusp ${c.cusp} in ${SIGN_NAMES[k.sign]}, star of ${NAMES[k.lords[0]]}, sub of ${NAMES[k.lords[1]]}` : null;
   }
   if ('occupied' in c) {
     const occ = m.houses[c.occupied - 1]!.occupants;

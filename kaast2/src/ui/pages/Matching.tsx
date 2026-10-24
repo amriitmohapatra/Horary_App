@@ -2,7 +2,7 @@
  * Matching: PL 7's Reports → Compatibility, for two charts — the current chart
  * (or another first chart) and the prospective match. Sub-tabs follow PL's
  * menu: basic birth details; birth chart and planets; Moon chart, Navamsha and
- * Dashas; Ashtakoot; Mangala Dosha; Dash-Koota. Iyer's own way of matching is on
+ * Dashas; Ashtakoot; Mangala Dosha; Dash-Koota; and Krishnamurti's view (KP). Iyer's own way of matching is on
  * the NTP (Research) tab. Personal data: the second chart is never stored.
  */
 import { useState } from 'preact/hooks';
@@ -12,8 +12,9 @@ import { PartnerEntry, chartSummary } from '../components/PartnerEntry';
 import { chartInput, firstChart, firstRole, matchFirstInput, partnerChart, partnerInput, type MatchRole } from '../state/store';
 import { BasicDetails, ChartsAndPlanets, MoonNavDashas } from './match/Reports';
 import { AshtakootTable, DashKoota, MangalPanel, Overview } from './match/Kootas';
+import { KpNotes } from './match/KpNotes';
 
-export type MatchTab = 'overview' | 'basic' | 'charts' | 'moon' | 'ashtakoot' | 'mangal' | 'dashkoot';
+export type MatchTab = 'overview' | 'basic' | 'charts' | 'moon' | 'ashtakoot' | 'mangal' | 'dashkoot' | 'kp';
 const TABS: { id: MatchTab; label: string }[] = [
   { id: 'overview', label: 'Overview' },
   { id: 'basic', label: 'Basic birth details' },
@@ -22,6 +23,7 @@ const TABS: { id: MatchTab; label: string }[] = [
   { id: 'ashtakoot', label: 'Ashtakoot' },
   { id: 'mangal', label: 'Mangala Dosha' },
   { id: 'dashkoot', label: 'Dash-Koota' },
+  { id: 'kp', label: 'Krishnamurti (KP)' },
 ];
 
 export interface Pair { boy: ChartResult; girl: ChartResult; first: ChartResult; second: ChartResult }
@@ -90,6 +92,7 @@ export function Matching(): JSX.Element {
           {tab === 'ashtakoot' && <AshtakootTable pair={pair} />}
           {tab === 'mangal' && <MangalPanel pair={pair} />}
           {tab === 'dashkoot' && <DashKoota pair={pair} />}
+          {tab === 'kp' && <KpNotes pair={pair} />}
         </>
       )}
     </article>

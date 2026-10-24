@@ -8,6 +8,7 @@ import { GUIDANCE_RULES, TOPICS, kpGuidance, validateCond } from '../../src/engi
 import { kpModel } from '../../src/engine/kp/kp';
 import { kpSignifications } from '../../src/engine/kp/significators';
 import { PLANETS, type ChartResult } from '../../src/engine/types';
+import MATCH from '../../src/engine/kp/guidance/match_notes.json';
 
 /** Policy as on the NTP page: no death, longevity, accident, danger or disease prognosis. */
 const FORBIDDEN = /\b(death|die|dies|dying|died|longevity|life span|lifespan|accident|danger|dangerous|fatal|suicide|murder|leprosy|tuberculosis|widow|widower|maraka|killed|kill)\b/i;
@@ -41,6 +42,13 @@ describe('KP guidance rules', () => {
       const m = kpModel({ cusps: c.cusps, bodies } as unknown as ChartResult);
       const f = kpGuidance(m, kpSignifications(m));
       for (const x of f) expect(x.because.length).toBeGreaterThan(3);
+    }
+  });
+  it('matching notes (B4): shape and the same policy', () => {
+    for (const n of MATCH.notes) {
+      expect(n.id).toMatch(/^KP4-\d{3}/);
+      expect(n.cite).toMatch(/^B4 pp?\. \d/);
+      expect(FORBIDDEN.test(n.text) || /\bcancer\b/.test(n.text), `${n.id}: ${n.text}`).toBe(false);
     }
   });
 });
