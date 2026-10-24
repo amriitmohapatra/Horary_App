@@ -17,7 +17,7 @@ import type { PlanetId } from '../types';
 import type { DashaPeriod } from '../dasha/vimshottari';
 import { subperiods } from '../dasha/vimshottari';
 import type { KpModel } from './kp';
-import type { PlanetSignification } from './significators';
+import type { PlanetSignification, RankedHouse } from './significators';
 
 export interface Matter {
   id: string;
@@ -82,7 +82,7 @@ export interface MatterJudgement {
 }
 
 export function judgeMatter(
-  matter: Matter, m: KpModel, sig: { planets: Record<PlanetId, PlanetSignification>; houses: { house: number; ordered: PlanetId[] }[] }, cusp = matter.cusp,
+  matter: Matter, m: KpModel, sig: Sig, cusp = matter.cusp,
 ): MatterJudgement {
   const subLord = m.cusps[cusp - 1]!.lords[1];
   const subHouses = sig.planets[subLord].all;
@@ -94,29 +94,89 @@ export function judgeMatter(
   return { matter, cusp, subLord, subHouses, promise, significators, pruned };
 }
 
-export interface TimingWindow { lords: PlanetId[]; start: number; end: number; strength: number }
+export type Link = 'signifies' | 'conjoined or aspected';
+/** Shape of kpSignifications() that the matter functions read. */
+type Sig = { planets: Record<PlanetId, PlanetSignification>; houses: Pick<RankedHouse, 'house' | 'levels' | 'nodeAgents' | 'nodeStar' | 'ordered'>[] };
 
 /**
- * Periods whose lords all signify the matter's houses: bhuktis (dasa and
- * bhukti lords) and, inside them, anthras (all three). `strength` = how many
- * of the lords' houses fall in the "yes" group minus those in the denial group.
+ * Strongest of Krishnamurti's levels (1–5) at which `p` signifies any of the
+ * matter's houses, or null. Level 5 = only conjoined with or aspected by a
+ * significator (KP3-501, KP4-159). Nodes acting for a planet take its level.
+ */
+export function levelFor(matter: Matter, sig: Sig, p: PlanetId): number | null {
+  let best: number | null = null;
+  const take = (l: number) => { if (best === null || l < best) best = l; };
+  for (const h of matter.yes) {
+    const H = sig.houses[h - 1]!;
+    H.levels.forEach((L, i) => { if (L.includes(p)) take(i + 1); });
+    for (const a of H.nodeAgents) if (a.node === p) take(a.level);
+    for (const t of H.nodeStar) if (t.planet === p) take(t.level);
+  }
+  return best;
+}
+export function linkTo(matter: Matter, sig: Sig, p: PlanetId): Link | null {
+  const l = levelFor(matter, sig, p);
+  return l === null ? null : l <= 4 ? 'signifies' : 'conjoined or aspected';
+}
+
+export interface TimingWindow {
+  lords: PlanetId[];
+  start: number;
+  end: number;
+  /** Krishnamurti's level (1 strongest … 5) at which each lord signifies the matter. */
+  levels: number[];
+  /** Σ (6 − level) over the lords: 15 = all three at level 1. */
+  strength: number;
+  /** Lords that signify more denial houses than "yes" houses (KP4-009: weak for the matter). */
+  obstructing: PlanetId[];
+}
+
+/**
+ * Every anthra between fromJd and toJd whose three lords (dasa, bhukti,
+ * anthra) are all significators of the matter (levels 1–5), scored by
+ * Krishnamurti's order of strength (KP3-501: "strength follows this order";
+ * B6 KP6-062). The score ranks; it does not decide. On the Readers' natal
+ * marriage examples every printed wedding anthra is a window, but the score
+ * alone barely singles it out (mean share of stronger time 0.38 over ages
+ * 18–45, chance 0.5; tests/engine/kp_natal.test.ts): the Readers narrow the
+ * candidates with the ruling planets of the moment of judgement and fix the
+ * day by transit, and so must any use of this list.
  */
 export function timingWindows(
-  mahas: DashaPeriod[], matter: Matter, planets: Record<PlanetId, PlanetSignification>, fromJd: number, toJd: number,
+  mahas: DashaPeriod[], matter: Matter, sig: Sig, fromJd: number, toJd: number,
 ): TimingWindow[] {
-  const ok = (p: PlanetId) => planets[p].all.some((h) => matter.yes.includes(h));
-  const score = (ls: PlanetId[]) => ls.reduce((s, p) => s + planets[p].all.filter((h) => matter.yes.includes(h)).length - planets[p].all.filter((h) => matter.deny.includes(h)).length, 0);
+  const lv = Object.fromEntries((Object.keys(sig.planets) as PlanetId[]).map((p) => [p, levelFor(matter, sig, p)])) as Record<PlanetId, number | null>;
+  const count = (p: PlanetId, hs: number[]) => sig.planets[p].all.filter((h) => hs.includes(h)).length;
   const out: TimingWindow[] = [];
   for (const md of mahas) {
-    if (md.end < fromJd || md.start > toJd || !ok(md.lords[0]!)) continue;
+    if (md.end <= fromJd || md.start >= toJd || lv[md.lords[0]!] === null) continue;
     for (const bh of subperiods(md)) {
-      if (bh.end < fromJd || bh.start > toJd || !ok(bh.lords[1]!)) continue;
+      if (bh.end <= fromJd || bh.start >= toJd || lv[bh.lords[1]!] === null) continue;
       for (const an of subperiods(bh)) {
-        if (an.end < fromJd || an.start > toJd || !ok(an.lords[2]!)) continue;
-        out.push({ lords: an.lords, start: an.start, end: an.end, strength: score(an.lords) });
+        if (an.end <= fromJd || an.start >= toJd || lv[an.lords[2]!] === null) continue;
+        const levels = an.lords.map((p) => lv[p]!);
+        out.push({
+          lords: an.lords, start: an.start, end: an.end, levels,
+          strength: levels.reduce((t, l) => t + 6 - l, 0),
+          obstructing: [...new Set(an.lords.filter((p) => count(p, matter.deny) > count(p, matter.yes)))],
+        });
       }
     }
   }
   return out;
 }
 
+/**
+ * Share of the time between fromJd and toJd held by windows STRONGER than
+ * `w` (ties count half; time outside any window counts as weaker): 0 = the
+ * strongest period of the span.
+ */
+export function rankShare(windows: TimingWindow[], w: TimingWindow, fromJd: number, toJd: number): number {
+  let above = 0, tie = 0;
+  for (const x of windows) {
+    const d = Math.min(x.end, toJd) - Math.max(x.start, fromJd);
+    if (d <= 0) continue;
+    if (x.strength > w.strength) above += d; else if (x.strength === w.strength) tie += d;
+  }
+  return (above + tie / 2) / (toJd - fromJd);
+}

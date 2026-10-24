@@ -8,7 +8,9 @@
  *   4 the owner,
  *   5 planets conjoined with (same sign) or aspected by (Parashari sign
  *     aspects, Ma 4/8, Ju 5/9, Sa 3/10 — the aspects B6's examples use,
- *     KP6-038) those significators.
+ *     KP6-038) those significators: the aspected planet gains the results
+ *     of the one aspecting it (B3 p. 333; B4 p. 179, Venus aspected by Mars
+ *     and Saturn gives their matters, KP4-159).
  * A star holding no planet makes its lord a strong significator itself
  * ("the Secretary does the job", KP6-022).
  * Rahu and Ketu act as agents (KP6-023/024): a node signifies its own
@@ -57,6 +59,8 @@ export interface RankedHouse {
   levels: PlanetId[][];
   /** Nodes acting here for a planet of levels 1–4. */
   nodeAgents: { node: PlanetId; for: PlanetId; level: number }[];
+  /** Planets in the star of a node that signifies this house: they take the node's set, at its level (KP6-023). */
+  nodeStar: { planet: PlanetId; node: PlanetId; level: number }[];
   /** Planets whose stars are empty but who are significators at levels 2 or 4 (strong). */
   emptyStar: PlanetId[];
   /** Every significator, strongest first, without repeats. */
@@ -121,20 +125,33 @@ export function kpSignifications(m: KpModel): { planets: Record<PlanetId, Planet
     const l1 = tenants(occ), l2 = [...occ], l3 = tenants([h.owner]), l4 = [h.owner];
     const core = [...new Set([...l1, ...l2, ...l3, ...l4])];
     const l5 = PLANETS.filter((q) => !core.includes(q) && core.some((c) =>
-      (P[q].sign === P[c].sign) || signAspects(q, P[q].sign, P[c].sign)));
+      (P[q].sign === P[c].sign) || signAspects(c, P[c].sign, P[q].sign)));
     const levels = [l1, l2, l3, l4, l5];
     const nodeAgents: RankedHouse['nodeAgents'] = [];
     for (const n of NODES) for (const r of represents(n)) {
       const lv = levels.slice(0, 4).findIndex((L) => L.includes(r.planet));
       if (lv >= 0 && !core.includes(n) && !nodeAgents.some((x) => x.node === n)) nodeAgents.push({ node: n, for: r.planet, level: lv + 1 });
     }
+    const nodeStar: RankedHouse['nodeStar'] = [];
+    for (const n of NODES) {
+      const own = levels.findIndex((L) => L.includes(n));
+      const ag = nodeAgents.find((a) => a.node === n)?.level;
+      const lv = own >= 0 ? Math.min(own + 1, ag ?? 9) : ag;
+      if (lv === undefined) continue;
+      for (const q of PLANETS) if (!isNode(q) && star(q) === n && !levels.some((L) => L.includes(q))) nodeStar.push({ planet: q, node: n, level: lv });
+    }
     const emptyStar = [...new Set([...l2, ...l4])].filter((q) => !PLANETS.some((x) => x !== q && star(x) === q));
     const ordered: PlanetId[] = [];
+    const push = (q: PlanetId) => {
+      if (ordered.includes(q)) return;
+      ordered.push(q);
+      for (const t of nodeStar) if (t.node === q) push(t.planet);
+    };
     levels.forEach((L, i) => {
-      for (const a of nodeAgents) if (a.level === i + 1 && !ordered.includes(a.node)) ordered.push(a.node);
-      for (const q of L) if (!ordered.includes(q)) ordered.push(q);
+      for (const a of nodeAgents) if (a.level === i + 1) push(a.node);
+      for (const q of L) push(q);
     });
-    return { house: h.house, levels, nodeAgents, emptyStar, ordered };
+    return { house: h.house, levels, nodeAgents, nodeStar, emptyStar, ordered };
   });
   return { planets, houses };
 }
