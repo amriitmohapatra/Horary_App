@@ -1,0 +1,491 @@
+{
+ "note": "Judgement moments with the ruling planets the KP Readers print (references/KP/notes *_examples.json, field ruling_planets). IST; Bombay 18°55'N 72°50'E, Madras 13°04'N 80°15'E, Delhi 28°38'N 77°12'E, Calcutta 22°33'N 88°24'E, Matale 7°28'N 80°37'E where the book names only the city. b4-E58 left out: its printed Moon (Pisces 24°) is 13° from the Moon of the printed moment. 'skip' names each role the book prints inconsistently; 'nodes[].reps' lists RPs a node must represent; 'first' the one it represents first; 'before' an RP the node must outrank.",
+ "cases": [
+  {
+   "id": "b1-E19",
+   "cite": "B1 pp. 91–92",
+   "date": {
+    "y": 1969,
+    "m": 2,
+    "d": 17
+   },
+   "time": {
+    "h": 15,
+    "mi": 58,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 18.916667,
+   "lonDeg": 72.833333,
+   "roles": {
+    "lagna sign": "Me",
+    "Moon star": "Ra",
+    "Moon sign": "Sa",
+    "day": "Mo"
+   },
+   "nodes": [
+    {
+     "node": "Ra",
+     "reps": [
+      "Ju"
+     ]
+    }
+   ],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b1-E20",
+   "cite": "B1 pp. 93–94",
+   "date": {
+    "y": 1969,
+    "m": 2,
+    "d": 23
+   },
+   "time": {
+    "h": 11,
+    "mi": 50,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 18.916667,
+   "lonDeg": 72.833333,
+   "roles": {
+    "day": "Su",
+    "Moon sign": "Ve",
+    "Moon star": "Su",
+    "lagna sign": "Ve",
+    "lagna star": "Su"
+   },
+   "nodes": [],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b1-E22",
+   "cite": "B1 p. 95",
+   "date": {
+    "y": 1969,
+    "m": 3,
+    "d": 23
+   },
+   "time": {
+    "h": 12,
+    "mi": 0,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 13.066667,
+   "lonDeg": 80.25,
+   "roles": {
+    "day": "Su",
+    "lagna sign": "Ve",
+    "lagna sub": "Ke",
+    "lagna star": "Su",
+    "Moon star": "Su"
+   },
+   "nodes": [],
+   "rejected": [],
+   "skip": {
+    "lagna sign": "printed lagna Taurus 7°07′ needs about 10:50; at the printed 12:00 Gemini rises (B1 p. 95)",
+    "lagna star": "idem",
+    "lagna sub": "idem"
+   }
+  },
+  {
+   "id": "b1-E24",
+   "cite": "B1 pp. 167–168",
+   "date": {
+    "y": 1969,
+    "m": 11,
+    "d": 1
+   },
+   "time": {
+    "h": 21,
+    "mi": 0,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 11.0,
+   "lonDeg": 76.966667,
+   "roles": {
+    "day": "Sa",
+    "Moon sign": "Mo",
+    "Moon star": "Sa",
+    "lagna sign": "Me",
+    "lagna star": "Ma"
+   },
+   "nodes": [],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b3b-E04",
+   "cite": "B3 pp. 382–386",
+   "date": {
+    "y": 1970,
+    "m": 7,
+    "d": 23
+   },
+   "time": {
+    "h": 22,
+    "mi": 28,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 22.9,
+   "lonDeg": 88.416667,
+   "roles": {
+    "lagna sign": "Ju",
+    "lagna star": "Sa",
+    "Moon sign": "Ju",
+    "Moon star": "Sa",
+    "day": "Ju"
+   },
+   "nodes": [],
+   "rejected": [],
+   "skip": {
+    "lagna star": "book names U.Bhadrapada (Saturn) for the lagna; the rising degree, Pisces 25°–26°, is in Revati (Mercury): the Moon’s star repeated"
+   }
+  },
+  {
+   "id": "b4-E34",
+   "cite": "B4 p. 176",
+   "date": {
+    "y": 1969,
+    "m": 8,
+    "d": 17
+   },
+   "time": {
+    "h": 19,
+    "mi": 40,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 16.516667,
+   "lonDeg": 80.65,
+   "roles": {
+    "day": "Su",
+    "Moon star": "Mo",
+    "Moon sign": "Me",
+    "lagna sign": "Sa"
+   },
+   "nodes": [],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b5-E03",
+   "cite": "B5 pp. 226–229",
+   "date": {
+    "y": 1967,
+    "m": 9,
+    "d": 20
+   },
+   "time": {
+    "h": 18,
+    "mi": 0,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 28.633333,
+   "lonDeg": 77.2,
+   "roles": {
+    "Moon star": "Me",
+    "Moon sign": "Ju",
+    "lagna sign": "Ju",
+    "day": "Me",
+    "Moon sub": "Ma"
+   },
+   "nodes": [
+    {
+     "node": "Ra",
+     "reps": [
+      "Ma"
+     ]
+    }
+   ],
+   "rejected": [],
+   "skip": {
+    "lagna sign": "at 18:00 the ascendant is Aquarius 27°; Pisces rises about 10 minutes later (the book prints no degree)"
+   }
+  },
+  {
+   "id": "b6-E04",
+   "cite": "B6 pp. 111–113",
+   "date": {
+    "y": 1969,
+    "m": 8,
+    "d": 13
+   },
+   "time": {
+    "h": 7,
+    "mi": 30,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 28.633333,
+   "lonDeg": 77.2,
+   "roles": {
+    "day": "Me",
+    "Moon star": "Me",
+    "Moon sign": "Mo",
+    "lagna sign": "Su"
+   },
+   "nodes": [
+    {
+     "node": "Ke",
+     "reps": [
+      "Me",
+      "Su"
+     ],
+     "first": "Me",
+     "before": "Su"
+    },
+    {
+     "node": "Ra",
+     "reps": [
+      "Me"
+     ]
+    }
+   ],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b6-E07",
+   "cite": "B6 pp. 138–139",
+   "date": {
+    "y": 1968,
+    "m": 12,
+    "d": 13
+   },
+   "time": {
+    "h": 11,
+    "mi": 0,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 13.066667,
+   "lonDeg": 80.25,
+   "roles": {
+    "day": "Ve",
+    "Moon star": "Su",
+    "Moon sign": "Me",
+    "lagna sign": "Sa"
+   },
+   "nodes": [],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b6-E08",
+   "cite": "B6 pp. 141–143",
+   "date": {
+    "y": 1969,
+    "m": 9,
+    "d": 13
+   },
+   "time": {
+    "h": 13,
+    "mi": 15,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 7.466667,
+   "lonDeg": 80.616667,
+   "roles": {
+    "day": "Sa",
+    "lagna sign": "Ju",
+    "Moon star": "Mo"
+   },
+   "nodes": [
+    {
+     "node": "Ra",
+     "reps": [
+      "Sa"
+     ]
+    }
+   ],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b6-E16",
+   "cite": "B6 pp. 174–176",
+   "date": {
+    "y": 1969,
+    "m": 5,
+    "d": 6
+   },
+   "time": {
+    "h": 17,
+    "mi": 30,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 18.916667,
+   "lonDeg": 72.833333,
+   "roles": {
+    "day": "Ma",
+    "Moon sign": "Ju",
+    "Moon star": "Ve",
+    "lagna sign": "Ve"
+   },
+   "nodes": [
+    {
+     "node": "Ra",
+     "reps": [
+      "Ve"
+     ],
+     "first": "Ve"
+    },
+    {
+     "node": "Ke",
+     "reps": [
+      "Ju"
+     ],
+     "first": "Ju"
+    }
+   ],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b6-E17",
+   "cite": "B6 pp. 177–179",
+   "date": {
+    "y": 1969,
+    "m": 7,
+    "d": 6
+   },
+   "time": {
+    "h": 6,
+    "mi": 30,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 22.55,
+   "lonDeg": 88.4,
+   "roles": {
+    "day": "Su",
+    "lagna sign": "Mo",
+    "Moon star": "Sa",
+    "Moon sign": "Ju"
+   },
+   "nodes": [
+    {
+     "node": "Ra",
+     "reps": [
+      "Ju"
+     ]
+    }
+   ],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b6-E19",
+   "cite": "B6 pp. 183–186",
+   "date": {
+    "y": 1969,
+    "m": 7,
+    "d": 27
+   },
+   "time": {
+    "h": 13,
+    "mi": 40,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 18.916667,
+   "lonDeg": 72.833333,
+   "roles": {
+    "day": "Su",
+    "Moon sign": "Ju",
+    "Moon star": "Ve",
+    "lagna sign": "Ve"
+   },
+   "nodes": [
+    {
+     "node": "Ra",
+     "reps": []
+    },
+    {
+     "node": "Ke",
+     "reps": []
+    }
+   ],
+   "rejected": [],
+   "skip": {}
+  },
+  {
+   "id": "b6-E21",
+   "cite": "B6 pp. 190–194",
+   "date": {
+    "y": 1968,
+    "m": 12,
+    "d": 1
+   },
+   "time": {
+    "h": 17,
+    "mi": 30,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 18.916667,
+   "lonDeg": 72.833333,
+   "roles": {
+    "day": "Su",
+    "Moon star": "Ke",
+    "Moon sign": "Ma",
+    "lagna sign": "Ve"
+   },
+   "nodes": [],
+   "rejected": [
+    "Su"
+   ],
+   "skip": {}
+  },
+  {
+   "id": "b6-E22",
+   "cite": "B6 pp. 194–197",
+   "date": {
+    "y": 1969,
+    "m": 4,
+    "d": 19
+   },
+   "time": {
+    "h": 19,
+    "mi": 30,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 18.916667,
+   "lonDeg": 72.833333,
+   "roles": {
+    "day": "Sa",
+    "Moon sign": "Ve",
+    "lagna sign": "Ve",
+    "Moon star": "Su"
+   },
+   "nodes": [
+    {
+     "node": "Ra",
+     "reps": [
+      "Ve"
+     ],
+     "first": "Ve"
+    },
+    {
+     "node": "Ke",
+     "reps": [
+      "Ve"
+     ]
+    }
+   ],
+   "rejected": [],
+   "skip": {}
+  }
+ ]
+}

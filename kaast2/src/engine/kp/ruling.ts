@@ -3,8 +3,12 @@
  * p. 295; B6 pp. 132–152, 194, 212, 275, 285 (KP1-090…098, KP3-159,
  * KP6-040…051). The RPs are the lords of the weekday (sunrise to sunrise),
  * of the Moon's sign and star, and of the rising sign and its star; the
- * lagna's and the Moon's sub lords are shown as finer RPs. A node joins when
- * it sits in a sign an RP owns, or is conjoined with or aspected by an RP.
+ * lagna's and the Moon's sub lords are finer RPs (B5 p. 227 uses the Moon's
+ * sub). A node joins when it is conjoined with or aspected by an RP, or sits
+ * in a sign an RP owns; it gives "first of all" the results of the planets it
+ * is conjoined with or aspected by (B6 p. 254), then those of its sign lord
+ * (p. 132), and it replaces the RP it represents ("Reject Sun, take Kethu",
+ * p. 254; B4 p. 211).
  * An RP in the star (or, from B6 p. 194 on, the sub) of a retrograde planet
  * is rejected ("tempter"); a retrograde RP counts only after it turns direct.
  * Strength: lagna lord > Moon's star lord > Moon's sign lord > day lord (B6
@@ -18,11 +22,15 @@ import { lordChain } from './lords';
 import { signAspects } from './significators';
 
 export type RpRole = 'lagna sign' | 'lagna star' | 'Moon star' | 'Moon sign' | 'day' | 'lagna sub' | 'Moon sub';
+export type NodeWhy = 'conjoined' | 'aspected' | 'in its sign';
 export interface RpSlot { role: RpRole; planet: PlanetId }
 export interface RulingPlanets {
   slots: RpSlot[];
-  /** Nodes added as agents of an RP. */
-  nodes: { node: PlanetId; for: PlanetId; why: 'in its sign' | 'conjoined' | 'aspected' }[];
+  /**
+   * Nodes acting for RPs (whether or not the node is itself an RP): the RPs it
+   * represents, conjoined first, then aspecting, then its sign lord; `for` = the first.
+   */
+  nodes: { node: PlanetId; for: PlanetId; why: NodeWhy; reps: { planet: PlanetId; why: NodeWhy }[] }[];
   /** RPs in the star (or sub) of a retrograde planet. */
   rejected: { planet: PlanetId; why: string }[];
   /** Retrograde RPs: effective only after they turn direct. */
@@ -48,30 +56,35 @@ export function rulingPlanets(chart: ChartResult, dayLord: PlanetId, opts: { rej
   ];
   const core = slots.filter((s) => ROLE_RANK[s.role] <= 4);
   const coreSet = [...new Set(core.map((s) => s.planet))];
+  const allSet = [...new Set(slots.map((s) => s.planet))];
   const sign = (p: PlanetId) => signIndex(chart.bodies[p].lon);
   const nodes: RulingPlanets['nodes'] = [];
   for (const n of ['Ra', 'Ke'] as PlanetId[]) {
-    if (coreSet.includes(n)) continue;
+    const reps: { planet: PlanetId; why: NodeWhy }[] = [];
+    const add = (planet: PlanetId, why: NodeWhy) => { if (!reps.some((r) => r.planet === planet)) reps.push({ planet, why }); };
+    for (const q of allSet) if (!isNode(q) && sign(q) === sign(n)) add(q, 'conjoined');
+    for (const q of allSet) if (!isNode(q) && signAspects(q, sign(q), sign(n))) add(q, 'aspected');
     const lord = SIGN_LORD[sign(n)]!;
-    if (coreSet.includes(lord)) { nodes.push({ node: n, for: lord, why: 'in its sign' }); continue; }
-    const c = coreSet.find((q) => !isNode(q) && sign(q) === sign(n));
-    if (c) { nodes.push({ node: n, for: c, why: 'conjoined' }); continue; }
-    const a = coreSet.find((q) => !isNode(q) && signAspects(q, sign(q), sign(n)));
-    if (a) nodes.push({ node: n, for: a, why: 'aspected' });
+    if (allSet.includes(lord)) add(lord, 'in its sign');
+    // A finer RP (a sub lord) alone attaches a node only through its sign (B5 p. 227).
+    const kept = reps.filter((r) => coreSet.includes(r.planet) || r.why === 'in its sign');
+    if (kept.length) nodes.push({ node: n, for: kept[0]!.planet, why: kept[0]!.why, reps: kept });
   }
   const retro = (p: PlanetId) => !isNode(p) && chart.bodies[p].retrograde;
   const rejected: RulingPlanets['rejected'] = [];
-  for (const p of [...coreSet, ...nodes.map((x) => x.node)]) {
+  const agents = nodes.map((x) => x.node).filter((n) => !coreSet.includes(n));
+  for (const p of [...coreSet, ...agents]) {
     const [st, sb] = lordChain(chart.bodies[p].lon, 2);
     if (retro(st!)) rejected.push({ planet: p, why: `in the star of retrograde ${st}` });
     else if (bySub && retro(sb!)) rejected.push({ planet: p, why: `in the sub of retrograde ${sb}` });
   }
-  const accepted = [...coreSet, ...nodes.map((x) => x.node)].filter((p) => !rejected.some((r) => r.planet === p));
+  const accepted = [...coreSet, ...agents].filter((p) => !rejected.some((r) => r.planet === p));
   const score = (p: PlanetId) => {
     const ranks = core.filter((s) => s.planet === p).map((s) => ROLE_RANK[s.role]);
-    const agentFor = nodes.find((x) => x.node === p)?.for;
-    const r = ranks.length ? Math.min(...ranks) : agentFor ? Math.min(...core.filter((s) => s.planet === agentFor).map((s) => ROLE_RANK[s.role])) - 0.5 : 9;
-    return r - 0.1 * (ranks.length - 1);
+    // A node takes the place of the strongest RP it represents, just ahead of it (B6 p. 285).
+    const repRanks = (nodes.find((x) => x.node === p)?.reps ?? []).flatMap((r) => core.filter((s) => s.planet === r.planet).map((s) => ROLE_RANK[s.role] - 0.5));
+    const r = Math.min(9, ...ranks, ...repRanks);
+    return r - 0.1 * Math.max(0, ranks.length - 1);
   };
   const ordered = accepted.sort((a, b) => score(a) - score(b));
   return { slots, nodes, rejected, retrograde: accepted.filter(retro), ordered };
