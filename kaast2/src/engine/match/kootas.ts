@@ -209,7 +209,7 @@ export class Koota {
 }
 
 export interface AshtakootaRow { id: 'varna' | 'vashya' | 'tara' | 'yoni' | 'maitri' | 'gana' | 'bhakoot' | 'nadi'; label: string; max: number; score: number; area: string; groom: string; bride: string; dosha: boolean }
-export interface Ashtakoota { rows: AshtakootaRow[]; total: number; verdict: 'avoid' | 'medium' | 'good' | 'excellent' }
+export interface Ashtakoota { rows: AshtakootaRow[]; total: number; band: 'avoid' | 'medium' | 'good' | 'excellent' }
 
 const LORD_NAME: Record<number, string> = { 1: 'Sun', 2: 'Moon', 3: 'Mars', 4: 'Mercury', 5: 'Jupiter', 6: 'Venus', 7: 'Saturn' };
 const SIGN_NAME = ['', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
@@ -230,7 +230,7 @@ export function ashtakoota(bride: KootaPerson, groom: KootaPerson): Ashtakoota {
   ];
   for (const r of rows) r.dosha = (r.id === 'gana' || r.id === 'bhakoot' || r.id === 'nadi') && r.score === 0;
   const total = rows.reduce((s, r) => s + r.score, 0);
-  return { rows, total, verdict: total <= 16 ? 'avoid' : total <= 21 ? 'medium' : total <= 30 ? 'good' : 'excellent' };
+  return { rows, total, band: total <= 16 ? 'avoid' : total <= 21 ? 'medium' : total <= 30 ? 'good' : 'excellent' };
 }
 
 export interface DashaKootaRow { id: string; label: string; area: string; max: number; score: number; word: 'Auspicious' | 'Average' | 'Inauspicious' | ''; note: string; /** PL's text code (Dhinam). */ code?: number; groom?: string; bride?: string }

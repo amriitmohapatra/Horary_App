@@ -10,6 +10,7 @@ import { t, type MessageKey } from '../i18n';
 import { expTab, type ExpTab } from '../state/store';
 import { States } from './exp/States';
 import { Lordships } from './exp/Lordships';
+import { Yogas } from './exp/Yogas';
 import { Aspects } from './exp/Aspects';
 import { Nadi } from './exp/Nadi';
 import { Worksheet } from './exp/Worksheet';
@@ -27,7 +28,7 @@ export function Experimental({ chart }: { chart: ChartResult }): JSX.Element {
         ))}
       </div>
       {tab === 'states' && <States chart={chart} />}
-      {tab === 'lords' && <Lordships chart={chart} />}
+      {tab === 'lords' && <Lordships chart={chart} yogas={(v) => <Yogas chart={chart} varga={v} />} />}
       {tab === 'aspects' && <Aspects chart={chart} />}
       {tab === 'worksheet' && <Worksheet chart={chart} />}
       {tab === 'nadi' && <Nadi chart={chart} />}

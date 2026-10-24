@@ -405,3 +405,27 @@ architecture.
   geometricPrecision (invariant: chart layout must not depend on scale).
 - Text-width cache entries are stored only once every font weight they use
   has loaded. v0.7 = v0.6 features + these fixes; CI green.
+
+## 2026-10-24 — Astro-Amriit v0.8: Experimental, Matching, yogas
+- Specs (research agents, binary + help files): `kaast2/docs/specs/`
+  compatibility.md (PL 7 kootas, Mangala), pl_yogas.md/.json (1001 yogas,
+  formula grammar), pl_worksheets.md (worksheet 14 columns, aspect graphs,
+  conjunction, war), nandi_nadi.md (BNN research).
+- Conjunction = same sign, no orb (PL-BIN); the app adds a "close" mark with
+  an adjustable orb (default 3°, the boss's rule of thumb).
+- Aspect matrix colour = compound relation of the aspected planet towards the
+  aspecting one (sampled from the boss's PL 7 screenshot: 72/72).
+- Node Func.: nearest planet in the node's sign, else the house (PL-BIN);
+  replaces the dispositor rule; PL 9 fixture still 145/145.
+- Kootas: A = bride, B = groom; PL's Tara one-way (3 for Janma/Sampat, else
+  1.5) and Graha Maitri neutral–neutral = 1 are PL-BIN quirks, kept; one
+  real PL 7.0.1 printout reproduced row for row (does not exercise them).
+- PL 7 printouts carry the Moon-vector planet error (Sun 7'21" off for the
+  boss's chart): worksheet parity is judged with PL's own positions where
+  positions matter (Dominance).
+- Yogas: PL evaluates on the Rasi only; other vargas are our labelled
+  extension. Tokens without a settled meaning → "not evaluated", never guessed.
+- Privacy: the boss's PL 7 worksheet values live in `private_oracles/`
+  (git-ignored, never pushed; the oracle test skips without it). PL's own
+  text (yoga definitions/results, compatibility quotations) is kept in
+  separable files for the PLAN §11 review.

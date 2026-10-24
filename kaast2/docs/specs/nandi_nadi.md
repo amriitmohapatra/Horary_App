@@ -41,7 +41,7 @@ only one source states it.
   Chart 1 opens with "so said Nandikeswara to Markandeya" (PRI p. 9).
 - **Bhrigu Nandi Nadi (BNN)** is the title of R. G. Rao's English compilation: "I have taken some
   portions from Nandi Nadi and some from Bhrigu Nadi. I have tried my best to explain the final
-  verdict given in the Nadi for various planetary combinations" (PRI p. iv). The book analyses more
+  band given in the Nadi for various planetary combinations" (PRI p. iv). The book analyses more
   than 500 example charts. SEC calls Rao the "founder of the Bhrigu Nandi Nadi system".
 - **KRS usage.** The "KRS Astrologer" is **Kapiel Raaj** (YouTube *@KRSchannel*, sites
   krsastrology.com and astrologykrs.com). He sells a "Nandi Nadi Astrology Course" and makes
@@ -82,7 +82,7 @@ careers from the 10th house and the Amatyakaraka. These are blends, not Rao.
 Each rule gives the condition, the meaning, the sources and how far the sources agree.
 Computability: **C** = can be computed from the chart as it stands. **C\*** = computable, but a
 setting or convention must be chosen. **I** = interpretive only, so the app can show inputs but
-not the verdict.
+not the band.
 
 ### 2.1 Frame
 

@@ -55,7 +55,7 @@ describe('PL 7.0.1 printout: Shatabhisha-2 groom, Dhanishta-2 bride', () => {
     expect(a.rows.map((r) => [r.id, r.score])).toEqual([
       ['varna', 0], ['vashya', 0.5], ['tara', 3], ['yoni', 1], ['maitri', 5], ['gana', 6], ['bhakoot', 0], ['nadi', 8]]);
     expect(a.total).toBe(23.5);
-    expect(a.verdict).toBe('good');
+    expect(a.band).toBe('good');
     expect(a.rows.filter((r) => r.dosha).map((r) => r.id)).toEqual(['bhakoot']);
     expect(a.rows.map((r) => [r.groom, r.bride])).toEqual([
       ['Shudra', 'Vaishya'], ['Manava', 'Jalachara'], ['Parama Mitra', 'Sampat'], ['Ashwa', 'Simha'],

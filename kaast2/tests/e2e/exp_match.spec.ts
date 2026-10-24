@@ -48,14 +48,27 @@ test('Page 1 (Experimental): states, conjunctions, lordships, aspects, Nandi Nad
 
   await page.getByRole('button', { name: 'Lordships & yogas' }).click();
   await expect(page.getByTestId('exp-lords-D1').locator('li')).toHaveCount(12);
-  await axe(page, 'Lordships', found);
+  await expect(page.getByTestId('exp-yogas').locator('li').first()).toBeVisible();
+  await expect(page.getByTestId('exp-textbook-yogas')).toContainText('Angaraka');
+  await page.getByLabel('Find').fill('Gaja');
+  await expect(page.getByTestId('exp-yoga-count')).toContainText('shown');
+  await axe(page, 'Lordships & yogas', found);
 
   await page.getByRole('button', { name: 'Aspects', exact: true }).click();
   await expect(page.getByTestId('exp-aspect-matrix').locator('tbody tr')).toHaveCount(9);
   await expect(page.getByTestId('exp-aspect-bars').locator('figure')).toHaveCount(9);
   await page.getByRole('button', { name: 'On each planet' }).click();
   await expect(page.getByText('Aspects on Sun')).toBeVisible();
+  await expect(page.getByTestId('exp-house-bars').locator('figure')).toHaveCount(12);
+  await page.getByRole('button', { name: 'On the nth house + lord' }).click();
+  await page.getByRole('button', { name: 'One graph per planet' }).click();
+  await expect(page.getByTestId('exp-house-bars').locator('figure')).toHaveCount(9);
   await axe(page, 'Aspects', found);
+
+  await page.getByRole('button', { name: 'Strength worksheet' }).click();
+  await expect(page.getByTestId('exp-ws14').locator('tbody tr')).toHaveCount(9);
+  await expect(page.getByTestId('exp-ws14-bhava').locator('tbody tr')).toHaveCount(8);
+  await axe(page, 'Strength worksheet', found);
 
   await page.getByRole('button', { name: 'Nandi Nadi (research)' }).click();
   await expect(page.getByText('Research / experimental.')).toBeVisible();
@@ -82,7 +95,7 @@ test('Matching and NTP matching with a prospective match', async ({ page }) => {
   await axe(page, 'Basic details', found);
   await page.getByRole('button', { name: 'Ashtakoot', exact: true }).click();
   await expect(page.getByTestId('match-ashtakoot').locator('tbody tr')).toHaveCount(9);
-  await expect(page.getByTestId('match-verdict')).toContainText('Ashtakoot matching between');
+  await expect(page.getByTestId('match-band')).toContainText('Ashtakoot matching between');
   await axe(page, 'Ashtakoot', found);
   await page.getByRole('button', { name: 'Mangala Dosha' }).click();
   await expect(page.getByTestId('match-mangal').locator('li')).toHaveCount(2);

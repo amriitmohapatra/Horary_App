@@ -2,6 +2,55 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.8 — 2026-10-24 · `dist/Astro-Amriit v0.8.html`
+
+The boss's v0.8 brief: an experimental Page 1, PL 7's Compatibility reports,
+Iyer's marriage matching, PL's yogas and worksheets, and Nandi Nadi.
+
+- **NTP (Research):** the tab is renamed, and gains **Marriage matching
+  (Iyer)** (NTP-2 pp. 147–151): what one chart says about the partner, the
+  mutual verification of two charts, the Nadi and Rajju kootams, and Iyer's
+  "Kuja Yoga, not Kuja Dosha".
+- **Matching (new tab):** PL 7's Reports → Compatibility for the current
+  chart and a prospective match (or two other charts), boy/girl roles:
+  overview, basic birth details, charts and planets, Moon chart/Navamsha/
+  Dashas, **Ashtakoot** (36, PL's bands and Maha Doshas), **Mangala Dosha**
+  (from the Lagna and the Moon, PL's 25 cancellations) and **Dash-Koota**
+  (Kalaprakasika 44, BV Raman 36). Rules read from PL 7's program
+  (`docs/specs/compatibility.md`). The second chart is never stored.
+- **Page 1 (Experimental) (new tab), five sub-tabs:**
+  - *Highlights:* dignity, vargottama, dig bala, retrograde, combust and the
+    3rd/6th/8th/12th for the Rasi or any varga; conjunctions with their
+    definition (same sign; "close" within an adjustable orb, default 3°;
+    planetary war within 1°); dignity across the 16 Parashari charts.
+  - *Lordships & yogas:* PL's Lordships worksheet for any chart (exchanges
+    marked); PL's **1001 yogas** evaluated with PL's own formulas, with
+    filters; Angaraka and Guru-Chandala added as textbook yogas (not in PL).
+  - *Aspects:* PL's worksheets 21–26 — the aspect matrix (fraction, virupas,
+    friend/neutral/enemy colour), aspects from/on each planet, and aspects
+    on the nth house and on the nth house + lord.
+  - *Strength worksheet:* PL's worksheet 14 — SB%, SB#, War, Ishta/Kashta,
+    Dominance, Func., Shad Bala bars, Bhava Bala by component.
+  - *Nandi Nadi (research):* Bhrigu Nandi Nadi sign links, Rao's retrograde
+    rule, karaka cards, Jupiter/Saturn transit activations and rounds.
+- **Changed:** Page 1 **Func.** of Rahu and Ketu now follows PL's code (the
+  nearest planet in the node's sign, else the node's house); the PL 9 Page 1
+  fixture still matches 145/145.
+
+**Evidence** 754 unit/engine tests. Kootas: 80 synthetic pairs equal the
+spec, Bhakoot/Nadi/Mahendra/Stree-Deergha equal PyJHora 4.8.7, and a real
+PL 7.0.1 Ashtakoot + Dash-Koota printout is reproduced row for row. A PL
+7.0.1 worksheet set for one private chart (kept outside the repository):
+aspect matrix 72/72 cells and colours, Lordships D1/D9/D10, Dominance 9/9,
+Func. 9/9, Ishta/Kashta Su/Mo/Sa exact. BNN rules on R. G. Rao's Chart 1.
+34 e2e on the shipped file (axe on every new sub-tab, three themes),
+contract check, pre-publish scan.
+
+**Out of scope / open:** a PL printout with a non-Sampat Tara and two neutral
+Moon-sign lords (settles PL's Tara and Graha Maitri quirks); which house
+point PL's default house-aspect graphs use; 18 rare yoga tokens; new
+screenshots for the user guide.
+
 ## v0.7 — 2026-10-17 · `dist/Astro-Amriit v0.7.html`
 
 A fix release: same features as v0.6.

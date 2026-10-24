@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.7 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.7.html` (seconds entry on phones, saved places, KP chart and significators, NTP/Iyer guidance) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
+Status: **v0.8 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.8.html` (adds Page 1 (Experimental), Matching, PL yogas and worksheets, NTP marriage matching, Nandi Nadi research) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
@@ -353,7 +353,7 @@ decoding, Playwright for build verification, a field-by-field parity script;
 
 When parity is reached and Phase 2 customisation is agreed, we will:
 1. Create a **new public GitHub repository** containing only `kaast2/` (app, tests, docs, anonymised fixtures), the sanitised `knowledge/` files, PLAN.md, ARCHITECTURE.md, LICENSE (AGPL-3.0), README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY.md, issue templates, CI.
-2. **Never publish**: `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`, and `references/` (Iyer's NTP books — copyrighted, private reference only).
+2. **Never publish**: `private_oracles/` (the boss's PL worksheet values with birth data; git-ignored), PL-derived text (`kaast2/src/engine/yoga/plYogaText.json`, `kaast2/docs/specs/pl_yogas.json`, the quotations in `kaast2/docs/specs/compatibility.md`: strip or paraphrase before going public), `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`, and `references/` (Iyer's NTP books — copyrighted, private reference only).
 3. Run a pre-publish scan (script in `kaast2/scripts/prepublish_scan`) for names, coordinates, JDs from the private corpus, API keys, and absolute paths.
 4. Archive this private repository as the family's research record; the public repo starts with a clean history (no rewriting of the private one).
 5. Write the external-audience README: what the app is, who it is for, how to run the single HTML, how to deploy to Vercel, how to cite PL7 and Swiss Ephemeris, and what is intentionally not included.
@@ -411,6 +411,14 @@ Experimental section (Highlights, Lordships, Yogas, Strengths detail,
 Aspects, Nandi Nadi) whose numbers match the boss's PL 7 worksheets for his
 chart, with each rule and definition cited; keep everything offline, tested,
 accessible, and the private oracle outside `kaast2/`.
+
+
+**Outcome (2026-10-24): shipped as `kaast2/dist/Astro-Amriit v0.8.html`.** All six brief items
+built; evidence in `kaast2/CHANGELOG.md` v0.8. External checks achieved: a PL 7.0.1 worksheet set
+for the boss's chart (aspects 72/72, lordships, Dominance, Func.; kept in git-ignored
+`private_oracles/`) and a real PL 7.0.1 Ashtakoot + Dash-Koota printout (row for row). Still open:
+a printout exercising PL's Tara and neutral Graha Maitri quirks; the house point of PL's default
+house-aspect graphs; user-guide screenshots for the new tabs (the boss asked to wait).
 
 ## 12. Session log
 

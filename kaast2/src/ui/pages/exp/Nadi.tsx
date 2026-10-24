@@ -17,7 +17,7 @@ import {
   activations, bnn, contactOrder, KARAKATVA, pairKeyword, rounds, themes,
   type BnnOptions, type Link, type LinkKind, type NatalPoint, type RetroRule, type Sex,
 } from '../../../engine/nadi/bnn';
-import { engine } from '../../state/store';
+import { engine, nativeSex } from '../../state/store';
 import { civilDate } from '../../format';
 import { Chip, Pl } from './common';
 
@@ -37,7 +37,8 @@ function LinkText({ l }: { l: Link }): JSX.Element {
 }
 
 export function Nadi({ chart }: { chart: ChartResult }): JSX.Element {
-  const [sex, setSex] = useState<Sex>('unspecified');
+  const sex = nativeSex.value as Sex;
+  const setSex = (v: Sex) => { nativeSex.value = v; };
   const [opts, setOpts] = useState<BnnOptions>({ weakLinks: false, retro: 'also', retroNodes: false });
   const today = new Date();
   const [date, setDate] = useState(`${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`);

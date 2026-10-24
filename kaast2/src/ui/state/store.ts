@@ -124,6 +124,9 @@ export const route = signal<Route>(routeFromHash());
 addEventListener('hashchange', () => { route.value = routeFromHash(); });
 export function go(r: Route): void { if (location.hash !== `#${r}`) location.hash = r; route.value = r; }
 
+/** The native's sex, for yogas that depend on it and for Nandi Nadi karakas; per session, never stored. */
+export const nativeSex = signal<'unspecified' | 'male' | 'female'>('unspecified');
+
 /* ---- Page 1 (Experimental): the open sub-tab and the conjunction orb survive tab switches. ---- */
 export type ExpTab = 'states' | 'lords' | 'aspects' | 'worksheet' | 'nadi';
 export const expTab = signal<ExpTab>('states');

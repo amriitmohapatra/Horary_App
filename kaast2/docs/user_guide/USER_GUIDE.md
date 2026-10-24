@@ -1,6 +1,8 @@
 # Astro-Amriit — User Guide
 
-*For version 0.7. Written for astrologers, not for computer people.*
+*For version 0.8. Written for astrologers, not for computer people.*
+
+> Screenshots are from version 0.7; the new v0.8 pages (Page 1 (Experimental) and Matching) are described in text and will get pictures in a later update.
 
 Every screenshot in this guide uses one public example chart: **Amitabh
 Bachchan, 11 October 1942, 16:00, Allahabad (Prayagraj)**. You can cast the
@@ -17,10 +19,12 @@ same chart and compare it with the pictures.
    - [4.3 Vargas](#43-vargas)
    - [4.4 Dashas](#44-dashas)
    - [4.5 KP (Krishnamurti)](#45-kp-krishnamurti)
-   - [4.6 NTP (Iyer)](#46-ntp-iyer)
+   - [4.6 NTP (Research)](#46-ntp-research)
    - [4.7 Yogi & Bhava](#47-yogi--bhava)
    - [4.8 Jaimini](#48-jaimini)
    - [4.9 Transits](#49-transits)
+   - [4.10 Page 1 (Experimental)](#410-page-1-experimental)
+   - [4.11 Matching](#411-matching)
 5. [Settings](#5-settings)
 6. [How far can I trust each number?](#6-how-far-can-i-trust-each-number)
 7. [Troubleshooting](#7-troubleshooting)
@@ -209,9 +213,9 @@ weekday.
 
 ## 4. The pages, one by one
 
-The tabs under the chart line are, in order: **Page 1**, **Strengths**,
-**Vargas**, **Dashas**, **KP**, **NTP**, **Yogi & Bhava**, **Jaimini**, **Transits** and
-**Settings**. Click a tab to open its page.
+The tabs under the chart line are, in order: **Page 1**, **Page 1 (Experimental)**,
+**Strengths**, **Vargas**, **Dashas**, **KP**, **NTP (Research)**, **Yogi & Bhava**, **Jaimini**,
+**Transits**, **Matching** and **Settings**. Click a tab to open its page.
 
 Some conventions apply everywhere:
 
@@ -591,7 +595,11 @@ Note: these are PL's significators. Kala Chakra's power calculation (the
 cusp-number vector, with its span rule and node dispositors) is a
 different, family-specific method. It stays in Kala Chakra.
 
-### 4.6 NTP (Iyer)
+### 4.6 NTP (Research)
+
+The tab is marked *(Research)*: Iyer's methods are an area of study in progress, not a settled
+reading.
+
 
 This page applies H. R. Seshadri Iyer's *New Techniques of Prediction*
 (three volumes: NTP-1, NTP-2, NTP-3) to the chart. Every point shown carries
@@ -739,6 +747,24 @@ Choose any Mahadasha; the running one is preselected.
 - The Mathematical Navamsha reproduces all 7 of his worked examples.
 
 **Not checked:** whether his rules predict well. That is for you to judge.
+
+#### Marriage matching (Iyer) — on the NTP (Research) tab
+
+Iyer judges a match from the charts themselves (NTP-2 pp. 147–151) and calls koota marks
+"very very secondary". The panel shows, each with its page:
+
+- **From this chart alone:** the Lagna lord and 7th lord (6/8 or 2/12 apart, joined or in aspect,
+  hostile or not), Gana by the gunas of those two lords, the 7th lord and the Birth Yogi,
+  amicability (the 7th lord aspecting the Lagna or joining its lord), and **Kuja Yoga, not Kuja
+  Dosha**: the traditional Mars placement is shown, but Iyer rejects it as a rule; if Mars is the
+  Birth Yogi he always does good.
+- **The other chart:** enter the other person's birth details (the same form as the main chart).
+  The app does not store it. The same chart is used on the Matching tab.
+- **Mutual verification:** the two Lagna lords; each 7th lord (or its cusp's star lord) against the
+  other's Birth Yogi; a Lagna in the other's Yoga star; the two Lagnas not 6/8 or 2/12; the other's
+  Yogi aspecting the Lagna.
+- **The kootams Iyer still checks:** Nadi and Rajju. He also names an "Ayur kootam" but never
+  defines it in NTP, so the app says so instead of guessing.
 
 ### 4.7 Yogi & Bhava
 
@@ -902,6 +928,77 @@ appear more than once.
 comes back to its natal degree. When a planet passes the degree three times
 (forward, back while retrograde, forward again), each pass is listed, the
 backward one marked *(moving retrograde)*.
+
+### 4.10 Page 1 (Experimental)
+
+Five sub-tabs, chosen with the buttons at the top. Each rule is written on the page where it is
+used. Where a Parashara's Light 7.0.1 printout was available, the page says it matches.
+
+**Highlights.** Choose any chart (the Rasi or any divisional chart). The chart shows each
+planet's state as a short code, and the table spells it out: **Exalted**, **Moolatrikona** (Rasi
+only), **Own sign**, **Debilitated**, **Vargottama** (same sign in the Rasi and the Navamsha),
+**Dig bala**, **Retrograde**, **Combust**, and **In the 3rd / 6th / 8th / 12th** of that chart (the
+3rd in amber, as a mild dusthana). House numbers in red on the chart mark those houses.
+
+**Conjunctions** — what the app counts: two planets in **the same sign** are conjunct, as in PL
+(PL has no degree orb). Within the orb you set (default **3°**, your rule of thumb) a conjunction is
+marked *close*. Two of Mars, Mercury, Jupiter, Venus and Saturn within 1° are in **planetary war**.
+Planets within the orb but in neighbouring signs are listed separately as *not* conjunct.
+
+**Across the divisional charts:** each planet's sign and house in all 16 Parashari charts, with ▲
+exalted, ● own sign or moolatrikona, ▼ debilitated, and a count per planet.
+
+**Lordships & yogas.** PL's *Lordships* worksheet for any chart: "Lord of N in M", with **\*** for an
+exchange (parivartana). Houses are whole signs from that chart's own Lagna. Matches a PL 7.0.1
+printout for D1, D9 and D10. Below it, the **yogas**: Parashara's Light's "1001 Yogas" tested with
+PL's own conditions. Filter by positive / partly positive, by group, or search by name (Dhana,
+Raja, Gaja…). Each yoga shows PL's definition and result, and its PL condition. Some yogas depend
+on the native's sex: set **Native** to evaluate them. **Angaraka** and **Guru-Chandala** are not in
+PL's database; they are shown separately as textbook yogas. PL tests yogas on the Rasi only;
+choosing a divisional chart applies the same conditions to that chart (our extension).
+
+**Aspects.** PL's worksheets 21 and 22: the *Aspects between planets* matrix (the sign aspect ¼ ½ ¾
+or full, and the exact aspect in virupas; the colour is how the aspected planet regards the
+aspecting one: green friend, blue neutral, red enemy), and bar charts of the aspects **from** and
+**on** each planet. Then **Aspects on houses**: on the nth house, or on the nth house + its lord (half
+each), one graph per house or per planet, with the house point at the Lagna's degree in each sign
+(PL's rashi chart) or at the Sripati cusps. All 72 matrix cells match a PL 7.0.1 printout.
+
+**Strength worksheet.** PL's worksheet 14: SB%, SB#, War, Ishta/Kashta, Dominance and Func. per
+planet, the Shad Bala bars, and Bhava Bala by component as PL prints it. Dominance and Func. match a
+PL 7.0.1 printout for all nine planets; Ishta/Kashta matches for the Sun, Moon and Saturn and is
+within 1–2 virupas for the others. PL 7.0.1 always leaves War blank; **W\*/L\*** mark a textbook
+planetary war (our addition).
+
+**Nandi Nadi (research).** Bhrigu Nandi Nadi (the "Nandi Nadi" of KRS's course) as taught from R. G.
+Rao's *Bhrigu Nandi Nadi*. The Lagna is not used: each planet is read from its own sign and stands
+for people and matters (Jupiter the native, Saturn work, Venus the wife, Mars brothers or a
+woman's husband, Sun father, Moon mother, Mercury education, Ketu religion). The tab shows the
+links between planets (same sign, 2nd, 12th, 7th, trines; a retrograde planet also acts from the
+previous sign; exchanges), a card per karaka, and Jupiter's and Saturn's transits over the natal
+planets, with their rounds from birth. Contested points carry their source; nothing is scored.
+This is research: it is not checked against reference charts.
+
+### 4.11 Matching
+
+Compatibility of two charts as Parashara's Light 7 reports it (Reports → Compatibility). Enter the
+**prospective match** (or choose *Use another chart* to enter both), and say whether the first chart
+is the **boy** or the **girl**: the kootas count from the girl's Moon star to the boy's. The second
+chart is never stored.
+
+- **Overview:** Ashtakoot out of 36 with PL's bands (16 or less avoid, 17–21 medium, 22–30 good, over
+  30 excellent), Dash-Koota out of 44, the BV Raman total out of 36, and Mangala Dosha.
+- **Basic birth details, Charts and planets, Moon chart, Navamsha and Dashas** of both, side by side,
+  including Varna, Vashya, Yoni, Gana, Nadi, Rajju and the name syllable.
+- **Ashtakoot:** the eight kootas with both persons' values, the marks and the area of life, and any
+  Gana, Bhakoot or Nadi Maha Dosha.
+- **Mangala Dosha:** Mars from the Lagna and from the Moon for each, then PL's 25 cancelling
+  conditions that apply ("inferred" marks a reading of PL's formula that PL does not document).
+- **Dash-Koota:** the ten Kalaprakasika kootas plus gender, gothra and caste, with the totals.
+
+The rules were read from PL 7's own program. A real PL 7.0.1 printout (Ashtakoot and Dash-Koota for
+one couple) is reproduced row for row. PL differs from some textbooks in two places: Tara is counted
+one way only (3 for Janma or Sampat, else 1.5) and two neutral sign lords score 1 in Graha Maitri.
 
 ---
 

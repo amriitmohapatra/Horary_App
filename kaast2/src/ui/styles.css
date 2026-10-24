@@ -398,3 +398,12 @@ table.data .r { text-align: right; }
 .stat .chip { justify-self: start; margin-left: 0; }
 .meter { display: inline-block; width: 5rem; height: 8px; border-radius: 4px; background: var(--surface-sunk); border: 1px solid var(--rule); vertical-align: middle; overflow: hidden; }
 .meter-fill { display: block; height: 100%; background: var(--ok); border-radius: 4px; }
+.yoga-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-2); }
+.yoga { padding: var(--sp-2) var(--sp-3); border-left: 4px solid var(--rule); background: var(--surface-sunk); border-radius: var(--radius); }
+.yoga.tone-good { border-left-color: var(--ok); } .yoga.tone-bad { border-left-color: var(--danger); } .yoga.tone-mixed { border-left-color: var(--accent); }
+.yoga-head { display: flex; flex-wrap: wrap; gap: var(--sp-1) var(--sp-2); align-items: baseline; }
+.yoga-head .chip { margin-left: 0; }
+.yoga-def, .yoga-res { margin: 4px 0 0; font-size: var(--fs-sm); }
+.yoga-res { color: var(--text-muted); }
+.yoga details summary { cursor: pointer; color: var(--accent); font-size: var(--fs-xs); }
+.yoga-formula { font-family: var(--font-data); font-size: var(--fs-xs); word-break: break-all; }

@@ -13,7 +13,7 @@ import { pada } from '../../../engine/zodiac';
 import type { Pair } from '../Matching';
 import { Chip } from '../exp/common';
 
-const VERDICT: Record<Ashtakoota['verdict'], { word: string; tone: 'good' | 'bad' | 'mixed' }> = {
+const BANDS: Record<Ashtakoota['band'], { word: string; tone: 'good' | 'bad' | 'mixed' }> = {
   avoid: { word: 'should be avoided (16 or less)', tone: 'bad' },
   medium: { word: 'medium (17–21)', tone: 'mixed' },
   good: { word: 'good (22–30)', tone: 'good' },
@@ -49,7 +49,7 @@ function mangalLine(c: MangalConsideration): string {
 
 export function Overview({ pair }: { pair: Pair }): JSX.Element {
   const { a, d, m } = useMatch(pair);
-  const v = VERDICT[a.verdict];
+  const v = BANDS[a.band];
   const anyMangal = m.groom.lagnaDosha || m.bride.lagnaDosha || m.groom.moonDosha || m.bride.moonDosha;
   return (
     <section class="panel" aria-labelledby="h-m-over">
@@ -77,7 +77,7 @@ export function AshtakootTable({ pair }: { pair: Pair }): JSX.Element {
   const { a } = useMatch(pair);
   const g = pair.boy.bodies.Mo.lon, b = pair.girl.bodies.Mo.lon;
   const star = (lon: number) => `${NAKSHATRA_NAMES[Math.floor(lon / 48000)]}–${pada(lon)}`;
-  const v = VERDICT[a.verdict];
+  const v = BANDS[a.band];
   return (
     <section class="panel" aria-labelledby="h-m-ak">
       <header class="panel-head"><h2 id="h-m-ak">Ashtakoot Guna matching</h2></header>
@@ -97,7 +97,7 @@ export function AshtakootTable({ pair }: { pair: Pair }): JSX.Element {
             <tr class="sum"><th scope="row">Total</th><td /><td /><td class="num r">36</td><td class="num r strong-cell">{f1(a.total)}</td><td><Meter v={a.total} max={36} label="Total" /></td><td /><td /></tr>
           </tbody>
         </table>
-        <p data-testid="match-verdict">Ashtakoot matching between {n(pair, 'boy')} and {n(pair, 'girl')} is <Chip tone={v.tone}>{v.word}</Chip></p>
+        <p data-testid="match-band">Ashtakoot matching between {n(pair, 'boy')} and {n(pair, 'girl')} is <Chip tone={v.tone}>{v.word}</Chip></p>
         {a.rows.filter((r) => r.dosha).map((r) => (
           <p key={r.id} class="ntp-finding tone-bad">
             <strong>{r.label} Maha Dosha.</strong>{' '}

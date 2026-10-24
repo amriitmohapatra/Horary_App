@@ -286,7 +286,7 @@ When the nadis are the same it sets an internal text code: 2/1/0 for Adi/Madhya/
 6 for "same sign, different star", 7 for "same star, different sign". No report page uses
 these codes.
 
-### 3.9 Total, doshas and verdict (PL-HELP pib503)
+### 3.9 Total, doshas and band (PL-HELP pib503)
 `total = varna + vashya + tara + yoni + maitri + gana + bhakoot + nadi`
 (PL-BIN 0x455c46 with S = 2 sums exactly these eight).
 
@@ -299,7 +299,7 @@ Gana, Bhakoot and Nadi. For each one that scores 0 the page adds a sentence:
 * "… the Nadi Maha Dosha is present." followed by "The Nadi of ‹groom› is ‹nadi› and Nadi of
   ‹bride› is ‹nadi›. Both are mutually inimical."
 
-**Verdict line:** "Ashtkoot matching between ‹groom› and ‹bride› …"
+**Band line:** "Ashtkoot matching between ‹groom› and ‹bride› …"
 
 | Total T | Text |
 |---|---|
@@ -495,7 +495,7 @@ The page opens with "There are ten considerations necessary to judge the suitabi
 proposed marriage. Out of these ten considerations at least five must be favorable for the
 couple to be compatible." Then, for each koota, the heading (e.g. "1. Dhinam (luck)") and
 the COMPAT1 sentence for its code. Then "Other Considerations" with Male/Female, Gothram
-and Caste. Last comes "Total Points : ‹S1 total›". The page prints no computed verdict.
+and Caste. Last comes "Total Points : ‹S1 total›". The page prints no computed band.
 PL-MAN p. 106 adds: "A number below 18 is questionable, between 18 and 24 is good and above
 24 is excellent". The manual does not say which total this applies to. Show it as PL's
 guidance next to the 36-point totals.

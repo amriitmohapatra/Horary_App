@@ -258,10 +258,11 @@ Sort Su–Sa by deg(λ), descending. Labels in order: AK, AmK, BK, MK, PiK, GK, 
 
   A 13th row, "independent of asc.", reads M ? M ? B B M M M. The `?` (code 4) marks the
   conditional Moon and Mercury.
-- **Nodes, PL9 (NUM):** the fixture shows Ra Neutral and Ke Benefic, where PL7's table has M M. The
-  rule that fits is **the dispositor's functional nature**: Rahu in Leo takes the Sun's N, Ketu in
-  Aquarius takes Saturn's B. "Nature of the house occupied" also fits (7th is neutral, 1st is benefic),
-  so this is OPEN until a chart separates the two.
+- **Nodes (BIN 0x426ee5…0x426fba, settled 2026-10-24; `docs/specs/pl_worksheets.md` §2.1):** a node
+  takes the nature of the **nearest other planet in its sign** (smallest `dist`); with no planet in its
+  sign, its house from the Lagna decides: 1, 5, 9 Benefic; 6, 8, 12 Malefic; else Neutral. Fits the
+  PL9 fixture (Ra Neutral, Ke Benefic) and a PL 7.0.1 worksheet 14 (9/9). It replaces the earlier
+  candidates (dispositor's nature; house nature).
 - Note: PL7 also has a separate `Func.Mal.`/`Func.Ben.` flag (`0x428d9d`, Systems-Approach style:
   lord of 6, 8 or 12 counted from MT signs; nodes always malefic). Page 1 does not use it.
 
@@ -422,7 +423,7 @@ Residual against PL, inferred from the paired bhava-bala residuals: ≤0.5 virup
   match.
 - VB: Ra 13 matches; Ke is OPEN (§3.4).
 - AV: Ra 4 is OPEN (§3.5); Ke is blank.
-- Func.: dispositor rule (§3.9).
+- Func.: nearest planet in the node's sign, else its house (§3.9).
 
 ## 6. Status table
 
