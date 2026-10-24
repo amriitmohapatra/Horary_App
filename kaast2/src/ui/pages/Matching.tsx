@@ -11,18 +11,23 @@ import type { ChartResult } from '../../engine';
 import { PartnerEntry, chartSummary } from '../components/PartnerEntry';
 import { chartInput, firstChart, firstRole, matchFirstInput, partnerChart, partnerInput, type MatchRole } from '../state/store';
 import { BasicDetails, ChartsAndPlanets, MoonNavDashas } from './match/Reports';
+import { AshtakootTable, DashKoota, MangalPanel, Overview } from './match/Kootas';
 
-export type MatchTab = 'basic' | 'charts' | 'moon';
+export type MatchTab = 'overview' | 'basic' | 'charts' | 'moon' | 'ashtakoot' | 'mangal' | 'dashkoot';
 const TABS: { id: MatchTab; label: string }[] = [
+  { id: 'overview', label: 'Overview' },
   { id: 'basic', label: 'Basic birth details' },
   { id: 'charts', label: 'Charts and planets' },
   { id: 'moon', label: 'Moon chart, Navamsha, Dashas' },
+  { id: 'ashtakoot', label: 'Ashtakoot' },
+  { id: 'mangal', label: 'Mangala Dosha' },
+  { id: 'dashkoot', label: 'Dash-Koota' },
 ];
 
 export interface Pair { boy: ChartResult; girl: ChartResult; first: ChartResult; second: ChartResult }
 
 export function Matching(): JSX.Element {
-  const [tab, setTab] = useState<MatchTab>('basic');
+  const [tab, setTab] = useState<MatchTab>('overview');
   const [otherFirst, setOtherFirst] = useState(matchFirstInput.value !== null);
   const f = firstChart.value, p = partnerChart.value;
   const role = firstRole.value;
@@ -78,9 +83,13 @@ export function Matching(): JSX.Element {
           <div class="segmented" role="group" aria-label="Compatibility reports">
             {TABS.map((x) => <button key={x.id} type="button" class="seg" aria-pressed={tab === x.id} onClick={() => setTab(x.id)}>{x.label}</button>)}
           </div>
+          {tab === 'overview' && <Overview pair={pair} />}
           {tab === 'basic' && <BasicDetails pair={pair} />}
           {tab === 'charts' && <ChartsAndPlanets pair={pair} />}
           {tab === 'moon' && <MoonNavDashas pair={pair} />}
+          {tab === 'ashtakoot' && <AshtakootTable pair={pair} />}
+          {tab === 'mangal' && <MangalPanel pair={pair} />}
+          {tab === 'dashkoot' && <DashKoota pair={pair} />}
         </>
       )}
     </article>

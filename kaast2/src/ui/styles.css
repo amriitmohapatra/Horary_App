@@ -389,3 +389,12 @@ table.data .r { text-align: right; }
 .match-people { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr)); gap: var(--sp-4); margin-bottom: var(--sp-4); }
 .partner-entry .chart-form { grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr)); box-shadow: none; }
 .match-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr)); gap: var(--sp-4); align-items: start; }
+.stat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.stat { display: grid; gap: 4px; align-content: start; padding: var(--sp-3); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface-sunk); }
+.stat-label { font-size: var(--fs-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; }
+.stat-value { font-family: var(--font-display); font-size: 2rem; line-height: 1.1; }
+.stat-value.small { font-size: 1.4rem; }
+.stat-value small { font-size: 0.5em; color: var(--text-muted); font-family: var(--font-body); }
+.stat .chip { justify-self: start; margin-left: 0; }
+.meter { display: inline-block; width: 5rem; height: 8px; border-radius: 4px; background: var(--surface-sunk); border: 1px solid var(--rule); vertical-align: middle; overflow: hidden; }
+.meter-fill { display: block; height: 100%; background: var(--ok); border-radius: 4px; }

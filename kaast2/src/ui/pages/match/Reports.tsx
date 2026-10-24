@@ -15,6 +15,9 @@ import { rasiEntries, vargaEntries } from '../../chartEntries';
 import { coords, dms, hms, longDate, zone } from '../../format';
 import { engine } from '../../state/store';
 import type { Pair } from '../Matching';
+import { GANA_NAMES, NADI_NAMES, RAJJU_NAMES, VARNA_NAMES, VASHYA_NAMES, YONI_NAMES, ganaOf, kootaPerson, nadiOf, rajjuOf, varnaOf, vashyaOf, yoniOf } from '../../../engine/match/kootas';
+import { PADA_SYLLABLES } from '../../../engine/names';
+import { SIGN_LORD } from '../../../engine/zodiac';
 
 const who = (pair: Pair, c: ChartResult) => (c === pair.boy ? 'Boy' : 'Girl');
 const nameOf = (pair: Pair, c: ChartResult) => c.input.name || who(pair, c);
@@ -32,11 +35,21 @@ function Side({ pair, children, id }: { pair: Pair; id: string; children: (c: Ch
   );
 }
 
+/** Vimshottari balance at birth, years-months-days (the first period's remainder). */
+function balance(c: ChartResult): string {
+  const first = page1Model(c).mahas[0]!;
+  const days = first.end - c.moment.jdUT;
+  const y = Math.floor(days / c.profile.dashaYearDays), rem = days - y * c.profile.dashaYearDays;
+  const m = Math.floor(rem / (c.profile.dashaYearDays / 12)), d = Math.floor(rem - m * (c.profile.dashaYearDays / 12));
+  return `${PLANET_NAMES[first.lords[0]!]} ${y}y ${m}m ${d}d`;
+}
+
 export function BasicDetails({ pair }: { pair: Pair }): JSX.Element {
   const e = engine.value;
   const rows = useMemo(() => [pair.boy, pair.girl].map((c) => {
     const pa = e.status === 'ready' ? panchanga(e.swe, c, { sunrise: 'hindu' }) : null;
     const mo = c.bodies.Mo.lon, n = nakshatraIndex(mo);
+    const kp = kootaPerson(c);
     const asc = dmsInSign(c.asc.lon), m = dmsInSign(mo);
     return {
       Name: c.input.name || '—',
@@ -51,6 +64,15 @@ export function BasicDetails({ pair }: { pair: Pair }): JSX.Element {
       'Rasi lord': PLANET_NAMES[(['Ma','Ve','Me','Mo','Su','Me','Ve','Ma','Ju','Sa','Sa','Ju'] as const)[signIndex(mo)]],
       'Moon star (Nakshatra)': `${NAKSHATRA_NAMES[n]} pada ${pada(mo)}`,
       'Star lord': PLANET_NAMES[nakshatraLord(n)],
+      'Lagna lord': PLANET_NAMES[SIGN_LORD[signIndex(c.asc.lon)]!],
+      Varna: VARNA_NAMES[varnaOf(kp.sign, 0)]!,
+      Vashya: VASHYA_NAMES[vashyaOf(kp.sign, kp.degInSign)]!,
+      Yoni: YONI_NAMES[yoniOf(kp.nak)]!,
+      Gana: GANA_NAMES[ganaOf(kp.nak)]!,
+      Nadi: NADI_NAMES[nadiOf(kp.nak)]!,
+      Rajju: RAJJU_NAMES[rajjuOf(kp.nak)]!,
+      'Name syllable (Naamakshar)': PADA_SYLLABLES[n]![pada(mo) - 1]!,
+      'Balance of dasha': balance(c),
       Tithi: pa ? `${pa.tithi.paksha === 'shukla' ? 'Shukla' : 'Krishna'} ${pa.tithi.name}` : '',
       Weekday: pa ? pa.vara.name : '',
       Yoga: pa ? pa.yoga.name : '',

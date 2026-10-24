@@ -14,7 +14,7 @@ import { nat } from '../strength/common';
 import { yogiPoints, nakshatraLord } from '../yogi/yogi';
 import { SIGN_LORD, nakshatraIndex, signIndex } from '../zodiac';
 import { aspectsSign } from './ntp1';
-import { nadiOf, rajjuOf, NADI_NAMES, RAJJU_NAMES } from '../match/nakshatra';
+import { nadiOf, rajjuOf, NADI_NAMES, RAJJU_NAMES } from '../match/kootas';
 
 export type IyerTone = 'good' | 'bad' | 'mixed' | 'info';
 export interface IyerCheck { id: string; rule: string; tone: IyerTone; text: string; cite: string }
@@ -113,7 +113,7 @@ export function mutualChecks(a: ChartResult, b: ChartResult): IyerCheck[] {
 
 /** NTP2-810: the only kootams Iyer still looks at, last. */
 export function iyerKootams(a: ChartResult, b: ChartResult): IyerCheck[] {
-  const na = nakshatraIndex(a.bodies.Mo.lon), nb = nakshatraIndex(b.bodies.Mo.lon);
+  const na = nakshatraIndex(a.bodies.Mo.lon) + 1, nb = nakshatraIndex(b.bodies.Mo.lon) + 1;
   const nadiSame = nadiOf(na) === nadiOf(nb), rajjuSame = rajjuOf(na) === rajjuOf(nb);
   return [
     { id: 'nadi', rule: 'Nadi kootam', cite: 'NTP-2 p. 151', tone: nadiSame ? 'bad' : 'good',
