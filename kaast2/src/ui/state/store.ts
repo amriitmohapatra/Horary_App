@@ -96,7 +96,7 @@ export const ntpChart = computed<{ ok: ChartResult } | { error: string } | null>
 });
 
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
-export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'kp', 'ntp', 'yogi', 'jaimini', 'transits', 'settings'] as const;
+export const ROUTES = ['page1', 'exp', 'strengths', 'vargas', 'dashas', 'kp', 'ntp', 'yogi', 'jaimini', 'transits', 'match', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];
 const routeFromHash = (): Route => {
   const h = location.hash.replace('#', '') as Route;
@@ -105,6 +105,18 @@ const routeFromHash = (): Route => {
 export const route = signal<Route>(routeFromHash());
 addEventListener('hashchange', () => { route.value = routeFromHash(); });
 export function go(r: Route): void { if (location.hash !== `#${r}`) location.hash = r; route.value = r; }
+
+/* ---- Page 1 (Experimental): the open sub-tab and the conjunction orb survive tab switches. ---- */
+export type ExpTab = 'states' | 'lords' | 'aspects' | 'worksheet' | 'nadi';
+export const expTab = signal<ExpTab>('states');
+const EXP_ORB = 'kaast2.conjunctionOrb.v1';
+export const conjunctionOrb = signal<number>(((): number => {
+  try { const v = Number(localStorage.getItem(EXP_ORB)); return v > 0 && v <= 15 ? v : 3; } catch { return 3; }
+})());
+export function setConjunctionOrb(v: number): void {
+  conjunctionOrb.value = v;
+  try { localStorage.setItem(EXP_ORB, String(v)); } catch { /* non-fatal */ }
+}
 
 /** Extra charts (events) held by the last opened PL file; kept here so they survive the form closing. */
 export const openedEvents = signal<{ name: string; input: ChartInput }[]>([]);

@@ -351,3 +351,35 @@ table.data .r { text-align: right; }
 .ntp-sub { font-size: var(--fs-md); margin: var(--sp-4) 0 var(--sp-2); }
 .ntp-sub-label { margin: var(--sp-2) 0 var(--sp-1); font-size: var(--fs-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
 .ntp-why { font-size: var(--fs-sm); }
+
+/* ---- Page 1 (Experimental) ---- */
+.exp-intro { margin: 0 0 var(--sp-3); max-width: 70em; }
+.exp-controls { display: flex; flex-wrap: wrap; gap: var(--sp-3) var(--sp-4); align-items: end; margin-bottom: var(--sp-4); }
+.exp-field { min-width: 12em; }
+.exp-field input { max-width: 8em; }
+.chips { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.chip { display: inline-block; font-size: var(--fs-xs); font-weight: 700; line-height: 1.5; padding: 0 var(--sp-2); border: 1px solid currentColor; border-radius: 999px; white-space: nowrap; margin-left: 6px; }
+.chip.tone-good { color: var(--ok); } .chip.tone-bad { color: var(--danger); } .chip.tone-mixed { color: var(--accent); } .chip.tone-info { color: var(--text-muted); }
+.tone-good { fill: var(--plp-Me); } .tone-bad { fill: var(--plp-Ma); } .tone-trik { fill: var(--plp-Ma); font-size: 0.78em; }
+.exp-def { max-width: 70em; }
+.exp-conj { list-style: none; margin: 0 0 var(--sp-2); padding: 0; display: grid; gap: var(--sp-1); }
+.exp-conj li { padding: var(--sp-1) var(--sp-3); border-left: 4px solid var(--rule); background: var(--surface-sunk); border-radius: var(--radius); }
+.exp-conj li.tone-good { border-left-color: var(--ok); } .exp-conj li.tone-bad { border-left-color: var(--danger); }
+.exp-across td { white-space: nowrap; }
+.exp-across .trik { color: var(--danger); font-weight: 700; } .exp-across .trik3 { color: var(--accent); font-weight: 700; }
+.exp-across .muted { color: var(--text-muted); }
+.exp-across td.dg-EX, .exp-across td.dg-OWN, .exp-across td.dg-MT { color: var(--ok); font-weight: 700; }
+.exp-across td.dg-DB { color: var(--danger); font-weight: 700; }
+.exp-lords { list-style: none; margin: 0; padding: 0; columns: 2 16em; column-gap: var(--sp-5, 2rem); }
+.exp-lords li { break-inside: avoid; padding: 3px 0; }
+.exp-matrix td { white-space: nowrap; }
+.exp-matrix td.rel-friend { color: var(--ok); } .exp-matrix td.rel-enemy { color: var(--danger); } .exp-matrix td.rel-neutral { color: var(--pl-Sa); }
+.exp-matrix .frac { display: inline-block; min-width: 2em; }
+.asp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: var(--sp-3) var(--sp-4); }
+.asp-chart { margin: 0; }
+.asp-title { font-size: var(--fs-sm); font-weight: 700; margin-bottom: 2px; }
+.asp-chart svg { display: block; width: 100%; height: auto; }
+.asp-fill { fill: var(--ok); }
+.sb-bar:hover .asp-fill { filter: brightness(1.1); }
+.exp-banner { padding: var(--sp-2) var(--sp-3); border: 1px solid var(--accent); border-left-width: 6px; border-radius: var(--radius); background: var(--surface); max-width: 80em; }
+.nadi-links { margin: 0 0 var(--sp-2); padding-left: 1.2em; font-size: var(--fs-sm); }

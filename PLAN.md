@@ -360,6 +360,58 @@ When parity is reached and Phase 2 customisation is agreed, we will:
 
 ---
 
+## 13. Phase 1b — v0.8 programme (boss's brief of 2026-10-24)
+
+Brief: (1) mark the NTP tab "(Research)"; (2) NTP-2 marriage matching of two
+charts; (3) a Matching section reproducing PL 7's Reports → Compatibility
+(basic details, charts and planets, Moon chart/Navamsha/Dashas, Ashtakoot,
+Mangala Dosha consideration/results/cancellation, Dasha-Koota table and
+compatibility), asking for both charts or only the prospective match;
+(4) "Page 1 (Experimental)": dignity/retrogression/combustion/vargottama and
+3-6-8-12 placements highlighted, conjunctions with their definition,
+lordships and placements and yogas for D-1 and every D-chart (as PL's
+"Lordships" worksheet); (5) PL's Shadbala/Bhava Bala worksheet, "Aspects on
+planets", "Aspects from planets", "Aspects on nth house (+ lord)" series;
+(6) Nandi Nadi.
+
+**The deeper version (the boss asked for it to be written down first):**
+1. *What a top professional would add.* An astrologer never reads
+   Ashtakoot alone: they check the Bhakoot/Nadi exceptions (friendly or same
+   Moon-sign lords), Mangal Dosha **cancellations** for both charts, the 7th
+   house, its lord and the D-9 of both, the Dasha periods running at marriage
+   and after, and they show *why* each point scored. A UI/UX designer lays the
+   two charts out side by side with a scorecard that explains itself, avoids
+   alarming words ("Dosha") without the cancellation beside them, prints well
+   and works on a phone. A software engineer reproduces PL's numbers, not a
+   lookalike.
+2. *Rawest material.* PL 7's own install: help/tutorial pages
+   (`Extras1/pib*.txt`, decoded), `Lang1/COMPAT1.TXT`, the yoga database
+   `Lang1/Yogas_1.dat`, the binary's tables; the PL 7 manual; BPHS (PL ships
+   it in `Bphs/`); Iyer's NTP-2 pp. 147–153 page images; the boss's own PL 7
+   screenshots of worksheets 1, 14, 21, 22 and Lordships (a real PL output
+   for a known chart); for Nandi Nadi, R. G. Rao's Bhrigu Nandi Nadi rules.
+3. *Methods and tools.* Decode PL's tables and texts; implement each rule as
+   a cited, pure engine function; integer-arcsecond geometry; BPHS sphuta
+   drishti in virupas; PyJHora as an independent implementation of the
+   kootas; Playwright/axe for the UI; side-by-side layout from the design
+   system.
+4. *What, other than us, shows it is right.* PL 7's own numbers for the
+   boss's chart (aspect virupas, Ishta/Kashta, Bhava Bala components,
+   lordships) as a private oracle; PyJHora's Ashtakoot on many synthetic
+   pairs; Iyer's worked statements; PL 7's compatibility printout for one
+   real pair (requested from the boss); Nandi Nadi results only as
+   "research", never as checked.
+
+**Rewritten brief (what we execute):** reproduce PL 7's Compatibility
+reports exactly from PL's own tables, cross-checked with PyJHora, with every
+cancellation shown next to its dosha, for both charts entered or the
+current chart plus a prospective match; add Iyer's NTP-2 matching (single
+survey, mutual verification, Ayur/Nadi/Rajju) under NTP (Research); build an
+Experimental section (Highlights, Lordships, Yogas, Strengths detail,
+Aspects, Nandi Nadi) whose numbers match the boss's PL 7 worksheets for his
+chart, with each rule and definition cited; keep everything offline, tested,
+accessible, and the private oracle outside `kaast2/`.
+
 ## 12. Session log
 
 - **2026-10-17** — Boot from CLAUDE.md/knowledge; absorbed the PL7 report and open items; inventoried GeoVision (1 559 input-only charts; 436 cache months); read the guide's method chapters; wrote PLAN v0.1 and ARCHITECTURE v0.1. Boss decided: East Indian chart layout as in Kala Chakra; share the Iyer books later; Windows and macOS installers for fully offline devices; next session starts from the prompt in CLOUD_HANDOFF.md. No app code yet. Next: boss answers D1–D9; slice 0.

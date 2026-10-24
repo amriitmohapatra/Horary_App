@@ -18,3 +18,6 @@ node_modules/
 *.run.xml
 *.synctex.gz
 *.toc
+
+# Private PL oracles with personal birth data: local only, never pushed (PLAN §11)
+private_oracles/
