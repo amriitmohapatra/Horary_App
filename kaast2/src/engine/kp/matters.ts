@@ -212,3 +212,34 @@ export function cuspTest(m: KpModel, sig: Sig, cusp: number, houses: number[]): 
   const outcome = !signifies || !starDirect ? 'denied' : subDirect ? 'promised' : 'delayed';
   return { cusp, subLord, starOfSub, subHouse: P[subLord].house, subDirect, starDirect, signifies, outcome };
 }
+
+/**
+ * Questions for horary judgement: the cusp whose sub lord is tested and the
+ * houses it must signify — B6's master table (KP6-060, pages as given). The
+ * natal MATTERS above carry the natal groups; this list follows B6.
+ */
+export const HORARY_QUESTIONS: readonly { id: string; label: string; cusp: number; houses: number[]; cite: string }[] = [
+  { id: 'marriage', label: 'Marriage', cusp: 7, houses: [2, 7, 11], cite: 'B6 pp. 102, 173, 253, 282' },
+  { id: 'reunion', label: 'Reunion with spouse, partnership', cusp: 7, houses: [2, 7, 11], cite: 'B6 pp. 255, 259–264' },
+  { id: 'child', label: 'Birth of a child', cusp: 5, houses: [2, 5, 11], cite: 'B6 pp. 202, 206, 282' },
+  { id: 'speculation', label: 'Speculation, lottery', cusp: 5, houses: [2, 5, 6, 11], cite: 'B6 pp. 222–225, 282' },
+  { id: 'job', label: 'Getting a job', cusp: 10, houses: [2, 6, 10], cite: 'B6 p. 285' },
+  { id: 'promotion', label: 'Promotion', cusp: 10, houses: [2, 6, 10, 11], cite: 'B6 pp. 282, 293, 297' },
+  { id: 'jobchange', label: 'Change of job', cusp: 10, houses: [3, 5, 9], cite: 'B6 p. 306' },
+  { id: 'transfer', label: 'Transfer', cusp: 10, houses: [3, 10, 12], cite: 'B6 p. 283' },
+  { id: 'abroad', label: 'Going abroad', cusp: 12, houses: [3, 9, 12], cite: 'B6 pp. 272, 311' },
+  { id: 'studiesAbroad', label: 'Higher studies abroad', cusp: 9, houses: [6, 9, 11, 12], cite: 'B6 p. 282' },
+  { id: 'house', label: 'Buying a house', cusp: 4, houses: [2, 4, 11], cite: 'B6 pp. 183–184, 282' },
+  { id: 'vehicle', label: 'Buying a vehicle', cusp: 4, houses: [4, 9, 10, 11], cite: 'B6 pp. 193, 195, 282' },
+  { id: 'sale', label: 'Sale of property', cusp: 4, houses: [3, 5, 10], cite: 'B6 pp. 186–187' },
+  { id: 'exam', label: 'Examination, competitive exam', cusp: 4, houses: [4, 9, 11], cite: 'B6 p. 198' },
+  { id: 'admission', label: 'Admission', cusp: 4, houses: [4, 11], cite: 'B6 p. 200' },
+  { id: 'loan', label: 'Loan, overdraft', cusp: 6, houses: [2, 6, 10], cite: 'B6 p. 228' },
+  { id: 'litigation', label: 'Litigation, election', cusp: 6, houses: [6, 11], cite: 'B6 pp. 282–283' },
+  { id: 'interview', label: 'Interview', cusp: 3, houses: [3, 9, 11], cite: 'B6 p. 180' },
+  { id: 'news', label: 'News, letter, rumour true', cusp: 3, houses: [3, 9, 11], cite: 'B6 pp. 169, 181–182' },
+  { id: 'research', label: 'Research, thesis', cusp: 9, houses: [9, 11], cite: 'B6 p. 282' },
+  { id: 'recovery', label: 'Recovery of lost property', cusp: 11, houses: [2, 6, 11], cite: 'B6 p. 244' },
+  { id: 'cure', label: 'Cure of an illness', cusp: 11, houses: [1, 5, 11], cite: 'B6 pp. 317–318' },
+  { id: 'spiritual', label: 'Spiritual life', cusp: 12, houses: [5, 10, 11], cite: 'B6 p. 317' },
+];

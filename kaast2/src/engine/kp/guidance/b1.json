@@ -1,1 +1,125 @@
-{ "book": "b1", "rules": [] }
+{
+  "book": "b1",
+  "rules": [
+    {
+      "id": "KP1-001+KP1-003",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Use only the Krishnamurti ayanamsa for KP; other values make the stellar results fail. The book’s own ayanamsa table (e.g. 23°15′ for 1963) matches the “Krishnamurti New” choice on this page, about 6′ less than Lahiri.",
+      "tone": "info",
+      "cite": "B1 pp. 4, 80–81"
+    },
+    {
+      "id": "KP1-006",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Planet-to-cusp distances are the same under any ayanamsa, so they cannot prove one. Only stellar timing can test it: known events must fall in the right dasa, star and sub.",
+      "tone": "info",
+      "cite": "B1 p. 77"
+    },
+    {
+      "id": "KP1-031",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Every chart in the Readers uses the mean node for Rahu, with Ketu exactly opposite. Choose the mean node in Settings to match the books’ star and sub lords.",
+      "tone": "info",
+      "cite": "B1 pp. 55, 75, 108"
+    },
+    {
+      "id": "KP1-020+KP1-021",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "A house runs from its cusp to the next cusp; the cusp is the exact start of the house. KP uses Placidus cusps, so houses are unequal and need not line up with the signs.",
+      "tone": "info",
+      "cite": "B1 pp. 64–66, 103–104"
+    },
+    {
+      "id": "KP1-024",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "The Lagna moves about one degree every four minutes, faster in some signs. A birth time a few minutes out can change a cusp’s sub lord, so KP needs the time to the minute.",
+      "tone": "info",
+      "cite": "B1 pp. 63–64, 115"
+    },
+    {
+      "id": "KP1-041+KP1-103",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Each star of 13°20′ is split into nine unequal subs in Vimshottari proportion, starting with the star lord. The sub is what separates twins and people born minutes apart.",
+      "tone": "info",
+      "cite": "B1 pp. 13, 17, 110"
+    },
+    {
+      "id": "KP1-016",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "From 1 September 1942 to 15 October 1945 Indian clocks ran one hour ahead of IST (war time). A birth time recorded then may be war time; settle which before judging the chart.",
+      "tone": "info",
+      "cite": "B1 pp. 159–160"
+    },
+    {
+      "id": "KP1-034",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Uranus and Neptune may be drawn in a chart, but KP leaves them out of star lordship, the dasa and the significator tables. Only the nine grahas count.",
+      "tone": "info",
+      "cite": "B1 pp. 63, 132, 157–158"
+    },
+    {
+      "id": "KP1-074",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "The star a planet occupies matters most: the results of its star lord, by the houses that lord holds and owns, mostly prevail over those of the planet’s own placement.",
+      "tone": "info",
+      "cite": "B1 pp. 131, 146–147"
+    },
+    {
+      "id": "KP1-074+KP1-079",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Lordship counts for more than a planet’s natural nature. Jupiter or Venus can do great harm when they sit in the stars of planets that own or occupy bad houses, and a natural malefic can do good the other way round.",
+      "tone": "info",
+      "cite": "B1 pp. 136, 147"
+    },
+    {
+      "id": "KP1-078",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition holds a house is spoiled when its lord sits 6th, 8th or 12th from it. Krishnamurti rejects this sign count and asks for the exact distance between the points instead.",
+      "tone": "info",
+      "cite": "B1 p. 147"
+    },
+    {
+      "id": "KP1-045+KP1-047",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "KP uses only the Vimshottari dasa, with years of 365¼ days (the solar year). Years of 360 days are only a shortcut for hand arithmetic.",
+      "tone": "info",
+      "cite": "B1 pp. 13, 104, 118–119"
+    }
+  ]
+}

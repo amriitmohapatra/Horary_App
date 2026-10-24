@@ -10,6 +10,7 @@ import { BUILTIN_PLACES, type Place, zoneFor } from '../../io/places';
 import type { BootResult } from '../../boot/wasmLoader';
 import { strengths, type Page1Strengths } from '../../engine/strength';
 import type { AyanamsaId } from '../../engine/ephem/ayanamsa';
+import type { PlanetId } from '../../engine/types';
 
 export type EngineState =
   | { status: 'booting' }
@@ -50,32 +51,49 @@ export const strength = computed<Page1Strengths | null>(() => {
  * "regardless of the default set" (PL 7 manual pp. 218–219). 'auto' does that
  * for the PL profiles and keeps the chart's own ayanamsa for Solar Fire /
  * Kala Chakra (the family's KP practice on Lahiri). ---- */
-export type KpAyanamsa = 'auto' | 'chart' | 'pl_krishnamurti' | 'pl_krishnamurti_new';
+export type KpAyanamsa = 'readers' | 'auto' | 'chart' | 'pl_krishnamurti' | 'pl_krishnamurti_new';
 const KP_AYAN = 'kaast2.kpAyanamsa.v1';
 export const kpAyanamsa = signal<KpAyanamsa>(((): KpAyanamsa => {
   try {
     const v = localStorage.getItem(KP_AYAN);
-    return v === 'chart' || v === 'pl_krishnamurti' || v === 'pl_krishnamurti_new' ? v : 'auto';
-  } catch { return 'auto'; }
+    return v === 'auto' || v === 'chart' || v === 'pl_krishnamurti' || v === 'pl_krishnamurti_new' ? v : 'readers';
+  } catch { return 'readers'; }
 })());
 export function setKpAyanamsa(v: KpAyanamsa): void {
   kpAyanamsa.value = v;
   try { localStorage.setItem(KP_AYAN, v); } catch { /* non-fatal */ }
 }
+/**
+ * "Readers mode" (docs/specs/kp_research.md §3): what Krishnamurti's Readers
+ * use — the KP-New ayanamsa, the mean node and 365¼-day dasa years.
+ */
+export const READERS_OVERRIDES: ProfileOverrides = { ayanamsa: 'pl_krishnamurti_new', node: 'mean', dashaYearDays: 365.25 };
 /** The ayanamsa the KP page uses for a chart cast with `chartAyanamsa` in profile `profileId`. */
 export function kpAyanamsaFor(choice: KpAyanamsa, profileId: ChartInput['profileId'], chartAyanamsa: AyanamsaId): AyanamsaId {
+  if (choice === 'readers') return 'pl_krishnamurti_new';
   if (choice === 'chart') return chartAyanamsa;
   if (choice === 'auto') return profileId === 'solarfire' ? chartAyanamsa : 'pl_krishnamurti';
   return choice;
 }
+/** Overrides the KP page casts with (on top of Settings). */
+export function kpOverrides(choice: KpAyanamsa, profileId: ChartInput['profileId'], chartAyanamsa: AyanamsaId): ProfileOverrides {
+  return choice === 'readers' ? READERS_OVERRIDES : { ayanamsa: kpAyanamsaFor(choice, profileId, chartAyanamsa) };
+}
 export const kpChart = computed<{ ok: ChartResult } | { error: string } | null>(() => {
   const e = engine.value, inp = chartInput.value, c = chart.value;
   if (e.status !== 'ready' || !inp || !c || !('ok' in c)) return null;
-  const ayanamsa = kpAyanamsaFor(kpAyanamsa.value, inp.profileId, c.ok.profile.ayanamsa);
-  if (ayanamsa === c.ok.profile.ayanamsa) return c;
-  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, ayanamsa } }) }; }
+  const extra = kpOverrides(kpAyanamsa.value, inp.profileId, c.ok.profile.ayanamsa);
+  const p = c.ok.profile;
+  if ((Object.keys(extra) as (keyof ProfileOverrides)[]).every((k) => p[k] === extra[k])) return c;
+  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, ...extra } }) }; }
   catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
 });
+/** KP (Research) sub-tab, and the moment of judgement used by the ruling planets and horary sub-tabs (never stored). */
+export type KpTab = 'tables' | 'sig' | 'matters' | 'rp' | 'transit' | 'horary' | 'guidance';
+export const kpTab = signal<KpTab>('tables');
+export const kpMoment = signal<ChartInput | null>(null);
+/** The period sent from Life matters to Transit timing. */
+export const kpPeriod = signal<{ lords: PlanetId[]; start: number; end: number } | null>(null);
 
 /* ---- NTP page: Iyer uses the mean node ("Take always Mean Rahu", NTP-1 p. 101). ---- */
 export type NtpNode = 'mean' | 'chart';

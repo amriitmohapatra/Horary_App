@@ -10,7 +10,7 @@ import { kpSignifications } from '../../src/engine/kp/significators';
 import { PLANETS, type ChartResult } from '../../src/engine/types';
 
 /** Policy as on the NTP page: no death, longevity, accident, danger or disease prognosis. */
-const FORBIDDEN = /\b(death|die|dies|dying|died|longevity|life span|lifespan|accident|danger|dangerous|fatal|suicide|murder|cancer|leprosy|tuberculosis|widow|widower|maraka|killed|kill)\b/i;
+const FORBIDDEN = /\b(death|die|dies|dying|died|longevity|life span|lifespan|accident|danger|dangerous|fatal|suicide|murder|leprosy|tuberculosis|widow|widower|maraka|killed|kill)\b/i;
 
 describe('KP guidance rules', () => {
   it('every rule is well formed', () => {
@@ -28,7 +28,8 @@ describe('KP guidance rules', () => {
     }
   });
   it('no rule speaks of death, longevity, accidents, danger or disease prognosis', () => {
-    for (const r of GUIDANCE_RULES) expect(FORBIDDEN.test(r.text), `${r.id}: ${r.text}`).toBe(false);
+    // The sign Cancer is allowed (capitalised); the disease is not.
+    for (const r of GUIDANCE_RULES) expect(FORBIDDEN.test(r.text) || /\bcancer\b/.test(r.text), `${r.id}: ${r.text}`).toBe(false);
   });
   it('quotations stay short (the books are copyrighted)', () => {
     for (const r of GUIDANCE_RULES) for (const q of r.text.match(/[“"][^”"]+[”"]/g) ?? []) expect(q.split(/\s+/).length, `${r.id}: ${q}`).toBeLessThanOrEqual(12);

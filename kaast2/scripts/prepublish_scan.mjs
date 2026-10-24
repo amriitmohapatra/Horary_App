@@ -30,7 +30,8 @@ const RULES = [
 
 const STOP = new Set(('admission chart charts recovery question test phd stockholm singapore india wharton yale oxford ' +
   'stanford princeton cornell columbia economics statistics finance crypto job jobs offer visa home new house marriage ' +
-  'with from about rule polygon fine west east north south court booth stern ucla govt joker clintonb ' + 'bsesn nifty sensex').split(' '));
+  'with from about rule polygon fine west east north south court booth stern ucla govt joker clintonb ' + 'bsesn nifty sensex ' +
+  'election interview circus verdict').split(' '));
 const charts = resolve(root, '../Astro_Fork/GeoVision/GeoVisionCharts');
 const names = new Set();
 if (existsSync(charts)) {

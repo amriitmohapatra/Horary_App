@@ -1,1 +1,347 @@
-{ "note": "Krishnamurti on marriage matching (B4), for the Matching tab", "notes": [] }
+{
+  "note": "Krishnamurti on marriage matching (B4), for the Matching tab",
+  "notes": [
+    {
+      "id": "KP4-060",
+      "koota": "general",
+      "text": "Judge each chart on its own first, on six points: life, health, finance, prospects, children and harmony. If both charts promise a good, harmonious life, the match is sound even without dasa porutham; if either denies it, perfect poruthams cannot save it.",
+      "cite": "B4 pp. 19–21"
+    },
+    {
+      "id": "KP4-061",
+      "koota": "general",
+      "text": "Krishnamurti calls dasa porutham “useless and meaningless”: it looks only at the Moon’s star and sign and ignores the Lagna and the planets. He keeps it only for people who know their star but not their birth time.",
+      "cite": "B4 p. 21"
+    },
+    {
+      "id": "KP4-062",
+      "koota": "general",
+      "text": "Taking the star from the first letter of the name, or from a chart cast for the girl’s puberty, is useless: names are no longer given by the birth star.",
+      "cite": "B4 p. 19"
+    },
+    {
+      "id": "KP4-064",
+      "koota": "general",
+      "text": "Giving every koota equal marks and passing a match when more than half agree ignores their different weight; with the special exceptions applied, most pairs agree under one rule and fail under another.",
+      "cite": "B4 p. 48"
+    },
+    {
+      "id": "KP4-065",
+      "koota": "general",
+      "text": "Each porutham shows one thing, not harmony in general: Dina health and life together, Gana social life, Mahendra children, Sthree-Deergha wealth, Yoni understanding, Rasi growth of the family, Rasyadhipathi fortunate children, Vasya mutual attraction, Vedha freedom from sorrow.",
+      "cite": "B4 pp. 21–23"
+    },
+    {
+      "id": "KP4-101",
+      "koota": "general",
+      "text": "His overall verdict: one method agrees where another does not, and none of them shows how long a couple will live together or whether they will be happy. “We do not attach much importance to these.”",
+      "cite": "B4 p. 48"
+    },
+    {
+      "id": "KP4-025+KP4-157",
+      "koota": "general",
+      "text": "Krishnamurti’s real test: the planets that signify the native’s 2, 7 and 11 also describe the partner. In his example, the bride’s Moon-sign lord, Moon-star lord, Lagna lord and weekday lord were exactly the groom’s marriage significators.",
+      "cite": "B4 p. 135"
+    },
+    {
+      "id": "KP4-124",
+      "koota": "general",
+      "text": "“Porutham but no proptham”: dasa porutham agrees for about half of all pairs, yet one marries only the person shown by the ruling planets. A match that passes every koota can still fall through.",
+      "cite": "B4 pp. 83–84"
+    },
+    {
+      "id": "KP4-158",
+      "koota": "general",
+      "text": "Of several loves, one marries the person whose birth ruling planets (Lagna, Moon sign and star lords, weekday) are significators of the native’s 2, 7 and 11. If they signify the native’s 1 and 6 instead, expect disappointment. So get the partner’s birth time.",
+      "cite": "B4 p. 172"
+    },
+    {
+      "id": "KP4-034",
+      "koota": "general",
+      "text": "Rejecting a match because both partners change dasa at about the same time (dasa sandhi) is wrong: the couple share one destiny, and his example couple always shared dasa changes yet lived happily.",
+      "cite": "B4 pp. 262–266"
+    },
+    {
+      "id": "KP4-035",
+      "koota": "general",
+      "text": "Eka dasa (both running the same planet’s dasa) is harmless: the same planet rules and occupies different houses and stars in each chart, so it gives different, often opposite, results to each.",
+      "cite": "B4 pp. 266–268"
+    },
+    {
+      "id": "KP4-036",
+      "koota": "general",
+      "text": "The advice to marry a boy denied children to a fertile girl is rejected: if the boy’s chart denies a child, the bride cannot have one by him either.",
+      "cite": "B4 p. 263"
+    },
+    {
+      "id": "KP4-066",
+      "koota": "Dina",
+      "text": "Count from the bride’s star (as 1) to the groom’s star, as most authorities do; this is the same direction the app’s Dina count uses.",
+      "cite": "B4 p. 24"
+    },
+    {
+      "id": "KP4-068",
+      "koota": "Dina",
+      "text": "Best taras: Kshema (4), Sadhaka (6) and Parama Maitra (9) in any round. Janma (1), Sampath (2) and Maitra (8) are only middling. Unlike the app’s scoring, he does not put 2 and 8 on a level with 4, 6 and 9.",
+      "cite": "B4 p. 26"
+    },
+    {
+      "id": "KP4-069",
+      "koota": "Dina",
+      "text": "Vipath, Prathyara and Vadha (3, 5, 7) fail in the first round. In the second round only one pada of each fails: the 12th star pada 1, the 14th pada 4, the 16th pada 3; the other padas agree. The app ignores padas.",
+      "cite": "B4 p. 26"
+    },
+    {
+      "id": "KP4-070",
+      "koota": "Dina",
+      "text": "His own rule for the 25th star (Vadha in the third round): judge the lord of that star for the bride’s Lagna. If it is a benefic for her, match; if it rules evil houses (such as 6 or 8), reject.",
+      "cite": "B4 pp. 26–27"
+    },
+    {
+      "id": "KP4-071",
+      "koota": "Dina",
+      "text": "The groom’s star 27th from the bride’s agrees only if both Moons are in the same sign; if his Moon sign is the 12th from hers, it does not.",
+      "cite": "B4 p. 27"
+    },
+    {
+      "id": "KP4-072",
+      "koota": "Dina",
+      "text": "Same birth star: best for Rohini, Ardra, Magha, Hasta, Visakha, Sravana, Uttara Bhadra and Revati; reject Bharani, Ashlesha, Swati, Jyeshta, Moola, Dhanishta, Satabhisha and Purva Bhadra; the rest are middling (as the app does).",
+      "cite": "B4 p. 28"
+    },
+    {
+      "id": "KP4-073",
+      "koota": "Dina",
+      "text": "Same star split over two signs (e.g. Krittika): it agrees if both Moons are in one sign or the bride’s is in the earlier sign; it does not if the groom’s Moon is in the earlier sign.",
+      "cite": "B4 p. 28"
+    },
+    {
+      "id": "KP4-074+KP4-075",
+      "koota": "Dina",
+      "text": "For the groom’s star 7th from the bride’s, follow Kasyapa’s list of which bride stars may and may not take it; his verdict overrides Mahendra, which would otherwise approve the 7th, 16th and 25th stars.",
+      "cite": "B4 pp. 28–34"
+    },
+    {
+      "id": "KP4-076",
+      "koota": "Dina",
+      "text": "Proverbs that a bride born in Moola, Ashlesha, Jyeshta or Visakha (certain padas) harms her in-laws have “no truth”; each in-law’s own chart decides his or her fortune.",
+      "cite": "B4 pp. 30–31"
+    },
+    {
+      "id": "KP4-077",
+      "koota": "Dina",
+      "text": "If either partner’s star is Mrigasira, Magha, Uttara Phalguni, Hasta, Swati, Anuradha, Uttara Ashadha or Uttara Bhadra, dasa porutham need not be checked at all, except for the 7th-star rule.",
+      "cite": "B4 p. 32"
+    },
+    {
+      "id": "KP4-078",
+      "koota": "Gana",
+      "text": "Same gana agrees; Deva husband with Manushya wife agrees; Manushya husband with Deva wife is passable; Rakshasa with Manushya does not agree. Gana shows temperament and social life, not wealth.",
+      "cite": "B4 pp. 32–33"
+    },
+    {
+      "id": "KP4-079",
+      "koota": "Gana",
+      "text": "A Rakshasa-gana bride is acceptable when her star, counted from the groom’s, is beyond the 14th. Count stars, not gana numbers.",
+      "cite": "B4 p. 33"
+    },
+    {
+      "id": "KP4-080",
+      "koota": "Gana",
+      "text": "If the two Moon signs are the same, 1/7 from each other, or ruled by friends, a missing gana can be ignored and the pair matched; he reads this as full agreement, not half.",
+      "cite": "B4 p. 33"
+    },
+    {
+      "id": "KP4-081",
+      "koota": "Mahendra",
+      "text": "Mahendra agrees when the groom’s star is the same as the bride’s or the 4th, 7th, 10th … 25th from it. He counts the same star too, which the app does not. Mahendra stands for children.",
+      "cite": "B4 pp. 33–35"
+    },
+    {
+      "id": "KP4-082",
+      "koota": "Mahendra",
+      "text": "Dina and Mahendra show different things: Dina without Mahendra, a long life together with a small family; Mahendra without Dina, many children but a shorter married life; neither, neither.",
+      "cite": "B4 p. 34"
+    },
+    {
+      "id": "KP4-083",
+      "koota": "Sthree-Deergha",
+      "text": "Agrees when the groom’s star is the 13th to 27th from the bride’s (some sages say from the 8th); it shows wealth growing after marriage. He includes the 13th, which the app does not.",
+      "cite": "B4 p. 35"
+    },
+    {
+      "id": "KP4-085",
+      "koota": "Yoni",
+      "text": "The same yoni is best. The animals are only memory aids. Enemy yonis bring unexplained dislike, yet if more than five of the ten agree one may go ahead and help the couple adjust. His enemy list differs from the app’s in two pairs (Goat–Elephant, Snake–Rat).",
+      "cite": "B4 pp. 36–37"
+    },
+    {
+      "id": "KP4-086",
+      "koota": "Rasi",
+      "text": "Count the groom’s Moon sign from the bride’s. 2nd: a long married life not assured; 3rd: little understanding; 4th: loss of possessions; 5th: trouble to the husband; 6th: few children. He says nothing against the 7th to 12th.",
+      "cite": "B4 pp. 37–38"
+    },
+    {
+      "id": "KP4-087",
+      "koota": "Rasi",
+      "text": "Exception for the 5th: if the bride’s Moon is in Aries or Cancer, the groom 5th from her is not harmful.",
+      "cite": "B4 p. 37"
+    },
+    {
+      "id": "KP4-088",
+      "koota": "Rasi",
+      "text": "The 6/8 relation (shashtashtama) does not mean constant quarrels. It is harmful only if Saturn, Rahu or Ketu is in the Lagna or the 5th. A bride with the Moon in an odd sign, or in Taurus or Scorpio, has no such fault.",
+      "cite": "B4 p. 38"
+    },
+    {
+      "id": "KP4-089",
+      "koota": "Rasi",
+      "text": "Exception for the 2nd: if the groom’s Moon is in an even sign and 2nd from the bride’s, the fault goes. The app applies the exception when the bride’s sign is even, which is the opposite case.",
+      "cite": "B4 p. 38"
+    },
+    {
+      "id": "KP4-090",
+      "koota": "Rasyadhipathi",
+      "text": "Moon-sign lords the same or friends: good; neutral: fair; enemies: undesirable. It shows fortunate children. His friendship table differs from the app’s only for Mercury (friend Saturn; Sun, Mars, Jupiter, Venus neutral; Moon enemy).",
+      "cite": "B4 pp. 38–39"
+    },
+    {
+      "id": "KP4-091",
+      "koota": "Vasya",
+      "text": "Vasya is read one way, from the bride’s Moon sign to the groom’s, and shows attraction and understanding. His table matches the app’s except Taurus (Cancer and Libra, where the app has Cancer and Leo).",
+      "cite": "B4 p. 40"
+    },
+    {
+      "id": "KP4-093",
+      "koota": "Rajju",
+      "text": "Different rajju, both stars ascending (Aroha): excellent; one ascending and one descending: fair; both descending: weak. Even the same rajju may be matched if one star is ascending and the other descending.",
+      "cite": "B4 pp. 41–42"
+    },
+    {
+      "id": "KP4-094",
+      "koota": "Rajju",
+      "text": "He re-reads the threats: Pada means a husband who travels a lot; Thodai’s money loss and Nabhi’s loss of children are not borne out by real charts. Only Siro deserves a closer look, read together with Dina and both charts.",
+      "cite": "B4 pp. 42–43"
+    },
+    {
+      "id": "KP4-095",
+      "koota": "Rajju",
+      "text": "If the Moon signs are the same, 1/7, or ruled by friends, the rajju fault is fully cancelled (the app halves it). His research found rajju “has no final say”: it cannot change what the two charts show.",
+      "cite": "B4 pp. 43–45"
+    },
+    {
+      "id": "KP4-096",
+      "koota": "Vedha",
+      "text": "Vedha pairs bring repulsion and lack of harmony. His printed list is shorter than the app’s and has one pair (Bharani–Pushya) that is probably a misprint, so the app’s standard list is kept.",
+      "cite": "B4 p. 45"
+    },
+    {
+      "id": "KP4-097",
+      "koota": "Nadi",
+      "text": "Different nadis are very favourable. Both in the middle nadi tells against the husband; both in the same side nadi tells against the bride. He notes Nadi is a North Indian practice.",
+      "cite": "B4 p. 46"
+    },
+    {
+      "id": "KP4-098",
+      "koota": "Gender",
+      "text": "Groom’s star male and bride’s female: satisfactory; the reverse: no match; neuter with female: fair; neuter with male: moderate; both male or both female: in concord (more generous than the app’s half score). No source says what this agreement shows.",
+      "cite": "B4 pp. 46–47"
+    },
+    {
+      "id": "KP4-099",
+      "koota": "Gothra",
+      "text": "The 28 stars (with Abhijit) fall into seven groups of four, one per sage; bride and groom from the same sage’s group should not marry. This agrees with the app’s grouping.",
+      "cite": "B4 p. 47"
+    },
+    {
+      "id": "KP4-105",
+      "koota": "Mars dosha",
+      "text": "Mars dosha by position ignores Mars’s lordship, sign, dignity, company and aspects, the periods that operate, and the benefics or malefics in 2, 7 and 11. Houses 2, 7 and 11 decide marriage and married life, not Mars alone.",
+      "cite": "B4 pp. 56–57"
+    },
+    {
+      "id": "KP4-107",
+      "koota": "Mars dosha",
+      "text": "Tradition counts Mars in the 1st, 2nd, 4th, 7th, 8th or 12th sign from the Lagna, from the Moon and also from Venus, sign by sign. The app counts from the Lagna and Moon; Venus is the third reference.",
+      "cite": "B4 pp. 59–61"
+    },
+    {
+      "id": "KP4-109",
+      "koota": "Mars dosha",
+      "text": "Strength of the fault: counted from Venus it is strongest, from the Moon next, from the Lagna weakest.",
+      "cite": "B4 p. 67"
+    },
+    {
+      "id": "KP4-110",
+      "koota": "Mars dosha",
+      "text": "Mars in the 8th is milder: delay or disagreement while fixing the match, and an outspoken, free-spending partner.",
+      "cite": "B4 p. 67"
+    },
+    {
+      "id": "KP4-111",
+      "koota": "Mars dosha",
+      "text": "Some authors exempt Mars in the 2nd or 7th in a woman’s chart, and Mars in the 1st, 4th or 8th in a man’s chart.",
+      "cite": "B4 p. 67"
+    },
+    {
+      "id": "KP4-112",
+      "koota": "Mars dosha",
+      "text": "No fault when Mars is in Aries, Scorpio, Capricorn or Cancer and that sign is the 4th or 7th from the Lagna, Moon or Venus, for bride and groom alike. The app tests this from the Lagna only.",
+      "cite": "B4 pp. 68–69"
+    },
+    {
+      "id": "KP4-113",
+      "koota": "Mars dosha",
+      "text": "Mars in a movable sign (Aries, Cancer, Libra, Capricorn) causes no fault. The quoted verse omits the 7th; Krishnamurti reads it as including the 7th, while the app follows the verse.",
+      "cite": "B4 pp. 69–70"
+    },
+    {
+      "id": "KP4-114+KP4-115",
+      "koota": "Mars dosha",
+      "text": "No fault when Mars in 1, 2, 4, 8 or 12 is with or aspected by Jupiter or Mercury, or when Mars is in Leo or Cancer, its own or exaltation sign, or a friend’s sign (adding Sagittarius and Pisces).",
+      "cite": "B4 p. 70"
+    },
+    {
+      "id": "KP4-116",
+      "koota": "Mars dosha",
+      "text": "House by house, no fault for Mars: in the 2nd in Aries, Scorpio, Gemini, Virgo; 4th in Aries, Scorpio, Taurus, Libra; 7th in Aries, Cancer, Scorpio, Capricorn; 8th in Sagittarius, Pisces, Cancer, Capricorn; 12th in Taurus, Gemini, Virgo, Libra. The 2nd-house list is missing from the app.",
+      "cite": "B4 pp. 70–71"
+    },
+    {
+      "id": "KP4-117",
+      "koota": "Mars dosha",
+      "text": "More cancellations: Mars in the 12th in both charts; Mars with Saturn, Rahu or Ketu, or aspected by Saturn; Jupiter within 8° of Mars; Moon and Mars in one sign. Jupiter in the 12th from Mars only delays marriage.",
+      "cite": "B4 pp. 71–72"
+    },
+    {
+      "id": "KP4-118",
+      "koota": "Mars dosha",
+      "text": "Traditional pairing in three groups: a fault with no cancellation, a cancelled fault, and no fault. Match within the same group only. The app checks only whether both charts have the fault.",
+      "cite": "B4 pp. 72–73"
+    },
+    {
+      "id": "KP4-119",
+      "koota": "Mars dosha",
+      "text": "Krishnamurti’s own rule: discord, dispute or divorce is not Mars’s monopoly. Any planet whose sub lord, or that sub lord’s star lord, signifies 6, 10 or 12 can cause it in its period; if the planet also signifies 2, 7 or 11, the parting is short and they reunite.",
+      "cite": "B4 p. 73"
+    },
+    {
+      "id": "KP4-119",
+      "koota": "Mars dosha",
+      "text": "When such a discord-causing sub lord is Mars, or in Mars’s star, the trouble is loud and forceful; when it is Saturn, it is a silent, sullen withdrawal.",
+      "cite": "B4 p. 73"
+    },
+    {
+      "id": "KP4-053",
+      "koota": "Mars dosha",
+      "text": "A Mars cleared by every traditional exception still saw divorce in his example. Look instead at the planets in the star or sub of Mars when Mars is in 1, 2, 4, 7, 8 or 12: they bring the friction, in their periods.",
+      "cite": "B4 p. 198"
+    },
+    {
+      "id": "KP4-101",
+      "koota": "Mars dosha",
+      "text": "He tells students not to confuse themselves with dasa porutham and Mars dosha; the two charts, read by KP, decide.",
+      "cite": "B4 p. 55"
+    }
+  ]
+}
