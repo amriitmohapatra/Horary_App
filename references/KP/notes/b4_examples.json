@@ -54,8 +54,8 @@
     "verdict": "dosha from Venus (12th), Moon (2nd) and Lagna (4th)"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 1"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 1 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E03",
@@ -83,8 +83,8 @@
     "verdict": "dosha from Moon and Lagna, not Venus"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 2"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 2 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E04",
@@ -112,8 +112,8 @@
     "verdict": "dosha from Moon and Venus, not Lagna"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 3"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 3 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E05",
@@ -141,8 +141,8 @@
     "verdict": "dosha from Venus and Lagna, not Moon"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 4"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 4 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E06",
@@ -170,8 +170,8 @@
     "verdict": "dosha from Lagna only"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 5"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 5 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E07",
@@ -199,8 +199,8 @@
     "verdict": "dosha from Venus only"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 6"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 6 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E08",
@@ -228,8 +228,8 @@
     "verdict": "dosha from Moon only"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 7"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 7 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E09",
@@ -286,8 +286,8 @@
     "verdict": "free from dosha"
    }
   ],
-  "checked_against_figure": true,
-  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 9"
+  "checked_against_figure": false,
+  "notes": "Sign-only illustration of Mars-dosha counting (no birth data); counts are sign to sign from Lagna, Moon and Venus. Example 9 (Image not opened; the placements match the text's sign counts.)"
  },
  {
   "id": "b4-E11",
@@ -2216,7 +2216,7 @@
    }
   ],
   "checked_against_figure": true,
-  "notes": ""
+  "notes": "DATE DOUBTFUL: the printed 7-12-1939 puts the Sun in Scorpio (~21°), but the figure and text have the Sun at Leo 21°10' in P.Phalguni with Mercury, Venus and Neptune in Leo. The planets (Saturn Ar, Jupiter Pi, Rahu Li, Mars Cp, Sun Le 21°) fit 7-9-1939; Aries rising at 8-30 pm also fits September. Probably 7-9-1939."
  },
  {
   "id": "b4-E44",
@@ -2283,7 +2283,7 @@
    }
   ],
   "checked_against_figure": true,
-  "notes": "X cusp printed as 'Merc. 27-01' in Aquarius."
+  "notes": "X cusp printed as 'Merc. 27-01' in Aquarius. The printed Sun (Vir 28°46') is about 2.5° ahead of the Sun for 13-10-1942 (~Vir 26°); doubtful date or Sun digit."
  },
  {
   "id": "b4-E45",
@@ -2488,7 +2488,7 @@
   },
   "horary_number": null,
   "cusps": {
-   "1": "Aqu"
+   "1": "Cap"
   },
   "planets": {
    "Mercury": "Pis",
@@ -2514,7 +2514,7 @@
    }
   ],
   "checked_against_figure": true,
-  "notes": "Childless chart shown without analysis."
+  "notes": "Childless chart shown without analysis. The vault transcription puts the Lagna in Aquarius; the image shows it in the Capricorn cell."
  },
  {
   "id": "b4-E50",
