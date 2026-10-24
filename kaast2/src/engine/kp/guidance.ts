@@ -16,7 +16,8 @@ import type { KpModel } from './kp';
 import { signAspects, type kpSignifications } from './significators';
 import B1 from './guidance/b1.json';
 import B2 from './guidance/b2.json';
-import B3 from './guidance/b3.json';
+import B3A from './guidance/b3a.json';
+import B3B from './guidance/b3b.json';
 import B4 from './guidance/b4.json';
 import B5 from './guidance/b5.json';
 
@@ -50,6 +51,8 @@ export type Cond =
   | { cusp: number; sign?: number[]; star?: PlanetId[]; sub?: PlanetId[] }
   /** House `occupied` has at least one planet (or none, with `empty: true`). */
   | { occupied: number; empty?: boolean }
+  /** A principle that applies to every chart (topic 'Principles of judgement'). */
+  | { always: true }
   | { allOf: Cond[] }
   | { anyOf: Cond[] }
   | { not: Cond };
@@ -69,7 +72,7 @@ export interface GuidanceRule {
 
 export interface GuidanceFinding { rule: GuidanceRule; because: string }
 
-export const GUIDANCE_RULES: readonly GuidanceRule[] = [B1, B2, B3, B4, B5].flatMap((b) => (b as unknown as { rules: GuidanceRule[] }).rules);
+export const GUIDANCE_RULES: readonly GuidanceRule[] = [B1, B2, B3A, B3B, B4, B5].flatMap((b) => (b as unknown as { rules: GuidanceRule[] }).rules);
 
 type Sig = ReturnType<typeof kpSignifications>;
 const NAMES: Record<PlanetId, string> = { Su: 'Sun', Mo: 'Moon', Ma: 'Mars', Me: 'Mercury', Ju: 'Jupiter', Ve: 'Venus', Sa: 'Saturn', Ra: 'Rahu', Ke: 'Ketu' };
@@ -119,6 +122,7 @@ export function holds(c: Cond, m: KpModel, sig: Sig): string | null {
     const occ = m.houses[c.occupied - 1]!.occupants;
     return (c.empty ? occ.length === 0 : occ.length > 0) ? `house ${c.occupied} ${occ.length ? `holds ${occ.map((p) => NAMES[p]).join(', ')}` : 'is empty'}` : null;
   }
+  if ('always' in c) return 'general principle';
   if ('allOf' in c) {
     const rs = c.allOf.map((x) => holds(x, m, sig));
     return rs.every((r) => r !== null) ? rs.join('; ') : null;
@@ -142,7 +146,7 @@ const KEYS: Record<string, string[]> = {
   csl: ['csl', 'all', 'any', 'none'], cslIs: ['cslIs', 'planets'], cslLinked: ['cslLinked', 'planets'],
   planet: ['planet', 'house', 'sign', 'star', 'sub', 'retro'], sig: ['sig', 'all', 'any', 'none'], conj: ['conj'],
   aspects: ['aspects', 'target'], cusp: ['cusp', 'sign', 'star', 'sub'], occupied: ['occupied', 'empty'],
-  allOf: ['allOf'], anyOf: ['anyOf'], not: ['not'],
+  always: ['always'], allOf: ['allOf'], anyOf: ['anyOf'], not: ['not'],
 };
 const PL = ['Su', 'Mo', 'Ma', 'Me', 'Ju', 'Ve', 'Sa', 'Ra', 'Ke'];
 
