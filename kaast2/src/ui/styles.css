@@ -383,3 +383,9 @@ table.data .r { text-align: right; }
 .sb-bar:hover .asp-fill { filter: brightness(1.1); }
 .exp-banner { padding: var(--sp-2) var(--sp-3); border: 1px solid var(--accent); border-left-width: 6px; border-radius: var(--radius); background: var(--surface); max-width: 80em; }
 .nadi-links { margin: 0 0 var(--sp-2); padding-left: 1.2em; font-size: var(--fs-sm); }
+.partner-line { display: flex; flex-wrap: wrap; gap: var(--sp-2); align-items: center; margin: 0 0 var(--sp-3); }
+.partner-entry { margin-bottom: var(--sp-3); }
+.partner-entry .chart-form { margin-bottom: var(--sp-2); }
+.match-people { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr)); gap: var(--sp-4); margin-bottom: var(--sp-4); }
+.partner-entry .chart-form { grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr)); box-shadow: none; }
+.match-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr)); gap: var(--sp-4); align-items: start; }

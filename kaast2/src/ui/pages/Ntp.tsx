@@ -22,7 +22,9 @@ import { areaNote, ruleText } from '../ntpRules';
 import { PORTFOLIO } from '../../engine/iyer/dcharts';
 import type { AreaReading } from '../../engine/iyer/ntp2b';
 import { BHAVA_MATTERS, SAMAYAM, YOGA_EFFECTS } from '../ntpMeanings';
-import { engine, ntpChart, ntpNode, setNtpNode, type NtpNode } from '../state/store';
+import { engine, ntpChart, ntpNode, ntpPartnerChart, partnerInput, setNtpNode, type NtpNode } from '../state/store';
+import { iyerKootams, kujaNote, mutualChecks, singleSurvey, type IyerCheck } from '../../engine/iyer/ntpMatch';
+import { PartnerEntry } from '../components/PartnerEntry';
 import { t } from '../i18n';
 import { civilDate, dms } from '../format';
 
@@ -57,6 +59,52 @@ const POL_WORD: Record<Pol, string> = { '+': 'Positive', '-': 'Negative', mixed:
 function Pl({ id }: { id: PlanetId }): JSX.Element {
   return <span class={`pl pl-${id}`} title={PLANET_NAMES[id]}>{id}</span>;
 }
+function CheckList({ checks, id }: { checks: IyerCheck[]; id: string }): JSX.Element {
+  return (
+    <ul class="ntp-findings" data-testid={id}>
+      {checks.map((c) => (
+        <li key={c.id} class={`ntp-finding tone-${c.tone}`}>
+          <ToneTag tone={c.tone} /> <span class="ntp-text"><b>{c.rule}.</b> {c.text}</span> <cite class="ntp-cite">{c.cite}</cite>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function IyerMatching({ chart }: { chart: ChartResult }): JSX.Element {
+  const pc = ntpPartnerChart.value;
+  const p = pc && 'ok' in pc ? pc.ok : null;
+  return (
+    <section class="panel" aria-labelledby="h-ntp-match">
+      <header class="panel-head"><h2 id="h-ntp-match">Marriage matching (Iyer)</h2></header>
+      <div class="panel-body">
+        <p class="hint-text">
+          Iyer judges a match from the charts themselves: first what one chart says about the partner, then a mutual check of
+          both charts. Kootam marks are "very very secondary"; he looks only at the Ayur, Nadi and Rajju kootams, at the very end
+          (NTP-2 pp. 149–151). For the Parashara's Light kootas see the Matching tab.
+        </p>
+        <h3 class="ntp-sub">From this chart alone</h3>
+        <CheckList checks={[...singleSurvey(chart), kujaNote(chart)]} id="ntp-match-single" />
+        <h3 class="ntp-sub">The other chart</h3>
+        <PartnerEntry target={partnerInput} prefix="pn" title="Enter the other person's birth details" empty="Enter the prospective match's birth details for the mutual verification." />
+        {pc && 'error' in pc && <p class="status status-bad" role="alert">{pc.error}</p>}
+        {p && (
+          <>
+            <h3 class="ntp-sub">Mutual verification of both charts</h3>
+            <CheckList checks={mutualChecks(chart, p)} id="ntp-match-mutual" />
+            <h3 class="ntp-sub">The kootams Iyer still checks</h3>
+            <CheckList checks={iyerKootams(chart, p)} id="ntp-match-kootams" />
+            <details class="ntp-more">
+              <summary>What the other chart says alone</summary>
+              <CheckList checks={[...singleSurvey(p), kujaNote(p)]} id="ntp-match-other" />
+            </details>
+          </>
+        )}
+      </div>
+    </section>
+  );
+}
+
 function ToneTag({ tone }: { tone: Tone }): JSX.Element {
   return <span class={`ntp-tag tone-${tone}`}>{TONE_WORD[tone]}</span>;
 }
@@ -256,6 +304,8 @@ function NtpPage({ chart }: { chart: ChartResult }): JSX.Element {
           <p class="hint-text">{t('ntp.bhuktiNote')}</p>
         </div>
       </section>
+
+      <IyerMatching chart={chart} />
 
       <section class="panel" aria-labelledby="h-ntp-how">
         <header class="panel-head"><h2 id="h-ntp-how">How this page reads the chart</h2></header>

@@ -5,6 +5,7 @@
  */
 import { useState } from 'preact/hooks';
 import type { JSX } from 'preact';
+import type { Signal } from '@preact/signals';
 import { PROFILES, type ChartInput, type ProfileId } from '../../engine';
 import { allPlaces, parseCoord, savePlace, zoneFor, type Place } from '../../io/places';
 import { decodeChartBytes, parseGeoVision, toGeoVision } from '../../io/geovision';
@@ -61,8 +62,20 @@ function parse(f: Fields): { input?: ChartInput; errors: Errors } {
   };
 }
 
-export function ChartForm(): JSX.Element {
-  const [f, setF] = useState<Fields>(() => toFields(chartInput.value ?? nowInput(lastPlace())));
+export interface ChartFormProps {
+  /** The signal the cast chart goes to (default: the main chart). */
+  target?: Signal<ChartInput | null>;
+  /** Prefix of every element id, so two forms can share a page. */
+  prefix?: string;
+  /** Called after a cast (default: fold the main form away). */
+  onDone?: () => void;
+  label?: string;
+}
+
+export function ChartForm({ target = chartInput, prefix = 'f', onDone, label }: ChartFormProps = {}): JSX.Element {
+  const main = target === chartInput;
+  const done = onDone ?? (() => { if (main) formOpen.value = false; });
+  const [f, setF] = useState<Fields>(() => toFields(target.value ?? nowInput(lastPlace())));
   const [errors, setErrors] = useState<Errors>({});
   const [note, setNote] = useState<MessageKey | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
@@ -95,8 +108,8 @@ export function ChartForm(): JSX.Element {
     if (!r.input) return;
     const p = places.find((q) => q.name === r.input!.place.name);
     rememberPlace(p ?? { name: r.input.place.name, lat: r.input.place.latDeg, lon: r.input.place.lonDeg, tz: r.input.tzHours });
-    chartInput.value = r.input;
-    formOpen.value = false;
+    target.value = r.input;
+    done();
   };
 
   const now = () => {
@@ -105,28 +118,28 @@ export function ChartForm(): JSX.Element {
     i.profileId = f.profile;
     setF(toFields(i));
     setErrors({});
-    chartInput.value = i;
-    formOpen.value = false;
+    target.value = i;
+    done();
   };
 
   const castInput = (i: ChartInput) => {
     setF(toFields(i));
     setErrors({});
-    chartInput.value = i;
-    formOpen.value = false;
+    target.value = i;
+    done();
   };
 
   const onOpenFile = async (file: File | undefined) => {
     if (!file) return;
     setFileError(null);
-    openedEvents.value = [];
+    if (main) openedEvents.value = [];
     try {
       const text = decodeChartBytes(new Uint8Array(await file.arrayBuffer()));
       if (/\.json$/i.test(file.name) || text.trimStart().startsWith('{')) {
         castInput(parseChartFile(text));
       } else {
         const imported = parseGeoVision(text, f.profile);
-        openedEvents.value = imported.events;
+        if (main) openedEvents.value = imported.events;
         castInput(imported.input);
       }
     } catch (err) {
@@ -161,52 +174,52 @@ export function ChartForm(): JSX.Element {
     const err = (errors as Record<string, MessageKey | undefined>)[id];
     return (
       <div class={`field field-${id}`}>
-        <label for={`f-${id}`}>{t(label)}</label>
+        <label for={`${prefix}-${id}`}>{t(label)}</label>
         {input}
-        {hint && !err && <small id={`h-${id}`} class="hint">{t(hint)}</small>}
-        {err && <small id={`e-${id}`} class="error" role="alert">{t(err)}</small>}
+        {hint && !err && <small id={`${prefix}h-${id}`} class="hint">{t(hint)}</small>}
+        {err && <small id={`${prefix}e-${id}`} class="error" role="alert">{t(err)}</small>}
       </div>
     );
   };
   const desc = (id: string, hint = false) =>
-    (errors as Record<string, unknown>)[id] ? `e-${id}` : hint ? `h-${id}` : undefined;
+    (errors as Record<string, unknown>)[id] ? `${prefix}e-${id}` : hint ? `${prefix}h-${id}` : undefined;
 
   return (
-    <form class="chart-form" onSubmit={submit} novalidate aria-label={t('form.title')}>
+    <form class="chart-form" onSubmit={submit} novalidate aria-label={label ?? t('form.title')}>
       {field('name', 'form.name',
-        <input id="f-name" value={f.name} placeholder={t('form.name.placeholder')} onInput={(e) => set('name', e.currentTarget.value)} />)}
+        <input id={`${prefix}-name`} value={f.name} placeholder={t('form.name.placeholder')} onInput={(e) => set('name', e.currentTarget.value)} />)}
       {field('date', 'form.date',
         <>
-          <input id="f-date" type="date" min="1800-01-01" max="2399-12-31" value={f.date} aria-invalid={!!errors.date}
-            aria-describedby={errors.date ? 'e-date' : 'h-date'} onInput={(e) => onDate(e.currentTarget.value)} />
-          {!errors.date && <small id="h-date" class="hint date-echo">{dateInWords(f.date)}</small>}
+          <input id={`${prefix}-date`} type="date" min="1800-01-01" max="2399-12-31" value={f.date} aria-invalid={!!errors.date}
+            aria-describedby={errors.date ? `${prefix}e-date` : `${prefix}h-date`} onInput={(e) => onDate(e.currentTarget.value)} />
+          {!errors.date && <small id={`${prefix}h-date`} class="hint date-echo">{dateInWords(f.date)}</small>}
         </>)}
       <div class="field field-time">
-        <TimeFields id="f-time" legend={t('form.time')} value={f.time} onChange={(v) => set('time', v)}
-          invalid={!!errors.time} describedBy={errors.time ? 'e-time' : undefined} />
-        {errors.time && <small id="e-time" class="error" role="alert">{t(errors.time)}</small>}
+        <TimeFields id={`${prefix}-time`} legend={t('form.time')} value={f.time} onChange={(v) => set('time', v)}
+          invalid={!!errors.time} describedBy={errors.time ? `${prefix}e-time` : undefined} />
+        {errors.time && <small id={`${prefix}e-time`} class="error" role="alert">{t(errors.time)}</small>}
       </div>
       {field('place', 'form.place',
         <>
-          <input id="f-place" list="kaast2-places" value={f.place} placeholder={t('form.place.placeholder')}
+          <input id={`${prefix}-place`} list={`${prefix}-places`} value={f.place} placeholder={t('form.place.placeholder')}
             autocomplete="off" onChange={(e) => onPlace(e.currentTarget.value)} onInput={(e) => onPlace(e.currentTarget.value)} />
-          <datalist id="kaast2-places">{places.map((p) => <option key={p.name} value={p.name} />)}</datalist>
+          <datalist id={`${prefix}-places`}>{places.map((p) => <option key={p.name} value={p.name} />)}</datalist>
         </>)}
       {field('lat', 'form.lat',
-        <input id="f-lat" autoComplete="off" value={f.lat} aria-invalid={!!errors.lat}
+        <input id={`${prefix}-lat`} autoComplete="off" value={f.lat} aria-invalid={!!errors.lat}
           aria-describedby={desc('lat', true)} onInput={(e) => set('lat', e.currentTarget.value)} />, 'form.lat.hint')}
       {field('lon', 'form.lon',
-        <input id="f-lon" autoComplete="off" value={f.lon} aria-invalid={!!errors.lon}
+        <input id={`${prefix}-lon`} autoComplete="off" value={f.lon} aria-invalid={!!errors.lon}
           aria-describedby={desc('lon', true)} onInput={(e) => set('lon', e.currentTarget.value)} />, 'form.lon.hint')}
       {field('tz', 'form.tz',
-        <input id="f-tz" inputMode="decimal" value={f.tz} aria-invalid={!!errors.tz}
+        <input id={`${prefix}-tz`} inputMode="decimal" value={f.tz} aria-invalid={!!errors.tz}
           aria-describedby={desc('tz')} onInput={(e) => set('tz', e.currentTarget.value)} />)}
       <div class="field field-dst">
         <label class="check"><input type="checkbox" checked={f.dst} onChange={(e) => set('dst', e.currentTarget.checked)} /> {t('form.dst')}</label>
       </div>
       <div class="field field-profile">
-        <label for="f-profile">{t('form.profile')}</label>
-        <select id="f-profile" value={f.profile} onChange={(e) => set('profile', e.currentTarget.value as ProfileId)}>
+        <label for={`${prefix}-profile`}>{t('form.profile')}</label>
+        <select id={`${prefix}-profile`} value={f.profile} onChange={(e) => set('profile', e.currentTarget.value as ProfileId)}>
           {Object.values(PROFILES).map((p) => <option key={p.id} value={p.id}>{p.label}</option>)}
         </select>
       </div>
@@ -223,7 +236,7 @@ export function ChartForm(): JSX.Element {
         <button type="button" class="btn btn-quiet" onClick={() => onSave('pl')}>{t('file.savePl')}</button>
       </div>
       {fileError && <p class="form-note error" role="alert">{fileError}</p>}
-      {openedEvents.value.length > 0 && (
+      {main && openedEvents.value.length > 0 && (
         <p class="form-note">{t('file.events')}{' '}
           {openedEvents.value.map((ev) => <button key={ev.name} type="button" class="btn btn-small" onClick={() => castInput(ev.input)}>{ev.name}</button>)}
         </p>

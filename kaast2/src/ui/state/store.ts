@@ -95,6 +95,24 @@ export const ntpChart = computed<{ ok: ChartResult } | { error: string } | null>
   catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
 });
 
+/* ---- Matching: a second chart (the prospective match) and, optionally, a first
+ * chart other than the main one. Never persisted (personal data). ---- */
+export type MatchRole = 'boy' | 'girl';
+export const partnerInput = signal<ChartInput | null>(null);
+export const matchFirstInput = signal<ChartInput | null>(null);
+/** Who the first chart is; the partner is the other. Kootas count from the girl's star to the boy's. */
+export const firstRole = signal<MatchRole>('boy');
+const castOrError = (inp: ChartInput | null, extra: ProfileOverrides = {}): { ok: ChartResult } | { error: string } | null => {
+  const e = engine.value;
+  if (e.status !== 'ready' || !inp) return null;
+  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, ...extra } }) }; }
+  catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
+};
+export const firstChart = computed(() => (matchFirstInput.value ? castOrError(matchFirstInput.value) : chart.value));
+export const partnerChart = computed(() => castOrError(partnerInput.value));
+/** The partner for Iyer's rules: mean node, as the NTP page. */
+export const ntpPartnerChart = computed(() => castOrError(partnerInput.value, ntpNode.value === 'mean' ? { node: 'mean' } : {}));
+
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
 export const ROUTES = ['page1', 'exp', 'strengths', 'vargas', 'dashas', 'kp', 'ntp', 'yogi', 'jaimini', 'transits', 'match', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];

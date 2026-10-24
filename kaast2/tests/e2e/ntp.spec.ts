@@ -17,7 +17,7 @@ test('NTP page: Yogi, Avayogi, sets of three, Zero Rasis, Dasha reading', async 
   await page.getByLabel('Hours', { exact: true }).fill('16:00:00');
   await page.getByLabel('Place').fill('Allahabad (Prayagraj)');
   await page.getByRole('button', { name: 'Cast chart' }).click();
-  await openTab(page, 'NTP');
+  await openTab(page, 'NTP (Research)');
 
   const yoga = page.getByTestId('ntp-yoga');
   // Panchanga yoga Vishkambha → star Pushyami → Yogi Saturn (NTP-1 p. 22); Saturn's enemy is the Moon (NTP-2 p. 6).
