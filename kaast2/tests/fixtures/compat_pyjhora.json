@@ -1,0 +1,6345 @@
+{
+ "_source": "PyJHora 4.8.7 jhora.horoscope.match.compatibility.Ashtakoota; pl_model = docs/specs/compatibility.md restated in Python (not an oracle)",
+ "_generator": "kaast2/oracle/compat_pyjhora.py (seed 20261024)",
+ "_conventions": {
+  "nak": "1..27 Ashwini..Revati",
+  "pada": "1..4",
+  "sign": "1..12 Aries..Pisces (PyJHora sign from pada)",
+  "lon": "pada-midpoint sidereal longitude, degrees",
+  "pyjhora.north": "points; *_ok/mahendra/sthree booleans = porutham present",
+  "pyjhora.south": "True = porutham present",
+  "pl_model.ashtakoota": "PL 7 X0 rules",
+  "pl_model.dashakoota": "PL 7 X1 (Kalaprakasika) rules"
+ },
+ "_pl_vs_pyjhora_north_disagreements": {
+  "tara": 30,
+  "total": 69,
+  "gana": 34,
+  "varna": 10,
+  "yoni": 35,
+  "vashya": 42,
+  "graha_maitri": 8
+ },
+ "cases": [
+  {
+   "id": "S01",
+   "boy": {
+    "nak": 4,
+    "pada": 2,
+    "sign": 2,
+    "lon": 45.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 4,
+    "pada": 2,
+    "sign": 2,
+    "lon": 45.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 4,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 25.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 3,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 3.0,
+     "yoni": 4.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 28.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 27,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 4.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 31.5
+    },
+    "total_bv_raman_of_36": 23.0
+   }
+  },
+  {
+   "id": "S02",
+   "boy": {
+    "nak": 2,
+    "pada": 1,
+    "sign": 1,
+    "lon": 15.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 2,
+    "pada": 1,
+    "sign": 1,
+    "lon": 15.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 4,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 25.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 3,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 3.0,
+     "yoni": 4.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 28.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 28,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 4.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 28.5
+    },
+    "total_bv_raman_of_36": 23.0
+   }
+  },
+  {
+   "id": "S03",
+   "boy": {
+    "nak": 1,
+    "pada": 1,
+    "sign": 1,
+    "lon": 1.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 2,
+    "pada": 3,
+    "sign": 1,
+    "lon": 21.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 5,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 30.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 32.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 1.0,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 32.0
+    },
+    "total_bv_raman_of_36": 29.0
+   }
+  },
+  {
+   "id": "S04",
+   "boy": {
+    "nak": 13,
+    "pada": 1,
+    "sign": 6,
+    "lon": 161.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 7,
+    "pada": 1,
+    "sign": 3,
+    "lon": 81.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 23.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": true,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 25.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 27.0
+    },
+    "total_bv_raman_of_36": 17.0
+   }
+  },
+  {
+   "id": "S05",
+   "boy": {
+    "nak": 9,
+    "pada": 1,
+    "sign": 4,
+    "lon": 108.333333,
+    "deg_in_sign": 18.333333
+   },
+   "girl": {
+    "nak": 3,
+    "pada": 1,
+    "sign": 1,
+    "lon": 28.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 1.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 4.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 22.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 4.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 23.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 26.0
+    },
+    "total_bv_raman_of_36": 14.0
+   }
+  },
+  {
+   "id": "S06",
+   "boy": {
+    "nak": 24,
+    "pada": 2,
+    "sign": 11,
+    "lon": 311.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 18,
+    "pada": 3,
+    "sign": 8,
+    "lon": 235.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 16.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 0.5,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 19.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 22.0
+    },
+    "total_bv_raman_of_36": 9.5
+   }
+  },
+  {
+   "id": "S07",
+   "boy": {
+    "nak": 5,
+    "pada": 1,
+    "sign": 2,
+    "lon": 55.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 14,
+    "pada": 3,
+    "sign": 7,
+    "lon": 181.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.5,
+     "gana": 1,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 8.5,
+     "mahendra": true,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": false,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 12.0
+    },
+    "dashakoota": {
+     "dina": 1.5,
+     "dina_text_code": 26,
+     "gana": 3.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 29.0
+    },
+    "total_bv_raman_of_36": 15.0
+   }
+  },
+  {
+   "id": "S08",
+   "boy": {
+    "nak": 19,
+    "pada": 2,
+    "sign": 9,
+    "lon": 245.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 9,
+    "pada": 4,
+    "sign": 4,
+    "lon": 118.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 20.0,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": true,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 3.0,
+     "yoni": 1.0,
+     "graha_maitri": 4.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 22.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 2.0,
+     "rajju": 0.0,
+     "vedha": 0.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 18.5
+    },
+    "total_bv_raman_of_36": 24.0
+   }
+  },
+  {
+   "id": "S09",
+   "boy": {
+    "nak": 10,
+    "pada": 1,
+    "sign": 5,
+    "lon": 121.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 27,
+    "pada": 4,
+    "sign": 12,
+    "lon": 358.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 9.0,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 1.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 12.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 22.5
+    },
+    "total_bv_raman_of_36": 11.0
+   }
+  },
+  {
+   "id": "S10",
+   "boy": {
+    "nak": 20,
+    "pada": 3,
+    "sign": 9,
+    "lon": 261.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 21,
+    "pada": 2,
+    "sign": 10,
+    "lon": 271.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 3,
+     "graha_maitri": 3.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 23.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 8,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 21.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 33.5
+    },
+    "total_bv_raman_of_36": 25.0
+   }
+  },
+  {
+   "id": "S11",
+   "boy": {
+    "nak": 22,
+    "pada": 1,
+    "sign": 10,
+    "lon": 281.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 21,
+    "pada": 4,
+    "sign": 10,
+    "lon": 278.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 1.0,
+     "gana": 5,
+     "tara": 0.0,
+     "yoni": 3,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 22.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 26.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 29.5
+    },
+    "total_bv_raman_of_36": 24.0
+   }
+  },
+  {
+   "id": "S12",
+   "boy": {
+    "nak": 1,
+    "pada": 1,
+    "sign": 1,
+    "lon": 1.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 5,
+    "pada": 4,
+    "sign": 3,
+    "lon": 65.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.5,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 27.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 0.5,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 27.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 33.0
+    },
+    "total_bv_raman_of_36": 27.5
+   }
+  },
+  {
+   "id": "S13",
+   "boy": {
+    "nak": 16,
+    "pada": 2,
+    "sign": 7,
+    "lon": 205.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 10,
+    "pada": 1,
+    "sign": 5,
+    "lon": 121.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 0.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 16.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": true,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 0.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 16.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 18,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 0.0,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 23.5
+    },
+    "total_bv_raman_of_36": 10.0
+   }
+  },
+  {
+   "id": "S14",
+   "boy": {
+    "nak": 12,
+    "pada": 4,
+    "sign": 6,
+    "lon": 158.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 6,
+    "pada": 1,
+    "sign": 3,
+    "lon": 68.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 23.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": true,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 24.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 27.0
+    },
+    "total_bv_raman_of_36": 16.0
+   }
+  },
+  {
+   "id": "S15",
+   "boy": {
+    "nak": 19,
+    "pada": 2,
+    "sign": 9,
+    "lon": 245.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 24,
+    "pada": 1,
+    "sign": 11,
+    "lon": 308.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 3.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 22.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 8,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 20.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 30.5
+    },
+    "total_bv_raman_of_36": 17.0
+   }
+  },
+  {
+   "id": "S16",
+   "boy": {
+    "nak": 10,
+    "pada": 1,
+    "sign": 5,
+    "lon": 121.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 7,
+    "pada": 1,
+    "sign": 3,
+    "lon": 81.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 0,
+     "graha_maitri": 4.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 21.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": false,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 0.0,
+     "graha_maitri": 4.0,
+     "gana": 1.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 22.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 1.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 0.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 22.0
+    },
+    "total_bv_raman_of_36": 17.0
+   }
+  },
+  {
+   "id": "S17",
+   "boy": {
+    "nak": 24,
+    "pada": 1,
+    "sign": 11,
+    "lon": 308.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 11,
+    "pada": 3,
+    "sign": 5,
+    "lon": 141.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 0.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 18.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 0.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 19.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 20.5
+    },
+    "total_bv_raman_of_36": 18.0
+   }
+  },
+  {
+   "id": "S18",
+   "boy": {
+    "nak": 13,
+    "pada": 2,
+    "sign": 6,
+    "lon": 165.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 25,
+    "pada": 2,
+    "sign": 11,
+    "lon": 325.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 13.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 9,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 4.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 15.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 34.5
+    },
+    "total_bv_raman_of_36": 19.0
+   }
+  },
+  {
+   "id": "S19",
+   "boy": {
+    "nak": 16,
+    "pada": 4,
+    "sign": 8,
+    "lon": 211.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 16,
+    "pada": 3,
+    "sign": 7,
+    "lon": 208.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 4,
+     "graha_maitri": 3.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 14.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 4.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 16.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 27,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 0.0,
+     "rasi": 0.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 0.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 13.5
+    },
+    "total_bv_raman_of_36": 12.0
+   }
+  },
+  {
+   "id": "S20",
+   "boy": {
+    "nak": 9,
+    "pada": 3,
+    "sign": 4,
+    "lon": 115.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 11,
+    "pada": 3,
+    "sign": 5,
+    "lon": 141.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 0,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 17.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": false,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 0.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 15.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 0.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 26.5
+    },
+    "total_bv_raman_of_36": 24.0
+   }
+  },
+  {
+   "id": "S21",
+   "boy": {
+    "nak": 3,
+    "pada": 1,
+    "sign": 1,
+    "lon": 28.333333,
+    "deg_in_sign": 28.333333
+   },
+   "girl": {
+    "nak": 27,
+    "pada": 4,
+    "sign": 12,
+    "lon": 358.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 1.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 10.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 1.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 11.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 3.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 25.0
+    },
+    "total_bv_raman_of_36": 12.0
+   }
+  },
+  {
+   "id": "S22",
+   "boy": {
+    "nak": 2,
+    "pada": 2,
+    "sign": 1,
+    "lon": 18.333333,
+    "deg_in_sign": 18.333333
+   },
+   "girl": {
+    "nak": 10,
+    "pada": 2,
+    "sign": 5,
+    "lon": 125.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 16.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 19.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 31.5
+    },
+    "total_bv_raman_of_36": 28.0
+   }
+  },
+  {
+   "id": "S23",
+   "boy": {
+    "nak": 5,
+    "pada": 3,
+    "sign": 3,
+    "lon": 61.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 3,
+    "pada": 3,
+    "sign": 2,
+    "lon": 35.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.5,
+     "gana": 1,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 19.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 17.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 21.0
+    },
+    "total_bv_raman_of_36": 15.0
+   }
+  },
+  {
+   "id": "S24",
+   "boy": {
+    "nak": 8,
+    "pada": 1,
+    "sign": 4,
+    "lon": 95.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 27,
+    "pada": 3,
+    "sign": 12,
+    "lon": 355.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 3,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 24.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 4.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 25.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 27.5
+    },
+    "total_bv_raman_of_36": 22.0
+   }
+  },
+  {
+   "id": "S25",
+   "boy": {
+    "nak": 11,
+    "pada": 4,
+    "sign": 5,
+    "lon": 145.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 2,
+    "pada": 1,
+    "sign": 1,
+    "lon": 15.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 14.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": true,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.5,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 17.5
+    },
+    "dashakoota": {
+     "dina": 1.5,
+     "dina_text_code": 26,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 29.5
+    },
+    "total_bv_raman_of_36": 16.0
+   }
+  },
+  {
+   "id": "S26",
+   "boy": {
+    "nak": 13,
+    "pada": 2,
+    "sign": 6,
+    "lon": 165.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 3,
+    "pada": 4,
+    "sign": 2,
+    "lon": 38.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.5,
+     "gana": 1,
+     "tara": 0.0,
+     "yoni": 3,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 18.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 21.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 24.0
+    },
+    "total_bv_raman_of_36": 20.0
+   }
+  },
+  {
+   "id": "S27",
+   "boy": {
+    "nak": 16,
+    "pada": 1,
+    "sign": 7,
+    "lon": 201.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 18,
+    "pada": 1,
+    "sign": 8,
+    "lon": 228.333333,
+    "deg_in_sign": 18.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 3.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 19.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 18.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 32.5
+    },
+    "total_bv_raman_of_36": 26.0
+   }
+  },
+  {
+   "id": "S28",
+   "boy": {
+    "nak": 22,
+    "pada": 4,
+    "sign": 10,
+    "lon": 291.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 6,
+    "pada": 3,
+    "sign": 3,
+    "lon": 75.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 20.5,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 4.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 23.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 0.0,
+     "vedha": 0.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 25.5
+    },
+    "total_bv_raman_of_36": 31.0
+   }
+  },
+  {
+   "id": "S29",
+   "boy": {
+    "nak": 23,
+    "pada": 2,
+    "sign": 10,
+    "lon": 298.333333,
+    "deg_in_sign": 28.333333
+   },
+   "girl": {
+    "nak": 1,
+    "pada": 1,
+    "sign": 1,
+    "lon": 1.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 20.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 0.5,
+     "gana": 1.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 20.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 1.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 25.5
+    },
+    "total_bv_raman_of_36": 19.5
+   }
+  },
+  {
+   "id": "S30",
+   "boy": {
+    "nak": 17,
+    "pada": 1,
+    "sign": 8,
+    "lon": 215.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 14,
+    "pada": 1,
+    "sign": 6,
+    "lon": 175.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 1,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 12.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 0.5,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 12.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 0.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 0.5,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 22.5
+    },
+    "total_bv_raman_of_36": 7.5
+   }
+  },
+  {
+   "id": "S31",
+   "boy": {
+    "nak": 10,
+    "pada": 2,
+    "sign": 5,
+    "lon": 125.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 6,
+    "pada": 1,
+    "sign": 3,
+    "lon": 68.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 4.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 22.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 4.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 22.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 18.5
+    },
+    "total_bv_raman_of_36": 14.0
+   }
+  },
+  {
+   "id": "S32",
+   "boy": {
+    "nak": 15,
+    "pada": 2,
+    "sign": 7,
+    "lon": 191.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 20,
+    "pada": 3,
+    "sign": 9,
+    "lon": 261.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.5,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 24.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 8,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 0.5,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 26.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 29.0
+    },
+    "total_bv_raman_of_36": 23.5
+   }
+  },
+  {
+   "id": "S33",
+   "boy": {
+    "nak": 23,
+    "pada": 4,
+    "sign": 11,
+    "lon": 305.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 18,
+    "pada": 1,
+    "sign": 8,
+    "lon": 228.333333,
+    "deg_in_sign": 18.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 24.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 0.5,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 25.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 23.0
+    },
+    "total_bv_raman_of_36": 18.5
+   }
+  },
+  {
+   "id": "S34",
+   "boy": {
+    "nak": 21,
+    "pada": 2,
+    "sign": 10,
+    "lon": 271.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 10,
+    "pada": 2,
+    "sign": 5,
+    "lon": 125.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 2.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 0.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 2.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 0.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 17.0
+    },
+    "total_bv_raman_of_36": 1.0
+   }
+  },
+  {
+   "id": "S35",
+   "boy": {
+    "nak": 22,
+    "pada": 2,
+    "sign": 10,
+    "lon": 285.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 2,
+    "pada": 2,
+    "sign": 1,
+    "lon": 18.333333,
+    "deg_in_sign": 18.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 27.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 0.5,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 27.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 31.0
+    },
+    "total_bv_raman_of_36": 25.5
+   }
+  },
+  {
+   "id": "S36",
+   "boy": {
+    "nak": 22,
+    "pada": 4,
+    "sign": 10,
+    "lon": 291.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 21,
+    "pada": 4,
+    "sign": 10,
+    "lon": 278.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 5,
+     "tara": 0.0,
+     "yoni": 3,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 23.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 25.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 29.5
+    },
+    "total_bv_raman_of_36": 24.0
+   }
+  },
+  {
+   "id": "S37",
+   "boy": {
+    "nak": 18,
+    "pada": 3,
+    "sign": 8,
+    "lon": 235.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 10,
+    "pada": 2,
+    "sign": 5,
+    "lon": 125.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 29.0,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 31.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 27.0
+    },
+    "total_bv_raman_of_36": 23.0
+   }
+  },
+  {
+   "id": "S38",
+   "boy": {
+    "nak": 7,
+    "pada": 2,
+    "sign": 3,
+    "lon": 85.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 22,
+    "pada": 4,
+    "sign": 10,
+    "lon": 291.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 23.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 4.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 22.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 30.0
+    },
+    "total_bv_raman_of_36": 23.0
+   }
+  },
+  {
+   "id": "S39",
+   "boy": {
+    "nak": 24,
+    "pada": 1,
+    "sign": 11,
+    "lon": 308.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 6,
+    "pada": 4,
+    "sign": 3,
+    "lon": 78.333333,
+    "deg_in_sign": 18.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 9.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 4.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 12.0
+    },
+    "dashakoota": {
+     "dina": 1.5,
+     "dina_text_code": 26,
+     "gana": 0.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 0.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 23.0
+    },
+    "total_bv_raman_of_36": 14.0
+   }
+  },
+  {
+   "id": "S40",
+   "boy": {
+    "nak": 8,
+    "pada": 4,
+    "sign": 4,
+    "lon": 105.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 11,
+    "pada": 4,
+    "sign": 5,
+    "lon": 145.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 15.5,
+     "mahendra": true,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 7,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 15.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 32.0
+    },
+    "total_bv_raman_of_36": 21.0
+   }
+  },
+  {
+   "id": "S41",
+   "boy": {
+    "nak": 13,
+    "pada": 2,
+    "sign": 6,
+    "lon": 165.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 23,
+    "pada": 3,
+    "sign": 11,
+    "lon": 301.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 1,
+     "tara": 0.0,
+     "yoni": 1,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 16.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 4.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 17.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 30.0
+    },
+    "total_bv_raman_of_36": 21.0
+   }
+  },
+  {
+   "id": "S42",
+   "boy": {
+    "nak": 9,
+    "pada": 4,
+    "sign": 4,
+    "lon": 118.333333,
+    "deg_in_sign": 28.333333
+   },
+   "girl": {
+    "nak": 12,
+    "pada": 3,
+    "sign": 6,
+    "lon": 155.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 1.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 20.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 8,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 1.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 22.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 0.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 25.5
+    },
+    "total_bv_raman_of_36": 20.0
+   }
+  },
+  {
+   "id": "S43",
+   "boy": {
+    "nak": 27,
+    "pada": 3,
+    "sign": 12,
+    "lon": 355.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 18,
+    "pada": 3,
+    "sign": 8,
+    "lon": 235.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 1.0,
+     "gana": 1,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 18.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 21.0
+    },
+    "dashakoota": {
+     "dina": 1.5,
+     "dina_text_code": 26,
+     "gana": 3.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 0.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 23.0
+    },
+    "total_bv_raman_of_36": 17.0
+   }
+  },
+  {
+   "id": "S44",
+   "boy": {
+    "nak": 21,
+    "pada": 3,
+    "sign": 10,
+    "lon": 275.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 4,
+    "pada": 2,
+    "sign": 2,
+    "lon": 45.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 1.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 0,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 13.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": false,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 0.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 15.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 0.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 30.0
+    },
+    "total_bv_raman_of_36": 19.0
+   }
+  },
+  {
+   "id": "S45",
+   "boy": {
+    "nak": 24,
+    "pada": 2,
+    "sign": 11,
+    "lon": 311.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 25,
+    "pada": 1,
+    "sign": 11,
+    "lon": 321.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 0.0,
+     "yoni": 1,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 16.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 17.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 28.5
+    },
+    "total_bv_raman_of_36": 14.0
+   }
+  },
+  {
+   "id": "S46",
+   "boy": {
+    "nak": 24,
+    "pada": 1,
+    "sign": 11,
+    "lon": 308.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 7,
+    "pada": 4,
+    "sign": 4,
+    "lon": 91.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 0.5,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 2.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 0.5,
+     "gana": 1.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 6.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 1.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 27.0
+    },
+    "total_bv_raman_of_36": 11.5
+   }
+  },
+  {
+   "id": "S47",
+   "boy": {
+    "nak": 13,
+    "pada": 1,
+    "sign": 6,
+    "lon": 161.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 23,
+    "pada": 1,
+    "sign": 10,
+    "lon": 295.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.5,
+     "gana": 1,
+     "tara": 0.0,
+     "yoni": 1,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 15.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 4.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 16.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 31.0
+    },
+    "total_bv_raman_of_36": 21.0
+   }
+  },
+  {
+   "id": "S48",
+   "boy": {
+    "nak": 26,
+    "pada": 4,
+    "sign": 12,
+    "lon": 345.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 3,
+    "pada": 2,
+    "sign": 2,
+    "lon": 31.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 1.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 22.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 0.5,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 22.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 27.0
+    },
+    "total_bv_raman_of_36": 22.5
+   }
+  },
+  {
+   "id": "S49",
+   "boy": {
+    "nak": 15,
+    "pada": 1,
+    "sign": 7,
+    "lon": 188.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 10,
+    "pada": 4,
+    "sign": 5,
+    "lon": 131.666667,
+    "deg_in_sign": 11.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 1,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 0.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 11.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": true,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 0.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 11.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 0.0,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 18.5
+    },
+    "total_bv_raman_of_36": 8.0
+   }
+  },
+  {
+   "id": "S50",
+   "boy": {
+    "nak": 4,
+    "pada": 3,
+    "sign": 2,
+    "lon": 48.333333,
+    "deg_in_sign": 18.333333
+   },
+   "girl": {
+    "nak": 9,
+    "pada": 1,
+    "sign": 4,
+    "lon": 108.333333,
+    "deg_in_sign": 18.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 1.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 11.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 0.5,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 11.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 25.5
+    },
+    "total_bv_raman_of_36": 10.5
+   }
+  },
+  {
+   "id": "S51",
+   "boy": {
+    "nak": 23,
+    "pada": 1,
+    "sign": 10,
+    "lon": 295.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 23,
+    "pada": 2,
+    "sign": 10,
+    "lon": 298.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 4,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 25.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 3,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 3.0,
+     "yoni": 4.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 28.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 28,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 4.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 28.5
+    },
+    "total_bv_raman_of_36": 23.0
+   }
+  },
+  {
+   "id": "S52",
+   "boy": {
+    "nak": 24,
+    "pada": 4,
+    "sign": 11,
+    "lon": 318.333333,
+    "deg_in_sign": 18.333333
+   },
+   "girl": {
+    "nak": 4,
+    "pada": 2,
+    "sign": 2,
+    "lon": 45.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.5,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 26.0,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": false,
+     "vedha": false,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 24.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 26.5
+    },
+    "total_bv_raman_of_36": 22.0
+   }
+  },
+  {
+   "id": "S53",
+   "boy": {
+    "nak": 2,
+    "pada": 1,
+    "sign": 1,
+    "lon": 15.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 2,
+    "pada": 4,
+    "sign": 1,
+    "lon": 25.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 4,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 25.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 3,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 3.0,
+     "yoni": 4.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 28.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 28,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 4.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 28.5
+    },
+    "total_bv_raman_of_36": 23.0
+   }
+  },
+  {
+   "id": "S54",
+   "boy": {
+    "nak": 16,
+    "pada": 4,
+    "sign": 8,
+    "lon": 211.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 22,
+    "pada": 4,
+    "sign": 10,
+    "lon": 291.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 13.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 0.5,
+     "gana": 1.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 14.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 19,
+     "gana": 1.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 30.0
+    },
+    "total_bv_raman_of_36": 14.5
+   }
+  },
+  {
+   "id": "S55",
+   "boy": {
+    "nak": 18,
+    "pada": 3,
+    "sign": 8,
+    "lon": 235.0,
+    "deg_in_sign": 25.0
+   },
+   "girl": {
+    "nak": 27,
+    "pada": 4,
+    "sign": 12,
+    "lon": 358.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 18.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 1.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 22.0
+    },
+    "dashakoota": {
+     "dina": 1.5,
+     "dina_text_code": 26,
+     "gana": 3.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 0.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 27.5
+    },
+    "total_bv_raman_of_36": 25.0
+   }
+  },
+  {
+   "id": "S56",
+   "boy": {
+    "nak": 12,
+    "pada": 4,
+    "sign": 6,
+    "lon": 158.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 8,
+    "pada": 3,
+    "sign": 4,
+    "lon": 101.666667,
+    "deg_in_sign": 11.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 1.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 26.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 1.0,
+     "gana": 5.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 26.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 5.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 19.0
+    },
+    "total_bv_raman_of_36": 17.0
+   }
+  },
+  {
+   "id": "S57",
+   "boy": {
+    "nak": 12,
+    "pada": 2,
+    "sign": 6,
+    "lon": 151.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 27,
+    "pada": 3,
+    "sign": 12,
+    "lon": 355.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 25.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 8,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 0.5,
+     "gana": 5.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 25.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 5.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 27.5
+    },
+    "total_bv_raman_of_36": 28.5
+   }
+  },
+  {
+   "id": "S58",
+   "boy": {
+    "nak": 4,
+    "pada": 4,
+    "sign": 2,
+    "lon": 51.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 12,
+    "pada": 4,
+    "sign": 6,
+    "lon": 158.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.5,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 1,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 21.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 8,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 26.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 33.0
+    },
+    "total_bv_raman_of_36": 32.0
+   }
+  },
+  {
+   "id": "S59",
+   "boy": {
+    "nak": 20,
+    "pada": 2,
+    "sign": 9,
+    "lon": 258.333333,
+    "deg_in_sign": 18.333333
+   },
+   "girl": {
+    "nak": 9,
+    "pada": 4,
+    "sign": 4,
+    "lon": 118.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 16.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": true,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 4.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 16.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 19.5
+    },
+    "total_bv_raman_of_36": 16.0
+   }
+  },
+  {
+   "id": "S60",
+   "boy": {
+    "nak": 1,
+    "pada": 4,
+    "sign": 1,
+    "lon": 11.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 10,
+    "pada": 2,
+    "sign": 5,
+    "lon": 125.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 1,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 17.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": false,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 3.0,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 20.0
+    },
+    "dashakoota": {
+     "dina": 1.5,
+     "dina_text_code": 26,
+     "gana": 3.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 32.5
+    },
+    "total_bv_raman_of_36": 26.0
+   }
+  },
+  {
+   "id": "S61",
+   "boy": {
+    "nak": 23,
+    "pada": 4,
+    "sign": 11,
+    "lon": 305.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 8,
+    "pada": 1,
+    "sign": 4,
+    "lon": 95.0,
+    "deg_in_sign": 5.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 0.5,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 3.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 0.5,
+     "gana": 1.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 4.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 1.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 25.5
+    },
+    "total_bv_raman_of_36": 9.5
+   }
+  },
+  {
+   "id": "S62",
+   "boy": {
+    "nak": 1,
+    "pada": 2,
+    "sign": 1,
+    "lon": 5.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 4,
+    "pada": 1,
+    "sign": 2,
+    "lon": 41.666667,
+    "deg_in_sign": 11.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 3.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 23.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 9,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 21.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 31.5
+    },
+    "total_bv_raman_of_36": 25.0
+   }
+  },
+  {
+   "id": "S63",
+   "boy": {
+    "nak": 2,
+    "pada": 3,
+    "sign": 1,
+    "lon": 21.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 23,
+    "pada": 2,
+    "sign": 10,
+    "lon": 298.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 0,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 12.0,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": false,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": true,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 0.0,
+     "graha_maitri": 0.5,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 11.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 0.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 0.5,
+     "vasya": 2.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 19.0
+    },
+    "total_bv_raman_of_36": 3.5
+   }
+  },
+  {
+   "id": "S64",
+   "boy": {
+    "nak": 22,
+    "pada": 3,
+    "sign": 10,
+    "lon": 288.333333,
+    "deg_in_sign": 18.333333
+   },
+   "girl": {
+    "nak": 7,
+    "pada": 3,
+    "sign": 3,
+    "lon": 88.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 22.5,
+     "mahendra": true,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 9,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 4.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 23.0
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 34.0
+    },
+    "total_bv_raman_of_36": 28.0
+   }
+  },
+  {
+   "id": "S65",
+   "boy": {
+    "nak": 1,
+    "pada": 2,
+    "sign": 1,
+    "lon": 5.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 17,
+    "pada": 4,
+    "sign": 8,
+    "lon": 225.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 1.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 22.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 24.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 25.0
+    },
+    "total_bv_raman_of_36": 24.0
+   }
+  },
+  {
+   "id": "S66",
+   "boy": {
+    "nak": 10,
+    "pada": 3,
+    "sign": 5,
+    "lon": 128.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 8,
+    "pada": 3,
+    "sign": 4,
+    "lon": 101.666667,
+    "deg_in_sign": 11.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 17.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 4,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 1.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 18.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 19.5
+    },
+    "total_bv_raman_of_36": 16.0
+   }
+  },
+  {
+   "id": "S67",
+   "boy": {
+    "nak": 27,
+    "pada": 2,
+    "sign": 12,
+    "lon": 351.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 1,
+    "pada": 3,
+    "sign": 1,
+    "lon": 8.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 1.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 23.0,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 6,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 24.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 32.5
+    },
+    "total_bv_raman_of_36": 29.0
+   }
+  },
+  {
+   "id": "S68",
+   "boy": {
+    "nak": 12,
+    "pada": 1,
+    "sign": 5,
+    "lon": 148.333333,
+    "deg_in_sign": 28.333333
+   },
+   "girl": {
+    "nak": 22,
+    "pada": 2,
+    "sign": 10,
+    "lon": 285.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 2,
+     "graha_maitri": 0.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 17.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 0.0,
+     "gana": 5.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 18.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 5.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 31.5
+    },
+    "total_bv_raman_of_36": 23.0
+   }
+  },
+  {
+   "id": "S69",
+   "boy": {
+    "nak": 9,
+    "pada": 4,
+    "sign": 4,
+    "lon": 118.333333,
+    "deg_in_sign": 28.333333
+   },
+   "girl": {
+    "nak": 2,
+    "pada": 1,
+    "sign": 1,
+    "lon": 15.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 1.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 4.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 24.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 4.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 25.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 21.5
+    },
+    "total_bv_raman_of_36": 19.0
+   }
+  },
+  {
+   "id": "S70",
+   "boy": {
+    "nak": 21,
+    "pada": 1,
+    "sign": 9,
+    "lon": 268.333333,
+    "deg_in_sign": 28.333333
+   },
+   "girl": {
+    "nak": 7,
+    "pada": 1,
+    "sign": 3,
+    "lon": 81.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 0.5,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 28.0,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 0.5,
+     "gana": 5.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 26.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 5.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.5,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 26.5
+    },
+    "total_bv_raman_of_36": 26.5
+   }
+  },
+  {
+   "id": "S71",
+   "boy": {
+    "nak": 19,
+    "pada": 2,
+    "sign": 9,
+    "lon": 245.0,
+    "deg_in_sign": 5.0
+   },
+   "girl": {
+    "nak": 3,
+    "pada": 1,
+    "sign": 1,
+    "lon": 28.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.5,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 23.0,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 24.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 32.5
+    },
+    "total_bv_raman_of_36": 32.0
+   }
+  },
+  {
+   "id": "S72",
+   "boy": {
+    "nak": 23,
+    "pada": 3,
+    "sign": 11,
+    "lon": 301.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 7,
+    "pada": 2,
+    "sign": 3,
+    "lon": 85.0,
+    "deg_in_sign": 25.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 4.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 17.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 4.0,
+     "gana": 1.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 19.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 1.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 4.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 31.0
+    },
+    "total_bv_raman_of_36": 26.0
+   }
+  },
+  {
+   "id": "S73",
+   "boy": {
+    "nak": 11,
+    "pada": 3,
+    "sign": 5,
+    "lon": 141.666667,
+    "deg_in_sign": 21.666667
+   },
+   "girl": {
+    "nak": 24,
+    "pada": 3,
+    "sign": 11,
+    "lon": 315.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 0.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 19.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 0.0,
+     "gana": 0.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 20.5
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 3.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 0.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 24.5
+    },
+    "total_bv_raman_of_36": 22.0
+   }
+  },
+  {
+   "id": "S74",
+   "boy": {
+    "nak": 4,
+    "pada": 1,
+    "sign": 2,
+    "lon": 41.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 2,
+    "pada": 2,
+    "sign": 1,
+    "lon": 18.333333,
+    "deg_in_sign": 18.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 3,
+     "graha_maitri": 3.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 23.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 2.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 20.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 0.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 1.0,
+     "gothra": 0.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 20.0
+    },
+    "total_bv_raman_of_36": 17.0
+   }
+  },
+  {
+   "id": "S75",
+   "boy": {
+    "nak": 10,
+    "pada": 3,
+    "sign": 5,
+    "lon": 128.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 9,
+    "pada": 2,
+    "sign": 4,
+    "lon": 111.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 0.0,
+     "yoni": 0,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 13.0,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": false,
+     "yoni": false,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 1,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 1.0,
+     "tara": 3.0,
+     "yoni": 0.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 15.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 0.0,
+     "yoni": 0.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 23.0
+    },
+    "total_bv_raman_of_36": 14.0
+   }
+  },
+  {
+   "id": "S76",
+   "boy": {
+    "nak": 5,
+    "pada": 3,
+    "sign": 3,
+    "lon": 61.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 7,
+    "pada": 4,
+    "sign": 4,
+    "lon": 91.666667,
+    "deg_in_sign": 1.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 1.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 17.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 7,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 18.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 31.5
+    },
+    "total_bv_raman_of_36": 26.0
+   }
+  },
+  {
+   "id": "S77",
+   "boy": {
+    "nak": 16,
+    "pada": 4,
+    "sign": 8,
+    "lon": 211.666667,
+    "deg_in_sign": 1.666667
+   },
+   "girl": {
+    "nak": 3,
+    "pada": 1,
+    "sign": 1,
+    "lon": 28.333333,
+    "deg_in_sign": 28.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 6,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 5.0,
+     "bhakoot": 0,
+     "nadi": 0,
+     "total": 16.5,
+     "mahendra": false,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": false,
+     "vasya": true,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 1.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 0.0,
+     "nadi": 0.0,
+     "total": 15.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 5.0,
+     "vasya": 2.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 31.0
+    },
+    "total_bv_raman_of_36": 22.0
+   }
+  },
+  {
+   "id": "S78",
+   "boy": {
+    "nak": 17,
+    "pada": 2,
+    "sign": 8,
+    "lon": 218.333333,
+    "deg_in_sign": 8.333333
+   },
+   "girl": {
+    "nak": 4,
+    "pada": 2,
+    "sign": 2,
+    "lon": 45.0,
+    "deg_in_sign": 15.0
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 2.0,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 3.0,
+     "bhakoot": 7,
+     "nadi": 8,
+     "total": 29.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 8,
+     "minimum_porutham": true
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 1.0,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 1.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 8.0,
+     "total": 27.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 7,
+     "gana": 6.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 0.5,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 25.5
+    },
+    "total_bv_raman_of_36": 25.0
+   }
+  },
+  {
+   "id": "S79",
+   "boy": {
+    "nak": 17,
+    "pada": 3,
+    "sign": 8,
+    "lon": 221.666667,
+    "deg_in_sign": 11.666667
+   },
+   "girl": {
+    "nak": 11,
+    "pada": 3,
+    "sign": 5,
+    "lon": 141.666667,
+    "deg_in_sign": 21.666667
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 1,
+     "vashya": 0.0,
+     "gana": 5,
+     "tara": 1.5,
+     "yoni": 2,
+     "graha_maitri": 5.0,
+     "bhakoot": 7,
+     "nadi": 0,
+     "total": 21.5,
+     "mahendra": true,
+     "vedha_ok": false,
+     "rajju_ok": false,
+     "sthree_dheerga": false
+    },
+    "south": {
+     "dina": true,
+     "gana": true,
+     "mahendra": true,
+     "sthree_dheerga": false,
+     "yoni": true,
+     "rasi": false,
+     "rasyadhipati": false,
+     "vasya": false,
+     "rajju": true,
+     "vedha": false,
+     "count_of_10": 5,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 1.0,
+     "vashya": 0.0,
+     "tara": 1.5,
+     "yoni": 3.0,
+     "graha_maitri": 5.0,
+     "gana": 6.0,
+     "bhakoot": 7.0,
+     "nadi": 0.0,
+     "total": 23.5
+    },
+    "dashakoota": {
+     "dina": 0.0,
+     "dina_text_code": 2,
+     "gana": 6.0,
+     "mahendra": 2.0,
+     "stree_deergha": 0.0,
+     "yoni": 2.0,
+     "rasi": 3.5,
+     "rasyadhipati": 5.0,
+     "vasya": 0.0,
+     "rajju": 4.0,
+     "vedha": 1.0,
+     "gender": 1.0,
+     "gothra": 1.0,
+     "caste": 1.0,
+     "total_kalaprakasika_of_44": 26.5
+    },
+    "total_bv_raman_of_36": 15.0
+   }
+  },
+  {
+   "id": "S80",
+   "boy": {
+    "nak": 24,
+    "pada": 3,
+    "sign": 11,
+    "lon": 315.0,
+    "deg_in_sign": 15.0
+   },
+   "girl": {
+    "nak": 26,
+    "pada": 2,
+    "sign": 12,
+    "lon": 338.333333,
+    "deg_in_sign": 8.333333
+   },
+   "pyjhora": {
+    "north": {
+     "varna": 0,
+     "vashya": 0.0,
+     "gana": 0,
+     "tara": 1.5,
+     "yoni": 1,
+     "graha_maitri": 3.0,
+     "bhakoot": 0,
+     "nadi": 8,
+     "total": 13.5,
+     "mahendra": false,
+     "vedha_ok": true,
+     "rajju_ok": true,
+     "sthree_dheerga": true
+    },
+    "south": {
+     "dina": false,
+     "gana": false,
+     "mahendra": false,
+     "sthree_dheerga": true,
+     "yoni": true,
+     "rasi": true,
+     "rasyadhipati": true,
+     "vasya": false,
+     "rajju": true,
+     "vedha": true,
+     "count_of_10": 6,
+     "minimum_porutham": false
+    }
+   },
+   "pl_model": {
+    "ashtakoota": {
+     "varna": 0.0,
+     "vashya": 0.5,
+     "tara": 1.5,
+     "yoni": 2.0,
+     "graha_maitri": 1.0,
+     "gana": 0.0,
+     "bhakoot": 0.0,
+     "nadi": 8.0,
+     "total": 13.0
+    },
+    "dashakoota": {
+     "dina": 3.0,
+     "dina_text_code": 1,
+     "gana": 0.0,
+     "mahendra": 0.0,
+     "stree_deergha": 2.0,
+     "yoni": 2.0,
+     "rasi": 7.0,
+     "rasyadhipati": 1.0,
+     "vasya": 0.0,
+     "rajju": 8.0,
+     "vedha": 2.0,
+     "gender": 0.5,
+     "gothra": 0.0,
+     "caste": 0.0,
+     "total_kalaprakasika_of_44": 25.5
+    },
+    "total_bv_raman_of_36": 21.0
+   }
+  }
+ ]
+}
