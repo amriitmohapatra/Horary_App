@@ -10,8 +10,42 @@ Format: `- **ID** · **Title.** Condition → meaning/procedure · (cite) · gra
   chart) / CLEAR / UNCLEAR (why).
 - status: EXISTS / COMPUTABLE / GUIDANCE / HORARY / REJECTED-TRADITION.
 
-**ID range.** This file uses KP3-001 … KP3-219. Agent b3b (B3-41 onward) should not reuse
-these numbers.
+**ID range.** This file uses KP3-001 … KP3-193 and KP3-200 … KP3-219 (194–199 unused: 213
+rules). Agent b3b (B3-41 onward) should not reuse these numbers.
+
+### Quick reference: house groups per matter in B3-00 … B3-40
+
+| Matter | "Yes" houses to be signified | Denial / adverse | Timing procedure in B3 | Rules |
+|---|---|---|---|---|
+| Health, vitality | 1 (ascendant CSL and its star free of 6, 8, 12) | 6 disease, 8 danger, 12 hospital/isolation | illness: conjoined periods of significators of 1 + 6; cure: sub-period of significators of 11 (and 5) | KP3-035, 063, 091–093, 162–163, 168 |
+| Longevity | 1, 8, 3 | maraka 2, 7; 12; badhaka (11th movable, 9th fixed, 7th common lagna) | conjoined periods of the strongest badhaka/maraka significators, then transit | KP3-077–080, 085–087 |
+| Wealth | 2, 6, 10, 11 (sub lord a significator of 2, 6 or 11) | 8, 12 (star or sub) | conjoined periods of planet and its sub lord | KP3-095–097 |
+| Lottery, competition, litigation | 1, 2, 3, 6, 10, 11 (5 = urge to speculate) | 4, 5, 7, 8, 9, 12 | period lords' transits by star/sub; weekday and Moon-star ruled by them | KP3-104–106 |
+| Races / speculation | dasa lord linked with 5 and 2; 6 = opponent's loss | — | Jupiter transiting the dasa lord's sign (and sub) | KP3-107, 120 |
+| Borrowing | 2 + 6 (also 10, 11 = receipts) | — | conjoined periods of significators of 2 and 6 | KP3-108, 111–112, 115 |
+| Repayment, free from debts | 4, 5, 8, 12 (8th CSL sig of 2, 10, 11 = repays with ease) | 8th CSL sig of 5, 6, 8, 12 = mounting debts; planets in 4/5/8/12 with such subs block repayment | conjoined periods; day/star of the significators | KP3-108–110, 115–116 |
+| Contract / agreement | 3, 9 | — | conjoined periods | KP3-116 |
+| Theft: recovery (horary) | 2, 4, 11 (11th lord's strength; retrograde 11th lord = temporary loss) | 11th lord direct in 12 with 11 vacant = never | after the 11th lord's station direct, when it transits the star of the 6th lord (12th from 7) in a sub of a 2nd/11th significator | KP3-156–157 |
+| Siblings: plurality | 3rd CSL in a dual sign or a dual-sign planet's star | — | — | KP3-127 |
+| Siblings: harmony / danger | 3 + 11 + 1 (harmony); 3 + 2 + 11 (co-borns) | 1 + 3, 6, 8 (enmity); 3rd CSL sig of 8 or 10 (danger) | dasa of the sibling's own ruling planets | KP3-129–130 |
+| Mother | 4th as her lagna | 4th cusp and Moon in star of sig of 9, 11, 3 with sub of the 4th's badhaka/maraka lord | dasa remains the native's | KP3-132–133 |
+| House purchase | 4, 11, 12 (+ 6 or 9 to take possession); acquisition 2, 4, 11; link with Mars | sale 3, 5, 10; lords 4 + 8 = sells; 4 + 12 + Sun = fire/auction | conjoined periods; query-moment ruling planets; Sun/Venus over the query Moon's degree | KP3-134–138, 160, 123 |
+| Vehicle | 4, 9, 10, 11 + Venus (4th CSL in star of a 4th significator, linked to Venus) | lords of 6, 8, 12 or Rahu in 4 = hired or others' vehicles | conjoined periods of lords 4 and 6 (loan purchase) + favourable transit aspects | KP3-142–143 |
+| Education | 4, 9, 11 (lords of 4 and 9 in sub of an 11th significator) | ends: 3, 5, 8 | dasa lord linked with 4 and 9 | KP3-145–147 |
+| Scholarship / paid study | scholarship 4, 6, 11 | paid study 4, 8, 12 | — | KP3-148 |
+| Higher study abroad | 9 + 12 with an 11th significator | — | — | KP3-149 |
+| Marriage | 2, 7, 11 | 6 (12th from 7) shown in B3; full denial group 1, 6, 10 only in B4 | conjoined dasa/bhukti/anthra of significators, day ruled by them | KP3-151, 026, 065 |
+| Partnership ends (horary) | badhaka and maraka of the 7th | — | RP-filtered significators down to sookshma + transit | KP3-153 |
+| Overseas | 12th CSL a significator of 3, 9 or 12 (preferably 9) | 12th CSL in 8 (12th from 9) | conjoined periods of significators of 3, 9, 12 | KP3-170–172 |
+| Service / profession | 2, 6, 10 | end of service 1, 5, 9 | strongest (node) significators; Moon in their stars on the day | KP3-175, 103 |
+| Business vs service | 2nd CSL sig of 1, 7, 10 = business; 1, 2, 6 or 10 without 7 = service | planets in 7 in the star of lords of 8, 12 = bad | — | KP3-051, 177 |
+| Farming | 2, 6, 10 with Mars, Venus, Moon, Jupiter | — | conjoined periods of those planets | KP3-150 |
+| Retirement | 1, 5, 9 | — | Sun transiting sign of dasa lord / star of bhukti lord / sub of anthra lord | KP3-103, 118 |
+| Disease nature | 6th CSL + sign of its star lord + sub | — | — | KP3-165 |
+| Blindness | 2 (right eye), 12 (left eye) with Sun, Moon, Venus | — | conjoined periods | KP3-167 |
+| Speech | 2nd CSL (planet nature) | node as 2nd CSL or in 2 = defect | — | KP3-169 |
+| Place of death | 8th CSL sig 1, 4, 10 = home; 3 = short journey; 9 = far away; 6, 8, 12 = hospital/jail | — | 8th-cusp lords' conjoined periods | KP3-085–087 |
+| Change of job | **not stated** in B3-00…40 (only the vault chapter title says "9th house explains"; see B6-33) | — | — | — |
 
 **What "significator of house H" means in B3** (used by every rule below). It means any of:
 (1) a planet in the star of an occupant of H; (2) an occupant of H; (3) a planet in the star
