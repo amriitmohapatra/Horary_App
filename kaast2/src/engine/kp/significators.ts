@@ -9,7 +9,7 @@
  *   5 planets conjoined with (same sign) or aspected by (Parashari sign
  *     aspects, Ma 4/8, Ju 5/9, Sa 3/10 — the aspects B6's examples use,
  *     KP6-038) those significators: the aspected planet gains the results
- *     of the one aspecting it (B3 p. 333; B4 p. 179, Venus aspected by Mars
+ *     of the one aspecting it (B3 pp. 332–335; B4 p. 179, Venus aspected by Mars
  *     and Saturn gives their matters, KP4-159).
  * A star holding no planet makes its lord a strong significator itself
  * ("the Secretary does the job", KP6-022).
