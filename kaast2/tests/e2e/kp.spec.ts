@@ -30,7 +30,7 @@ async function cast(page: Page) {
 test('KP page: Krishnamurti ayanamsa by default, chart, cusps and significators', async ({ page }) => {
   const errors = await cast(page);
   const moonPage1 = arcsec(await page.getByTestId('planet-table').locator('tr[data-point="Mo"] td').first().innerText());
-  await openTab(page, 'KP');
+  await openTab(page, 'KP (Research)');
   await expect(page.getByTestId('kp-used')).toContainText('Krishnamurti');
   await expect(page.getByTestId('kp-used')).toContainText('Placidus');
   await expect(page.getByRole('img', { name: /Krishnamurti chart/ })).toBeVisible();

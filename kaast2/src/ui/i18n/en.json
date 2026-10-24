@@ -374,7 +374,7 @@
   "places.error.name": "Enter a name for the place.",
   "places.error.lat": "Enter the latitude, e.g. 21.7033 or 21 42 12 N.",
   "places.error.lon": "Enter the longitude, e.g. 84.0314 or 84 01 53 E.",
-  "nav.kp": "KP",
+  "nav.kp": "KP (Research)",
   "kp.calc": "Krishnamurti (KP)",
   "kp.ayanamsa": "KP ayanamsa",
   "kp.ayan.auto": "Automatic — as PL's KP pages",
