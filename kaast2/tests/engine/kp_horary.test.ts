@@ -100,7 +100,7 @@ import { kpSignifications } from '../../src/engine/kp/significators';
 import { cuspTest } from '../../src/engine/kp/matters';
 
 /**
- * B6 judgements that state their verdict from a cusp's sub lord (KP6-061).
+ * B6 judgements that state their judgement from a cusp's sub lord (KP6-061).
  * Not here: b6-E04 (its printed cusps fit no latitude: the book's Jupiter is
  * in 2, ours in 3); b6-E26 (Rahu sub: the node's set reaches nearly every
  * house; Krishnamurti denies because Rahu sits in the 12th, p. 209); the 11th
