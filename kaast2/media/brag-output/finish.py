@@ -7,6 +7,8 @@ The poster (frame 0 of the video, also brag.jpg) is the frame at poster_time_s (
 settled title, 1.6 s into s2).
 """
 import json, os, shutil, subprocess, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib'))
+from soundtrack import loudnorm_args  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__)); W = os.path.join(HERE, 'work')
 T = json.load(open(os.path.join(W, 'timing.json')))
@@ -31,7 +33,7 @@ shutil.copy(f0, orig); shutil.copy(src, f0)
 try:
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(FPS), '-i', os.path.join(comp, 'f%05d.jpg'), '-i', mix,
                     '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-crf', '17', '-preset', 'slow', '-pix_fmt', 'yuv420p',
-                    '-c:a', 'aac', '-b:a', '192k', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', '48000',
+                    '-c:a', 'aac', '-b:a', '192k', '-af', loudnorm_args(mix), '-ar', '48000',
                     '-shortest', '-movflags', '+faststart', os.path.join(HERE, 'brag.mp4')], check=True)
 finally:
     shutil.copy(orig, f0)  # keep the rendered frames as rendered

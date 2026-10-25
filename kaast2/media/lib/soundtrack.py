@@ -110,3 +110,14 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+def loudnorm_args(src, target=-16.0):
+    """ffmpeg -af value bringing `src` to `target` LUFS with ONE fixed gain plus a peak limiter.
+    (loudnorm rides the gain, and even its linear mode falls back to that when peaks would clip,
+    which lifts quiet passages such as the conch up to the level of the voice.)"""
+    import subprocess, re
+    err = subprocess.run(['ffmpeg', '-nostats', '-i', src, '-vn', '-af', 'ebur128', '-f', 'null', '-'],
+                         capture_output=True, text=True).stderr
+    measured = float(re.findall(r'^\s+I:\s+(-?[\d.]+) LUFS', err, re.M)[-1])
+    return f"volume={target - measured:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=false"

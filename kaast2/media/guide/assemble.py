@@ -15,7 +15,7 @@ from scipy.signal import resample_poly
 HERE = os.path.dirname(os.path.abspath(__file__))
 W = os.path.join(HERE, 'work'); OUT = os.path.join(HERE, 'out')
 sys.path.insert(0, os.path.join(HERE, '..', 'lib'))
-from soundtrack import conch, reverb  # noqa: E402
+from soundtrack import conch, reverb, loudnorm_args  # noqa: E402
 SR = 48000; FPS = 30; CARD = 3.8
 TAIL = 1.5  # seconds of quiet picture after a chapter's last words
 
@@ -60,7 +60,7 @@ def chapter(cid, texts):
 def card(cid):
     png = os.path.join(W, 'cards', f'{cid}.png'); out = os.path.join(W, 'cards', f'{cid}.mp4')
     n = int(CARD * SR); a = np.zeros(n)
-    c = reverb(np.concatenate([conch(), np.zeros(SR)]), secs=3.0, mix=0.35) * 0.16  # soft conch, well under the voice
+    c = reverb(np.concatenate([conch(), np.zeros(SR)]), secs=3.0, mix=0.35) * 0.05  # soft conch, about 9 dB under the narration
     s = int(0.2 * SR); a[s:s + len(c)] += c[: n - s]
     a[-int(0.6 * SR):] *= np.linspace(1, 0, int(0.6 * SR))
     wav = out.replace('.mp4', '.wav'); sf.write(wav, np.stack([a, a], 1).astype(np.float32), SR)
@@ -101,7 +101,7 @@ def main():
             f.write(f"[CHAPTER]\nTIMEBASE=1/1000\nSTART={int(a * 1000)}\nEND={int(end * 1000)}\ntitle={title}\n")
     final = os.path.join(OUT, 'astro-amriit-guide.mp4')
     run('-i', joined, '-i', os.path.join(OUT, 'astro-amriit-guide.srt'), '-i', fm, '-map', '0', '-map', '1', '-map_metadata', '2',
-        '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', str(SR), '-c:s', 'mov_text',
+        '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-af', loudnorm_args(joined), '-ar', str(SR), '-c:s', 'mov_text',
         '-metadata:s:s:0', 'language=eng', '-movflags', '+faststart', final)
     with open(os.path.join(OUT, 'chapters.txt'), 'w') as f:
         for a, title in chapters: f.write(f"{int(a // 60)}:{int(a % 60):02d} {title}\n")
