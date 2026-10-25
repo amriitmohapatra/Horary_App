@@ -1,0 +1,1292 @@
+[
+ {
+  "id": "b1-E01",
+  "cite": "B1 p. 84-86, Fig. B1.6",
+  "kind": "natal",
+  "birth": {
+   "date": "1938-03-08",
+   "time": "19:40",
+   "ampm_or_24h_as_printed": "7-40 P.M.",
+   "zone_or_time_standard": "IST (implied)",
+   "place": "not named (wife of the querent)",
+   "lat": "11°39' N",
+   "lon": "78°12' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Vir 13°27'",
+   "2": "Lib 13°56'",
+   "3": "Sco 13°56'",
+   "4": "Sag 12°56'",
+   "5": "Cap 11°56'",
+   "6": "Aqu 12°56'",
+   "7": "Pis 13°27'",
+   "8": "Ari 13°56'",
+   "9": "Tau 13°56'",
+   "10": "Gem 12°56'",
+   "11": "Can 11°56'",
+   "12": "Leo 12°56'"
+  },
+  "planets": {
+   "Sun": "Aqu 24°27'",
+   "Moon": "Tau 14°27'",
+   "Mars": "Ari 4°24'",
+   "Mercury": "Aqu 24°33'",
+   "Jupiter": "Cap 25°17'",
+   "Venus": "Pis 2°22'",
+   "Saturn": "Pis 12°30'",
+   "Rahu": "Sco 7°47'",
+   "Ketu": "Tau 7°47'",
+   "Uranus": "Ari 17°50'",
+   "Neptune": "Leo 27°3'",
+   "Fortuna": "Sag 3°27'"
+  },
+  "dasa_balance": "Moon 6y 7m 29d",
+  "ayanamsa_as_printed": "not printed (table 1938: 22°54'); text: 'reject outright if the ayanamsa is less than 22°44' for 1938'",
+  "significators": {
+   "planet_signifies_houses_as_printed": {
+    "Sun": "5, 6, 12, 4 and 7",
+    "Moon": "9, 11",
+    "Mars": "8, 7, 3, 8",
+    "Mercury": "5, 4, 7, 1 and 10",
+    "Jupiter": "7, 5, 4, 7",
+    "Venus": "5, 4, 7, 6, 2 and 9",
+    "Saturn": "6, 5, 6",
+    "Rahu": "6, 2, 3, 8, 7",
+    "Ketu": "6, 8, 2, 9, 12"
+   },
+   "house_significators_as_printed": {
+    "I": "Mercury",
+    "II": "Venus, Rahu, Ketu",
+    "III": "Mars, Rahu",
+    "IV": "Sun, Jupiter",
+    "V": "Sun, Mercury, Jupiter, Venus, Saturn",
+    "VI": "Sun, Venus, Saturn, Rahu, Ketu",
+    "VII": "Sun, Mars, Mercury, Jupiter, Venus, Rahu",
+    "VIII": "Mars, Rahu, Ketu",
+    "IX": "Moon, Venus, Ketu",
+    "X": "Mercury",
+    "XI": "Moon",
+    "XII": "Sun, Ketu"
+   },
+   "marriage_2_7_11_as_printed": "Venus, Rahu, Ketu, Sun, Mars, Mercury, Jupiter, Venus, Rahu, Moon"
+  },
+  "ruling_planets": [
+   "Husband's RPs as used for her: Jupiter (lord of his Visakha star), Mars (lord of his Scorpio Moon sign), Jupiter (Thursday birth), Mercury (his Virgo lagna)"
+  ],
+  "events": [
+   {
+    "what": "marriage",
+    "date": "1961-11-19",
+    "dasa": "Rahu-Mercury-Jupiter-Rahu (sookshma)",
+    "verdict": "Significators of 2-7-11 rule all four levels; transit agrees. Sunday, Moon in Revati (Mercury) in Pisces, marriage lagna Scorpio in Jyeshta."
+   },
+   {
+    "what": "birth of daughter",
+    "date": "1962-12-12",
+    "dasa": "Rahu-Ketu-Jupiter",
+    "verdict": "Significators of 2 and 5; Wednesday, Moon Gemini Mrigasira, Scorpio lagna."
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Re-cast (Swiss + PL 'Krishnamurti New' + mean node + Placidus): Sun Aqu 24°28', Moon Tau 14°27', Mars Ari 4°24', Mercury Aqu 24°33', Jupiter Cap 25°17', Venus Pis 2°22', Saturn Pis 12°30', mean Rahu Sco 7°48' (true 6°48'). Cusps Vir 13°26', Lib 13°50', Sco 13°44', Sag 12°55', Cap 12°25', Aqu 12°56' (book's intermediate cusps are rounded table values). Implied ayanamsa 22°54'. Fortuna = Asc+Moon-Sun checks. Dasa: printed antaras reproduce only with 365.25-day years (Ra-Me-Ju 7-8-1961..9-12-1961; Ra-Ke-Ju 9-12-1962..29-1-1963). The '22°44'' threshold reproduces only with 360-day years (KP1-007). Planet-signifies lists are in an irregular order (A,B,D / A,C,B,D) and Mercury omits its own 6th; use the Guna example (b1-E12) as the clean A-D fixture."
+ },
+ {
+  "id": "b1-E02",
+  "cite": "B1 p. 86-88, Fig. B1.7",
+  "kind": "natal",
+  "birth": {
+   "date": "1933-03-16",
+   "time": "18:30",
+   "ampm_or_24h_as_printed": "6-30 P.M. ('half past six')",
+   "zone_or_time_standard": "IST (implied)",
+   "place": "not named (Madras coordinates)",
+   "lat": "13°04' N",
+   "lon": "80°15' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Vir 6°6'",
+   "2": "Lib 6°12'",
+   "3": "Sco 7°12'",
+   "4": "Sag 6°12'",
+   "5": "Cap 5°12'",
+   "6": "Aqu 6°12'",
+   "7": "Pis 6°6'",
+   "8": "Ari 6°12'",
+   "9": "Tau 7°12'",
+   "10": "Gem 6°12'",
+   "11": "Can 5°12'",
+   "12": "Leo 6°12'"
+  },
+  "planets": {
+   "Sun": "Pis 2°41'",
+   "Moon": "Sco 1°36'",
+   "Mars": "Leo 12°31'",
+   "Mercury": "Pis 14°7'",
+   "Jupiter": "Leo 24°36'",
+   "Venus": "Aqu 23°28'",
+   "Saturn": "Cap 19°43'",
+   "Rahu": "Aqu 14°09'",
+   "Ketu": "Leo 14°5' (sic; should equal Rahu 14°09')",
+   "Uranus": "Pis 28°58'",
+   "Neptune": "Leo 15°32'"
+  },
+  "dasa_balance": "Jupiter 2y 0m 29d",
+  "ayanamsa_as_printed": null,
+  "significators": {
+   "planet_signifies_houses_as_printed": {
+    "Sun": "12, 6, 12, 4 and 7",
+    "Moon": "12, 2, 11, 7 and 4",
+    "Mars": "12, 12, 3 and 8",
+    "Mercury": "5, 7, 1 and 10",
+    "Jupiter": "6, 12, 4 and 7",
+    "Venus": "12, 6, 2 and 9",
+    "Saturn": "2, 5, 5 and 6",
+    "Rahu": "6, 6, 5 and 6",
+    "Ketu": "6, 12 and 6"
+   },
+   "house_significators_as_printed": {
+    "I": "Mercury",
+    "II": "Moon, Venus, Saturn",
+    "III": "Mars",
+    "IV": "Jupiter, Moon, Venus, Sun",
+    "V": "Rahu, Saturn, Mercury",
+    "VI": "Rahu, Saturn, Mercury",
+    "VII": "Mercury, Moon, Sun, Venus, Jupiter",
+    "VIII": "Mars",
+    "IX": "Venus, Ketu, Jupiter",
+    "X": "Mercury",
+    "XI": "Saturn, Moon",
+    "XII": "Mars, Moon, Venus, Sun, Mars, Ketu, Jupiter"
+   },
+   "marriage_2_7_11_as_printed": "Moon, Venus, Saturn, Mercury, Moon, Venus, Sun, Jupiter, Moon, Saturn"
+  },
+  "ruling_planets": [
+   "Wife's RPs for him: Mercury (her lagna lord), Moon (her star lord), Venus (her Moon-sign lord), Jupiter (aspects her rasi and lagna; her Moon in Jupiter sub)"
+  ],
+  "events": [
+   {
+    "what": "marriage",
+    "date": "1961-11-19",
+    "dasa": "Mercury-Moon-Jupiter-Venus (sookshma)",
+    "verdict": "Significators of 2-7-11; transit: Moon in dasa lord Mercury's star, Mercury in Venus sign Rahu star, Jupiter in Venus sub. Jupiter 3rd and lord of 6 with lord of 8 did not prevent it (tradition rejected)."
+   },
+   {
+    "what": "birth of daughter",
+    "date": "1962-12-12",
+    "dasa": "Mercury-Mars-Rahu",
+    "verdict": "Girl's star Mrigasira (Mars) in Gemini (Mercury); lagna Scorpio (Mars)."
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Thursday birth (16-3-1933 was a Thursday). Moon Sco 1°36' = Visakha pada 4 (Jupiter), matching 'Visaka 4th quarter'. Re-cast with KP-New: Sun Pis 2°40', Moon Sco 1°35', Mars Leo 12°31', Mercury Pis 14°07', Jupiter Leo 24°35', Venus Aqu 23°27', Saturn Cap 19°43', mean Rahu Aqu 14°08' (true 14°50'); Asc Vir 6°06'. Implied ayanamsa 22°48.7'-22°49.5'. Antaras reproduce with 365.25-day years (Me-Mo-Ju 17-10-1961..25-12-1961; Me-Ma-Ra 8-11-1962..2-1-1963)."
+ },
+ {
+  "id": "b1-E03",
+  "cite": "B1 p. 90-91, Figs. B1.8-B1.9",
+  "kind": "natal",
+  "birth": {
+   "date": "1931-12-26",
+   "time": "17:30",
+   "ampm_or_24h_as_printed": "5-30 P.M., Saturday",
+   "zone_or_time_standard": "IST (implied)",
+   "place": "not named (Madras coordinates)",
+   "lat": "13°04' N",
+   "lon": "80°15' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Gem 7°12' (Lagna only)"
+  },
+  "planets": {
+   "Moon": "Gem 29°43'",
+   "Jupiter": "Can 29°24'",
+   "Venus": "Cap 8°03'",
+   "Saturn": "Cap 0°20'",
+   "Mars": "Sag 15°43' (doubtful; re-cast 19°42')",
+   "Sun": "Sag 10°58'",
+   "Mercury": "Sco 29°54' (re-cast 29°34')",
+   "Rahu": "Pis 7°47'",
+   "Ketu": "Vir 7°47'"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Judgment 3-58 p.m., 17-2-1969, Bombay: Mercury (lagna end of Gemini), Rahu (Moon star Satabhisha), Saturn (Moon sign Aquarius), Moon (Monday); Rahu represents Jupiter"
+  ],
+  "events": [
+   {
+    "what": "question: is Jupiter exalted?",
+    "date": "1969-02-17",
+    "dasa": null,
+    "verdict": "Sun not an RP, so Jupiter not in Leo: Cancer, Moon sign, Mercury star, Saturn sub, Rahu sub-sub, between 29°24' and 29°43' Cancer: exalted."
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Fig. B1.8 chart 1 'Ephemeris or Drig'. Chart 2 'Vakya' (signs only): Rahu Pis; Lagna+Moon Gem; Jupiter Leo; Venus Cap; Saturn+Mars+Sun Sag; Mercury Sco; Ketu Vir. Fig. B1.9 'other ayanamsa' (signs only): Rahu Pis; Lagna Gem; Moon Can; Jupiter Leo; Venus Cap; Mars+Sun+Mercury Sag; Ketu Vir. Re-cast (KP-New): Sun Sag 10°57', Moon Gem 29°43', Jupiter Can 29°22', Venus Cap 8°02', Saturn Cap 0°19', Mars Sag 19°42', Mercury Sco 29°34', mean Rahu Pis 7°46', Asc Gem 7°14'. Mars '15°43'' is probably a misprint for 19°43'."
+ },
+ {
+  "id": "b1-E04",
+  "cite": "B1 p. 88-89",
+  "kind": "natal",
+  "birth": {
+   "date": "1929-07-27",
+   "time": "17:36",
+   "ampm_or_24h_as_printed": "5-36 p.m., Saturday",
+   "zone_or_time_standard": "IST",
+   "place": "not given ('unnecessary to note the position of Moon')",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": null,
+  "planets": {
+   "Moon": "Pis 16°15' (Nirayana)"
+  },
+  "dasa_balance": "Saturn 0y 6m 19d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Judgment 9-45 a.m. IST, Bombay, a Saturday (date not printed): Saturn (day), Saturn (Moon star Pushya), Moon (Moon sign Cancer), Jupiter (lagna Pisces 5°, Saturn star, Saturn sub)"
+  ],
+  "events": [
+   {
+    "what": "question: Uttarabhadra or Revati?",
+    "date": null,
+    "dasa": null,
+    "verdict": "Moon in Jupiter sign, Saturn star (Uttarabhadra), Jupiter sub, Moon sub-sub; balance must lie between 6m10d and 8m26d; Mercury not an RP so not Revati."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Re-cast Moon (KP-New) Pis 16°15' exactly. Bounds 6m10d/8m26d = Moon sub-sub of the Jupiter sub of Uttarabhadra (checked). The balance computed from 16°15' is 7m4d; printed 6m19d corresponds to Moon 16°16.7'. Small inconsistency in the book. Rival almanac charts: Tinnevelly and Bombay say Uttarabhadra (balance differs 1.5 y), Mysore says Revati with Mercury balance 15+ y."
+ },
+ {
+  "id": "b1-E05",
+  "cite": "B1 p. 92-94, Fig. B1.10",
+  "kind": "natal",
+  "birth": {
+   "date": "1948-10-21",
+   "time": "02:48",
+   "ampm_or_24h_as_printed": "2-48 A.M.",
+   "zone_or_time_standard": "IST (implied)",
+   "place": "Salem",
+   "lat": "11°39' N",
+   "lon": "78°39' E (as printed)"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Leo 13°44'",
+   "2": "Vir 13°14'",
+   "3": "Lib 15°14'",
+   "4": "Sco 15°15'",
+   "5": "Sag 14°14'",
+   "6": "Cap 14°14'",
+   "7": "Aqu 13°44'",
+   "8": "Pis 13°14'",
+   "9": "Ari 15°14'",
+   "10": "Tau 15°15'",
+   "11": "Gem 14°14'",
+   "12": "Can 14°14'"
+  },
+  "planets": {
+   "Sun": "Lib 4°22'",
+   "Moon": "Tau 6°31'",
+   "Mars": "Sco 9°36'",
+   "Mercury": "Lib 2°24'",
+   "Jupiter": "Sag 2°9'",
+   "Venus": "Leo 23°31'",
+   "Saturn": "Leo 10°21'",
+   "Rahu": "Ari 12°14'",
+   "Ketu": "Lib 12°14'",
+   "Uranus": "Gem 7°27'",
+   "Neptune": "Vir 20°14'"
+  },
+  "dasa_balance": "Sun 1y 6m 24d",
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Judgment 11-50 a.m., Sunday 23-2-1969 (Bombay implied): Sun (day), Venus (Moon sign Taurus), Sun (Moon star Krittika), lagna in Venus sign Sun star"
+  ],
+  "events": [
+   {
+    "what": "question: is the birth time right (within half an hour)?",
+    "date": "1969-02-23",
+    "dasa": null,
+    "verdict": "Natal lagna in Sun sign, Venus star, Venus sub, Sun sub-sub: agrees with the RPs; chart correct. Sade-sati fear dismissed."
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Salem is actually ~78°10'E; book prints 78-39 E. Re-cast (KP-New, 78°39'E): Sun Lib 4°21', Moon Tau 6°27', Mercury Lib 2°24', Venus Leo 23°30', Mars Sco 9°35', Jupiter Sag 2°08', Saturn Leo 10°21', mean Rahu Ari 12°13'. But Asc Leo 14°28' and X Tau 16°03' (book 13°44' / 15°15'): the book's cusps fit a time ~3 min earlier. Leo 13°44' = Su-Ve-Ve-Su (checked). RP moment checked: 23-2-1969 11:50 Bombay is a Sunday, Moon Tau 0°59' in Krittika, lagna Tau 6°54' (Venus sign, Sun star)."
+ },
+ {
+  "id": "b1-E06",
+  "cite": "B1 p. 74-76, 81-82, 120-121, Figs. B1.5, B1.17, B1.18",
+  "kind": "natal",
+  "birth": {
+   "date": "1963-05-15",
+   "time": "18:30",
+   "ampm_or_24h_as_printed": "6-30 P.M. I.S.T.",
+   "zone_or_time_standard": "IST",
+   "place": "Agra",
+   "lat": "not printed (27°10' N used for re-cast)",
+   "lon": "78°05' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib 25°33' (nirayana; sayana Sco 18°48' = 228°48')"
+  },
+  "planets": {
+   "Sun": "Tau 0°43' (Fig. B1.5; Fig. B1.17 0°35')",
+   "Moon": "Cap 18°08'",
+   "Mars": "Can 27°55'",
+   "Mercury": "Tau 4°42' R",
+   "Jupiter": "Pis 16°04'",
+   "Venus": "Ari 2°31'",
+   "Saturn": "Cap 29°34'",
+   "Rahu": "Can 0°19' (Fig. B1.17; Fig. B1.5 prints 0°30')",
+   "Ketu": "Cap 0°19' (Fig. B1.17; Fig. B1.5 prints 0°39')",
+   "Uranus": "Leo 7°55'",
+   "Neptune": "Lib 20°47' R",
+   "Fortuna": "Can 13°06' (sayana 126°21')"
+  },
+  "dasa_balance": "Moon 3y 10m 24d",
+  "ayanamsa_as_printed": "23°15' (1963)",
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": true,
+  "notes": "Sayana positions (Raphael noon 15-5-63 + 1 h): Sun Tau 23°58', Moon Aqu 11°23', Mars Leo 21°10', Mercury Tau 27°57' R, Jupiter Ari 9°19', Venus Ari 25°46', Saturn Aqu 22°49', Rahu Can 23°34', Uranus Vir 1°10' R, Neptune Sco 14°02'. Nakshatra/pada table (Fig. B1.5): Sun Krittika 2, Moon Sravana 3, Mars Ashlesha 4, Mercury Krittika 3, Jupiter Uttarabhadra 4, Venus Aswini 1, Saturn Dhanishta 2, Rahu Punarvasu 4, Ketu Uttarashadha 2, Uranus Magha 3, Neptune Visakha 1 (all checked). Fig. B1.5 prints Rahu sayana 23-54 (text 23-34). Fig. B1.17 omits Mars. Navamsa (Fig. B1.18): Mars Pis; Venus+Neptune Ari; Lagna Tau; Moon+Uranus Gem; Rahu Can; Mercury Aqu; Sun+Ketu Cap; Saturn Vir. Fortuna uses Sun 53°50' (Tau 23°50') in the sum, not 53°58'. Re-cast KP-New: Sun Tau 0°44', Moon Cap 18°08', Mars Can 27°55', Mercury Tau 4°42', Jupiter Pis 16°04', Venus Ari 2°31', Saturn Cap 29°35', mean Rahu Can 0°19' (true Gem 28°50'); sayana Asc Sco 18°49' at 27°10'N. Implied ayanamsa 23°15.1'-23°15.9'. ST printed 9h42m29s."
+ },
+ {
+  "id": "b1-E07",
+  "cite": "B1 p. 56-58, 66-68",
+  "kind": "natal",
+  "birth": {
+   "date": "1963-05-15",
+   "time": "03:30",
+   "ampm_or_24h_as_printed": "3-30 A.M. I.S.T. (L.M.T. 3-27-36 a.m.)",
+   "zone_or_time_standard": "IST",
+   "place": "Allahabad (Benares page of the table used)",
+   "lat": "25°28' N",
+   "lon": "81°54' E (p. 56; p. 66 prints 81°34')"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Ari 18°47' (sayana)",
+   "2": "Tau 22°43'",
+   "3": "Gem 18°43'",
+   "4": "Can 12°43'",
+   "5": "Leo 8°43'",
+   "6": "Vir 9°43'",
+   "7": "Lib 18°47'",
+   "8": "Sco 22°43'",
+   "9": "Sag 18°43'",
+   "10": "Cap 12°43'",
+   "11": "Aqu 8°43'",
+   "12": "Pis 9°43'"
+  },
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": false,
+  "notes": "Hypothetical birth for the sidereal-time and table-of-houses lessons. All cusps SAYANA. ST printed 18h55m18s (Raphael ST 14-5-63 noon 3h26m02s). Re-cast Swiss Placidus (sayana): Asc Ari 18°48', MC Cap 12°43', 11 Aqu 8°24', 12 Pis 9°44', 2 Tau 22°17', 3 Gem 18°41'."
+ },
+ {
+  "id": "b1-E08",
+  "cite": "B1 p. 59-60, 68-70",
+  "kind": "natal",
+  "birth": {
+   "date": "1963-05-15",
+   "time": "12:05",
+   "ampm_or_24h_as_printed": "12-5 P.M. I.S.T. (p. 68 misprints 2-05 P.M.); L.M.T. 11-25-32 a.m.",
+   "zone_or_time_standard": "IST",
+   "place": "Ahmedabad (table page 21°12' used)",
+   "lat": "23°02' N",
+   "lon": "72°38' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Leo 18°01' (sayana)",
+   "2": "Vir 14°08'",
+   "3": "Lib 14°08'",
+   "4": "Sco 16°08'",
+   "5": "Sag 18°08'",
+   "6": "Cap 19°08'",
+   "7": "Aqu 18°01'",
+   "8": "Pis 14°08'",
+   "9": "Ari 14°08'",
+   "10": "Tau 16°08'",
+   "11": "Gem 18°08'",
+   "12": "Can 19°08'"
+  },
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": false,
+  "notes": "Hypothetical. SAYANA cusps. ST printed 2h54m40s. Re-cast Swiss Placidus at 23°02'N: Asc Leo 17°58', MC Tau 16°07', 11 Gem 18°08', 12 Can 18°44', 2 Vir 14°11', 3 Lib 13°59'."
+ },
+ {
+  "id": "b1-E09",
+  "cite": "B1 p. 60-61, 70-72",
+  "kind": "natal",
+  "birth": {
+   "date": "1963-05-15",
+   "time": "21:00",
+   "ampm_or_24h_as_printed": "9 P.M. Boston standard time (GMT-5); L.M.T. 9-15-52 p.m.",
+   "zone_or_time_standard": "US Eastern Standard (5 h behind GMT)",
+   "place": "Boston",
+   "lat": "42°[illegible]' N (table page 42°42' used)",
+   "lon": "71°02' W"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sag 19°48' (sayana)",
+   "2": "Cap 26°06'",
+   "3": "Pis 8°06'",
+   "4": "Ari 13°06'",
+   "5": "Tau 10°00'",
+   "6": "Gem 1°06'",
+   "7": "Gem 19°48'",
+   "8": "Can 26°06'",
+   "9": "Vir 8°06'",
+   "10": "Lib 13°06'",
+   "11": "Sco 10°00'",
+   "12": "Sag 1°05' (sic; 1°06' in the previous table)"
+  },
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": false,
+  "notes": "Hypothetical. SAYANA cusps. ST printed 12h48m11s. Re-cast at 42°21'N: Asc Sag 20°04', MC Lib 13°05'. The ~16' Asc difference comes from the table latitude used."
+ },
+ {
+  "id": "b1-E10",
+  "cite": "B1 p. 61, 72-74",
+  "kind": "natal",
+  "birth": {
+   "date": "1963-05-15",
+   "time": "07:00",
+   "ampm_or_24h_as_printed": "7 A.M. standard time (GMT-8); L.M.T. 6-50-20 a.m. (p. 61 table caption misprints 7 P.M.)",
+   "zone_or_time_standard": "US Pacific Standard (8 h behind GMT)",
+   "place": "San Francisco (table page 37°58' used)",
+   "lat": "37°48' N",
+   "lon": "122°25' W"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Gem 25°20' (sayana)",
+   "2": "Can 16°17'",
+   "3": "Leo 8°00'",
+   "4": "Vir 3°17'",
+   "5": "Lib 6°17'",
+   "6": "Sco 17°17'",
+   "7": "Sag 25°20'",
+   "8": "Cap 16°17'",
+   "9": "Aqu 8°00'",
+   "10": "Pis 3°17'",
+   "11": "Ari 6°17'",
+   "12": "Tau 17°17'"
+  },
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": false,
+  "notes": "Hypothetical. SAYANA cusps. ST printed 22h20m52s. Re-cast at 37°48'N: Asc Gem 25°12', MC Pis 3°16'."
+ },
+ {
+  "id": "b1-E11",
+  "cite": "B1 p. 126-130, Figs. B1.19-B1.20",
+  "kind": "natal",
+  "birth": {
+   "date": "1934-06-13",
+   "time": "14:34",
+   "ampm_or_24h_as_printed": "2-34 p.m. I.S.T., Wednesday (L.M.T. 2-22-40 p.m.)",
+   "zone_or_time_standard": "IST",
+   "place": "Tiruvarur",
+   "lat": "10°46' N",
+   "lon": "79°40' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Lib 3°47'",
+   "2": "Sco 3°53'",
+   "3": "Sag 2°53'",
+   "4": "Cap 1°53'",
+   "5": "Aqu 2°36'",
+   "6": "Pis 3°53'",
+   "7": "Ari 3°47'",
+   "8": "Tau 3°53'",
+   "9": "Gem 2°53'",
+   "10": "Can 1°53'",
+   "11": "Leo 2°36'",
+   "12": "Vir 3°53'"
+  },
+  "planets": {
+   "Sun": "Tau 28°50'",
+   "Moon": "Gem 13°04'",
+   "Mars": "Tau 14°45'",
+   "Mercury": "Gem 23°13'",
+   "Jupiter": "Vir 20°27'",
+   "Venus": "Ari 19°43'",
+   "Saturn": "Aqu 5°20'",
+   "Rahu": "Cap 20°05'",
+   "Ketu": "Can 20°05'",
+   "Uranus": "Ari 7°28'",
+   "Neptune": "Leo 16°55'",
+   "Fortuna": "Sco 18°01' as printed (correct: Lib 18°01')"
+  },
+  "dasa_balance": "Rahu 9y 4m 10d (9y 4m 9.6d)",
+  "ayanamsa_as_printed": "22°50' (1934)",
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": true,
+  "notes": "ST printed 7h46m37s; sayana cusps Asc Lib 26°37', MC Can 24°43', 11 Leo 25°26', 12 Vir 26°43', 2 Sco 26°43', 3 Sag 25°43'. Sayana planets (Fig. B1.19, Raphael noon 12-6 and 13-6-1934 + 21h04m): Sun Gem 21°40', Moon Can 5°54', Mars Gem 7°35', Mercury Can 16°03', Jupiter Lib 13°17', Venus Tau 12°33', Saturn Aqu 28°10', Rahu Aqu 12°55', Uranus Tau 0°18', Neptune Vir 9°45'. Fortuna: the book adds Moon as 103°04' (should be 73°04'), so it prints Scorpio 18°01'. Fig. B1.20 prints Asc 8°47' (misprint for 3°47'; navamsa in Scorpio confirms 3°47'). Navamsa (Fig. B1.20): Mercury Ari; Mars Tau; Uranus Gem; Jupiter+Rahu Can; Moon+Ketu Cap; Fortuna Sag; Asc+Saturn Sco; Venus+Sun+Neptune Vir. Re-cast KP-New: Sun Tau 28°49', Moon Gem 13°04', Mercury Gem 23°13', Venus Ari 19°42', Mars Tau 14°44', Jupiter Vir 20°27', Saturn Aqu 5°20', mean Rahu Cap 20°05' (true 18°20'); Placidus Lib 3°46', Sco 3°34', Sag 2°39', Cap 1°53', Aqu 2°23', Pis 3°42'. Intermediate cusps differ by up to 19' from the book."
+ },
+ {
+  "id": "b1-E12",
+  "cite": "B1 p. 149-158, Figs. B1.23-B1.24",
+  "kind": "natal",
+  "birth": {
+   "date": "1935-09-12",
+   "time": "21:08",
+   "ampm_or_24h_as_printed": "9-08 P.M. (L.M.T. 8-47-20 p.m.)",
+   "zone_or_time_standard": "IST",
+   "place": "Guna (M.P.)",
+   "lat": "24°40' N",
+   "lon": "77°20' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Ari 19°23'",
+   "2": "Tau 18°29'",
+   "3": "Gem 12°29'",
+   "4": "Can 7°29'",
+   "5": "Leo 5°29'",
+   "6": "Vir 10°29'",
+   "7": "Lib 19°23'",
+   "8": "Sco 18°29'",
+   "9": "Sag 12°29'",
+   "10": "Cap 7°29'",
+   "11": "Aqu 5°29'",
+   "12": "Pis 10°29'"
+  },
+  "planets": {
+   "Sun": "Leo 26°04'43\"",
+   "Moon": "Aqu 23°17'00\"",
+   "Mars": "Sco 4°32'71\" (sic)",
+   "Mercury": "Vir 20°17'14\"",
+   "Jupiter": "Lib 25°58'30\"",
+   "Venus": "Leo 19°19'00\" R",
+   "Saturn": "Aqu 13°02'45\" R",
+   "Rahu": "Sag 25°54'47\"",
+   "Ketu": "Gem 25°54'47\"",
+   "Uranus": "Ari 12°14'86\" R (sic)",
+   "Neptune": "Leo 21°39'28\"",
+   "Fortuna": "Lib 16°35'57\" (Fig. B1.24: 16°35'37\")"
+  },
+  "dasa_balance": "Jupiter 12y 0m 22d (12y 21.6d)",
+  "ayanamsa_as_printed": "22°51' (1935, 'Krishnamurti Ayanamsa… Ephemeris page xviii')",
+  "significators": {
+   "planets_star_sub_as_printed": {
+    "Sun": "Poorvapalguni, Venus, sub Ketu",
+    "Moon": "Shathabhisha, Rahu, sub Saturn (star wrong: Aqu 23°17' is Poorvabhadra, Jupiter)",
+    "Mars": "Anuradha, Saturn, sub Saturn",
+    "Mercury": "Hastham, Moon, sub Ketu",
+    "Jupiter": "Visakam, Jupiter, sub Ketu",
+    "Venus": "Poorvapalguni, Venus, sub Rahu",
+    "Saturn": "Shathabhisha, Rahu, sub Mercury",
+    "Rahu": "Poorvashada, Venus, sub Ketu",
+    "Kethu": "Punarvasu, Jupiter, sub Ketu"
+   },
+   "cusps_sign_star_sub_as_printed": {
+    "I": "Mars, Venus, Rahu",
+    "II": "Venus, Moon, Mercury",
+    "III": "Mercury, Rahu, Saturn",
+    "IV": "Moon, Saturn, Ketu",
+    "V": "Sun, Ketu, Mars",
+    "VI": "Mercury, Moon, Moon",
+    "VII": "Venus, Rahu, Mars",
+    "VIII": "Mars, Mercury, Mercury",
+    "IX": "Jupiter, Ketu, Mercury",
+    "X": "Saturn, Sun, Ketu",
+    "XI": "Saturn, Mars, Sun",
+    "XII": "Jupiter, Saturn, Sun"
+   },
+   "house_significators_4_columns_as_printed": {
+    "I": [
+     "-",
+     "-",
+     "-",
+     "Mars"
+    ],
+    "II": [
+     "-",
+     "-",
+     "Ven, Sun, Rah",
+     "Venus"
+    ],
+    "III": [
+     "-",
+     "Kethu",
+     "-",
+     "Mercury"
+    ],
+    "IV": [
+     "-",
+     "-",
+     "Mercury",
+     "Moon"
+    ],
+    "V": [
+     "Ven, Sun, Rah",
+     "Sun, Ven",
+     "-",
+     "Sun"
+    ],
+    "VI": [
+     "-",
+     "Mer",
+     "-",
+     "Mercury"
+    ],
+    "VII": [
+     "Moon, Jup, Kethu",
+     "Jup, Mars",
+     "Ven, Sun, Rahu",
+     "Venus"
+    ],
+    "VIII": [
+     "-",
+     "-",
+     "-",
+     "Mars"
+    ],
+    "IX": [
+     "Saturn",
+     "Rahu",
+     "Moon, Jup, Kethu",
+     "Jupiter"
+    ],
+    "X": [
+     "-",
+     "-",
+     "Mars",
+     "Saturn"
+    ],
+    "XI": [
+     "Mercury, Mars",
+     "Moon, Sat",
+     "Mars",
+     "Saturn"
+    ],
+    "XII": [
+     "-",
+     "-",
+     "Moon, Jup, Kethu",
+     "Jupiter"
+    ]
+   },
+   "columns": "[planets in the const. of the occupants, occupants, planets in the const. of the cusp sign lord, sign lord of the cusp]",
+   "planet_signifies_houses_as_printed": {
+    "Sun": "5, 2, 7",
+    "Moon": "7, 11, 9, 12, 4",
+    "Mars": "11, 7, 10, 1, 8",
+    "Mercury": "11, 6, 4, 3",
+    "Jupiter": "7, 9, 12",
+    "Venus": "5, 2, 7",
+    "Saturn": "9, 11, 10",
+    "Rahu": "5, 9, 2, 7",
+    "Kethu": "7, 3, 9, 12"
+   }
+  },
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "dasa ready-reckoner",
+    "date": "1935-09-12",
+    "dasa": "Jupiter-Saturn-Mars to 15-9-1935; Jupiter-Saturn-Rahu to 2-2-1936; Jupiter-Saturn-Jupiter to 4-6-1936; then Jupiter-Mercury",
+    "verdict": "Table only (printed garbled as '15-6-9-1935', '2-4-2-1936')."
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Worked by a student. ST 20h10m09s (KP Ephemeris ST at 5-30 p.m. 12-9-1935 = 16h52m16s, checked exact). Sayana cusps from Raphael 24°27' (Amoy): Asc Tau 12°14', 2 Gem 11°20', 3 Can 5°20', 10 Aqu 0°20', 11 Aqu 28°20', 12 Ari 3°20'. Sayana planets: Sun 168°55'43\", Moon 346°08', Mars 237°23'71\", Mercury 193°08'14\", Jupiter 228°49'30\", Venus 162°10' R, Saturn 335°53'45\" R, Rahu 288°45'47\", Uranus 35°05'86\" R, Neptune 164°30'28\". The '71' and '86' seconds are a book notation error (decimal minutes). All star/sub lords re-derived from the printed longitudes: they match except the Moon's star (book: Satabhisha/Rahu; correct Poorvabhadra/Jupiter, as the dasa section itself says). The planet-signifies-houses table matches the app's A-D convention exactly. Re-cast KP-New: Sun Leo 26°05', Moon Aqu 23°17', Mars Sco 4°32', Mercury Vir 20°17', Jupiter Lib 25°58', Venus Leo 19°18', Saturn Aqu 13°02', mean Rahu Sag 25°55' (true 27°29'); Placidus Ari 19°28', Tau 18°25', Gem 12°59', Can 7°30', Leo 5°40', Vir 10°21' (3rd cusp differs 30' from the book). Dasa dates re-computed: Ju-Sa-Ma to 15-9-1935, Ju-Sa-Ju 1-2-1936..4-6-1936 (365.25-d years)."
+ },
+ {
+  "id": "b1-E13",
+  "cite": "B1 p. 159-160, Fig. B1.25",
+  "kind": "natal",
+  "birth": {
+   "date": "1944-03-07",
+   "time": "02:40",
+   "ampm_or_24h_as_printed": "native: 'about 3-45 a.m. on 7-3-1944' (war or civil unknown); rectified '2-40 a.m.'; figure: 'Birth at 2-30 P.M. on 7-3-1943'",
+   "zone_or_time_standard": "IST (rectified; the reported time was war time, IST+1h)",
+   "place": "not printed",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Sag 21°36'",
+   "2": "Cap 24°17'",
+   "3": "Aqu 28°47'",
+   "4": "Ari 1°47'",
+   "5": "Tau 0°47'",
+   "6": "Tau 25°56'",
+   "7": "Gem 21°36'",
+   "8": "Can 24°17'",
+   "9": "Leo 28°47'",
+   "10": "Lib 1°47'",
+   "11": "Sco 1°47' (sic; opposite of V should be Sco 0°47')",
+   "12": "Sco 25°56'"
+  },
+  "planets": {
+   "Sun": "Aqu 23°18'",
+   "Moon": "Can 19°15'",
+   "Mars": "Tau 26°53'",
+   "Mercury": "Aqu 13°35'",
+   "Jupiter": "Can 26°0?' R",
+   "Venus": "Cap 24°22'",
+   "Saturn": "Tau 26°56'",
+   "Rahu": "Can 11°?4' (11°44')",
+   "Ketu": "Cap 11°44'"
+  },
+  "dasa_balance": "Mercury 13y 8m 13d",
+  "ayanamsa_as_printed": null,
+  "significators": {
+   "service_2_6_10_11_as_printed": {
+    "2": "Moon, Jupiter, Venus, Mercury, Sun, Rahu, Saturn and Ketu",
+    "6": "Mars, Saturn, Venus and Rahu",
+    "10": "Venus",
+    "11": "Mars, Saturn and Venus"
+   }
+  },
+  "ruling_planets": [
+   "Judgment 3-3-1970 '[?3]-30 p.m.': Mars (day, Tuesday), Jupiter (Moon sign), Venus (Moon star), Jupiter (ascending sign)"
+  ],
+  "events": [
+   {
+    "what": "entry into service",
+    "date": "1965-03-12",
+    "dasa": "Venus-Venus-Venus (21-11-1964 to 9-6-1965), Jupiter sookshma",
+    "verdict": "Venus strongest significator of 2-6-10-11 and the only strong one of 10; Jupiter strongest RP and in beneficial aspect from Venus. Friday; Moon in Punarvasu; Sun in a Jupiter star (transcript 'Poorvashada' = Poorvabhadra) in Venus sub; Venus in Jupiter star and sub."
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Year: the planets fit 7-3-1944, not 1943 (Fig. B1.25 misprint). Re-cast for 02:40 IST at Madras coordinates (place unknown), KP-New: Sun Aqu 23°13', Moon Can 19°16', Mercury Aqu 13°34', Venus Cap 24°27', Mars Tau 26°52', Jupiter Can 26°09', Saturn Tau 26°56', mean Rahu Can 11°43' (true 13°22'). For 1943 Saturn would be Tau 13°. Sag 21°36' = Jupiter sign, Venus star, Jupiter sub, Mars sub-sub (checked). At 03:45 the lagna is Cap 8°30' (Saturn), so it is rejected. Dasa balance checked: Moon Can 19°15' Ashlesha → 645'/800 x 17 = 13y 8m 14d. RP moment: 3-3-1970 was a Tuesday, Moon Sag 19°15' in Poorvashada (Venus) ✓, but a Jupiter lagna needs a time of ~06-07:40 (Sag) or ~09-10:40 (Pis), not 3-30 p.m."
+ },
+ {
+  "id": "b1-E14",
+  "cite": "B1 p. 161-166, Figs. B1.26-B1.27",
+  "kind": "natal",
+  "birth": {
+   "date": "1930-06-11",
+   "time": "07:37",
+   "ampm_or_24h_as_printed": "7-37 a.m. I.S.T. (L.M.T. 7-5-16 a.m.)",
+   "zone_or_time_standard": "IST",
+   "place": "Belgaum",
+   "lat": "15°52' N",
+   "lon": "74°34' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Gem 18°14'",
+   "2": "Can 13°40'",
+   "3": "Leo 11°40'",
+   "4": "Vir 12°40'",
+   "5": "Lib 15°40'",
+   "6": "Sco 18°40'",
+   "7": "Sag 18°14'",
+   "8": "Cap 13°40'",
+   "9": "Aqu 11°40'",
+   "10": "Pis 12°40'",
+   "11": "Ari 15°40'",
+   "12": "Tau 18°40'"
+  },
+  "planets": {
+   "Sun": "Tau 26°39'",
+   "Moon": "Sco 24°40'",
+   "Mars": "Ari 13°08'",
+   "Mercury": "Tau 4°14'",
+   "Jupiter": "Gem 3°35'",
+   "Venus": "Gem 27°33'",
+   "Saturn": "Sag 17°14' R",
+   "Rahu": "Ari 7°37'",
+   "Ketu": "Lib 7°37'",
+   "Uranus": "Pis 21°57'",
+   "Neptune": "Leo 8°15'",
+   "Fortuna": "Sag 16°15' (256°15')"
+  },
+  "dasa_balance": "Mercury 6y 9m 18d",
+  "ayanamsa_as_printed": "22°47' (1930)",
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": true,
+  "notes": "ST 0h20m00s (KP Ephemeris 10-6-1930 5-30 p.m. = 10h42m28s, checked exact; + 13h35m16s + 2m16s). Sayana cusps (Raphael 16°N): Asc Can 11°01', 2 Leo 6°27', 3 Vir 4°27', 10 Ari 5°27', 11 Tau 8°27', 12 Gem 11°27'. Sayana planets (proportion 14h07m): Sun 79°26', Moon 257°27', Mars 35°55', Mercury 57°01', Jupiter 86°22', Venus 110°20' (second table misprints 110°01'), Saturn 280°01' R, Rahu 30°24', Ketu 210°24', Uranus 14°44' (second table misprints 14°14'), Neptune 151°02'. Re-cast KP-New: Sun Tau 26°39', Moon Sco 24°41', Mercury Tau 4°13', Venus Gem 27°33', Mars Ari 13°07', Jupiter Gem 3°35', Saturn Sag 17°13', mean Rahu Ari 7°37' (true 9°10'); Placidus Gem 18°12', Can 13°31', Leo 11°18', Vir 12°41', Lib 16°01', Sco 18°13'. Sayana Asc Can 10°59' vs printed 11°01'. Cleanest fixture in B1."
+ },
+ {
+  "id": "b1-E15",
+  "cite": "B1 p. 167-168, Figs. B1.28-B1.29",
+  "kind": "natal",
+  "birth": {
+   "date": "1937-01-27 (as printed; planets fit 1937-04-27)",
+   "time": "17:30",
+   "ampm_or_24h_as_printed": "5-30 p.m. (IST)",
+   "zone_or_time_standard": "IST",
+   "place": "near Palghat",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "given: Libra (sign only); corrected: Vir 28°57'"
+  },
+  "planets": {
+   "Sun": "Ari",
+   "Moon": "Sco",
+   "Mars": "Sco R",
+   "Mercury": "Tau",
+   "Jupiter": "Cap",
+   "Venus": "Pis R",
+   "Saturn": "Pis",
+   "Rahu": "Sco",
+   "Ketu": "Tau"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Judgment 9 p.m. IST, 1-11-1969 (Saturday), Coimbatore: Saturn (day), '[?MARS]' as lord of the Moon's rasi (Moon was in Cancer, so the lord is the Moon: transcription doubt), Saturn (Moon star), Mercury (lagna Gemini), Mars (lagna star in Gemini)"
+  ],
+  "events": [
+   {
+    "what": "rectification of the lagna",
+    "date": "1969-11-01",
+    "dasa": null,
+    "verdict": "Venus not an RP, so Libra lagna wrong; correct lagna Virgo (Mercury) in a Mars star (Chitra), Lagna 28°57'."
+   }
+  ],
+  "checked_against_figure": true,
+  "notes": "Signs only in Figs. B1.28/29 (B1.29 is this native's corrected chart; vault caption wrongly ties it to Tenkasi). On 27-1-1937 the Sun would be in Capricorn. On 27-4-1937, 17:30 IST near Palghat (10°46'N 76°39'E assumed) the KP-New re-cast gives Sun Ari 13°55', Moon Sco 4°08', Mercury Tau 1°10', Venus Pis 29°19' R, Mars Sco 11°37' R, Jupiter Cap 3°56', Saturn Pis 7°22', mean Rahu Sco 24°30', and Asc Vir 28°51'. This matches every sign in the figure, so the printed month is a misprint for April. RP moment checked: Saturday; Moon Can 8°36' in Pushya (Saturn); lagna Gem 2°06' in Mrigasira (Mars)."
+ },
+ {
+  "id": "b1-E16",
+  "cite": "B1 p. 168-169",
+  "kind": "natal",
+  "birth": {
+   "date": "1943-05-15",
+   "time": "14:45",
+   "ampm_or_24h_as_printed": "2-45 p.m. (IST) as given; judged to be War Time, i.e. 1-45 p.m. IST",
+   "zone_or_time_standard": "given as IST, concluded War Time (IST+1h)",
+   "place": "Tenkasi, Tamil Nadu",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "A (war time): Leo 20°3' Pooram; B (IST): Vir 5°3' Uttiram"
+  },
+  "planets": {
+   "Moon": "Kanya, Uttiram (both readings)"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Judgment (date not printed, a Wednesday): Mercury (day), Sun (Moon rasi), Sun (Moon star), Mercury (lagna Kanya), Sun (lagna star Uttiram in Kanya)"
+  ],
+  "events": [
+   {
+    "what": "war time or IST?",
+    "date": null,
+    "dasa": null,
+    "verdict": "Sun most powerful RP, so its sign Leo is the lagna: the given time was War Time."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Saturday 15-5-1943 confirmed. Re-cast KP-New at Tenkasi (8°58'N 77°18'E assumed): 13:45 IST Asc Leo 20°00', 14:45 IST Asc Vir 5°17'; Moon Vir 3°36'-4°08' (Uttiram) ✓. Printed table rows: A: Asc 20°3' Simha (Sun), star Pooram (Venus), Moon rasi Kanya (Mercury), Moon star Uttiram (Sun), day lord Saturn. B: Asc 5°3' Kanya (Mercury), star Uttiram (Sun), same Moon, day lord Saturn."
+ },
+ {
+  "id": "b1-E17",
+  "cite": "B1 p. 46-49",
+  "kind": "natal",
+  "birth": {
+   "date": "1908-11-01",
+   "time": "12:15",
+   "ampm_or_24h_as_printed": "12-15 P.M. I.S.T.",
+   "zone_or_time_standard": "IST",
+   "place": "Madras / Calcutta / Mangalore (three simultaneous births); New York 3 P.M. standard",
+   "lat": null,
+   "lon": "Madras 80°15' E; Calcutta 88°24' E; Mangalore 74°53' E; New York 74°01' W"
+  },
+  "horary_number": null,
+  "cusps": null,
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": false,
+  "notes": "LMT-conversion fixture only (no chart): Madras 12-06 p.m. LMT; Calcutta 12-38-36 p.m.; Mangalore 11-44-32 a.m.; New York 3 p.m. EST = 8 p.m. GMT = 3-03-56 p.m. LMT. (KSK himself was born 1-11-1908 at Tanjore, B1 p. 18.)"
+ },
+ {
+  "id": "b1-E18",
+  "cite": "B1 p. 115-118",
+  "kind": "natal",
+  "birth": {
+   "date": "1918-11-01 / 1918-11-10 / 1918-11-05 / 1918-11-08",
+   "time": "22:00 / 09:00 / 20:00 / 17:00",
+   "ampm_or_24h_as_printed": "10 p.m. / 9 a.m. / 8 p.m. / 5 p.m. I.S.T.",
+   "zone_or_time_standard": "IST",
+   "place": "Calcutta / Calcutta / Madras / Bombay",
+   "lat": null,
+   "lon": "88°24' E / 88°24' E / 80°15' E / 72°54' E"
+  },
+  "horary_number": null,
+  "cusps": null,
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [],
+  "checked_against_figure": false,
+  "notes": "Sidereal-time fixture (KP Ephemeris, ST at 5-30 p.m. IST for 82°30'E). Printed ST at 5-30 p.m.: 1-11-1918 20h09m51s, 9-11-1918 20h41m24s, 5-11-1918 20h23m37s (misprint; Swiss gives 20h25m37s), 7-11-1918 20h33m30s. Printed birth ST: 1h04m16s; 12h37m39s; 22h45m01s (should be 22h47m01s); 19h28m55s. LMT: 10-23-36 p.m.; 9-23-36 a.m.; 7-51 p.m.; 4-21-36 p.m."
+ },
+ {
+  "id": "b1-E19",
+  "cite": "B1 p. 91-92",
+  "kind": "horary",
+  "birth": {
+   "date": "1969-02-17",
+   "time": "15:58",
+   "ampm_or_24h_as_printed": "3-58 p.m.",
+   "zone_or_time_standard": "IST",
+   "place": "Bombay",
+   "lat": "18°55' N (Bombay)",
+   "lon": "72°50' E (Bombay)"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "'fag end of Gemini'"
+  },
+  "planets": {
+   "Moon": "Aquarius, Satabhisha"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Mercury (lagna sign)",
+   "Rahu (Moon star)",
+   "Saturn (Moon sign)",
+   "Moon (Monday)",
+   "Rahu represents Jupiter (Rahu in Pisces)"
+  ],
+  "events": [
+   {
+    "what": "is natal Jupiter exalted (b1-E03)?",
+    "date": "1969-02-17",
+    "dasa": null,
+    "verdict": "Yes: Cancer 29°24'-29°43'"
+   },
+   {
+    "what": "has Saturn left Pisces?",
+    "date": "1969-02-17",
+    "dasa": null,
+    "verdict": "No: Saturn in Pisces, Revati (Mercury), Saturn sub; Mars not an RP. Leaves on 6-3-69 (text)."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Ruling-planet moment, no horary number. Re-cast: Monday; Asc Gem 29°39' (Me-Ju-Mo-Ra); Moon Aqu 15°12' Satabhisha; mean Rahu Pis 8°47'; Saturn Pis 28°16' Revati Saturn sub ✓ (exactly as stated)."
+ },
+ {
+  "id": "b1-E20",
+  "cite": "B1 p. 93-94",
+  "kind": "horary",
+  "birth": {
+   "date": "1969-02-23",
+   "time": "11:50",
+   "ampm_or_24h_as_printed": "11-50 a.m., Sunday",
+   "zone_or_time_standard": "IST",
+   "place": "not printed (Bombay implied)",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Venus sign, Sun star"
+  },
+  "planets": {
+   "Moon": "Taurus, Krittika"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Sun (Sunday)",
+   "Venus (Moon sign Taurus)",
+   "Sun (Moon star Krittika)",
+   "Venus (lagna sign)",
+   "Sun (lagna star)"
+  ],
+  "events": [
+   {
+    "what": "is the Salem birth time (b1-E05) right?",
+    "date": "1969-02-23",
+    "dasa": null,
+    "verdict": "Yes"
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Re-cast for Bombay: Sunday; Asc Tau 6°54' (Ve-Su); Moon Tau 0°59' Krittika ✓."
+ },
+ {
+  "id": "b1-E21",
+  "cite": "B1 p. 94-95",
+  "kind": "horary",
+  "birth": {
+   "date": "1969-03-11",
+   "time": "16:20",
+   "ampm_or_24h_as_printed": "4-20 p.m. (appointment had been 3 p.m./3-30 p.m.)",
+   "zone_or_time_standard": "IST",
+   "place": "Bombay",
+   "lat": "18°55' N",
+   "lon": "72°50' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Mercury star, Mars sub (Ashlesha) at 4-20 p.m.; Saturn star Pushya at 3 p.m."
+  },
+  "planets": {
+   "Moon": "Jyeshta"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "lagna star/sub = officer's star lords (Mercury star, Mars sub)"
+  ],
+  "events": [
+   {
+    "what": "officer's birth star Jyeshta or Anuradha?",
+    "date": "1969-03-11",
+    "dasa": null,
+    "verdict": "Jyeshta (Saturn not an RP)."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Re-cast: Tuesday; 15:00 Asc Can 6°00' (Pushya); 16:20 Asc Can 23°59' (Mo-Me-Ma) ✓; Moon Sco 29°04' Jyeshta ✓."
+ },
+ {
+  "id": "b1-E22",
+  "cite": "B1 p. 95",
+  "kind": "horary",
+  "birth": {
+   "date": "1969-03-23",
+   "time": "12:00",
+   "ampm_or_24h_as_printed": "12 noon, Sunday",
+   "zone_or_time_standard": "IST",
+   "place": "Madras",
+   "lat": "13°04' N",
+   "lon": "80°15' E"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Tau 7°07' (Sun star, Ketu sub)"
+  },
+  "planets": {
+   "Moon": "Krittika, Venus sub"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Sun (Sunday)",
+   "Venus (lagna Taurus)",
+   "Ketu (lagna sub)",
+   "Sun (lagna/Moon star)"
+  ],
+  "events": [
+   {
+    "what": "is the lagna of a birth at 7-10 p.m., 29-1-1928, Madras Cancer or Leo?",
+    "date": "1969-03-23",
+    "dasa": null,
+    "verdict": "Leo (Cancer would need Moon, Mercury, Saturn or Jupiter)."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Re-cast: Sunday; Moon Tau 8°51' Krittika, Venus sub ✓; but at 12:00 Madras the Asc is Gem 10°25'. Tau 7°07' corresponds to about 10:50 a.m.: printed time or lagna approximate. Natal 29-1-1928 19:10 Madras: Asc Leo 0°58' in Magha (Ketu) ✓."
+ },
+ {
+  "id": "b1-E23",
+  "cite": "B1 p. 159",
+  "kind": "horary",
+  "birth": {
+   "date": "1970-03-03",
+   "time": "[?3]-30 p.m. (doubtful)",
+   "ampm_or_24h_as_printed": "[?3]-30 p.m.",
+   "zone_or_time_standard": "IST",
+   "place": "not printed",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": null,
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Mars (Tuesday)",
+   "Jupiter (Moon sign)",
+   "Venus (Moon star)",
+   "Jupiter (ascending sign)"
+  ],
+  "events": [
+   {
+    "what": "war time or civil time for b1-E13",
+    "date": "1970-03-03",
+    "dasa": null,
+    "verdict": "Sagittarius lagna in Venus star, Jupiter sub, Mars sub-sub; reported time was war time."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Re-cast: Tuesday ✓; Moon Sag 19°15' in Poorvashada (Venus) ✓. A Jupiter-ruled lagna in South India needs ~06:00-07:40 (Sag) or ~09:00-10:40 (Pis), so '3-30 p.m.' (lagna Cancer) is inconsistent: probably 9-30 a.m."
+ },
+ {
+  "id": "b1-E24",
+  "cite": "B1 p. 167-168",
+  "kind": "horary",
+  "birth": {
+   "date": "1969-11-01",
+   "time": "21:00",
+   "ampm_or_24h_as_printed": "9 p.m. (IST); chart handed over at 4-23 p.m.",
+   "zone_or_time_standard": "IST",
+   "place": "Coimbatore",
+   "lat": "11°00' N (assumed)",
+   "lon": "76°58' E (assumed)"
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Gemini, in a Mars star"
+  },
+  "planets": {
+   "Moon": "rasi lord printed '[?MARS]'; star lord Saturn"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Saturn (Saturday)",
+   "[?Mars] (Moon rasi lord, transcript doubtful)",
+   "Saturn (Moon star)",
+   "Mercury (lagna sign)",
+   "Mars (lagna star in Gemini)"
+  ],
+  "events": [
+   {
+    "what": "is the Libra lagna of b1-E15 right?",
+    "date": "1969-11-01",
+    "dasa": null,
+    "verdict": "No: Virgo, Mars star."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Re-cast: Saturday ✓; Asc Gem 2°06' Mrigasira (Mars) ✓; Moon Can 8°36' Pushya (Saturn) ✓. The Moon's rasi lord is therefore the Moon, not Mars: the '[?MARS]' line is a transcription or print error."
+ },
+ {
+  "id": "b1-E25",
+  "cite": "B1 p. 168-169",
+  "kind": "horary",
+  "birth": {
+   "date": "not printed (a Wednesday)",
+   "time": null,
+   "ampm_or_24h_as_printed": null,
+   "zone_or_time_standard": null,
+   "place": "not printed (Coimbatore?)",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": {
+   "1": "Kanya, Uttiram"
+  },
+  "planets": {
+   "Moon": "Sun's rasi (Leo), Sun's star"
+  },
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": [
+   "Mercury (Wednesday)",
+   "Sun (Moon rasi)",
+   "Sun (Moon star)",
+   "Mercury (lagna Kanya)",
+   "Sun (lagna star Uttiram)"
+  ],
+  "events": [
+   {
+    "what": "Tenkasi birth (b1-E16): war time or IST?",
+    "date": null,
+    "dasa": null,
+    "verdict": "War time; Leo lagna."
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "RP list only."
+ },
+ {
+  "id": "b1-E26",
+  "cite": "B1 p. 10, 14",
+  "kind": "horary",
+  "birth": {
+   "date": "1969-05-14",
+   "time": "10:45",
+   "ampm_or_24h_as_printed": "10-45 A.M. I.S.T.",
+   "zone_or_time_standard": "IST",
+   "place": "Banjar, Kulu (H.P.)",
+   "lat": null,
+   "lon": null
+  },
+  "horary_number": null,
+  "cusps": null,
+  "planets": null,
+  "dasa_balance": null,
+  "ayanamsa_as_printed": null,
+  "significators": null,
+  "ruling_planets": null,
+  "events": [
+   {
+    "what": "KSK's arrival; 'importance of the ruling planets at the moment'",
+    "date": "1969-05-14",
+    "dasa": null,
+    "verdict": "No RPs printed"
+   },
+   {
+    "what": "prediction made 8-00 p.m. IST 16-5-1969 at Banjar: letter from the American's wife",
+    "date": "1969-05-24",
+    "dasa": null,
+    "verdict": "came true (afternoon)"
+   }
+  ],
+  "checked_against_figure": false,
+  "notes": "Anecdotal moments only; no chart data. Kept for completeness."
+ }
+]

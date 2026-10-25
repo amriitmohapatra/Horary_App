@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const url = pathToFileURL(resolve(import.meta.dirname, '../..', process.env.KAAST2_HTML ?? 'dist-single/index.html')).href;
-const PAGES = ['Page 1', 'Strengths', 'Vargas', 'Dashas', 'KP', 'NTP', 'Yogi & Bhava', 'Jaimini', 'Transits', 'Settings'];
+const PAGES = ['Page 1', 'Page 1 (Experimental)', 'Strengths', 'Vargas', 'Dashas', 'KP (Research)', 'NTP (Research)', 'Yogi & Bhava', 'Jaimini', 'Transits', 'Matching', 'Settings'];
 
 for (const theme of ['light', 'dark', 'warm']) {
   test(`axe: no WCAG A/AA violations on any page (${theme})`, async ({ page }) => {

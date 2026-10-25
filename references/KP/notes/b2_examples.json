@@ -1,0 +1,297 @@
+[
+  {
+    "id": "b2-E01",
+    "cite": "B2 pp. 62-63 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": {
+      "Rahu": "in the 5th house, in the constellation of the lord of 6 (degree not printed)",
+      "Saturn": "in the 5th house, in the constellation of the lord of 6 (degree not printed)",
+      "Jupiter": "in the 11th house, conjoined with Kethu; Jupiter is lord of the lagna",
+      "Kethu": "in the 11th house, conjoined with Jupiter"
+    },
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "marriage", "date": null, "dasa": "Mercury dasa, Jupiter bhukti", "verdict": "occurred"},
+      {"what": "no child despite years of marriage", "date": null, "dasa": "Mercury dasa, Saturn bhukti; then Kethu dasa", "verdict": "denied in that period"},
+      {"what": "pilgrimage (Benares, Rameswaram, Guruvayur) and charity as shanti, begun when the Jupiter bhukti started", "date": null, "dasa": "Kethu dasa, Jupiter bhukti", "verdict": "done"},
+      {"what": "birth of a child, born in Moolam star (Kethu star in Jupiter's sign Sagittarius)", "date": null, "dasa": "Kethu dasa, Jupiter bhukti (before it ended)", "verdict": "occurred"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Partial chart in prose only. Lagna not printed. The lagna lord is Jupiter, so the lagna is Sagittarius or Pisces. Inference (not printed): with sign-based houses only Sagittarius works, because then the 5th is Aries and the 6th lord is Venus, so Rahu and Saturn would be in Bharani. With a Pisces lagna the 5th would be Cancer and the 6th lord the Sun, which has no star in Cancer. Kethu, opposite Rahu, would then be in Libra (Swathi/Visakha). Used for Krishnamurti's rule that the Moon's star and sub at a child's birth are those of the parent's dasa and bhukti lords or their star lords (KP2-220), and for the karma/shanti discussion (KP2-230…232)."
+  },
+  {
+    "id": "b2-E02",
+    "cite": "B2 p. 472 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": {"Rahu": "Tau 26°36' (printed \"Taurus at 26° - 36°\"): Venus sign, Mars star Mrigasira, Jupiter sub"},
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "appointed manager in an automobile industry", "date": null, "dasa": "Rahu dasa, Jupiter bhukti, Venus anthra, Mars sookshma", "verdict": "occurred"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Only Rahu's position is printed. Arithmetic check: Taurus 26°36' = 56°36' absolute. Mrigasira starts at 53°20'; its subs run Mars to 54°06'40\", Rahu to 56°06'40\", Jupiter to 57°53'20\". So the Jupiter sub is correct. The dasa chain is Rahu (planet), its sub lord, its sign lord and its star lord: Rahu as agent of sign, star and sub lords (KP2-052)."
+  },
+  {
+    "id": "b2-E03",
+    "cite": "B2 p. 360 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": {
+      "Sun": "Karthikai (Krithika) 1st pada, i.e. Aries 26°40'-30°00'",
+      "Saturn": "exalted (Libra), aspecting the Sun"
+    },
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "exports human hair collected at famous temples", "date": null, "dasa": null, "verdict": "profession"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Printed: 'born [in] Cancer having Sun in Karthik 1st pada aspected by exalted Saturn'. It does not say whether 'Cancer' is the lagna or the Moon sign. If Cancer is the lagna, Aries is the 10th, so the Sun is in the 10th, opposite Saturn in the 4th. Illustrates Sun + Saturn = wool and hair (KP2-200)."
+  },
+  {
+    "id": "b2-E04",
+    "cite": "B2 p. 344 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": {"Mars": "in the 12th house, afflicted, weak by sign and by house ownership"},
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "kicked and mauled by a lion while playing with it in the circus ring", "date": null, "dasa": "conjoint period of Mars (in 12) and the planet afflicting Mars", "verdict": "occurred"}
+    ],
+    "checked_against_figure": false,
+    "notes": "A gentleman connected with a circus. Krishnamurti uses it to warn against mechanical blending ('Mars = violence + 12th = animals'): station in life, the house ownership and the afflicting planet's period must all agree."
+  },
+  {
+    "id": "b2-E05",
+    "cite": "B2 pp. 55-56 (no figure)",
+    "kind": "horary",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "purse with Rs. 827 lost in a bazaar street a week earlier; will it come back?", "date": "1962-09 (a Thursday, 6 p.m., during a lecture at Bharatiya Vidya Bhavan, Delhi)", "dasa": null, "verdict": "predicted: returned intact next Wednesday, found by a banker, an advocate or a professor"},
+      {"what": "purse returned intact by a professor", "date": "the following Wednesday (1962-09)", "dasa": null, "verdict": "prediction fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "A number was taken from the querist, but it is not printed; no chart is given. Moment: a Thursday in September 1962, about 6 p.m., Delhi. The exact date is not printed."
+  },
+  {
+    "id": "b2-E06",
+    "cite": "B2 p. 93 (no figure)",
+    "kind": "horary",
+    "birth": null,
+    "horary_number": 7,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "will the seriously ill grandfather recover?", "date": null, "dasa": null, "verdict": "predicted (from omens): death; 'take long leave and proceed at once'"},
+      {"what": "grandfather died before the querist arrived", "date": null, "dasa": null, "verdict": "fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Number 7 is from the 1-108 scheme of B2, not the later 1-249. The judgement is given as resting on omens heard during the calculation (talk of a death, a purohit's reminder of a death anniversary). No chart is printed."
+  },
+  {
+    "id": "b2-E07",
+    "cite": "B2 p. 52 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "lump-sum gain from a very small stake at the races (sweep ticket of Rs. 2 won the first prize, Rs. 4,200)", "date": "1955-05-08", "dasa": null, "verdict": "predicted in advance, fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "A high official who never went to the races. No chart data printed."
+  },
+  {
+    "id": "b2-E08",
+    "cite": "B2 p. 52 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "consultation by the sons of a gravely ill physician of Madras (doctors had given up hope)", "date": "1958-02-06", "dasa": null, "verdict": "-"},
+      {"what": "health normal and a happy celebration in the family", "date": "1958-05", "dasa": null, "verdict": "predicted, fulfilled"},
+      {"what": "death", "date": "1958-06-26", "dasa": null, "verdict": "predicted in writing, fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "The printed text reads 'upon 26-6-58 their father would be having indifferent health; in May 1958 his health would be normal… only on 26-6-58 he would pass away'. The first date is probably a misprint for an earlier date. No chart data."
+  },
+  {
+    "id": "b2-E09",
+    "cite": "B2 p. 53 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "accident: slipped at home and fractured the left arm (a doctor of Saidapet who avoided driving that day)", "date": "1953-12-19", "dasa": null, "verdict": "predicted in 1950, fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "No chart data."
+  },
+  {
+    "id": "b2-E10",
+    "cite": "B2 pp. 53-54 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "the Madras bride's party failed to come for the betrothal (a calamity in their house)", "date": null, "dasa": null, "verdict": "predicted, fulfilled"},
+      {"what": "the son married the Bangalore bride whose chart Krishnamurti had selected, in the predicted week", "date": null, "dasa": null, "verdict": "predicted, fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Matching by charts; no data printed."
+  },
+  {
+    "id": "b2-E11",
+    "cite": "B2 pp. 54-55 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "consulted about a complicated illness", "date": "1958-07-10", "dasa": null, "verdict": "-"},
+      {"what": "temperature normal", "date": "1958-07-16", "dasa": null, "verdict": "predicted, fulfilled"},
+      {"what": "in bed till the 20th", "date": "1958-07-20", "dasa": null, "verdict": "predicted"},
+      {"what": "resumes business at the office (he tried to defy the prediction but was called to the office at 2 p.m. and went at 3 p.m.)", "date": "1958-07-28", "dasa": null, "verdict": "predicted 'on and from 28th', fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Ambiguous print: the patient speaks on 'the 27th' and then 'the eventful day came'. The call to the office was probably on the 28th. No chart data."
+  },
+  {
+    "id": "b2-E12",
+    "cite": "B2 p. 86 (no figure)",
+    "kind": "natal",
+    "birth": {"date": "1738-06-04", "time": null, "ampm_or_24h_as_printed": null, "zone_or_time_standard": null, "place": "same latitude and longitude as King George III's birth (place not named)", "lat": null, "lon": null},
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "George III ascended the throne; Samuel Hennings set up as an independent businessman", "date": "1760-10", "dasa": null, "verdict": "parallel lives"},
+      {"what": "both married on the same day (Hennings married Elsie)", "date": "1761-09-08", "dasa": null, "verdict": "parallel lives"},
+      {"what": "both had the same number of children of each sex", "date": null, "dasa": null, "verdict": "parallel lives"},
+      {"what": "both died at the same hour", "date": "1820-09-02", "dasa": null, "verdict": "parallel lives"}
+    ],
+    "checked_against_figure": false,
+    "notes": "The classic 'astro-twins' story (George III and Samuel Hennings), quoted from a foreign journal of 1820. Hennings is said to have died aged 82. B2 gives Hennings's birth date as 4-6-1738, which is also George III's birth date (4 June 1738, London). No time or chart printed. Used for 'identical results for identical birth moment and place' (KP2-213)."
+  },
+  {
+    "id": "b2-E13",
+    "cite": "B2 p. 397 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "a 'Mercurian' girl at first refused the bright student whose chart matched, then consented when told he would make a fortune", "date": null, "dasa": null, "verdict": "marriage celebrated within weeks"},
+      {"what": "first child within a year; she then wanted a divorce because no fortune had come", "date": null, "dasa": null, "verdict": "-"},
+      {"what": "the husband's lucky time coincides with the birth of the second child; he made his fortune", "date": null, "dasa": null, "verdict": "predicted, fulfilled"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Illustrates Mercurian changeability. No chart data printed."
+  },
+  {
+    "id": "b2-E14",
+    "cite": "B2 p. 85 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "two unrelated men born at the same time: both lecturers, both married working women, childless, fond of pets, same interests, toothache on the same day", "date": null, "dasa": null, "verdict": "parallel lives"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Same-moment births. No data printed."
+  },
+  {
+    "id": "b2-E15",
+    "cite": "B2 p. 85 (no figure)",
+    "kind": "natal",
+    "birth": null,
+    "horary_number": null,
+    "cusps": null,
+    "planets": null,
+    "dasa_balance": null,
+    "ayanamsa_as_printed": null,
+    "significators": null,
+    "ruling_planets": null,
+    "events": [
+      {"what": "two men born in the same village: same temperament and illnesses, each lost a child in the same month, same number of children; one a journalist, one a fiction writer", "date": null, "dasa": null, "verdict": "parallel lives"},
+      {"what": "both died on the same day", "date": null, "dasa": null, "verdict": "parallel lives"}
+    ],
+    "checked_against_figure": false,
+    "notes": "Printed: 'Mercury, Mars and Jupiter were the signs [sic: planets] who ruled over their professions'. No chart data."
+  }
+]

@@ -495,8 +495,13 @@ def combust(ch, p):
 
 def functional(ch, p):
     row = FUNC[sgn(ch.asc)]
-    if p in ("Ra", "Ke"):              # PL9 differs from the PL7 table: dispositor's nature (NUM)
-        return FUNC_LABEL[row[PID[SIGN_LORD[ch.sign[p]]] - 1]]
+    if p in ("Ra", "Ke"):              # BIN 0x426ee5: nearest planet in its sign, else house 1/5/9 B, 6/8/12 M
+        mates = sorted((q for q in PID if q != p and ch.sign[q] == ch.sign[p]),
+                       key=lambda q: dist(ch.pos[q], ch.pos[p]))
+        if mates:
+            return functional(ch, mates[0])
+        h = (ch.sign[p] - sgn(ch.asc)) % 12 + 1
+        return "Benefic" if h in (1, 5, 9) else "Malefic" if h in (6, 8, 12) else "Neutral"
     return FUNC_LABEL[row[PID[p] - 1]]
 
 

@@ -10,6 +10,7 @@ import { BUILTIN_PLACES, type Place, zoneFor } from '../../io/places';
 import type { BootResult } from '../../boot/wasmLoader';
 import { strengths, type Page1Strengths } from '../../engine/strength';
 import type { AyanamsaId } from '../../engine/ephem/ayanamsa';
+import type { PlanetId } from '../../engine/types';
 
 export type EngineState =
   | { status: 'booting' }
@@ -50,32 +51,49 @@ export const strength = computed<Page1Strengths | null>(() => {
  * "regardless of the default set" (PL 7 manual pp. 218–219). 'auto' does that
  * for the PL profiles and keeps the chart's own ayanamsa for Solar Fire /
  * Kala Chakra (the family's KP practice on Lahiri). ---- */
-export type KpAyanamsa = 'auto' | 'chart' | 'pl_krishnamurti' | 'pl_krishnamurti_new';
+export type KpAyanamsa = 'readers' | 'auto' | 'chart' | 'pl_krishnamurti' | 'pl_krishnamurti_new';
 const KP_AYAN = 'kaast2.kpAyanamsa.v1';
 export const kpAyanamsa = signal<KpAyanamsa>(((): KpAyanamsa => {
   try {
     const v = localStorage.getItem(KP_AYAN);
-    return v === 'chart' || v === 'pl_krishnamurti' || v === 'pl_krishnamurti_new' ? v : 'auto';
-  } catch { return 'auto'; }
+    return v === 'auto' || v === 'chart' || v === 'pl_krishnamurti' || v === 'pl_krishnamurti_new' ? v : 'readers';
+  } catch { return 'readers'; }
 })());
 export function setKpAyanamsa(v: KpAyanamsa): void {
   kpAyanamsa.value = v;
   try { localStorage.setItem(KP_AYAN, v); } catch { /* non-fatal */ }
 }
+/**
+ * "Readers mode" (docs/specs/kp_research.md §3): what Krishnamurti's Readers
+ * use — the KP-New ayanamsa, the mean node and 365¼-day dasa years.
+ */
+export const READERS_OVERRIDES: ProfileOverrides = { ayanamsa: 'pl_krishnamurti_new', node: 'mean', dashaYearDays: 365.25 };
 /** The ayanamsa the KP page uses for a chart cast with `chartAyanamsa` in profile `profileId`. */
 export function kpAyanamsaFor(choice: KpAyanamsa, profileId: ChartInput['profileId'], chartAyanamsa: AyanamsaId): AyanamsaId {
+  if (choice === 'readers') return 'pl_krishnamurti_new';
   if (choice === 'chart') return chartAyanamsa;
   if (choice === 'auto') return profileId === 'solarfire' ? chartAyanamsa : 'pl_krishnamurti';
   return choice;
 }
+/** Overrides the KP page casts with (on top of Settings). */
+export function kpOverrides(choice: KpAyanamsa, profileId: ChartInput['profileId'], chartAyanamsa: AyanamsaId): ProfileOverrides {
+  return choice === 'readers' ? READERS_OVERRIDES : { ayanamsa: kpAyanamsaFor(choice, profileId, chartAyanamsa) };
+}
 export const kpChart = computed<{ ok: ChartResult } | { error: string } | null>(() => {
   const e = engine.value, inp = chartInput.value, c = chart.value;
   if (e.status !== 'ready' || !inp || !c || !('ok' in c)) return null;
-  const ayanamsa = kpAyanamsaFor(kpAyanamsa.value, inp.profileId, c.ok.profile.ayanamsa);
-  if (ayanamsa === c.ok.profile.ayanamsa) return c;
-  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, ayanamsa } }) }; }
+  const extra = kpOverrides(kpAyanamsa.value, inp.profileId, c.ok.profile.ayanamsa);
+  const p = c.ok.profile;
+  if ((Object.keys(extra) as (keyof ProfileOverrides)[]).every((k) => p[k] === extra[k])) return c;
+  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, ...extra } }) }; }
   catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
 });
+/** KP (Research) sub-tab, and the moment of judgement used by the ruling planets and horary sub-tabs (never stored). */
+export type KpTab = 'tables' | 'sig' | 'matters' | 'rp' | 'transit' | 'horary' | 'guidance';
+export const kpTab = signal<KpTab>('tables');
+export const kpMoment = signal<ChartInput | null>(null);
+/** The period sent from Life matters to Transit timing. */
+export const kpPeriod = signal<{ lords: PlanetId[]; start: number; end: number } | null>(null);
 
 /* ---- NTP page: Iyer uses the mean node ("Take always Mean Rahu", NTP-1 p. 101). ---- */
 export type NtpNode = 'mean' | 'chart';
@@ -95,8 +113,26 @@ export const ntpChart = computed<{ ok: ChartResult } | { error: string } | null>
   catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
 });
 
+/* ---- Matching: a second chart (the prospective match) and, optionally, a first
+ * chart other than the main one. Never persisted (personal data). ---- */
+export type MatchRole = 'boy' | 'girl';
+export const partnerInput = signal<ChartInput | null>(null);
+export const matchFirstInput = signal<ChartInput | null>(null);
+/** Who the first chart is; the partner is the other. Kootas count from the girl's star to the boy's. */
+export const firstRole = signal<MatchRole>('boy');
+const castOrError = (inp: ChartInput | null, extra: ProfileOverrides = {}): { ok: ChartResult } | { error: string } | null => {
+  const e = engine.value;
+  if (e.status !== 'ready' || !inp) return null;
+  try { return { ok: cast(e.swe, { ...inp, overrides: { ...overrides.value, ...extra } }) }; }
+  catch (err) { return { error: err instanceof Error ? err.message : String(err) }; }
+};
+export const firstChart = computed(() => (matchFirstInput.value ? castOrError(matchFirstInput.value) : chart.value));
+export const partnerChart = computed(() => castOrError(partnerInput.value));
+/** The partner for Iyer's rules: mean node, as the NTP page. */
+export const ntpPartnerChart = computed(() => castOrError(partnerInput.value, ntpNode.value === 'mean' ? { node: 'mean' } : {}));
+
 /* ---- navigation: #page1, #dashas, … (hash routing works from file://) ---- */
-export const ROUTES = ['page1', 'strengths', 'vargas', 'dashas', 'kp', 'ntp', 'yogi', 'jaimini', 'transits', 'settings'] as const;
+export const ROUTES = ['page1', 'exp', 'strengths', 'vargas', 'dashas', 'kp', 'ntp', 'yogi', 'jaimini', 'transits', 'match', 'settings'] as const;
 export type Route = (typeof ROUTES)[number];
 const routeFromHash = (): Route => {
   const h = location.hash.replace('#', '') as Route;
@@ -105,6 +141,21 @@ const routeFromHash = (): Route => {
 export const route = signal<Route>(routeFromHash());
 addEventListener('hashchange', () => { route.value = routeFromHash(); });
 export function go(r: Route): void { if (location.hash !== `#${r}`) location.hash = r; route.value = r; }
+
+/** The native's sex, for yogas that depend on it and for Nandi Nadi karakas; per session, never stored. */
+export const nativeSex = signal<'unspecified' | 'male' | 'female'>('unspecified');
+
+/* ---- Page 1 (Experimental): the open sub-tab and the conjunction orb survive tab switches. ---- */
+export type ExpTab = 'states' | 'lords' | 'aspects' | 'worksheet' | 'nadi';
+export const expTab = signal<ExpTab>('states');
+const EXP_ORB = 'kaast2.conjunctionOrb.v1';
+export const conjunctionOrb = signal<number>(((): number => {
+  try { const v = Number(localStorage.getItem(EXP_ORB)); return v > 0 && v <= 15 ? v : 3; } catch { return 3; }
+})());
+export function setConjunctionOrb(v: number): void {
+  conjunctionOrb.value = v;
+  try { localStorage.setItem(EXP_ORB, String(v)); } catch { /* non-fatal */ }
+}
 
 /** Extra charts (events) held by the last opened PL file; kept here so they survive the form closing. */
 export const openedEvents = signal<{ name: string; input: ChartInput }[]>([]);

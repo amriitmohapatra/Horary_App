@@ -1,0 +1,375 @@
+{
+ "_source": "KP Reader B6 (K. S. Krishnamurti, Horary Astrology), printed planet -> houses significator tables (Figs. B6.20, B6.26, B6.67); numbers only, with citations; analysis references/KP/notes/b6_rules.md KP6-024",
+ "cases": [
+  {
+   "id": "b6-E16",
+   "cite": "B6 pp. 174\u2013176, Figs. B6.19, B6.20",
+   "horary_number": 29,
+   "cusps": [
+    144000,
+    237840,
+    327840,
+    425040,
+    540240,
+    666240,
+    792000,
+    885840,
+    975840,
+    1073040,
+    1188240,
+    18240
+   ],
+   "planets": {
+    "Ve": {
+     "lon": 1252800,
+     "retro": false
+    },
+    "Ra": {
+     "lon": 1204680,
+     "retro": false
+    },
+    "Sa": {
+     "lon": 27000,
+     "retro": false
+    },
+    "Su": {
+     "lon": 80760,
+     "retro": false
+    },
+    "Me": {
+     "lon": 156360,
+     "retro": false
+    },
+    "Mo": {
+     "lon": 940920,
+     "retro": false
+    },
+    "Ma": {
+     "lon": 838500,
+     "retro": true
+    },
+    "Ju": {
+     "lon": 551520,
+     "retro": true
+    },
+    "Ke": {
+     "lon": 556680,
+     "retro": false
+    }
+   },
+   "printed": {
+    "Su": [
+     1,
+     6,
+     11,
+     12
+    ],
+    "Mo": [
+     1,
+     3,
+     4,
+     6,
+     8,
+     11
+    ],
+    "Ma": [
+     1,
+     2,
+     5,
+     7,
+     12
+    ],
+    "Me": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     8
+    ],
+    "Ju": [
+     5,
+     8,
+     11,
+     12
+    ],
+    "Ve": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     11
+    ],
+    "Sa": [
+     1,
+     2,
+     5,
+     6,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "Ra": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "Ke": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     8,
+     11,
+     12
+    ]
+   },
+   "printedText": {},
+   "notes": "For horary charts 'birth' holds the moment and place of JUDGEMENT. Oracle for the significator engine. Recomputed (KP6-024): Sun, Moon, Mars, Mercury, Jupiter rows = app A-D exactly; Saturn/Rahu/Ketu need node agency; the Venus row (3,4 instead of 2) is unexplained. Text: Venus balance 'from 6-9-1969 [sic]'; the Jupiter bhukti runs to 18-2-1970."
+  },
+  {
+   "id": "b6-E21",
+   "cite": "B6 pp. 190\u2013194, Figs. B6.25, B6.26",
+   "horary_number": 217,
+   "cusps": [
+    1132000,
+    1265400,
+    84000,
+    181800,
+    271800,
+    369000,
+    484000,
+    617400,
+    732600,
+    829800,
+    919800,
+    1017000
+   ],
+   "planets": {
+    "Sa": {
+     "lon": 1280640,
+     "retro": true
+    },
+    "Ra": {
+     "lon": 1234500,
+     "retro": false
+    },
+    "Mo": {
+     "lon": 29580,
+     "retro": false
+    },
+    "Ju": {
+     "lon": 572580,
+     "retro": false
+    },
+    "Ke": {
+     "lon": 586500,
+     "retro": false
+    },
+    "Ma": {
+     "lon": 612300,
+     "retro": false
+    },
+    "Su": {
+     "lon": 813780,
+     "retro": false
+    },
+    "Me": {
+     "lon": 802620,
+     "retro": false
+    },
+    "Ve": {
+     "lon": 959940,
+     "retro": false
+    }
+   },
+   "printed": {
+    "Su": [
+     1,
+     2,
+     7,
+     9,
+     12
+    ],
+    "Mo": [
+     2,
+     3,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "Ma": [
+     2,
+     3,
+     6,
+     7,
+     10
+    ],
+    "Me": [
+     1,
+     2,
+     5,
+     8,
+     9,
+     12
+    ],
+    "Ju": [
+     2,
+     7,
+     9,
+     11
+    ],
+    "Ve": [
+     4,
+     11
+    ],
+    "Sa": [
+     1,
+     2,
+     5,
+     8,
+     9,
+     12
+    ]
+   },
+   "printedText": {
+    "Ra": "all houses except the 4th",
+    "Ke": "all houses except the 4th"
+   },
+   "notes": "For horary charts 'birth' holds the moment and place of JUDGEMENT. Oracle (KP6-024): Sun, Mars, Mercury, Jupiter, Saturn rows = app A-D; Venus row omits 9 (house IX lists Venus: print omission); Rahu/Ketu reproduced by node agency with full sign-lord/conjunct/aspect sets; the Moon row needs a reduced Ketu set. RP strength order stated here (p. 194)."
+  },
+  {
+   "id": "b6-E55",
+   "cite": "B6 pp. 297\u2013300, Figs. B6.66, B6.67",
+   "horary_number": 247,
+   "cusps": [
+    1274800,
+    98760,
+    195420,
+    285960,
+    379020,
+    494220,
+    626800,
+    746760,
+    843420,
+    933960,
+    1027020,
+    1142220
+   ],
+   "planets": {
+    "Ra": {
+     "lon": 1194000,
+     "retro": false
+    },
+    "Sa": {
+     "lon": 48480,
+     "retro": false
+    },
+    "Ve": {
+     "lon": 111660,
+     "retro": false
+    },
+    "Me": {
+     "lon": 200820,
+     "retro": false
+    },
+    "Su": {
+     "lon": 274020,
+     "retro": false
+    },
+    "Ke": {
+     "lon": 546000,
+     "retro": false
+    },
+    "Ju": {
+     "lon": 557820,
+     "retro": false
+    },
+    "Ma": {
+     "lon": 787260,
+     "retro": true
+    },
+    "Mo": {
+     "lon": 1007760,
+     "retro": false
+    }
+   },
+   "printed": {
+    "Su": [
+     1,
+     3,
+     6,
+     10,
+     12
+    ],
+    "Mo": [
+     3,
+     5,
+     6,
+     10
+    ],
+    "Ma": [
+     1,
+     2,
+     8,
+     9,
+     11,
+     12
+    ],
+    "Me": [
+     2,
+     3,
+     4,
+     7,
+     8,
+     9
+    ],
+    "Ju": [
+     1,
+     3,
+     6,
+     10
+    ],
+    "Ve": [
+     3,
+     6,
+     8
+    ],
+    "Sa": [
+     1,
+     2,
+     3,
+     8,
+     11,
+     12
+    ],
+    "Ra": [
+     1,
+     3,
+     6,
+     10,
+     12
+    ]
+   },
+   "printedText": {
+    "Ke": "1, [2], 3, 4, 6, 7, 8, [9], 10 (bracketed digits blurred; confirmed by recomputation)"
+   },
+   "notes": "For horary charts 'birth' holds the moment and place of JUDGEMENT. Oracle (KP6-024): Moon, Mars, Mercury, Jupiter, Saturn rows = app A-D; Sun and Rahu, Ketu reproduced with node agency; Venus row omits 2 (house II lists Venus: print omission). The 11th cusp: Capricorn 15\u00b017', Moon star, Jupiter sub."
+  }
+ ]
+}

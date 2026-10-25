@@ -1,5 +1,6 @@
 // prepublish-synthetic-charts: the sample below is a public celebrity chart.
 /** Krishnamurti page: KP ayanamsa, cusps, lords, significators; on the single-file build, offline. */
+import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -27,19 +28,24 @@ async function cast(page: Page) {
   return errors;
 }
 
-test('KP page: Krishnamurti ayanamsa by default, chart, cusps and significators', async ({ page }) => {
+test('KP page: Readers mode by default; PL Krishnamurti on request; chart, cusps and significators', async ({ page }) => {
   const errors = await cast(page);
   const moonPage1 = arcsec(await page.getByTestId('planet-table').locator('tr[data-point="Mo"] td').first().innerText());
-  await openTab(page, 'KP');
-  await expect(page.getByTestId('kp-used')).toContainText('Krishnamurti');
+  await openTab(page, 'KP (Research)');
+  await expect(page.getByTestId('kp-used')).toContainText('Krishnamurti New');
+  await expect(page.getByTestId('kp-used')).toContainText('Node: mean');
+  await expect(page.getByTestId('kp-used')).toContainText('365¼');
   await expect(page.getByTestId('kp-used')).toContainText('Placidus');
   await expect(page.getByRole('img', { name: /Krishnamurti chart/ })).toBeVisible();
   await expect(page.getByTestId('kp-cusps').locator('tbody tr')).toHaveCount(12);
   await expect(page.getByTestId('kp-planets').locator('tbody tr')).toHaveCount(9);
   await expect(page.getByTestId('kp-sig-houses').locator('tbody tr')).toHaveCount(12);
   await expect(page.getByTestId('kp-sig-planets').locator('tbody tr')).toHaveCount(9);
+  await expect(page.getByTestId('kp-fortuna')).toContainText('Fortuna');
 
-  // In 1942 the Krishnamurti ayanamsa is ≈25″ smaller than PL's Lahiri (PL7 formulas).
+  // PL's KP pages ("Automatic"): in 1942 the Krishnamurti ayanamsa is ≈25″ smaller than PL's Lahiri (PL7 formulas).
+  await page.getByLabel('KP ayanamsa').selectOption('auto');
+  await expect(page.getByTestId('kp-used')).not.toContainText('Krishnamurti New');
   const moonRow = page.getByTestId('kp-planets').locator('tr[data-point="Mo"]');
   const moonKp = arcsec(await moonRow.locator('td').first().innerText());
   expect(moonKp - moonPage1).toBeGreaterThanOrEqual(20);
@@ -56,7 +62,65 @@ test('KP page: Krishnamurti ayanamsa by default, chart, cusps and significators'
   const occ = await page.getByTestId('kp-sig-houses').locator('tbody tr').evaluateAll((rows) =>
     rows.flatMap((r) => [...r.querySelectorAll('td')[0]!.querySelectorAll('.pl')].map((e) => e.textContent)));
   expect(occ.sort()).toEqual(['Ju', 'Ke', 'Ma', 'Me', 'Mo', 'Ra', 'Sa', 'Su', 'Ve']);
-  await page.getByLabel('KP ayanamsa').selectOption('auto');
+  await page.getByLabel('KP ayanamsa').selectOption('readers');
+  expect(errors).toEqual([]);
+});
+
+test('KP (Research) sub-tabs: significators, life matters, ruling planets, transit, horary, guidance; axe clean', async ({ page }) => {
+  const errors = await cast(page);
+  await openTab(page, 'KP (Research)');
+  const found: string[] = [];
+  const axe = async (where: string) => {
+    const r = await new AxeBuilder({ page: page as unknown as ConstructorParameters<typeof AxeBuilder>[0]['page'] }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
+    for (const v of r.violations) found.push(`${where}: ${v.id} ${v.nodes.slice(0, 2).map((n) => n.target.join(' ')).join(' | ')}`);
+  };
+  await axe('KP tables');
+
+  await page.getByRole('button', { name: 'Significators', exact: true }).click();
+  await expect(page.getByTestId('kp-rank').locator('tbody tr')).toHaveCount(12);
+  await expect(page.getByTestId('kp-psets').locator('tbody tr')).toHaveCount(9);
+  await axe('KP significators');
+
+  await page.getByRole('button', { name: 'Life matters', exact: true }).click();
+  await expect(page.getByTestId('kp-promise').locator('tbody tr')).toHaveCount(14);
+  await expect(page.getByTestId('kp-matter-chain')).toContainText('Cusp 7 sub lord');
+  await page.getByLabel('From year').fill('1960');
+  await page.getByLabel('From year').press('Tab');
+  await page.getByLabel('To year').fill('1990');
+  await page.getByLabel('To year').press('Tab');
+  await expect(page.getByTestId('kp-periods').locator('tbody tr').first()).toBeVisible();
+  await axe('KP life matters');
+  await page.getByTestId('kp-periods').getByRole('button', { name: 'Transit days' }).first().click();
+  await expect(page.getByTestId('kp-tr-period')).toBeVisible();
+  await axe('KP transit');
+
+  await page.getByRole('button', { name: 'Ruling planets', exact: true }).click();
+  await expect(page.getByTestId('kp-rp').locator('tbody tr')).toHaveCount(7);
+  await expect(page.getByTestId('kp-rp-ordered').locator('.pl')).not.toHaveCount(0);
+  await page.getByRole('button', { name: 'Find birth times' }).click();
+  await expect(page.getByTestId('kp-rect-rps')).toBeVisible();
+  await axe('KP ruling planets');
+
+  // Horary: number 74 at Delhi, 13-8-1969 7:30 IST (B6 pp. 111–113) → ascendant Cancer 14°53′20″.
+  await page.getByRole('button', { name: 'Horary 1–249', exact: true }).click();
+  await page.getByRole('spinbutton', { name: 'Number' }).fill('74');
+  await page.getByRole('button', { name: 'Set moment' }).click();
+  await page.locator('#kpm-date').fill('1969-08-13');
+  await page.getByTestId('kpm-entry').getByLabel('Hours', { exact: true }).fill('07:30:00');
+  await page.locator('#kpm-place').fill('New Delhi');
+  await page.locator('#kpm-name').press('Enter');
+  await expect(page.getByTestId('kpm-summary')).toContainText('1969');
+  await expect(page.getByTestId('kp-hor-cusps').locator('tr[data-cusp="1"]')).toContainText('Cn 14:53:20');
+  await expect(page.getByTestId('kp-hor-test').locator('li')).toHaveCount(3);
+  await expect(page.getByTestId('kp-hor-outcome')).toContainText(/promised|delayed|denied/);
+  await axe('KP horary');
+
+  await page.getByRole('button', { name: 'KP Guidance', exact: true }).click();
+  await expect(page.getByTestId('kp-guide-list').first().locator('li').first()).toBeVisible();
+  await page.getByText(/Principles of judgement/).click();
+  await expect(page.getByTestId('kp-guide-principles').locator('li')).not.toHaveCount(0);
+  await axe('KP guidance');
+  expect(found).toEqual([]);
   expect(errors).toEqual([]);
 });
 

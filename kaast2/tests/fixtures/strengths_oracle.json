@@ -648,7 +648,7 @@
      "vb": 16,
      "av3": "Slp.",
      "av5": "Adoles.",
-     "func": "Neutral"
+     "func": "Malefic"
     }
    },
    "shadbala": {
@@ -1164,7 +1164,7 @@
      "vb": 15,
      "av3": "Slp.",
      "av5": "Old",
-     "func": "Malefic"
+     "func": "Neutral"
     }
    },
    "shadbala": {
@@ -1680,7 +1680,7 @@
      "vb": 16,
      "av3": "Slp.",
      "av5": "Old",
-     "func": "Malefic"
+     "func": "Neutral"
     }
    },
    "shadbala": {
@@ -2701,7 +2701,7 @@
      "vb": 14,
      "av3": "Alr.",
      "av5": "Infant",
-     "func": "Malefic",
+     "func": "Benefic",
      "av": 3
     },
     "Ke": {
@@ -2712,7 +2712,7 @@
      "vb": 14,
      "av3": "Alr.",
      "av5": "Infant",
-     "func": "Benefic"
+     "func": "Malefic"
     }
    },
    "shadbala": {
@@ -3217,7 +3217,7 @@
      "vb": 11,
      "av3": "Alr.",
      "av5": "Infant",
-     "func": "Benefic",
+     "func": "Neutral",
      "av": 4
     },
     "Ke": {
@@ -3228,7 +3228,7 @@
      "vb": 15,
      "av3": "Alr.",
      "av5": "Infant",
-     "func": "Malefic"
+     "func": "Neutral"
     }
    },
    "shadbala": {

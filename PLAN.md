@@ -1,6 +1,6 @@
 # PLAN — KAAST 2 (working name): a PL7-parity Vedic astrology app
 
-Status: **v0.7 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.7.html` (seconds entry on phones, saved places, KP chart and significators, NTP/Iyer guidance) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
+Status: **v0.9 — every Phase 1 slice built; functional app shipped as `kaast2/dist/Astro-Amriit v0.9.html` (adds KP (Research): Krishnamurti's six Readers — significators in his order, life-matter promise and candidate periods, ruling planets and rectification, transit timing, horary 1–249, KP Guidance; Matching gets Krishnamurti's view) (user guide in `kaast2/docs/user_guide/`). Next: PL 9 parity audit (slice 9) with the boss's exports.** Created 2026-10-17, updated 2026-10-17 (session 2).
 Owner of this document: the programme lead (Claude). Approver: Amrit (the boss).
 This file is updated at the end of every working session. ARCHITECTURE.md is its
 technical twin; `knowledge/06_decisions_log.md` records why things changed.
@@ -353,14 +353,144 @@ decoding, Playwright for build verification, a field-by-field parity script;
 
 When parity is reached and Phase 2 customisation is agreed, we will:
 1. Create a **new public GitHub repository** containing only `kaast2/` (app, tests, docs, anonymised fixtures), the sanitised `knowledge/` files, PLAN.md, ARCHITECTURE.md, LICENSE (AGPL-3.0), README, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY.md, issue templates, CI.
-2. **Never publish**: `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`, and `references/` (Iyer's NTP books — copyrighted, private reference only).
+2. **Never publish**: `private_oracles/` (the boss's PL worksheet values with birth data; git-ignored), PL-derived text (`kaast2/src/engine/yoga/plYogaText.json`, `kaast2/docs/specs/pl_yogas.json`, the quotations in `kaast2/docs/specs/compatibility.md`: strip or paraphrase before going public), `Astro_Fork/GeoVision/PL7/` (proprietary software and manual), `GeoVisionCharts/` (real people's birth data), the family workbooks (`RA Job.xlsx`, `Horary Artifacts.xlsx`, `Solar Fire Gold Charts.xlsx`, `Testing/`), the father's scanned tables, screenshots with personal data, `Documentation/record/`, and `references/` (Iyer's NTP books and Krishnamurti's KP Readers — copyrighted, private reference only). Review before going public: the KP guidance and matching notes (`kaast2/src/engine/kp/guidance/*.json`) are our paraphrases with page citations, but check them for close wording.
 3. Run a pre-publish scan (script in `kaast2/scripts/prepublish_scan`) for names, coordinates, JDs from the private corpus, API keys, and absolute paths.
 4. Archive this private repository as the family's research record; the public repo starts with a clean history (no rewriting of the private one).
 5. Write the external-audience README: what the app is, who it is for, how to run the single HTML, how to deploy to Vercel, how to cite PL7 and Swiss Ephemeris, and what is intentionally not included.
 
 ---
 
+## 13. Phase 1b — v0.8 programme (boss's brief of 2026-10-24)
+
+Brief: (1) mark the NTP tab "(Research)"; (2) NTP-2 marriage matching of two
+charts; (3) a Matching section reproducing PL 7's Reports → Compatibility
+(basic details, charts and planets, Moon chart/Navamsha/Dashas, Ashtakoot,
+Mangala Dosha consideration/results/cancellation, Dasha-Koota table and
+compatibility), asking for both charts or only the prospective match;
+(4) "Page 1 (Experimental)": dignity/retrogression/combustion/vargottama and
+3-6-8-12 placements highlighted, conjunctions with their definition,
+lordships and placements and yogas for D-1 and every D-chart (as PL's
+"Lordships" worksheet); (5) PL's Shadbala/Bhava Bala worksheet, "Aspects on
+planets", "Aspects from planets", "Aspects on nth house (+ lord)" series;
+(6) Nandi Nadi.
+
+**The deeper version (the boss asked for it to be written down first):**
+1. *What a top professional would add.* An astrologer never reads
+   Ashtakoot alone: they check the Bhakoot/Nadi exceptions (friendly or same
+   Moon-sign lords), Mangal Dosha **cancellations** for both charts, the 7th
+   house, its lord and the D-9 of both, the Dasha periods running at marriage
+   and after, and they show *why* each point scored. A UI/UX designer lays the
+   two charts out side by side with a scorecard that explains itself, avoids
+   alarming words ("Dosha") without the cancellation beside them, prints well
+   and works on a phone. A software engineer reproduces PL's numbers, not a
+   lookalike.
+2. *Rawest material.* PL 7's own install: help/tutorial pages
+   (`Extras1/pib*.txt`, decoded), `Lang1/COMPAT1.TXT`, the yoga database
+   `Lang1/Yogas_1.dat`, the binary's tables; the PL 7 manual; BPHS (PL ships
+   it in `Bphs/`); Iyer's NTP-2 pp. 147–153 page images; the boss's own PL 7
+   screenshots of worksheets 1, 14, 21, 22 and Lordships (a real PL output
+   for a known chart); for Nandi Nadi, R. G. Rao's Bhrigu Nandi Nadi rules.
+3. *Methods and tools.* Decode PL's tables and texts; implement each rule as
+   a cited, pure engine function; integer-arcsecond geometry; BPHS sphuta
+   drishti in virupas; PyJHora as an independent implementation of the
+   kootas; Playwright/axe for the UI; side-by-side layout from the design
+   system.
+4. *What, other than us, shows it is right.* PL 7's own numbers for the
+   boss's chart (aspect virupas, Ishta/Kashta, Bhava Bala components,
+   lordships) as a private oracle; PyJHora's Ashtakoot on many synthetic
+   pairs; Iyer's worked statements; PL 7's compatibility printout for one
+   real pair (requested from the boss); Nandi Nadi results only as
+   "research", never as checked.
+
+**Rewritten brief (what we execute):** reproduce PL 7's Compatibility
+reports exactly from PL's own tables, cross-checked with PyJHora, with every
+cancellation shown next to its dosha, for both charts entered or the
+current chart plus a prospective match; add Iyer's NTP-2 matching (single
+survey, mutual verification, Ayur/Nadi/Rajju) under NTP (Research); build an
+Experimental section (Highlights, Lordships, Yogas, Strengths detail,
+Aspects, Nandi Nadi) whose numbers match the boss's PL 7 worksheets for his
+chart, with each rule and definition cited; keep everything offline, tested,
+accessible, and the private oracle outside `kaast2/`.
+
+
+**Outcome (2026-10-24): shipped as `kaast2/dist/Astro-Amriit v0.8.html`.** All six brief items
+built; evidence in `kaast2/CHANGELOG.md` v0.8. External checks achieved: a PL 7.0.1 worksheet set
+for the boss's chart (aspects 72/72, lordships, Dominance, Func.; kept in git-ignored
+`private_oracles/`) and a real PL 7.0.1 Ashtakoot + Dash-Koota printout (row for row). Still open:
+a printout exercising PL's Tara and neutral Graha Maitri quirks; the house point of PL's default
+house-aspect graphs; user-guide screenshots for the new tabs (the boss asked to wait).
+
+## 14. Phase 1c — KP (Research) programme (boss's brief of 2026-10-24, evening)
+
+Brief: label the KP tab "KP (Research)"; bring in the knowledge of K. S.
+Krishnamurti's six KP Readers (B1 Casting the Horoscope, B2 Fundamental
+Principles, B3 Predictive Stellar Astrology, B4 Marriage, Married Life and
+Children, B5 Transits, B6 Horary Astrology; `KP_Materials.7z`, an Obsidian
+vault transcribed from the scans, 431 chapters, 280 figures) in the same
+manner as NTP; first filter out what the app already computes, add only what
+is missing; judge book by book, chapter by chapter, topic by topic; decide
+whether horary belongs; work slowly and autonomously.
+
+**The deeper version.**
+1. *What a top professional would do that the brief does not ask.* A senior
+   KP astrologer would not read a list of rules: they would (a) judge each
+   life matter by the cuspal sub-lord of its house and the house group it must
+   signify (KP's "promise"), (b) time it with Dasa–Bhukti–Anthra lords that
+   signify the same group, (c) confirm with Ruling Planets at the moment of
+   judgement and with transits of the Sun, Moon, Jupiter and Saturn through the
+   significators' stars and subs, and (d) rectify the birth time with Ruling
+   Planets before trusting any sub-lord. A UI/UX designer would show that
+   chain (cusp → sub lord → its star lord → houses signified → verdict) in one
+   glance per matter, with "why" one click away, and keep the existing tables
+   as the evidence layer. A KP teacher would mark which rules are
+   Krishnamurti's own and which he quotes from tradition to reject.
+2. *The rawest material.* Not the topic index: the Readers' chapters and their
+   figures (tables and charts), with the scan page of every claim (the vault's
+   `p. N` anchors); the worked example charts printed in the books (birth data,
+   cusps, planets, Dasa balance, significator tables, the events that
+   followed); the family's own KP practice (`knowledge/01_domain_horary_kp.md`,
+   Kala Chakra) and PL 7's KP pages already reproduced.
+3. *Methods and tools.* A per-book rule catalogue with citations (book,
+   chapter, PDF page) and a relevance verdict for every chapter (EXISTS /
+   NEW-COMPUTABLE / NEW-GUIDANCE / HORARY / NOT-RELEVANT); figures read as
+   images where numbers matter; the KP sub table, Krishnamurti ayanamsa,
+   Placidus cusps and Vimshottari engine already in the app reused, not
+   re-derived; new pure engine modules with unit tests; the guidance written
+   in the app's own words with citations, as on the NTP page.
+4. *What, other than us, shows it is right.* The Readers' own worked examples:
+   recompute their charts (Moon and Dasa balance, cusps within the table
+   precision Krishnamurti used, star/sub lords, the significator lists he
+   prints) and reproduce his promise/timing verdicts for the events he reports;
+   the family's validated Kala Chakra lords; PL 7's KP pages (already matched).
+
+**Rewritten brief (what is being done).** Rename the tab KP (Research).
+Ingest the Readers into `references/KP/` (private, never published). Read all
+six books with chapter-level relevance verdicts and rule catalogues
+(`references/KP/notes/`), and extract the worked example charts as oracles.
+Build only what the app lacks — expected: KP significators in Krishnamurti's
+order of strength, Ruling Planets, cuspal sub-lord promise per life matter
+with the house groups of the Readers, Dasa–Bhukti–Anthra timing of a matter,
+KP transits, Fortuna, the Readers' own rules on retrograde, combust and node
+planets, KP's view on marriage matching, and (decision below) the horary
+1–249 method — as KP (Research) sub-tabs with citations, verified on the
+books' own examples; ship as a new version with docs.
+
+**Outcome (v0.9, 2026-10-24).** Done as rewritten; full account in
+`kaast2/docs/specs/kp_research.md`. All six Readers read chapter by chapter
+(1 170 catalogued rules, `references/KP/notes/`). New engine modules
+(`kaast2/src/engine/kp/`: significators, ruling, matters, subs, horary,
+transit, rectify, guidance) verified on the books' own worked charts — every
+disagreement is a named book slip. Horary is in, as its own sub-tab (the
+family's practice; B6 is the best-documented Reader). Default calculation
+"Readers mode" (KP New, mean node, 365¼-day years), found by recasting the
+Readers' charts. Research finding stated on the page: significators alone do
+not time an event (wedding periods rank only slightly above chance); the
+Readers narrow by ruling planets and transit. Guidance: 435 chart rules + 88
+principles, policy-filtered (no death/longevity/danger/disease), rules that
+hold for > 80 % of charts removed (test).
+
 ## 12. Session log
 
 - **2026-10-17** — Boot from CLAUDE.md/knowledge; absorbed the PL7 report and open items; inventoried GeoVision (1 559 input-only charts; 436 cache months); read the guide's method chapters; wrote PLAN v0.1 and ARCHITECTURE v0.1. Boss decided: East Indian chart layout as in Kala Chakra; share the Iyer books later; Windows and macOS installers for fully offline devices; next session starts from the prompt in CLOUD_HANDOFF.md. No app code yet. Next: boss answers D1–D9; slice 0.
 - **2026-10-17 (session 2)** — Boss: "start with default slices", UI left to the team, Page 1 = PL 9.0 screenshot. Applied defaults D1–D10 (D5 revised). Found the boss's program is PL 9 and that PL 9 = Swiss Ephemeris + PL Lahiri polynomial + mean equinox + true node + geographic latitude for houses (Asc +4″ vs +198″ geocentric; Placidus still assumed from PL 7, needs a cusp printout), seconds rounded, dasha year 365.2421875, war-time zone honoured (Amitabh 1942 chart: 9/9 planets to the second). Shipped slices 0, 1, 2a as `kaast2/dist/KAAST 2 v0.1.html` (61 engine/unit tests, 5 e2e, contract check, scan). Specialists: domain researcher (Page 1 strengths spec), technical writer (`kaast2/parity/PL7_EXPORT_PROCEDURE.md`, 17 charts + Test 5 for ΔT). Next: slice 2b (strengths).
+- **2026-10-24 (evening)** — KP (Research): boss's brief deepened (PLAN §14); KP_Materials.7z ingested to `references/KP/` (private); 7 reader agents catalogued the six Readers; engine modules built and checked on the Readers' worked charts (significator tables, horary cusps and dasas, ruling planets, natal marriage timing, transit dates, rectification); 5 agents wrote the guidance rules; seven sub-tabs + Matching's Krishnamurti tab; shipped `kaast2/dist/Astro-Amriit v0.9.html` (809 tests, 35 e2e on the shipped file). Next: slice 9 (PL 9 parity audit).

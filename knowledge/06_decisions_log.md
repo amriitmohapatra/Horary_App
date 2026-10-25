@@ -405,3 +405,55 @@ architecture.
   geometricPrecision (invariant: chart layout must not depend on scale).
 - Text-width cache entries are stored only once every font weight they use
   has loaded. v0.7 = v0.6 features + these fixes; CI green.
+
+## 2026-10-24 — Astro-Amriit v0.8: Experimental, Matching, yogas
+- Specs (research agents, binary + help files): `kaast2/docs/specs/`
+  compatibility.md (PL 7 kootas, Mangala), pl_yogas.md/.json (1001 yogas,
+  formula grammar), pl_worksheets.md (worksheet 14 columns, aspect graphs,
+  conjunction, war), nandi_nadi.md (BNN research).
+- Conjunction = same sign, no orb (PL-BIN); the app adds a "close" mark with
+  an adjustable orb (default 3°, the boss's rule of thumb).
+- Aspect matrix colour = compound relation of the aspected planet towards the
+  aspecting one (sampled from the boss's PL 7 screenshot: 72/72).
+- Node Func.: nearest planet in the node's sign, else the house (PL-BIN);
+  replaces the dispositor rule; PL 9 fixture still 145/145.
+- Kootas: A = bride, B = groom; PL's Tara one-way (3 for Janma/Sampat, else
+  1.5) and Graha Maitri neutral–neutral = 1 are PL-BIN quirks, kept; one
+  real PL 7.0.1 printout reproduced row for row (does not exercise them).
+- PL 7 printouts carry the Moon-vector planet error (Sun 7'21" off for the
+  boss's chart): worksheet parity is judged with PL's own positions where
+  positions matter (Dominance).
+- Yogas: PL evaluates on the Rasi only; other vargas are our labelled
+  extension. Tokens without a settled meaning → "not evaluated", never guessed.
+- Privacy: the boss's PL 7 worksheet values live in `private_oracles/`
+  (git-ignored, never pushed; the oracle test skips without it). PL's own
+  text (yoga definitions/results, compatibility quotations) is kept in
+  separable files for the PLAN §11 review.
+
+## 2026-10-24 (evening) — Astro-Amriit v0.9: KP (Research)
+- Sources: Krishnamurti's six KP Readers (`references/KP/`, private, never
+  published). Notes, rule catalogue (ids KP1-…KP6-) and example oracles in
+  `references/KP/notes/`; synthesis `kaast2/docs/specs/kp_research.md`.
+- "Readers mode" is the tab's default: KP New ayanamsa, mean node, 365¼-day
+  dasa years — what recasting the Readers' charts shows they used. PL's
+  Krishnamurti ("Automatic") and the chart's settings remain.
+- Significators: Krishnamurti's five levels; level 5 = planets conjoined with
+  or ASPECTED BY a significator (the aspected one gains; B4 p. 179). Node
+  agency as in B6 (own house, star lord's houses, full sets of conjoined,
+  aspecting and sign-lord planets); a planet in a node's star takes the node's
+  set. Ownership by cusp sign only (no span rule). Reproduces B6's tables.
+- Ruling planets: day lord sunrise to sunrise; reject in the star OR sub of a
+  retrograde planet (B6 from p. 194); for rectification only the star
+  (B6 p. 147). Nodes represent conjoined/aspecting RPs first, then the sign
+  lord (B6 p. 254), and outrank them (p. 285).
+- Horary: ascendant = start of the numbered unit; other cusps from the RAMC at
+  which it rises at the judgement latitude (exact, where the Readers read
+  Raphael's tables); planets, RPs and dasa of the judgement moment.
+- Natal timing is presented as candidates: on 11 printed marriages the
+  significator strength rank alone is only slightly better than chance.
+- Guidance rules are data (`kaast2/src/engine/kp/guidance/*.json`) in a small
+  condition language; policy test forbids death/longevity/accident/danger/
+  disease words; a rate test removes rules holding for > 80 % of charts.
+- Pre-publish scan stop words extended with generic English words that occur
+  in private chart file names (election, interview, circus, verdict).
+

@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const url = pathToFileURL(resolve(import.meta.dirname, '../..', process.env.KAAST2_HTML ?? 'dist-single/index.html')).href;
-const PAGES = ['#page1', '#strengths', '#vargas', '#dashas', '#kp', '#ntp', '#yogi', '#jaimini', '#transits', '#settings'];
+const PAGES = ['#page1', '#exp', '#match', '#strengths', '#vargas', '#dashas', '#kp', '#ntp', '#yogi', '#jaimini', '#transits', '#settings'];
 
 for (const width of [320, 390]) {
   test(`no horizontal page scroll on any page at ${width} px`, async ({ page }) => {

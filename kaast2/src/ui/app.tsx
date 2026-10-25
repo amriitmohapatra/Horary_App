@@ -14,6 +14,8 @@ import { YogiBhava } from './pages/YogiBhava';
 import { Transits } from './pages/Transits';
 import { Kp } from './pages/Kp';
 import { Ntp } from './pages/Ntp';
+import { Experimental } from './pages/Experimental';
+import { Matching } from './pages/Matching';
 import { Settings } from './pages/Settings';
 import { t } from './i18n';
 import { chart, chartInput, engine, formOpen, lastPlace, nowInput, route, setTheme, shownTheme, textSize, theme } from './state/store';
@@ -28,6 +30,8 @@ function Routed({ c }: { c: ChartResult }): JSX.Element {
     case 'jaimini': return <Jaimini chart={c} />;
     case 'kp': return <Kp />;
     case 'ntp': return <Ntp />;
+    case 'exp': return <Experimental chart={c} />;
+    case 'match': return <Matching />;
     case 'yogi': return <YogiBhava chart={c} />;
     case 'transits': return <Transits chart={c} />;
     case 'settings': return <Settings input={chartInput.value} />;

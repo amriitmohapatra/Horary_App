@@ -1,0 +1,1649 @@
+{
+  "book": "b5",
+  "rules": [
+    {
+      "id": "KP5-021+KP5-022+KP5-026+KP5-027",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "A planet gives the results of the houses its star lord holds: placed in the 12th but in the star of an 11th-house planet, it brings gains. Planets in a planet’s stars carry its houses more strongly than it does; with no such tenant, it gives them itself.",
+      "tone": "info",
+      "cite": "B5 pp. 189, 222–223, 244–245, 293"
+    },
+    {
+      "id": "KP5-023",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "A house runs from its cusp to the next cusp, to the exact minute. Its lord is the lord of the sign the cusp falls in, wherever the larger part of the house lies.",
+      "tone": "info",
+      "cite": "B5 pp. 188, 207, 242"
+    },
+    {
+      "id": "KP5-025",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "What a planet brings (the nature of its results) comes from the houses its star lord signifies. How and through whom (the source) comes from the houses the planet itself occupies and owns.",
+      "tone": "info",
+      "cite": "B5 pp. 301–304"
+    },
+    {
+      "id": "KP5-083",
+      "topic": "Gains and friends",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cusp": 6,
+                "sign": [
+                  0,
+                  7
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 6,
+                "sign": [
+                  1,
+                  6
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 6,
+                "sign": [
+                  2,
+                  5
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 6,
+                "sign": [
+                  3
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 6,
+                "sign": [
+                  4
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 6,
+                "sign": [
+                  8,
+                  11
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 6,
+                "sign": [
+                  9,
+                  10
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      8
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 8,
+                "sign": [
+                  0,
+                  7
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ma"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 8,
+                "sign": [
+                  1,
+                  6
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ve"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 8,
+                "sign": [
+                  2,
+                  5
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Me"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 8,
+                "sign": [
+                  3
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Mo"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 8,
+                "sign": [
+                  4
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Su"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 8,
+                "sign": [
+                  8,
+                  11
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Ju"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cusp": 8,
+                "sign": [
+                  9,
+                  10
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "planet": "Su",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "house": [
+                      6
+                    ],
+                    "star": [
+                      "Sa"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "A planet sits in the 8th in the star of the 6th lord, or in the 6th in the star of the 8th lord. Its periods bring luck and gains with little strain (6 and 8 are the 12th and 2nd from the rival’s 7th).",
+      "tone": "good",
+      "cite": "B5 p. 294"
+    },
+    {
+      "id": "KP5-089",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "sig": "Su",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Mo",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Ma",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Me",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Ju",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Ve",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Sa",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Ra",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          },
+          {
+            "sig": "Ke",
+            "all": [
+              6,
+              11
+            ],
+            "none": [
+              8,
+              12
+            ]
+          }
+        ]
+      },
+      "text": "A planet signifies houses 6 and 11 but not 8 or 12. Such a planet brings profit at cards and like games when the Moon runs in its star and sub; planets that signify 8 or 12 are to be avoided.",
+      "tone": "good",
+      "cite": "B5 p. 231"
+    },
+    {
+      "id": "KP5-140",
+      "topic": "Self and temperament",
+      "when": {
+        "conj": [
+          "Mo",
+          "Sa"
+        ]
+      },
+      "text": "The Moon and Saturn share a sign (“Punarphoo”). The first attempt at a matter tends to fail or be delayed; success comes at a later try.",
+      "tone": "mixed",
+      "cite": "B5 p. 288"
+    },
+    {
+      "id": "KP5-001",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Transit is the “second hand” of the dasa clock: the dasa is the day, the bhukti the hour, the antara the minute. A transit only times what the running periods already promise; followed the KP way, the two agree.",
+      "tone": "info",
+      "cite": "B5 p. 26"
+    },
+    {
+      "id": "KP5-005+KP5-006",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Judge a transit against the exact Lagna and all twelve cusps first, then the Moon, Sun and other planets. A transit over the natal Moon or Sun touches the houses that luminary owns in this chart (the cusps that fall in its own sign), not the native as a whole.",
+      "tone": "info",
+      "cite": "B5 pp. 15–21, 206–207"
+    },
+    {
+      "id": "KP5-040+KP5-041",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Each star is a room stocked with the houses its lord signifies. A planet passing through it offers those houses: the star lord shows what happens, the transiting planet the source, and the sub lord, by its houses, whether it happens and whether it is good.",
+      "tone": "info",
+      "cite": "B5 pp. 190–195, 208–211"
+    },
+    {
+      "id": "KP5-042",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "In KP the sign and house a planet transits do not matter. What counts is the transit of the significators through the star and sub of the significators of the matter.",
+      "tone": "info",
+      "cite": "B5 p. 365"
+    },
+    {
+      "id": "KP5-043+KP5-044+KP5-045",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Entering a favourable star is not yet the event; it comes when the planet reaches the sub of a significator of the matter. Each sub on the way marks the next stage, and a sub lord signifying the opposite houses reverses the result while the planet stays in it.",
+      "tone": "info",
+      "cite": "B5 pp. 192, 211, 220"
+    },
+    {
+      "id": "KP5-060+KP5-063",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "A matter comes when the zones whose sign, star and sub lords are the running dasa, bhukti and antara lords are transited by those lords, the Sun (the month), the Moon (the day) and the Lagna (the minute). Jupiter and Saturn in a good sub give long windows.",
+      "tone": "info",
+      "cite": "B5 pp. 195–197, 218, 365"
+    },
+    {
+      "id": "KP5-064",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "For transit timing the Lagna is cast for the place where the native is at the time, not the birth place, unless the native still lives there.",
+      "tone": "info",
+      "cite": "B5 p. 196"
+    },
+    {
+      "id": "KP5-048",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Several transits act at once and none cancels another: a gain shown by one planet and a bill shown by another can fall on the same day.",
+      "tone": "info",
+      "cite": "B5 pp. 312–313"
+    },
+    {
+      "id": "KP5-050+KP5-051",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "When a slow planet turns back through subs it has already crossed, the results of those subs repeat. Retrograde in a bad sub worsens the trouble; in a good sub gains come but smaller. The time it stands still is the most intense.",
+      "tone": "info",
+      "cite": "B5 pp. 318–321, 325, 334–335"
+    },
+    {
+      "id": "KP5-080+KP5-084",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "For gains and success in contests, houses 1, 2, 3, 6, 10 and 11 help and 4, 5, 7, 8, 9 and 12 hinder. The 5th gives the urge to speculate, not the profit (it is the 11th from the rival’s 7th); judge gain by 2, 6 and 11.",
+      "tone": "info",
+      "cite": "B5 pp. 22, 237, 247–248"
+    },
+    {
+      "id": "KP5-004+KP5-150",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition judges transits by counting signs from the natal Moon sign (Gochara, with a fixed table for each planet). Krishnamurti rejects this: people of the same star meet opposite results on one day, and sign counting ignores the real distance.",
+      "tone": "info",
+      "cite": "B5 pp. 10–12, 26"
+    },
+    {
+      "id": "KP5-130+KP5-131",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition holds the 7½ years of Sade Sati (Saturn in the 12th, 1st and 2nd sign from the Moon) are bad. Krishnamurti rejects this: many marry, get jobs or win prizes in it. Read instead the stars Saturn crosses and the houses their lords signify.",
+      "tone": "info",
+      "cite": "B5 pp. 281, 292–299"
+    },
+    {
+      "id": "KP5-133+KP5-135+KP5-136",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition fears Ashtama Sani (Saturn 8th from the Moon sign) and Chandrashtama (the Moon 8th from it, about 2¼ days a month). Krishnamurti rejects both: results follow the star and sub lords of the zone transited, and people win and marry on such days.",
+      "tone": "info",
+      "cite": "B5 pp. 277–290"
+    },
+    {
+      "id": "KP5-137+KP5-138",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition holds that marriage needs Gurubalam (Jupiter 2nd, 5th, 7th, 9th or 11th from the Moon sign) and fears Jupiter in the 3rd from it. Krishnamurti rejects both: many marry and win with Jupiter in the 3rd.",
+      "tone": "info",
+      "cite": "B5 pp. 12, 283, 293, 295, 363"
+    }
+  ]
+}

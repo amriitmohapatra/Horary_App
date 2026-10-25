@@ -1,0 +1,373 @@
+{
+ "note": "KP Readers' natal examples with a printed marriage DBA (references/KP/notes). Numbers and citations only. Times as printed; b4-E22 is LMT (tz = lon/15). Longitudes in arcsec, sidereal as printed.",
+ "cases": [
+  {
+   "id": "b1-E01",
+   "cite": "B1 pp. 84–86",
+   "date": {
+    "y": 1938,
+    "m": 3,
+    "d": 8
+   },
+   "time": {
+    "h": 19,
+    "mi": 40,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 11.65,
+   "lonDeg": 78.2,
+   "printed": {
+    "asc": 588420,
+    "moon": 160020,
+    "balance": "Moon 6y 7m 29d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1961-11-19",
+     "lords": [
+      "Ra",
+      "Me",
+      "Ju",
+      "Ra"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b1-E02",
+   "cite": "B1 pp. 86–88",
+   "date": {
+    "y": 1933,
+    "m": 3,
+    "d": 16
+   },
+   "time": {
+    "h": 18,
+    "mi": 30,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 13.066667,
+   "lonDeg": 80.25,
+   "printed": {
+    "asc": 561960,
+    "moon": 761760,
+    "balance": "Jupiter 2y 0m 29d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1961-11-19",
+     "lords": [
+      "Me",
+      "Mo",
+      "Ju",
+      "Ve"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b3a-E02",
+   "cite": "B3 pp. 161–165",
+   "date": {
+    "y": 1928,
+    "m": 1,
+    "d": 29
+   },
+   "time": {
+    "h": 19,
+    "mi": 6,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 13.066667,
+   "lonDeg": 80.25,
+   "printed": {
+    "asc": 432240,
+    "moon": 44700,
+    "balance": "Ketu 0y 5m 23d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1947-07-06",
+     "lords": [
+      "Ve",
+      "Ke",
+      "Ve",
+      "Mo"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b4-E20",
+   "cite": "B4 p. 124",
+   "date": {
+    "y": 1943,
+    "m": 5,
+    "d": 14
+   },
+   "time": {
+    "h": 23,
+    "mi": 42,
+    "s": 0
+   },
+   "tzHours": 6.5,
+   "latDeg": 6.933333,
+   "lonDeg": 79.966667,
+   "printed": {
+    "asc": 982320,
+    "moon": 526200,
+    "balance": "Venus 9 months"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1969-08-30",
+     "lords": [
+      "Ra",
+      "Ra",
+      "Ma"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b4-E22",
+   "cite": "B4 p. 130",
+   "date": {
+    "y": 1925,
+    "m": 5,
+    "d": 23
+   },
+   "time": {
+    "h": 8,
+    "mi": 3,
+    "s": 28
+   },
+   "tzHours": 5.333333,
+   "latDeg": 13.0,
+   "lonDeg": 80.0,
+   "printed": {
+    "asc": 276060,
+    "moon": 158520,
+    "balance": "Moon 6y 11m 21d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1962-04-09",
+     "lords": [
+      "Ju",
+      "Me",
+      "Me",
+      "Ju"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b4-E27",
+   "cite": "B4 pp. 141–144",
+   "date": {
+    "y": 1911,
+    "m": 7,
+    "d": 20
+   },
+   "time": {
+    "h": 17,
+    "mi": 54,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 11.7,
+   "lonDeg": 75.5,
+   "printed": {
+    "asc": 935400,
+    "moon": 74400,
+    "balance": "Venus 9y 0m 0d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1944-06-02",
+     "lords": [
+      "Ra",
+      "Ra",
+      "Sa",
+      "Me"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b4-E28",
+   "cite": "B4 p. 148",
+   "date": {
+    "y": 1936,
+    "m": 4,
+    "d": 21
+   },
+   "time": {
+    "h": 5,
+    "mi": 7,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 30.916667,
+   "lonDeg": 75.9,
+   "printed": {
+    "asc": 1261500,
+    "moon": 660,
+    "balance": "Ketu 6y 10m 25d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1965-06-22",
+     "lords": [
+      "Su",
+      "Ju",
+      "Sa",
+      "Ju"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b4-E35",
+   "cite": "B4 p. 179",
+   "date": {
+    "y": 1937,
+    "m": 7,
+    "d": 19
+   },
+   "time": {
+    "h": 23,
+    "mi": 5,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 18.916667,
+   "lonDeg": 72.9,
+   "printed": {
+    "asc": 1230840,
+    "moon": 831780,
+    "balance": "Mercury 11y 6m 13d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1964-06-14",
+     "lords": [
+      "Ve",
+      "Ra",
+      "Sa"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b4-E36",
+   "cite": "B4 p. 183",
+   "date": {
+    "y": 1935,
+    "m": 8,
+    "d": 28
+   },
+   "time": {
+    "h": 12,
+    "mi": 9,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 20.466667,
+   "lonDeg": 85.9,
+   "printed": {
+    "asc": 799140,
+    "moon": 442260,
+    "balance": "Ketu 5y 9m 1d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1962-05-21",
+     "lords": [
+      "Su",
+      "Ra"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b4-E37",
+   "cite": "B4 p. 186",
+   "date": {
+    "y": 1931,
+    "m": 2,
+    "d": 9
+   },
+   "time": {
+    "h": 17,
+    "mi": 36,
+    "s": 40
+   },
+   "tzHours": 5.5,
+   "latDeg": 25.45,
+   "lonDeg": 78.616667,
+   "printed": {
+    "asc": 402060,
+    "moon": 737460,
+    "balance": "Jupiter 10y 2m 5d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1951-10-28",
+     "lords": [
+      "Sa",
+      "Su",
+      "Sa"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b5-E13",
+   "cite": "B5 pp. 362–365",
+   "date": {
+    "y": 1931,
+    "m": 10,
+    "d": 10
+   },
+   "time": {
+    "h": 13,
+    "mi": 11,
+    "s": 0
+   },
+   "tzHours": 5.5,
+   "latDeg": 13.066667,
+   "lonDeg": 80.25,
+   "printed": {
+    "asc": 984840,
+    "moon": 561060,
+    "balance": "Sun 1y 10m 12d"
+   },
+   "events": [
+    {
+     "what": "marriage",
+     "date": "1950-09-01",
+     "lords": [
+      "Ra",
+      "Ra",
+      "Ra"
+     ]
+    }
+   ]
+  }
+ ]
+}

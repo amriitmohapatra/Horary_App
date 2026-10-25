@@ -1,0 +1,6323 @@
+{
+  "book": "b4",
+  "rules": [
+    {
+      "id": "KP4-120",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Marriage is judged from three houses together: the 2nd (a new member joins the family), the 7th (the partner and the legal bond) and the 11th (lasting friendship and fulfilment). Looking at the 7th alone, as tradition does, is not enough.",
+      "tone": "info",
+      "cite": "B4 p. 74"
+    },
+    {
+      "id": "KP4-009+KP4-147",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "The 12th house from a house works against it. Houses 1, 6 and 10 are the 12th from 2, 7 and 11, so they show obstacles, denial or separation in marriage; Krishnamurti judges separation from houses 1, 6, 10 and 12.",
+      "tone": "info",
+      "cite": "B4 pp. 150–154"
+    },
+    {
+      "id": "KP4-012",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "A planet gives mainly the results of its star lord: the matters of the houses its star lord rules come to the fore. The planet’s sub lord shows the net outcome, success or failure.",
+      "tone": "info",
+      "cite": "B4 p. 206"
+    },
+    {
+      "id": "KP4-013",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "One period can bring both a wedding and a parting: the marriage comes through the star lord of the planet, the separation through its sub lord.",
+      "tone": "info",
+      "cite": "B4 p. 199"
+    },
+    {
+      "id": "KP4-015",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "If a planet promises both a good and a bad result, it gives both in turn; one result does not cancel the other.",
+      "tone": "info",
+      "cite": "B4 p. 184"
+    },
+    {
+      "id": "KP4-016",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "A natural indicator (Venus for marriage, Jupiter for children) counts mainly when it is also a significator of the houses being judged; being the indicator alone promises nothing.",
+      "tone": "info",
+      "cite": "B4 p. 113"
+    },
+    {
+      "id": "KP4-051",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Exalted planets or traditional yogas do not by themselves guarantee good results; Krishnamurti says everything depends on the sub.",
+      "tone": "info",
+      "cite": "B4 p. 202"
+    },
+    {
+      "id": "KP4-052",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Twins share almost the same planets; only the cusps move fast in a few minutes. So character and innate nature are read from the sub lord of the Ascendant, which can differ between twins.",
+      "tone": "info",
+      "cite": "B4 p. 251"
+    },
+    {
+      "id": "KP4-269",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "In married life, significators of the 6th show the partner walking out; of the 12th, the native choosing to leave and live apart; of the 8th, quarrels and strain while the couple still stays together.",
+      "tone": "info",
+      "cite": "B4 pp. 158–160"
+    },
+    {
+      "id": "KP4-239",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Children are judged from houses 2, 5 and 11. For the next child add the 7th, which is the 3rd from the 5th (the younger sibling of the first child).",
+      "tone": "info",
+      "cite": "B4 p. 246"
+    },
+    {
+      "id": "KP4-222",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Krishnamurti found no rule that predicts the sex of a child in every case; he says it needs long experience. Treat any such reading as tentative.",
+      "tone": "info",
+      "cite": "B4 p. 215"
+    },
+    {
+      "id": "KP4-137",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "There is no astrological method to give the height of the partner; Krishnamurti says so plainly.",
+      "tone": "info",
+      "cite": "B4 pp. 101–102"
+    },
+    {
+      "id": "KP4-047+KP4-048",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition holds “karako bhava nasaya”: an indicator in its own house (Venus in the 7th, Jupiter in the 5th) harms it. Krishnamurti rejects this as a blanket rule: it harms only from the star of a planet evil by lordship; with a good star lord expect good.",
+      "tone": "info",
+      "cite": "B4 pp. 255–262"
+    },
+    {
+      "id": "KP4-042",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition times marriage by Jupiter’s transit counted from the Moon sign (Guru-bala). Krishnamurti rejects this as wholly unreliable; he times marriage by the periods of the 2-7-11 significators and by star-and-sub transits.",
+      "tone": "info",
+      "cite": "B4 p. 116"
+    },
+    {
+      "id": "KP4-159",
+      "topic": "Principles of judgement",
+      "when": {
+        "always": true
+      },
+      "text": "Tradition says a wife brings luck or misfortune to her husband. Krishnamurti rejects this: a promotion or a job loss after marriage is shown in the native’s own chart, and one period can signify both marriage and career.",
+      "tone": "info",
+      "cite": "B4 pp. 178–180"
+    },
+    {
+      "id": "KP4-038",
+      "topic": "Marriage and partnership",
+      "when": {
+        "planet": "Sa",
+        "house": [
+          5
+        ]
+      },
+      "text": "Saturn in the 5th aspects the 7th, 11th and 2nd, all three marriage houses; Krishnamurti reads a long delay before marriage.",
+      "tone": "bad",
+      "cite": "B4 p. 113"
+    },
+    {
+      "id": "KP4-125",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "planet": "Sa",
+            "star": [
+              "Mo"
+            ],
+            "sub": [
+              "Sa"
+            ],
+            "house": [
+              1,
+              3,
+              6,
+              7,
+              10
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "planet": "Mo",
+                "star": [
+                  "Sa"
+                ],
+                "sub": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "house": [
+                  1,
+                  3,
+                  6,
+                  7,
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "“Punarphoo”: Saturn and the Moon are linked by star and sub, with Saturn in house 1, 3, 6, 7 or 10. Expect obstacles in fixing the marriage (changed dates, extra cost, worry), though a better partner often follows. Commit only when the date is near.",
+      "tone": "mixed",
+      "cite": "B4 pp. 78–82"
+    },
+    {
+      "id": "KP4-125",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "anyOf": [
+              {
+                "conj": [
+                  "Sa",
+                  "Mo"
+                ]
+              },
+              {
+                "aspects": "Sa",
+                "target": "Mo"
+              },
+              {
+                "planet": "Sa",
+                "star": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "star": [
+                  "Sa"
+                ]
+              }
+            ]
+          },
+          {
+            "sig": "Sa",
+            "any": [
+              2,
+              7,
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Saturn is connected with the Moon and also signifies a marriage house: Krishnamurti expects difficulty and delay in fixing the marriage, though it does take place.",
+      "tone": "mixed",
+      "cite": "B4 p. 131"
+    },
+    {
+      "id": "KP4-122",
+      "topic": "Marriage and partnership",
+      "when": {
+        "csl": 7,
+        "all": [
+          4,
+          6,
+          10
+        ]
+      },
+      "text": "The 7th sub lord is tied to houses 4, 6 and 10: Krishnamurti’s pattern for proposals that keep failing; the 4th adds failure in love affairs. Read it together with the 2-7-11 promise.",
+      "tone": "bad",
+      "cite": "B4 p. 110"
+    },
+    {
+      "id": "KP4-140",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju",
+              "Ve"
+            ]
+          },
+          {
+            "csl": 7,
+            "any": [
+              2,
+              11
+            ]
+          }
+        ]
+      },
+      "text": "The 7th sub lord is Jupiter or Venus and signifies the 2nd or 11th: Krishnamurti’s first sign of a happy married life.",
+      "tone": "good",
+      "cite": "B4 p. 84"
+    },
+    {
+      "id": "KP4-141",
+      "topic": "Marriage and partnership",
+      "when": {
+        "planet": "Ma",
+        "house": [
+          8
+        ],
+        "sub": [
+          "Ju"
+        ]
+      },
+      "text": "Mars in the 8th in Jupiter’s sub: an extravagant partner; money troubles come first and domestic friction follows.",
+      "tone": "bad",
+      "cite": "B4 p. 86"
+    },
+    {
+      "id": "KP4-141",
+      "topic": "Marriage and partnership",
+      "when": {
+        "planet": "Ma",
+        "sub": [
+          "Mo"
+        ]
+      },
+      "text": "Mars in the Moon’s sub: Krishnamurti warns of a hasty, hot-tempered partner who is hard to restrain, more so when Mars or the Moon is in a water sign. Patience is needed.",
+      "tone": "bad",
+      "cite": "B4 p. 86"
+    },
+    {
+      "id": "KP4-144",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Su"
+                    ]
+                  },
+                  {
+                    "planet": "Su",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Mo"
+                    ]
+                  },
+                  {
+                    "planet": "Mo",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Ma"
+                    ]
+                  },
+                  {
+                    "planet": "Ma",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Me"
+                    ]
+                  },
+                  {
+                    "planet": "Me",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Ju"
+                    ]
+                  },
+                  {
+                    "planet": "Ju",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Ve"
+                    ]
+                  },
+                  {
+                    "planet": "Ve",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Sa"
+                    ]
+                  },
+                  {
+                    "planet": "Sa",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Ra"
+                    ]
+                  },
+                  {
+                    "planet": "Ra",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "cslIs": 7,
+                    "planets": [
+                      "Ke"
+                    ]
+                  },
+                  {
+                    "planet": "Ke",
+                    "sign": [
+                      2,
+                      5,
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The 7th sub lord is Mercury or sits in a dual sign (Gemini, Virgo, Sagittarius, Pisces): Krishnamurti reads more than one marriage in life.",
+      "tone": "mixed",
+      "cite": "B4 p. 88"
+    },
+    {
+      "id": "KP4-145",
+      "topic": "Marriage and partnership",
+      "when": {
+        "csl": 2,
+        "any": [
+          7
+        ]
+      },
+      "text": "The sub lord of the 2nd cusp signifies the 7th: Krishnamurti reads a second marriage. The 7th describes the first spouse; the 2nd stands for the second.",
+      "tone": "mixed",
+      "cite": "B4 p. 150"
+    },
+    {
+      "id": "KP4-053",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "planet": "Ma",
+            "house": [
+              1,
+              2,
+              4,
+              7,
+              8,
+              12
+            ]
+          },
+          {
+            "anyOf": [
+              {
+                "planet": "Su",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sub": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sub": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Me",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sub": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sub": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sub": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sub": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sub": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "star": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sub": [
+                  "Ma"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Mars is in a traditional “dosha” house (1, 2, 4, 7, 8, 12). Krishnamurti says Mars’s position alone is no curse: the planets in Mars’s stars or subs bring friction, and only in their own periods.",
+      "tone": "mixed",
+      "cite": "B4 p. 198"
+    },
+    {
+      "id": "KP4-131",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 4,
+                    "sign": [
+                      4
+                    ]
+                  },
+                  {
+                    "cusp": 10,
+                    "sign": [
+                      4
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 4,
+                    "sign": [
+                      3
+                    ]
+                  },
+                  {
+                    "cusp": 10,
+                    "sign": [
+                      3
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 4,
+                    "sign": [
+                      0,
+                      7
+                    ]
+                  },
+                  {
+                    "cusp": 10,
+                    "sign": [
+                      0,
+                      7
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 4,
+                    "sign": [
+                      2,
+                      5
+                    ]
+                  },
+                  {
+                    "cusp": 10,
+                    "sign": [
+                      2,
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 4,
+                    "sign": [
+                      8,
+                      11
+                    ]
+                  },
+                  {
+                    "cusp": 10,
+                    "sign": [
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 4,
+                    "sign": [
+                      1,
+                      6
+                    ]
+                  },
+                  {
+                    "cusp": 10,
+                    "sign": [
+                      1,
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 4,
+                    "sign": [
+                      9,
+                      10
+                    ]
+                  },
+                  {
+                    "cusp": 10,
+                    "sign": [
+                      9,
+                      10
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The 7th sub lord owns the 4th or 10th: the spouse comes from the same street, town or district, and no move is needed after marriage.",
+      "tone": "info",
+      "cite": "B4 p. 89"
+    },
+    {
+      "id": "KP4-131",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "cusp": 3,
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "cusp": 3,
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "cusp": 3,
+                "sign": [
+                  0,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "cusp": 3,
+                "sign": [
+                  2,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "cusp": 3,
+                "sign": [
+                  8,
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "cusp": 3,
+                "sign": [
+                  1,
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "cusp": 3,
+                "sign": [
+                  9,
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The 7th sub lord owns the 3rd: the spouse is a cousin or a neighbour, or lives a few hours away; the match may be settled by letter or advertisement.",
+      "tone": "info",
+      "cite": "B4 p. 89"
+    },
+    {
+      "id": "KP4-131",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "cusp": 11,
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "cusp": 11,
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "cusp": 11,
+                "sign": [
+                  0,
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "cusp": 11,
+                "sign": [
+                  2,
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "cusp": 11,
+                "sign": [
+                  8,
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "cusp": 11,
+                "sign": [
+                  1,
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "cusp": 11,
+                "sign": [
+                  9,
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The 7th sub lord owns the 11th: the spouse comes from a friend’s family.",
+      "tone": "info",
+      "cite": "B4 p. 89"
+    },
+    {
+      "id": "KP4-131",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 5,
+                    "sign": [
+                      4
+                    ]
+                  },
+                  {
+                    "cusp": 9,
+                    "sign": [
+                      4
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 5,
+                    "sign": [
+                      3
+                    ]
+                  },
+                  {
+                    "cusp": 9,
+                    "sign": [
+                      3
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 5,
+                    "sign": [
+                      0,
+                      7
+                    ]
+                  },
+                  {
+                    "cusp": 9,
+                    "sign": [
+                      0,
+                      7
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 5,
+                    "sign": [
+                      2,
+                      5
+                    ]
+                  },
+                  {
+                    "cusp": 9,
+                    "sign": [
+                      2,
+                      5
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 5,
+                    "sign": [
+                      8,
+                      11
+                    ]
+                  },
+                  {
+                    "cusp": 9,
+                    "sign": [
+                      8,
+                      11
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 5,
+                    "sign": [
+                      1,
+                      6
+                    ]
+                  },
+                  {
+                    "cusp": 9,
+                    "sign": [
+                      1,
+                      6
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "cusp": 5,
+                    "sign": [
+                      9,
+                      10
+                    ]
+                  },
+                  {
+                    "cusp": 9,
+                    "sign": [
+                      9,
+                      10
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The 7th sub lord owns the 5th or 9th: the spouse is a stranger, perhaps from far away or from another country; a love marriage is likely.",
+      "tone": "info",
+      "cite": "B4 p. 89"
+    },
+    {
+      "id": "KP4-131",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 7,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "house": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The 7th sub lord occupies the 4th: the spouse is from the native’s own town.",
+      "tone": "info",
+      "cite": "B4 p. 123"
+    },
+    {
+      "id": "KP4-134",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Sa"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Sa"
+            ]
+          }
+        ]
+      },
+      "text": "Saturn is the star or sub lord of the 7th cusp: a wide age gap between the partners (in a woman’s chart, a much older husband).",
+      "tone": "info",
+      "cite": "B4 p. 88"
+    },
+    {
+      "id": "KP4-134",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Ju",
+              "Ve",
+              "Su"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Ju",
+              "Ve",
+              "Su"
+            ]
+          }
+        ]
+      },
+      "text": "Jupiter, Venus or the Sun is the star or sub lord of the 7th cusp: a fitting, normal age difference between the partners.",
+      "tone": "info",
+      "cite": "B4 p. 88"
+    },
+    {
+      "id": "KP4-134",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Ma",
+              "Me",
+              "Mo"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Ma",
+              "Me",
+              "Mo"
+            ]
+          }
+        ]
+      },
+      "text": "Mars, Mercury or the Moon is the star or sub lord of the 7th cusp: very little age difference; a young partner.",
+      "tone": "info",
+      "cite": "B4 p. 88"
+    },
+    {
+      "id": "KP4-135",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Su"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Su"
+            ]
+          }
+        ]
+      },
+      "text": "The Sun is the star or sub lord of the 7th cusp: Krishnamurti reads little warmth between the couple; closeness needs effort.",
+      "tone": "bad",
+      "cite": "B4 pp. 88–89"
+    },
+    {
+      "id": "KP4-135",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Mo"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Mo"
+            ]
+          }
+        ]
+      },
+      "text": "The Moon is the star or sub lord of the 7th cusp: a very pleasant, tender bond between the couple.",
+      "tone": "good",
+      "cite": "B4 pp. 88–89"
+    },
+    {
+      "id": "KP4-135",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Ma"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Ma"
+            ]
+          }
+        ]
+      },
+      "text": "Mars is the star or sub lord of the 7th cusp: quarrels and pressure in the couple’s private life; gentleness is needed.",
+      "tone": "bad",
+      "cite": "B4 pp. 88–89"
+    },
+    {
+      "id": "KP4-135",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Me"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Me"
+            ]
+          }
+        ]
+      },
+      "text": "Mercury is the star or sub lord of the 7th cusp: a lively, talkative and playful bond between the couple.",
+      "tone": "info",
+      "cite": "B4 pp. 88–89"
+    },
+    {
+      "id": "KP4-135",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Ju"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Ju"
+            ]
+          }
+        ]
+      },
+      "text": "Jupiter is the star or sub lord of the 7th cusp: a normal, dutiful and steady bond between the couple.",
+      "tone": "good",
+      "cite": "B4 pp. 88–89"
+    },
+    {
+      "id": "KP4-135",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Ve"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Ve"
+            ]
+          }
+        ]
+      },
+      "text": "Venus is the star or sub lord of the 7th cusp: strong mutual delight and affection between the couple.",
+      "tone": "good",
+      "cite": "B4 pp. 88–89"
+    },
+    {
+      "id": "KP4-135",
+      "topic": "Marriage and partnership",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 7,
+            "star": [
+              "Sa"
+            ]
+          },
+          {
+            "cusp": 7,
+            "sub": [
+              "Sa"
+            ]
+          }
+        ]
+      },
+      "text": "Saturn is the star or sub lord of the 7th cusp: dissatisfaction in the couple’s private life; moments of closeness are brief.",
+      "tone": "bad",
+      "cite": "B4 pp. 88–89"
+    },
+    {
+      "id": "KP4-130",
+      "topic": "Marriage and partnership",
+      "when": {
+        "cslIs": 7,
+        "planets": [
+          "Ra",
+          "Ke"
+        ]
+      },
+      "text": "The 7th sub lord is a node. To describe the spouse, read the planet conjoined with it; if none, the planet aspecting it; if none, the node’s star lord.",
+      "tone": "info",
+      "cite": "B4 p. 101"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              0
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Aries): medium height, strong and well made, full eyes; bold and noble, stands up for own rights, proud, wins and does well socially.",
+      "tone": "good",
+      "cite": "B4 p. 90"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              1
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Taurus): short and sturdy, broad face, athletic build; very self-assured, a good debater who argues well and wins.",
+      "tone": "mixed",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              2
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Gemini): above average height, well proportioned, long nose, piercing eyes; courteous, tactful, accommodating and pleasant, though easily swayed by others.",
+      "tone": "good",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              3
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Cancer): short and plain-looking; good-natured, harmless and cheerful, fond of music, dance and sport, but rather lazy about work.",
+      "tone": "mixed",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              4
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Leo): strong build, big eyes, round broad face; faithful, reliable, punctual, fair-minded, ambitious and successful.",
+      "tone": "good",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              5
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Virgo): tall and slender, very dark hair; fond of music and song, always smiling, never provoking, cheerful, spends much time on recreation.",
+      "tone": "good",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Libra): tall and upright, big eyes, thin hair, good-looking; talks big but is not bold, weak in attachment and not always truthful. Krishnamurti advises against such a match.",
+      "tone": "bad",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              7
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Scorpio): square, fleshy build, broad face; inventive, very clever and brisk, ambitious, never accepts defeat or an equal; fortunate.",
+      "tone": "good",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              8
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Sagittarius): tall, well proportioned, oval face; over-rates own ability, austere and strict, plans big things.",
+      "tone": "mixed",
+      "cite": "B4 p. 91"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              9
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Capricorn): thin, wiry, long nose, frail look; pleasant manners though at times nasty, makes many friends and wins goodwill.",
+      "tone": "mixed",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              10
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Aquarius): tall, well made, round face, good complexion; fair-natured and never deceitful, but proud and showy.",
+      "tone": "mixed",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Su"
+            ]
+          },
+          {
+            "planet": "Su",
+            "sign": [
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Sun in Pisces): short, stout, round face, prominent eyes; partial and unfair, pleasure-loving and extravagant, which harms the person.",
+      "tone": "bad",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              0
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Aries): plump, round face, fair; stubborn, aggressive, argumentative and grasping, but ambitious and commanding.",
+      "tone": "mixed",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              1
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Taurus): strong, just below average height, good-looking and fair; polite, modest, honest, helpful and pleasing.",
+      "tone": "good",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              2
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Gemini): tall, upright, good complexion; inventive but unsteady and indecisive, not lucky in profession.",
+      "tone": "mixed",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              3
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Cancer): average height, somewhat fleshy, round face; pleasant, harmless and peace-loving, easily influenced and changeable, sociable, fond of travel, fortunate.",
+      "tone": "good",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              4
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Leo): well built, average height, big eyes; proud, ambitious and independent, will not serve under others; luck is uneven.",
+      "tone": "mixed",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              5
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Virgo): tall, oval face; very clever but reserved and gloomy, inclined to low moods.",
+      "tone": "bad",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Libra): tall, attractive and witty, ever smiling, fond of amusement and of admiration from the other sex; fortune is uneven.",
+      "tone": "mixed",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              7
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Scorpio): below average height, stout; very impulsive and irregular; Krishnamurti calls this a less desirable partner.",
+      "tone": "bad",
+      "cite": "B4 p. 92"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              8
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Sagittarius): good-looking, well built, oval face; honest, true, generous, quick and passionate; lucky.",
+      "tone": "good",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              9
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Capricorn): thin and slight; dull, inactive, pessimistic and self-centred, often ignored even by friends.",
+      "tone": "bad",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              10
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Aquarius): medium height, well made; very intelligent and studious, fit for research, most courteous, never offensive, upright.",
+      "tone": "good",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Mo"
+            ]
+          },
+          {
+            "planet": "Mo",
+            "sign": [
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Moon in Pisces): below average height, plump, full face; inactive except for pleasure, unsteady and inconstant; luck is poor.",
+      "tone": "bad",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              0
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Aries): medium height, big bones, curly hair, dark; very bold, rash, over-confident, proud and quarrelsome, yet always gains.",
+      "tone": "mixed",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              1
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Taurus): medium height, strong, coarse hair, broad face; self-indulgent, arrogant and speculative; luck is poor.",
+      "tone": "bad",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              2
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Gemini): very tall, well proportioned and always active; restless, mischievous, clever and cunning, moves house often and is slow to repay debts.",
+      "tone": "bad",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              3
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Cancer): short, dusky, sparse hair, uneven build; may find steady, responsible work hard to keep.",
+      "tone": "bad",
+      "cite": "B4 p. 93"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              4
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Leo): tall, well built, dark, sturdy limbs, brisk; fond of shooting, riding and sport, quarrelsome, drawn to police or military life, dresses well.",
+      "tone": "mixed",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              5
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Virgo): medium height, thick nose, dark; hasty, impulsive, proud, passionate and vindictive, slow to forgive.",
+      "tone": "bad",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Libra): tall, attractive, oval face, ruddy; active, cheerful and hopeful, but boastful, vain and haughty, well dressed, fond of the other sex.",
+      "tone": "mixed",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              7
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Scorpio): stout, dark, curly hair, broad face; rash, unsociable, revengeful and fond of disputes, proud, yet very intelligent.",
+      "tone": "bad",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              8
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Sagittarius): tall, well proportioned, ruddy, piercing eyes; hopeful, jovial, cheerful, quick, bold and talkative.",
+      "tone": "good",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              9
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Capricorn): short, lean, dark; witty, humorous, intelligent, lucky, pushing and successful.",
+      "tone": "good",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              10
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Aquarius): well built, fair and buoyant; a good debater who loves to argue; average fortune.",
+      "tone": "mixed",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "planet": "Ma",
+            "sign": [
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mars in Pisces): below average height, dark, untidy look; dull, idle, careless and self-indulgent; luck is poor.",
+      "tone": "bad",
+      "cite": "B4 p. 94"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              0
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Aries): medium height, thin, oval face, brownish hair; quick in thought and speech, expressive, inventive, studious, a writer, but impulsive and unmethodical.",
+      "tone": "mixed",
+      "cite": "B4 p. 95"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              1
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Taurus): stout, strong, dark, short thick hair; cheerful, a little lazy, artistic and diplomatic, determined, fond of company and of saving money.",
+      "tone": "good",
+      "cite": "B4 p. 95"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              2
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Gemini): tall, well built, brown hair; intelligent, eloquent, clever and versatile (a lawyer or agent type), resourceful, generous, good-humoured, speculative.",
+      "tone": "good",
+      "cite": "B4 p. 95"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              3
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Cancer): short, stout, small eyes, sharp nose; changeable and unsteady, a little lazy, yet tactful, faithful, sociable and fond of parties.",
+      "tone": "mixed",
+      "cite": "B4 p. 95"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              4
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Leo): good stature, round face, broad eyes; quick-tempered but kind-hearted, ambitious, intuitive, a good organiser, fond of music, drama and arts.",
+      "tone": "mixed",
+      "cite": "B4 p. 95"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              5
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Virgo): tall, lean, brown hair; very intelligent, cautious, practical and prudent, a scholar and good writer, an alert worker, interested in the occult.",
+      "tone": "good",
+      "cite": "B4 p. 95"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Libra): tall, thin, brown hair; broad-minded and dispassionate, weighs and compares everything, a good judge, artistic, good at mathematics, social.",
+      "tone": "good",
+      "cite": "B4 p. 96"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              7
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Scorpio): short, broad shoulders, dark; stubborn, reckless, critical and suspicious, pleasure-seeking, often troubled by friends and relatives.",
+      "tone": "bad",
+      "cite": "B4 p. 96"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              8
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Sagittarius): tall, big-boned, oval face, long nose; sincere, just and independent but rebellious; mentally active, prophetic, fond of nature, authoritative.",
+      "tone": "mixed",
+      "cite": "B4 p. 96"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              9
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Capricorn): thin, dark, thin brown hair; irritable, discontented and suspicious, yet painstaking, studious and persevering, drawn to science and the occult.",
+      "tone": "mixed",
+      "cite": "B4 p. 96"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              10
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Aquarius): medium build, attractive, fair; original, penetrating and humanitarian, a keen reader and researcher, fond of occult study and theory.",
+      "tone": "good",
+      "cite": "B4 p. 96"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Me"
+            ]
+          },
+          {
+            "planet": "Me",
+            "sign": [
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Mercury in Pisces): short, stout, pale; intuitive, quick to understand, versatile, with a good memory and an analytical mind; finds pleasure in nursing others.",
+      "tone": "good",
+      "cite": "B4 p. 96"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              0
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Aries): medium build, expressive eyes, high nose; progressive, generous, philosophical, noble, polite and studious, fond of travel and sport; fortunate.",
+      "tone": "good",
+      "cite": "B4 p. 96"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              1
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Taurus): medium height, stout; affectionate, reserved, steady and religious; gains through the other sex, gifts and investments; marries early; a dutiful partner.",
+      "tone": "good",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              2
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Gemini): well built, penetrating eyes; sympathetic, kind, friendly and trustworthy, broad-minded but restless; some difficulty around the wedding.",
+      "tone": "mixed",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              3
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Cancer): short, stout, pale; charitable, enterprising, sympathetic and popular, intuitive and artistic, patriotic, loves home yet travels.",
+      "tone": "good",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              4
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Leo): tall, strong, curly dark hair, big eyes, good-looking; noble, prudent, loyal, generous and diplomatic, values prestige and permanence.",
+      "tone": "good",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              5
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Virgo): tall, well built, fair, good-looking; intelligent, cautious, analytical, wise and honest, chooses friends with care, popular.",
+      "tone": "good",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Libra): tall, handsome, oval face; earnest, obliging, peaceful and charitable, artistic, fond of travel; a happy marriage with good children.",
+      "tone": "good",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              7
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Scorpio): well built, attractive; strong-willed, deeply emotional, ambitious and self-confident, analytical and research-minded.",
+      "tone": "good",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              8
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Sagittarius): tall, upright, stout, may go bald; courteous, generous, tolerant, loyal and humane; successful, with gains.",
+      "tone": "good",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              9
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Capricorn): thin, below average height; capable, creative, ambitious and thrifty, successful in public life, travels far; orthodox views.",
+      "tone": "mixed",
+      "cite": "B4 p. 97"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              10
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Aquarius): below average height, deep-set eyes; good-humoured, sympathetic, dislikes quarrels, spiritual, drawn to astrology, independent in views.",
+      "tone": "good",
+      "cite": "B4 p. 98"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ju"
+            ]
+          },
+          {
+            "planet": "Ju",
+            "sign": [
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Jupiter in Pisces): below average height, plump; strong-willed yet emotional, imaginative and intuitive, simple and unassuming, loves nature and good company.",
+      "tone": "good",
+      "cite": "B4 p. 98"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              0
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Aries): average height, thin, attractive, perhaps a mark on the face; artistic, musical, affectionate, loving and popular.",
+      "tone": "good",
+      "cite": "B4 p. 98"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              1
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Taurus): attractive, well proportioned, a little stout; emotional, affectionate, faithful, careful and determined, saves money and enjoys life.",
+      "tone": "good",
+      "cite": "B4 p. 98"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              2
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Gemini): medium height, fair, dark hair; good-humoured, many interests and occupations, a writer, speaker or musician; more than one love affair, unsteady.",
+      "tone": "mixed",
+      "cite": "B4 p. 98"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              3
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Cancer): short, stout, round face; home-loving, kind and imaginative, close to mother and family; several attachments, and the marriage is not very fortunate.",
+      "tone": "mixed",
+      "cite": "B4 p. 98"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              4
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Leo): tall, well built, clear eyes, fair; sympathetic, kind, charitable and sincere, attractive, gifted in music or acting, gains by speculation.",
+      "tone": "good",
+      "cite": "B4 p. 98"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              5
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Virgo): tall, well built, oval face; intelligent and sympathetic, but not fully content in love; gains through medicine, gardening and speculation.",
+      "tone": "mixed",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Libra): tall, upright, very attractive, long hair, ever smiling; kind, affectionate and artistic, a pleasant and inseparable companion.",
+      "tone": "good",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              7
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Scorpio): short, stout, robust, dark; lavish, impulsive, passionate and emotional; gains through gifts, partnership or dowry, but has troubles in love.",
+      "tone": "mixed",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              8
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Sagittarius): tall, fair, long face; refined, light-hearted, imaginative and intuitive, loves travel, nature and outdoor games; gains from many sources.",
+      "tone": "good",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              9
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Capricorn): thin, pale look; trustworthy, responsible and business-like, good at banking and investment, ambitious; marriage comes late.",
+      "tone": "mixed",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              10
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Aquarius): attractive, well built, fair; sympathetic, humane, social and romantic, gains through friends; most hopes are fulfilled.",
+      "tone": "good",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Ve"
+            ]
+          },
+          {
+            "planet": "Ve",
+            "sign": [
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Venus in Pisces): medium height, stout, very fair; charitable, compassionate, emotional and inspired, fond of painting, music and society.",
+      "tone": "good",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              0
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Aries): dark, thin, bony; boastful but determined and very ambitious, with a good analytical mind; meets obstacles.",
+      "tone": "mixed",
+      "cite": "B4 p. 99"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              1
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Taurus): plain looks, stout; steady but quick to anger and resentful, hard to satisfy, very thrifty; home life is not very fortunate.",
+      "tone": "bad",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              2
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Gemini): tall, dark; intelligent, able to concentrate, fond of science, statistics and literature; trouble through cousins, disputes and false complaints.",
+      "tone": "mixed",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              3
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Cancer): thin, not tall, frail look, deep-set eyes; restless, discontented and changeable, moves house often, but very industrious.",
+      "tone": "bad",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              4
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Leo): tall, broad face, big shoulders, sunken eyes; generous, stubborn and God-fearing, hard-working; not happy in love.",
+      "tone": "mixed",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              5
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Virgo): tall, thin, long forehead; cautious, thrifty and reserved, much given to worry; home life lacks harmony.",
+      "tone": "bad",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Libra): tall, long face, broad forehead; commands respect, scientific mind, but disappointment in love, a delayed marriage and a risk of separation.",
+      "tone": "bad",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              7
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Scorpio): medium height, stout, big shoulders; forceful, passionate and jealous, prone to drink and bad habits; unhappy in domestic life.",
+      "tone": "bad",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              8
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Sagittarius): large build; helpful, fearless, humane and philosophical, detached by nature; meets many obstacles, may have more than one occupation.",
+      "tone": "mixed",
+      "cite": "B4 p. 100"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              9
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Capricorn): lean, bony, stooping; serious, cautious and reserved but peevish and not reliable; an unhappy, dissatisfied marriage.",
+      "tone": "bad",
+      "cite": "B4 p. 101"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              10
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Aquarius): tall, big head, deep-set eyes; thoughtful, reserved, intellectual and sociable; a faithful, romantic married life.",
+      "tone": "good",
+      "cite": "B4 p. 101"
+    },
+    {
+      "id": "KP4-129",
+      "topic": "Marriage and partnership",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 7,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "planet": "Sa",
+            "sign": [
+              11
+            ]
+          }
+        ]
+      },
+      "text": "Spouse (7th sub lord Saturn in Pisces): medium height, prominent eyes, uneven teeth; open to deception and blackmail, many disappointments and worries in love, tires easily.",
+      "tone": "bad",
+      "cite": "B4 p. 101"
+    },
+    {
+      "id": "KP4-139",
+      "topic": "Self and temperament",
+      "when": {
+        "cusp": 1,
+        "sign": [
+          0
+        ],
+        "sub": [
+          "Mo",
+          "Ve"
+        ]
+      },
+      "text": "Aries rises in the sub of the Moon or Venus: a modest, gentle nature, unlike the usual picture of Aries.",
+      "tone": "good",
+      "cite": "B4 p. 108"
+    },
+    {
+      "id": "KP4-139",
+      "topic": "Self and temperament",
+      "when": {
+        "cusp": 1,
+        "sign": [
+          0
+        ],
+        "sub": [
+          "Ma"
+        ]
+      },
+      "text": "Aries rises in Mars’s own sub: a militant, forceful temperament.",
+      "tone": "info",
+      "cite": "B4 p. 108"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          1
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 1st: the native guards personal dignity, puts down hostility, and enjoys a fortunate life with harmony and happiness.",
+      "tone": "good",
+      "cite": "B4 p. 252"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          2
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 2nd: the native works long hours, is always after money, and gains through industrious work.",
+      "tone": "good",
+      "cite": "B4 p. 252"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          3
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 3rd: strong mental growth, gains from frequent short journeys, good ties with relatives and neighbours; keeps adding agencies, though success may be slow.",
+      "tone": "good",
+      "cite": "B4 p. 252"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          4
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 4th: interest in land, buildings, vehicles, mines, possessions and study; good relations with the mother.",
+      "tone": "good",
+      "cite": "B4 p. 252"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          5
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 5th: delight in sports, music, the stage and speculation; anxious to bring up the children well.",
+      "tone": "good",
+      "cite": "B4 p. 252"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          6
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 6th: the native can win contests and attempts, but tends to cause loss to those dealt with, and disharmony follows.",
+      "tone": "bad",
+      "cite": "B4 p. 252"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          7
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 7th: good partners in life and business, understanding with the spouse, fond of the company of the other sex; some litigation in life; happiness in marriage.",
+      "tone": "good",
+      "cite": "B4 p. 252"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          8
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 8th: occult experiences; gains through a legacy but only after great trouble; nothing comes smoothly, with many obstacles.",
+      "tone": "bad",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          9
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 9th: love of long journeys, religious mind, higher studies, success in research, prophetic dreams; gains through, and good ties with, the in-laws and the father.",
+      "tone": "good",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          10
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 10th: name and fame, success in undertakings, favour of superiors, a high social and professional position, and easy inheritance.",
+      "tone": "good",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          11
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 11th: success all round, many friends, a smooth life, social and financial gains.",
+      "tone": "good",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "any": [
+          12
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 12th: secret unhappiness and hidden opponents, fear of confinement, and misfortune to face.",
+      "tone": "bad",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "csl": 1,
+        "all": [
+          12,
+          2,
+          6,
+          11
+        ]
+      },
+      "text": "The sub lord of the Ascendant signifies the 12th together with 2, 6 and 11: the native makes a fortune in a foreign place.",
+      "tone": "good",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 1,
+            "planets": [
+              "Ma"
+            ]
+          },
+          {
+            "csl": 1,
+            "any": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant is Mars and signifies the 6th: Krishnamurti warns of bold, open wrongdoing against others; firm guidance and discipline matter.",
+      "tone": "bad",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-162",
+      "topic": "Self and temperament",
+      "when": {
+        "allOf": [
+          {
+            "cslIs": 1,
+            "planets": [
+              "Sa"
+            ]
+          },
+          {
+            "csl": 1,
+            "any": [
+              6
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant is Saturn and signifies the 6th: Krishnamurti warns of wrongdoing done quietly, out of others’ sight; firm guidance and discipline matter.",
+      "tone": "bad",
+      "cite": "B4 p. 253"
+    },
+    {
+      "id": "KP4-106",
+      "topic": "Self and temperament",
+      "when": {
+        "cusp": 1,
+        "sign": [
+          0,
+          7
+        ]
+      },
+      "text": "For an Aries or Scorpio Lagna, Mars rules the Ascendant but also the 8th or the 6th: many troubles are self-invited through haste and quarrels; restraint helps.",
+      "tone": "mixed",
+      "cite": "B4 pp. 57–59"
+    },
+    {
+      "id": "KP4-106",
+      "topic": "Self and temperament",
+      "when": {
+        "cusp": 1,
+        "sign": [
+          3,
+          4,
+          8,
+          11
+        ]
+      },
+      "text": "For a Cancer, Leo, Sagittarius or Pisces Lagna, Mars is a helpful, yoga-giving planet.",
+      "tone": "good",
+      "cite": "B4 pp. 57–59"
+    },
+    {
+      "id": "KP4-106",
+      "topic": "Self and temperament",
+      "when": {
+        "cusp": 1,
+        "sign": [
+          2,
+          5
+        ]
+      },
+      "text": "For a Gemini or Virgo Lagna, Mars is an evil planet (more so for Virgo): it brings arrogance, haste and disputes.",
+      "tone": "bad",
+      "cite": "B4 pp. 57–59"
+    },
+    {
+      "id": "KP4-106",
+      "topic": "Self and temperament",
+      "when": {
+        "cusp": 1,
+        "sign": [
+          1,
+          6
+        ]
+      },
+      "text": "For a Taurus or Libra Lagna, Mars is inauspicious (more so for Taurus).",
+      "tone": "bad",
+      "cite": "B4 pp. 57–59"
+    },
+    {
+      "id": "KP4-106",
+      "topic": "Self and temperament",
+      "when": {
+        "cusp": 1,
+        "sign": [
+          9,
+          10
+        ]
+      },
+      "text": "For a Capricorn or Aquarius Lagna, Mars is mostly helpful in material affairs.",
+      "tone": "good",
+      "cite": "B4 pp. 57–59"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Sun and is free of 6, 8 and 12: by Krishnamurti’s gem rule, ruby and the colours orange or deep red suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Moon and is free of 6, 8 and 12: by Krishnamurti’s gem rule, pearl and the colours white and silvery suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Mars and is free of 6, 8 and 12: by Krishnamurti’s gem rule, coral and the colours deep red suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Mercury and is free of 6, 8 and 12: by Krishnamurti’s gem rule, emerald and the colours green or slate suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Jupiter and is free of 6, 8 and 12: by Krishnamurti’s gem rule, topaz and the colours purple, violet, blue or white suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Venus and is free of 6, 8 and 12: by Krishnamurti’s gem rule, diamond and the colours yellow or pale blue suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Saturn and is free of 6, 8 and 12: by Krishnamurti’s gem rule, sapphire and the colours brown, indigo or black suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Rahu and is free of 6, 8 and 12: by Krishnamurti’s gem rule, agate or turquoise and the colours mixed colours suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-164",
+      "topic": "Self and temperament",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 1,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "csl": 1,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 11,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "csl": 11,
+                "none": [
+                  6,
+                  8,
+                  12
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "The sub lord of the Ascendant or of the 11th cusp is Ketu and is free of 6, 8 and 12: by Krishnamurti’s gem rule, agate or turquoise and the colours mixed colours suit the native.",
+      "tone": "info",
+      "cite": "B4 pp. 283–284"
+    },
+    {
+      "id": "KP4-226",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "cusp": 5,
+            "sign": [
+              0,
+              2,
+              4,
+              5
+            ]
+          },
+          {
+            "cusp": 11,
+            "sign": [
+              0,
+              2,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      "text": "The 5th or 11th cusp falls in a barren sign (Aries, Gemini, Leo, Virgo): one of Krishnamurti’s signs that children come with some difficulty; the cusp sub lords decide.",
+      "tone": "mixed",
+      "cite": "B4 p. 216"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  0
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Aries). As a man: frank, eager and possessive, quick-tempered, apt to marry in haste. As a woman: independent and passionate, likes to lead; should curb pride and temper.",
+      "tone": "info",
+      "cite": "B4 pp. 160–161"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  1
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Taurus). As a man: slow to choose a partner, then loyal; sensuous; wants a respected, settled home. As a woman: love is tied to security, wealth weighs in the choice; a thrifty home-maker.",
+      "tone": "info",
+      "cite": "B4 pp. 161–162"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Gemini). As a man: makes and drops friends quickly, delays commitment, wants variety and a clever companion. As a woman: wants mental companionship and outside work; torn between career and home.",
+      "tone": "info",
+      "cite": "B4 pp. 162–163"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Cancer). As a man: romantic, loyal and home-loving, but poor at showing love; avoids divorce. As a woman: sincere and devoted but moody, wants attention; may remarry for security.",
+      "tone": "info",
+      "cite": "B4 pp. 163–164"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Leo). As a man: ardent, proud and generous; needs an appreciative wife. As a woman: idealistic, runs the home admirably, active in social work; loyal, spends freely.",
+      "tone": "info",
+      "cite": "B4 p. 165"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  5
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Virgo). As a man: an idealist, slow to marry, values intellect over romance. As a woman: understands her husband, dutiful and thrifty, sees marriage as a partnership; reserved in intimacy.",
+      "tone": "info",
+      "cite": "B4 pp. 166–167"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  6
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Libra). As a man: a charming, ardent lover whose passion may cool; adjusts and avoids divorce. As a woman: marries early, tactful, likes comfort, luxury and praise.",
+      "tone": "info",
+      "cite": "B4 pp. 167–168"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  7
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Scorpio). As a man: intense and faithful; kind or harsh depending on how the partner responds. As a woman: deeply loyal when loved, fierce in temper, no patience with weak men.",
+      "tone": "info",
+      "cite": "B4 pp. 168–169"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  8
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Sagittarius). As a man: sporting, honest and frank, even about other attractions; quick temper, quick regret. As a woman: independent, outdoor and career-minded; wants freedom.",
+      "tone": "info",
+      "cite": "B4 pp. 169–170"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  9
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Capricorn). As a man: reserved, slow and dutiful, hides affection; prefers a younger wife and needs a contented home. As a woman: a devoted home-keeper who plans the family and hides her feelings.",
+      "tone": "info",
+      "cite": "B4 p. 171"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  10
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Aquarius). As a man: wants an educated, intelligent partner; undemonstrative; loves children. As a woman: one of two extremes; would rather endure a poor match than divorce.",
+      "tone": "info",
+      "cite": "B4 pp. 172–173"
+    },
+    {
+      "id": "KP4-161",
+      "topic": "Children, romance and speculation",
+      "when": {
+        "anyOf": [
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Su"
+                ]
+              },
+              {
+                "planet": "Su",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Mo"
+                ]
+              },
+              {
+                "planet": "Mo",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ma"
+                ]
+              },
+              {
+                "planet": "Ma",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Me"
+                ]
+              },
+              {
+                "planet": "Me",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ju"
+                ]
+              },
+              {
+                "planet": "Ju",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ve"
+                ]
+              },
+              {
+                "planet": "Ve",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Sa"
+                ]
+              },
+              {
+                "planet": "Sa",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ra"
+                ]
+              },
+              {
+                "planet": "Ra",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          },
+          {
+            "allOf": [
+              {
+                "cslIs": 5,
+                "planets": [
+                  "Ke"
+                ]
+              },
+              {
+                "planet": "Ke",
+                "sign": [
+                  11
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "text": "Love nature (5th sub lord in Pisces). As a man: emotional and sentimental, kind, but can be suspicious and jealous. As a woman: varied, either simple and philosophical or restless when unfulfilled.",
+      "tone": "info",
+      "cite": "B4 pp. 173–174"
+    },
+    {
+      "id": "KP4-160",
+      "topic": "Gains and friends",
+      "when": {
+        "csl": 11,
+        "all": [
+          1,
+          5
+        ]
+      },
+      "text": "The 11th sub lord signifies 1 and 5: a son-in-law (the 11th is the 7th from the 5th) brings peace to the family.",
+      "tone": "good",
+      "cite": "B4 p. 181"
+    },
+    {
+      "id": "KP4-160",
+      "topic": "Gains and friends",
+      "when": {
+        "csl": 11,
+        "any": [
+          6,
+          12
+        ]
+      },
+      "text": "The 11th sub lord signifies 6 or 12: a son-in-law (the 11th is the 7th from the 5th) may not bring peace; relations need care.",
+      "tone": "bad",
+      "cite": "B4 p. 181"
+    }
+  ]
+}
