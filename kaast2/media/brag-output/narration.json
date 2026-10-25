@@ -1,5 +1,5 @@
 {
-  "voice": "hm_psi", "speed": 1.0, "lang": "en-gb",
+  "voice": "af_heart", "speed": 1.0, "lang": "en-us",
   "segments": [
     {"id": "s1", "text": "Every planet, to the second. In one file that never goes online."},
     {"id": "s2", "text": "This is Astro-Amriit, the Karar Ashram astrology software."},

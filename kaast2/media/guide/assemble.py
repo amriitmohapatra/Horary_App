@@ -15,8 +15,9 @@ from scipy.signal import resample_poly
 HERE = os.path.dirname(os.path.abspath(__file__))
 W = os.path.join(HERE, 'work'); OUT = os.path.join(HERE, 'out')
 sys.path.insert(0, os.path.join(HERE, '..', 'lib'))
-from soundtrack import bell, SA  # noqa: E402
-SR = 48000; FPS = 30; CARD = 3.2
+from soundtrack import conch, reverb  # noqa: E402
+SR = 48000; FPS = 30; CARD = 3.8
+TAIL = 1.5  # seconds of quiet picture after a chapter's last words
 
 
 def run(*a):
@@ -35,7 +36,10 @@ def chapter(cid, texts):
     d = os.path.join(W, cid)
     frames = json.load(open(os.path.join(d, 'frames.json')))
     tl = json.load(open(os.path.join(d, 'timeline.json')))
-    t0 = frames[0]['t']; length = frames[-1]['t'] - t0 + 0.5
+    t0 = frames[0]['t']
+    end = next((e['start'] for e in tl if e['id'] == '__end'), frames[-1]['t'])  # the screen may be still at the end
+    voice_end = max((s['start'] + len(load(os.path.join(W, 'voice', f"{s['id']}.wav"))) / SR for s in tl if 'duration' in s), default=t0)
+    length = max(end, voice_end + TAIL) - t0  # never cut the last words off
     vid = os.path.join(d, 'video.mp4'); out = os.path.join(d, 'chapter.mp4')
     fresh = os.path.exists(out) and os.path.getmtime(out) > os.path.getmtime(os.path.join(d, 'frames.json'))
     if not fresh: subprocess.run([sys.executable, os.path.join(HERE, '..', 'lib', 'frames2video.py'), d, vid, str(FPS)], check=True, capture_output=True)
@@ -49,16 +53,18 @@ def chapter(cid, texts):
     if fresh: return out, length, subs  # encoded after the last recording: reuse
     wav = os.path.join(d, 'voice.wav'); sf.write(wav, np.stack([audio, audio], 1).astype(np.float32), SR)
     run('-i', vid, '-i', wav, '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-crf', '18', '-preset', 'medium', '-pix_fmt', 'yuv420p',
-        '-vf', f'fade=in:st=0:d=0.35,fade=out:st={length - 0.4:.2f}:d=0.4', '-c:a', 'aac', '-b:a', '160k', '-ar', str(SR), '-t', f'{length:.3f}', out)
+        '-vf', f'tpad=stop_mode=clone:stop_duration=5,fade=in:st=0:d=0.6,fade=out:st={length - 0.9:.2f}:d=0.9', '-c:a', 'aac', '-b:a', '160k', '-ar', str(SR), '-t', f'{length:.3f}', out)
     return out, length, subs
 
 
 def card(cid):
     png = os.path.join(W, 'cards', f'{cid}.png'); out = os.path.join(W, 'cards', f'{cid}.mp4')
     n = int(CARD * SR); a = np.zeros(n)
-    b = bell(SA * 4) * 0.22 + bell(SA * 6) * 0.08; a[int(0.15 * SR): int(0.15 * SR) + len(b)] += b[: n - int(0.15 * SR)]
+    c = reverb(np.concatenate([conch(), np.zeros(SR)]), secs=3.0, mix=0.35) * 0.16  # soft conch, well under the voice
+    s = int(0.2 * SR); a[s:s + len(c)] += c[: n - s]
+    a[-int(0.6 * SR):] *= np.linspace(1, 0, int(0.6 * SR))
     wav = out.replace('.mp4', '.wav'); sf.write(wav, np.stack([a, a], 1).astype(np.float32), SR)
-    run('-loop', '1', '-framerate', str(FPS), '-i', png, '-i', wav, '-t', str(CARD), '-vf', f'fade=in:st=0:d=0.4,fade=out:st={CARD - 0.45}:d=0.45,format=yuv420p',
+    run('-loop', '1', '-framerate', str(FPS), '-i', png, '-i', wav, '-t', str(CARD), '-vf', f'fade=in:st=0:d=0.6,fade=out:st={CARD - 0.7}:d=0.7,format=yuv420p',
         '-c:v', 'libx264', '-crf', '18', '-preset', 'medium', '-c:a', 'aac', '-b:a', '160k', '-ar', str(SR), out)
     return out
 

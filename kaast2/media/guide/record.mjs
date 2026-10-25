@@ -15,14 +15,14 @@ for (const ch of CHAPTERS) {
   try {
     await setup(d, page, ch);
     await d.startCapture();
-    await d.wait(600);
+    await d.wait(1200); // a beat after the title card before the first words
     for (const s of ch.segments) {
       await d.segment(s.id, dur[s.id], async () => {
         await d.wait(250);
         try { await s.act(d, page); } catch (e) { console.error(`${s.id}: ${e.message.split('\n')[0]}`); }
-      }, 0.45);
+      }, 0.9); // pause between segments
     }
-    await d.zoomOut(); await d.unhighlight(); await d.wait(700);
+    await d.zoomOut(); await d.unhighlight(); await d.wait(2000); // let the chapter settle before it fades
     await d.stopCapture();
     console.log(ch.id, 'recorded');
   } finally { await browser.close(); }

@@ -15,12 +15,18 @@ bash media/setup.sh    # Python: kokoro-onnx (voice), soundfile, scipy; voice mo
 
 Also needed: `ffmpeg`, and for the PDF a TeX distribution with `latexmk` (MacTeX or TeX Live).
 
-## The voice
+## The voice and the sound
 
-`tts.py` speaks with Kokoro-82M's Indian voice **hm_psi** (Apache-2.0), British-English
-pronunciation. Sanskrit and astrology terms are respelled for speech in `RESPELL`
-(screen text keeps the proper spelling). To change the narrator, set `"voice"` in the
-narration JSON (other Indian voices: `hm_omega` male, `hf_alpha`, `hf_beta` female).
+`tts.py` speaks with Kokoro-82M's American voice **af_heart** (Apache-2.0). Sanskrit and Indian
+terms are not left to the phonemiser's guesses: each is spoken from hand-written phonemes in
+`LEXICON` (Parashara, Vimshottari, dasha, ayanamsa, Krishnamurti, …); abbreviations and numbers
+are rewritten in `SPOKEN`. Screen text keeps the proper spelling. To add a term, add its
+phonemes to `LEXICON`; to change the narrator, set `"voice"` in the narration JSON (other
+American voices: `af_bella`, `af_nicole`; male `am_michael`, `am_fenrir`).
+
+Section openings and the launch video's title and outro use a soft synthesised conch (shankha)
+in the key of the tanpura drone (`lib/soundtrack.py`, `conch()`): a slow swell with no sharp
+attack, low-passed, in a long reverb.
 
 ## 1. Launch video (`brag-output/`)
 
@@ -30,7 +36,7 @@ python3 media/lib/frames2video.py media/brag-output/work/clipA media/brag-output
 python3 media/lib/frames2video.py media/brag-output/work/clipB media/brag-output/work/clipB.webm 30 --intra
 python3 media/tts.py media/brag-output/narration.json media/brag-output/work/voice
 node media/brag-output/render.mjs                           # frames from compositor.html
-# soundtrack (spec from work/timing.json) and mux: see brag-plan.md
+python3 media/brag-output/finish.py                         # conch + tanpura + voice, poster frame, brag.mp4
 ```
 
 ## 2. Video guide (`guide/`)

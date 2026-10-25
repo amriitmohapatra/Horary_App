@@ -59,6 +59,7 @@ export class Director {
     await this.cdp.send('Page.startScreencast', { format: 'jpeg', quality: 92, maxWidth: 1920, maxHeight: 1080, everyNthFrame: 1 });
   }
   async stopCapture() {
+    this.timeline.push({ id: '__end', start: this.now() }); // the screen may be still: frames stop early
     await this.cdp.send('Page.stopScreencast');
     writeFileSync(join(this.out, 'frames.json'), JSON.stringify(this.frames));
     writeFileSync(join(this.out, 'timeline.json'), JSON.stringify(this.timeline, null, 1));

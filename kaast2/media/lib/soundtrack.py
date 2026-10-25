@@ -1,11 +1,11 @@
 """
 Soundtrack for the Astro-Amriit videos: a tanpura-style drone (Pa Sa Sa Sa,
-Sa = C#3) with soft bell accents in the same key, a small synthetic reverb,
+Sa = C#3) with soft conch (shankha) calls in the same key, a small synthetic reverb,
 and the narration laid on top with the music ducked under the voice.
 
 Usage: python3 media/lib/soundtrack.py <spec.json> <out.wav>
 spec = {"length": seconds, "voice": [[start_s, "file.wav"], ...],
-        "bells": [start_s, ...], "music_db": -24, "duck_db": -9}
+        "conch": [start_s, ...], "music_db": -24, "duck_db": -9}
 """
 import json, sys
 import numpy as np
@@ -34,6 +34,28 @@ def bell(f, dur=4.0):
     parts = [(1, 1, 1.0), (2.0, .5, 1.6), (3.01, .3, 2.2), (4.2, .18, 3.0), (5.4, .1, 3.6)]
     return sum(a * np.exp(-t * d) * np.sin(2 * np.pi * f * r * t) for r, a, d in parts) * np.minimum(1, t / 0.004)
 
+def conch(f=SA * 2, dur=2.6, seed=3):
+    """A soft shankha (conch) call: breathy swell, glide up to pitch, slow vibrato, a sigh down at
+    the end. No sharp attack and no bright partials (low-passed), so it is gentle on the ears."""
+    n = int(dur * SR); t = np.arange(n) / SR
+    rng = np.random.default_rng(seed)
+    att, rel = 0.55, 0.8
+    env = np.minimum(1, t / att) ** 2 * (3 - 2 * np.minimum(1, t / att))       # smoothstep swell
+    env *= np.clip((dur - t) / rel, 0, 1) ** 1.5                                 # soft release
+    cents = -70 * np.exp(-t / 0.18)                                              # glide up to pitch
+    cents += 7 * np.sin(2 * np.pi * 4.6 * t) * np.clip((t - 0.7) / 0.5, 0, 1)    # slow vibrato
+    cents -= 45 * np.clip((t - (dur - 0.5)) / 0.5, 0, 1) ** 2                    # sigh down
+    phase = 2 * np.pi * np.cumsum(f * 2 ** (cents / 1200)) / SR
+    out = np.zeros(n)
+    for k in range(1, 13):
+        # horn-like: upper partials grow with breath pressure (env), formant near 800 Hz
+        form = 1 / (1 + ((k * f - 800) / 900) ** 2)
+        out += k ** -1.2 * (0.35 + form) * env ** (1 + 0.18 * k) * np.sin(k * phase + rng.uniform(0, 6.28))
+    breath = sosfilt(butter(2, [250, 2200], 'band', fs=SR, output='sos'), rng.normal(0, 1, n))
+    out += 0.05 * breath * env ** 0.7
+    out = sosfilt(butter(2, 2400, 'low', fs=SR, output='sos'), out)
+    return out / (np.max(np.abs(out)) + 1e-9)
+
 def reverb(x, secs=2.2, mix=0.28):
     n = int(secs * SR)
     rng = np.random.default_rng(7)
@@ -56,8 +78,8 @@ def main():
             p = pluck(f, 5.0, seed); seed += 1
             music[s:s + len(p)] += p[: max(0, len(music) - s)]
         cyc += 4.6
-    for b in spec.get('bells', []):
-        s = int(b * SR); p = bell(SA * 4) * 0.55 + bell(SA * 6) * 0.25
+    for b in spec.get('conch', spec.get('bells', [])):
+        s = int(b * SR); p = conch() * 0.6
         music[s:s + len(p)] += p[: max(0, len(music) - s)]
     music = music[:L]
     music = sosfilt(butter(2, [70, 6000], 'band', fs=SR, output='sos'), music)
