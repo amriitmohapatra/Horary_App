@@ -18,7 +18,7 @@ export const CHAPTERS = [
     id: 'c00', title: 'Welcome', tab: null,
     segments: [
       { id: 'c00a', text: 'Welcome to Astro-Amriit, the Karar Ashram astrology software. This guide walks through every page of the app, with one public example chart: Amitabh Bachchan, born on the eleventh of October 1942, at four in the afternoon, in Allahabad.',
-        act: async (d, page) => { await d.wait(1500); await d.zoomTo(page.locator('header').first(), 0.9, 1.6); } },
+        act: async (d, page) => { await d.wait(1500); await d.zoomTo(page.locator('.topbar .brand').first(), 0.5, 1.8); } },
       { id: 'c00b', text: 'The whole app is a single file. Double-click it and it opens in your web browser. It needs no installation and no internet: the Swiss Ephemeris is built into the file, and nothing you type ever leaves your computer.',
         act: async (d, page) => { await d.zoomOut(); await d.hover(T(page, 'engine-status'), 900); await d.highlight(T(page, 'engine-status')); } },
       { id: 'c00c', text: 'When the green dot says ready, the app has already cast a chart for this very moment, at the last place you used, so the page is never empty. The version is written at the very bottom of every page.',

@@ -123,6 +123,12 @@ export class Director {
       tx += (vw / 2 - (m.x + m.width / 2)) / z; ty += (vh / 2 - (m.y + m.height / 2)) / z;
       await set(tx, ty, s, false);
     }
+    // keep the page covering the frame: a target near an edge is framed off-centre, never with blank margins
+    const pb = await this.page.locator('body').boundingBox();
+    if (pb) {
+      if (pb.x > 0) tx -= pb.x / z; else if (pb.x + pb.width < vw) tx += (vw - pb.x - pb.width) / z;
+      if (pb.y > 0) ty -= pb.y / z; else if (pb.y + pb.height < vh) ty += Math.min(-pb.y, vh - pb.y - pb.height) / z;
+    }
     await set(0, 0, 1, false);
     await set(tx, ty, s, true);
     this.zoom = s; await this.wait(1000);

@@ -36,8 +36,9 @@ def chapter(cid, texts):
     frames = json.load(open(os.path.join(d, 'frames.json')))
     tl = json.load(open(os.path.join(d, 'timeline.json')))
     t0 = frames[0]['t']; length = frames[-1]['t'] - t0 + 0.5
-    vid = os.path.join(d, 'video.mp4')
-    subprocess.run([sys.executable, os.path.join(HERE, '..', 'lib', 'frames2video.py'), d, vid, str(FPS)], check=True, capture_output=True)
+    vid = os.path.join(d, 'video.mp4'); out = os.path.join(d, 'chapter.mp4')
+    fresh = os.path.exists(out) and os.path.getmtime(out) > os.path.getmtime(os.path.join(d, 'frames.json'))
+    if not fresh: subprocess.run([sys.executable, os.path.join(HERE, '..', 'lib', 'frames2video.py'), d, vid, str(FPS)], check=True, capture_output=True)
     audio = np.zeros(int(length * SR)); subs = []
     for seg in tl:
         if 'duration' not in seg: continue
@@ -45,8 +46,8 @@ def chapter(cid, texts):
         s = int((seg['start'] - t0 + 0.12) * SR); e = min(len(audio), s + len(v))
         audio[s:e] += v[: e - s]
         subs.append((s / SR, e / SR, texts[seg['id']]))
+    if fresh: return out, length, subs  # encoded after the last recording: reuse
     wav = os.path.join(d, 'voice.wav'); sf.write(wav, np.stack([audio, audio], 1).astype(np.float32), SR)
-    out = os.path.join(d, 'chapter.mp4')
     run('-i', vid, '-i', wav, '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-crf', '18', '-preset', 'medium', '-pix_fmt', 'yuv420p',
         '-vf', f'fade=in:st=0:d=0.35,fade=out:st={length - 0.4:.2f}:d=0.4', '-c:a', 'aac', '-b:a', '160k', '-ar', str(SR), '-t', f'{length:.3f}', out)
     return out, length, subs

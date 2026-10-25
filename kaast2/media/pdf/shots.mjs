@@ -43,7 +43,7 @@ async function partner(p) {
 // callouts: [n, locator, text]; caption.
 export const SHOTS = [
   // Getting started
-  { id: 'form', tab: null, prep: castExample, target: [CSS('header'), L('Calculation')], pad: 10, below: 110,
+  { id: 'form', tab: null, prep: async (p) => { await castExample(p); await p.evaluate(() => document.activeElement?.blur()); }, target: [CSS('header'), L('Calculation'), CSS('label.file-btn')], pad: 10, below: 110,
     caption: 'The title bar and the chart form, filled in with the example chart.',
     callouts: [
       [1, T('engine-status'), 'Ready: the Swiss Ephemeris inside the file has started (about one second).'],
@@ -55,7 +55,7 @@ export const SHOTS = [
       [7, L(/^Zone/, false), 'Zone, hours east of UTC; India war time 1942–45 is set to +6:30 automatically.'],
       [8, L('Calculation'), 'Calculation profile: Parashara’s Light 9 (default), Parashara’s Light 7, or Solar Fire / Kala Chakra.'],
       [9, B('Cast chart'), 'Cast chart. Now casts this moment (horary); Save this place keeps the place in your own list.'],
-      [10, B('Open chart file…'), 'Open a Parashara’s Light .xml file or an Astro-Amriit chart; save in either format.'],
+      [10, CSS('label.file-btn'), 'Open a Parashara’s Light .xml file or an Astro-Amriit chart; save in either format.'],
     ] },
   { id: 'chartline', tab: 'Page 1', target: [CSS('main h1, .chart-title, [data-testid=panchanga]'), T('panchanga')], pad: 8, unionNav: true,
     caption: 'After casting: the chart line, the panchanga and the page tabs.',
@@ -71,7 +71,7 @@ export const SHOTS = [
       [1, TX(CSS('[role=img][aria-label*="Birth chart"]'), '1st h.'), 'Edge label: house, Sarvashtakavarga bindus of its sign, Bhava Bala in virupas.'],
       [2, TX(CSS('[role=img][aria-label*="Birth chart"]'), 'Aq 1'), 'Sign and house number from the ascendant; the ascendant’s box is tinted.'],
       [3, TX(CSS('[role=img][aria-label*="Birth chart"]'), 'Mo 10:19'), 'Planet, degrees:minutes in the sign, nakshatra; R after a planet = retrograde.'],
-      [4, TX(CSS('[role=img][aria-label*="Birth chart"]'), 'Amitabh'), 'Centre: name, date, time, place and coordinates.'],
+      [4, (p) => p.locator('[role=img][aria-label*="Birth chart"] text', { hasText: 'Amitabh' }).first(), 'Centre: name, date, time, place and coordinates.'],
     ] },
   { id: 'p1planets', tab: 'Page 1', target: [T('planet-table')], pad: 6,
     caption: 'The planet table on Page 1.',
@@ -90,7 +90,7 @@ export const SHOTS = [
       [4, TH(T('strength-table'), 'Av3'), 'Avasthas: three-state and five-state (PL’s order).'],
       [5, TH(T('strength-table'), 'K7'), 'Chara karaka (7-karaka scheme); Func. = functional nature for this ascendant.'],
     ] },
-  { id: 'p1vim', tab: 'Page 1', target: [S('h-vim'), T('dasha-list')], pad: 6,
+  { id: 'p1vim', tab: 'Page 1', target: [S('h-dasha'), T('dasha-list')], pad: 6,
     caption: 'The Vimshottari list, as on PL’s Page 1, with the period running today highlighted.',
     callouts: [
       [1, CSS('[data-testid=dasha-list] .is-current, [data-testid=dasha-list] tr[aria-current]'), 'The period running today.'],
@@ -105,7 +105,7 @@ export const SHOTS = [
     caption: '“How was this computed?” lists every setting behind the chart. Compare these lines first when numbers differ.',
     callouts: [] },
   // Page 1 (Experimental)
-  { id: 'exstates', tab: 'Page 1 (Experimental)', target: [S('h-exp-plate'), T('exp-states')], pad: 6,
+  { id: 'exstates', tab: 'Page 1 (Experimental)', target: [S('h-exp-plate'), T('exp-states'), CSS('[data-testid=exp-page] select')], pad: 6,
     caption: 'Highlights: each planet’s state in the chosen chart, as a code on the chart and spelled out in the table.',
     callouts: [[1, CSS('[data-testid=exp-page] select'), 'Choose the Rasi or any divisional chart.']] },
   { id: 'exconj', tab: 'Page 1 (Experimental)', target: [T('exp-conjunctions')], pad: 6,
@@ -178,7 +178,7 @@ export const SHOTS = [
   // NTP (Research)
   { id: 'ntpguide', tab: 'NTP (Research)', target: [S('h-ntp-guide')], pad: 6, maxH: 1400, caption: 'NTP Guidance: Iyer’s rules this chart meets, each tagged and cited.', callouts: [] },
   { id: 'ntpyoga', tab: 'NTP (Research)', target: [S('h-ntp-yoga')], pad: 6, caption: 'Yoga, Avayoga and the sets of three.', callouts: [] },
-  { id: 'ntpplanet', tab: 'NTP (Research)', target: [T('ntp-planet-Ju')], pad: 6, caption: 'A planet card: position, states, character with reasons, and every rule it meets.', callouts: [] },
+  { id: 'ntpplanet', tab: 'NTP (Research)', target: [T('ntp-planet-Ju')], pad: 6, maxH: 1100, caption: 'A planet card: position, states, character with reasons, and every rule it meets.', callouts: [] },
   { id: 'ntpdasha', tab: 'NTP (Research)', target: [S('h-ntp-dasha')], pad: 6, maxH: 1500, caption: 'Dasha and Bhukti by Iyer’s Dasha chart: starter, ruler, areas of life and every bhukti.', callouts: [] },
   // Yogi & Bhava
   { id: 'ybyogi', tab: 'Yogi & Bhava', target: [S('h-yogi')], pad: 6, caption: 'Yogi points: Yogi, Avayogi (rule selectable), Duplicate Yogi, Dagdha rashis.', callouts: [[1, L('Avayogi rule'), 'Choose the Avayogi rule while PL’s convention is unconfirmed.']] },
@@ -260,13 +260,19 @@ for (const s of SHOTS) {
     for (const [n, sel, text] of s.callouts ?? []) {
       try {
         const r = await doc(sel(p));
-        marks.push({ n, text, x: (r.x - x0) / clip.width, y: 1 - (r.y - y0) / clip.height, w: r.w / clip.width, h: r.h / clip.height });
+        // clip the box to the shot; a hidden or out-of-shot target is a problem, not a stray badge
+        const ax = Math.max(0, (r.x - x0) / clip.width), bx = Math.min(1, (r.x + r.w - x0) / clip.width);
+        const ay = Math.max(0, (r.y - y0) / clip.height), by = Math.min(1, (r.y + r.h - y0) / clip.height);
+        if (bx - ax < 0.005 || by - ay < 0.003) { problems.push(`${s.id} callout ${n}: target not in the shot`); continue; }
+        marks.push({ n, text, x: ax, y: 1 - ay, w: bx - ax, h: by - ay });
       } catch (e) { problems.push(`${s.id} callout ${n}: ${e.message.split('\n')[0]}`); }
     }
     // figure: image with outlined, numbered regions, then the legend
-    const ratio = clip.height / clip.width;
-    const width = ratio > 1.25 ? `${Math.max(0.45, 1.25 / ratio).toFixed(2)}\\linewidth` : '\\linewidth';
-    let tex = `\\begin{figure}[htbp]\n  \\centering\n  \\begin{tikzpicture}\n    \\node[anchor=south west, inner sep=0] (img) {\\includegraphics[width=${width}]{img/${s.id}.png}};\n    \\draw[gray!45] (img.south west) rectangle (img.north east);\n`;
+    // 1pt narrower than the text so the 0.4pt frame line fits inside the margins
+    // one scale for all shots (1000 CSS px = the text width), so on-screen text is the same size in every figure;
+    // tall shots are capped by height (keepaspectratio below)
+    const width = `\\dimexpr${Math.min(1, clip.width / 1000).toFixed(2)}\\linewidth-1pt\\relax`;
+    let tex = `\\begin{figure}[htbp]\n  \\centering\n  \\begin{tikzpicture}\n    \\node[anchor=south west, inner sep=0] (img) {\\includegraphics[width=${width}, height=0.72\\textheight, keepaspectratio]{img/${s.id}.png}};\n    \\draw[gray!45] (img.south west) rectangle (img.north east);\n`;
     if (marks.length) {
       tex += '    \\begin{scope}[x={(img.south east)}, y={(img.north west)}]\n';
       for (const m of marks) {

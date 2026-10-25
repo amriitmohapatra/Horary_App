@@ -12,6 +12,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[utf8]{inputenc}
+% arc minutes and seconds, as the app writes them (14°53′20″)
+\DeclareUnicodeCharacter{2032}{\ensuremath{'}}
+\DeclareUnicodeCharacter{2033}{\ensuremath{''}}
 \usepackage{microtype}
 \usepackage{parskip}
 \usepackage{textcomp}
@@ -25,6 +28,7 @@
 \usepackage{graphicx}
 \graphicspath{{work/}}
 \usepackage{caption}
+\usepackage[section]{placeins}   % figures stay inside their own section
 \usepackage{enumitem}
 \usepackage{listings}
 \usepackage{mdframed}
@@ -386,10 +390,22 @@ marriage charts every wedding fell in such a period, but ranking by strength alo
 Tick \ui{Only periods whose lords are all ruling planets now}, then use \ui{Transit days}.\end{warnbox}
 
 \subsection{Ruling planets and rectification}
+Ruling planets lists the planets ruling the moment of judgement, now at the chart's place or at a
+moment you set: the lords of the rising sign and star, of the Moon's star and sign, and of the day,
+with the finer sub lords of the rising degree and the Moon below them. Rahu and Ketu enter as
+agents of the planets they represent, and the list is ordered strongest first
+(\autoref{fig:kprp}). Under it, the rectification assistant searches around the birth time for
+moments whose rising sign, star, sub and sub-sub lords are all ruling planets
+(\autoref{fig:kprect}). It proposes candidate times; checking them against events is yours to do.
 \shot{kprp}
 \shot{kprect}
 
 \subsection{Transit timing}
+Transit timing takes one period: the one running today, or the one whose \textbf{Transit days}
+button you pressed in Life matters. It lists when a chosen body passes through the units whose
+sign, star and sub lords are all lords of that period (\autoref{fig:kptr}). Tick extra planets
+under \emph{Add ruling planets or significators} to widen the test. If the body makes no such
+passage in the period, the app says so; try another body.
 \shot{kptr}
 
 \subsection{Horary 1--249}
