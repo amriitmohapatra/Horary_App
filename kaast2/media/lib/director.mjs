@@ -94,18 +94,35 @@ export class Director {
   async type(loc, text, delay = 55) { await this.click(loc); await loc.fill(''); await loc.pressSequentially(text, { delay }); }
   /** Page zoom used for crisp 1080p frames (screen px per CSS px). */
   async pageZoom() { return this.page.evaluate(() => parseFloat(document.documentElement.style.zoom) || 1); }
-  /** Zoom the camera so the element fills about `fill` of the view (all maths in screen pixels). */
+  /**
+   * Zoom the camera so the element fills about `fill` of the view, centred.
+   * The framing is found by measurement (apply invisibly, measure, correct),
+   * so it does not depend on how the browser reports units under page zoom.
+   */
   async zoomTo(loc, fill = 0.85, maxScale = 1.8) {
     await this.zoomOut(0);
     await this.wait(60);
     const b = await this.box(loc);
     const z = await this.pageZoom();
-    const [vw, vh, sx, sy] = await this.page.evaluate(() => [innerWidth, innerHeight, scrollX, scrollY]);
-    const W = vw * z, H = vh * z; // viewport in screen px (innerWidth is in CSS px of the zoomed page)
-    const s = Math.min(maxScale, Math.max(1, Math.min((W * fill) / b.width, (H * fill) / b.height)));
-    const cx = (b.x + b.width / 2) / z + sx, cy = (b.y + b.height / 2) / z + sy; // element centre, document CSS px
-    const tx = W / 2 / z + sx - s * cx, ty = H / 2 / z + sy - s * cy;
-    await this.page.evaluate(([tx, ty, s]) => { document.body.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`; }, [tx, ty, s]);
+    const [vw, vh] = await this.page.evaluate(() => [innerWidth, innerHeight]); // screen px
+    const s = Math.min(maxScale, Math.max(1, Math.min((vw * fill) / b.width, (vh * fill) / b.height)));
+    const set = (tx, ty, sc, animate) => this.page.evaluate(([tx, ty, sc, animate]) => {
+      const st = document.body.style;
+      if (!animate) st.transition = 'none';
+      st.transform = sc === 1 && tx === 0 && ty === 0 ? '' : `translate(${tx}px, ${ty}px) scale(${sc})`;
+      void document.body.offsetWidth;
+      if (!animate) st.transition = '';
+    }, [tx, ty, sc, animate]);
+    // first guess, then two corrections by measurement (translate is in CSS px: screen = css × z)
+    let tx = 0, ty = 0;
+    await set(0, 0, s, false);
+    for (let k = 0; k < 3; k++) {
+      const m = await loc.boundingBox();
+      tx += (vw / 2 - (m.x + m.width / 2)) / z; ty += (vh / 2 - (m.y + m.height / 2)) / z;
+      await set(tx, ty, s, false);
+    }
+    await set(0, 0, 1, false);
+    await set(tx, ty, s, true);
     this.zoom = s; await this.wait(1000);
   }
   async zoomOut(ms = 950) {

@@ -1,0 +1,597 @@
+% =============================================================================
+% Astro-Amriit — Illustrated Guide (v0.9)
+% Build: node media/pdf/shots.mjs  (screenshots + figure files in work/)
+%        cd media/pdf && latexmk guide.tex   (PDF in out/)
+% Every screenshot comes from the shipped app (dist/Astro-Amriit v0.9.html)
+% with the public example chart used throughout the user guide.
+% =============================================================================
+\documentclass[11pt, a4paper]{article}
+
+% --- Geometry, fonts, microtypography ----------------------------------------
+\usepackage[margin=2.2cm, headheight=15pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{textcomp}
+\usepackage{amsmath, amssymb}
+
+% --- Tables, figures, lists, boxes --------------------------------------------
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\graphicspath{{work/}}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[htt]{hyphenat}
+\usepackage{etoolbox}
+
+% --- House colours + MIDSEA accent (headings, boxes, tags) --------------------
+\definecolor{headerblue}{RGB}{0,70,127}
+\definecolor{noteblue}{RGB}{220,235,245}
+\definecolor{warnyellow}{RGB}{255,248,220}
+\definecolor{codegrey}{RGB}{245,245,245}
+\input{midsea-preamble.tex}
+% the app's own colours (cover, callouts)
+\definecolor{plate}{HTML}{141B3D}
+\definecolor{platedeep}{HTML}{0E1330}
+\definecolor{plategold}{HTML}{C6A15B}
+\definecolor{platedisplay}{HTML}{ECD396}
+\definecolor{platemuted}{HTML}{A6AECF}
+
+% --- Callouts on screenshots ----------------------------------------------------
+\tikzset{
+  callout/.style={draw=midseamagenta, line width=1.1pt, rounded corners=2pt},
+  badge/.style={circle, fill=midseamagenta, text=white, font=\sffamily\bfseries\scriptsize,
+                inner sep=1.2pt, minimum size=11pt, anchor=center},
+}
+\newcommand{\badgeinline}[1]{\tikz[baseline=(b.base)]\node[badge](b){#1};}
+\newlist{calloutlist}{description}{1}
+\setlist[calloutlist]{font=\normalfont, leftmargin=1.9em, labelwidth=1.4em, labelsep=0.5em,
+  itemsep=1pt, topsep=4pt, before=\small\raggedright}
+\newcommand{\shot}[1]{\input{work/fig/#1}}
+
+% --- Headers, captions, layout safety ----------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small\color{midseapurple}Astro-Amriit — Illustrated Guide}
+\lhead{\small\color{midseapurple}Karar Ashram Astrology Software · v0.9}
+\rfoot{\small Page \thepage}
+\lfoot{\small Example chart: Amitabh Bachchan, 11 Oct 1942, 16:00, Allahabad}
+\captionsetup{font=small, labelfont=bf, skip=6pt}
+\emergencystretch=3em
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+
+% --- Hyperref last ------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=midseapurple, urlcolor=headerblue, citecolor=midseagreen,
+  pdftitle={Astro-Amriit — Illustrated Guide (v0.9)}, pdfauthor={Karar Ashram},
+  pdfsubject={User guide for Astro-Amriit, the Karar Ashram astrology software}}
+
+\newcommand{\app}{Astro-Amriit}
+\newcommand{\PL}{Parashara's Light}
+\newcommand{\ui}[1]{\textbf{\textsf{#1}}}   % on-screen names: buttons, tabs, labels
+\newcommand{\ex}[1]{\texttt{#1}}             % something you type
+
+\begin{document}
+
+% =============================================================================
+% Cover
+% =============================================================================
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[platedeep] (current page.south west) rectangle (current page.north east);
+  \fill[plate] ([yshift=-3cm]current page.north west) rectangle ([yshift=7cm]current page.south east);
+  % the East Indian chart plate
+  \begin{scope}[shift={([yshift=-1.2cm]current page.center)}, scale=1.05, plategold, line width=1.2pt]
+    \draw (-3.6,-3.6) rectangle (3.6,3.6);
+    \draw (-1.2,-3.6) -- (-1.2,3.6) (1.2,-3.6) -- (1.2,3.6) (-3.6,-1.2) -- (3.6,-1.2) (-3.6,1.2) -- (3.6,1.2);
+    \draw (-3.6,3.6) -- (-1.2,1.2) (3.6,3.6) -- (1.2,1.2) (-3.6,-3.6) -- (-1.2,-1.2) (3.6,-3.6) -- (1.2,-1.2);
+  \end{scope}
+  \node[platedisplay, font=\fontsize{46}{50}\selectfont] at ([yshift=-5.3cm]current page.north) {\app};
+  \node[platemuted, font=\large\sffamily] at ([yshift=-6.6cm]current page.north) {K A R A R \ \ A S H R A M \ \ A S T R O L O G Y \ \ S O F T W A R E};
+  \node[white, font=\Large] at ([yshift=-1.2cm]current page.center) {Illustrated Guide};
+  \node[platemuted, font=\normalsize] at ([yshift=-1.95cm]current page.center) {every page, every panel, with the example chart};
+  \node[platedisplay, font=\large] at ([yshift=4.6cm]current page.south) {Version 0.9};
+  \node[platemuted, font=\small, align=center] at ([yshift=3.3cm]current page.south)
+     {One HTML file \textperiodcentered{} works offline \textperiodcentered{} calculates as \PL{} 9\\[2pt]
+      Screenshots taken from the shipped app, \today};
+\end{tikzpicture}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% =============================================================================
+\section{About this guide}
+\label{sec:about}
+% =============================================================================
+\app{} is the Karar Ashram astrology software. It calculates Vedic charts the way \PL{} 9 does and draws
+them in the East Indian style the family knows from Kala Chakra. This guide shows every page of the
+app as it looks on screen, with numbered callouts, and explains what each part means and how to use it.
+
+Every picture uses one public example chart: \textbf{Amitabh Bachchan, 11 October 1942, 16:00,
+Allahabad (Prayagraj)}. Cast the same chart and you can compare your screen with the pictures.
+
+\begin{keybox}\kidea \app{} is a calculating instrument. It shows the chart, the strengths, the dashas,
+the divisional charts and the research tabs' rules with their sources. It does not write predictions:
+the judgement is yours.\end{keybox}
+
+\subsection{Conventions used on every page}
+\begin{itemize}[itemsep=2pt]
+  \item Planets are written with two letters: \ex{As} (ascendant), \ex{Su}, \ex{Mo}, \ex{Ma}, \ex{Me},
+        \ex{Ju}, \ex{Ve}, \ex{Sa}, \ex{Ra}, \ex{Ke}. Each has its own colour, but the letters are always
+        shown, so colour is never needed to read a page.
+  \item An \ex{R} right after a planet means retrograde; a \ex{c} means combust.
+  \item Signs are written with two letters: \ex{Ar Ta Ge Cn Le Vi Li Sc Sg Cp Aq Pi}.
+  \item Longitudes are degrees:minutes:seconds within the sign, for example \ex{Aq 01:56:52}.
+  \item Hold the mouse over a short heading (for example \ui{SB\%}) to see its full meaning.
+\end{itemize}
+
+In this guide, names you see on screen are printed \ui{like this}, and things you type
+\ex{like this}. The numbered badges in each picture match the numbered list under it.
+
+% =============================================================================
+\section{Opening the app}
+\label{sec:open}
+% =============================================================================
+The whole app is \textbf{one file} ending in \ex{.html}, for example \ex{Astro-Amriit v0.9.html}.
+Copy it to your computer and double-click it: it opens in your web browser (Chrome, Edge, Firefox or
+Safari). Wait for the green dot and the word \ui{ready} at the top right; this takes about a second.
+
+It needs \textbf{no internet}. Nothing is sent anywhere and nothing is downloaded: the Swiss Ephemeris
+(the planetary tables) is inside the file. When the app opens it casts a chart for \emph{this moment} at
+the last place you used, so you never see an empty page.
+
+For computers that should have the app in the Start menu or the Applications folder there is a Windows
+installer and a Mac disk image with the same app. In the desktop app, \ui{Save chart} and
+\ui{Save for Parashara's Light} put the file straight into your Downloads folder.
+
+\begin{notebox}The small line at the very bottom of every page (for example \ex{Astro-Amriit v0.9.0 ·
+single build …}) is the version. Quote it if you report a problem.\end{notebox}
+
+% =============================================================================
+\section{Casting a chart}
+\label{sec:cast}
+% =============================================================================
+The chart form is at the top of the app. \autoref{fig:form} shows it filled in with the example chart.
+
+\shot{form}
+
+\subsection{The fields}
+\begin{tabularx}{\linewidth}{>{\bfseries}l X}
+\toprule
+On screen & What to enter \\
+\midrule
+Name & Who or what the chart is for. Optional; it appears in the centre of the Rasi chart and in file names. \\
+Date & The date of birth or of the question, years 1800 to 2399. \\
+Time & Three boxes: hours, minutes, seconds, on the 24-hour clock (4 pm is \ex{16}). Typing two digits moves to the next box, so \ex{160037} gives 16:00:37. You may also paste \ex{16:00:37} into the hours box. \\
+Place & Start typing; choose from the list to fill latitude, longitude and zone. \\
+Latitude, Longitude & Decimal degrees (\ex{25.45}) or degrees, minutes, seconds (\ex{21 42 12 N}). South and west are negative. \\
+Zone & Hours east of UTC for the clock time you typed; India is \ex{5.5}. \\
+Daylight saving & Tick it if the clock was one hour ahead (summer time, or war time). \\
+Calculation & The profile: \PL{} 9 (default), \PL{} 7, or Solar Fire / Kala Chakra. \\
+\bottomrule
+\end{tabularx}
+
+\begin{warnbox}\kpit\textbf{Always read the date in words.} The date box shows the date in your
+computer's order, often month/day/year (\ex{10/11/1942}). The words underneath (\ex{11 Oct 1942})
+cannot be misread. Day and month swaps are the commonest mistake in hand-written birth data.\end{warnbox}
+
+\subsection{India's war time}
+From 1 September 1942 to 14 October 1945 India's clocks ran one hour ahead. When you choose an Indian
+place for such a date, the app sets the zone to \ex{+6:30} by itself and shows the note
+\emph{India war time was in force on this date: zone set to +6:30.} (visible in \autoref{fig:form}).
+Zone \ex{6.5} without daylight saving, and zone \ex{5.5} with daylight saving ticked (how \PL{} stores it),
+give the same moment. If you type latitude, longitude and zone by hand, set the zone yourself.
+
+\subsection{The buttons}
+\begin{tabularx}{\linewidth}{>{\bfseries}l X}
+\toprule
+Button & What it does \\
+\midrule
+Cast chart & Calculates the chart; the form folds away. \\
+Now & Casts a chart for this very moment at the place in the form (horary, prashna). \\
+Save this place & Adds the place with its coordinates and zone to your own list (up to 100). \\
+Open chart file… & Opens a \PL{} \ex{.xml} chart file or an \app{} chart file and casts it. \\
+Save chart & Saves an \app{} chart file (\ex{name.astro-amriit.json}). \\
+Save for Parashara's Light & Saves a \PL{} chart file (\ex{name.xml}) that \PL{} can open. \\
+Edit chart & After casting, opens the form again with the chart's data. \\
+\bottomrule
+\end{tabularx}
+
+If a field is wrong, a red message appears under that field and nothing you typed is lost. A \PL{} file
+can hold further charts for the same person (events such as ``Today''); after opening it, press
+\ui{Edit chart} and they are listed under \ui{This file also holds:}.
+
+\subsection{The chart line}
+After casting, the line under the chart's name repeats the date, time, place, zone (for example
+\ex{UTC+6:30}), latitude and longitude (\ex{25N27 81E51}) and the profile. Below it is the panchanga.
+
+\shot{chartline}
+
+% =============================================================================
+\section{Page 1}
+\label{sec:page1}
+% =============================================================================
+Page 1 follows the birth chart page of \PL{} 9, so every panel is where a \PL{} user expects it.
+
+\shot{p1rasi}
+
+The Navamsha (D9) beside it is drawn the same way: each box shows the sign, the house from the navamsha
+ascendant, and the planets. The twelve Sarvashtakavarga numbers on the edge always add up to 337; the full
+tables behind both edge numbers are on the Strengths page (\autoref{sec:strengths}).
+
+\shot{p1planets}
+\shot{p1strength}
+
+\begin{notebox}Blank cells are blank in \PL{} too: Rahu and Ketu have no SB\%, SB\# or K7, and Ketu has no
+AV.\end{notebox}
+
+\shot{p1vim}
+
+For the full dasha tree use the Dashas page (\autoref{sec:dashas}). Dates are in the chart's own time zone.
+
+\shot{p1bars}
+\shot{p1how}
+
+% =============================================================================
+\section{Page 1 (Experimental)}
+\label{sec:exp}
+% =============================================================================
+Five sub-tabs gather \PL{}'s worksheets: \ui{Highlights}, \ui{Lordships \& yogas}, \ui{Aspects},
+\ui{Strength worksheet} and \ui{Nandi Nadi (research)}. Each rule is written on the page where it is
+used; where a \PL{} 7.0.1 printout was available, the page says it matches.
+
+\shot{exstates}
+
+The table spells out each code: Exalted, Moolatrikona (Rasi only), Own sign, Debilitated, Vargottama,
+Dig bala, Retrograde, Combust, and ``In the 3rd / 6th / 8th / 12th'' of that chart (the 3rd in amber, as a
+mild dusthana). House numbers in red on the chart mark those houses.
+
+\shot{exconj}
+\shot{exacross}
+\shot{exlords}
+\shot{exyogas}
+
+\begin{notebox}Some yogas depend on the native's sex: set \ui{Native} to evaluate them. Angaraka and
+Guru-Chandala are not in \PL{}'s database and are shown separately as textbook yogas. \PL{} tests yogas on
+the Rasi only; choosing a divisional chart applies the same conditions to it (an extension).\end{notebox}
+
+\shot{exmatrix}
+\shot{exhouses}
+\shot{exws14}
+
+Dominance and Func.\ match a \PL{} 7.0.1 printout for all nine planets; Ishta/Kashta matches for the Sun,
+Moon and Saturn and is within 1--2 virupas for the others. \PL{} 7.0.1 always leaves War blank; W* and L*
+mark a textbook planetary war.
+
+\shot{exnadi}
+
+Nandi Nadi follows R.\,G. Rao's \emph{Bhrigu Nandi Nadi}: the Lagna is not used; each planet stands for
+people and matters (Jupiter the native, Saturn work, Venus the wife, and so on). The tab also shows a card
+per karaka and Jupiter's and Saturn's transits over the natal planets. It is research, not checked against
+reference charts.
+
+% =============================================================================
+\section{Strengths}
+\label{sec:strengths}
+% =============================================================================
+This page shows how every strength number on Page 1 is built up. Values are in virupas (60 virupas = 1 rupa).
+
+\shot{stsb}
+\shot{stbb}
+
+Bhava Bala uses equal-house centres (ascendant degree plus 30° per house), because that is what \PL{} 9's
+own Page 1 matches. The Yogi \& Bhava page uses Sripati houses by default.
+
+\shot{sttime}
+\shot{stav}
+
+% =============================================================================
+\section{Vargas}
+\label{sec:vargas}
+% =============================================================================
+All the divisional charts \PL{} offers: the 16 Parashari charts (D1--D60), the Tajika charts and D150,
+and \PL{}'s alternate versions of some vargas. The large chart shows one varga; click any small chart at
+the bottom of the page to show it (the chosen one has a gold outline).
+
+\shot{vamain}
+\shot{vatable}
+
+\begin{notebox}A planet exactly on an amsa boundary belongs to the amsa that begins there. The D11
+``Iyer'' chart is a placeholder equal to the alternate D11 until Iyer's rule is supplied.\end{notebox}
+
+% =============================================================================
+\section{Dashas}
+\label{sec:dashas}
+% =============================================================================
+The complete Vimshottari, down to the sixth level.
+
+\shot{dacontrols}
+
+\begin{itemize}[itemsep=2pt]
+  \item \ui{Periods running on}: any date; \ui{Today} returns to today.
+  \item \ui{Jump to the next period of}: a planet and a level; the tree opens at the next such period.
+  \item \ui{Dasha year}: 365.2421875 days (\PL{}, default), 365.25 (Kala Chakra), 360, 327.85.
+  \item \ui{Show times}: adds the clock time to every date (Prana and Deha always show it).
+\end{itemize}
+
+\shot{datree}
+\shot{dapl}
+
+\begin{qbox}\kq \emph{Why 365.2421875 when \PL{}'s option says 365.25?} Inside its program \PL{} uses
+365.2421875 days. With it, all 10 dasha dates on the example's \PL{} 9 page match; with a true 365.25 only
+5 of 10 do. A change here applies to every chart; \ui{Use the profile value} on the Settings page undoes it.
+\end{qbox}
+
+% =============================================================================
+\section{KP (Research)}
+\label{sec:kp}
+% =============================================================================
+This tab brings K.\,S. Krishnamurti's KP as his six \emph{KP Readers} teach it. Every rule carries its
+book (B1--B6) and page, and was checked, where the books allow, on the Readers' own worked charts.
+
+\shot{kpcalc}
+
+\begin{tabularx}{\linewidth}{>{\bfseries}l X}
+\toprule
+Choice & What it does \\
+\midrule
+Readers mode (default) & What the Readers use: \PL{}'s \emph{Krishnamurti New} ayanamsa, the mean node, 365¼-day dasa years. \\
+Automatic & \PL{}'s Krishnamurti ayanamsa, as on \PL{}'s KP pages (the Solar Fire profile keeps its Lahiri). \\
+PL: Krishnamurti / New & Either of \PL{}'s two KP ayanamsas. \\
+Same as the chart & The settings of every other page. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Chart and tables}
+\shot{kpchart}
+\shot{kpcusps}
+\shot{kpsig}
+
+\subsection{Significators}
+\shot{kprank}
+
+Krishnamurti's order (B6 pp.\,94--95; B3 p.\,418): (1) planets in the stars of the occupants, (2) the
+occupants, (3) planets in the stars of the owner, (4) the owner, (5) planets conjoined with or aspected
+by these. A node acts for the planets it represents and comes just before them; a planet whose star holds
+no planet is itself a strong significator. Ownership is by the cusp's sign only.
+
+\shot{kppsets}
+
+\subsection{Life matters}
+\shot{kppromise}
+
+For each of 14 matters (marriage, children, service, business, wealth, house, vehicle, education, abroad,
+health, litigation, speculation, change of job, spiritual life) the cusp's sub lord decides: if it
+signifies one of the matter's houses the matter is \emph{promised}; only the denial houses, \emph{denied};
+both, \emph{mixed}. An asterisk marks a denial group derived by the 12th-from rule where the books print none.
+
+\shot{kpmatter}
+
+\begin{warnbox}\kpit Candidate periods are \textbf{candidates, not predictions}. On the Readers' own 11
+marriage charts every wedding fell in such a period, but ranking by strength alone barely singled it out.
+Tick \ui{Only periods whose lords are all ruling planets now}, then use \ui{Transit days}.\end{warnbox}
+
+\subsection{Ruling planets and rectification}
+\shot{kprp}
+\shot{kprect}
+
+\subsection{Transit timing}
+\shot{kptr}
+
+\subsection{Horary 1--249}
+\shot{kphor}
+\shot{kphorc}
+
+The three conditions (B6, KP6-061): (i) the cusp's sub lord is direct (if retrograde: delay until it
+turns direct); (ii) its star lord is direct (if retrograde: denied); (iii) the sub lord signifies the
+question's houses. The question list is B6's master table of house groups.
+
+\subsection{KP Guidance}
+\shot{kpguide}
+
+\begin{keybox}\kidea What has been checked on the Readers' own examples: B6's significator tables; 45 horary
+ascendants and 37 horary charts; the dasa periods B6 names at 32 dated events; 7 horary judgements; the
+ruling planets of 15 judgement moments; 11 natal marriage charts; 5 transit dates; both rectification
+cases. Where the books contradict themselves, the test names the case.\end{keybox}
+
+% =============================================================================
+\section{NTP (Research)}
+\label{sec:ntp}
+% =============================================================================
+H.\,R. Seshadri Iyer's \emph{New Techniques of Prediction} applied to the chart. Only rules whose
+conditions this chart meets are listed, each with its volume and page. Read them as the book's guidance,
+not as a final judgement.
+
+\shot{ntpguide}
+\shot{ntpyoga}
+\shot{ntpplanet}
+\shot{ntpdasha}
+
+\begin{notebox}The page uses the mean node, as Iyer says (``Take always Mean Rahu''); you can switch to
+the chart's own setting. Houses are Sripati bhavas. Iyer's death and widowhood readings are deliberately
+not shown. Marriage matching by Iyer's method is also on this tab (the same prospective match as on the
+Matching tab).\end{notebox}
+
+% =============================================================================
+\section{Yogi \& Bhava}
+\label{sec:yogi}
+% =============================================================================
+\shot{ybyogi}
+\shot{ybbhava}
+\shot{ybtable}
+
+% =============================================================================
+\section{Jaimini}
+\label{sec:jaimini}
+% =============================================================================
+\shot{jakarakas}
+\shot{jalagnas}
+\shot{jaarudha}
+\shot{jakm}
+\shot{jaargala}
+\shot{jadrishti}
+
+% =============================================================================
+\section{Transits}
+\label{sec:transits}
+% =============================================================================
+\shot{trcontrols}
+\shot{trpos}
+\shot{trevents}
+
+Rahu and Ketu are the true nodes unless changed in Settings; the true node wobbles, so it can turn direct
+and retrograde again within a few days.
+
+\shot{trsade}
+\shot{trreturns}
+
+% =============================================================================
+\section{Matching}
+\label{sec:matching}
+% =============================================================================
+Compatibility of two charts as \PL{} 7 reports it (Reports $\rightarrow$ Compatibility), plus Krishnamurti's
+view. Say whether the first chart is the boy or the girl: the kootas count from the girl's Moon star to the
+boy's. The example's partner below is a synthetic chart.
+
+\shot{mentry}
+\shot{mover}
+\shot{mashta}
+\shot{mmangal}
+\shot{mdk}
+\shot{mkp}
+
+\begin{notebox}A real \PL{} 7.0.1 printout (Ashtakoot and Dash-Koota for one couple) is reproduced row for
+row. \PL{} differs from some textbooks in two places: Tara is counted one way only, and two neutral sign
+lords score 1 in Graha Maitri.\end{notebox}
+
+% =============================================================================
+\section{Settings}
+\label{sec:settings}
+% =============================================================================
+\shot{secalc}
+
+\begin{warnbox}\kpit A change here applies \textbf{to every chart in this browser} until you change it
+back. The \ui{Calculation} profile on the chart form chooses all of these at once for one chart.\end{warnbox}
+
+\shot{seplaces}
+
+Saved places are kept in the browser on that device. Use \ui{Export places} on one device and
+\ui{Import places…} on another to copy your list, and keep the file as a backup.
+
+\shot{selook}
+
+The round button at the top right switches the theme on any page, in the order Light, Dark, Warm night.
+In every theme the chart is drawn as a dark plate with gold lines. On a phone the form wraps into one or
+two columns, the panels sit in one column, the tabs scroll sideways and the Rasi chart shows planet names
+only (the degrees are in the table under it).
+
+% =============================================================================
+\section{How far can I trust each number?}
+\label{sec:trust}
+% =============================================================================
+``Checked against \PL{}'' means the app's number was compared with what \PL{} itself printed or showed.
+Most checks use one \PL{} 9 screen (Page 1 of the example chart).
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\linewidth} >{\raggedright\arraybackslash}p{0.30\linewidth} >{\raggedright\arraybackslash}p{0.32\linewidth}}
+\toprule
+What you see & Checked against & Result \\
+\midrule
+\endhead
+Planet longitudes (\PL{} 9) & \PL{} 9 Page 1 of the example & 9 of 9 equal to the displayed second \\
+Ascendant & Same screen & Within 5″ (\PL{}'s atlas rounds coordinates) \\
+Nakshatra, pada, KP lords & Same screen & All 10 points match \\
+Vimshottari dates & Same screen & 10 of 10 (with 365.2421875-day years) \\
+Page 1 strength fields & Same screen, 145 fields & No mismatches except Ketu's VB (open: \PL{} 14, app 9) \\
+Divisional charts & Rules decoded from \PL{}'s program; PyJHora & Decoded and tested; not yet against a \PL{} 9 printout \\
+Yogi point & \PL{}'s program; PyJHora & Matches; Avayogi and Duplicate Yogi rules open (selectable) \\
+NTP & Iyer's worked examples & Exact, apart from 3 misprinted cells in the book \\
+KP (Research) & The Readers' worked charts & As in \autoref{sec:kp}; book slips named in the tests \\
+Matching & A \PL{} 7.0.1 printout & Row for row \\
+Transits & Boundary crossings; \PL{} 7 transit records & Pass; not yet against a \PL{} 9 transit screen \\
+Works offline & Automatic test, network off & Opens, casts, no network requests \\
+\bottomrule
+\end{longtable}
+
+When a number in an open row matters for a judgement, check it in \PL{}. The written user guide
+(\ex{docs/user\_guide/USER\_GUIDE.md}) has the complete table.
+
+% =============================================================================
+\section{Troubleshooting}
+\label{sec:trouble}
+% =============================================================================
+\begin{description}[style=nextline, itemsep=4pt]
+  \item[The green ``ready'' does not appear.] Wait a few seconds. If a red message starts \emph{The
+        ephemeris could not start}, close the tab and open the file again, try another browser, or copy the
+        file again (a partly copied file cannot start).
+  \item[The planets are off by about an hour of motion.] The zone is wrong: check \ui{Zone} and
+        \ui{Daylight saving}. India 1942--45 is 6.5 (or 5.5 with daylight saving ticked); before 1955 check
+        which clock the time was written in; abroad, check summer time.
+  \item[The date came out wrong.] Read the words under the Date box; the box may show month first.
+  \item[My numbers differ from \PL{}'s.] Check the profile in the chart line; look for \ui{Use the profile
+        value} in Settings; compare \ui{How was this computed?} with \PL{}; check \autoref{sec:trust}.
+  \item[A \PL{} file will not open.] The app says \emph{This is not a Parashara's Light chart file} when the
+        file has no birth data; choose the chart's own \ex{.xml} file.
+  \item[Saved places have gone.] They live in this browser on this computer; a private window or clearing
+        browser data starts empty. Keep an exported copy.
+  \item[Printing a page.] Use the browser's Print (Ctrl+P or Cmd+P), Landscape for wide tables, and turn on
+        \emph{Background graphics} so the chart plate prints with its dark background. The Light theme prints
+        most clearly.
+\end{description}
+
+% =============================================================================
+\section{Glossary}
+\label{sec:glossary}
+% =============================================================================
+\begin{longtable}{>{\bfseries}p{0.24\linewidth} >{\raggedright\arraybackslash}p{0.70\linewidth}}
+\toprule
+Short & Meaning \\
+\midrule
+\endhead
+As, Su … Ke & Ascendant (lagna), Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu, Ketu \\
+Ar … Pi & Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces \\
+R, c & Retrograde, combust \\
+SAV, AV & Sarvashtakavarga (all seven planets' bindus of a sign, total 337); ashtakavarga bindus of the planet in its sign \\
+SB\%, SB\# & Shad Bala $\div$ required; number of Shad Bala groups at their minimum (0--5) \\
+VB & Vimshopaka bala, out of 20 \\
+Av3, Av5 & Three-state avastha (alert, dreaming, sleeping); five-state (infant, youth, adolescent, old, dead) \\
+K7, AK … DK & Chara karaka (7-karaka scheme): Atma, Amatya, Bhratru, Matru, Pitru, (Putra), Gnati, Dara karaka \\
+AL, A2 … A11, UL, KL & Arudha lagna, the other padas, upapada; Karakamsha lagna \\
+D1 … D150 & Divisional charts (vargas) \\
+BIN, STD, OPEN & Rule decoded from \PL{}'s program; textbook rule not yet confirmed; placeholder \\
+Maha … Deha & The six levels of Vimshottari: Maha, Antar, Pratyantar, Sookshma, Prana, Deha \\
+Sandhi, madhya & Beginning and centre of a bhava \\
+KP; star / sub lords & Krishnamurti Paddhati; the lords of the nakshatra and of its Vimshottari subdivisions \\
+RP & Ruling planets of a moment (KP) \\
+CSL & Cusp sub lord (KP) \\
+Ayanamsa & The difference between the tropical and sidereal zodiacs \\
+$\Delta T$ (Delta-T) & The small difference between clock time and astronomical time \\
+True / mean node & Rahu's exact (wobbling) position, or its smoothed average \\
+Placidus & The house system \PL{} uses for cusps \\
+Profile & A set of calculation choices: \PL{} 9, \PL{} 7, or Solar Fire / Kala Chakra \\
+\bottomrule
+\end{longtable}
+
+% =============================================================================
+\section*{About this document}
+\addcontentsline{toc}{section}{About this document}
+% =============================================================================
+This guide was written for \app{} version 0.9. Every screenshot was taken automatically from the shipped
+single file, and the numbered callouts were placed from the live positions of the elements on the page, so
+the guide can be rebuilt exactly when the app changes (\ex{kaast2/media/pdf/}). It was prepared with the
+help of an AI assistant (Claude, Anthropic) and checked against the app and its written user guide.
+
+\end{document}

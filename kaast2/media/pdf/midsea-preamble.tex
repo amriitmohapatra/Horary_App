@@ -1,0 +1,66 @@
+% =============================================================================
+% MIDSEA colourful accent preamble fragment
+% -----------------------------------------------------------------------------
+% Amrit's preferred "report" style (see MIDSEA2026/report{,-day2,-day3}).
+% \input this AFTER \usepackage{xcolor} and the base house colours, and BEFORE
+% \usepackage{hyperref}. Requires (loaded in the main preamble): xcolor,
+% mdframed, titlesec, fancyhdr, listings. Safe to \input over the plain house
+% style: it only ADDS colours/boxes/tags and recolours headings + warnbox.
+% =============================================================================
+
+% --- Base house colours (redefined harmlessly if already present) ------------
+\definecolor{headerblue}{RGB}{0,70,127}
+\definecolor{noteblue}{RGB}{220,235,245}
+\definecolor{warnyellow}{RGB}{255,248,220}
+\definecolor{codegrey}{RGB}{245,245,245}
+
+% --- MIDSEA accent palette ---------------------------------------------------
+\definecolor{midseapurple}{RGB}{75,0,130}
+\definecolor{midseamagenta}{RGB}{199,21,133}
+\definecolor{midseaorange}{RGB}{230,126,0}
+\definecolor{midseared}{RGB}{200,30,60}
+\definecolor{midseagreen}{RGB}{0,140,90}
+\definecolor{keygreen}{RGB}{223,242,233}   % key-idea box background
+\definecolor{qpink}{RGB}{250,228,242}      % question box background
+\definecolor{derivlav}{RGB}{238,232,248}   % derivation box background
+\definecolor{netpurple}{HTML}{6E07C5}      % "in plain words" tag
+
+% --- Colourful section headings (purple text, magenta rule) ------------------
+\titleformat{\section}{\large\bfseries\color{midseapurple}}{\thesection}{0.6em}{}[{\color{midseamagenta}\titlerule[1.2pt]}]
+\titleformat{\subsection}{\normalsize\bfseries\color{headerblue}}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape\color{midseaorange!85!black}}{\thesubsubsection}{0.5em}{}
+
+% --- Coloured running heads + footrule ---------------------------------------
+% (set \rhead/\lhead text yourself, keeping the \color{midseapurple} prefix)
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+% --- Callout boxes -----------------------------------------------------------
+\newmdenv[backgroundcolor=noteblue, linecolor=headerblue, linewidth=1pt, roundcorner=4pt,
+  innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=8pt, innerbottommargin=8pt]{notebox}
+\newmdenv[backgroundcolor=warnyellow, linecolor=midseaorange, linewidth=1pt, roundcorner=4pt,
+  innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=8pt, innerbottommargin=8pt]{warnbox}
+\newmdenv[backgroundcolor=keygreen, linecolor=midseagreen, linewidth=1pt, roundcorner=4pt,
+  innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=8pt, innerbottommargin=8pt]{keybox}
+\newmdenv[backgroundcolor=qpink, linecolor=midseamagenta, linewidth=1pt, roundcorner=4pt,
+  innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=8pt, innerbottommargin=8pt]{qbox}
+\newmdenv[backgroundcolor=derivlav, linecolor=midseapurple, linewidth=1pt, roundcorner=4pt,
+  innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=8pt, innerbottommargin=8pt]{derivbox}
+\newmdenv[backgroundcolor=codegrey, linecolor=gray!40, linewidth=0.5pt, roundcorner=2pt,
+  innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=6pt, innerbottommargin=6pt]{codebox}
+
+% --- Inline coloured tags (open a box with one of these) ---------------------
+\newcommand{\kidea}{{\color{midseagreen}\textbf{\textsf{Key idea.}}}\ }
+\newcommand{\kpit}{{\color{midseaorange!85!black}\textbf{\textsf{Pitfall.}}}\ }
+\newcommand{\kq}{{\color{midseamagenta}\textbf{\textsf{Question.}}}\ }
+\newcommand{\kcode}{{\color{headerblue}\textbf{\textsf{In the code.}}}\ }
+\newcommand{\ksimple}{{\color{netpurple}\textbf{\textsf{In plain words.}}}\ }
+
+% --- Colourful code keywords -------------------------------------------------
+\lstset{keywordstyle=\color{midseapurple}\bfseries, stringstyle=\color{midseagreen}}
+
+% Usage:
+%   \begin{keybox}\kidea The sentence to memorise.\end{keybox}
+%   \begin{warnbox}\kpit The easy mistake / honest caveat.\end{warnbox}
+%   \begin{qbox}\kq \emph{``Anticipated question,''} answered here.\end{qbox}
+%   \begin{derivbox} A short derivation or why-it-holds argument.\end{derivbox}
