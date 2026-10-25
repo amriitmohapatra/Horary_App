@@ -95,7 +95,7 @@ def main():
             f.write(f"[CHAPTER]\nTIMEBASE=1/1000\nSTART={int(a * 1000)}\nEND={int(end * 1000)}\ntitle={title}\n")
     final = os.path.join(OUT, 'astro-amriit-guide.mp4')
     run('-i', joined, '-i', os.path.join(OUT, 'astro-amriit-guide.srt'), '-i', fm, '-map', '0', '-map', '1', '-map_metadata', '2',
-        '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-c:s', 'mov_text',
+        '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', str(SR), '-c:s', 'mov_text',
         '-metadata:s:s:0', 'language=eng', '-movflags', '+faststart', final)
     with open(os.path.join(OUT, 'chapters.txt'), 'w') as f:
         for a, title in chapters: f.write(f"{int(a // 60)}:{int(a % 60):02d} {title}\n")
