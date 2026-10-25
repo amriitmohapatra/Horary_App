@@ -1,0 +1,11 @@
+{
+  "voice": "hm_psi", "speed": 1.0, "lang": "en-gb",
+  "segments": [
+    {"id": "s1", "text": "Every planet, to the second. In one file that never goes online."},
+    {"id": "s2", "text": "This is Astro-Amriit, the Karar Ashram astrology software."},
+    {"id": "s3", "text": "Type a birth chart, and it casts the way Parashara's Light 9 does: nine planets out of nine, equal to the second."},
+    {"id": "s4", "text": "Vargas, dashas, Jaimini, transits and matching. And research tabs that bring Iyer's NTP, and Krishnamurti's six KP Readers, to your chart, with the book and page for every rule."},
+    {"id": "s5", "text": "No installation. No internet. Nothing leaves your computer."},
+    {"id": "s6", "text": "Astro-Amriit. Cast once. Read every page."}
+  ]
+}

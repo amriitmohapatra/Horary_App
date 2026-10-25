@@ -1,0 +1,7 @@
+# Rendered media is large and rebuilt from these scripts; only sources are kept in git.
+**/work/
+out/
+*.mp4
+*.webm
+*.wav
+brag-output/brag.jpg

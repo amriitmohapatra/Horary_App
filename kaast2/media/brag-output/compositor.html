@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Astro-Amriit launch compositor</title>
+<style>
+  @font-face { font-family: 'Marcellus'; src: url('../../node_modules/@fontsource/marcellus/files/marcellus-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Atkinson'; font-weight: 400; src: url('../../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Atkinson'; font-weight: 700; src: url('../../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-700-normal.woff2') format('woff2'); }
+  :root { --plate: #141b3d; --plate2: #0e1330; --line: #c6a15b; --gold: #ecd396; --sign: #d9b86e; --text: #e4e7f2; --muted: #a6aecf; }
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--plate2); }
+  body { font-family: 'Atkinson', system-ui, sans-serif; color: var(--text); }
+  .bg { position: absolute; inset: 0; background: radial-gradient(1200px 800px at 50% 45%, #1b2450 0%, var(--plate) 45%, var(--plate2) 100%); }
+  .layer { position: absolute; inset: 0; opacity: 0; }
+  svg.chart { position: absolute; left: 50%; top: 50%; width: 760px; height: 760px; margin: -380px 0 0 -380px; }
+  svg.chart path, svg.chart rect, svg.chart line { fill: none; stroke: var(--line); stroke-width: 2.2; }
+  .center { position: absolute; left: 0; right: 0; text-align: center; }
+  .hook1 { top: 400px; text-shadow: 0 4px 30px #0e1330, 0 0 60px #0e1330; font-family: 'Marcellus'; font-size: 92px; color: var(--gold); letter-spacing: .01em; }
+  .hook2 { top: 540px; font-size: 44px; text-shadow: 0 2px 20px #0e1330; color: var(--text); }
+  .title { top: 380px; font-family: 'Marcellus'; font-size: 150px; color: var(--gold); }
+  .sub { top: 585px; font-size: 40px; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
+  .win { position: absolute; left: 50%; top: 50%; width: 1600px; height: 950px; margin: -475px 0 0 -800px; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 40px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(198,161,91,.35); background: #f2f3ef; }
+  .bar { height: 50px; background: #e3e4df; display: flex; align-items: center; gap: 10px; padding: 0 20px; font-size: 21px; color: #4a4f60; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; background: #c9cbc4; }
+  .url { margin-left: 22px; padding: 6px 18px; background: #fafaf7; border-radius: 9px; flex: 0 1 auto; }
+  .win video { display: block; width: 1600px; height: 900px; }
+  .chip { position: absolute; left: 160px; bottom: 70px; padding: 18px 28px; border-radius: 14px; background: rgba(16,20,43,.93); color: var(--text);
+    font-size: 40px; font-weight: 700; box-shadow: 0 0 0 2px var(--line), 0 20px 50px rgba(0,0,0,.4); }
+  .chip b { color: var(--gold); }
+  .tabs { position: absolute; right: 40px; top: 140px; display: flex; flex-direction: column; gap: 14px; }
+  .tabs div { font-size: 34px; font-weight: 700; padding: 10px 22px; border-radius: 12px; background: rgba(16,20,43,.9); color: var(--muted);
+    box-shadow: 0 0 0 1px rgba(198,161,91,.4); }
+  .tabs div.on { color: var(--gold); box-shadow: 0 0 0 2px var(--line); }
+  .file { position: absolute; left: 50%; top: 260px; width: 300px; height: 380px; margin-left: -150px; }
+  .lines { top: 690px; font-size: 52px; font-weight: 700; }
+  .lines span { margin: 0 26px; }
+  .tag { top: 560px; font-family: 'Marcellus'; font-size: 64px; color: var(--text); }
+  .small { top: 690px; font-size: 30px; color: var(--muted); letter-spacing: .08em; }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<!-- the East Indian chart plate, drawn in -->
+<div class="layer" id="plate">
+  <svg class="chart" viewBox="0 0 760 760">
+    <rect id="p0" x="10" y="10" width="740" height="740" rx="6"/>
+    <line id="p1" x1="256.7" y1="10" x2="256.7" y2="750"/><line id="p2" x1="503.3" y1="10" x2="503.3" y2="750"/>
+    <line id="p3" x1="10" y1="256.7" x2="750" y2="256.7"/><line id="p4" x1="10" y1="503.3" x2="750" y2="503.3"/>
+    <line id="p5" x1="10" y1="10" x2="256.7" y2="256.7"/><line id="p6" x1="750" y1="10" x2="503.3" y2="256.7"/>
+    <line id="p7" x1="10" y1="750" x2="256.7" y2="503.3"/><line id="p8" x1="750" y1="750" x2="503.3" y2="503.3"/>
+  </svg>
+</div>
+
+<div class="layer" id="hook">
+  <div class="center hook1">Every planet, to the second.</div>
+  <div class="center hook2" id="hook2">In one file that never goes online.</div>
+</div>
+
+<div class="layer" id="titleL">
+  <div class="center title">Astro-Amriit</div>
+  <div class="center sub">Karar Ashram Astrology Software</div>
+</div>
+
+<div class="layer" id="castL">
+  <div class="win" id="winA"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">Astro-Amriit v0.9.html</span></div>
+    <video id="vA" src="work/clipA.webm" muted preload="auto"></video></div>
+  <div class="chip" id="chipA"><b>9 of 9</b> planets equal to Parashara's Light 9, to the second</div>
+</div>
+
+<div class="layer" id="tourL">
+  <div class="win" id="winB"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">Astro-Amriit v0.9.html</span></div>
+    <video id="vB" src="work/clipB.webm" muted preload="auto"></video></div>
+  <div class="tabs" id="tabs">
+    <div>Vargas</div><div>Dashas</div><div>Jaimini</div><div>Transits</div><div>NTP (Research)</div><div>KP (Research)</div>
+  </div>
+  <div class="chip" id="chipB">Every rule with its <b>book and page</b></div>
+</div>
+
+<div class="layer" id="fileL">
+  <svg class="file" viewBox="0 0 300 380">
+    <path d="M20 10 H210 L290 90 V370 H20 Z" fill="#fafaf7" stroke="#c6a15b" stroke-width="4"/>
+    <path d="M210 10 V90 H290" fill="#e8e3d4" stroke="#c6a15b" stroke-width="4"/>
+    <text x="155" y="215" text-anchor="middle" font-family="Marcellus" font-size="44" fill="#141b3d">.html</text>
+    <text x="155" y="275" text-anchor="middle" font-family="Atkinson" font-size="26" fill="#7e5b1a">one file</text>
+  </svg>
+  <div class="center lines"><span id="l1">No installation.</span><span id="l2">No internet.</span><span id="l3">Nothing leaves your computer.</span></div>
+</div>
+
+<div class="layer" id="outroL">
+  <div class="center title" style="top:330px">Astro-Amriit</div>
+  <div class="center tag">Cast once. Read every page.</div>
+  <div class="center small">Karar Ashram Astrology Software · v0.9 · works offline</div>
+</div>
+
+<script>
+// Timeline (seconds). Kept in step with narration.json by render.mjs (window.T).
+window.T = window.T || { s1: 0, s2: 4.6, s3: 9.4, s4: 18.6, s5: 32.4, s6: 37.0, end: 42.2, rateA: 1.3, rateB: 1.5 };
+const $ = (id) => document.getElementById(id);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = (x) => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+// fade in over [a, a+d], out over [b-d, b]
+const win = (t, a, b, d = .45) => Math.min(ease((t - a) / d), ease((b - t) / d));
+const lens = {};
+for (let i = 0; i < 9; i++) { const el = $('p' + i); lens[i] = el.getTotalLength(); el.style.strokeDasharray = lens[i]; }
+
+async function render(t) {
+  const T = window.T;
+  // plate: drawn in during the hook, faint behind the title, gone after
+  const pl = $('plate');
+  // full while it draws, then dimmed behind the words
+  pl.style.opacity = t < T.s3 ? (0.9 - 0.62 * ease((t - 1.0) / 0.9)) * win(t, -1, T.s3, 0.5) : 0;
+  for (let i = 0; i < 9; i++) {
+    const p = ease((t - 0.1 - i * 0.18) / 1.6);
+    $('p' + i).style.strokeDashoffset = lens[i] * (1 - p);
+  }
+  pl.style.transform = `scale(${1 + 0.05 * clamp(t / T.s3)})`;
+  // hook
+  $('hook').style.opacity = win(t, 0.25, T.s2);
+  $('hook2').style.opacity = ease((t - 1.9) / 0.5);
+  // title
+  const tl = $('titleL');
+  tl.style.opacity = win(t, T.s2 + 0.15, T.s3);
+  tl.style.transform = `translateY(${18 * (1 - ease((t - T.s2) / 0.9))}px)`;
+  // cast clip
+  const ca = $('castL');
+  ca.style.opacity = win(t, T.s3, T.s4, 0.4);
+  $('winA').style.transform = `scale(${0.94 + 0.04 * ease((t - T.s3) / 1.2)})`;
+  $('chipA').style.opacity = win(t, T.s3 + 5.2, T.s4 - 0.1, 0.4);
+  // tour
+  const tu = $('tourL');
+  tu.style.opacity = win(t, T.s4, T.s5, 0.4);
+  $('winB').style.transform = `translateX(${-150 * ease((t - T.s4) / 0.8)}px) scale(0.86)`;
+  const tabs = [...$('tabs').children];
+  const tb = (t - T.s4) * T.rateB; // clip time
+  const marks = window.TABMARKS || [0.6, 2.0, 3.4, 4.8, 6.2, 8.4];
+  tabs.forEach((d, i) => {
+    d.style.opacity = ease((tb - marks[i] + 0.2) / 0.4);
+    d.className = tb >= marks[i] && (i === tabs.length - 1 || tb < marks[i + 1]) ? 'on' : '';
+  });
+  $('chipB').style.opacity = win(t, T.s5 - 4.3, T.s5 - 0.1, 0.4);
+  // file
+  $('fileL').style.opacity = win(t, T.s5, T.s6);
+  [1, 2, 3].forEach((k) => { $('l' + k).style.opacity = ease((t - T.s5 - 0.25 - (k - 1) * 1.05) / 0.4); });
+  // outro
+  $('outroL').style.opacity = ease((t - T.s6) / 0.6);
+  // videos
+  const seeks = [];
+  const seek = (v, x) => { x = clamp(x, 0, v.duration - 0.04); if (Math.abs(v.currentTime - x) > 0.001) seeks.push(new Promise((r) => { v.addEventListener('seeked', r, { once: true }); v.currentTime = x; })); };
+  if (t >= T.s3 - 0.1 && t <= T.s4 + 0.1) seek($('vA'), (t - T.s3) * T.rateA);
+  if (t >= T.s4 - 0.1 && t <= T.s5 + 0.1) seek($('vB'), (t - T.s4) * T.rateB);
+  await Promise.all(seeks);
+}
+window.render = render;
+window.ready = Promise.all([document.fonts.ready, ...[...document.querySelectorAll('video')].map((v) => v.readyState >= 1 ? 1 : new Promise((r) => v.addEventListener('loadedmetadata', r, { once: true })))]);
+</script>
+</body>
+</html>
