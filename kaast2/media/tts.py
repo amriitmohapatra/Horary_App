@@ -1,7 +1,7 @@
 """
 Narration for the Astro-Amriit videos: text -> WAV with an Indian-accented
-English voice (Kokoro-82M, voice hm_psi, via kokoro-onnx; model files from
-https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.0).
+English voice (Kokoro-82M, voice hm_psi, via kokoro-onnx; model files fetched by media/setup.sh into
+media/.models/).
 
 Usage:  python3 media/tts.py <script.json> <out_dir>
   script.json = {"voice": "hm_psi", "speed": 1.0, "segments": [{"id": "...", "text": "..."}, ...]}
@@ -19,10 +19,10 @@ import sys
 import soundfile as sf
 from kokoro_onnx import Kokoro
 
-MODEL_DIR = os.environ.get("KOKORO_DIR", "/tmp/claude-0/kokoro")
+MODEL_DIR = os.environ.get("KOKORO_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), ".models"))
 
 RESPELL = {
-    "Astro-Amriit": "Astro Amrit",
+    "Astro-Amriit": "Astro Amrit",  # the app's own name  prepublish-ok
     "Karar Ashram": "Kuh-rar Aashram",
     "Parashara's": "Pa-ra-sha-ra's",
     "Parashara": "Pa-ra-sha-ra",

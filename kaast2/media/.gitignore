@@ -5,3 +5,4 @@ out/
 *.webm
 *.wav
 brag-output/brag.jpg
+.models/
