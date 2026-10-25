@@ -87,6 +87,8 @@ export class Director {
   async hover(loc, ms) { const b = await this.box(loc); await this.moveTo(b.x + b.width / 2, b.y + b.height / 2, ms); }
   async click(loc, ms) {
     await this.hover(loc, ms);
+    const b = await this.box(loc); // re-aim if the target moved while the cursor travelled
+    if (Math.abs(b.x + b.width / 2 - this.x) > 4 || Math.abs(b.y + b.height / 2 - this.y) > 4) await this.moveTo(b.x + b.width / 2, b.y + b.height / 2, 250);
     await this.page.evaluate(([x, y]) => { const z = parseFloat(document.documentElement.style.zoom) || 1; const r = document.getElementById('__ripple'); r.style.left = `${x / z}px`; r.style.top = `${y / z}px`; r.classList.remove('on'); void r.offsetWidth; r.classList.add('on'); }, [this.x, this.y]);
     await this.page.mouse.down(); await this.wait(70); await this.page.mouse.up();
     await this.wait(250);
@@ -127,7 +129,8 @@ export class Director {
   }
   async zoomOut(ms = 950) {
     if (this.zoom === 1 && ms) return;
-    await this.page.evaluate(() => { document.body.style.transform = ''; });
+    // ms = 0 is a cut: switch the camera transition off so later measurements see the final layout
+    await this.page.evaluate((cut) => { const st = document.body.style; if (cut) st.transition = 'none'; st.transform = ''; void document.body.offsetWidth; if (cut) st.transition = ''; }, !ms);
     this.zoom = 1; if (ms) await this.wait(ms);
   }
   /** Highlight a region with a soft spotlight (viewport coordinates, follows camera). */
