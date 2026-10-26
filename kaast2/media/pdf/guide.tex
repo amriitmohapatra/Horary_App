@@ -1,8 +1,8 @@
 % =============================================================================
-% Astro-Amriit — Illustrated Guide (v0.9)
+% Astro-Amriit — Illustrated Guide (v0.11)
 % Build: node media/pdf/shots.mjs  (screenshots + figure files in work/)
 %        cd media/pdf && latexmk guide.tex   (PDF in out/)
-% Every screenshot comes from the shipped app (dist/Astro-Amriit v0.9.html)
+% Every screenshot comes from the shipped app (dist/Astro-Amriit v0.11.html)
 % with the public example chart used throughout the user guide.
 % =============================================================================
 \documentclass[11pt, a4paper]{article}
@@ -69,7 +69,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\small\color{midseapurple}Astro-Amriit — Illustrated Guide}
-\lhead{\small\color{midseapurple}Karar Ashram Astrology Software · v0.9}
+\lhead{\small\color{midseapurple}Karar Ashram Astrology Software · v0.11}
 \rfoot{\small Page \thepage}
 \lfoot{\small Example chart: Amitabh Bachchan, 11 Oct 1942, 16:00, Allahabad}
 \captionsetup{font=small, labelfont=bf, skip=6pt}
@@ -80,7 +80,7 @@
 % --- Hyperref last ------------------------------------------------------------
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=midseapurple, urlcolor=headerblue, citecolor=midseagreen,
-  pdftitle={Astro-Amriit — Illustrated Guide (v0.9)}, pdfauthor={Karar Ashram},
+  pdftitle={Astro-Amriit — Illustrated Guide (v0.11)}, pdfauthor={Karar Ashram},
   pdfsubject={User guide for Astro-Amriit, the Karar Ashram astrology software}}
 
 \newcommand{\app}{Astro-Amriit}
@@ -107,7 +107,7 @@
   \node[platemuted, font=\large\sffamily] at ([yshift=-6.6cm]current page.north) {K A R A R \ \ A S H R A M \ \ A S T R O L O G Y \ \ S O F T W A R E};
   \node[white, font=\Large] at ([yshift=-1.2cm]current page.center) {Illustrated Guide};
   \node[platemuted, font=\normalsize] at ([yshift=-1.95cm]current page.center) {every page, every panel, with the example chart};
-  \node[platedisplay, font=\large] at ([yshift=4.6cm]current page.south) {Version 0.9};
+  \node[platedisplay, font=\large] at ([yshift=4.6cm]current page.south) {Version 0.11};
   \node[platemuted, font=\small, align=center] at ([yshift=3.3cm]current page.south)
      {One HTML file \textperiodcentered{} works offline \textperiodcentered{} calculates as \PL{} 9\\[2pt]
       Screenshots taken from the shipped app, \today};
@@ -150,7 +150,7 @@ In this guide, names you see on screen are printed \ui{like this}, and things yo
 \section{Opening the app}
 \label{sec:open}
 % =============================================================================
-The whole app is \textbf{one file} ending in \ex{.html}, for example \ex{Astro-Amriit v0.9.html}.
+The whole app is \textbf{one file} ending in \ex{.html}, for example \ex{Astro-Amriit v0.11.html}.
 Copy it to your computer and double-click it: it opens in your web browser (Chrome, Edge, Firefox or
 Safari). Wait for the green dot and the word \ui{ready} at the top right; this takes about a second.
 
@@ -162,7 +162,7 @@ For computers that should have the app in the Start menu or the Applications fol
 installer and a Mac disk image with the same app. In the desktop app, \ui{Save chart} and
 \ui{Save for Parashara's Light} put the file straight into your Downloads folder.
 
-\begin{notebox}The small line at the very bottom of every page (for example \ex{Astro-Amriit v0.9.0 ·
+\begin{notebox}The small line at the very bottom of every page (for example \ex{Astro-Amriit v0.11.0 ·
 single build …}) is the version. Quote it if you report a problem.\end{notebox}
 
 % =============================================================================
@@ -181,7 +181,7 @@ On screen & What to enter \\
 Name & Who or what the chart is for. Optional; it appears in the centre of the Rasi chart and in file names. \\
 Date & The date of birth or of the question, years 1800 to 2399. \\
 Time & Three boxes: hours, minutes, seconds, on the 24-hour clock (4 pm is \ex{16}). Typing two digits moves to the next box, so \ex{160037} gives 16:00:37. You may also paste \ex{16:00:37} into the hours box. \\
-Place & Start typing; choose from the list to fill latitude, longitude and zone. \\
+Place & Type a few letters and choose from the list: your saved and built-in places, then the world atlas (\autoref{sec:atlas}). It fills latitude, longitude, zone and daylight saving. \\
 Latitude, Longitude & Decimal degrees (\ex{25.45}) or degrees, minutes, seconds (\ex{21 42 12 N}). South and west are negative. \\
 Zone & Hours east of UTC for the clock time you typed; India is \ex{5.5}. \\
 Daylight saving & Tick it if the clock was one hour ahead (summer time, or war time). \\
@@ -192,6 +192,45 @@ Calculation & The profile: \PL{} 9 (default), \PL{} 7, or Solar Fire / Kala Chak
 \begin{warnbox}\kpit\textbf{Always read the date in words.} The date box shows the date in your
 computer's order, often month/day/year (\ex{10/11/1942}). The words underneath (\ex{11 Oct 1942})
 cannot be misread. Day and month swaps are the commonest mistake in hand-written birth data.\end{warnbox}
+
+\subsection{The world atlas}
+\label{sec:atlas}
+From version 0.10 the app carries an atlas of about \textbf{86\,000 places}, inside the file and with no
+internet: every town of 5\,000 people or more worldwide, every Indian place with a known population, and
+\textbf{every village in Odisha} (the source has no population for most villages, so a population rule
+would have left them out). Type at least two letters; larger places come first, and accents do not matter
+(\ex{Bhubaneswar} finds \emph{Bhubanēśvar}).
+
+\shot{atlaslist}
+
+Each suggestion shows its state, country and coordinates, so places with the same name can be told apart
+(\autoref{fig:atlaslist}). The chosen place is written as \emph{Name, State, Country}, for example
+\emph{Sambalpur, Odisha, India}. Use the mouse, or \ui{$\downarrow$} and \ui{Enter}; \ui{Esc} closes the list.
+
+\shot{atlasold}
+
+\begin{keybox}\kidea\textbf{Old names work.} \ex{Bombay}, \ex{Calcutta}, \ex{Madras}, \ex{Bangalore},
+\ex{Allahabad}, \ex{Benares}, \ex{Poona}, \ex{Baroda}, \ex{Trivandrum} … find the city under its present
+name, with the old name in brackets (\autoref{fig:atlasold}). \textbf{A comma narrows the list}:
+\ex{Puri, Odisha} or \ex{London, Canada} keeps only places in that state or country.\end{keybox}
+
+The atlas is built from GeoNames (geonames.org), licensed CC BY 4.0; the credit is on the Settings page
+(\autoref{fig:seplaces}) and at the foot of every page.
+
+\subsection{The zone for the date}
+\textbf{Outside India} (atlas places, and from version 0.11 the built-in London, New York and Singapore)
+the zone and daylight saving are taken from the \textbf{world time-zone database} that every browser carries,
+for the date and time in the form, and they follow any change of date or time. A note under the form names
+the zone used (\autoref{fig:atlaszone}).
+
+\shot{atlaszone}
+
+\begin{warnbox}\kpit The database is very reliable from 1970 onwards. \textbf{For earlier dates, check old
+charts against the birth record}: some countries' early local records differ, and the note says so.\end{warnbox}
+
+\textbf{Indian places} do not use the database's history for India, which follows Calcutta's clocks (local
+mean time before 1906, and +6:30 also from October 1941 to May 1942). They keep the rule below, which is what
+\PL{} does.
 
 \subsection{India's war time}
 From 1 September 1942 to 14 October 1945 India's clocks ran one hour ahead. When you choose an Indian
@@ -207,7 +246,7 @@ Button & What it does \\
 \midrule
 Cast chart & Calculates the chart; the form folds away. \\
 Now & Casts a chart for this very moment at the place in the form (horary, prashna). \\
-Save this place & Adds the place with its coordinates and zone to your own list (up to 100). \\
+Save this place & Adds the place with its coordinates and zone to your own list (up to 100). A place from the atlas keeps its time zone, so later dates get their own offset. \\
 Open chart file… & Opens a \PL{} \ex{.xml} chart file or an \app{} chart file and casts it. \\
 Save chart & Saves an \app{} chart file (\ex{name.astro-amriit.json}). \\
 Save for Parashara's Light & Saves a \PL{} chart file (\ex{name.xml}) that \PL{} can open. \\
@@ -506,7 +545,8 @@ back. The \ui{Calculation} profile on the chart form chooses all of these at onc
 \shot{seplaces}
 
 Saved places are kept in the browser on that device. Use \ui{Export places} on one device and
-\ui{Import places…} on another to copy your list, and keep the file as a backup.
+\ui{Import places…} on another to copy your list, and keep the file as a backup. The line at the foot
+credits the world atlas (\autoref{sec:atlas}).
 
 \shot{selook}
 
@@ -538,6 +578,7 @@ NTP & Iyer's worked examples & Exact, apart from 3 misprinted cells in the book 
 KP (Research) & The Readers' worked charts & As in \autoref{sec:kp}; book slips named in the tests \\
 Matching & A \PL{} 7.0.1 printout & Row for row \\
 Transits & Boundary crossings; \PL{} 7 transit records & Pass; not yet against a \PL{} 9 transit screen \\
+Zones of atlas places outside India & World time-zone database, tested on known cases (New York 1950, London 1943, Singapore 1942) & Reliable from 1970; check older dates against the birth record \\
 Works offline & Automatic test, network off & Opens, casts, no network requests \\
 \bottomrule
 \end{longtable}
@@ -556,6 +597,9 @@ When a number in an open row matters for a judgement, check it in \PL{}. The wri
   \item[The planets are off by about an hour of motion.] The zone is wrong: check \ui{Zone} and
         \ui{Daylight saving}. India 1942--45 is 6.5 (or 5.5 with daylight saving ticked); before 1955 check
         which clock the time was written in; abroad, check summer time.
+  \item[A place is not in the list.] Try its present or former name, or narrow with a comma
+        (\ex{Puri, Odisha}). Villages outside Odisha are only in the atlas if their population is known; type
+        the latitude, longitude and zone by hand, then press \ui{Save this place} to keep it.
   \item[The date came out wrong.] Read the words under the Date box; the box may show month first.
   \item[My numbers differ from \PL{}'s.] Check the profile in the chart line; look for \ui{Use the profile
         value} in Settings; compare \ui{How was this computed?} with \PL{}; check \autoref{sec:trust}.
@@ -598,6 +642,8 @@ $\Delta T$ (Delta-T) & The small difference between clock time and astronomical 
 True / mean node & Rahu's exact (wobbling) position, or its smoothed average \\
 Placidus & The house system \PL{} uses for cusps \\
 Profile & A set of calculation choices: \PL{} 9, \PL{} 7, or Solar Fire / Kala Chakra \\
+Atlas & The built-in list of about 86\,000 places (GeoNames, CC BY 4.0) \\
+Time-zone database & The world's record of time zones and clock changes (IANA), carried by every browser; names such as \ex{America/New\_York} \\
 \bottomrule
 \end{longtable}
 
@@ -605,7 +651,7 @@ Profile & A set of calculation choices: \PL{} 9, \PL{} 7, or Solar Fire / Kala C
 \section*{About this document}
 \addcontentsline{toc}{section}{About this document}
 % =============================================================================
-This guide was written for \app{} version 0.9. Every screenshot was taken automatically from the shipped
+This guide was written for \app{} version 0.11. Every screenshot was taken automatically from the shipped
 single file, and the numbered callouts were placed from the live positions of the elements on the page, so
 the guide can be rebuilt exactly when the app changes (\ex{kaast2/media/pdf/}). It was prepared with the
 help of an AI assistant (Claude, Anthropic) and checked against the app and its written user guide.

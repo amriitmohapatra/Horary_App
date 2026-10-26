@@ -30,6 +30,19 @@ async function castExample(p) {
   await p.getByLabel('Place').fill(EXAMPLE.place);
   await p.getByLabel('Place').press('Tab');
 }
+// open the folded chart form and type into Place until the suggestion list shows
+async function openForm(p) {
+  const e = p.getByRole('button', { name: 'Edit chart', exact: true });
+  if (await e.isVisible().catch(() => false)) { await e.click(); await p.waitForTimeout(300); }
+}
+const typePlace = (q) => async (p) => {
+  await openForm(p);
+  await p.getByLabel('Place').fill('');
+  await p.getByLabel('Place').pressSequentially(q, { delay: 20 });
+  await p.getByRole('listbox', { name: 'Suggestions' }).waitFor();
+  await p.waitForTimeout(250);
+};
+const OPT = (n) => CSS(`#f-place-list li:nth-child(${n})`);
 async function partner(p) {
   if (await p.getByTestId('pm-summary').count()) return;
   await p.getByRole('button', { name: "Enter the prospective match's birth details" }).click();
@@ -51,11 +64,39 @@ export const SHOTS = [
       [3, L('Name'), 'Name of the person or question; it appears in the chart centre and in file names.'],
       [4, L('Date'), 'Date, 1800–2399. The words underneath (here 11 Oct 1942) cannot be misread: always check them.'],
       [5, L('Hours'), 'Time: hours, minutes, seconds, 24-hour clock. Two digits move to the next box.'],
-      [6, L('Place'), 'Place: choose from the list to fill latitude, longitude and zone.'],
+      [6, L('Place'), 'Place: type a few letters and choose from your places or the world atlas; it fills latitude, longitude, zone and daylight saving.'],
       [7, L(/^Zone/, false), 'Zone, hours east of UTC; India war time 1942–45 is set to +6:30 automatically.'],
       [8, L('Calculation'), 'Calculation profile: Parashara’s Light 9 (default), Parashara’s Light 7, or Solar Fire / Kala Chakra.'],
       [9, B('Cast chart'), 'Cast chart. Now casts this moment (horary); Save this place keeps the place in your own list.'],
       [10, CSS('label.file-btn'), 'Open a Parashara’s Light .xml file or an Astro-Amriit chart; save in either format.'],
+    ] },
+  // The world atlas (each leaves the form changed, so the page is rebuilt afterwards: isolate)
+  { id: 'atlaslist', tab: null, isolate: true, prep: typePlace('Lapanga'), target: [CSS('.field-place'), CSS('#f-place-list')], pad: 12,
+    caption: 'Typing in Place: your saved and built-in places first, then the world atlas, each with its state, country and coordinates.',
+    callouts: [
+      [1, OPT(1), 'A saved or built-in place.'],
+      [2, OPT(2), 'Lāpangā in Jharkhand, from the atlas.'],
+      [3, OPT(3), 'Lapanga in Odisha: state and coordinates tell same-named places apart.'],
+    ] },
+  { id: 'atlasold', tab: null, isolate: true, prep: typePlace('Bombay'), target: [CSS('.field-place'), CSS('#f-place-list')], pad: 12,
+    caption: 'An old name finds the city under its present name; the old name is shown in brackets.',
+    callouts: [[1, OPT(1), 'Mumbai (Bombay): Bombay is a former name of Mumbai.']] },
+  { id: 'atlaszone', tab: null, isolate: true,
+    prep: async (p) => {
+      await openForm(p);
+      await p.getByLabel('Date').fill('1950-07-01');
+      await p.getByLabel('Hours', { exact: true }).fill('12:00:00');
+      await typePlace('New York City')(p);
+      await p.getByRole('option').filter({ hasText: 'United States' }).first().click();
+      await p.evaluate(() => document.activeElement?.blur()); await p.waitForTimeout(300);
+    },
+    target: [CSS('.field-date'), CSS('.field-dst'), CSS('.zone-note')], pad: 10,
+    caption: 'Outside India the zone and daylight saving come from the world time-zone database for the chart’s date and time: New York, 1 July 1950.',
+    callouts: [
+      [1, L('Place'), 'Chosen from the atlas: New York City, New York, United States.'],
+      [2, L(/^Zone/, false), 'Zone −5, the standard time of New York.'],
+      [3, CSS('.field-dst'), 'Daylight saving ticked: summer time on that date.'],
+      [4, CSS('.zone-note'), 'The note names the zone used (America/New_York) and asks for a check before 1970.'],
     ] },
   { id: 'chartline', tab: 'Page 1', target: [CSS('main h1, .chart-title, [data-testid=panchanga]'), T('panchanga')], pad: 8, unionNav: true,
     caption: 'After casting: the chart line, the panchanga and the page tabs.',
@@ -208,7 +249,8 @@ export const SHOTS = [
   { id: 'mkp', tab: 'Matching', prep: async (p) => { await partner(p); await sub('Krishnamurti (KP)')(p); }, target: [S('h-m-kp')], pad: 6, maxH: 1300, caption: 'Krishnamurti (KP): his ruling-planet test and his notes on each koota and on Mars dosha.', callouts: [] },
   // Settings
   { id: 'secalc', tab: 'Settings', target: [S('h-calc')], pad: 6, caption: 'Settings → Calculation: ayanamsa, Delta-T, node and dasha year for every chart; “Use the profile value” undoes a change.', callouts: [] },
-  { id: 'seplaces', tab: 'Settings', target: [S('h-places')], pad: 6, caption: 'Saved places: add, edit, delete, export and import.', callouts: [] },
+  { id: 'seplaces', tab: 'Settings', target: [S('h-places')], pad: 6, caption: 'Saved places: add, edit, delete, export and import; the credit for the world atlas below.',
+    callouts: [[1, T('atlas-credit'), 'The world atlas: about 86 000 places from GeoNames (CC BY 4.0), and how its zones are found.']] },
   { id: 'selook', tab: 'Settings', target: [S('h-look')], pad: 6, caption: 'Appearance: theme and text size.', callouts: [] },
 ];
 
@@ -286,6 +328,7 @@ for (const s of SHOTS) {
     tex += '\\end{figure}\n';
     writeFileSync(`${W}fig/${s.id}.tex`, tex);
     console.log(s.id, `${Math.round(clip.width)}×${Math.round(clip.height)}`, marks.length, 'callouts');
+    if (s.isolate) { await p.context().close(); p = await freshPage(b); await castExample(p); }
   } catch (e) {
     problems.push(`${s.id}: ${e.message.split('\n')[0]}`);
     await p.context().close(); p = await freshPage(b); await castExample(p);
