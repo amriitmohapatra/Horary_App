@@ -99,7 +99,7 @@ Downloads folder."*
 | **Name** | Who or what the chart is for. Optional. It appears in the centre of the Rasi chart and in file names. |
 | **Date** | The date of birth or of the question. Years 1800 to 2399. |
 | **Time** | Three boxes — **Hours**, **Minutes**, **Seconds** — on the 24-hour clock (4 pm is `16`). Typing two digits moves you to the next box, so on a phone you can simply type `160037` for 16:00:37. You may also type or paste a whole time such as `16:00:37` into **Hours**. (The phone's own time picker is not used, because on iPhone it has no seconds.) |
-| **Place** | Start typing; a list of places appears. Choosing one fills **Latitude**, **Longitude** and **Zone**. |
+| **Place** | Start typing; a list of places appears: your saved places and the built-in ones first, then the **world atlas** (from version 0.10). Choose one with the mouse, or with ↓ and **Enter**. It fills **Latitude**, **Longitude**, **Zone** and **Daylight saving**. See [The world atlas](#the-world-atlas). |
 | **Latitude** | Decimal degrees (`21.7033`, south negative) **or** degrees, minutes and seconds (`21 42 12 N`, `21°42′12″N`). Between −66.5 and 66.5. |
 | **Longitude** | Decimal degrees (`84.0314`, west negative) **or** degrees, minutes and seconds (`84 01 53 E`). |
 | **Zone (hours east of UTC)** | The time zone of the clock time you typed. India is `5.5`. |
@@ -118,6 +118,33 @@ computer is set to: on many computers that is month/day/year
 words before you cast.** Day and month swaps are the most common mistake in
 hand-written birth data.
 
+### The world atlas
+
+From version 0.10 the app carries an atlas of about **86 000 places**, with no
+internet needed:
+
+- every town and city of **5 000 people or more**, worldwide;
+- every Indian place for which a population is known;
+- **every village in Odisha** (the source has no population for most villages,
+  so a population rule would have left them out).
+
+Type at least two letters. The list shows each place with its state (or
+region), country and coordinates, so places with the same name can be told
+apart: there are two Lapangas, one in Odisha and one in Jharkhand. Larger
+places come first. Accents do not matter (`Bhubaneswar` finds *Bhubanēśvar*).
+
+- **Old names work.** `Bombay`, `Calcutta`, `Madras`, `Bangalore`,
+  `Allahabad`, `Benares`, `Poona`, `Baroda`, `Trivandrum` … find the city
+  under its present name; the list shows the old name in brackets, as in
+  *Mumbai (Bombay)*.
+- **Narrow with a comma.** `Puri, Odisha` or `London, Canada` keeps only
+  places in that state or country.
+- The chosen place is written as *Name, State, Country*, for example
+  *Sambalpur, Odisha, India*.
+
+The atlas is built from **GeoNames** (geonames.org), licensed CC BY 4.0;
+the credit is on the Settings page and at the foot of every page.
+
 ### The zone and India's war time
 
 When you choose a place, the zone is filled in for you. For India between
@@ -131,6 +158,25 @@ This happens for the built-in Indian places and, from version 0.3, for
 places you saved yourself that lie inside India. If you type latitude,
 longitude and zone by hand without choosing a place from the list, the app
 cannot tell, so set the zone yourself (see [Troubleshooting](#7-troubleshooting)).
+
+**Places outside India (atlas places).** The zone and daylight saving are
+taken from the **world time-zone database** that every browser carries, for
+the date and time in the form: New York on 1 July 1950 gives zone `-5` with
+**Daylight saving** ticked, on 1 December 1950 `-5` without it. Britain's
+war-time double summer time, occupied Singapore's Tokyo time and other
+historical clocks come out the same way. A note under the form names the
+zone used (for example *America/New_York*). Change the date or time and the
+zone follows.
+
+The database is very reliable from 1970 onwards. **For earlier dates, check
+old charts against the birth record**: some countries' early local records
+differ, and the note says so.
+
+**Indian places** do not use the database's history for India. It follows
+Calcutta's clocks: local mean time before 1906, and +6:30 also from October
+1941 to May 1942. Indian places keep the rule above (IST, and war time from 1
+September 1942 to 14 October 1945), which is what Parashara's Light does and
+what the app's checks against PL 9 confirm.
 
 There are two ways to write war time, and both give the same moment:
 
@@ -1163,7 +1209,11 @@ computer each keep their own list). Use **Export places** on one and
 **Import places…** on the other to copy your list across, and keep the file
 as a backup. The **Save this place** button on the chart form adds to the
 same list. For Indian places, war time (1942–45) is applied to saved places
-too.
+too. A place saved from the world atlas keeps its time zone, so later charts
+there get the zone and daylight saving of their own dates.
+
+Under the built-in places, a line credits the **world atlas** (about 86 000
+places from GeoNames, CC BY 4.0) and repeats how its zones are found.
 
 The **Calculation** profile in the chart form chooses all of these at once
 for one chart. The Settings page changes one of them for all charts.

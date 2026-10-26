@@ -2,8 +2,11 @@
  * Place gazetteer: canonical built-in places plus the user's saved places
  * (localStorage, versioned key, try/catch everywhere — invariant 12).
  * Coordinates: decimal degrees, +N / +E. `tz`: standard zone, hours east.
+ * `zone`: IANA time-zone name (atlas places), for the offset in force on a given date.
  */
-export interface Place { name: string; lat: number; lon: number; tz: number; country?: string }
+import { knownZone, zoneAt } from './zones';
+
+export interface Place { name: string; lat: number; lon: number; tz: number; country?: string; zone?: string }
 
 export const BUILTIN_PLACES: readonly Place[] = [
   { name: 'Puri (Karar Ashram)', lat: 19.7944, lon: 85.8189, tz: 5.5, country: 'IN' },
@@ -48,18 +51,30 @@ export function savePlace(p: Place): boolean {
   catch { return false; }
 }
 
+export interface ZoneOnDate {
+  tz: number;
+  /** Daylight-saving hour on top of `tz` (0 or 1). */
+  dst: number;
+  /** india_war_time: IST + 1 h applied; zone_db: taken from the time-zone database for that date. */
+  note?: 'india_war_time' | 'zone_db';
+}
+
 /**
- * Historical zone corrections that atlases (and PL) apply automatically.
- * India war time: IST + 1 h from 1942-09-01 to 1945-10-15.
+ * The zone in force at a place on a date. Indian places follow the PL-verified rule: IST, and
+ * war time (IST + 1 h) from 1942-09-01 to 1945-10-15. Other places with an IANA zone (atlas
+ * places) take the offset and daylight saving in force at that local date and time from the
+ * time-zone database (zones.ts). Places without a zone keep their fixed `tz`.
  */
-export function zoneFor(place: Place, y: number, m: number, d: number): { tz: number; note?: 'india_war_time' } {
+export function zoneFor(place: Place, y: number, m: number, d: number, h = 12, mi = 0): ZoneOnDate {
   const ymd = y * 10000 + m * 100 + d;
   // Indian places: by country, or (for typed/saved places) by IST and coordinates inside India.
   const inIndia = place.country === 'IN' || (place.country === undefined && place.lat >= 6 && place.lat <= 37.5 && place.lon >= 68 && place.lon <= 97.5);
-  if (inIndia && place.tz === 5.5 && ymd >= 19420901 && ymd < 19451015) {
-    return { tz: 6.5, note: 'india_war_time' };
+  if (inIndia) {
+    if (place.tz === 5.5 && ymd >= 19420901 && ymd < 19451015) return { tz: 6.5, dst: 0, note: 'india_war_time' };
+    return { tz: place.tz, dst: 0 };
   }
-  return { tz: place.tz };
+  if (place.zone && knownZone(place.zone)) return { ...zoneAt(place.zone, y, m, d, h, mi), note: 'zone_db' };
+  return { tz: place.tz, dst: 0 };
 }
 
 export function deletePlace(name: string): boolean {
@@ -106,6 +121,6 @@ export function importPlaces(text: string): number {
   const ok = d.places.filter((p) => p && typeof p.name === 'string' && p.name.trim()
     && [p.lat, p.lon, p.tz].every((x) => typeof x === 'number' && Number.isFinite(x))
     && Math.abs(p.lat) <= 90 && Math.abs(p.lon) <= 180 && Math.abs(p.tz) <= 14);
-  for (const p of [...ok].reverse()) savePlace({ name: p.name, lat: p.lat, lon: p.lon, tz: p.tz, ...(p.country ? { country: p.country } : {}) });
+  for (const p of [...ok].reverse()) savePlace({ name: p.name, lat: p.lat, lon: p.lon, tz: p.tz, ...(p.country ? { country: p.country } : {}), ...(typeof p.zone === 'string' ? { zone: p.zone } : {}) });
   return ok.length;
 }

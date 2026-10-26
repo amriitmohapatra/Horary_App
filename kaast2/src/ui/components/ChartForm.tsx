@@ -1,7 +1,8 @@
 /**
  * Chart input. Errors appear next to the field and never clear what the
- * user typed (guide ch. 17.3). Choosing a place fills lat/lon/zone, and the
- * zone follows historical rules (India war time 1942–45).
+ * user typed (guide ch. 17.3). Choosing a place (saved, built-in or from the
+ * world atlas) fills lat/lon/zone; the zone follows historical rules: India war
+ * time 1942–45, and the time-zone database for atlas places elsewhere.
  */
 import { useState } from 'preact/hooks';
 import type { JSX } from 'preact';
@@ -12,6 +13,7 @@ import { decodeChartBytes, parseGeoVision, toGeoVision } from '../../io/geovisio
 import { parseChartFile, toChartFile } from '../../io/chartfile';
 import { t, type MessageKey } from '../i18n';
 import { TimeFields } from './TimeFields';
+import { PlaceSearch } from './PlaceSearch';
 import { longDate, pad2 } from '../format';
 import { chartInput, formOpen, lastPlace, nowInput, openedEvents, rememberPlace } from '../state/store';
 
@@ -80,25 +82,44 @@ export function ChartForm({ target = chartInput, prefix = 'f', onDone, label }: 
   const [note, setNote] = useState<MessageKey | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
   const places = allPlaces();
+  // the place picked from the list (keeps an atlas place's time zone); typing a different name drops it
+  const [sel, setSel] = useState<Place | null>(() => { const lp = lastPlace(); return lp.name === f.place ? lp : null; });
+  const [zoneNote, setZoneNote] = useState<string | null>(null);
+  const findPlace = (name: string): Place | undefined =>
+    sel && sel.name.toLowerCase() === name.trim().toLowerCase() ? sel : places.find((q) => q.name.toLowerCase() === name.trim().toLowerCase());
 
   const set = <K extends keyof Fields>(k: K, v: Fields[K]) => setF((o) => ({ ...o, [k]: v }));
 
-  const applyZone = (p: Place, date: string) => {
+  /** Zone and daylight saving at place `p` for the date and time in the form. */
+  const applyZone = (p: Place, date: string, time: string): Pick<Fields, 'tz' | 'dst'> => {
     const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
-    const z = m ? zoneFor(p, +m[1]!, +m[2]!, +m[3]!) : { tz: p.tz };
+    const tm = /^(\d{1,2}):(\d{2})/.exec(time);
+    const z = m ? zoneFor(p, +m[1]!, +m[2]!, +m[3]!, tm ? +tm[1]! : 12, tm ? +tm[2]! : 0) : { tz: p.tz, dst: 0 };
     setNote(z.note === 'india_war_time' ? 'form.warTime' : null);
-    return String(z.tz);
+    setZoneNote(z.note === 'zone_db' && p.zone ? t(m && +m[1]! < 1970 ? 'form.zoneDbOld' : 'form.zoneDb', { zone: p.zone }) : null);
+    return { tz: String(z.tz), dst: z.dst !== 0 };
+  };
+
+  const pickPlace = (p: Place) => {
+    setSel(p);
+    setF((o) => ({ ...o, place: p.name, lat: String(p.lat), lon: String(p.lon), ...applyZone(p, o.date, o.time) }));
   };
 
   const onPlace = (name: string) => {
     const p = places.find((q) => q.name.toLowerCase() === name.trim().toLowerCase());
-    if (!p) { set('place', name); return; }
-    setF((o) => ({ ...o, place: p.name, lat: String(p.lat), lon: String(p.lon), tz: applyZone(p, o.date) }));
+    if (p) { pickPlace(p); return; }
+    if (sel && sel.name !== name) { setSel(null); setZoneNote(null); }
+    set('place', name);
   };
 
   const onDate = (date: string) => {
-    const p = places.find((q) => q.name.toLowerCase() === f.place.trim().toLowerCase());
-    setF((o) => ({ ...o, date, ...(p ? { tz: applyZone(p, date) } : {}) }));
+    const p = findPlace(f.place);
+    setF((o) => ({ ...o, date, ...(p ? applyZone(p, date, o.time) : {}) }));
+  };
+
+  const onTime = (time: string) => {
+    const p = findPlace(f.place);
+    setF((o) => ({ ...o, time, ...(p?.zone ? applyZone(p, o.date, time) : {}) }));
   };
 
   const submit = (e: Event) => {
@@ -106,14 +127,14 @@ export function ChartForm({ target = chartInput, prefix = 'f', onDone, label }: 
     const r = parse(f);
     setErrors(r.errors);
     if (!r.input) return;
-    const p = places.find((q) => q.name === r.input!.place.name);
+    const p = findPlace(r.input.place.name);
     rememberPlace(p ?? { name: r.input.place.name, lat: r.input.place.latDeg, lon: r.input.place.lonDeg, tz: r.input.tzHours });
     target.value = r.input;
     done();
   };
 
   const now = () => {
-    const p = places.find((q) => q.name === f.place) ?? lastPlace();
+    const p = findPlace(f.place) ?? lastPlace();
     const i = nowInput(p);
     i.profileId = f.profile;
     setF(toFields(i));
@@ -166,7 +187,9 @@ export function ChartForm({ target = chartInput, prefix = 'f', onDone, label }: 
 
   const onSavePlace = () => {
     const lat = parseCoord(f.lat, 'lat'), lon = parseCoord(f.lon, 'lon');
-    const ok = lat !== null && lon !== null && savePlace({ name: f.place, lat, lon, tz: Number(f.tz) });
+    const p = findPlace(f.place);
+    // an atlas place keeps its time zone (so later dates get their own offset); a typed place keeps the zone typed
+    const ok = lat !== null && lon !== null && savePlace(p && p.lat === lat && p.lon === lon ? p : { name: f.place, lat, lon, tz: Number(f.tz) });
     setNote(ok ? 'form.placeSaved' : null);
   };
 
@@ -195,15 +218,13 @@ export function ChartForm({ target = chartInput, prefix = 'f', onDone, label }: 
           {!errors.date && <small id={`${prefix}h-date`} class="hint date-echo">{dateInWords(f.date)}</small>}
         </>)}
       <div class="field field-time">
-        <TimeFields id={`${prefix}-time`} legend={t('form.time')} value={f.time} onChange={(v) => set('time', v)}
+        <TimeFields id={`${prefix}-time`} legend={t('form.time')} value={f.time} onChange={onTime}
           invalid={!!errors.time} describedBy={errors.time ? `${prefix}e-time` : undefined} />
         {errors.time && <small id={`${prefix}e-time`} class="error" role="alert">{t(errors.time)}</small>}
       </div>
       {field('place', 'form.place',
         <>
-          <input id={`${prefix}-place`} list={`${prefix}-places`} value={f.place} placeholder={t('form.place.placeholder')}
-            autocomplete="off" onChange={(e) => onPlace(e.currentTarget.value)} onInput={(e) => onPlace(e.currentTarget.value)} />
-          <datalist id={`${prefix}-places`}>{places.map((p) => <option key={p.name} value={p.name} />)}</datalist>
+          <PlaceSearch id={`${prefix}-place`} value={f.place} placeholder={t('form.place.placeholder')} onText={onPlace} onPick={pickPlace} />
         </>)}
       {field('lat', 'form.lat',
         <input id={`${prefix}-lat`} autoComplete="off" value={f.lat} aria-invalid={!!errors.lat}
@@ -242,6 +263,7 @@ export function ChartForm({ target = chartInput, prefix = 'f', onDone, label }: 
         </p>
       )}
       {note && <p class="form-note" role="status">{t(note)}</p>}
+      {zoneNote && <p class="form-note zone-note" role="status">{zoneNote}</p>}
     </form>
   );
 }

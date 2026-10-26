@@ -65,7 +65,9 @@ kaast2/
     io/
       geovision.ts            import/export PL7 BirthData XML (UTF-16)
       chartfile.ts            JSON chart file, versioned
-      places.ts               gazetteer + localStorage
+      places.ts               gazetteer + localStorage; zoneFor (India rule, else time-zone database)
+      zones.ts                historical UTC offsets from the browser's IANA database (Intl), offline
+      atlas.ts, atlas/        world atlas: ~86 000 GeoNames places (atlas.txt, built by scripts/build_atlas.mjs)
     boot/
       wasmLoader.ts           EphemerisLoader interface; EmbeddedLoader (base64) | FetchLoader (Vercel)
   vendor/

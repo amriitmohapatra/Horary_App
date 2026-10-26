@@ -2,6 +2,42 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.10 — 2026-10-26 · `dist/Astro-Amriit v0.10.html`
+
+- **World atlas, offline.** The Place field now suggests places as you type:
+  your saved and the built-in places first, then about 86 000 places from
+  GeoNames (CC BY 4.0): every town of 5 000+ worldwide, every Indian place
+  with a known population, and every populated place in Odisha. Each
+  suggestion shows its state, country and coordinates; larger places first;
+  accents ignored; a comma narrows by state or country (`Puri, Odisha`).
+  Former names find renamed Indian cities (Bombay, Calcutta, Madras,
+  Allahabad, Benares, Poona, Baroda, Trivandrum …). Keyboard: ↓/↑, Enter,
+  Escape (ARIA combobox).
+- **Zone for the date.** Outside India the zone and daylight saving come from
+  the browser's world time-zone database for the date and time in the form
+  (New York 1950 summer → −5 + DST; Britain's double summer time; Tokyo time
+  in occupied Singapore), and follow date or time changes; a note names the
+  zone and asks for a check before 1970. Indian places keep the PL rule (IST,
+  war time 1942-09-01 … 1945-10-14).
+- Saved atlas places keep their time zone. Credit for GeoNames on Settings
+  and in the footer.
+- `scripts/build_atlas.mjs` rebuilds the atlas from GeoNames files;
+  `scripts/pl_to_json.ts` converts a folder of PL chart files to app chart
+  files with the app's own importer.
+
+**Evidence** 815 unit/engine tests (6 new: atlas contents, former names,
+search order and filters, historical zones and DST changes, India rule
+unchanged); 42 e2e incl. 7 new (keyboard choice, former names, DST following
+the date, war time on atlas places, axe with the list open in all three
+themes); contract check; pre-publish scan; core regression 130/130 and WASM
+engine 0 failures (unchanged engines). Atlas load ~0.3 s on first use (begun
+when the Place field gets focus), ~7 ms per keystroke. Single file 5.6 → 8.1 MB.
+
+**Out of scope / open** Pre-1906 Indian births: PL's own atlas stored local
+mean time for some old charts (Agra 1861 → 5:21); the app keeps 5.5 unless the
+zone is typed (decision for the user). Villages outside Odisha with no
+population in GeoNames are not included.
+
 ## v0.9 — 2026-10-24 · `dist/Astro-Amriit v0.9.html`
 
 The boss's brief: label the KP tab **KP (Research)** and bring in the

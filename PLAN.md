@@ -152,6 +152,7 @@ nakshatra, yoga, karana — STD).
 
 ### 3.9 Input and places
 - Place gazetteer (reuse `places.js` canonical coordinates) + saved custom places in localStorage; manual lat/lon/tz entry; DST field.
+- **v0.10:** embedded world atlas (GeoNames, CC BY 4.0): places of 5 000+ worldwide, Indian places with a known population, every populated place in Odisha; former names for Indian cities. Zone and DST for the date from the browser's IANA database outside India; India keeps the PL rule (IST, war time 1942-09-01 … 1945-10-14).
 - Import of GeoVision `*.xml` chart files (UTF-16 BirthData) so the 1 559 saved charts open directly; export of the same format and of a JSON chart file.
 
 ### 3.10 Quality requirements
