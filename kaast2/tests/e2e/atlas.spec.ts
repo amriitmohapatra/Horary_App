@@ -74,3 +74,11 @@ for (const theme of ['light', 'dark', 'warm']) {
     expect(r.violations.map((v) => `${v.id}: ${v.nodes.slice(0, 2).map((n) => n.target.join(' ')).join(' | ')}`)).toEqual([]);
   });
 }
+
+test('typing past a built-in name keeps every character (v0.11: "New York City" lost its space)', async ({ page }) => {
+  await open(page);
+  await place(page).fill('');
+  await place(page).pressSequentially('New York City', { delay: 30 });
+  await expect(place(page)).toHaveValue('New York City');
+  await expect(list(page).getByRole('option').first()).toContainText('United States');
+});

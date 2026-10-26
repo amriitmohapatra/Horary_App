@@ -2,6 +2,23 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.11 — 2026-10-26 · `dist/Astro-Amriit v0.11.html`
+
+Two fixes to the v0.10 place field, found while recording the video guide.
+
+- **Typing is never rewritten.** When the text matched a saved or built-in
+  place exactly, v0.10 filled its coordinates and rewrote the field with the
+  trimmed name, which swallowed the next space: "New York City" became
+  "New YorkCity". The coordinates are still filled in; the text stays as typed.
+- **Built-in places outside India follow their zone.** London, New York and
+  Singapore now carry their time-zone names, so daylight saving and historical
+  clocks apply as for atlas places (London, July 1960 → zone 0 + DST).
+  Places saved earlier keep the fixed zone they were saved with.
+
+**Evidence** 816 unit/engine tests (+1: built-in zones); e2e +1 (typing
+"New York City" key by key; fails on v0.10 with "New YorkCity", passes now);
+contract check; pre-publish scan.
+
 ## v0.10 — 2026-10-26 · `dist/Astro-Amriit v0.10.html`
 
 - **World atlas, offline.** The Place field now suggests places as you type:

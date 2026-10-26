@@ -159,7 +159,8 @@ places you saved yourself that lie inside India. If you type latitude,
 longitude and zone by hand without choosing a place from the list, the app
 cannot tell, so set the zone yourself (see [Troubleshooting](#7-troubleshooting)).
 
-**Places outside India (atlas places).** The zone and daylight saving are
+**Places outside India** (atlas places, and from version 0.11 the built-in
+London, New York and Singapore). The zone and daylight saving are
 taken from the **world time-zone database** that every browser carries, for
 the date and time in the form: New York on 1 July 1950 gives zone `-5` with
 **Daylight saving** ticked, on 1 December 1950 `-5` without it. Britain's

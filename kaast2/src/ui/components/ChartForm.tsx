@@ -106,9 +106,15 @@ export function ChartForm({ target = chartInput, prefix = 'f', onDone, label }: 
   };
 
   const onPlace = (name: string) => {
-    const p = places.find((q) => q.name.toLowerCase() === name.trim().toLowerCase());
-    if (p) { pickPlace(p); return; }
-    if (sel && sel.name !== name) { setSel(null); setZoneNote(null); }
+    // A name typed exactly as a saved or built-in place fills in its coordinates and zone, but the text
+    // stays as typed: rewriting it (trimmed) swallowed the space in "New York City" (v0.10).
+    const p = places.find((q) => q.name.toLowerCase() === name.toLowerCase());
+    if (p) {
+      setSel(p);
+      setF((o) => ({ ...o, place: name, lat: String(p.lat), lon: String(p.lon), ...applyZone(p, o.date, o.time) }));
+      return;
+    }
+    if (sel && sel.name.toLowerCase() !== name.toLowerCase()) { setSel(null); setZoneNote(null); }
     set('place', name);
   };
 

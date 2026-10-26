@@ -18,9 +18,9 @@ export const BUILTIN_PLACES: readonly Place[] = [
   { name: 'Mumbai', lat: 18.975, lon: 72.8258, tz: 5.5, country: 'IN' },
   { name: 'Kolkata', lat: 22.5726, lon: 88.3639, tz: 5.5, country: 'IN' },
   { name: 'Chennai', lat: 13.0827, lon: 80.2707, tz: 5.5, country: 'IN' },
-  { name: 'Singapore', lat: 1.28333, lon: 103.85, tz: 8, country: 'SG' },
-  { name: 'London', lat: 51.5074, lon: -0.1278, tz: 0, country: 'GB' },
-  { name: 'New York', lat: 40.7128, lon: -74.006, tz: -5, country: 'US' },
+  { name: 'Singapore', lat: 1.28333, lon: 103.85, tz: 8, country: 'SG', zone: 'Asia/Singapore' },
+  { name: 'London', lat: 51.5074, lon: -0.1278, tz: 0, country: 'GB', zone: 'Europe/London' },
+  { name: 'New York', lat: 40.7128, lon: -74.006, tz: -5, country: 'US', zone: 'America/New_York' },
 ];
 
 const KEY = 'kaast2.places.v1';

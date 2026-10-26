@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { atlasLabel, atlasSize, atlasToPlace, fold, searchAtlas } from '../../src/io/atlas';
-import { zoneFor } from '../../src/io/places';
+import { BUILTIN_PLACES, zoneFor } from '../../src/io/places';
 import { offsetAtLocal, zoneAt } from '../../src/io/zones';
 
 describe('atlas data', () => {
@@ -50,6 +50,13 @@ describe('zones from the time-zone database', () => {
     expect(ny.zone).toBe('America/New_York');
     expect(zoneFor(ny, 1950, 7, 1)).toEqual({ tz: -5, dst: 1, note: 'zone_db' });
     expect(zoneFor(ny, 1950, 12, 1)).toEqual({ tz: -5, dst: 0, note: 'zone_db' });
+  });
+
+  test('built-in places outside India follow their zone too (v0.11)', () => {
+    const london = BUILTIN_PLACES.find((p) => p.name === 'London')!;
+    expect(zoneFor(london, 1960, 7, 1)).toEqual({ tz: 0, dst: 1, note: 'zone_db' });
+    expect(zoneFor(london, 1960, 1, 1)).toEqual({ tz: 0, dst: 0, note: 'zone_db' });
+    expect(zoneFor(BUILTIN_PLACES.find((p) => p.name === 'Singapore')!, 2001, 3, 21).tz).toBe(8);
   });
 
   test('Indian atlas places keep the PL-verified rule (IST, war time), not the database history', () => {

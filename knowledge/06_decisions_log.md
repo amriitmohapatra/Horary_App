@@ -479,3 +479,10 @@ architecture.
   files with the app's own importer (personal output never committed).
 - Pre-publish scan: the atlas is exempt from the private-name rule only
   (public place names such as Behera, Rath, Harvard collide with it).
+
+## 2026-10-26 (later) — Astro-Amriit v0.11: place-field fixes
+- v0.10 rewrote the Place text with the trimmed name of an exactly matching
+  saved/built-in place, swallowing spaces ("New York City" → "New YorkCity").
+  The typed text is now kept; coordinates and zone are still filled in.
+- Built-in London, New York, Singapore carry IANA zones (DST and history as
+  for atlas places). Found while recording the video guide's atlas chapter.
