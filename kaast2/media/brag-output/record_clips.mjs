@@ -10,6 +10,7 @@ if (!process.argv.includes('--only-b')) {
   await d.wait(300);
   await castChart(d, page);
   await d.wait(700);
+  d.mark('table');
   await d.zoomTo(page.getByTestId('planet-table'), 0.92, 1.5);
   await d.highlight(page.getByTestId('planet-table').locator('tbody'));
   await d.wait(1600);

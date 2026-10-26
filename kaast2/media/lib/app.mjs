@@ -7,7 +7,7 @@ import { chromium } from 'playwright';
 import { resolve } from 'node:path';
 import { Director } from './director.mjs';
 
-export const APP = resolve(import.meta.dirname, '../../dist/Astro-Amriit v0.9.html');
+export const APP = resolve(import.meta.dirname, '../../dist/Astro-Amriit v0.11.html');
 export const EXAMPLE = { name: 'Amitabh Bachchan', date: '1942-10-11', time: '16:00:00', place: 'Allahabad (Prayagraj)' };
 export const PARTNER = { name: 'Synthetic partner', date: '1948-04-09', time: '09:30:00', place: 'Allahabad (Prayagraj)' };
 
@@ -30,8 +30,18 @@ export async function castChart(d, page, c = EXAMPLE, { typed = true } = {}) {
   if (typed) await d.type(page.getByLabel('Name'), c.name, 45); else await page.getByLabel('Name').fill(c.name);
   await page.getByLabel('Date').fill(c.date);
   await page.getByLabel('Hours', { exact: true }).fill(c.time);
-  if (typed) await d.type(page.getByLabel('Place'), c.place, 25); else await page.getByLabel('Place').fill(c.place);
-  await page.getByLabel('Place').press('Tab');
+  if (typed) {
+    // type the start of the name, let the suggestion list (saved places, then the world atlas) open, pick from it
+    await d.type(page.getByLabel('Place'), c.place.split(' (')[0], 70);
+    await page.getByRole('listbox', { name: 'Suggestions' }).waitFor();
+    d.mark('atlas');
+    await d.zoomTo(page.getByRole('listbox', { name: 'Suggestions' }), 0.75, 1.9); await d.wait(900);
+    await d.click(page.getByRole('option').filter({ hasText: c.place }).first(), 650);
+    await d.zoomOut();
+  } else {
+    await page.getByLabel('Place').fill(c.place);
+    await page.getByLabel('Place').press('Tab');
+  }
   if (typed) await d.click(page.getByRole('button', { name: 'Cast chart' })); else await page.getByRole('button', { name: 'Cast chart' }).click();
   await page.getByRole('button', { name: 'Edit chart' }).waitFor();
 }

@@ -11,6 +11,7 @@ const T = (page, id) => page.getByTestId(id).first();
 const btn = (page, name) => page.getByRole('button', { name, exact: true }).first();
 const top = (page) => page.evaluate(() => scrollTo({ top: 0 }));
 /** Scroll a target into the upper part of the view (no camera). */
+const LIST = (page) => page.getByRole('listbox', { name: 'Suggestions' });
 const reveal = async (loc) => { await loc.evaluate((e) => e.scrollIntoView({ block: 'start' })); await loc.page().evaluate(() => scrollBy(0, -20)); };
 
 export const CHAPTERS = [
@@ -34,8 +35,8 @@ export const CHAPTERS = [
         act: async (d, page) => { await d.zoomTo(page.locator('#fh-date, .date-echo').first(), 0.35, 1.8); } },
       { id: 'c01c', text: 'The time has three boxes, on the twenty-four hour clock, with seconds. Typing two digits moves you on to the next box.',
         act: async (d, page) => { await d.zoomOut(); await d.type(page.getByLabel('Hours', { exact: true }), '160000', 120); } },
-      { id: 'c01d', text: 'Start typing the place and choose it from the list. Latitude, longitude and the time zone are filled in for you.',
-        act: async (d, page) => { await d.type(page.getByLabel('Place'), 'Allahabad (Prayagraj)', 35); await page.getByLabel('Place').press('Tab'); await d.highlight(page.getByLabel('Latitude')); await d.wait(900); await d.unhighlight(); } },
+      { id: 'c01d', text: 'Start typing the place. A list opens: your saved places and the built-in ones first, then the world atlas. Choose one, and latitude, longitude and the time zone are filled in for you.',
+        act: async (d, page) => { await d.type(page.getByLabel('Place'), 'Allahabad', 90); await d.wait(500); await d.zoomTo(LIST(page), 0.8, 1.8); await d.wait(2800); await d.click(LIST(page).getByRole('option').filter({ hasText: 'Allahabad (Prayagraj)' }).first(), 700); await d.wait(300); await d.zoomOut(0); await d.highlight(page.getByLabel('Latitude')); await d.wait(900); await d.unhighlight(); } },
       { id: 'c01e', text: 'In India, between September 1942 and October 1945, the clocks ran one hour ahead. The app knows this. It sets the zone to plus six thirty, and says so in a note under the form.',
         act: async (d, page) => { const n = page.getByText('India war time was in force').first(); await d.highlight(n); await d.wait(1500); await d.highlight(page.getByLabel(/^Zone/)); await d.wait(1200); await d.unhighlight(); } },
       { id: 'c01f', text: 'Choose the calculation profile: Parashara\'s Light 9, which is the default, Parashara\'s Light 7, or Solar Fire and Kala Chakra. Then press Cast chart.',
@@ -44,6 +45,21 @@ export const CHAPTERS = [
         act: async (d, page) => { await d.click(btn(page, 'Edit chart')); await d.wait(300); for (const n of ['Open chart file…', 'Save chart', 'Save for Parashara\'s Light', 'Now']) { await d.hover(btn(page, n), 550); await d.wait(350); } await d.click(btn(page, 'Cast chart')); } },
       { id: 'c01h', text: 'Under the name, the chart line repeats the date, time, zone and coordinates, and below it the panchanga: tithi, nakshatra and pada, yoga, karana and the weekday, which changes at sunrise.',
         act: async (d, page) => { await d.zoomTo(T(page, 'panchanga'), 0.85, 1.9); } },
+    ],
+  },
+  {
+    id: 'c15', title: 'The world atlas', tab: null,
+    segments: [
+      { id: 'c15a', text: 'The app carries a world atlas of about eighty-six thousand places, and needs no internet for it: every town of five thousand people or more, every Indian town with a known population, and every village in Odisha.',
+        act: async (d, page) => { await d.click(btn(page, 'Edit chart')); await d.wait(400); await d.type(page.getByLabel('Place'), 'Lapanga', 110); await d.wait(500); await d.zoomTo(LIST(page), 0.8, 1.8); } },
+      { id: 'c15b', text: 'Each suggestion shows its state, its country and its coordinates, so places with the same name can be told apart. Old names work too: type Bombay, and Mumbai is found.',
+        act: async (d, page) => { await d.wait(2600); await d.zoomOut(0); await d.type(page.getByLabel('Place'), 'Bombay', 110); await d.wait(400); await d.zoomTo(LIST(page), 0.8, 1.8); await d.hover(page.getByRole('option').first(), 700); } },
+      { id: 'c15c', text: 'A comma narrows the list to a state or a country.',
+        act: async (d, page) => { await d.zoomOut(0); await d.type(page.getByLabel('Place'), 'Puri, Odisha', 90); await d.wait(400); await d.zoomTo(LIST(page), 0.8, 1.6); } },
+      { id: 'c15d', text: 'Outside India, the zone and daylight saving come from the world time-zone database, for the date and time of the chart. New York on the first of July 1950 gets zone minus five, with daylight saving ticked, and a note names the zone that was used.',
+        act: async (d, page) => { await d.wait(800); await d.zoomOut(0); await page.getByLabel('Date').fill('1950-07-01'); await d.type(page.getByLabel('Place'), 'New York City', 100); await d.wait(500); await d.click(LIST(page).getByRole('option').filter({ hasText: 'United States' }).first(), 700); await d.wait(400); await d.zoomTo(page.locator('.field-tz'), 0.3, 1.8); await d.highlight(page.getByLabel(/^Zone/)); await d.wait(1600); await d.highlight(page.locator('.field-dst')); await d.wait(1600); await d.unhighlight(); await d.zoomOut(0); await d.zoomTo(page.locator('.zone-note'), 0.9, 1.6); } },
+      { id: 'c15e', text: 'Indian places keep the rule that matches Parashara\'s Light: India Standard Time, and war time from 1942 to 1945. A place you save from the atlas keeps its time zone.',
+        act: async (d, page) => { await d.wait(1500); await d.zoomOut(); await d.hover(btn(page, 'Save this place'), 800); await d.highlight(btn(page, 'Save this place')); } },
     ],
   },
   {
@@ -199,7 +215,7 @@ export const CHAPTERS = [
     segments: [
       { id: 'c13a', text: 'Settings changes a calculation choice for every chart: the ayanamsa, Delta-T, the true or mean node, and the dasha year. When a setting differs from the profile, a button appears to put it back.',
         act: async (d, page) => { await d.zoomTo(P(page, 'h-calc'), 0.85, 1.5); } },
-      { id: 'c13b', text: 'Saved places keeps your own places, with their coordinates and zone. Export them to a file, and import them on another device.',
+      { id: 'c13b', text: 'Saved places keeps your own places, with their coordinates and zone. Export them to a file, and import them on another device. Below them, the world atlas is credited to its source.',
         act: async (d, page) => { await d.zoomOut(0); await reveal(T(page, 'places-manager')); await d.zoomTo(T(page, 'places-manager'), 0.85, 1.4); } },
       { id: 'c13c', text: 'And Appearance offers a light theme, a dark theme, and a warm night theme that is gentler on the eyes in the evening, with three text sizes. The round button at the top right switches the theme on any page.',
         act: async (d, page) => { await d.zoomOut(0); await reveal(P(page, 'h-look')); const th = page.getByLabel('Theme'); await th.selectOption('dark'); await d.wait(1600); await th.selectOption('warm'); await d.wait(1600); await th.selectOption('light'); } },

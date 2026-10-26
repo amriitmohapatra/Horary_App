@@ -1,6 +1,6 @@
 # Media: launch video, video guide, illustrated PDF
 
-Everything here is generated from the shipped app (`../dist/Astro-Amriit v0.9.html`) with the
+Everything here is generated from the shipped app (`../dist/Astro-Amriit v0.11.html`) with the
 public example chart of the user guide (Amitabh Bachchan, 11 Oct 1942, 16:00, Allahabad). Only
 the sources are in git; rendered video, audio and images go to ignored `work/`, `out/` folders.
 

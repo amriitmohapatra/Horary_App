@@ -64,13 +64,14 @@
 </div>
 
 <div class="layer" id="castL">
-  <div class="win" id="winA"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">Astro-Amriit v0.9.html</span></div>
+  <div class="win" id="winA"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">Astro-Amriit v0.11.html</span></div>
     <video id="vA" src="work/clipA.webm" muted preload="auto"></video></div>
+  <div class="chip" id="chipAt"><b>86,000 places</b> in a built-in world atlas</div>
   <div class="chip" id="chipA"><b>9 of 9</b> planets equal to Parashara's Light 9, to the second</div>
 </div>
 
 <div class="layer" id="tourL">
-  <div class="win" id="winB"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">Astro-Amriit v0.9.html</span></div>
+  <div class="win" id="winB"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">Astro-Amriit v0.11.html</span></div>
     <video id="vB" src="work/clipB.webm" muted preload="auto"></video></div>
   <div class="tabs" id="tabs">
     <div>Vargas</div><div>Dashas</div><div>Jaimini</div><div>Transits</div><div>NTP (Research)</div><div>KP (Research)</div>
@@ -91,7 +92,7 @@
 <div class="layer" id="outroL">
   <div class="center title" style="top:330px">Astro-Amriit</div>
   <div class="center tag">Cast once. Read every page.</div>
-  <div class="center small">Karar Ashram Astrology Software · v0.9 · works offline</div>
+  <div class="center small">Karar Ashram Astrology Software · v0.11 · works offline</div>
 </div>
 
 <script>
@@ -127,7 +128,8 @@ async function render(t) {
   const ca = $('castL');
   ca.style.opacity = win(t, T.s3, T.s4, 0.4);
   $('winA').style.transform = `scale(${0.94 + 0.04 * ease((t - T.s3) / 1.2)})`;
-  $('chipA').style.opacity = win(t, T.s3 + 5.2, T.s4 - 0.1, 0.4);
+  $('chipAt').style.opacity = T.chipAt ? win(t, T.chipAt, T.chipAtEnd, 0.35) : 0;
+  $('chipA').style.opacity = win(t, T.chipA ?? T.s3 + 5.2, T.s4 - 0.1, 0.4);
   // tour
   const tu = $('tourL');
   tu.style.opacity = win(t, T.s4, T.s5, 0.4);
