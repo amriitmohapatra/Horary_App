@@ -35,10 +35,11 @@ reproduced to ≤ 1″ for Uranus, Neptune, Pluto and Chiron (Solar Fire
 profile); in the PL profiles the tropical distance to the Sun is kept to
 1e-9°. Hover rules: 8 unit tests on hand-made charts; e2e on the Amitabh
 Bachchan chart (Saturn retrograde in Taurus, 4th house, rules the 1st and
-12th). 824 unit/engine tests; e2e 35 passed on the shipped file, axe clean
-with the tooltip open; contract check and pre-publish scan clean. The one
-failing e2e (KP ruling planets of *now* can all be rejected at some
-moments) fails identically on the shipped v0.9 file.
+12th). 824 unit/engine tests; e2e 36 passed on the shipped file, axe clean
+with the tooltip open; contract check and pre-publish scan clean. The KP
+ruling-planets e2e no longer depends on the present moment (at some moments
+every ruling planet is rejected and it failed, on v0.9 too): it now sets
+B1's printed moment (pp. 93–94) and checks the five planets the book prints.
 
 **Out of scope / open** Transit events (ingresses, stations) for the outer
 bodies: Swiss's speed for them spikes near solar conjunction (Neptune's dips

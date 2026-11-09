@@ -475,5 +475,8 @@ architecture.
   Ra/Ke 5/9 full) + PL virupas when exact degrees exist; conjunction = same
   sign, close/war from states.ts. Per-page switches (Page 1, Vargas,
   Experimental, Transits), on by default, `kaast2.hoverInfo.v1`.
-- Pre-existing: e2e `kp.spec.ts` ruling-planets assertion depends on the
-  current moment (fails on shipped v0.9 too, e.g. 2026-11-09 16:30 UTC).
+- Fixed: e2e `kp.spec.ts` ruling-planets assertion depended on the current
+  moment (all RPs rejected at e.g. 2026-11-09 16:30 UTC; failed on v0.9 too).
+  It now sets B1 pp. 93–94 (Bombay 23-2-1969 11:50 IST, fixture b1-E20) and
+  checks the five printed RPs; verified with the browser clock pinned to
+  the failing moment (old test fails, new passes).

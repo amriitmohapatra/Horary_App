@@ -94,9 +94,24 @@ test('KP (Research) sub-tabs: significators, life matters, ruling planets, trans
   await expect(page.getByTestId('kp-tr-period')).toBeVisible();
   await axe('KP transit');
 
+  // Ruling planets at a fixed moment, not "now": at some moments every ruling planet is
+  // rejected and the ordered list is empty (seen 2026-11-09 ~16:30 UTC). B1 pp. 93–94
+  // (tests/fixtures/kp_readers_rp.json, b1-E20): Bombay, 23-2-1969 11:50 IST, nothing
+  // rejected; the book prints day Su, Moon sign Ve, Moon star Su, lagna sign Ve, lagna star Su.
   await page.getByRole('button', { name: 'Ruling planets', exact: true }).click();
+  await page.getByRole('button', { name: 'Set moment' }).click();
+  await page.locator('#kpm-date').fill('1969-02-23');
+  await page.getByTestId('kpm-entry').getByLabel('Hours', { exact: true }).fill('11:50:00');
+  await page.locator('#kpm-place').fill('Mumbai');
+  await page.locator('#kpm-name').press('Enter');
+  await expect(page.getByTestId('kpm-summary')).toContainText('1969');
   await expect(page.getByTestId('kp-rp').locator('tbody tr')).toHaveCount(7);
+  for (const [role, planet] of [['day', 'Su'], ['Moon sign', 'Ve'], ['Moon star', 'Su'], ['lagna sign', 'Ve'], ['lagna star', 'Su']]) {
+    await expect(page.getByTestId('kp-rp').locator(`tr[data-role="${role}"] td`), role).toHaveText(planet!);
+  }
   await expect(page.getByTestId('kp-rp-ordered').locator('.pl')).not.toHaveCount(0);
+  await expect(page.getByTestId('kp-rp-ordered')).toContainText('Su');
+  await expect(page.getByTestId('kp-rp-ordered')).toContainText('Ve');
   await page.getByRole('button', { name: 'Find birth times' }).click();
   await expect(page.getByTestId('kp-rect-rps')).toBeVisible();
   await axe('KP ruling planets');
