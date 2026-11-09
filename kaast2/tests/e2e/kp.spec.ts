@@ -95,6 +95,15 @@ test('KP (Research) sub-tabs: significators, life matters, ruling planets, trans
   await axe('KP transit');
 
   await page.getByRole('button', { name: 'Ruling planets', exact: true }).click();
+  // A fixed moment of judgement (B6 no. 74, Delhi 13-8-1969 7:30). The ruling planets of "now" can all
+  // be rejected (each in the star or sub of a retrograde planet, as on 2026-11-09), which empties the
+  // ordered list; the test must not depend on the sky at run time.
+  await page.getByRole('button', { name: 'Set moment' }).click();
+  await page.locator('#kpm-date').fill('1969-08-13');
+  await page.getByTestId('kpm-entry').getByLabel('Hours', { exact: true }).fill('07:30:00');
+  await page.locator('#kpm-place').fill('New Delhi');
+  await page.locator('#kpm-name').press('Enter');
+  await expect(page.getByTestId('kpm-summary')).toContainText('1969');
   await expect(page.getByTestId('kp-rp').locator('tbody tr')).toHaveCount(7);
   await expect(page.getByTestId('kp-rp-ordered').locator('.pl')).not.toHaveCount(0);
   await page.getByRole('button', { name: 'Find birth times' }).click();

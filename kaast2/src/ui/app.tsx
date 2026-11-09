@@ -112,7 +112,7 @@ export function App(): JSX.Element {
           : c && 'ok' in c ? <Routed c={c.ok} /> : engine.value.status === 'ready' && <p class="empty">{t('page1.empty')}</p>}
       </main>
       <footer class="foot">
-        Astro-Amriit v{__APP_VERSION__} · {__BUILD_MODE__} build {__BUILD_COMMIT__} · Swiss Ephemeris © Astrodienst AG, AGPL
+        Astro-Amriit v{__APP_VERSION__} · {__BUILD_MODE__} build {__BUILD_COMMIT__} · Swiss Ephemeris © Astrodienst AG, AGPL · Atlas: GeoNames, CC BY 4.0
       </footer>
     </>
   );

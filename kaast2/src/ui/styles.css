@@ -415,3 +415,17 @@ table.data .r { text-align: right; }
 .btn-link { background: none; border: 0; padding: 0; font: inherit; color: var(--text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .btn-link[aria-pressed='true'] { font-weight: 800; text-decoration-thickness: 2px; }
 tr.is-current > * { background: var(--surface-sunk); }
+
+/* Place search (atlas suggestions) */
+.place-search { position: relative; }
+.place-list {
+  position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 2px); margin: 0; padding: 4px 0; list-style: none;
+  max-height: 22em; overflow-y: auto; min-width: min(26em, 90vw);
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.place-list[hidden] { display: none; }
+.place-list li { display: flex; flex-direction: column; gap: 1px; padding: 6px 10px; cursor: pointer; }
+.place-list li.active { background: var(--surface-sunk); box-shadow: inset 3px 0 0 var(--accent); }
+.place-main { color: var(--text); font-size: var(--fs-sm); font-weight: 700; }
+.place-sub { color: var(--text-muted); font-size: var(--fs-xs); }
+.zone-note { color: var(--text-muted); }

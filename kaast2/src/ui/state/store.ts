@@ -204,13 +204,13 @@ export function setTextSize(t: TextSize): void {
 /** A chart for this moment at the given place (horary default). */
 export function nowInput(place: Place, now = new Date()): ChartInput {
   const probe = new Date(now.getTime() + place.tz * 3600_000);
-  const z = zoneFor(place, probe.getUTCFullYear(), probe.getUTCMonth() + 1, probe.getUTCDate());
-  const local = new Date(now.getTime() + z.tz * 3600_000);
+  const z = zoneFor(place, probe.getUTCFullYear(), probe.getUTCMonth() + 1, probe.getUTCDate(), probe.getUTCHours(), probe.getUTCMinutes());
+  const local = new Date(now.getTime() + (z.tz + z.dst) * 3600_000);
   return {
     name: '',
     date: { y: local.getUTCFullYear(), m: local.getUTCMonth() + 1, d: local.getUTCDate() },
     time: { h: local.getUTCHours(), mi: local.getUTCMinutes(), s: local.getUTCSeconds() },
-    tzHours: z.tz, dstHours: 0,
+    tzHours: z.tz, dstHours: z.dst,
     place: { name: place.name, latDeg: place.lat, lonDeg: place.lon },
     profileId: DEFAULT_PROFILE,
   };

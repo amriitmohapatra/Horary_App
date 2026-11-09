@@ -5,6 +5,7 @@
  */
 import { useState } from 'preact/hooks';
 import type { JSX } from 'preact';
+import { atlasSize } from '../../io/atlas';
 import { BUILTIN_PLACES, deletePlace, exportPlaces, importPlaces, parseCoord, savedPlaces, savePlace, type Place } from '../../io/places';
 import { t, type MessageKey } from '../i18n';
 import { pad2, zone as fmtZone } from '../format';
@@ -133,6 +134,7 @@ export function PlacesManager(): JSX.Element {
           <summary>{t('places.builtin', { n: BUILTIN_PLACES.length })}</summary>
           <p class="hint-text">{BUILTIN_PLACES.map((p) => p.name).join(' · ')}</p>
         </details>
+        <p class="hint-text" data-testid="atlas-credit">{t('place.atlas', { n: atlasSize().toLocaleString('en-US') })}</p>
       </div>
     </section>
   );
