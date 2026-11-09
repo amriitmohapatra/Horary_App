@@ -12,32 +12,10 @@ import { chartStates, WAR_ORB, type ChartStates, type PlanetState } from '../../
 import { SIGNS } from '../../../engine/zodiac';
 import { type VargaId } from '../../../engine/varga/rules';
 import { EastIndianChart, type ChartEntry, type ChartPart } from '../../components/EastIndianChart';
-import { conjunctionOrb, setConjunctionOrb } from '../../state/store';
-import { Chip, PARASHARI, Pl, VargaSelect, ordinal, vargaLabel, type Tone } from './common';
-
-const DIGNITY: Record<NonNullable<PlanetState['dignity']>, { word: string; abbr: string; tone: Tone; tip: string }> = {
-  EX: { word: 'Exalted', abbr: 'Ex', tone: 'good', tip: 'In its sign of exaltation' },
-  MT: { word: 'Moolatrikona', abbr: 'Mt', tone: 'good', tip: 'In its moolatrikona sign and degrees (Rasi only)' },
-  OWN: { word: 'Own sign', abbr: 'Ow', tone: 'good', tip: 'In a sign it rules' },
-  DB: { word: 'Debilitated', abbr: 'Db', tone: 'bad', tip: 'In its sign of debilitation' },
-};
-const TRIK_TIP: Record<number, string> = {
-  3: '3rd house: effort, courage, siblings; a mild dusthana (some texts count it with 6, 8, 12)',
-  6: '6th house: enemies, debts, disease (dusthana)',
-  8: '8th house: obstacles, longevity, the hidden (dusthana)',
-  12: '12th house: loss, expense, retreat (dusthana)',
-};
-
-export function stateChips(p: PlanetState): { word: string; abbr: string; tone: Tone; tip: string }[] {
-  const out: { word: string; abbr: string; tone: Tone; tip: string }[] = [];
-  if (p.dignity) out.push(DIGNITY[p.dignity]);
-  if (p.vargottama) out.push({ word: 'Vargottama', abbr: 'Vg', tone: 'good', tip: 'Same sign in the Rasi and the Navamsha' });
-  if (p.digBala) out.push({ word: 'Dig bala', abbr: 'Dg', tone: 'good', tip: 'In its house of directional strength' });
-  if (p.retrograde) out.push({ word: 'Retrograde', abbr: 'R', tone: 'info', tip: 'Moving backwards as seen from the Earth (Rahu and Ketu always)' });
-  if (p.combust) out.push({ word: 'Combust', abbr: 'c', tone: 'bad', tip: 'Too close to the Sun' });
-  if (p.trik) out.push({ word: `In the ${ordinal(p.trik)}`, abbr: String(p.trik), tone: p.trik === 3 ? 'mixed' : 'bad', tip: TRIK_TIP[p.trik]! });
-  return out;
-}
+import { conjunctionOrb, hoverInfo, setConjunctionOrb } from '../../state/store';
+import { summaryChartOf } from '../../../engine/exp/summary';
+import { summaryInfo } from '../../components/PlanetSummary';
+import { Chip, DIGNITY, PARASHARI, Pl, VargaSelect, stateChips, vargaLabel } from './common';
 
 function plateEntries(s: ChartStates): ChartEntry[][] {
   const by: PlanetState[][] = Array.from({ length: 12 }, () => []);
@@ -52,8 +30,8 @@ function plateEntries(s: ChartStates): ChartEntry[][] {
     if (sign === s.ascSign) lines.push({ key: 'As', parts: [{ text: 'As', tone: 'As', bold: true }] });
     for (const p of ps) {
       const marks = stateChips(p).filter((c) => !/^\d+$/.test(c.abbr));
-      const parts: ChartPart[] = [{ text: p.id, tone: p.id, bold: true }];
-      for (const m of marks) parts.push({ text: ` ${m.abbr}`, tone: m.tone === 'good' ? 'good' : m.tone === 'bad' ? 'bad' : 'muted' });
+      const parts: ChartPart[] = [{ text: p.id, tone: p.id, bold: true, point: p.id }];
+      for (const m of marks) parts.push({ text: ` ${m.abbr}`, tone: m.tone === 'good' ? 'good' : m.tone === 'bad' ? 'bad' : 'muted', point: p.id });
       lines.push({ key: p.id, parts });
     }
     return lines;
@@ -116,7 +94,8 @@ export function States({ chart }: { chart: ChartResult }): JSX.Element {
           <header class="panel-head"><h2 id="h-exp-plate">{vargaLabel(varga)}</h2></header>
           <div class="panel-body">
             <EastIndianChart title={`${vargaLabel(varga)} with planet states: ${name}`} signs={plateEntries(s)} lagnaSign={s.ascSign}
-              centre={[{ text: varga, size: 56, display: true }, { text: 'States', size: 26 }]} maxFont={40} minFont={12} />
+              centre={[{ text: varga, size: 56, display: true }, { text: 'States', size: 26 }]} maxFont={40} minFont={12}
+              info={hoverInfo.value.exp ? summaryInfo(summaryChartOf(chart, varga, orb), vargaLabel(varga)) : undefined} />
             <p class="hint-text">
               Ex exalted · Mt moolatrikona · Ow own sign · Db debilitated · Vg vargottama · Dg dig bala · R retrograde · c combust.
               House numbers in red mark the 3rd, 6th, 8th and 12th.

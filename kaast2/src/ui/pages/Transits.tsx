@@ -19,7 +19,12 @@ import { Icon } from '../components/Icon';
 import { TimeFields } from '../components/TimeFields';
 import { t, type MessageKey } from '../i18n';
 import { civilDate, civilTime, dm, longDate, pad2 } from '../format';
-import { engine } from '../state/store';
+import { conjunctionOrb, engine, hoverInfo, setTransitOuter, transitOuter } from '../state/store';
+import { OUTER, OUTER_NAMES, outersIn, type OuterId } from '../../engine/outer';
+import { siderealFrame } from '../../engine';
+import { isCombust } from '../../engine/combust';
+import type { BodyId, SummaryChart } from '../../engine/exp/summary';
+import { HoverToggle, summaryInfo } from '../components/PlanetSummary';
 
 const UNITS: StepUnit[] = ['s', 'min', 'h', 'd', 'w', 'mo', 'y', '10y'];
 const HORIZONS = [30, 91, 365] as const;
@@ -40,6 +45,8 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
   const [timeDraft, setTimeDraft] = useState<string | null>(null);
 
   const pos = useMemo(() => (swe ? transitPositions(swe, chart.profile, jd) : null), [swe, chart.profile, jd]);
+  const showOuter = transitOuter.value;
+  const outer = useMemo(() => (swe && showOuter ? outersIn(swe, siderealFrame(swe, chart.profile, jd)) : null), [swe, chart.profile, jd, showOuter]);
   const events = useMemo(() => {
     if (!swe) return [];
     const ks = (Object.keys(kinds) as EventKind[]).filter((k) => kinds[k]);
@@ -71,8 +78,24 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
   for (const p of PLANETS) {
     const tp = pos[p];
     const { d, m } = dmsInSign(tp.lon);
-    signs[signIndex(tp.lon)]!.push({ key: `t${p}`, parts: [{ text: p, tone: p, bold: true }, ...(tp.retrograde ? [{ text: 'R', tone: p }] : []), { text: ` ${dm(d, m)}` }] });
+    signs[signIndex(tp.lon)]!.push({ key: `t${p}`, parts: [{ text: p, tone: p, bold: true, point: p }, ...(tp.retrograde ? [{ text: 'R', tone: p, point: p }] : []), { text: ` ${dm(d, m)}` }] });
   }
+  for (const o of outer ? OUTER : []) {
+    const op = outer![o];
+    const { d, m } = dmsInSign(op.lon);
+    signs[signIndex(op.lon)]!.push({ key: `t${o}`, parts: [{ text: o, tone: 'outer', bold: true, point: o }, ...(op.retrograde ? [{ text: 'R', tone: 'outer', point: o }] : []), { text: ` ${dm(d, m)}` }] });
+  }
+  const hoverCtx = ((): SummaryChart => {
+    const sg: Partial<Record<BodyId, number>> = {}, ps: SummaryChart['pos'] = {}, retro: SummaryChart['retro'] = {}, combust: SummaryChart['combust'] = {};
+    for (const p of PLANETS) {
+      sg[p] = signIndex(pos[p].lon); ps[p] = pos[p]; retro[p] = pos[p].retrograde;
+      combust[p] = p !== 'Su' && isCombust(pos[p], pos.Su);
+    }
+    for (const o of outer ? OUTER : []) { sg[o] = signIndex(outer![o].lon); ps[o] = outer![o]; retro[o] = outer![o].retrograde; }
+    const natal: SummaryChart['natal'] = {};
+    for (const p of PLANETS) natal[p] = { sign: signIndex(chart.bodies[p].lon), lonDeg: chart.bodies[p].lonDeg };
+    return { ascSign: natalAsc, signs: sg, pos: ps, retro, combust, natal, orb: conjunctionOrb.value };
+  })();
   for (const p of PLANETS) {
     const s = signIndex(chart.bodies[p].lon);
     const last = signs[s]!.find((x) => x.key === `n${s}`);
@@ -116,12 +139,16 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
 
       <div class="varga-main">
         <section class="panel" aria-labelledby="h-tchart">
-          <header class="panel-head"><h2 id="h-tchart">{t('tr.chart')}</h2></header>
+          <header class="panel-head"><h2 id="h-tchart">{t('tr.chart')}</h2><HoverToggle scope="transits" /></header>
           <div class="panel-body">
             <EastIndianChart title={`${t('tr.chart')} ${fmt(jd)}`} signs={signs} lagnaSign={natalAsc}
               centre={[{ text: t('tr.transit'), size: 30, display: true }, { text: civilDate(jd, zone), size: 22 }, { text: civilTime(jd, zone), size: 22 }]}
-              maxFont={30} minFont={11} />
+              maxFont={30} minFont={11}
+              info={hoverInfo.value.transits ? summaryInfo(hoverCtx, `${t('tr.transit')} ${civilDate(jd, zone)}, houses from the natal Lagna`) : undefined} />
             <p class="hint-text">{t('tr.chartNote')}</p>
+            <label class="check"><input type="checkbox" checked={showOuter} data-testid="transit-outer"
+              onChange={(ev) => setTransitOuter(ev.currentTarget.checked)} /> {t('tr.outer')}</label>
+            {showOuter && <p class="hint-text">{t('tr.outerNote')}</p>}
           </div>
         </section>
         <section class="panel" aria-labelledby="h-tpos">
@@ -138,6 +165,18 @@ export function Transits({ chart }: { chart: ChartResult }): JSX.Element {
                       <th scope="row"><span class={`pl pl-${p}`} title={PLANET_NAMES[p]}>{p}</span>{tp.retrograde ? ' R' : ''}</th>
                       <td class="num">{SIGNS[s]} {pad2(d)}:{pad2(m)}:{pad2(sec)}</td>
                       <td>{NAKSHATRA_NAMES[nakshatraIndex(tp.lon)]}</td>
+                      <td class="num r">{((s - natalAsc + 12) % 12) + 1}</td>
+                      <td class="num r">{((s - natalMoon + 12) % 12) + 1}</td>
+                    </tr>
+                  );
+                })}
+                {outer && OUTER.map((o: OuterId) => {
+                  const op = outer[o], s = signIndex(op.lon), { d, m, s: sec } = dmsInSign(op.lon);
+                  return (
+                    <tr key={o} data-point={o}>
+                      <th scope="row"><span class="pl pl-outer" title={OUTER_NAMES[o]}>{o}</span>{op.retrograde ? ' R' : ''}</th>
+                      <td class="num">{SIGNS[s]} {pad2(d)}:{pad2(m)}:{pad2(sec)}</td>
+                      <td>{NAKSHATRA_NAMES[nakshatraIndex(op.lon)]}</td>
                       <td class="num r">{((s - natalAsc + 12) % 12) + 1}</td>
                       <td class="num r">{((s - natalMoon + 12) % 12) + 1}</td>
                     </tr>

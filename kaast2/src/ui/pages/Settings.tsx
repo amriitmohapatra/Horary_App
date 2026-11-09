@@ -9,7 +9,7 @@ import { PL_AYANAMSA, type AyanamsaId } from '../../engine/ephem/ayanamsa';
 import { DEFAULT_PROFILE } from '../../engine/profiles';
 import { t, type MessageKey } from '../i18n';
 import { PlacesManager } from '../components/PlacesManager';
-import { overrides, setOverride, setTextSize, setTheme, textSize, theme, type TextSize, type Theme } from '../state/store';
+import { HOVER_SCOPES, hoverInfo, overrides, setHoverInfo, setOverride, setTextSize, setTheme, textSize, theme, type TextSize, type Theme } from '../state/store';
 
 const AYANAMSAS: [AyanamsaId, string][] = [
   ...Object.entries(PL_AYANAMSA).map(([id, v]) => [id as AyanamsaId, `PL: ${v.label}`] as [AyanamsaId, string]),
@@ -57,6 +57,18 @@ export function Settings({ input }: { input: ChartInput | null }): JSX.Element {
             options={[['true', t('settings.node.true')], ['mean', t('settings.node.mean')]]} parse={(v) => v as 'true' | 'mean'} />
           <Setting k="dashaYearDays" label="dasha.year" hint="settings.dashaYear.hint" base={base.dashaYearDays}
             options={DASHA_YEARS.map((y) => [String(y), t(`dasha.year.${String(y).replace('.', '_')}` as MessageKey)])} parse={Number} />
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="h-hover">
+        <header class="panel-head"><h2 id="h-hover">{t('settings.hover')}</h2></header>
+        <div class="panel-body">
+          <p class="hint-text">{t('settings.hover.hint')}</p>
+          <div class="controls-row" data-testid="settings-hover">
+            {HOVER_SCOPES.map((k) => (
+              <label key={k} class="check"><input type="checkbox" checked={hoverInfo.value[k]}
+                onChange={(e) => setHoverInfo(k, e.currentTarget.checked)} /> {t(`settings.hover.${k}` as MessageKey)}</label>
+            ))}
+          </div>
         </div>
       </section>
       <PlacesManager />

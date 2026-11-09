@@ -486,3 +486,21 @@ architecture.
   The typed text is now kept; coordinates and zone are still filled in.
 - Built-in London, New York, Singapore carry IANA zones (DST and history as
   for atlas places). Found while recording the video guide's atlas chapter.
+
+## 2026-11-09 — Astro-Amriit v0.12: outer planets, planet details on hover
+- Uranus, Neptune, Pluto, Chiron (`kaast2/src/engine/outer.ts`): same
+  siderealFrame + one swe_calc as the grahas (SE codes 7, 8, 9, 15; Chiron
+  from the already-embedded seas_18). Solar Fire profile = SF Gold to ≤ 1″
+  on all 10 reference charts. Shown only on Page 1 (Experimental) → Outer
+  planets and, optionally, in Transits (chart + table). Never added to
+  `PLANETS`: no rulership, dasha, aspect, strength or yoga uses them.
+- Transit EVENTS stay graha-only: near solar conjunction Swiss's speed for
+  the outer bodies spikes (light deflection; Neptune down to ~0.005 °/d),
+  so the |dv/dt| ≤ az below vz bound the complete search relies on fails.
+  Needs per-body bounds (or a deflection-free speed) before events.
+- Hover summary (`engine/exp/summary.ts`, pure): whole-sign houses from the
+  chart's own Lagna; rulership via SIGN_LORD (nodes and outer bodies rule
+  none, dispositor shown); aspects = aspects.ts sign-count fractions (PL:
+  Ra/Ke 5/9 full) + PL virupas when exact degrees exist; conjunction = same
+  sign, close/war from states.ts. Per-page switches (Page 1, Vargas,
+  Experimental, Transits), on by default, `kaast2.hoverInfo.v1`.

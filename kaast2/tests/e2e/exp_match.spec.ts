@@ -46,6 +46,14 @@ test('Page 1 (Experimental): states, conjunctions, lordships, aspects, Nandi Nad
   await page.getByLabel('Chart', { exact: true }).selectOption('D9');
   await expect(page.locator('#h-exp-plate')).toHaveText('D9 Navamsha');
 
+  await page.getByRole('button', { name: 'Outer planets' }).click();
+  await expect(page.getByTestId('exp-outer').locator('tbody tr')).toHaveCount(4);
+  await expect(page.getByTestId('exp-outer-conj').locator('li')).toHaveCount(4);
+  await page.locator('[data-testid="exp-page"] svg [data-point="Ur"]').first().hover();
+  await expect(page.getByTestId('chart-tip')).toContainText('Uranus');
+  await expect(page.getByTestId('chart-tip')).toContainText('No sign (not a graha)');
+  await axe(page, 'Outer planets (tooltip open)', found);
+
   await page.getByRole('button', { name: 'Lordships & yogas' }).click();
   await expect(page.getByTestId('exp-lords-D1').locator('li')).toHaveCount(12);
   await expect(page.getByTestId('exp-yogas').locator('li').first()).toBeVisible();
@@ -120,5 +128,47 @@ test('Matching and NTP matching with a prospective match', async ({ page }) => {
   await expect(page.getByTestId('ntp-match-mutual').locator('li')).not.toHaveCount(0);
   await expect(page.getByTestId('ntp-match-kootams')).toContainText('Rajju kootam');
   expect(found).toEqual([]);
+  expect(errors).toEqual([]);
+});
+
+test('Planet details on hover: Page 1, Vargas, the switch and Settings', async ({ page }) => {
+  const errors = await cast(page);
+  // Amitabh Bachchan: Aquarius Lagna, Saturn retrograde in Taurus (4th), ruling the 12th and the 1st.
+  const sa = page.locator('.p-rasi svg [data-point="Sa"]').first();
+  await sa.hover();
+  const tip = page.getByTestId('chart-tip');
+  await expect(tip).toContainText('Saturn');
+  await expect(tip).toContainText('Taurus, 4th house');
+  await expect(tip).toContainText('1st and 12th houses');
+  await expect(tip).toContainText('Retrograde');
+  // A mouse click on the planet keeps its card (only hovering drives the mouse).
+  await sa.click();
+  await expect(tip).toContainText('Saturn');
+  await page.mouse.move(2, 2);
+  await expect(tip).toHaveCount(0);
+  // D9 has its own Lagna: the card names the chart.
+  await page.locator('.p-d9 svg [data-point="Mo"]').first().hover();
+  await expect(tip).toContainText('Navamsha (D9)');
+
+  // The switch turns it off for this page only, and it is remembered.
+  await page.getByTestId('hover-toggle-page1').uncheck();
+  await page.locator('.p-rasi svg').hover();
+  await expect(page.locator('.p-rasi svg [data-point]')).toHaveCount(0);
+  await expect(tip).toHaveCount(0);
+  await openTab(page, 'Vargas');
+  await page.locator('#h-varga').locator('xpath=../..').locator('svg [data-point="Ju"]').first().hover();
+  await expect(tip).toContainText('Jupiter');
+  await openTab(page, 'Settings');
+  await expect(page.getByTestId('settings-hover').getByLabel('Page 1', { exact: true })).not.toBeChecked();
+  await page.getByTestId('settings-hover').getByLabel('Page 1', { exact: true }).check();
+  await openTab(page, 'Page 1');
+  await expect(page.getByTestId('hover-toggle-page1')).toBeChecked();
+
+  // Transits: the outer bodies join the chart and the table.
+  await openTab(page, 'Transits');
+  await page.getByTestId('transit-outer').check();
+  await expect(page.getByTestId('transit-table').locator('tbody tr')).toHaveCount(13);
+  await page.locator('[data-testid="transits-page"] svg [data-point="Pl"]').first().hover();
+  await expect(tip).toContainText('Pluto');
   expect(errors).toEqual([]);
 });

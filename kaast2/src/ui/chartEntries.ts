@@ -16,8 +16,8 @@ export function rasiEntries(rasi: PointRow[][], asc: number): ChartEntry[][] {
     ...rows.map((r) => ({
       key: r.id,
       parts: [
-        { text: r.id, tone: r.id, bold: true },
-        ...(r.retrograde ? [{ text: 'R', tone: r.id }] : []),
+        { text: r.id, tone: r.id, bold: true, ...(r.id !== 'As' ? { point: r.id } : {}) },
+        ...(r.retrograde ? [{ text: 'R', tone: r.id, ...(r.id !== 'As' ? { point: r.id } : {}) }] : []),
         { text: ` ${dm(r.deg, r.min)} ` },
         { text: r.nakshatraAbbr, tone: 'muted' },
       ],
@@ -34,8 +34,8 @@ export function vargaEntries(groups: PointId[][], rows: PointRow[], asc: number)
       lines.push({
         key: chunk.join(''),
         parts: chunk.flatMap((id, j) => [
-          { text: (j ? ' ' : '') + id, tone: id, bold: true },
-          ...(retro.has(id) ? [{ text: 'R', tone: id }] : []),
+          { text: (j ? ' ' : '') + id, tone: id, bold: true, ...(id !== 'As' ? { point: id } : {}) },
+          ...(retro.has(id) ? [{ text: 'R', tone: id, point: id }] : []),
         ]),
       });
     }

@@ -146,7 +146,7 @@ export function go(r: Route): void { if (location.hash !== `#${r}`) location.has
 export const nativeSex = signal<'unspecified' | 'male' | 'female'>('unspecified');
 
 /* ---- Page 1 (Experimental): the open sub-tab and the conjunction orb survive tab switches. ---- */
-export type ExpTab = 'states' | 'lords' | 'aspects' | 'worksheet' | 'nadi';
+export type ExpTab = 'states' | 'outer' | 'lords' | 'aspects' | 'worksheet' | 'nadi';
 export const expTab = signal<ExpTab>('states');
 const EXP_ORB = 'kaast2.conjunctionOrb.v1';
 export const conjunctionOrb = signal<number>(((): number => {
@@ -155,6 +155,35 @@ export const conjunctionOrb = signal<number>(((): number => {
 export function setConjunctionOrb(v: number): void {
   conjunctionOrb.value = v;
   try { localStorage.setItem(EXP_ORB, String(v)); } catch { /* non-fatal */ }
+}
+
+/* ---- Planet details on hover (v0.12): one switch per page that draws charts,
+ * on by default; each page shows its own switch, Settings shows them all. ---- */
+export const HOVER_SCOPES = ['page1', 'vargas', 'exp', 'transits'] as const;
+export type HoverScope = (typeof HOVER_SCOPES)[number];
+const HOVER = 'kaast2.hoverInfo.v1';
+export const hoverInfo = signal<Record<HoverScope, boolean>>(((): Record<HoverScope, boolean> => {
+  const all = Object.fromEntries(HOVER_SCOPES.map((k) => [k, true])) as Record<HoverScope, boolean>;
+  try {
+    const raw = localStorage.getItem(HOVER);
+    const v = raw ? (JSON.parse(raw) as Partial<Record<HoverScope, unknown>>) : {};
+    for (const k of HOVER_SCOPES) if (typeof v[k] === 'boolean') all[k] = v[k] as boolean;
+  } catch { /* defaults */ }
+  return all;
+})());
+export function setHoverInfo(scope: HoverScope, on: boolean): void {
+  hoverInfo.value = { ...hoverInfo.value, [scope]: on };
+  try { localStorage.setItem(HOVER, JSON.stringify(hoverInfo.value)); } catch { /* non-fatal */ }
+}
+
+/* ---- Transits: also show Uranus, Neptune, Pluto and Chiron (off by default). ---- */
+const TR_OUTER = 'kaast2.transitOuter.v1';
+export const transitOuter = signal<boolean>(((): boolean => {
+  try { return localStorage.getItem(TR_OUTER) === '1'; } catch { return false; }
+})());
+export function setTransitOuter(on: boolean): void {
+  transitOuter.value = on;
+  try { localStorage.setItem(TR_OUTER, on ? '1' : '0'); } catch { /* non-fatal */ }
 }
 
 /** Extra charts (events) held by the last opened PL file; kept here so they survive the form closing. */
