@@ -6,13 +6,16 @@
  * height; a two-pass fit picks one font size per sign region.
  * The same component draws D1, every varga, bhava and transit charts.
  */
-import type { JSX } from 'preact';
+import type { ComponentChildren, JSX } from 'preact';
+import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 
 export interface ChartPart {
   text: string;
   /** Planet colour key (Su…Ke, As) or a style class. */
   tone?: string;
   bold?: boolean;
+  /** The body this text names (Su…Ke, Ur…Ch): a hover target when the chart has `info`. */
+  point?: string;
 }
 export interface ChartEntry { key: string; parts: ChartPart[] }
 export interface CentreLine { text: string; size: number; display?: boolean }
@@ -29,6 +32,12 @@ export interface EastIndianChartProps {
   minFont?: number;
   /** Text along the outer edge of each sign region (index 0 = Aries), as PL prints house strengths. */
   edges?: (string | undefined)[];
+  /**
+   * Planet details on hover: content for the body under the pointer (null =
+   * none). Mouse: rest on a planet; touch: tap it (tap elsewhere to close).
+   * The same facts are in the page's tables, so nothing depends on hovering.
+   */
+  info?: (point: string) => ComponentChildren | null;
 }
 
 
@@ -159,7 +168,7 @@ export function fitFont(reg: Region, entries: ChartEntry[], maxF: number, minF: 
   return lo;
 }
 
-export function EastIndianChart(props: EastIndianChartProps): JSX.Element {
+function Plate(props: EastIndianChartProps): JSX.Element {
   const maxF = props.maxFont ?? 26;
   const minF = props.minFont ?? 12;
   const lines: [number, number, number, number][] = [
@@ -213,7 +222,8 @@ export function EastIndianChart(props: EastIndianChartProps): JSX.Element {
               return (
                 <text key={e.key} x={r.x} y={yy} text-anchor={r.a} font-size={f.toFixed(1)} class="plate-text">
                   {e.parts.map((p, j) => (
-                    <tspan key={j} class={p.tone ? `tone-${p.tone}` : undefined} font-weight={p.bold ? 700 : undefined}>{p.text}</tspan>
+                    <tspan key={j} class={(p.tone ? `tone-${p.tone}` : '') + (props.info && p.point ? ' hover-point' : '') || undefined}
+                      font-weight={p.bold ? 700 : undefined} data-point={props.info && p.point ? p.point : undefined}>{p.text}</tspan>
                   ))}
                 </text>
               );
@@ -222,5 +232,55 @@ export function EastIndianChart(props: EastIndianChartProps): JSX.Element {
         );
       })}
     </svg>
+  );
+}
+
+interface Tip { point: string; x: number; y: number; w: number; h: number }
+
+export function EastIndianChart(props: EastIndianChartProps): JSX.Element {
+  const wrap = useRef<HTMLDivElement>(null);
+  const [tip, setTip] = useState<Tip | null>(null);
+  // The plate is re-laid out only when its props change, not as the pointer moves.
+  const plate = useMemo(() => <Plate {...props} />, [props]);
+  const on = !!props.info;
+  // Switched off: drop any open card, so it does not reappear when switched back on.
+  useEffect(() => { if (!on) setTip(null); }, [on]);
+  // A card opened by a tap closes on a tap anywhere outside the chart.
+  useEffect(() => {
+    if (!tip) return;
+    const away = (ev: PointerEvent) => { if (!wrap.current?.contains(ev.target as Node)) setTip(null); };
+    document.addEventListener('pointerdown', away);
+    return () => document.removeEventListener('pointerdown', away);
+  }, [!!tip]);
+  if (!props.info) return plate;
+  const pointAt = (ev: PointerEvent): Tip | null => {
+    const el = (ev.target as Element | null)?.closest?.('[data-point]');
+    const box = wrap.current?.getBoundingClientRect();
+    if (!el || !box) return null;
+    return { point: el.getAttribute('data-point')!, x: ev.clientX - box.left, y: ev.clientY - box.top, w: box.width, h: box.height };
+  };
+  const move = (ev: PointerEvent) => {
+    if (ev.pointerType === 'touch') return;
+    const t = pointAt(ev);
+    setTip((o) => (t ? (o && o.point === t.point && Math.abs(o.x - t.x) < 24 && Math.abs(o.y - t.y) < 24 ? o : t) : null));
+  };
+  // Touch and pen: a tap opens a planet's card and a second tap (or a tap off the planets) closes it.
+  // The mouse is handled by hovering alone, so a click never hides the card it is pointing at.
+  const down = (ev: PointerEvent) => {
+    if (ev.pointerType === 'mouse') return;
+    const t = pointAt(ev);
+    setTip((o) => (t && (!o || o.point !== t.point) ? t : null));
+  };
+  const content = tip ? props.info(tip.point) : null;
+  const style: Record<string, string> = {};
+  if (tip) {
+    if (tip.x > tip.w / 2) style.right = `${Math.max(4, tip.w - tip.x + 14)}px`; else style.left = `${tip.x + 14}px`;
+    if (tip.y > tip.h / 2) style.bottom = `${Math.max(4, tip.h - tip.y + 14)}px`; else style.top = `${tip.y + 14}px`;
+  }
+  return (
+    <div class="plate-hover" ref={wrap} onPointerMove={move} onPointerDown={down} onPointerLeave={(ev) => { if (ev.pointerType !== 'touch') setTip(null); }}>
+      {plate}
+      {tip && content && <div class="chart-tip" role="tooltip" data-testid="chart-tip" style={style}>{content}</div>}
+    </div>
   );
 }

@@ -15,7 +15,9 @@ import { DashaList } from '../components/DashaList';
 import { HowComputed } from '../components/HowComputed';
 import { StrengthTable } from '../components/StrengthTable';
 import { ShadbalaBars } from '../components/ShadbalaBars';
-import { strength } from '../state/store';
+import { conjunctionOrb, hoverInfo, strength } from '../state/store';
+import { summaryChartOf } from '../../engine/exp/summary';
+import { HoverToggle, summaryInfo } from '../components/PlanetSummary';
 import type { Page1Strengths } from '../../engine/strength';
 
 const ORD = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'];
@@ -52,12 +54,14 @@ export function Page1({ chart }: { chart: ChartResult }): JSX.Element {
   const name = input.name || t('page1.birthChart');
   const compact = useMedia('(max-width: 560px)');
   const st = strength.value;
+  const hover = hoverInfo.value.page1;
+  const orb = conjunctionOrb.value;
 
   return (
     <article class="page1" data-testid="page1">
       <div class="p1-grid">
         <div class="p1-col">
-        <Panel id="rasi" title="page1.birthChart">
+        <Panel id="rasi" title="page1.birthChart" extra={<HoverToggle scope="page1" />}>
           <EastIndianChart
             title={`${t('page1.birthChart')}: ${name}`}
             signs={compact ? vargaEntries(m.rasi.map((g) => g.map((r) => r.id)), m.rows, m.ascSign) : rasiEntries(m.rasi, m.ascSign)}
@@ -73,6 +77,7 @@ export function Page1({ chart }: { chart: ChartResult }): JSX.Element {
               ]}
             maxFont={compact ? 46 : 27} minFont={compact ? 24 : 9}
             edges={st && !compact ? edgeLabels(st) : undefined}
+            info={hover ? summaryInfo(summaryChartOf(chart, 'D1', orb), 'Rasi (D1)') : undefined}
           />
         </Panel>
         <Panel id="planets" title="page1.planets">
@@ -90,6 +95,7 @@ export function Page1({ chart }: { chart: ChartResult }): JSX.Element {
             lagnaSign={m.navamshaAscSign}
             centre={[{ text: 'D9', size: 64, display: true }]}
             maxFont={44} minFont={16}
+            info={hover ? summaryInfo(summaryChartOf(chart, 'D9', orb), 'Navamsha (D9)') : undefined}
           />
         </Panel>
         <Panel id="dasha" title="page1.vimshottari">

@@ -14,6 +14,9 @@ import { vargaGroups, type VargaId } from '../../../engine/varga/rules';
 import { EastIndianChart } from '../../components/EastIndianChart';
 import { vargaEntries } from '../../chartEntries';
 import { Chip, Pl, VargaSelect, vargaLabel, type Tone } from './common';
+import { summaryChartOf } from '../../../engine/exp/summary';
+import { summaryInfo } from '../../components/PlanetSummary';
+import { conjunctionOrb, hoverInfo } from '../../state/store';
 
 const KENDRA = [1, 4, 7, 10], TRIKONA = [1, 5, 9], DUSTHANA = [6, 8, 12], UPACHAYA = [3, 6, 10, 11];
 export function houseClass(h: number): { word: string; tone: Tone }[] {
@@ -65,7 +68,8 @@ export function Lordships({ chart, yogas }: { chart: ChartResult; yogas?: (varga
           <header class="panel-head"><h2 id="h-exp-lchart">{vargaLabel(varga)}</h2></header>
           <div class="panel-body">
             <EastIndianChart title={`${vargaLabel(varga)}: ${name}`} signs={vargaEntries(vargaGroups(varga, points), model.rows, l.ascSign)}
-              lagnaSign={l.ascSign} centre={[{ text: varga, size: 56, display: true }]} maxFont={40} minFont={12} />
+              lagnaSign={l.ascSign} centre={[{ text: varga, size: 56, display: true }]} maxFont={40} minFont={12}
+              info={hoverInfo.value.exp ? summaryInfo(summaryChartOf(chart, varga, conjunctionOrb.value), vargaLabel(varga)) : undefined} />
           </div>
         </section>
         <section class="panel" aria-labelledby="h-exp-lords">

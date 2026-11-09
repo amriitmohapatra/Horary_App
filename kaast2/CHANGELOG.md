@@ -2,6 +2,50 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.12 — 2026-11-09 · `dist/Astro-Amriit v0.12.html`
+
+The boss's brief: show Uranus, Neptune, Pluto and Chiron like the other
+planets (and in transits), and let the mouse rest on a planet in a chart to
+read its state, the houses it rules, the aspects it receives and its
+conjunctions — switchable on each page.
+
+- **Page 1 (Experimental) → Outer planets (new sub-tab):** Uranus, Neptune,
+  Pluto and Chiron in the chart's own sidereal frame (same ayanamsa,
+  Delta-T and rounding as the grahas): longitude, R flag, nakshatra, pada,
+  syllable, KP star/sub/sub-sub lords, navamsha sign, house from the Lagna
+  and the Moon, and who shares their sign (with orbs). A Rasi chart draws
+  them in a muted italic beside the nine grahas. They rule no sign and have
+  no dasha, aspect or strength, so no other rule uses them.
+- **Transits:** "Show Uranus, Neptune, Pluto and Chiron" adds them to the
+  transit chart and the positions table (off by default, remembered).
+- **Planet details on hover (new):** rest the mouse on a planet (or tap it)
+  in Page 1 (D1 and D9), the large Vargas chart, the Experimental charts
+  (Highlights, Outer planets, Lordships) and the transit chart. The card
+  shows sign, house and (Rasi) nakshatra; dignity, retrograde, combust,
+  vargottama, dig bala and 3/6/8/12; the houses it rules **in that chart**
+  and its dispositor; full and partial sign aspects received (with PL
+  virupas in the Rasi) and the houses and planets it aspects; conjunctions
+  (close within the Highlights orb, planetary war within 1°); in transits,
+  the natal planets in the same sign. Each page has its own switch next to
+  its chart (on by default); Settings → *Planet details on hover* shows all
+  four switches.
+
+**Evidence** Outer bodies: all 10 Solar Fire Gold reference charts
+reproduced to ≤ 1″ for Uranus, Neptune, Pluto and Chiron (Solar Fire
+profile); in the PL profiles the tropical distance to the Sun is kept to
+1e-9°. Hover rules: 8 unit tests on hand-made charts; e2e on the Amitabh
+Bachchan chart (Saturn retrograde in Taurus, 4th house, rules the 1st and
+12th); a mouse click keeps the card, a phone tap opens it and a tap outside
+closes it. 831 unit/engine tests; 45 e2e on the shipped file (v0.11's atlas
+tests included), axe clean with the tooltip open; contract check and
+pre-publish scan clean.
+
+**Out of scope / open** Transit events (ingresses, stations) for the outer
+bodies: Swiss's speed for them spikes near solar conjunction (Neptune's dips
+to ~0.005 °/d), which breaks the motion bounds the complete event search
+proves; they need their own bounds first. Hover on the KP, Jaimini, Yogi &
+Bhava and Matching charts.
+
 ## v0.11 — 2026-10-26 · `dist/Astro-Amriit v0.11.html`
 
 Two fixes to the v0.10 place field, found while recording the video guide.
@@ -54,7 +98,6 @@ when the Place field gets focus), ~7 ms per keystroke. Single file 5.6 → 8.1 M
 mean time for some old charts (Agra 1861 → 5:21); the app keeps 5.5 unless the
 zone is typed (decision for the user). Villages outside Odisha with no
 population in GeoNames are not included.
-
 ## v0.9 — 2026-10-24 · `dist/Astro-Amriit v0.9.html`
 
 The boss's brief: label the KP tab **KP (Research)** and bring in the

@@ -565,5 +565,16 @@
   "exp.tab.aspects": "Aspects",
   "exp.tab.worksheet": "Strength worksheet",
   "exp.tab.nadi": "Nandi Nadi (research)",
-  "exp.intro": "Experimental: planet states, lordships, yogas and aspects in the Rasi and every divisional chart, laid out for reading at a glance. Each rule is stated where it is used; rules matched to a Parashara’s Light printout say so."
+  "exp.intro": "Experimental: planet states, lordships, yogas and aspects in the Rasi and every divisional chart, laid out for reading at a glance. Each rule is stated where it is used; rules matched to a Parashara’s Light printout say so.",
+  "exp.tab.outer": "Outer planets",
+  "hover.toggle": "Planet details on hover",
+  "hover.hint": "Rest the mouse on a planet in the chart (or tap it) to see its state, the houses it rules, the aspects it receives and its conjunctions",
+  "settings.hover": "Planet details on hover",
+  "settings.hover.hint": "Resting the mouse on a planet in a chart (or tapping it) shows its state, the houses it rules in that chart, the aspects it receives and casts, and its conjunctions. Each page also has its own switch next to its chart.",
+  "settings.hover.page1": "Page 1",
+  "settings.hover.vargas": "Vargas",
+  "settings.hover.exp": "Page 1 (Experimental)",
+  "settings.hover.transits": "Transits",
+  "tr.outer": "Show Uranus, Neptune, Pluto and Chiron",
+  "tr.outerNote": "Uranus, Neptune, Pluto and Chiron are shown in the chart and the table only; the events below are for the nine grahas."
 }

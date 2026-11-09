@@ -21,3 +21,16 @@ for (const width of [320, 390]) {
     expect(over).toEqual([]);
   });
 }
+
+test.describe('touch', () => {
+  test.use({ hasTouch: true, isMobile: true, viewport: { width: 390, height: 844 } });
+  test('a tap opens a planet card; a tap outside the chart closes it', async ({ page }) => {
+    await page.goto(url);
+    await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
+    await expect(page.getByTestId('page1')).toBeVisible();
+    await page.locator('.p-rasi svg [data-point="Mo"]').first().tap();
+    await expect(page.getByTestId('chart-tip')).toContainText('Moon');
+    await page.locator('.p-planets').tap();
+    await expect(page.getByTestId('chart-tip')).toHaveCount(0);
+  });
+});
