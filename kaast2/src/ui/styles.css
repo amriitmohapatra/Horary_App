@@ -415,3 +415,28 @@ table.data .r { text-align: right; }
 .btn-link { background: none; border: 0; padding: 0; font: inherit; color: var(--text); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .btn-link[aria-pressed='true'] { font-weight: 800; text-decoration-thickness: 2px; }
 tr.is-current > * { background: var(--surface-sunk); }
+
+/* ---- v0.10: outer planets, planet details on hover ---- */
+.pl-outer { color: var(--text-muted); }
+.tone-outer { fill: var(--plate-muted); font-style: italic; }
+.exp-top { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); align-items: flex-start; justify-content: space-between; }
+.panel-head .hover-toggle { margin-left: auto; font-size: var(--fs-xs); }
+.hover-toggle { white-space: nowrap; }
+.plate-hover { position: relative; }
+.plate .hover-point { cursor: help; }
+.chart-tip {
+  position: absolute; z-index: 20; pointer-events: none;
+  width: max-content; max-width: min(340px, 92%);
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--rule); border-left: 3px solid var(--plate-line); border-radius: var(--radius);
+  box-shadow: 0 4px 18px rgb(0 0 0 / 0.28); padding: var(--sp-2) var(--sp-3);
+  font-size: var(--fs-sm); line-height: 1.4;
+}
+.tip-card p { margin: 0 0 2px; }
+.tip-head { font-weight: 700; }
+.tip-list { display: grid; grid-template-columns: max-content 1fr; gap: 2px var(--sp-2); margin: var(--sp-1) 0 0; }
+.tip-list dt { color: var(--text-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.06em; padding-top: 2px; }
+.tip-list dd { margin: 0; }
+.tip-chip { display: inline-block; font-size: var(--fs-xs); font-weight: 700; padding: 0 6px; border: 1px solid currentColor; border-radius: 999px; margin: 0 4px 2px 0; }
+.tip-chip.tone-good { color: var(--ok); } .tip-chip.tone-bad { color: var(--danger); } .tip-chip.tone-mixed { color: var(--accent); } .tip-chip.tone-info { color: var(--text-muted); }
+.tip-partial { color: var(--text-muted); }

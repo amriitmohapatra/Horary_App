@@ -457,3 +457,23 @@ architecture.
 - Pre-publish scan stop words extended with generic English words that occur
   in private chart file names (election, interview, circus, verdict).
 
+
+## 2026-11-09 — Astro-Amriit v0.10: outer planets, planet details on hover
+- Uranus, Neptune, Pluto, Chiron (`kaast2/src/engine/outer.ts`): same
+  siderealFrame + one swe_calc as the grahas (SE codes 7, 8, 9, 15; Chiron
+  from the already-embedded seas_18). Solar Fire profile = SF Gold to ≤ 1″
+  on all 10 reference charts. Shown only on Page 1 (Experimental) → Outer
+  planets and, optionally, in Transits (chart + table). Never added to
+  `PLANETS`: no rulership, dasha, aspect, strength or yoga uses them.
+- Transit EVENTS stay graha-only: near solar conjunction Swiss's speed for
+  the outer bodies spikes (light deflection; Neptune down to ~0.005 °/d),
+  so the |dv/dt| ≤ az below vz bound the complete search relies on fails.
+  Needs per-body bounds (or a deflection-free speed) before events.
+- Hover summary (`engine/exp/summary.ts`, pure): whole-sign houses from the
+  chart's own Lagna; rulership via SIGN_LORD (nodes and outer bodies rule
+  none, dispositor shown); aspects = aspects.ts sign-count fractions (PL:
+  Ra/Ke 5/9 full) + PL virupas when exact degrees exist; conjunction = same
+  sign, close/war from states.ts. Per-page switches (Page 1, Vargas,
+  Experimental, Transits), on by default, `kaast2.hoverInfo.v1`.
+- Pre-existing: e2e `kp.spec.ts` ruling-planets assertion depends on the
+  current moment (fails on shipped v0.9 too, e.g. 2026-11-09 16:30 UTC).

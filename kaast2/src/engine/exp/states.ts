@@ -62,8 +62,8 @@ export interface ChartStates {
   acrossBoundary: NearMiss[];
 }
 
-const DIG_HOUSE: Readonly<Record<PlanetId, number | null>> = { Su: 10, Ma: 10, Mo: 4, Ve: 4, Me: 1, Ju: 1, Sa: 7, Ra: null, Ke: null };
-const WAR = new Set<PlanetId>(['Ma', 'Me', 'Ju', 'Ve', 'Sa']);
+export const DIG_HOUSE: Readonly<Record<PlanetId, number | null>> = { Su: 10, Ma: 10, Mo: 4, Ve: 4, Me: 1, Ju: 1, Sa: 7, Ra: null, Ke: null };
+export const WAR_PLANETS = new Set<PlanetId>(['Ma', 'Me', 'Ju', 'Ve', 'Sa']);
 export const DEFAULT_CONJUNCTION_ORB = 3;
 export const WAR_ORB = 1;
 
@@ -108,7 +108,7 @@ export function chartStates(chart: ChartResult, varga: VargaId, orb = DEFAULT_CO
         conjunctions.push({
           a, b, sign: signs[a], orb: d,
           close: d !== null && d <= orb,
-          war: d !== null && WAR.has(a) && WAR.has(b) && d <= WAR_ORB,
+          war: d !== null && WAR_PLANETS.has(a) && WAR_PLANETS.has(b) && d <= WAR_ORB,
         });
       } else if (d !== null && d <= orb) {
         acrossBoundary.push({ a, b, orb: d });

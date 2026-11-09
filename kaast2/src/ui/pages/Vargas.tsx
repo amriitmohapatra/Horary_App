@@ -14,6 +14,9 @@ import { SIGNS } from '../../engine/zodiac';
 import { EastIndianChart } from '../components/EastIndianChart';
 import { vargaEntries } from '../chartEntries';
 import { t, type MessageKey } from '../i18n';
+import { conjunctionOrb, hoverInfo } from '../state/store';
+import { summaryChartOf } from '../../engine/exp/summary';
+import { HoverToggle, summaryInfo } from '../components/PlanetSummary';
 
 type GroupId = 'shodasha' | 'tajika' | 'alternates';
 const GROUPS: { id: GroupId; label: MessageKey; ids: VargaId[] }[] = [
@@ -58,6 +61,7 @@ export function Vargas({ chart }: { chart: ChartResult }): JSX.Element {
       lagnaSign={vargaSign(v.id, chart.asc.lon)}
       centre={big ? [{ text: v.id, size: 56, display: true }, { text: v.name, size: 26 }] : [{ text: v.id, size: 72, display: true }]}
       maxFont={big ? 40 : 52} minFont={big ? 12 : 10}
+      info={big && hoverInfo.value.vargas ? summaryInfo(summaryChartOf(chart, v.id, conjunctionOrb.value), `${v.id} ${v.name}`) : undefined}
     />
   );
 
@@ -72,7 +76,7 @@ export function Vargas({ chart }: { chart: ChartResult }): JSX.Element {
 
       <div class="varga-main">
         <section class="panel" aria-labelledby="h-varga">
-          <header class="panel-head"><h2 id="h-varga">{sel.id} · {sel.name}</h2></header>
+          <header class="panel-head"><h2 id="h-varga">{sel.id} · {sel.name}</h2><HoverToggle scope="vargas" /></header>
           <div class="panel-body">{plate(sel, true)}</div>
         </section>
         <section class="panel" aria-labelledby="h-rule">

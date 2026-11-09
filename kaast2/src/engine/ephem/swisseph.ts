@@ -20,6 +20,7 @@ export interface EphemerisBlobs { wasm: ArrayBuffer; data: ArrayBuffer }
 
 export const SE = {
   SUN: 0, MOON: 1, MERCURY: 2, VENUS: 3, MARS: 4, JUPITER: 5, SATURN: 6,
+  URANUS: 7, NEPTUNE: 8, PLUTO: 9, CHIRON: 15,
   MEAN_NODE: 10, TRUE_NODE: 11,
   FLG_SWIEPH: 2, FLG_SPEED: 256, FLG_NONUT: 64, FLG_SIDEREAL: 65536,
   SIDM_LAHIRI: 1, SIDM_USER: 255,
