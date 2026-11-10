@@ -284,6 +284,12 @@ Options: keep PL 7 default (plan v0.1); make PL 9 default.
 Decision: three profiles — `pl9` (default), `pl7`, `solarfire`. PL 9 constants are pinned by its own output (Page 1 fixture); open PL 9 items (modern ΔT, Placidus) are settled by the export procedure.
 Consequences: parity target is PL 9; PL 7 remains testable against its transit cache; "PL7_DEFAULT" in older text means `pl7`.
 
+**ADR-11 Voice assistant: opt-in, tool-grounded, public ElevenLabs agent.**
+Context: the owner wants a spoken assistant that answers questions about the chart on screen in English, Hindi and Odia (English first). The app's promise is "nothing is fetched"; a language model asked about a chart will invent placements.
+Options: send the whole chart in the prompt; let the model compute; expose the validated engine as ElevenLabs client tools. Authentication: public agent ID, signed URLs from a server, hostname allowlist (impossible from `file://`, origin null).
+Decision: client tools only (`src/ui/voice/facts.ts` repackages Page 1 facts as words; `tools.ts` registers them); the prompt forbids computing or predicting (`kaast2/voice/agent_en.json` is the source of truth for the dashboard). Voice is off by default; turning it on in Settings is the consent; the SDK is a dynamic import loaded on Start, so nothing is sent before that. Public agent (owner, 2026-11-10) with daily limit 30, concurrency 2, no bursting, 300 s calls; no audio stored, transcripts deleted after 30 days. No name, birth place or coordinates are sent.
+Consequences: +≈0.65 MB in the single file; the offline e2e and contract checks still pass; a live e2e (`VOICE_LIVE=1`) spends agent minutes and is outside CI. The desktop build's CSP blocks ElevenLabs, so voice is not offered there yet. The agent ID can be copied; if abused, rotate the agent and ship a new file.
+
 ## 10. Open architectural questions
 
 - Rounding of displayed longitudes in PL7 (truncate/round; seconds/minutes) → profile constant after printouts.

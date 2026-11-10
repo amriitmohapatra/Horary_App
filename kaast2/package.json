@@ -1,8 +1,8 @@
 {
   "name": "astro-amriit",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "private": true,
-  "description": "Astro-Amriit \u2014 offline, single-file Vedic astrology app with Parashara's Light parity",
+  "description": "Astro-Amriit — offline, single-file Vedic astrology app with Parashara's Light parity",
   "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": {
@@ -18,6 +18,7 @@
     "ci": "npm run typecheck && npm test && npm run build && vite build --mode single && npm run contract && npm run test:e2e && npm run scan"
   },
   "dependencies": {
+    "@elevenlabs/client": "1.35.0",
     "@fontsource/atkinson-hyperlegible": "^5.2.6",
     "@fontsource/ibm-plex-mono": "^5.2.6",
     "@fontsource/marcellus": "^5.2.6",

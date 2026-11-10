@@ -9,7 +9,7 @@ import { PL_AYANAMSA, type AyanamsaId } from '../../engine/ephem/ayanamsa';
 import { DEFAULT_PROFILE } from '../../engine/profiles';
 import { t, type MessageKey } from '../i18n';
 import { PlacesManager } from '../components/PlacesManager';
-import { HOVER_SCOPES, hoverInfo, overrides, setHoverInfo, setOverride, setTextSize, setTheme, textSize, theme, type TextSize, type Theme } from '../state/store';
+import { HOVER_SCOPES, hoverInfo, overrides, setHoverInfo, setOverride, setTextSize, setTheme, setVoiceEnabled, textSize, theme, voiceAvailable, voiceEnabled, type TextSize, type Theme } from '../state/store';
 
 const AYANAMSAS: [AyanamsaId, string][] = [
   ...Object.entries(PL_AYANAMSA).map(([id, v]) => [id as AyanamsaId, `PL: ${v.label}`] as [AyanamsaId, string]),
@@ -71,6 +71,14 @@ export function Settings({ input }: { input: ChartInput | null }): JSX.Element {
           </div>
         </div>
       </section>
+      {voiceAvailable && <section class="panel" aria-labelledby="h-voice">
+        <header class="panel-head"><h2 id="h-voice">{t('settings.voice')}</h2></header>
+        <div class="panel-body">
+          <p class="hint-text">{t('settings.voice.consent')}</p>
+          <label class="check"><input type="checkbox" checked={voiceEnabled.value} data-testid="settings-voice"
+            onChange={(e) => setVoiceEnabled(e.currentTarget.checked)} /> {t('settings.voice.enable')}</label>
+        </div>
+      </section>}
       <PlacesManager />
       <section class="panel" aria-labelledby="h-look">
         <header class="panel-head"><h2 id="h-look">{t('settings.look')}</h2></header>

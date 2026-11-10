@@ -2,6 +2,34 @@
 
 Release-note style (what works · evidence · out of scope). One entry per shipped file.
 
+## v0.13 — 2026-11-10 · `dist/Astro-Amriit v0.13.html`
+
+The owner's brief: a voice assistant that answers questions about the birth
+chart in a conversational way, in English, Hindi and Odia — English first.
+
+- **Voice assistant (new, off by default):** Settings → *Voice assistant*
+  explains what is sent and to whom; ticking the box is the consent. A panel
+  *Ask about this chart* then appears under the chart bar: *Start
+  conversation* asks for the microphone and connects to the ElevenLabs agent
+  "Astro-Amriit voice (EN)"; questions can also be typed. The transcript and
+  the facts used are shown.
+- **Facts, not guesses:** the agent may only state what four tools return
+  for the chart on screen — overview, one planet (sign, degree, nakshatra,
+  pada, star/sub/sub-sub lords, house, flags, dignity, houses ruled, sign
+  lord, conjunctions, aspects), one house, and the Vimshottari periods on a
+  date. It does not predict events and does not discuss health or length
+  of life.
+- **Privacy:** nothing is loaded or sent before *Start*. The person's name,
+  birth place and coordinates are never sent. ElevenLabs keeps no audio and
+  deletes transcripts after 30 days. Daily limit 30 calls, 5 minutes each.
+- **Evidence:** the facts match the PL 9 Page 1 screenshot (15 tests); a
+  live typed conversation from the file answered "Moon in Libra, Swati, pada
+  2" through the tools; dasha, 8th-house and ascendant-lord answers match
+  PL 9; a marriage prediction and a lifespan question were declined.
+- **Out of scope:** Hindi and Odia (offered by the agent, waiting for the
+  family's listening test); interpretation of meanings; the desktop
+  installers (their security policy blocks the connection).
+
 ## v0.12 — 2026-11-09 · `dist/Astro-Amriit v0.12.html`
 
 The boss's brief: show Uranus, Neptune, Pluto and Chiron like the other

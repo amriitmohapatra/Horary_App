@@ -22,7 +22,8 @@ const FORBIDDEN_EXT = /\.(xlsx|xls|e31|exe|dll|grp|enc|ndx)$/i;
 const RULES = [
   [/\/Users\/[A-Za-z]|[A-Z]:\\Users\\|\/home\/user\/|\/tmp\/claude/, 'absolute local path'],
   [/-----BEGIN [A-Z ]*PRIVATE KEY-----/, 'private key'],
-  [/\b(AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}|sk-[A-Za-z0-9]{20,})\b/, 'token'],
+  [/\b(AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}|sk-[A-Za-z0-9]{20,}|sk_[A-Za-z0-9]{32,})\b/, 'token'],
+  // ElevenLabs keys (sk_…) must never ship: the voice agent is public by agent ID (ADR-11).
   // e-mail addresses (not retina asset names like icon@2x.png)
   [/\b[A-Za-z0-9._%+-]+@(?!\d+x\.)[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.(?!png\b|jpe?g\b|svg\b|webp\b|ico\b|icns\b)[A-Za-z]{2,}\b/, 'e-mail address'],
   [/<(?:BirthDate|Date)>\s*\d{7}\.\d/, 'GeoVision chart data (a Julian Day of a chart)'],

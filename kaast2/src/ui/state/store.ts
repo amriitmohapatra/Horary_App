@@ -186,6 +186,20 @@ export function setTransitOuter(on: boolean): void {
   try { localStorage.setItem(TR_OUTER, on ? '1' : '0'); } catch { /* non-fatal */ }
 }
 
+/* ---- Voice assistant (v0.13, docs/specs/voice_agent_plan.md): off by default;
+ * turning it on is the user's consent to send chart facts and voice to
+ * ElevenLabs. Nothing is loaded or sent until a conversation is started. ---- */
+const VOICE = 'kaast2.voice.v1';
+/** Not in the desktop app: its Content-Security-Policy blocks the connection (ADR-11). */
+export const voiceAvailable = !(typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window);
+export const voiceEnabled = signal<boolean>(((): boolean => {
+  try { return localStorage.getItem(VOICE) === '1'; } catch { return false; }
+})());
+export function setVoiceEnabled(on: boolean): void {
+  voiceEnabled.value = on;
+  try { localStorage.setItem(VOICE, on ? '1' : '0'); } catch { /* non-fatal */ }
+}
+
 /** Extra charts (events) held by the last opened PL file; kept here so they survive the form closing. */
 export const openedEvents = signal<{ name: string; input: ChartInput }[]>([]);
 
