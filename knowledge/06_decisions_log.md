@@ -504,3 +504,25 @@ architecture.
   Ra/Ke 5/9 full) + PL virupas when exact degrees exist; conjunction = same
   sign, close/war from states.ts. Per-page switches (Page 1, Vargas,
   Experimental, Transits), on by default, `kaast2.hoverInfo.v1`.
+
+## 2026-11-10 — Astro-Amriit v0.13: voice assistant (English)
+- Opt-in voice assistant on ElevenLabs Agents (ARCHITECTURE.md ADR-11; plan
+  `kaast2/docs/specs/voice_agent_plan.md`). The agent (Claude Haiku 5.5,
+  temperature 0) may state only facts returned by four client tools —
+  get_chart_overview, get_planet, get_house, get_dashas — which wrap
+  `page1Model`, `bodySummary` and Vimshottari of the chart on screen
+  (`src/ui/voice/facts.ts`). Houses are whole signs from the Lagna, as on
+  Page 1; the prompt sends cusp questions to the KP page.
+- Words, not codes ("Venus", "16 May 2018"); PL's truncated nakshatra names
+  are spoken in full (Purva Phalguni, Shatabhisha, …). Dates use the chart's
+  zone, as the Dashas page.
+- Owner's decisions: public agent; consent screen; Claude Haiku 5.5. The
+  listening gate was waived for English only; Hindi and Odia stay gated on
+  native-speaker tests (Odia and Hindi are offered by the agent on V4 Turbo).
+- No engine rule changed; the Python twin (kala_chakra) is unaffected.
+- Evidence: 15 oracle tests (PL9 Page 1) on the facts; config/policy test;
+  offline e2e "no requests before Start"; live e2e from `file://` (origin
+  null): Moon in Libra, Swati pada 2, via get_chart_overview + get_planet;
+  golden set (dasha on 2018-06-01, 8th-house planets, ascendant star/sub
+  lord) matches PL9; marriage prediction and lifespan question declined.
+

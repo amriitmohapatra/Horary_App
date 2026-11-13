@@ -4,9 +4,11 @@
 app that reproduces Parashara's Light (PL) at its default settings, drawn in
 the East Indian chart style.
 
-- **One file, no internet.** Download `dist/Astro-Amriit v0.12.html` and double-click
+- **One file, no internet.** Download `dist/Astro-Amriit v0.13.html` and double-click
   it. Nothing is uploaded and nothing is fetched; the Swiss Ephemeris runs
-  inside the page.
+  inside the page. The one exception is the optional voice assistant
+  (Settings → *Voice assistant*, off by default): while you talk to it, the
+  chart's facts and your voice go to ElevenLabs. See its consent text.
 - **Checked against PL itself.** Every number is tested against PL's own output
   (see *Evidence* below), not against our own expectations.
 - **Profiles.** *Parashara's Light 9* (default), *Parashara's Light 7*, and
@@ -38,6 +40,7 @@ the East Indian chart style.
 | Transits | brute-force completeness + PL 7 cache (10 461 Moon nakshatra changes) | no event missed |
 | Offline single file | Playwright, `file://`, network disabled | boots, casts, no requests |
 | Accessibility | axe WCAG 2.1 AA, every page, 3 themes | 0 violations |
+| Voice assistant facts | PL 9 Page 1 screenshot (planets, KP lords, dasha dates) | 15 tests; live answers match; nothing sent before Start |
 
 ## For developers
 

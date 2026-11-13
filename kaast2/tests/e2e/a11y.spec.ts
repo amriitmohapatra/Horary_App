@@ -30,4 +30,16 @@ for (const theme of ['light', 'dark', 'warm']) {
     }
     expect(found).toEqual([]);
   });
+
+  test(`axe: voice assistant setting and panel (${theme})`, async ({ page }) => {
+    await page.goto(url);
+    await page.evaluate(() => localStorage.setItem('kaast2.voice.v1', '1'));
+    await page.reload();
+    await expect(page.getByTestId('engine-status')).toHaveAttribute('data-state', 'ready', { timeout: 20_000 });
+    await page.evaluate((t) => document.documentElement.setAttribute('data-theme', t), theme);
+    await page.getByRole('button', { name: 'Cast chart' }).click();
+    await expect(page.getByTestId('voice-panel')).toBeVisible();
+    const r = await new AxeBuilder({ page: page as unknown as ConstructorParameters<typeof AxeBuilder>[0]['page'] }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
+    expect(r.violations.map((v) => `${v.id} (${v.nodes.length}) ${v.nodes.slice(0, 2).map((n) => n.target.join(' ')).join(' | ')}`)).toEqual([]);
+  });
 }

@@ -18,7 +18,8 @@ import { Experimental } from './pages/Experimental';
 import { Matching } from './pages/Matching';
 import { Settings } from './pages/Settings';
 import { t } from './i18n';
-import { chart, chartInput, engine, formOpen, lastPlace, nowInput, route, setTheme, shownTheme, textSize, theme } from './state/store';
+import { chart, chartInput, engine, formOpen, lastPlace, nowInput, route, setTheme, shownTheme, textSize, theme, voiceAvailable, voiceEnabled } from './state/store';
+import { VoicePanel } from './components/VoicePanel';
 import { Icon } from './components/Icon';
 import type { ChartResult } from '../engine';
 
@@ -106,6 +107,7 @@ export function App(): JSX.Element {
         {engine.value.status === 'ready' && formOpen.value && <ChartForm />}
         {c && 'error' in c && <p class="status status-bad" role="alert">{c.error}</p>}
         {c && 'ok' in c && <ChartBar chart={c.ok} />}
+        {c && 'ok' in c && voiceAvailable && voiceEnabled.value && <VoicePanel />}
         {engine.value.status === 'ready' && <Nav />}
         {route.value === 'settings'
           ? <Settings input={chartInput.value} />

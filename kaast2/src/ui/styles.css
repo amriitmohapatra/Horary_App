@@ -453,3 +453,9 @@ tr.is-current > * { background: var(--surface-sunk); }
 .tip-chip { display: inline-block; font-size: var(--fs-xs); font-weight: 700; padding: 0 6px; border: 1px solid currentColor; border-radius: 999px; margin: 0 4px 2px 0; }
 .tip-chip.tone-good { color: var(--ok); } .tip-chip.tone-bad { color: var(--danger); } .tip-chip.tone-mixed { color: var(--accent); } .tip-chip.tone-info { color: var(--text-muted); }
 .tip-partial { color: var(--text-muted); }
+
+/* Voice assistant panel (v0.13) */
+.voice-log { list-style: none; margin: var(--sp-3) 0; padding: 0; display: grid; gap: var(--sp-2); max-height: 18rem; overflow-y: auto; }
+.voice-log li { font-size: var(--fs-sm); }
+.voice-panel form input[type="text"] { flex: 1 1 16rem; min-width: 0; }
+.voice-status { font-size: var(--fs-sm); color: var(--text-muted); align-self: center; }
